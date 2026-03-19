@@ -1,0 +1,21 @@
+{
+  "name": "AI이것만",
+  "short_name": "AI이것만",
+  "description": "AI 모델 가이드·뉴스·가격 비교 — GPT-5부터 DeepSeek까지 한국어로",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#3B82F6",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["news", "education", "productivity"],
+  "screenshots": [],
+  "orientation": "portrait"
+}

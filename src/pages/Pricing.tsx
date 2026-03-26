@@ -1,87 +1,169 @@
+import { useState } from "react";
 import { cloudProviders } from '../data/cloudProviders';
 
+// Updated March 2026 pricing (verified)
 const priceTable = [
-  { model: 'GPT-5', provider: 'OpenAI', input: 5.0, output: 15.0, context: '128K', note: '최고 성능' },
-  { model: 'Claude Opus 4.6', provider: 'Anthropic', input: 15.0, output: 75.0, context: '200K', note: '긴 문맥' },
-  { model: 'Gemini 3.0 Pro', provider: 'Google', input: 3.5, output: 10.5, context: '1M', note: '멀티모달' },
+  { model: 'GPT-5', provider: 'OpenAI', input: 1.25, output: 10.0, context: '128K', note: '최고 성능' },
+  { model: 'GPT-5 Mini', provider: 'OpenAI', input: 0.25, output: 2.0, context: '128K', note: '가성비' },
+  { model: 'Claude Opus 4.6', provider: 'Anthropic', input: 5.0, output: 25.0, context: '200K', note: '긴 문맥' },
+  { model: 'Claude Sonnet 4.6', provider: 'Anthropic', input: 3.0, output: 15.0, context: '200K', note: '균형' },
+  { model: 'Claude Haiku 4.5', provider: 'Anthropic', input: 1.0, output: 5.0, context: '200K', note: '빠름' },
+  { model: 'Gemini 3.1 Pro', provider: 'Google', input: 2.0, output: 12.0, context: '1M', note: '멀티모달' },
+  { model: 'Gemini 2.5 Flash', provider: 'Google', input: 0.15, output: 0.60, context: '1M', note: '최저가' },
+  { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, context: '128K', note: 'NEW' },
+  { model: 'o3', provider: 'OpenAI', input: 2.0, output: 8.0, context: '200K', note: '추론' },
   { model: 'MiniMax M2.7', provider: 'MiniMax', input: 0.8, output: 2.4, context: '128K', note: 'NEW' },
-  { model: 'DeepSeek V3.2', provider: 'DeepSeek', input: 0.27, output: 1.1, context: '128K', note: '가성비' },
-  { model: 'Qwen Max', provider: 'Alibaba', input: 0.4, output: 1.2, context: '128K', note: 'NEW' },
-  { model: 'Llama 3.3 70B', provider: 'Meta', input: 0.12, output: 0.4, context: '128K', note: '오픈소스' },
-  { model: 'Mistral Large 2', provider: 'Mistral', input: 2.0, output: 6.0, context: '128K', note: '유럽' },
+  { model: 'DeepSeek V3.2', provider: 'DeepSeek', input: 0.27, output: 1.10, context: '128K', note: '가성비' },
+  { model: 'DeepSeek R1', provider: 'DeepSeek', input: 0.55, output: 2.19, context: '128K', note: '추론' },
+  { model: 'Mistral Large 3', provider: 'Mistral', input: 2.0, output: 6.0, context: '128K', note: '유럽' },
+  { model: 'Mistral Small 3.1', provider: 'Mistral', input: 0.20, output: 0.60, context: '128K', note: '경량' },
+  { model: 'Llama 3.3 70B', provider: 'Meta', input: 0.88, output: 0.88, context: '128K', note: '오픈소스' },
 ];
 
+const NOTE_STYLE: Record<string, string> = {
+  '최고 성능': 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300',
+  '긴 문맥':   'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+  '멀티모달':  'bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300',
+  '가성비':    'bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300',
+  '최저가':    'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300',
+  'NEW':       'bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400',
+  '균형':      'bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300',
+  '빠름':      'bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300',
+  '추론':      'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300',
+  '오픈소스':  'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
+  '유럽':      'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300',
+  '경량':      'bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300',
+};
+
 export default function Pricing() {
+  const [tab, setTab] = useState<'bar' | 'table' | 'api'>('bar');
   const maxInput = Math.max(...priceTable.map(p => p.input));
+  const sorted = [...priceTable].sort((a, b) => a.input - b.input);
+
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white dark:text-white mb-2">💰 클라우드 가격 비교</h1>
-        <p className="text-gray-500">2026년 3월 기준 OpenRouter 표준가. 1M 토큰은 약 75만~100만 글자 분량이에요.</p>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">💰 AI API 가격 비교</h1>
+        <p className="text-sm text-gray-500 dark:text-gray-400">2026년 3월 기준. 1M 토큰 ≈ 약 75만 글자.</p>
       </div>
-      <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 dark:text-gray-100 mb-4">입력 토큰 가격 비교 (1M당 USD)</h2>
-        <div className="space-y-3">
-          {[...priceTable].sort((a, b) => a.input - b.input).map((row) => (
-            <div key={row.model} className="flex items-center gap-3">
-              <div className="w-36 text-sm text-gray-700 dark:text-gray-300 dark:text-gray-300 truncate shrink-0">{row.model}</div>
-              <div className="flex-1 relative h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                <div className="h-full rounded-full transition-all" style={{ width: `${(row.input / maxInput) * 100}%`, backgroundColor: row.input < 1 ? '#22c55e' : row.input < 5 ? '#3b82f6' : '#ef4444' }} />
+
+      {/* Tab switcher */}
+      <div className="flex gap-2">
+        {([['bar','입력가 시각화'],['table','전체 가격표'],['api','API 서비스 비교']] as const).map(([key, label]) => (
+          <button key={key} onClick={() => setTab(key)}
+            className={`px-4 py-2 rounded-xl text-sm font-semibold transition-colors ${
+              tab === key
+                ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+            }`}>
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {/* Bar chart */}
+      {tab === 'bar' && (
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
+          <h2 className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-5">입력 토큰 가격 (1M당 USD)</h2>
+          <div className="space-y-3">
+            {sorted.map((row) => (
+              <div key={row.model} className="flex items-center gap-3">
+                <div className="w-36 text-sm text-gray-700 dark:text-gray-300 truncate shrink-0 font-medium">{row.model}</div>
+                <div className="flex-1 relative h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                  <div className="h-full rounded-full transition-all duration-500"
+                    style={{
+                      width: `${Math.max((row.input / maxInput) * 100, 3)}%`,
+                      backgroundColor: row.input < 0.5 ? '#22c55e' : row.input < 1.5 ? '#3b82f6' : row.input < 3 ? '#f59e0b' : '#ef4444'
+                    }} />
+                </div>
+                <div className="w-14 text-right text-sm font-bold text-gray-900 dark:text-white shrink-0 font-mono">${row.input}</div>
               </div>
-              <div className="w-16 text-right text-sm font-bold text-gray-900 dark:text-white dark:text-white shrink-0">${row.input}</div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="flex items-center gap-4 mt-5 pt-4 border-t border-gray-100 dark:border-gray-800 flex-wrap">
+            {[['#22c55e','$0.5 미만'],['#3b82f6','$0.5~1.5'],['#f59e0b','$1.5~3'],['#ef4444','$3 이상']].map(([color, label]) => (
+              <div key={label} className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: color }} />
+                <span className="text-xs text-gray-500 dark:text-gray-400">{label}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
-        <div className="p-4 border-b border-gray-200 dark:border-gray-800"><h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">전체 가격표</h2></div>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead className="bg-gray-50 border-b border-gray-200 dark:border-gray-800">
-              <tr>
-                <th className="text-left px-4 py-3 font-medium text-gray-600 dark:text-gray-400">모델</th>
-                <th className="text-left px-4 py-3 font-medium text-gray-600 dark:text-gray-400">회사</th>
-                <th className="text-right px-4 py-3 font-medium text-gray-600 dark:text-gray-400">입력</th>
-                <th className="text-right px-4 py-3 font-medium text-gray-600 dark:text-gray-400">출력</th>
-                <th className="text-center px-4 py-3 font-medium text-gray-600 dark:text-gray-400">컨텍스트</th>
-                <th className="text-center px-4 py-3 font-medium text-gray-600 dark:text-gray-400">특징</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
-              {priceTable.map((row) => (
-                <tr key={row.model} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 font-medium text-gray-900 dark:text-white">{row.model}</td>
-                  <td className="px-4 py-3 text-gray-500">{row.provider}</td>
-                  <td className="px-4 py-3 text-right font-mono">${row.input}</td>
-                  <td className="px-4 py-3 text-right font-mono">${row.output}</td>
-                  <td className="px-4 py-3 text-center text-gray-500">{row.context}</td>
-                  <td className="px-4 py-3 text-center"><span className={`px-2 py-0.5 text-xs rounded-full font-medium ${row.note === '가성비' ? 'bg-green-50 text-green-600' : row.note === 'NEW' ? 'bg-red-50 text-red-600' : 'bg-gray-100 text-gray-600 dark:text-gray-400'}`}>{row.note}</span></td>
+      )}
+
+      {/* Full price table */}
+      {tab === 'table' && (
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+                  <th className="text-left px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">모델</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">회사</th>
+                  <th className="text-right px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">입력</th>
+                  <th className="text-right px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">출력</th>
+                  <th className="text-center px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">컨텍스트</th>
+                  <th className="text-center px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">특징</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+                {priceTable.map((row) => (
+                  <tr key={row.model} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    <td className="px-4 py-3 font-medium text-gray-900 dark:text-white">{row.model}</td>
+                    <td className="px-4 py-3 text-gray-500 dark:text-gray-400">{row.provider}</td>
+                    <td className="px-4 py-3 text-right font-mono text-gray-900 dark:text-white">${row.input}</td>
+                    <td className="px-4 py-3 text-right font-mono text-gray-900 dark:text-white">${row.output}</td>
+                    <td className="px-4 py-3 text-center text-gray-500 dark:text-gray-400">{row.context}</td>
+                    <td className="px-4 py-3 text-center">
+                      <span className={`px-2 py-0.5 text-xs rounded-full font-semibold ${NOTE_STYLE[row.note] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'}`}>
+                        {row.note}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+            <p className="text-xs text-gray-400 dark:text-gray-500">* 가격은 OpenRouter 표준가 기준. 캐시·배치 할인 적용 시 더 저렴할 수 있어요.</p>
+          </div>
         </div>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 dark:text-gray-100 mb-4">API 서비스별 비교</h2>
+      )}
+
+      {/* API service comparison */}
+      {tab === 'api' && (
         <div className="grid sm:grid-cols-2 gap-4">
           {cloudProviders.map((provider) => (
-            <div key={provider.id} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
+            <div key={provider.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">{provider.name}</h3>
-                {provider.badge && <span className="px-2 py-0.5 bg-blue-600 text-white text-xs rounded-full font-medium">{provider.badge}</span>}
+                <h3 className="text-base font-bold text-gray-900 dark:text-white">{provider.name}</h3>
+                {provider.badge && (
+                  <span className="px-2 py-0.5 bg-blue-600 text-white text-[11px] rounded-full font-semibold">{provider.badge}</span>
+                )}
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 dark:text-gray-400 mb-3">{provider.description}</p>
-              <div className="p-2 bg-green-50 rounded-lg text-xs text-green-700 mb-3">무료 혜택: {provider.freetier}</div>
-              <div className="space-y-1">
-                {provider.pros.map((p) => <div key={p} className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400"><span className="text-green-500">✓</span>{p}</div>)}
-                {provider.cons.map((c) => <div key={c} className="flex items-center gap-2 text-xs text-gray-400"><span className="text-red-400">✗</span>{c}</div>)}
+              <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">{provider.description}</p>
+              <div className="p-2.5 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 rounded-xl text-xs text-emerald-700 dark:text-emerald-300 mb-3">
+                🎁 {provider.freetier}
               </div>
-              <p className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-xs text-blue-600 dark:text-blue-400 font-medium">추천 대상: {provider.bestFor}</p>
+              <div className="space-y-1.5">
+                {provider.pros.map((p) => (
+                  <div key={p} className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300">
+                    <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>{p}
+                  </div>
+                ))}
+                {provider.cons.map((c) => (
+                  <div key={c} className="flex items-start gap-2 text-xs text-gray-400 dark:text-gray-500">
+                    <span className="text-red-400 mt-0.5 shrink-0">✗</span>{c}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-xs text-blue-600 dark:text-blue-400 font-medium">
+                추천 대상: {provider.bestFor}
+              </p>
             </div>
           ))}
         </div>
-      </div>
+      )}
     </div>
   );
 }

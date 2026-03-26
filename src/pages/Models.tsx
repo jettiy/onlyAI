@@ -4,7 +4,25 @@ import {
   type Region, type ModelTier, type AIModel
 } from "../data/models";
 
+
 type View = "featured" | "all" | string; // string = companyId
+
+// ── Real company logos (defined at module scope to avoid re-creation) ──
+const COMPANY_LOGOS: Record<string, string> = {
+  openai:    '/logos/openai.png',
+  anthropic: '/logos/anthropic.jpg',
+  google:    '/logos/google.png',
+  meta:      '/logos/meta.jpg',
+  xai:       '/logos/xai.png',
+  minimax:   '/logos/minimax.png',
+  deepseek:  '/logos/deepseek.png',
+  alibaba:   '/logos/alibaba.png',
+  moonshot:  '/logos/moonshot.png',
+  zhipu:     '/logos/zhipu.png',
+  xiaomi:    '/logos/xiaomi.png',
+  mistral:   '/logos/mistral.jpg',
+  cohere:    '/logos/cohere.png',
+};
 
 const regionGroups: { region: Region; flag: string; label: string; subFlags?: string }[] = [
   { region: "us",    flag: "🇺🇸", label: "미국" },
@@ -132,6 +150,7 @@ export default function Models() {
   const [selectedExample, setSelectedExample] = useState(0);
   const [compareIds, setCompareIds] = useState<string[]>([]);
   const [showCompare, setShowCompare] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const tierOrder: Record<ModelTier, number> = { flagship: 0, strong: 1, efficient: 2, local: 3 };
 
   const toggleCompare = (id: string) => {
@@ -153,6 +172,16 @@ export default function Models() {
       return m.companyId === view;
     })
     .filter((m) => tierFilter === "all" || m.tier === tierFilter)
+    .filter((m) => {
+      if (!searchQuery.trim()) return true;
+      const q = searchQuery.toLowerCase();
+      return (
+        m.name.toLowerCase().includes(q) ||
+        m.company.toLowerCase().includes(q) ||
+        m.description.toLowerCase().includes(q) ||
+        m.useCases.some((u) => u.toLowerCase().includes(q))
+      );
+    })
     .sort((a, b) =>
       sortBy === "price"
         ? (a.inputPrice ?? 999) - (b.inputPrice ?? 999)
@@ -386,7 +415,13 @@ export default function Models() {
                           )}
                         >
                           <span className="flex items-center gap-2 font-medium">
-                            <span className="text-base">{company.flag}</span>
+                            {COMPANY_LOGOS[company.id] ? (
+                              <div className="w-5 h-5 rounded overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex-shrink-0">
+                                <img src={COMPANY_LOGOS[company.id]} alt={company.name} className="w-full h-full object-contain p-[1px]" />
+                              </div>
+                            ) : (
+                              <span className="text-base">{company.flag}</span>
+                            )}
                             {company.name}
                           </span>
                           <span className={"text-xs px-1.5 py-0.5 rounded-full font-medium " + (
@@ -431,7 +466,24 @@ export default function Models() {
           )}
 
           {/* 필터 */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-col gap-2">
+            {/* Search */}
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">🔍</span>
+              <input
+                type="text"
+                placeholder="모델명, 회사, 용도로 검색..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-9 pr-4 py-2.5 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500"
+              />
+              {searchQuery && (
+                <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-sm">
+                  ✕
+                </button>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-2">
             <div className="flex gap-1.5 flex-wrap">
               {(["all", "flagship", "strong", "efficient"] as const).map((t) => (
                 <button key={t} onClick={() => setTierFilter(t)}
@@ -457,10 +509,17 @@ export default function Models() {
               ))}
             </div>
             <span className="ml-auto text-xs text-gray-400 dark:text-gray-500 self-center">{displayedModels.length}개</span>
+            </div>
           </div>
 
           {/* 모델 카드 목록 */}
-          {displayedModels.length === 0 ? (
+          {displayedModels.length === 0 && searchQuery ? (
+            <div className="text-center py-16 text-gray-400 dark:text-gray-500">
+              <p className="text-4xl mb-3">🔍</p>
+              <p className="font-semibold text-gray-600 dark:text-gray-400">"{searchQuery}"에 해당하는 모델이 없어요</p>
+              <button onClick={() => setSearchQuery("")} className="mt-3 text-sm text-blue-500 hover:underline">검색 초기화</button>
+            </div>
+          ) : displayedModels.length === 0 ? (
             <div className="text-center py-16 text-gray-400">조건에 맞는 모델이 없어요.</div>
           ) : (
             <div className="space-y-3">
@@ -521,12 +580,14 @@ export default function Models() {
           </div>
         </div>
       )}
+
     </div>
   );
 }
 
+
 function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { model: AIModel; onCompanyClick: (id: string) => void; compareIds: string[]; onToggleCompare: (id: string) => void }) {
-  const company = { flag: companies.find((c) => c.id === model.companyId)?.flag ?? "" };
+  const companyData = companies.find((c) => c.id === model.companyId);
   const isSelected = compareIds.includes(model.id);
   const canAdd = compareIds.length < 3 || isSelected;
   return (
@@ -534,7 +595,22 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
       <div className="flex items-start justify-between gap-3 flex-wrap">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap mb-1">
-            <span className="text-base">{company.flag}</span>
+            {/* Real Logo */}
+            {COMPANY_LOGOS[model.companyId] ? (
+              <div className="w-7 h-7 rounded-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex-shrink-0 flex items-center justify-center p-0.5">
+                <img
+                  src={COMPANY_LOGOS[model.companyId]}
+                  alt={model.company}
+                  className="w-full h-full object-contain"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                />
+              </div>
+            ) : (
+              <span className="text-base">{companyData?.flag ?? ""}</span>
+            )}
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700">
+              {companyData?.name ?? model.company}
+            </span>
             <h3 className="text-sm font-bold text-gray-900 dark:text-white">{model.name}</h3>
             <span className={tierColors[model.tier] + " px-2 py-0.5 text-xs rounded-full font-medium"}>{tierLabels[model.tier]}</span>
             {model.isNew && <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-red-50 dark:bg-red-900/30 text-red-500">NEW</span>}
@@ -552,13 +628,26 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
           </p>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">{model.description}</p>
           <div className="flex flex-wrap gap-1">
+            {model.koreanSupport && (
+              <span className={
+                "px-2 py-0.5 text-[10px] font-bold rounded-full border " +
+                (model.koreanSupport === 'A'
+                  ? "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800"
+                  : model.koreanSupport === 'B'
+                  ? "bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 border-yellow-200 dark:border-yellow-800"
+                  : "bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700"
+                )
+              }>
+                🇰🇷 한국어 {model.koreanSupport}등급
+              </span>
+            )}
             {model.strengths.map((s) => (
               <span key={s} className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs rounded-full">{s}</span>
             ))}
           </div>
         </div>
         <div className="shrink-0">
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-3 min-w-[112px] text-right">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-3 min-w-[120px] text-right">
             <p className="text-[10px] text-gray-400 mb-1">1M 토큰당</p>
             {model.inputPrice === 0
               ? <p className="text-sm font-bold text-green-600">무료</p>
@@ -573,6 +662,12 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
               className="text-[10px] text-blue-400 hover:text-blue-600 mt-1 block">
               출처 →
             </a>
+            {companyData?.playgroundUrl && (
+              <a href={companyData.playgroundUrl} target="_blank" rel="noopener noreferrer"
+                className="mt-2 flex items-center justify-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors w-full">
+                바로 사용하기 →
+              </a>
+            )}
           </div>
         </div>
       </div>

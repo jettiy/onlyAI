@@ -1,177 +1,181 @@
 import { Link } from 'react-router-dom';
 import { CURATED_NEWS } from '../hooks/useNewsRSS';
 
-const TOP_NEWS = CURATED_NEWS.filter((n) => n.isNew).slice(0, 3);
-
-const featuredCards = [
-  { icon: '🤖', title: 'AI 모델 가이드',  desc: 'GPT-4.1부터 DeepSeek까지. 국가별·가격별 완벽 비교.',  to: '/models',  darkBg: 'dark:bg-blue-950/40',   lightBg: 'bg-blue-50',   border: 'border-blue-100 dark:border-blue-900 hover:border-blue-400 dark:hover:border-blue-600' },
-  { icon: '📰', title: 'AI 뉴스룸',       desc: 'HuggingFace·AI타임스·GeekNews AI 기술 소식만 큐레이션.',  to: '/news',    darkBg: 'dark:bg-indigo-950/40', lightBg: 'bg-indigo-50',  border: 'border-indigo-100 dark:border-indigo-900 hover:border-indigo-400 dark:hover:border-indigo-600' },
-  { icon: '💰', title: '클라우드 가격 비교', desc: '1M 토큰이 얼마인지, 내 작업에 실제로 얼마 드는지 계산.', to: '/pricing', darkBg: 'dark:bg-amber-950/40',  lightBg: 'bg-amber-50',   border: 'border-amber-100 dark:border-amber-900 hover:border-amber-400 dark:hover:border-amber-600' },
-  { icon: '🔥', title: '이번 주 트렌딩',   desc: 'GitHub·OpenRouter 인기 AI 프로젝트와 실시간 모델 가격.', to: '/trending', darkBg: 'dark:bg-rose-950/40',   lightBg: 'bg-rose-50',    border: 'border-rose-100 dark:border-rose-900 hover:border-rose-400 dark:hover:border-rose-600' },
-];
-
-const quickFaq = [
-  { q: '처음에 어떤 AI를 써야 하나요?',       a: '무료로 시작하려면 ChatGPT 무료 티어 또는 Claude 무료 티어를 추천해요. 개발자라면 Groq 무료 API로 Llama 4를 써보세요.' },
-  { q: '로컬 AI가 클라우드보다 좋은 건가요?', a: '꼭 그렇지 않아요. 로컬은 무료·프라이버시 강점이 있지만 고사양 GPU가 필요해요. M 칩 맥북이나 고사양 PC가 없으면 클라우드를 추천해요.' },
-  { q: '가장 저렴한 API는 어디인가요?',       a: 'DeepSeek V3 ($0.014/1M)와 Gemini 2.0 Flash($0.1/1M)가 최저가예요. 가격 계산기 탭에서 작업별 실제 비용을 확인해보세요.' },
-];
-
-const catBadgeColor: Record<string, string> = {
-  '모델 출시': 'bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400',
-  '연구·논문': 'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400',
-  '에이전트':  'bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400',
-  '오픈소스':  'bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400',
-  '파인튜닝':  'bg-yellow-100 dark:bg-yellow-900/40 text-yellow-600 dark:text-yellow-500',
-  '벤치마크':  'bg-orange-100 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400',
-  '산업·정책': 'bg-red-100 dark:bg-red-900/40 text-red-500 dark:text-red-400',
-  '인프라·하드웨어': 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
-  '개발 도구': 'bg-cyan-100 dark:bg-cyan-900/40 text-cyan-600 dark:text-cyan-400',
-  '멀티모달':  'bg-pink-100 dark:bg-pink-900/40 text-pink-500 dark:text-pink-400',
+const CAT_COLORS: Record<string, { bg: string; text: string; bar: string }> = {
+  '모델 출시':       { bg: 'bg-violet-50 dark:bg-violet-950/30',  text: 'text-violet-600 dark:text-violet-400',  bar: 'bg-violet-500' },
+  '연구·논문':       { bg: 'bg-blue-50 dark:bg-blue-950/30',       text: 'text-blue-600 dark:text-blue-400',      bar: 'bg-blue-500' },
+  '에이전트':        { bg: 'bg-cyan-50 dark:bg-cyan-950/30',        text: 'text-cyan-600 dark:text-cyan-400',      bar: 'bg-cyan-500' },
+  '오픈소스':        { bg: 'bg-emerald-50 dark:bg-emerald-950/30',  text: 'text-emerald-600 dark:text-emerald-400',bar: 'bg-emerald-500' },
+  '파인튜닝':        { bg: 'bg-amber-50 dark:bg-amber-950/30',      text: 'text-amber-600 dark:text-amber-400',    bar: 'bg-amber-500' },
+  '벤치마크':        { bg: 'bg-orange-50 dark:bg-orange-950/30',    text: 'text-orange-600 dark:text-orange-400',  bar: 'bg-orange-500' },
+  '인프라·하드웨어': { bg: 'bg-slate-50 dark:bg-slate-900/30',      text: 'text-slate-600 dark:text-slate-400',    bar: 'bg-slate-500' },
+  '산업·정책':       { bg: 'bg-red-50 dark:bg-red-950/30',          text: 'text-red-600 dark:text-red-400',        bar: 'bg-red-500' },
+  '개발 도구':       { bg: 'bg-sky-50 dark:bg-sky-950/30',          text: 'text-sky-600 dark:text-sky-400',        bar: 'bg-sky-500' },
+  '멀티모달':        { bg: 'bg-pink-50 dark:bg-pink-950/30',         text: 'text-pink-600 dark:text-pink-400',      bar: 'bg-pink-500' },
 };
+
+const CURATION_DATE = '2026년 3월 19일';
+
+const TOP_NEWS = CURATED_NEWS.filter((n) => n.isNew).slice(0, 5);
 
 function timeAgo(dateStr: string) {
   const d = new Date(dateStr);
-  const now = new Date();
-  const diff = Math.floor((now.getTime() - d.getTime()) / 86400000);
-  if (diff === 0) return "오늘";
-  if (diff === 1) return "어제";
+  const diff = Math.floor((Date.now() - d.getTime()) / 86400000);
+  if (diff === 0) return '오늘';
+  if (diff === 1) return '어제';
   if (diff < 7) return `${diff}일 전`;
   return `${d.getMonth() + 1}.${d.getDate()}`;
 }
 
+const SECTIONS = [
+  {
+    icon: '🔭',
+    label: 'AI 모델 탐색하기',
+    desc: '타임라인·가격·벤치마크·추천',
+    to: '/explore',
+    color: 'from-blue-500 to-blue-600',
+    light: 'bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-900',
+    textColor: 'text-blue-700 dark:text-blue-300',
+  },
+  {
+    icon: '📋',
+    label: '프롬프트 적용하기',
+    desc: '작성법·프레임워크·저장소',
+    to: '/prompts',
+    color: 'from-violet-500 to-violet-600',
+    light: 'bg-violet-50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-900',
+    textColor: 'text-violet-700 dark:text-violet-300',
+  },
+  {
+    icon: '🦞',
+    label: 'OpenClaw 활용하기',
+    desc: '설치·스킬·자동화·크론',
+    to: '/openclaw',
+    color: 'from-orange-500 to-amber-500',
+    light: 'bg-orange-50 dark:bg-orange-950/20 border-orange-200 dark:border-orange-900',
+    textColor: 'text-orange-700 dark:text-orange-300',
+  },
+  {
+    icon: '🧠',
+    label: 'AI 정보 학습하기',
+    desc: '용어사전·협업 시뮬레이터',
+    to: '/learn',
+    color: 'from-emerald-500 to-teal-500',
+    light: 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-900',
+    textColor: 'text-emerald-700 dark:text-emerald-300',
+  },
+];
+
 export default function Home() {
+  const hero = TOP_NEWS[0];
+  const secondary = TOP_NEWS.slice(1, 3);
+
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
 
-      {/* ── 히어로 섹션 ── */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 dark:from-blue-900 dark:via-blue-950 dark:to-indigo-950 p-6 md:p-8">
-        {/* 배경 패턴 */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-5" style={{backgroundImage:"radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px), radial-gradient(circle at 60% 80%, white 1px, transparent 1px)", backgroundSize:"60px 60px"}} />
-
-        <div className="relative z-10">
-          {/* 라이브 뱃지 */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-xs font-medium mb-4 border border-white/30">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            2026.03.19 오전 07:00 업데이트
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            {/* 헤드라인 */}
-            <div>
-              <h1 className="text-3xl md:text-4xl font-black text-white leading-tight mb-3">
-                AI이것만<br />
-                <span className="text-blue-200">보면 다 알 수 있어요</span>
-              </h1>
-              <p className="text-blue-100 text-sm md:text-base leading-relaxed mb-4">
-                어떤 모델이 좋은지, 얼마나 드는지, 어디서 써야 하는지.<br />
-                AI 입문자를 위한 모든 정보를 한곳에 모았어요.
-              </p>
-
-              {/* 오늘의 AI 한줄요약 */}
-              <div className="bg-white/15 backdrop-blur-sm rounded-xl p-3 border border-white/20 mb-4">
-                <p className="text-xs text-blue-200 font-medium mb-1">🎯 오늘의 AI 한줄요약</p>
-                <p className="text-white text-sm font-semibold">엣지 GPU에서 BitNet LoRA 파인튜닝 가능해졌다 — 대형 GPU 없이도 로컬 AI 시대 본격화</p>
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                <Link to="/guide" className="px-4 py-2 bg-white text-blue-700 rounded-xl font-semibold text-sm hover:bg-blue-50 transition-colors">
-                  시작 가이드 →
-                </Link>
-                <Link to="/models" className="px-4 py-2 bg-white/20 text-white rounded-xl font-semibold text-sm hover:bg-white/30 transition-colors border border-white/30">
-                  모델 비교
-                </Link>
-              </div>
-            </div>
-
-            {/* 통계 */}
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                { n: "8개", label: "이번 주\n신규 모델", icon: "🤖" },
-                { n: "13건", label: "이번 주\n주요 논문", icon: "📄" },
-                { n: "2건", label: "이번 주\n가격 변동", icon: "💰" },
-              ].map((s) => (
-                <div key={s.n} className="bg-white/15 backdrop-blur-sm rounded-xl p-3 text-center border border-white/20">
-                  <div className="text-xl mb-1">{s.icon}</div>
-                  <div className="text-lg font-black text-white">{s.n}</div>
-                  <div className="text-[10px] text-blue-200 whitespace-pre-line leading-tight">{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 오늘의 TOP 뉴스 3 ── */}
-      <section>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 flex items-center gap-2">
-            🔴 <span>오늘의 AI 뉴스</span>
-          </h2>
-          <Link to="/news" className="text-sm text-blue-500 hover:text-blue-700 font-medium">
-            전체 보기 →
-          </Link>
-        </div>
-        <div className="grid sm:grid-cols-3 gap-4">
-          {TOP_NEWS.map((n, i) => (
-            <a
-              key={n.id}
-              href={n.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all"
-            >
-              <div className="flex items-center gap-2 mb-2">
-                {i === 0 && <span className="text-xs font-black text-red-500 bg-red-50 dark:bg-red-900/30 px-2 py-0.5 rounded-full">HOT</span>}
-                <span className={`px-2 py-0.5 text-[10px] rounded-full font-medium ${catBadgeColor[n.category] ?? 'bg-gray-100 text-gray-500'}`}>
-                  {n.category}
-                </span>
-                <span className="text-[10px] text-gray-400 ml-auto">{timeAgo(n.date)}</span>
-              </div>
-              <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug mb-2 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                {n.title}
-              </h3>
-              <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed">
-                {n.summary}
-              </p>
-              <div className="mt-3 pt-2 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
-                <span className="text-[10px] text-gray-400">{n.source}</span>
-                <span className="text-[10px] text-blue-400">읽기 →</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* ── 둘러보기 카드 ── */}
-      <section>
-        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">둘러보기</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {featuredCards.map((card) => (
-            <Link
-              key={card.to}
-              to={card.to}
-              className={`block p-6 rounded-xl border-2 transition-all ${card.lightBg} ${card.darkBg} ${card.border}`}
-            >
-              <div className="text-3xl mb-3">{card.icon}</div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">{card.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{card.desc}</p>
+      {/* ── HERO SECTION ── */}
+      <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 p-7 text-white relative">
+        <div className="absolute inset-0 opacity-[0.04]"
+          style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+        <div className="relative">
+          <p className="text-[11px] tracking-[0.3em] font-bold text-gray-400 uppercase mb-2">AI Intelligence Guide</p>
+          <h1 className="text-3xl font-black leading-tight mb-2" style={{ letterSpacing: '-0.02em' }}>
+            AI, <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">이것만</span> 보면<br />다 알 수 있어요
+          </h1>
+          <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-md">
+            AI 모델 비교·프롬프트 작성법·OpenClaw 자동화까지.<br />
+            AI 입문자부터 실무자까지, 한 곳에서 시작하세요.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <Link to="/explore/guide"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-gray-900 rounded-xl text-sm font-bold hover:bg-gray-100 transition-colors">
+              🎯 AI 추천받기
             </Link>
-          ))}
+            <Link to="/explore/compare"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white/10 text-white rounded-xl text-sm font-semibold hover:bg-white/20 transition-colors border border-white/20">
+              ⚖️ 모델 비교하기
+            </Link>
+          </div>
         </div>
-      </section>
+      </div>
 
-      {/* ── FAQ ── */}
-      <section>
-        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">자주 묻는 질문</h2>
-        <div className="space-y-3">
-          {quickFaq.map((faq, i) => (
-            <div key={i} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-              <p className="font-semibold text-gray-900 dark:text-white mb-1.5 text-sm">Q. {faq.q}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{faq.a}</p>
-            </div>
-          ))}
+      {/* ── 4 SECTION CARDS ── */}
+      <div className="grid grid-cols-2 gap-3">
+        {SECTIONS.map(s => (
+          <Link key={s.to} to={s.to}
+            className={`group relative block rounded-xl border p-4 hover:shadow-md transition-all ${s.light}`}>
+            <span className="text-2xl mb-2 block">{s.icon}</span>
+            <p className={`text-sm font-bold mb-0.5 ${s.textColor}`}>{s.label}</p>
+            <p className="text-[11px] text-gray-500 dark:text-gray-400">{s.desc}</p>
+          </Link>
+        ))}
+      </div>
+
+      {/* ── DIVIDER ── */}
+      <div className="flex items-center gap-3">
+        <div className="h-px flex-1 bg-gray-200 dark:bg-gray-800" />
+        <div className="flex items-center gap-2">
+          <span className="text-[10px] font-bold tracking-widest text-gray-400 dark:text-gray-500 uppercase">AI 뉴스 브리핑</span>
+          <span className="text-[10px] text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded font-mono">
+            {CURATION_DATE} 기준 큐레이션
+          </span>
         </div>
-      </section>
+        <div className="h-px flex-1 bg-gray-200 dark:bg-gray-800" />
+      </div>
+
+      {/* ── HERO NEWS ── */}
+      {hero && (() => {
+        const cat = CAT_COLORS[hero.category] ?? CAT_COLORS['연구·논문'];
+        return (
+          <a href={hero.url} target="_blank" rel="noopener noreferrer" className="group block">
+            <div className={`relative overflow-hidden rounded-2xl ${cat.bg} border border-gray-200 dark:border-gray-800 p-6 hover:shadow-xl transition-all duration-300`}>
+              <div className={`absolute left-0 top-0 bottom-0 w-1 ${cat.bar} rounded-l-2xl`} />
+              <div className="pl-3">
+                <div className="flex items-center gap-2 mb-3 flex-wrap">
+                  <span className={`text-[10px] font-black tracking-widest uppercase px-2 py-1 rounded ${cat.bg} ${cat.text} border border-current border-opacity-20`}>
+                    {hero.category}
+                  </span>
+                  <span className="text-[10px] text-gray-400 dark:text-gray-500 font-mono">{timeAgo(hero.date)} · {hero.source}</span>
+                </div>
+                <h2 className="text-xl font-black text-gray-900 dark:text-white leading-tight mb-2 group-hover:text-current transition-colors" style={{ letterSpacing: '-0.02em' }}>
+                  {hero.title}
+                </h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 line-clamp-2">{hero.summary}</p>
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1">
+                    {hero.tags?.slice(0, 4).map((t) => (
+                      <span key={t} className="text-[10px] px-2 py-0.5 bg-black/5 dark:bg-white/10 text-gray-600 dark:text-gray-400 rounded font-medium">#{t}</span>
+                    ))}
+                  </div>
+                  <span className={`text-xs font-bold ${cat.text}`}>전문 읽기 →</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })()}
+
+      {/* ── SECONDARY NEWS ── */}
+      {secondary.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {secondary.map((item) => {
+            const cat = CAT_COLORS[item.category] ?? CAT_COLORS['연구·논문'];
+            return (
+              <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer"
+                className="group relative block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-lg hover:border-gray-400 dark:hover:border-gray-600 transition-all overflow-hidden">
+                <div className={`absolute top-0 left-0 right-0 h-0.5 ${cat.bar}`} />
+                <div className="flex items-center gap-2 mb-2">
+                  <span className={`text-[9px] font-black tracking-widest uppercase ${cat.text}`}>{item.category}</span>
+                  <span className="text-[9px] text-gray-400 dark:text-gray-500">{timeAgo(item.date)}</span>
+                </div>
+                <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug mb-2 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{item.title}</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed">{item.summary}</p>
+                <p className={`text-[10px] font-semibold mt-2 ${cat.text}`}>읽기 →</p>
+              </a>
+            );
+          })}
+        </div>
+      )}
 
     </div>
   );

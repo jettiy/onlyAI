@@ -8,8 +8,6 @@ export const config = {
 
 const CACHE_DURATION = 1800; // 30 min
 
-const RSS_PROXY = 'https://api.rss2json.com/v1/api.json?rss_url=';
-
 const RSS_SOURCES = [
   { id: 'aitimes', name: 'AI타임스', url: 'https://www.aitimes.com/rss/allArticle.xml', lang: 'ko', flag: '🇰🇷' },
   { id: 'geeknews', name: 'GeekNews', url: 'https://news.hada.io/rss', lang: 'ko', flag: '🇰🇷' },
@@ -22,19 +20,21 @@ const AI_KEYWORDS = [
   'openai','anthropic','hugging','embedding','agent','moe','lora','training','vllm',
   'langchain','pytorch','reasoning','multimodal','음성','이미지 생성','언어모델','인공지능',
   'mimo','minimax','kimi','grok','gemma','falcon','neural','weight','sora','midjourney',
+  '로봇','자율주행','반도체','생성형','프롬프트','챗봇','기계학습','오픈ai',
+  'chatgpt','copilot','apple intelligence','samsung','ai 칩','ai 반도체',
 ];
 
 const CATEGORIES = [
-  { test: /model|출시|launch|gpt|claude|gemini|llm|릴리즈|release|새 버전/i, cat: '모델 출시' },
+  { test: /model|출시|launch|gpt|claude|gemini|llm|릴리즈|release|새 버전|새로운/i, cat: '모델 출시' },
   { test: /agent|에이전트|autonomous|workflow|자율/i, cat: '에이전트' },
   { test: /paper|논문|research|연구|arxiv/i, cat: '연구·논문' },
   { test: /open.?source|오픈소스|github|hugging/i, cat: '오픈소스' },
   { test: /finetun|파인튜닝|lora|rlhf|sft/i, cat: '파인튜닝' },
   { test: /benchmark|벤치마크|mmlu|leaderboard|rank/i, cat: '벤치마크' },
   { test: /hardware|gpu|chip|칩|반도체|인프라|infra|nvidi|tpu/i, cat: '인프라·하드웨어' },
-  { test: /policy|정책|규제|법|법률|govern/i, cat: '산업·정책' },
-  { test: /tool|도구|dev|sdk|api|framework/i, cat: '개발 도구' },
-  { test: /vision|audio|video|image|multimodal|멀티모달|음성|이미지/i, cat: '멀티모달' },
+  { test: /policy|정책|규제|법|법률|govern|규제/i, cat: '산업·정책' },
+  { test: /tool|도구|dev|sdk|api|framework|ide|editor/i, cat: '개발 도구' },
+  { test: /vision|audio|video|image|multimodal|멀티모달|음성|이미지|sora|midjourney|stable diffusion/i, cat: '멀티모달' },
 ];
 
 function isAIRelated(text: string): boolean {
@@ -58,29 +58,134 @@ function parseDate(str: string | undefined): string {
   return new Date().toISOString().slice(0, 10);
 }
 
-async function fetchRSSFeed(source: typeof RSS_SOURCES[0]): Promise<any[]> {
-  try {
-    const url = `${RSS_PROXY}${encodeURIComponent(source.url)}&count=50&api_key=`;
-    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
-    if (!res.ok) return [];
-    const data = await res.json();
-    if (!data.items?.length) return [];
+function escapeXml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
 
-    return data.items
-      .filter((item: any) => isAIRelated(`${item.title} ${item.description ?? ''} ${item.content ?? ''}`))
-      .slice(0, 20)
-      .map((item: any, idx: number) => ({
-        id: `${source.id}-${idx}-${item.guid ?? item.link}`,
-        title: item.title.trim(),
-        summary: (item.description ?? '').replace(/<[^>]+>/g, '').trim().slice(0, 200),
-        date: parseDate(item.pubDate),
+// Parse RSS/Atom XML directly (no external proxy needed)
+async function fetchRSSFeed(source: typeof RSS_SOURCES[0]): Promise<any[]> {
+  let xmlText = '';
+
+  // Try direct fetch first
+  try {
+    const res = await fetch(source.url, {
+      signal: AbortSignal.timeout(10000),
+      headers: { 'Accept': 'application/xml, text/xml, application/rss+xml' },
+    });
+    if (res.ok) xmlText = await res.text();
+  } catch { /* try cors proxy */ }
+
+  // Fallback: corsproxy.io
+  if (!xmlText) {
+    try {
+      const res = await fetch(`https://corsproxy.io/?${encodeURIComponent(source.url)}`, {
+        signal: AbortSignal.timeout(10000),
+      });
+      if (res.ok) xmlText = await res.text();
+    } catch { return []; }
+  }
+
+  if (!xmlText) return [];
+
+  try {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xmlText, 'text/xml');
+    const items = doc.querySelectorAll('item');
+
+    if (items.length === 0) return []; // Not RSS, might be Atom
+
+    const results: any[] = [];
+    for (const item of items) {
+      const title = item.querySelector('title')?.textContent?.trim() ?? '';
+      const link = item.querySelector('link')?.textContent?.trim() ?? '';
+      const pubDate = item.querySelector('pubDate')?.textContent?.trim() ?? '';
+      const desc = item.querySelector('description')?.textContent ?? '';
+
+      const fullText = `${title} ${desc}`;
+      if (!isAIRelated(fullText)) continue;
+
+      // Strip HTML tags from description
+      const summary = desc.replace(/<[^>]+>/g, '').trim().slice(0, 200);
+
+      results.push({
+        id: `${source.id}-${results.length}-${link}`,
+        title,
+        summary,
+        date: parseDate(pubDate),
         source: source.name,
         sourceLang: source.lang,
         sourceFlag: source.flag,
-        url: item.link,
-        category: classifyCategory(`${item.title} ${(item.description ?? '')}`),
+        url: link,
+        category: classifyCategory(fullText),
         lang: source.lang,
-      }));
+      });
+
+      if (results.length >= 20) break;
+    }
+    return results;
+  } catch {
+    return [];
+  }
+}
+
+// Atom feed parser (for sources that use Atom instead of RSS)
+async function fetchAtomFeed(source: typeof RSS_SOURCES[0]): Promise<any[]> {
+  let xmlText = '';
+
+  try {
+    const res = await fetch(source.url, {
+      signal: AbortSignal.timeout(10000),
+      headers: { 'Accept': 'application/atom+xml, application/xml' },
+    });
+    if (res.ok) xmlText = await res.text();
+  } catch {}
+
+  if (!xmlText) {
+    try {
+      const res = await fetch(`https://corsproxy.io/?${encodeURIComponent(source.url)}`, {
+        signal: AbortSignal.timeout(10000),
+      });
+      if (res.ok) xmlText = await res.text();
+    } catch { return []; }
+  }
+
+  if (!xmlText) return [];
+
+  try {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xmlText, 'text/xml');
+    const entries = doc.querySelectorAll('entry');
+
+    if (entries.length === 0) return [];
+
+    const results: any[] = [];
+    for (const entry of entries) {
+      const title = entry.querySelector('title')?.textContent?.trim() ?? '';
+      const link = entry.querySelector('link[href]')?.getAttribute('href') ?? '';
+      const updated = entry.querySelector('updated')?.textContent?.trim() ?? '';
+      const summary = entry.querySelector('summary')?.textContent?.trim()
+        ?? entry.querySelector('content')?.textContent?.replace(/<[^>]+>/g, '').trim().slice(0, 200)
+        ?? '';
+
+      const fullText = `${title} ${summary}`;
+      if (!isAIRelated(fullText)) continue;
+
+      results.push({
+        id: `${source.id}-atom-${results.length}-${link}`,
+        title,
+        summary,
+        date: parseDate(updated),
+        source: source.name,
+        sourceLang: source.lang,
+        sourceFlag: source.flag,
+        url: link,
+        category: classifyCategory(fullText),
+        lang: source.lang,
+      });
+
+      if (results.length >= 20) break;
+    }
+    return results;
   } catch {
     return [];
   }
@@ -146,12 +251,18 @@ export default async function handler(request: Request) {
   }
 
   try {
-    const [aitimes, geeknews, hf, github] = await Promise.all([
+    // Fetch all sources in parallel
+    // AI타임스 = RSS, GeekNews = RSS, HF Blog = Atom
+    const [aitimes, geeknews, hfRss, hfAtom, github] = await Promise.all([
       fetchRSSFeed(RSS_SOURCES[0]),
       fetchRSSFeed(RSS_SOURCES[1]),
       fetchRSSFeed(RSS_SOURCES[2]),
+      fetchAtomFeed(RSS_SOURCES[2]),
       fetchGithubTrending(),
     ]);
+
+    // Use whichever HF parser worked
+    const hf = hfRss.length >= hfAtom.length ? hfRss : hfAtom;
 
     const rssItems = [...aitimes, ...geeknews, ...hf];
 

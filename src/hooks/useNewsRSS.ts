@@ -45,101 +45,29 @@ export const categoryColor: Record<string, string> = {
   "멀티모달":       "bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300 border border-pink-200 dark:border-pink-800",
 };
 
-// Fallback curated news (used when API fails)
-export const CURATED_NEWS: NewsItem[] = [
-  {
-    id: "xiaomi-hunter-alpha-reveal",
-    title: "샤오미, OpenRouter 1위 미스터리 모델 'Hunter Alpha' 정체 공개 — MiMo-V2-Pro였다",
-    summary: "수일간 OpenRouter 일일 API 호출량 1위를 차지한 익명 모델 'Hunter Alpha'의 정체가 샤오미의 MiMo-V2-Pro로 확인됐다.",
-    date: "2026-03-19", source: "AI타임스",
-    url: "https://efficienist.com/what-is-hunter-alpha-openrouter-model-could-actually-be-xiaomi-mimo-v2-pro/",
-    category: "모델 출시", lang: "ko", isNew: true,
-  },
-  {
-    id: "xiaomi-mimo-v2-omni",
-    title: "샤오미 MiMo-V2-Omni 출시 — 오디오 이해서 Gemini 3 Pro 능가",
-    summary: "텍스트·비전·음성 풀 멀티모달. 10시간 이상 장시간 오디오 분석 가능.",
-    date: "2026-03-19", source: "AI타임스",
-    url: "https://eu.36kr.com/en/p/3729001380806017",
-    category: "멀티모달", lang: "ko", isNew: true,
-  },
-  {
-    id: "gn-llm-arch-gallery",
-    title: "LLM 아키텍처 갤러리: GPT-2부터 DeepSeek V3·Qwen3까지 한눈에",
-    summary: "Sebastian Raschka가 공개한 LLM 아키텍처 갤러리. 주요 모델 구조 도식·파라미터·어텐션 사양 비교.",
-    date: "2026-03-19", source: "GeekNews",
-    url: "https://sebastianraschka.com/llm-architecture-gallery/",
-    category: "연구·논문", lang: "ko", isNew: true,
-  },
-  {
-    id: "gn-unsloth-studio",
-    title: "Unsloth Studio: 로컬 AI 모델 학습·실행 노코드 웹 UI",
-    summary: "텍스트·오디오·임베딩·비전 모델을 하나의 인터페이스에서 로컬 학습·실행.",
-    date: "2026-03-19", source: "GeekNews",
-    url: "https://unsloth.ai/docs/new/studio",
-    category: "개발 도구", lang: "ko", isNew: true,
-  },
-  {
-    id: "gn-open-swe",
-    title: "Open SWE: Stripe·Ramp·Coinbase 사내 코딩 에이전트 오픈소스화",
-    summary: "대형 엔지니어링 조직들의 사내 코딩 에이전트 공통 패턴을 오픈소스 프레임워크로.",
-    date: "2026-03-19", source: "GeekNews",
-    url: "https://news.hada.io/topic?id=19000",
-    category: "에이전트", lang: "ko", isNew: true,
-  },
-];
-
-export const GITHUB_TRENDING_FALLBACK: NewsItem[] = [
-  {
-    id: "gh-karpathy-autoresearch",
-    title: "karpathy/autoresearch — AI 에이전트가 밤새 LLM 훈련 실험 자동화",
-    summary: "AI 에이전트에 GPU 하나와 학습 코드를 주면, 밤새 스스로 실험·수정·반복. 5분 단위 100회/야간.",
-    date: "2026-03-15", source: "GitHub Trending",
-    url: "https://github.com/karpathy/autoresearch",
-    category: "오픈소스", lang: "en", isGithub: true, stars: 42900, language: "Python",
-  },
-  {
-    id: "gh-open-webui",
-    title: "open-webui/open-webui — 오프라인 완전 자립 AI 채팅 플랫폼 ⭐124k+",
-    summary: "Ollama·OpenAI API 연결 가능한 ChatGPT 스타일 셀프호스트 UI. RAG 내장.",
-    date: "2026-03-14", source: "GitHub Trending",
-    url: "https://github.com/open-webui/open-webui",
-    category: "개발 도구", lang: "en", isGithub: true, stars: 124000, language: "Svelte",
-  },
-  {
-    id: "gh-dify",
-    title: "langgenius/dify — 에이전트 워크플로 노코드 올인원 플랫폼",
-    summary: "에이전트·RAG 파이프라인·멀티모델 지원을 드래그앤드롭 인터페이스로.",
-    date: "2026-03-13", source: "GitHub Trending",
-    url: "https://github.com/langgenius/dify",
-    category: "에이전트", lang: "en", isGithub: true, stars: 89000, language: "TypeScript",
-  },
-];
-
 // ── Main hook: fetches from /api/news (Vercel Edge Function) ──
 const AUTO_REFRESH_MS = 30 * 60 * 1000; // 30 min
 
 export function useNewsRSS() {
-  const [news, setNews] = useState<NewsItem[]>(CURATED_NEWS);
-  const [github, setGithub] = useState<NewsItem[]>(GITHUB_TRENDING_FALLBACK);
+  const [news, setNews] = useState<NewsItem[]>([]);
+  const [github, setGithub] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const fetchAll = useCallback(async () => {
     setLoading(true);
+    setError(false);
     try {
       const res = await fetch('/api/news');
       if (!res.ok) throw new Error('API error');
       const data = await res.json();
 
+      if (data?.error) throw new Error(data.error);
+
       if (data?.news?.length > 0) {
-        // Merge API news with curated (API first, then curated as fallback fill)
-        const apiUrls = new Set(data.news.map((n: any) => n.url));
-        const curatedOnly = CURATED_NEWS.filter((n) => !apiUrls.has(n.url));
-        const merged = [...data.news, ...curatedOnly];
-        merged.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
-        setNews(merged);
+        setNews(data.news);
       }
 
       if (data?.github?.length > 0) {
@@ -150,7 +78,7 @@ export function useNewsRSS() {
         setLastUpdated(new Date(data.updatedAtKST));
       }
     } catch {
-      // Keep current state (fallback data)
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -164,5 +92,5 @@ export function useNewsRSS() {
     };
   }, [fetchAll]);
 
-  return { news, github, loading, lastUpdated, refetch: fetchAll };
+  return { news, github, loading, error, lastUpdated, refetch: fetchAll };
 }

@@ -1,22 +1,18 @@
 import { Link } from 'react-router-dom';
-import { CURATED_NEWS } from '../hooks/useNewsRSS';
+import { useNewsRSS, categoryColor } from '../hooks/useNewsRSS';
 
 const CAT_COLORS: Record<string, { bg: string; text: string; bar: string }> = {
   '모델 출시':       { bg: 'bg-violet-50 dark:bg-violet-950/30',  text: 'text-violet-600 dark:text-violet-400',  bar: 'bg-violet-500' },
   '연구·논문':       { bg: 'bg-blue-50 dark:bg-blue-950/30',       text: 'text-blue-600 dark:text-blue-400',      bar: 'bg-blue-500' },
   '에이전트':        { bg: 'bg-cyan-50 dark:bg-cyan-950/30',        text: 'text-cyan-600 dark:text-cyan-400',      bar: 'bg-cyan-500' },
-  '오픈소스':        { bg: 'bg-emerald-50 dark:bg-emerald-950/30',  text: 'text-emerald-600 dark:text-emerald-400',bar: 'bg-emerald-500' },
-  '파인튜닝':        { bg: 'bg-amber-50 dark:bg-amber-950/30',      text: 'text-amber-600 dark:text-amber-400',    bar: 'bg-amber-500' },
-  '벤치마크':        { bg: 'bg-orange-50 dark:bg-orange-950/30',    text: 'text-orange-600 dark:text-orange-400',  bar: 'bg-orange-500' },
+  '오픈소스':       { bg: 'bg-emerald-50 dark:bg-emerald-950/30',  text: 'text-emerald-600 dark:text-emerald-400',bar: 'bg-emerald-500' },
+  '파인튜닝':       { bg: 'bg-amber-50 dark:bg-amber-950/30',      text: 'text-amber-600 dark:text-amber-400',    bar: 'bg-amber-500' },
+  '벤치마크':       { bg: 'bg-orange-50 dark:bg-orange-950/30',    text: 'text-orange-600 dark:text-orange-400',  bar: 'bg-orange-500' },
   '인프라·하드웨어': { bg: 'bg-slate-50 dark:bg-slate-900/30',      text: 'text-slate-600 dark:text-slate-400',    bar: 'bg-slate-500' },
   '산업·정책':       { bg: 'bg-red-50 dark:bg-red-950/30',          text: 'text-red-600 dark:text-red-400',        bar: 'bg-red-500' },
   '개발 도구':       { bg: 'bg-sky-50 dark:bg-sky-950/30',          text: 'text-sky-600 dark:text-sky-400',        bar: 'bg-sky-500' },
   '멀티모달':        { bg: 'bg-pink-50 dark:bg-pink-950/30',         text: 'text-pink-600 dark:text-pink-400',      bar: 'bg-pink-500' },
 };
-
-const CURATION_DATE = '2026년 3월 19일';
-
-const TOP_NEWS = CURATED_NEWS.filter((n) => n.isNew).slice(0, 5);
 
 function timeAgo(dateStr: string) {
   const d = new Date(dateStr);
@@ -67,8 +63,14 @@ const SECTIONS = [
 ];
 
 export default function Home() {
+  const { news: allNews, lastUpdated } = useNewsRSS();
+  const TOP_NEWS = allNews.slice(0, 5);
   const hero = TOP_NEWS[0];
   const secondary = TOP_NEWS.slice(1, 3);
+
+  const curDate = lastUpdated
+    ? lastUpdated.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })
+    : '자동 수집';
 
   return (
     <div className="space-y-8">
@@ -117,11 +119,20 @@ export default function Home() {
         <div className="flex items-center gap-2">
           <span className="text-[10px] font-bold tracking-widest text-gray-400 dark:text-gray-500 uppercase">AI 뉴스 브리핑</span>
           <span className="text-[10px] text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded font-mono">
-            {CURATION_DATE} 기준 큐레이션
+            {curDate} 기준 자동 수집
           </span>
         </div>
         <div className="h-px flex-1 bg-gray-200 dark:bg-gray-800" />
       </div>
+
+      {/* ── NEWS EMPTY / LOADING ── */}
+      {allNews.length === 0 && (
+        <div className="text-center py-12">
+          <div className="text-3xl mb-2">📡</div>
+          <p className="text-sm text-gray-400">뉴스를 불러오는 중이에요...</p>
+          <Link to="/news" className="text-xs text-blue-500 hover:underline mt-2 block">전체 뉴스 브리핑 보기 →</Link>
+        </div>
+      )}
 
       {/* ── HERO NEWS ── */}
       {hero && (() => {

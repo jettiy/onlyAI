@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNewsRSS, categoryColor } from "../hooks/useNewsRSS";
 
 type ViewTab = 'briefing' | 'sources';
@@ -11,7 +11,7 @@ const SOURCE_ICONS: Record<string, string> = {
 };
 
 export default function NewsBriefing() {
-  const { news, github, loading, lastUpdated } = useNewsRSS();
+  const { news, github, loading, error, lastUpdated } = useNewsRSS();
   const [tab, setTab] = useState<ViewTab>('briefing');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
 
@@ -95,8 +95,38 @@ export default function NewsBriefing() {
         ))}
       </div>
 
+      {/* Error state */}
+      {error && !loading && (
+        <div className="bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800 rounded-xl p-6 text-center">
+          <div className="text-3xl mb-2">📡</div>
+          <p className="text-sm font-semibold text-red-600 dark:text-red-400 mb-1">뉴스를 불러오지 못했어요</p>
+          <p className="text-xs text-red-400 dark:text-red-500">RSS 소스 연결에 문제가 있어요. 잠시 후 다시 시도해주세요.</p>
+          <button onClick={() => window.location.reload()}
+            className="mt-3 px-4 py-1.5 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-lg hover:bg-red-200 transition-colors">
+            다시 시도
+          </button>
+        </div>
+      )}
+
+      {/* Loading */}
+      {loading && !error && news.length === 0 && (
+        <div className="flex flex-col items-center justify-center py-16 gap-3">
+          <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+          <p className="text-sm text-gray-400">AI타임스 · GeekNews · Hugging Face에서 뉴스 수集中...</p>
+        </div>
+      )}
+
+      {/* Empty state (API returned 0 items) */}
+      {!loading && !error && news.length === 0 && (
+        <div className="text-center py-16">
+          <div className="text-4xl mb-3">📭</div>
+          <p className="text-sm text-gray-500 dark:text-gray-400">현재 수집된 뉴스가 없어요.</p>
+          <p className="text-xs text-gray-400 mt-1">RSS 소스 상태를 확인하거나 잠시 후 다시 시도해주세요.</p>
+        </div>
+      )}
+
       {/* Briefing Tab */}
-      {tab === 'briefing' && (
+      {tab === 'briefing' && news.length > 0 && (
         <>
           {/* Category filter */}
           <div className="flex gap-1.5 flex-wrap">
@@ -120,13 +150,6 @@ export default function NewsBriefing() {
             ))}
           </div>
 
-          {loading && (
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-              <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-              뉴스 불러오는 중...
-            </div>
-          )}
-
           {/* Grouped by date */}
           <div className="space-y-6">
             {dateKeys.map(date => (
@@ -147,7 +170,7 @@ export default function NewsBriefing() {
                           {item.category}
                         </span>
                         <span className="text-[10px] text-gray-400">
-                          {(item.sourceFlag ?? '')} {item.source}
+                          {item.sourceFlag ?? ''} {item.source}
                         </span>
                         {item.lang === 'en' && (
                           <span className="text-[10px] text-gray-400">🇺🇸</span>
@@ -176,10 +199,6 @@ export default function NewsBriefing() {
               </div>
             ))}
           </div>
-
-          {filtered.length === 0 && !loading && (
-            <div className="text-center py-16 text-gray-400">뉴스를 불러오지 못했어요. 잠시 후 다시 시도해주세요.</div>
-          )}
         </>
       )}
 
@@ -189,72 +208,84 @@ export default function NewsBriefing() {
           {/* Source cards */}
           <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
             <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-4">📊 뉴스 소스별 수집 현황</h2>
-            <div className="space-y-3">
-              {Object.entries(sourceCount)
-                .sort(([,a], [,b]) => b - a)
-                .map(([source, count]) => {
-                  const max = Math.max(...Object.values(sourceCount));
-                  return (
-                    <div key={source} className="flex items-center gap-3">
-                      <span className="text-sm">{SOURCE_ICONS[source] ?? '📰'}</span>
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 w-24 truncate">{source}</span>
-                      <div className="flex-1 h-5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                        <div className="h-full bg-blue-500 rounded-full transition-all"
-                          style={{ width: `${(count / max) * 100}%` }} />
+            {Object.keys(sourceCount).length > 0 ? (
+              <div className="space-y-3">
+                {Object.entries(sourceCount)
+                  .sort(([,a], [,b]) => b - a)
+                  .map(([source, count]) => {
+                    const max = Math.max(...Object.values(sourceCount));
+                    return (
+                      <div key={source} className="flex items-center gap-3">
+                        <span className="text-sm">{SOURCE_ICONS[source] ?? '📰'}</span>
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 w-24 truncate">{source}</span>
+                        <div className="flex-1 h-5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                          <div className="h-full bg-blue-500 rounded-full transition-all"
+                            style={{ width: `${(count / max) * 100}%` }} />
+                        </div>
+                        <span className="text-xs font-bold text-gray-500 w-8 text-right">{count}건</span>
                       </div>
-                      <span className="text-xs font-bold text-gray-500 w-8 text-right">{count}건</span>
-                    </div>
-                  );
-                })}
-            </div>
+                    );
+                  })}
+              </div>
+            ) : (
+              <p className="text-xs text-gray-400 text-center py-4">수집된 데이터가 없어요.</p>
+            )}
           </div>
 
           {/* Category breakdown */}
           <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
             <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-4">🏷️ 카테고리별 분포</h2>
-            <div className="space-y-2">
-              {Object.entries(catCount)
-                .sort(([,a], [,b]) => b - a)
-                .map(([cat, count]) => (
-                  <div key={cat} className="flex items-center gap-3">
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${categoryColor[cat] ?? ''} w-20 text-center`}>
-                      {cat}
-                    </span>
-                    <div className="flex-1 h-5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-violet-500 rounded-full transition-all"
-                        style={{ width: `${(count / news.length) * 100}%` }} />
+            {Object.keys(catCount).length > 0 ? (
+              <div className="space-y-2">
+                {Object.entries(catCount)
+                  .sort(([,a], [,b]) => b - a)
+                  .map(([cat, count]) => (
+                    <div key={cat} className="flex items-center gap-3">
+                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${categoryColor[cat] ?? ''} w-20 text-center`}>
+                        {cat}
+                      </span>
+                      <div className="flex-1 h-5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-violet-500 rounded-full transition-all"
+                          style={{ width: `${(count / news.length) * 100}%` }} />
+                      </div>
+                      <span className="text-xs font-bold text-gray-500 w-8 text-right">{count}</span>
                     </div>
-                    <span className="text-xs font-bold text-gray-500 w-8 text-right">{count}</span>
-                  </div>
-                ))}
-            </div>
+                  ))}
+              </div>
+            ) : (
+              <p className="text-xs text-gray-400 text-center py-4">분류된 카테고리가 없어요.</p>
+            )}
           </div>
 
           {/* GitHub trending */}
           <div className="sm:col-span-2 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
             <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-4">🐙 GitHub 인기 AI 레포지토리</h2>
-            <div className="grid gap-2 sm:grid-cols-2">
-              {github.slice(0, 8).map((item, idx) => (
-                <a key={item.id + idx} href={item.url} target="_blank" rel="noopener noreferrer"
-                  className="group flex items-start gap-3 p-3 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all">
-                  <span className="text-lg font-black text-gray-300 dark:text-gray-600 w-6 text-right shrink-0">
-                    {idx + 1}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 line-clamp-1">
-                      {item.title}
-                    </h3>
-                    {item.summary && (
-                      <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mt-0.5">{item.summary}</p>
-                    )}
-                    <div className="flex items-center gap-2 mt-1.5 text-[10px] text-gray-400">
-                      <span>⭐ {item.stars?.toLocaleString()}</span>
-                      {item.language && <span className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">{item.language}</span>}
+            {github.length > 0 ? (
+              <div className="grid gap-2 sm:grid-cols-2">
+                {github.slice(0, 8).map((item, idx) => (
+                  <a key={item.id + idx} href={item.url} target="_blank" rel="noopener noreferrer"
+                    className="group flex items-start gap-3 p-3 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all">
+                    <span className="text-lg font-black text-gray-300 dark:text-gray-600 w-6 text-right shrink-0">
+                      {idx + 1}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 line-clamp-1">
+                        {item.title}
+                      </h3>
+                      {item.summary && (
+                        <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mt-0.5">{item.summary}</p>
+                      )}
+                      <div className="flex items-center gap-2 mt-1.5 text-[10px] text-gray-400">
+                        <span>⭐ {item.stars?.toLocaleString()}</span>
+                        {item.language && <span className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">{item.language}</span>}
+                      </div>
                     </div>
-                  </div>
-                </a>
-              ))}
-            </div>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <p className="text-xs text-gray-400 text-center py-4">GitHub 트렌딩 데이터를 불러오지 못했어요.</p>
+            )}
           </div>
         </div>
       )}

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cloudProviders } from '../data/cloudProviders';
 
-// Updated March 2026 pricing (verified)
-const priceTable = [
+// Fallback hardcoded prices (used when API fails)
+const FALLBACK_PRICES = [
   { model: 'GPT-5', provider: 'OpenAI', input: 1.25, output: 10.0, context: '128K', note: '최고 성능' },
   { model: 'GPT-5 Mini', provider: 'OpenAI', input: 0.25, output: 2.0, context: '128K', note: '가성비' },
+  { model: 'GPT-5 Nano', provider: 'OpenAI', input: 0.05, output: 0.20, context: '128K', note: '최저가' },
   { model: 'Claude Opus 4.6', provider: 'Anthropic', input: 5.0, output: 25.0, context: '200K', note: '긴 문맥' },
   { model: 'Claude Sonnet 4.6', provider: 'Anthropic', input: 3.0, output: 15.0, context: '200K', note: '균형' },
   { model: 'Claude Haiku 4.5', provider: 'Anthropic', input: 1.0, output: 5.0, context: '200K', note: '빠름' },
@@ -18,7 +19,18 @@ const priceTable = [
   { model: 'Mistral Large 3', provider: 'Mistral', input: 2.0, output: 6.0, context: '128K', note: '유럽' },
   { model: 'Mistral Small 3.1', provider: 'Mistral', input: 0.20, output: 0.60, context: '128K', note: '경량' },
   { model: 'Llama 3.3 70B', provider: 'Meta', input: 0.88, output: 0.88, context: '128K', note: '오픈소스' },
+  { model: 'Qwen3 235B', provider: 'Alibaba', input: 0.40, output: 1.20, context: '128K', note: '중국 오픈소스' },
+  { model: 'MiMo V2 Pro', provider: 'Xiaomi', input: 0.50, output: 1.50, context: '1M', note: '초장문맥' },
 ];
+
+interface PriceRow {
+  model: string;
+  provider: string;
+  input: number;
+  output: number;
+  context: string;
+  note?: string;
+}
 
 const NOTE_STYLE: Record<string, string> = {
   '최고 성능': 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300',
@@ -33,18 +45,72 @@ const NOTE_STYLE: Record<string, string> = {
   '오픈소스':  'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
   '유럽':      'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300',
   '경량':      'bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300',
+  '중국 오픈소스': 'bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300',
+  '초장문맥':  'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+};
+
+const TIER_NOTES: Record<string, string> = {
+  flagship: '최고 성능',
+  strong: '균형',
+  efficient: '가성비',
+  local: '오픈소스',
 };
 
 export default function Pricing() {
   const [tab, setTab] = useState<'bar' | 'table' | 'api'>('bar');
-  const maxInput = Math.max(...priceTable.map(p => p.input));
-  const sorted = [...priceTable].sort((a, b) => a.input - b.input);
+  const [prices, setPrices] = useState<PriceRow[]>(FALLBACK_PRICES);
+  const [loading, setLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState<string>('');
+
+  // Fetch live prices from /api/models
+  useEffect(() => {
+    async function fetchPrices() {
+      try {
+        const res = await fetch('/api/models');
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+
+        if (data?.priceTable?.length > 0) {
+          const mapped: PriceRow[] = data.priceTable.map((row: any) => ({
+            model: row.model,
+            provider: row.provider,
+            input: row.input,
+            output: row.output,
+            context: row.context,
+            note: TIER_NOTES[row.tier] ?? row.tier,
+          }));
+          setPrices(mapped);
+          setLastUpdated(data.updatedAtKST ?? '');
+        }
+      } catch {
+        // Keep fallback
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchPrices();
+
+    // Refresh every 30 min
+    const interval = setInterval(fetchPrices, 30 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const maxInput = Math.max(...prices.map(p => p.input));
+  const sorted = [...prices].sort((a, b) => a.input - b.input);
 
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">💰 AI API 가격 비교</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400">2026년 3월 기준. 1M 토큰 ≈ 약 75만 글자.</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          OpenRouter 실시간 가격 기준{lastUpdated && ` · ${lastUpdated} 업데이트`}. 1M 토큰 ≈ 약 75만 글자.
+        </p>
+        {loading && (
+          <div className="mt-2 flex items-center gap-2">
+            <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+            <span className="text-xs text-gray-400">OpenRouter 가격 불러오는 중...</span>
+          </div>
+        )}
       </div>
 
       {/* Tab switcher */}
@@ -107,7 +173,7 @@ export default function Pricing() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
-                {priceTable.map((row) => (
+                {prices.map((row) => (
                   <tr key={row.model} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                     <td className="px-4 py-3 font-medium text-gray-900 dark:text-white">{row.model}</td>
                     <td className="px-4 py-3 text-gray-500 dark:text-gray-400">{row.provider}</td>
@@ -115,9 +181,11 @@ export default function Pricing() {
                     <td className="px-4 py-3 text-right font-mono text-gray-900 dark:text-white">${row.output}</td>
                     <td className="px-4 py-3 text-center text-gray-500 dark:text-gray-400">{row.context}</td>
                     <td className="px-4 py-3 text-center">
-                      <span className={`px-2 py-0.5 text-xs rounded-full font-semibold ${NOTE_STYLE[row.note] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'}`}>
-                        {row.note}
-                      </span>
+                      {row.note && (
+                        <span className={`px-2 py-0.5 text-xs rounded-full font-semibold ${NOTE_STYLE[row.note] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'}`}>
+                          {row.note}
+                        </span>
+                      )}
                     </td>
                   </tr>
                 ))}
@@ -125,7 +193,7 @@ export default function Pricing() {
             </table>
           </div>
           <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-            <p className="text-xs text-gray-400 dark:text-gray-500">* 가격은 OpenRouter 표준가 기준. 캐시·배치 할인 적용 시 더 저렴할 수 있어요.</p>
+            <p className="text-xs text-gray-400 dark:text-gray-500">* 가격은 OpenRouter 실시간 API 기준. 캐시·배치 할인 적용 시 더 저렴할 수 있어요.</p>
           </div>
         </div>
       )}

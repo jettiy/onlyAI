@@ -1,52 +1,17 @@
-import { useState } from "react";
+p = r'C:\Users\USER-PC\Desktop\onlyAI\src\pages\explore\ExploreTimeline.tsx'
+with open(p, 'r', encoding='utf-8') as f:
+    c = f.read()
 
-type TimelineStatus = "released" | "expected" | "rumored";
+# Find the EVENTS array and replace it
+old_events_start = 'const EVENTS: TimelineEvent[] = ['
+old_events_end = '];\n\nconst FILTER_OPTIONS'
 
-interface TimelineEvent {
-  id: string;
-  date: string;
-  displayDate: string;
-  model: string;
-  company: string;
-  companyId: string;
-  status: TimelineStatus;
-  description: string;
-  highlights: string[];
-  category: "flagship" | "efficient" | "open" | "multimodal";
-  isKoreanFriendly?: boolean;
-}
-
-const COMPANY_LOGOS: Record<string, string> = {
-  openai: '/logos/openai.png',
-  anthropic: '/logos/anthropic.jpg',
-  google: '/logos/google.png',
-  meta: '/logos/meta.jpg',
-  xai: '/logos/xai.png',
-  minimax: '/logos/minimax.png',
-  deepseek: '/logos/deepseek.png',
-  alibaba: '/logos/alibaba.png',
-  moonshot: '/logos/moonshot.png',
-  xiaomi: '/logos/xiaomi.png',
-  mistral: '/logos/mistral.jpg',
-  zhipu: '/logos/zhipu.png',
-  cohere: '/logos/cohere.png',
-  nvidia: '/logos/nvidia.png',
-};
-
-const STATUS_STYLE: Record<TimelineStatus, { bg: string; text: string; label: string; dot: string }> = {
-  released: { bg: "bg-emerald-50 dark:bg-emerald-900/20", text: "text-emerald-600 dark:text-emerald-400", label: "출시됨", dot: "bg-emerald-500" },
-  expected: { bg: "bg-blue-50 dark:bg-blue-900/20",    text: "text-blue-600 dark:text-blue-400",    label: "출시 예정", dot: "bg-blue-500" },
-  rumored:  { bg: "bg-amber-50 dark:bg-amber-900/20",   text: "text-amber-600 dark:text-amber-400",   label: "루머",     dot: "bg-amber-400" },
-};
-
-const CAT_COLORS: Record<string, { bar: string; label: string }> = {
-  flagship:   { bar: "bg-violet-500", label: "플래그십" },
-  efficient:  { bar: "bg-blue-400",   label: "경량·효율" },
-  open:       { bar: "bg-emerald-500", label: "오픈소스" },
-  multimodal: { bar: "bg-pink-500",   label: "멀티모달" },
-};
-
-const EVENTS: TimelineEvent[] = [
+idx_start = c.index(old_events_start)
+idx_end = c.index(old_events_end)
+if idx_start == -1 or idx_end == -1:
+    print('NOT FOUND')
+else:
+    new_events = '''const EVENTS: TimelineEvent[] = [
   {
     id: "claude-mythos", date: "2026-04", displayDate: "2026년 3월 26일 (유출)",
     model: "Claude Mythos (Capybara)", company: "Anthropic", companyId: "anthropic",
@@ -201,165 +166,16 @@ const EVENTS: TimelineEvent[] = [
     description: "Meta 차세대 오픈소스 LLM. 구체적 정보는 아직 없음.",
     highlights: ["오픈소스 예상", "루머 단계"],
   },
-];
+];'''
 
-const FILTER_OPTIONS = [
-  { value: "all",      label: "전체" },
-  { value: "released", label: "출시됨" },
-  { value: "expected", label: "출시 예정" },
-  { value: "rumored",  label: "루머" },
-];
+    c = c[:idx_start] + new_events + '\n\n' + c[idx_end:]
+    print('EVENTS replaced successfully')
 
-export default function ExploreTimeline() {
-  const [filter, setFilter] = useState<TimelineStatus | "all">("all");
-  const [catFilter, setCatFilter] = useState<string>("all");
+with open(p, 'w', encoding='utf-8') as f:
+    f.write(c)
 
-  const filtered = EVENTS.filter((e) => {
-    if (filter !== "all" && e.status !== filter) return false;
-    if (catFilter !== "all" && e.category !== catFilter) return false;
-    return true;
-  });
-
-  const released = filtered.filter((e) => e.status === "released");
-  const upcoming = filtered.filter((e) => e.status !== "released");
-
-  return (
-    <div className="space-y-6">
-      <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🗓️ AI 모델 출시 타임라인</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          최신 출시 모델 · 예정 모델 · 루머까지 한눈에 정리했어요
-        </p>
-      </div>
-
-      <div className="flex gap-2 flex-wrap">
-        {FILTER_OPTIONS.map((f) => (
-          <button key={f.value} onClick={() => setFilter(f.value as typeof filter)}
-            className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors " + (
-              filter === f.value
-                ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
-                : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400"
-            )}>
-            {f.label}
-          </button>
-        ))}
-        <div className="w-px bg-gray-200 dark:bg-gray-700 mx-1" />
-        {(["all", "flagship", "efficient", "open", "multimodal"] as const).map((c) => (
-          <button key={c} onClick={() => setCatFilter(c)}
-            className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors " + (
-              catFilter === c
-                ? "bg-violet-600 text-white border-violet-600"
-                : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-violet-200"
-            )}>
-            {c === "all" ? "전체 유형" : CAT_COLORS[c].label}
-          </button>
-        ))}
-      </div>
-
-      {released.length > 0 && (
-        <div>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-3 h-3 bg-emerald-500 rounded-full" />
-            <h2 className="text-sm font-bold text-gray-900 dark:text-white">출시된 모델</h2>
-            <span className="text-xs text-gray-400">{released.length}개</span>
-          </div>
-          <div className="relative">
-            <div className="absolute left-[5px] top-4 bottom-4 w-px bg-gray-200 dark:bg-gray-700" />
-            <div className="space-y-4">
-              {released.map((event) => (
-                <TimelineCard key={event.id} event={event} />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {upcoming.length > 0 && (
-        <div>
-          <div className="flex items-center gap-3 mb-4 mt-6">
-            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
-            <h2 className="text-sm font-bold text-gray-900 dark:text-white">출시 예정 / 루머</h2>
-            <span className="text-xs text-gray-400">{upcoming.length}개</span>
-          </div>
-          <div className="relative">
-            <div
-              className="absolute left-[5px] top-4 bottom-4"
-              style={{ borderLeft: '1px dashed', borderColor: 'rgb(147 197 253 / 0.7)' }}
-            />
-            <div className="space-y-4">
-              {upcoming.map((event) => (
-                <TimelineCard key={event.id} event={event} />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {filtered.length === 0 && (
-        <div className="text-center py-16 text-gray-400">조건에 맞는 항목이 없어요.</div>
-      )}
-
-      <p className="text-xs text-gray-400 dark:text-gray-500 text-center pt-2">
-        출시 예정·루머 정보는 공개된 자료 기반이며, 변경될 수 있어요 · 마지막 업데이트: 2026-04-07
-      </p>
-    </div>
-  );
-}
-
-function TimelineCard({ event }: { event: TimelineEvent }) {
-  const status = STATUS_STYLE[event.status];
-  const cat = CAT_COLORS[event.category];
-
-  return (
-    <div className="flex gap-4 items-start pl-6">
-      <div
-        className={`absolute w-[11px] h-[11px] rounded-full border-2 border-white dark:border-gray-950 ${status.dot} flex-shrink-0`}
-        style={{ left: 0, marginTop: '14px' }}
-      />
-      <div className="flex-1 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-md hover:border-gray-300 dark:hover:border-gray-700 transition-all relative overflow-hidden">
-        <div className={`absolute top-0 left-0 right-0 h-0.5 ${cat.bar}`} />
-        <div className="flex items-start justify-between gap-3 flex-wrap">
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 flex-wrap mb-1.5">
-              <span className="text-[10px] font-mono text-gray-400">{event.displayDate}</span>
-              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${status.bg} ${status.text}`}>
-                {event.status === "expected" ? "🔜 " : event.status === "rumored" ? "💬 " : "✅ "}
-                {status.label}
-              </span>
-              <span className="text-[10px] text-gray-400">{cat.label}</span>
-              {event.isKoreanFriendly && (
-                <span className="text-[10px] font-semibold px-1.5 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded">
-                  🇰🇷 한국어 우수
-                </span>
-              )}
-            </div>
-            <div className="flex items-center gap-2 mb-1.5">
-              {COMPANY_LOGOS[event.companyId] && (
-                <div className="w-6 h-6 rounded-md overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex-shrink-0">
-                  <img
-                    src={COMPANY_LOGOS[event.companyId]}
-                    alt={event.company}
-                    className="w-full h-full object-contain p-[1px]"
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                  />
-                </div>
-              )}
-              <div>
-                <span className="text-[10px] text-gray-400">{event.company}</span>
-                <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-tight">{event.model}</h3>
-              </div>
-            </div>
-            <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-2">{event.description}</p>
-            <div className="flex flex-wrap gap-1">
-              {event.highlights.map((h) => (
-                <span key={h} className="text-[10px] px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full">
-                  {h}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+# Also update the last-updated date
+c2 = c.replace('마지막 업데이트: 2026-03-20', '마지막 업데이트: 2026-04-07')
+with open(p, 'w', encoding='utf-8') as f:
+    f.write(c2)
+print('date updated')

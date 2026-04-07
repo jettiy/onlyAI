@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 
 interface Release {
   tag: string;
+  version: string;
   date: string;
   title: string;
   body: string;
   htmlUrl: string;
   author: string;
   prerelease: boolean;
+  classifiedTag: string;
 }
 
 interface RoadmapItem {
@@ -33,51 +35,20 @@ const TAG_COLORS: Record<string, string> = {
   '기본': 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
 };
 
-// Classify release notes into a tag
-function classifyTag(title: string, body: string): string {
-  const text = `${title} ${body}`.toLowerCase();
-  if (/security|vulnerability|websocket|inject|xss|auth|token|secret/i.test(text)) return '보안';
-  if (/plugin|context.?engine|interface|slot|architecture|refactor/i.test(text)) return '아키폐처';
-  if (/ux|ui|mobile|bottom.?tab|palette|dashboard|layout|theme|dark/i.test(text)) return 'UX 개선';
-  if (/fix|patch|bug|hotfix|crash|resolve|regression/i.test(text)) return '버그수정';
-  if (/add|new|feat|support|introduce|기능|추가|지원/i.test(text)) return '신기능';
-  return '기본';
-}
-
-// Truncate release body for display
-function truncateBody(body: string, maxLen = 300): string {
-  if (!body) return '';
-  const clean = body
-    .replace(/###\s*\w+\s*\n/g, '')  // Remove markdown headers
-    .replace(/\*\*/g, '')
-    .replace(/- /g, '• ')
-    .trim();
-  return clean.length > maxLen ? clean.slice(0, maxLen) + '...' : clean;
-}
-
 export default function DevNews() {
   const [releases, setReleases] = useState<Release[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [updatedAt, setUpdatedAt] = useState('');
 
   useEffect(() => {
     async function fetchReleases() {
       try {
-        const res = await fetch('https://api.github.com/repos/openclaw/openclaw/releases?per_page=15');
-        if (!res.ok) throw new Error('GitHub API error');
-        const data: any[] = await res.json();
-
-        const parsed: Release[] = data.map((r) => ({
-          tag: r.tag_name,
-          date: r.published_at?.slice(0, 10) ?? '',
-          title: r.name ?? r.tag_name,
-          body: r.body ?? '',
-          htmlUrl: r.html_url,
-          author: r.author?.login ?? 'openclaw',
-          prerelease: r.prerelease ?? false,
-        }));
-
-        setReleases(parsed);
+        const res = await fetch('/api/openclaw-releases');
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+        setReleases(data.releases ?? []);
+        setUpdatedAt(data.updatedAtKST ?? '');
       } catch {
         setError(true);
       } finally {
@@ -94,7 +65,10 @@ export default function DevNews() {
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🛠️ 개발자 소식</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400">OpenClaw GitHub Releases에서 자동으로 불러옵니다.</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          OpenClaw GitHub Releases 자동 수집 · 한글 요약
+          {updatedAt && <span className="ml-1 text-gray-400">({updatedAt} 업데이트)</span>}
+        </p>
       </div>
 
       {/* Latest version badge */}
@@ -103,7 +77,7 @@ export default function DevNews() {
           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shrink-0" />
           <div>
             <p className="text-xs text-gray-500 dark:text-gray-400">최신 릴리즈</p>
-            <p className="text-sm font-bold font-mono text-gray-900 dark:text-white">{latest.tag}</p>
+            <p className="text-sm font-bold font-mono text-gray-900 dark:text-white">{latest.version}</p>
           </div>
           <div className="ml-auto text-xs text-gray-400 dark:text-gray-500">{latest.date}</div>
         </div>
@@ -134,16 +108,16 @@ export default function DevNews() {
                 className="group block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all">
                 <div className="flex items-start justify-between gap-2 mb-1">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <code className="text-xs font-mono bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-600 dark:text-gray-400">{u.tag}</code>
-                    <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${TAG_COLORS[classifyTag(u.title, u.body)] ?? TAG_COLORS['기본']}`}>
-                      {classifyTag(u.title, u.body)}
+                    <code className="text-xs font-mono bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-600 dark:text-gray-400">{u.version}</code>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${TAG_COLORS[u.classifiedTag] ?? TAG_COLORS['기본']}`}>
+                      {u.classifiedTag}
                     </span>
                     <h3 className="text-sm font-bold text-gray-900 dark:text-white">{u.title}</h3>
                   </div>
                   <span className="text-[10px] text-gray-400 shrink-0">{u.date}</span>
                 </div>
                 <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-                  {truncateBody(u.body)}
+                  {u.body}
                 </p>
                 <span className="text-[10px] text-blue-500 group-hover:underline mt-1 block">GitHub에서 보기 →</span>
               </a>

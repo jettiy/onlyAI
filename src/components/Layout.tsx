@@ -36,6 +36,9 @@ const NAV = [
     ],
   },
   {
+    label: '뉴스 브리핑', path: '/news', icon: '📰', short: '뉴스',
+  },
+  {
     label: '프롬프트 적용하기', path: '/prompts', icon: '📋', short: '프롬프트',
     children: [
       { path: '/prompts/intro', label: '프롬프트가 뭔가요?', icon: '💡' },
@@ -65,7 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const loc = useLocation();
   const { dark, toggle } = useDarkMode();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [expanded, setExpanded] = useState<string[]>(['/explore','/prompts','/openclaw','/learn']);
+  const [expanded, setExpanded] = useState<string[]>(['/explore','/news','/prompts','/openclaw','/learn']);
 
   const isActive = (path: string) => path === '/' ? loc.pathname === '/' : loc.pathname.startsWith(path);
   const toggle2 = (p: string) => setExpanded(prev => prev.includes(p) ? prev.filter(x => x !== p) : [...prev, p]);

@@ -31,6 +31,10 @@ const NAV = [
     children: [
       { path: '/explore/timeline', label: '타임라인', icon: '🗓️' },
       { path: '/explore/compare', label: '한눈에 비교', icon: '⚖️' },
+      { path: '/explore/ranking', label: '🏆 랭킹', icon: '🏆' },
+      { path: '/explore/side-by-side', label: '🔍 사이드비사이드', icon: '🔍' },
+      { path: '/explore/calculator', label: '🧮 가격 계산기', icon: '🧮' },
+      { path: '/explore/korean-bench', label: '🇰🇷 한국어 성능', icon: '🇰🇷' },
       { path: '/explore/promo', label: '프로모션 현황', icon: '🎁' },
       { path: '/explore/guide', label: '시작 가이드', icon: '🎯' },
     ],

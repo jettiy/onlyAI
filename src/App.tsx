@@ -14,6 +14,9 @@ const ExploreRanking = lazy(() => import("./pages/explore/ExploreRanking").then(
 const ExploreSideBySide = lazy(() => import("./pages/explore/ExploreSideBySide").then(m => ({ default: m.default })));
 const ExploreCalculator = lazy(() => import("./pages/explore/ExploreCalculator").then(m => ({ default: m.default })));
 const ExploreKoreanBench = lazy(() => import("./pages/explore/ExploreKoreanBench").then(m => ({ default: m.default })));
+const ExploreTokenizer = lazy(() => import("./pages/explore/ExploreTokenizer").then(m => ({ default: m.default })));
+const ExplorePromptBench = lazy(() => import("./pages/explore/ExplorePromptBench").then(m => ({ default: m.default })));
+const ExploreContextWindow = lazy(() => import("./pages/explore/ExploreContextWindow").then(m => ({ default: m.default })));
 const PromptsHub = lazy(() => import("./pages/prompts/PromptsHub").then(m => ({ default: m.default })));
 const PromptsIntro = lazy(() => import("./pages/prompts/PromptsIntro").then(m => ({ default: m.default })));
 const PromptsHow = lazy(() => import("./pages/prompts/PromptsHow").then(m => ({ default: m.default })));
@@ -27,6 +30,8 @@ const LearnHub = lazy(() => import("./pages/learn/LearnHub").then(m => ({ defaul
 const LearnGlossary = lazy(() => import("./pages/learn/LearnGlossary").then(m => ({ default: m.default })));
 const NewsBriefing = lazy(() => import("./pages/NewsBriefing").then(m => ({ default: m.default })));
 const LearnSimulator = lazy(() => import("./pages/learn/LearnSimulator").then(m => ({ default: m.default })));
+const VideoTimeline = lazy(() => import("./pages/video/VideoTimeline").then(m => ({ default: m.default })));
+const VideoCompare = lazy(() => import("./pages/video/VideoCompare").then(m => ({ default: m.default })));
 
 function PageLoader() {
   return (
@@ -55,6 +60,11 @@ export default function App() {
             <Route path="/explore/side-by-side" element={<ExploreSideBySide />} />
             <Route path="/explore/calculator" element={<ExploreCalculator />} />
             <Route path="/explore/korean-bench" element={<ExploreKoreanBench />} />
+            <Route path="/explore/tokenizer" element={<ExploreTokenizer />} />
+            <Route path="/explore/prompt-bench" element={<ExplorePromptBench />} />
+            <Route path="/explore/context-window" element={<ExploreContextWindow />} />
+            <Route path="/video/timeline" element={<VideoTimeline />} />
+            <Route path="/video/compare" element={<VideoCompare />} />
             <Route path="/prompts" element={<PromptsHub />} />
             <Route path="/prompts/intro" element={<PromptsIntro />} />
             <Route path="/prompts/how" element={<PromptsHow />} />

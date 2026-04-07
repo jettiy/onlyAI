@@ -34,9 +34,19 @@ const NAV = [
       { path: '/explore/ranking', label: '🏆 랭킹', icon: '🏆' },
       { path: '/explore/side-by-side', label: '🔍 사이드비사이드', icon: '🔍' },
       { path: '/explore/calculator', label: '🧮 가격 계산기', icon: '🧮' },
+      { path: '/explore/tokenizer', label: '🔤 토큰 체험기', icon: '🔤' },
+      { path: '/explore/prompt-bench', label: '🎯 프롬프트 벤치마크', icon: '🎯' },
+      { path: '/explore/context-window', label: '📏 컨텍스트 시각화', icon: '📏' },
       { path: '/explore/korean-bench', label: '🇰🇷 한국어 성능', icon: '🇰🇷' },
       { path: '/explore/promo', label: '프로모션 현황', icon: '🎁' },
       { path: '/explore/guide', label: '시작 가이드', icon: '🎯' },
+    ],
+  },
+  {
+    label: '비디오 AI', path: '/video', icon: '🎬', short: '비디오',
+    children: [
+      { path: '/video/timeline', label: '비디오 AI 타임라인', icon: '🎥' },
+      { path: '/video/compare', label: '비디오 AI 비교', icon: '🎬' },
     ],
   },
   {
@@ -72,7 +82,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const loc = useLocation();
   const { dark, toggle } = useDarkMode();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [expanded, setExpanded] = useState<string[]>(['/explore','/news','/prompts','/openclaw','/learn']);
+  const [expanded, setExpanded] = useState<string[]>(['/explore','/video','/news','/prompts','/openclaw','/learn']);
 
   const isActive = (path: string) => path === '/' ? loc.pathname === '/' : loc.pathname.startsWith(path);
   const toggle2 = (p: string) => setExpanded(prev => prev.includes(p) ? prev.filter(x => x !== p) : [...prev, p]);

@@ -5,21 +5,13 @@ interface Release {
   version: string;
   date: string;
   title: string;
-  body: string;
+  summary: string;
+  tagLabel: string;
   htmlUrl: string;
-  author: string;
   prerelease: boolean;
-  classifiedTag: string;
 }
 
-interface RoadmapItem {
-  title: string;
-  desc: string;
-  status: string;
-  eta: string;
-}
-
-const ROADMAP: RoadmapItem[] = [
+const ROADMAP = [
   { title: '음성 명령 지원', desc: '텔레그램 음성 메시지로 AI에게 명령하기', status: '개발 중', eta: 'Q2 2026' },
   { title: 'Windows 네이티브 앱', desc: 'MaxClaw Windows 데스크톱 앱', status: '계획 중', eta: 'Q3 2026' },
   { title: '팀 플랜', desc: '여러 명이 함께 쓰는 공유 워크스페이스', status: '계획 중', eta: 'Q3 2026' },
@@ -32,7 +24,9 @@ const TAG_COLORS: Record<string, string> = {
   '아키텍처': 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400',
   'UX 개선': 'bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400',
   '버그수정': 'bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400',
-  '기본': 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
+  '성능 개선': 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400',
+  '플랫폼': 'bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400',
+  '개선': 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
 };
 
 export default function DevNews() {
@@ -40,26 +34,17 @@ export default function DevNews() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [updatedAt, setUpdatedAt] = useState('');
+  const [expandedTag, setExpandedTag] = useState<string | null>(null);
 
   useEffect(() => {
-    async function fetchReleases() {
-      try {
-        const res = await fetch('/api/openclaw-releases');
-        if (!res.ok) throw new Error('API error');
-        const data = await res.json();
-        setReleases(data.releases ?? []);
-        setUpdatedAt(data.updatedAtKST ?? '');
-      } catch {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchReleases();
+    fetch('/api/openclaw-releases')
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(d => { setReleases(d.releases ?? []); setUpdatedAt(d.updatedAt ?? ''); })
+      .catch(() => setError(true))
+      .finally(() => setLoading(false));
   }, []);
 
   const latest = releases[0];
-  const updates = releases.slice(0, 10);
 
   return (
     <div className="space-y-8">
@@ -71,7 +56,7 @@ export default function DevNews() {
         </p>
       </div>
 
-      {/* Latest version badge */}
+      {/* 최신 버전 */}
       {latest && (
         <div className="flex items-center gap-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3">
           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shrink-0" />
@@ -79,11 +64,10 @@ export default function DevNews() {
             <p className="text-xs text-gray-500 dark:text-gray-400">최신 릴리즈</p>
             <p className="text-sm font-bold font-mono text-gray-900 dark:text-white">{latest.version}</p>
           </div>
-          <div className="ml-auto text-xs text-gray-400 dark:text-gray-500">{latest.date}</div>
+          <div className="ml-auto text-xs text-gray-400">{latest.date}</div>
         </div>
       )}
 
-      {/* Loading */}
       {loading && (
         <div className="flex items-center gap-2 py-8 justify-center">
           <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
@@ -91,42 +75,52 @@ export default function DevNews() {
         </div>
       )}
 
-      {/* Error */}
       {error && (
-        <div className="text-center py-8 text-sm text-gray-400">
-          GitHub에서 릴리즈를 불러오지 못했어요. 잠시 후 다시 시도해주세요.
+        <div className="text-center py-8 text-sm text-gray-400">릴리즈를 불러오지 못했어요. 잠시 후 다시 시도해주세요.</div>
+      )}
+
+      {/* 태그 필터 */}
+      {!loading && releases.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {['전체', ...Array.from(new Set(releases.map(r => r.tagLabel)))].map(tag => (
+            <button key={tag} onClick={() => setExpandedTag(tag === '전체' ? null : (expandedTag === tag ? null : tag))}
+              className={`text-[11px] px-2.5 py-1 rounded-full font-medium transition-all ${expandedTag === tag || (tag === '전체' && !expandedTag)
+                ? 'bg-blue-500 text-white shadow-sm' : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
+              {tag}
+            </button>
+          ))}
         </div>
       )}
 
-      {/* Updates */}
-      {!loading && updates.length > 0 && (
+      {/* 업데이트 목록 */}
+      {!loading && (
         <div>
           <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3">📋 최근 업데이트</h2>
           <div className="space-y-3">
-            {updates.map((u) => (
+            {(expandedTag ? releases.filter(r => r.tagLabel === expandedTag) : releases.slice(0, 10)).map((u) => (
               <a key={u.tag} href={u.htmlUrl} target="_blank" rel="noopener noreferrer"
                 className="group block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all">
-                <div className="flex items-start justify-between gap-2 mb-1">
+                <div className="flex items-start justify-between gap-2 mb-2">
                   <div className="flex items-center gap-2 flex-wrap">
                     <code className="text-xs font-mono bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-600 dark:text-gray-400">{u.version}</code>
-                    <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${TAG_COLORS[u.classifiedTag] ?? TAG_COLORS['기본']}`}>
-                      {u.classifiedTag}
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${TAG_COLORS[u.tagLabel] ?? TAG_COLORS['개선']}`}>
+                      {u.tagLabel}
                     </span>
                     <h3 className="text-sm font-bold text-gray-900 dark:text-white">{u.title}</h3>
                   </div>
                   <span className="text-[10px] text-gray-400 shrink-0">{u.date}</span>
                 </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-                  {u.body}
-                </p>
-                <span className="text-[10px] text-blue-500 group-hover:underline mt-1 block">GitHub에서 보기 →</span>
+                {u.summary && (
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed whitespace-pre-line">{u.summary}</p>
+                )}
+                <span className="text-[10px] text-blue-500 group-hover:underline mt-2 block">GitHub에서 자세히 보기 →</span>
               </a>
             ))}
           </div>
         </div>
       )}
 
-      {/* Roadmap */}
+      {/* 로드맵 */}
       <div>
         <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3">🗺️ 로드맵</h2>
         <div className="grid sm:grid-cols-2 gap-3">

@@ -41,6 +41,8 @@ const CATEGORIES = [
   { test: /policy|정책|규제|법|법률|govern|监管|合规/i, cat: '산업·정책' },
   { test: /tool|도구|dev|sdk|api|framework|ide|editor|工具|框架/i, cat: '개발 도구' },
   { test: /vision|audio|video|image|multimodal|멀티모달|음성|이미지|sora|midjourney|多模态|视频|语音/i, cat: '멀티모달' },
+  { test: /투자|investment|funding|series [ab]|매출|revenue|기업|company|startup|valuation|ipo|상장|strategic/i, cat: '투자·기업' },
+  { test: /robot|로봇|autonomous driv|자율주행|car|ev|전기차|tesla|mobility/i, cat: '로봇·자율주행' },
 ];
 
 function isAIRelated(text: string): boolean {

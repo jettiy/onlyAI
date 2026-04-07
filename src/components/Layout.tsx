@@ -36,7 +36,7 @@ const NAV = [
     ],
   },
   {
-    label: '뉴스 브리핑', path: '/news', icon: '📰', short: '뉴스',
+    label: '뉴스 브리핑', path: '/news', icon: '📰', short: '뉴스', children: [],
   },
   {
     label: '프롬프트 적용하기', path: '/prompts', icon: '📋', short: '프롬프트',

@@ -1,0 +1,3 @@
+39:     label: '뉴스 브리핑', path: '/news', icon: '📰', short: '뉴스',
+55:       { path: '/openclaw/devnews', label: '개발자 소식', icon: '🛠️' },
+71:   const [expanded, setExpanded] = useState<string[]>(['/explore','/news','/prompts','/openclaw','/learn']);

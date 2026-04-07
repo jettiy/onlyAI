@@ -1,0 +1,7 @@
+Line 43: "  { test: /vision|audio|video|image|multimodal|멀티모달|음성|이미지|sora|midjourney|多模态|视频|语音/i, cat: '멀티모달' },"
+42: "  { test: /tool|도구|dev|sdk|api|framework|ide|editor|工具|框架/i, cat: '개발 도구' },"
+43: "  { test: /vision|audio|video|image|multimodal|멀티모달|음성|이미지|sora|midjourney|多模态|视频|语音/i, cat: '멀티모달' },"
+44: '];'
+45: ''
+46: 'function isAIRelated(text: string): boolean {'
+47: '  const t = text.toLowerCase();'

@@ -21,6 +21,7 @@ const SkillTree = lazy(() => import("./pages/openclaw/SkillTree").then(m => ({ d
 const DevNews = lazy(() => import("./pages/openclaw/DevNews").then(m => ({ default: m.default })));
 const LearnHub = lazy(() => import("./pages/learn/LearnHub").then(m => ({ default: m.default })));
 const LearnGlossary = lazy(() => import("./pages/learn/LearnGlossary").then(m => ({ default: m.default })));
+const NewsBriefing = lazy(() => import("./pages/NewsBriefing").then(m => ({ default: m.default })));
 const LearnSimulator = lazy(() => import("./pages/learn/LearnSimulator").then(m => ({ default: m.default })));
 
 function PageLoader() {
@@ -58,6 +59,7 @@ export default function App() {
             <Route path="/learn" element={<LearnHub />} />
             <Route path="/learn/glossary" element={<LearnGlossary />} />
             <Route path="/learn/simulator" element={<LearnSimulator />} />
+            <Route path="/news" element={<NewsBriefing />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>

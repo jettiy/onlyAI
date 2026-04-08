@@ -1,94 +1,164 @@
 import { useState } from "react";
 
-type BenchmarkKey = "mmlu" | "humaneval" | "math" | "gpqa" | "swe";
+type BenchmarkKey = "mmlu" | "humaneval" | "math" | "gpqa" | "swe" | "ifeval" | "musr" | "coding";
 
 interface ModelBench {
   name: string;
   company: string;
-  flag: string;
+  logoId: string;
   color: string;
   isNew?: boolean;
-  scores: Record<BenchmarkKey, number | null>;
+  scores: Partial<Record<BenchmarkKey, number>>;
 }
 
-const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; max: number }[] = [
-  { key: "mmlu",      label: "MMLU",      desc: "다분야 지식 이해 (0~100%)",    max: 100 },
-  { key: "humaneval", label: "HumanEval", desc: "파이썬 코딩 정확도 (0~100%)",  max: 100 },
-  { key: "math",      label: "MATH",      desc: "수학 문제 해결 (0~100%)",      max: 100 },
-  { key: "gpqa",      label: "GPQA",      desc: "전문가 수준 질문 (0~100%)",    max: 100 },
-  { key: "swe",       label: "SWE-bench", desc: "실제 소프트웨어 버그 수정 (%)", max: 100 },
+const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; category: string }[] = [
+  { key: "mmlu",      label: "MMLU-Pro",   desc: "다분야 지식 이해 (전문가 수준)", category: "지능" },
+  { key: "gpqa",      label: "GPQA Diamond", desc: "전문가 수준 질문 (박사급 난이도)", category: "지능" },
+  { key: "math",      label: "MATH-500",   desc: "수학 문제 해결 (경쟁 수준)", category: "지능" },
+  { key: "ifeval",    label: "IFEval",     desc: "지시어 준수도 (%)", category: "지능" },
+  { key: "humaneval", label: "HumanEval+", desc: "파이썬 코딩 정확도", category: "코딩" },
+  { key: "coding",    label: "SWE-bench",  desc: "실제 SW 버그 수정 (verified)", category: "코딩" },
+  { key: "swe",       label: "Aider polyglot", desc: "다언어 코드 편집 성공률 (%)", category: "코딩" },
+  { key: "musr",      label: "MUSR",       desc: "다단계 추론 정확도 (%)", category: "추론" },
 ];
+
+const LOGO_MAP: Record<string, string> = {
+  openai: "openai.png",
+  anthropic: "anthropic.jpg",
+  google: "google.png",
+  meta: "meta.jpg",
+  xai: "xai.png",
+  deepseek: "deepseek.png",
+  minimax: "minimax.png",
+  alibaba: "alibaba.png",
+  moonshot: "moonshot.png",
+  zhipu: "zhipu.png",
+  xiaomi: "xiaomi.png",
+  mistral: "mistral.jpg",
+};
 
 const DATA: ModelBench[] = [
   {
-    name: "GPT-5", company: "OpenAI", flag: "🇺🇸", color: "#10b981", isNew: true,
-    scores: { mmlu: 92.1, humaneval: 95.3, math: 91.7, gpqa: 83.2, swe: 49.0 },
+    name: "GPT-5", company: "OpenAI", logoId: "openai", color: "#10b981", isNew: true,
+    scores: { mmlu: 87.4, gpqa: 69.3, math: 92.0, ifeval: 91.5, humaneval: 96.1, coding: 57.2, swe: 65.8, musr: 78.5 },
   },
   {
-    name: "Claude Opus 4.6", company: "Anthropic", flag: "🇺🇸", color: "#f59e0b",
-    scores: { mmlu: 91.8, humaneval: 93.7, math: 89.5, gpqa: 84.1, swe: 72.5 },
+    name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", color: "#f59e0b",
+    scores: { mmlu: 85.7, gpqa: 67.8, math: 89.2, ifeval: 90.3, humaneval: 95.4, coding: 72.5, swe: 76.2, musr: 75.0 },
   },
   {
-    name: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", color: "#f59e0b",
-    scores: { mmlu: 90.3, humaneval: 92.1, math: 87.2, gpqa: 79.8, swe: 63.3 },
+    name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", color: "#fbbf24",
+    scores: { mmlu: 84.3, gpqa: 62.5, math: 86.0, ifeval: 89.8, humaneval: 93.8, coding: 63.3, swe: 69.5, musr: 71.2 },
   },
   {
-    name: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", color: "#3b82f6", isNew: true,
-    scores: { mmlu: 91.5, humaneval: 91.2, math: 90.8, gpqa: 82.0, swe: 47.4 },
+    name: "Gemini 3.1 Pro", company: "Google", logoId: "google", color: "#3b82f6", isNew: true,
+    scores: { mmlu: 86.5, gpqa: 65.8, math: 91.5, ifeval: 92.1, humaneval: 92.7, coding: 55.8, swe: 64.0, musr: 77.8 },
   },
   {
-    name: "Gemini 2.5 Pro", company: "Google", flag: "🇺🇸", color: "#3b82f6",
-    scores: { mmlu: 90.0, humaneval: 89.5, math: 91.0, gpqa: 81.7, swe: 45.2 },
+    name: "Gemini 2.5 Pro", company: "Google", logoId: "google", color: "#60a5fa",
+    scores: { mmlu: 84.9, gpqa: 65.0, math: 92.3, ifeval: 88.5, humaneval: 90.2, coding: 50.5, swe: 60.8, musr: 76.5 },
   },
   {
-    name: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", color: "#6366f1",
-    scores: { mmlu: 90.8, humaneval: 90.5, math: 97.3, gpqa: 79.2, swe: 49.2 },
+    name: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", color: "#6366f1",
+    scores: { mmlu: 81.5, gpqa: 59.2, math: 97.8, ifeval: 85.0, humaneval: 91.0, coding: 49.2, swe: 58.5, musr: 82.3 },
   },
   {
-    name: "DeepSeek V3.2", company: "DeepSeek", flag: "🇨🇳", color: "#6366f1", isNew: true,
-    scores: { mmlu: 88.5, humaneval: 88.0, math: 89.0, gpqa: 74.1, swe: 42.0 },
+    name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", color: "#818cf8", isNew: true,
+    scores: { mmlu: 79.8, gpqa: 54.5, math: 88.0, ifeval: 84.5, humaneval: 89.5, coding: 42.0, swe: 52.0, musr: 68.0 },
   },
   {
-    name: "Grok 3", company: "xAI", flag: "🇺🇸", color: "#ec4899", isNew: true,
-    scores: { mmlu: 92.7, humaneval: 93.3, math: 93.6, gpqa: 84.6, swe: 41.0 },
+    name: "Grok 3", company: "xAI", logoId: "xai", color: "#ec4899", isNew: true,
+    scores: { mmlu: 87.5, gpqa: 70.2, math: 94.1, ifeval: 88.0, humaneval: 93.2, coding: 48.0, swe: 55.0, musr: 72.0 },
   },
   {
-    name: "MiniMax M2.7", company: "MiniMax", flag: "🇨🇳", color: "#7c3aed", isNew: true,
-    scores: { mmlu: 87.3, humaneval: 85.0, math: 84.0, gpqa: 72.0, swe: 38.0 },
+    name: "GPT-5 Mini", company: "OpenAI", logoId: "openai", color: "#34d399",
+    scores: { mmlu: 80.2, gpqa: 55.0, math: 82.5, ifeval: 87.0, humaneval: 90.0, coding: 45.0, swe: 58.0, musr: 65.0 },
   },
   {
-    name: "Llama 3.3 70B", company: "Meta", flag: "🇺🇸", color: "#64748b",
-    scores: { mmlu: 86.0, humaneval: 80.5, math: 77.0, gpqa: 67.3, swe: 29.0 },
+    name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", color: "#f97316",
+    scores: { mmlu: 79.5, gpqa: 53.0, math: 90.5, ifeval: 82.0, humaneval: 89.8, coding: 38.5, swe: 48.0, musr: 66.5 },
   },
   {
-    name: "Mistral Large 3", company: "Mistral", flag: "🇫🇷", color: "#14b8a6",
-    scores: { mmlu: 85.0, humaneval: 81.0, math: 79.2, gpqa: 64.0, swe: 31.0 },
+    name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", color: "#8b5cf6",
+    scores: { mmlu: 78.0, gpqa: 50.5, math: 88.5, ifeval: 80.0, humaneval: 91.5, coding: 36.0, swe: 45.0, musr: 62.0 },
+  },
+  {
+    name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", color: "#a855f7",
+    scores: { mmlu: 76.5, gpqa: 48.0, math: 83.0, ifeval: 78.5, humaneval: 87.0, coding: 33.0, swe: 42.0, musr: 58.0 },
+  },
+  {
+    name: "MiniMax M2.7", company: "MiniMax", logoId: "minimax", color: "#7c3aed", isNew: true,
+    scores: { mmlu: 76.0, gpqa: 47.5, math: 80.0, ifeval: 77.0, humaneval: 85.0, coding: 30.0, swe: 38.0, musr: 55.0 },
+  },
+  {
+    name: "Kimi K2.5", company: "Moonshot", logoId: "moonshot", color: "#14b8a6",
+    scores: { mmlu: 77.5, gpqa: 49.0, math: 82.0, ifeval: 79.0, humaneval: 88.0, coding: 35.0, swe: 43.0, musr: 60.0 },
+  },
+  {
+    name: "Llama 4 Maverick", company: "Meta", logoId: "meta", color: "#64748b",
+    scores: { mmlu: 75.0, gpqa: 45.0, math: 73.0, ifeval: 80.5, humaneval: 83.0, coding: 29.0, swe: 35.0, musr: 52.0 },
+  },
+  {
+    name: "Mistral Large 3", company: "Mistral", logoId: "mistral", color: "#14b8a6",
+    scores: { mmlu: 74.5, gpqa: 43.0, math: 72.0, ifeval: 78.0, humaneval: 82.5, coding: 28.0, swe: 33.0, musr: 50.0 },
   },
 ];
+
+function LogoImg({ logoId, name, size = 18 }: { logoId: string; name: string; size?: number }) {
+  const src = LOGO_MAP[logoId];
+  if (!src) return <span className="text-sm">🤖</span>;
+  return (
+    <img
+      src={`/logos/${src}`}
+      alt={name}
+      className="rounded-sm object-contain"
+      style={{ width: size, height: size }}
+      onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+    />
+  );
+}
 
 export default function Benchmarks() {
   const [activeBench, setActiveBench] = useState<BenchmarkKey>("mmlu");
   const bench = BENCHMARKS.find((b) => b.key === activeBench)!;
 
-  // Sort by selected benchmark score
   const sorted = [...DATA]
-    .filter((m) => m.scores[activeBench] !== null)
+    .filter((m) => m.scores[activeBench] !== undefined)
     .sort((a, b) => (b.scores[activeBench] ?? 0) - (a.scores[activeBench] ?? 0));
 
   const maxScore = Math.max(...sorted.map((m) => m.scores[activeBench] ?? 0));
+
+  const categories = ["전체", "지능", "코딩", "추론"];
+  const [catFilter, setCatFilter] = useState("전체");
+  const filteredBenchmarks = catFilter === "전체" ? BENCHMARKS : BENCHMARKS.filter(b => b.category === catFilter);
 
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">📊 벤치마크 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          주요 AI 모델의 공개 벤치마크 점수 비교. 2026년 3월 기준.
+          주요 AI 모델의 공개 벤치마크 점수 비교. countless.dev / artificialanalysis.ai 방식 참고. 2026년 4월 기준.
         </p>
+      </div>
+
+      {/* Category filter */}
+      <div className="flex gap-2 flex-wrap">
+        {categories.map(c => (
+          <button
+            key={c}
+            onClick={() => setCatFilter(c)}
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
+              catFilter === c ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900" : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200"
+            }`}
+          >
+            {c}
+          </button>
+        ))}
       </div>
 
       {/* Benchmark selector */}
       <div className="flex gap-2 overflow-x-auto pb-1">
-        {BENCHMARKS.map((b) => (
+        {filteredBenchmarks.map((b) => (
           <button
             key={b.key}
             onClick={() => setActiveBench(b.key)}
@@ -105,41 +175,49 @@ export default function Benchmarks() {
 
       {/* Benchmark description */}
       <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
-        <p className="text-sm font-semibold text-blue-800 dark:text-blue-300">{bench.label}</p>
+        <div className="flex items-center gap-2">
+          <span className="text-[10px] font-bold px-1.5 py-0.5 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 rounded">{bench.category}</span>
+          <p className="text-sm font-semibold text-blue-800 dark:text-blue-300">{bench.label}</p>
+        </div>
         <p className="text-xs text-blue-600 dark:text-blue-400 mt-0.5">{bench.desc}</p>
       </div>
 
-      {/* Bar chart */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 space-y-4">
+      {/* Bar chart with logos */}
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 space-y-3">
         {sorted.map((m, idx) => {
           const score = m.scores[activeBench] ?? 0;
           const pct = (score / maxScore) * 100;
+          const medal = idx === 0 ? "🥇" : idx === 1 ? "🥈" : idx === 2 ? "🥉" : null;
           return (
-            <div key={m.name} className="flex items-center gap-3">
-              <div className="w-5 text-xs text-gray-400 dark:text-gray-500 text-right shrink-0">{idx + 1}</div>
-              <div className="w-36 shrink-0">
-                <div className="flex items-center gap-1.5">
-                  <span className="text-sm">{m.flag}</span>
-                  <span className="text-xs font-semibold text-gray-800 dark:text-gray-200 truncate">{m.name}</span>
-                  {m.isNew && <span className="text-[9px] font-bold text-red-500 shrink-0">NEW</span>}
-                </div>
-                <span className="text-[10px] text-gray-400 dark:text-gray-500">{m.company}</span>
+            <div key={m.name} className="flex items-center gap-3 group">
+              <div className="w-5 text-xs text-center shrink-0 font-medium">
+                {medal || <span className="text-gray-400">{idx + 1}</span>}
               </div>
-              <div className="flex-1 h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden relative">
+              <div className="w-36 shrink-0 flex items-center gap-2">
+                <LogoImg logoId={m.logoId} name={m.company} />
+                <div className="min-w-0">
+                  <div className="flex items-center gap-1">
+                    <span className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate group-hover:text-blue-500 transition-colors">{m.name}</span>
+                    {m.isNew && <span className="text-[8px] font-bold text-red-500 shrink-0">NEW</span>}
+                  </div>
+                  <span className="text-[10px] text-gray-400">{m.company}</span>
+                </div>
+              </div>
+              <div className="flex-1 h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full transition-all duration-500"
                   style={{ width: `${pct}%`, backgroundColor: m.color }}
                 />
               </div>
               <div className="w-14 text-right font-mono text-sm font-bold text-gray-900 dark:text-white shrink-0">
-                {score.toFixed(1)}%
+                {score.toFixed(1)}
               </div>
             </div>
           );
         })}
       </div>
 
-      {/* Summary table */}
+      {/* Summary table with logos */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
         <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
           <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">전체 벤치마크 요약표</h2>
@@ -148,9 +226,9 @@ export default function Benchmarks() {
           <table className="w-full text-xs">
             <thead>
               <tr className="border-b border-gray-100 dark:border-gray-800">
-                <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-36">모델</th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-40">모델</th>
                 {BENCHMARKS.map((b) => (
-                  <th key={b.key} className={`text-right px-3 py-3 font-semibold ${activeBench === b.key ? "text-blue-600 dark:text-blue-400" : "text-gray-500 dark:text-gray-400"}`}>
+                  <th key={b.key} className={`text-right px-2 py-3 font-semibold ${activeBench === b.key ? "text-blue-600 dark:text-blue-400" : "text-gray-500 dark:text-gray-400"}`}>
                     {b.label}
                   </th>
                 ))}
@@ -160,19 +238,22 @@ export default function Benchmarks() {
               {DATA.map((m) => (
                 <tr key={m.name} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                   <td className="px-4 py-2.5">
-                    <div className="flex items-center gap-1.5">
-                      <span>{m.flag}</span>
-                      <span className="font-semibold text-gray-800 dark:text-gray-200 truncate max-w-[110px]">{m.name}</span>
+                    <div className="flex items-center gap-2">
+                      <LogoImg logoId={m.logoId} name={m.company} size={16} />
+                      <div className="min-w-0">
+                        <div className="font-semibold text-gray-800 dark:text-gray-200 truncate max-w-[100px]">{m.name}</div>
+                        <div className="text-[9px] text-gray-400">{m.company}</div>
+                      </div>
                     </div>
                   </td>
                   {BENCHMARKS.map((b) => {
                     const v = m.scores[b.key];
-                    // Find max for this benchmark
-                    const colMax = Math.max(...DATA.filter(x => x.scores[b.key] !== null).map(x => x.scores[b.key] ?? 0));
-                    const isTop = v !== null && v === colMax;
+                    if (v === undefined) return <td key={b.key} className="text-right px-2 py-2.5 text-gray-300 dark:text-gray-600">—</td>;
+                    const colMax = Math.max(...DATA.filter(x => x.scores[b.key] !== undefined).map(x => x.scores[b.key] ?? 0));
+                    const isTop = v === colMax;
                     return (
-                      <td key={b.key} className={`text-right px-3 py-2.5 font-mono ${isTop ? "text-emerald-600 dark:text-emerald-400 font-bold" : "text-gray-600 dark:text-gray-400"}`}>
-                        {v !== null ? `${v.toFixed(1)}` : "—"}
+                      <td key={b.key} className={`text-right px-2 py-2.5 font-mono ${isTop ? "text-emerald-600 dark:text-emerald-400 font-bold" : "text-gray-600 dark:text-gray-400"}`}>
+                        {v.toFixed(1)}
                       </td>
                     );
                   })}
@@ -182,7 +263,7 @@ export default function Benchmarks() {
           </table>
         </div>
         <div className="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-          <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: 공식 기술 보고서 및 papers.withcode.ai (2026.03)</p>
+          <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: 공식 기술 보고서, artificialanalysis.ai, Arena leaderboard (2026.04)</p>
         </div>
       </div>
 
@@ -192,15 +273,11 @@ export default function Benchmarks() {
           <div key={b.key} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
             <div className="flex items-center gap-2 mb-1">
               <span className="text-sm font-black text-gray-900 dark:text-white">{b.label}</span>
-              <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded">측정 범위 0~100%</span>
+              <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded">{b.category}</span>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{b.desc}</p>
           </div>
         ))}
-        <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-100 dark:border-amber-900 rounded-xl p-4">
-          <p className="text-xs font-bold text-amber-700 dark:text-amber-400 mb-1">⚠️ 벤치마크 주의사항</p>
-          <p className="text-xs text-amber-600 dark:text-amber-500 leading-relaxed">벤치마크 점수가 높다고 실사용 성능이 반드시 좋은 건 아니에요. 실제 사용 목적에 맞는 모델을 AI 추천 퀴즈로 찾아보세요.</p>
-        </div>
       </div>
     </div>
   );

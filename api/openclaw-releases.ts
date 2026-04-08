@@ -4,7 +4,7 @@
 export const config = { runtime: 'edge' };
 const CACHE_DURATION = 3600;
 
-// 번역 사전 (영어→한글) - 기술 용어 풀어서 설명
+// ─── 번역 사전 (fallback용) ───────────────────────────────────
 const TERMS: Record<string, string> = {
   'security':'보안','vulnerability':'취약점','websocket':'WebSocket','injection':'인젝션',
   'authentication':'인증','authorization':'인가','dashboard':'대시보드','plugin':'플러그인',
@@ -66,7 +66,6 @@ function translate(text: string): string {
   r = r.replace(/^###\s*(.+)$/gm, (_, t) => `### ${t.trim()}`);
   r = r.replace(/\*\*(.+?)\*\*/g, '$1');
   r = r.replace(/^- /gm, '• ');
-  // Sort by length descending to match longer phrases first
   const entries = Object.entries(TERMS).sort((a, b) => b[0].length - a[0].length);
   for (const [en, ko] of entries) {
     const regex = new RegExp(`\\b${en.replace(/\s+/g, '\\s+')}\\b`, 'gi');
@@ -75,77 +74,40 @@ function translate(text: string): string {
   return r.trim();
 }
 
-// 자연스러운 한국어로 번역하는 함수 (비전공자용)
 function translateToNatural(text: string): string {
   if (!text) return '';
   let r = text.trim();
-
-  // 영문 불릿 포인트를 한국어로 변환
-  // "add X support" 패턴
   r = r.replace(/add(?:ed)?\s+(.+?)\s+support/i, (_, feature) => `${feature.trim()} 기능이 추가되었습니다`);
   r = r.replace(/add(?:ed)?\s+(?:support\s+for\s+)?(.+)/i, (_, feature) => {
     const f = feature.trim().replace(/^to\s+/i, '');
     return `${f} 기능이 추가되었습니다`;
   });
-
-  // "fix X" 패턴
   r = r.replace(/fix(?:ed)?\s+(.+)/i, (_, desc) => {
     const d = desc.trim();
     return d.length > 60 ? `문제가 수정되었습니다: ${d}` : `${d} 문제를 수정했습니다`;
   });
-
-  // "bump/update X to Y" 패턴
   r = r.replace(/(?:bump|update|upgrade)\s+(.+?)\s+to\s+(.+)/i, (_, pkg, ver) => `${pkg.trim()}을(를) 최신 버전(${ver.trim()})으로 업데이트했습니다`);
-
-  // "improve X" 패턴
   r = r.replace(/improv(?:e|ed)\s+(.+)/i, (_, desc) => `${desc.trim()}이(가) 개선되었습니다`);
-
-  // "remove X" 패턴
   r = r.replace(/remov(?:e|ed)\s+(.+)/i, (_, desc) => `${desc.trim()} 기능이 제거되었습니다`);
-
-  // "enable/disable X" 패턴
   r = r.replace(/enabl(?:e|ed)\s+(.+)/i, (_, desc) => `${desc.trim()} 기능이 활성화되었습니다`);
   r = r.replace(/disabl(?:e|ed)\s+(.+)/i, (_, desc) => `${desc.trim()} 기능이 비활성화되었습니다`);
-
-  // "migrate X to Y" 패턴
   r = r.replace(/migrat(?:e|ed|ion)\s+(?:from\s+)?(.+?)\s+to\s+(.+)/i, (_, from, to) => `${from.trim()}에서 ${to.trim()}(으)로 전환되었습니다`);
-
-  // "refactor X" 패턴
   r = r.replace(/refactor(?:ed)?\s+(.+)/i, (_, desc) => `${desc.trim()} 코드가 정리되었습니다`);
-
-  // "optimize X" 패턴
   r = r.replace(/optimiz(?:e|ed)\s+(.+)/i, (_, desc) => `${desc.trim()}이(가) 최적화되었습니다`);
-
-  // "implement X" 패턴
   r = r.replace(/implement(?:ed)?\s+(.+)/i, (_, desc) => `${desc.trim()} 기능이 구현되었습니다`);
-
-  // "introduce X" 패턴
   r = r.replace(/introduc(?:e|ed)\s+(.+)/i, (_, desc) => `${desc.trim()} 기능이 새롭게 도입되었습니다`);
-
-  // "rename X to Y" 패턴
   r = r.replace(/rename(?:d)?\s+(.+?)\s+to\s+(.+)/i, (_, from, to) => `${from.trim()} 이름이 ${to.trim()}(으)로 변경되었습니다`);
-
-  // "replace X with Y" 패턴
   r = r.replace(/replace(?:d)?\s+(.+?)\s+with\s+(.+)/i, (_, from, to) => `${from.trim()}이(가) ${to.trim()}(으)로 교체되었습니다`);
-
-  // "deprecate X" 패턴
   r = r.replace(/deprecat(?:e|ed|ion)\s+(?:of\s+)?(.+)/i, (_, desc) => `${desc.trim()}이(가) 사용 중단되었습니다`);
-
-  // "release X" 패턴
   r = r.replace(/releas(?:e|ed)\s+(.+)/i, (_, desc) => `${desc.trim()}이(가) 출시되었습니다`);
-
-  // 기술 용어 치환 (자연스러운 한국어)
   const entries = Object.entries(TERMS).sort((a, b) => b[0].length - a[0].length);
   for (const [en, ko] of entries) {
     const regex = new RegExp(`\\b${en.replace(/\s+/g, '\\s+')}\\b`, 'gi');
     r = r.replace(regex, ko);
   }
-
-  // 마무리 정리
   r = r.replace(/^[-*•]\s*/gm, '• ');
   r = r.replace(/\*\*(.+?)\*\*/g, '$1');
   r = r.trim();
-
   return r;
 }
 
@@ -161,10 +123,9 @@ function classifyTag(title: string, body: string): string {
   return '개선';
 }
 
-// 비전공자용 한국어 요약 생성
+// ─── fallback: 기존 요약 함수들 ──────────────────────────────
 function summarizeBodyKo(body: string): string {
   if (!body) return '';
-  // Extract bullet points and key changes
   const lines = body.split('\n');
   const bullets: string[] = [];
   for (const line of lines) {
@@ -178,19 +139,14 @@ function summarizeBodyKo(body: string): string {
     }
     if (bullets.length >= 5) break;
   }
-
   let summary = bullets.map(b => `• ${b}`).join('\n');
-
   if (!summary) {
-    // Fallback: translate first 300 chars naturally
     const fallback = body.replace(/###\s*\w+.*\n/g, '').replace(/\*\*/g, '').trim().slice(0, 300);
     summary = translateToNatural(fallback);
   }
-
   return summary.length > 400 ? summary.slice(0, 400) + '...' : summary;
 }
 
-// 기존 요약 함수 (영문 번역 방식, summary 필드용)
 function summarizeBody(body: string): string {
   if (!body) return '';
   const lines = body.split('\n');
@@ -217,6 +173,94 @@ function formatDate(isoDate: string): string {
   } catch { return isoDate; }
 }
 
+// ─── GLM-5 Turbo API 번역 ───────────────────────────────────
+interface RawRelease {
+  tag_name: string;
+  name: string | null;
+  body: string | null;
+  published_at: string | null;
+  html_url: string;
+  prerelease: boolean | null;
+}
+
+interface TranslationResult {
+  tag: string;
+  title: string;
+  summary: string;
+  summaryKo: string;
+  tagLabel: string;
+}
+
+async function translateWithGLM(releases: RawRelease[]): Promise<Map<string, TranslationResult> | null> {
+  const apiKey = (typeof process !== 'undefined' && process.env?.ZAI_API_KEY) ?? '';
+  if (!apiKey) return null;
+
+  // 각 릴리즈에서 핵심 정보만 추출 (body는 800자로 제한해 토큰 절약)
+  const items = releases.map((r, i) => {
+    const body = (r.body ?? '').slice(0, 800);
+    return `[${i + 1}] TAG: ${r.tag_name}\nTITLE: ${r.name ?? r.tag_name}\nBODY:\n${body}`;
+  }).join('\n---\n');
+
+  const prompt = `다음 AI 소프트웨어 업데이트 노트를 한국어로 자연스럽게 번역해줘. 비전공자도 이해할 수 있게 쉬운 말로 설명해. 기술 용어는 괄호로 간단히 설명해줘.
+
+각 항목을 다음 JSON 형식으로 작성해 (반드시 유효한 JSON 배열만 출력, 마크다운 코드블록 금지):
+[
+  {"tag":"원본TAG","title":"한국어 제목","summary":"3~5줄 요약(•로 시작하는 bullet point, 영어 유지)","summaryKo":"비전공자용 한국어 요약(•로 시작하는 bullet point, 쉬운 말로)","tagLabel":"신기능|버그수정|보안|UX 개선|성능 개선|플랫폼|아키텍처|개선 중 하나"}
+]
+
+원문:
+${items}`;
+
+  try {
+    const res = await fetch('https://api.z.ai/api/paas/v4/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'glm-5-turbo',
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.3,
+        max_tokens: 4000,
+      }),
+      signal: AbortSignal.timeout(30000),
+    });
+
+    if (!res.ok) {
+      console.error(`GLM API error: ${res.status} ${res.statusText}`);
+      return null;
+    }
+
+    const data = await res.json();
+    const content: string = data?.choices?.[0]?.message?.content ?? '';
+
+    // JSON 파싱 (마크다운 코드블록 제거 시도)
+    const jsonStr = content.replace(/```json?\s*/gi, '').replace(/```/g, '').trim();
+    const parsed = JSON.parse(jsonStr);
+
+    if (!Array.isArray(parsed)) return null;
+
+    const map = new Map<string, TranslationResult>();
+    for (const item of parsed) {
+      if (item.tag) {
+        map.set(item.tag, {
+          tag: item.tag,
+          title: item.title ?? item.tag,
+          summary: item.summary ?? '',
+          summaryKo: item.summaryKo ?? item.summary ?? '',
+          tagLabel: item.tagLabel ?? '개선',
+        });
+      }
+    }
+    return map.size > 0 ? map : null;
+  } catch (err) {
+    console.error('GLM translation failed:', err instanceof Error ? err.message : err);
+    return null;
+  }
+}
+
+// ─── 캐시 & 메인 핸들러 ──────────────────────────────────────
 let cached: { data: string; ts: number } | null = null;
 
 export default async function handler(request: Request) {
@@ -232,15 +276,38 @@ export default async function handler(request: Request) {
       signal: AbortSignal.timeout(10000),
     });
     if (!res.ok) throw new Error('GitHub API error');
-    const data: any[] = await res.json();
+    const rawReleases: RawRelease[] = await res.json();
 
-    const releases = data.map((r) => {
+    // GLM-5 Turbo로 배치 번역 시도
+    const translated = await translateWithGLM(rawReleases);
+
+    const releases = rawReleases.map((r) => {
       const body = r.body ?? '';
       const title = r.name ?? r.tag_name;
+      const tag = r.tag_name;
+
+      if (translated?.has(tag)) {
+        // API 번역 성공 → 그 결과 사용
+        const t = translated.get(tag)!;
+        return {
+          tag,
+          version: tag.replace(/^v/, ''),
+          date: formatDate(r.published_at ?? ''),
+          dateRaw: r.published_at?.slice(0, 10) ?? '',
+          title: t.title,
+          summary: t.summary || summarizeBody(body),
+          summaryKo: t.summaryKo,
+          tagLabel: t.tagLabel,
+          htmlUrl: r.html_url,
+          prerelease: r.prerelease ?? false,
+        };
+      }
+
+      // API 실패 → 기존 단순 치환 fallback
       return {
-        tag: r.tag_name,
-        version: r.tag_name.replace(/^v/, ''),
-        date: formatDate(r.published_at),
+        tag,
+        version: tag.replace(/^v/, ''),
+        date: formatDate(r.published_at ?? ''),
         dateRaw: r.published_at?.slice(0, 10) ?? '',
         title: translate(title),
         summary: summarizeBody(body),

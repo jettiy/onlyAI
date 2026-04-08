@@ -68,11 +68,47 @@ const NOTE_STYLE: Record<string, string> = {
   '장문맥':  'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
 };
 
+function Pagination({ current, total, onChange }: { current: number; total: number; onChange: (p: number) => void }) {
+  const pages = Array.from({ length: total }, (_, i) => i + 1);
+  const visible = pages.filter(p => p === 1 || p === total || Math.abs(p - current) <= 1);
+  const withDots: (number | '...')[] = [];
+  for (let i = 0; i < visible.length; i++) {
+    if (i > 0 && visible[i] - visible[i - 1] > 1) withDots.push('...');
+    withDots.push(visible[i]);
+  }
+  return (
+    <div className="flex items-center justify-center gap-1.5 py-3">
+      <button onClick={() => onChange(current - 1)} disabled={current === 1}
+        className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
+        이전
+      </button>
+      {withDots.map((p, i) =>
+        p === '...' ? (
+          <span key={`dot-${i}`} className="px-2 text-xs text-gray-400">…</span>
+        ) : (
+          <button key={p} onClick={() => onChange(p)}
+            className={`min-w-[32px] h-8 rounded-lg text-xs font-bold transition-colors ${
+              p === current ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+            }`}>
+            {p}
+          </button>
+        )
+      )}
+      <button onClick={() => onChange(current + 1)} disabled={current === total}
+        className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
+        다음
+      </button>
+    </div>
+  );
+}
+
 export default function Pricing() {
   const [tab, setTab] = useState<'bar' | 'table' | 'cache' | 'api'>('bar');
   const [prices, setPrices] = useState<PriceRow[]>(FALLBACK_PRICES);
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<string>('');
+  const [tablePage, setTablePage] = useState(1);
+  const ITEMS_PER_PAGE = 8;
 
   useEffect(() => {
     async function fetchPrices() {
@@ -160,9 +196,16 @@ export default function Pricing() {
         </div>
       )}
 
-      {/* Full price table */}
-      {tab === 'table' && (
+      {/* Full price table — 페이지네이션 적용 */}
+      {tab === 'table' && (() => {
+        const totalPages = Math.ceil(prices.length / ITEMS_PER_PAGE);
+        const paged = prices.slice((tablePage - 1) * ITEMS_PER_PAGE, tablePage * ITEMS_PER_PAGE);
+        return (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+          <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-between">
+            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">전체 가격표</h2>
+            <p className="text-[10px] text-gray-400">{prices.length}개 모델 중 {(tablePage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(tablePage * ITEMS_PER_PAGE, prices.length)}개 표시</p>
+          </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -177,7 +220,7 @@ export default function Pricing() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
-                {prices.map((row) => {
+                {paged.map((row) => {
                   const logoId = PROVIDER_LOGO[row.provider] || '';
                   const logoSrc = LOGO_MAP[logoId];
                   return (
@@ -208,8 +251,10 @@ export default function Pricing() {
           <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
             <p className="text-xs text-gray-400 dark:text-gray-500">* 가격은 $/1M 토큰. 캐시 읽기 = 이전 대화 재사용 시 (최대 90% 할인). 캐시 쓰기 = 첫 프롬프트 저장 비용.</p>
           </div>
+          {totalPages > 1 && <Pagination current={tablePage} total={totalPages} onChange={setTablePage} />}
         </div>
-      )}
+        );
+      })()}
 
       {/* Cache price comparison */}
       {tab === 'cache' && (

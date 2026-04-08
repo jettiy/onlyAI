@@ -118,8 +118,45 @@ function LogoImg({ logoId, name, size = 18 }: { logoId: string; name: string; si
   );
 }
 
+/* 페이지네이션 컴포넌트 */
+function Pagination({ current, total, onChange }: { current: number; total: number; onChange: (p: number) => void }) {
+  const pages = Array.from({ length: total }, (_, i) => i + 1);
+  const visible = pages.filter(p => p === 1 || p === total || Math.abs(p - current) <= 1);
+  const withDots: (number | '...')[] = [];
+  for (let i = 0; i < visible.length; i++) {
+    if (i > 0 && visible[i] - visible[i - 1] > 1) withDots.push('...');
+    withDots.push(visible[i]);
+  }
+  return (
+    <div className="flex items-center justify-center gap-1.5 py-3">
+      <button onClick={() => onChange(current - 1)} disabled={current === 1}
+        className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
+        이전
+      </button>
+      {withDots.map((p, i) =>
+        p === '...' ? (
+          <span key={`dot-${i}`} className="px-2 text-xs text-gray-400">…</span>
+        ) : (
+          <button key={p} onClick={() => onChange(p)}
+            className={`min-w-[32px] h-8 rounded-lg text-xs font-bold transition-colors ${
+              p === current ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+            }`}>
+            {p}
+          </button>
+        )
+      )}
+      <button onClick={() => onChange(current + 1)} disabled={current === total}
+        className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
+        다음
+      </button>
+    </div>
+  );
+}
+
 export default function Benchmarks() {
   const [activeBench, setActiveBench] = useState<BenchmarkKey>("mmlu");
+  const [summaryPage, setSummaryPage] = useState(1);
+  const ITEMS_PER_PAGE = 8;
   const bench = BENCHMARKS.find((b) => b.key === activeBench)!;
 
   const sorted = [...DATA]
@@ -217,10 +254,11 @@ export default function Benchmarks() {
         })}
       </div>
 
-      {/* Summary table with logos */}
+      {/* Summary table with logos — 페이지네이션 적용 */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
         <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
           <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">전체 벤치마크 요약표</h2>
+          <p className="text-[10px] text-gray-400 mt-0.5">{DATA.length}개 모델 중 {(summaryPage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(summaryPage * ITEMS_PER_PAGE, DATA.length)}개 표시</p>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-xs">
@@ -235,7 +273,7 @@ export default function Benchmarks() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
-              {DATA.map((m) => (
+              {DATA.slice((summaryPage - 1) * ITEMS_PER_PAGE, summaryPage * ITEMS_PER_PAGE).map((m) => (
                 <tr key={m.name} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                   <td className="px-4 py-2.5">
                     <div className="flex items-center gap-2">
@@ -265,6 +303,10 @@ export default function Benchmarks() {
         <div className="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
           <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: 공식 기술 보고서, artificialanalysis.ai, Arena leaderboard (2026.04)</p>
         </div>
+        {/* 페이지네이션 — 요약표만 */}
+        {Math.ceil(DATA.length / ITEMS_PER_PAGE) > 1 && (
+          <Pagination current={summaryPage} total={Math.ceil(DATA.length / ITEMS_PER_PAGE)} onChange={(p) => { setSummaryPage(p); }} />
+        )}
       </div>
 
       {/* Benchmark explanations */}

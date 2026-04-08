@@ -6,6 +6,7 @@ interface Release {
   date: string;
   title: string;
   summary: string;
+  summaryKo: string;
   tagLabel: string;
   htmlUrl: string;
   prerelease: boolean;
@@ -35,6 +36,7 @@ export default function DevNews() {
   const [error, setError] = useState(false);
   const [updatedAt, setUpdatedAt] = useState('');
   const [expandedTag, setExpandedTag] = useState<string | null>(null);
+  const [showOriginal, setShowOriginal] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     fetch('/api/openclaw-releases')
@@ -110,8 +112,19 @@ export default function DevNews() {
                   </div>
                   <span className="text-[10px] text-gray-400 shrink-0">{u.date}</span>
                 </div>
-                {u.summary && (
-                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed whitespace-pre-line">{u.summary}</p>
+                {u.summaryKo && (
+                  <p className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{u.summaryKo}</p>
+                )}
+                {u.summary && u.summaryKo && u.summary !== u.summaryKo && (
+                  <button
+                    onClick={(e) => { e.preventDefault(); e.stopPropagation(); setShowOriginal(prev => ({ ...prev, [u.tag]: !prev[u.tag] })); }}
+                    className="text-[10px] text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 mt-1.5 inline-flex items-center gap-1 transition-colors"
+                  >
+                    {showOriginal[u.tag] ? '△ 간단히 보기' : '▽ 원문 요약 보기'}
+                  </button>
+                )}
+                {showOriginal[u.tag] && u.summary && (
+                  <p className="text-xs text-gray-400 dark:text-gray-500 leading-relaxed whitespace-pre-line mt-1 pt-1 border-t border-gray-100 dark:border-gray-800">{u.summary}</p>
                 )}
                 <span className="text-[10px] text-blue-500 group-hover:underline mt-2 block">GitHub에서 자세히 보기 →</span>
               </a>

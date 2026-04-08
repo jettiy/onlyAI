@@ -39,12 +39,12 @@ const LOGO_MAP: Record<string, string> = {
 
 const DATA: ModelBench[] = [
   {
-    name: "GPT-5", company: "OpenAI", logoId: "openai", color: "#10b981", isNew: true,
-    scores: { mmlu: 87.4, gpqa: 69.3, math: 92.0, ifeval: 91.5, humaneval: 96.1, coding: 57.2, swe: 65.8, musr: 78.5 },
+    name: "GPT-5.4", company: "OpenAI", logoId: "openai", color: "#10b981", isNew: true,
+    scores: { mmlu: 88.5, gpqa: 71.0, math: 93.5, ifeval: 92.0, humaneval: 97.2, coding: 62.0, swe: 72.0, musr: 80.5 },
   },
   {
     name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", color: "#f59e0b",
-    scores: { mmlu: 85.7, gpqa: 67.8, math: 89.2, ifeval: 90.3, humaneval: 95.4, coding: 72.5, swe: 76.2, musr: 75.0 },
+    scores: { mmlu: 86.2, gpqa: 68.5, math: 89.8, ifeval: 90.5, humaneval: 96.0, coding: 75.0, swe: 78.5, musr: 76.2 },
   },
   {
     name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", color: "#fbbf24",
@@ -52,11 +52,11 @@ const DATA: ModelBench[] = [
   },
   {
     name: "Gemini 3.1 Pro", company: "Google", logoId: "google", color: "#3b82f6", isNew: true,
-    scores: { mmlu: 86.5, gpqa: 65.8, math: 91.5, ifeval: 92.1, humaneval: 92.7, coding: 55.8, swe: 64.0, musr: 77.8 },
+    scores: { mmlu: 88.0, gpqa: 94.3, math: 92.8, ifeval: 93.0, humaneval: 94.5, coding: 80.6, swe: 70.0, musr: 79.5 },
   },
   {
     name: "Gemini 2.5 Pro", company: "Google", logoId: "google", color: "#60a5fa",
-    scores: { mmlu: 84.9, gpqa: 65.0, math: 92.3, ifeval: 88.5, humaneval: 90.2, coding: 50.5, swe: 60.8, musr: 76.5 },
+    scores: { mmlu: 85.5, gpqa: 63.0, math: 92.5, ifeval: 88.5, humaneval: 90.8, coding: 52.5, swe: 62.5, musr: 77.0 },
   },
   {
     name: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", color: "#6366f1",
@@ -67,12 +67,12 @@ const DATA: ModelBench[] = [
     scores: { mmlu: 79.8, gpqa: 54.5, math: 88.0, ifeval: 84.5, humaneval: 89.5, coding: 42.0, swe: 52.0, musr: 68.0 },
   },
   {
-    name: "Grok 3", company: "xAI", logoId: "xai", color: "#ec4899", isNew: true,
-    scores: { mmlu: 87.5, gpqa: 70.2, math: 94.1, ifeval: 88.0, humaneval: 93.2, coding: 48.0, swe: 55.0, musr: 72.0 },
+    name: "Grok 4.20", company: "xAI", logoId: "xai", color: "#ec4899", isNew: true,
+    scores: { mmlu: 87.8, gpqa: 70.5, math: 94.5, ifeval: 88.5, humaneval: 94.0, coding: 52.0, swe: 58.0, musr: 73.5 },
   },
   {
-    name: "GPT-5 Mini", company: "OpenAI", logoId: "openai", color: "#34d399",
-    scores: { mmlu: 80.2, gpqa: 55.0, math: 82.5, ifeval: 87.0, humaneval: 90.0, coding: 45.0, swe: 58.0, musr: 65.0 },
+    name: "GPT-5.4 Mini", company: "OpenAI", logoId: "openai", color: "#34d399", isNew: true,
+    scores: { mmlu: 81.5, gpqa: 57.0, math: 84.0, ifeval: 88.0, humaneval: 91.5, coding: 50.0, swe: 62.0, musr: 67.0 },
   },
   {
     name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", color: "#f97316",
@@ -174,7 +174,7 @@ export default function Benchmarks() {
       <div>
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">📊 벤치마크 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          주요 AI 모델의 공개 벤치마크 점수 비교. countless.dev / artificialanalysis.ai 방식 참고. 2026년 4월 기준.
+          주요 AI 모델의 공개 벤치마크 점수 비교. artificialanalysis.ai / 공식 기술 보고서 참고. 2026년 4월 기준.
         </p>
       </div>
 

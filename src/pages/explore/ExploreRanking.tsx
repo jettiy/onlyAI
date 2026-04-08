@@ -38,7 +38,7 @@ const FALLBACK_DATA: ArenaModel[] = [
 ];
 
 export default function ExploreRanking() {
-  const [models, setModels] = useState<FALLBACK_DATA extends ArenaModel[] ? ArenaModel[] : never>(FALLBACK_DATA);
+  const [models, setModels] = useState<typeof FALLBACK_DATA>(FALLBACK_DATA);
   const [loading, setLoading] = useState(false);
   const [category, setCategory] = useState<Category>("전체");
   const [filter, setFilter] = useState<"all" | "open" | "commercial">("all");

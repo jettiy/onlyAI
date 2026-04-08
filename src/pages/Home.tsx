@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
@@ -98,8 +98,19 @@ function getRandomPair() {
 export default function Home() {
   const { news: allNews, lastUpdated } = useNewsRSS();
   const TOP_NEWS = allNews.slice(0, 5);
-  const hero = TOP_NEWS[0];
   const secondary = TOP_NEWS.slice(1, 3);
+  const [heroIdx, setHeroIdx] = useState(0);
+  const hero = TOP_NEWS[heroIdx] ?? TOP_NEWS[0];
+
+  const nextHero = useCallback(() => {
+    setHeroIdx(i => (i + 1) % Math.max(TOP_NEWS.length, 1));
+  }, [TOP_NEWS.length]);
+
+  useEffect(() => {
+    if (TOP_NEWS.length < 2) return;
+    const timer = setInterval(nextHero, 10000);
+    return () => clearInterval(timer);
+  }, [TOP_NEWS.length, nextHero]);
   const navigate = useNavigate();
 
   const [compareA, setCompareA] = useState('');
@@ -143,11 +154,19 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* ── 오늘의 핫뉴스 ── */}
-          {hero && (
+          {/* ── 오늘의 핫뉴스 (자동 슬라이드) ── */}
+          {TOP_NEWS.length > 0 && hero && (
             <div className="mt-5 pt-4 border-t border-white/10">
-              <p className="text-[10px] tracking-widest font-bold text-gray-500 uppercase mb-2">📌 오늘의 핫뉴스</p>
-              <a href={hero.url} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-2">
+              <div className="flex items-center justify-between mb-2">
+                <p className="text-[10px] tracking-widest font-bold text-gray-500 uppercase">📌 오늘의 핫뉴스</p>
+                <div className="flex items-center gap-1.5">
+                  {TOP_NEWS.map((_, i) => (
+                    <button key={i} onClick={() => setHeroIdx(i)}
+                      className={`w-1.5 h-1.5 rounded-full transition-all ${i === heroIdx ? 'bg-blue-400 w-4' : 'bg-gray-600 hover:bg-gray-500'}`} />
+                  ))}
+                </div>
+              </div>
+              <a href={hero.url} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-2 transition-opacity duration-300">
                 <span className={`text-[9px] font-black tracking-widest uppercase px-1.5 py-0.5 rounded shrink-0 ${CAT_COLORS[hero.category]?.bg ?? 'bg-gray-800'} ${CAT_COLORS[hero.category]?.text ?? 'text-gray-400'}`}>
                   {hero.category}
                 </span>

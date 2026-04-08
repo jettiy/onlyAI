@@ -32,7 +32,6 @@ const NAV = [
       { path: '/explore/timeline', label: '타임라인', icon: '🗓️' },
       { path: '/explore/compare', label: '한눈에 비교', icon: '⚖️' },
       { path: '/explore/ranking', label: '랭킹', icon: '🏆' },
-      { path: '/explore/side-by-side', label: '사이드비사이드', icon: '🔍' },
       { path: '/explore/calculator', label: '가격 계산기', icon: '🧮' },
       { path: '/explore/tokenizer', label: '토큰 체험기', icon: '🔤' },
       { path: '/explore/prompt-bench', label: '프롬프트 벤치마크', icon: '🎯' },

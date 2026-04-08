@@ -2,9 +2,9 @@ import { useState, useEffect, useMemo } from 'react';
 import Pricing from '../Pricing';
 import Benchmarks from '../Benchmarks';
 import { models } from '../../data/models';
-import { getLogoUrl, logoIdToPath } from '../../lib/logoUtils';
+import { logoIdToPath } from '../../lib/logoUtils';
 
-/* ── 1:1 비교 데이터 타입 ── */
+/* 1:1 비교 카드에 사용할 데이터 타입 */
 interface CompareItem {
   model: string;
   provider: string;
@@ -25,7 +25,7 @@ const BENCHMARK_LABELS: Record<string, string> = {
   humaneval: 'HumanEval+', coding: 'SWE-bench', swe: 'Aider polyglot', musr: 'MUSR',
 };
 
-/* ── 1:1 비교용 로컬 벤치마크 데이터 ── */
+/* 1:1 비교에서 보여줄 벤치마크 데이터 */
 const BENCH_DATA: Record<string, Partial<Record<string, number>>> = {
   'gpt-5.4': { mmlu: 88.5, gpqa: 71.0, math: 93.5, ifeval: 92.0, humaneval: 97.2, coding: 62.0, swe: 72.0, musr: 80.5 },
   'claude opus 4.6': { mmlu: 86.2, gpqa: 68.5, math: 89.8, ifeval: 90.5, humaneval: 96.0, coding: 75.0, swe: 78.5, musr: 76.2 },
@@ -60,7 +60,7 @@ export default function ExploreCompare() {
   const [selectA, setSelectA] = useState('');
   const [selectB, setSelectB] = useState('');
 
-  // URL 파라미터: ?models=gpt-5.4,claude-opus-4.6
+  // URL 쿼리 파라미터: ?models=gpt-5.4,claude-opus-4.6
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const raw = params.get('models');
@@ -83,7 +83,7 @@ export default function ExploreCompare() {
   const itemA = useMemo(() => modelOptions.find(o => o.value === selectA)?.item, [selectA, modelOptions]);
   const itemB = useMemo(() => modelOptions.find(o => o.value === selectB)?.item, [selectB, modelOptions]);
 
-  // 어떤 값이 더 나은지 판별 (가격은 낮을수록, 벤치마크는 높을수록)
+  // 어느 쪽이 더 나은지 판별 (가격은 낮을수록, 벤치마크는 높을수록)
   function betterTag(a: number | null | undefined, b: number | null | undefined, lowerIsBetter = false): 'a' | 'b' | null {
     if (a == null && b == null) return null;
     if (a == null) return 'b';
@@ -92,11 +92,11 @@ export default function ExploreCompare() {
     return lowerIsBetter ? (a < b ? 'a' : 'b') : (a > b ? 'a' : 'b');
   }
 
-  // 공통 벤치마크 키
+  // 양쪽 모델이 공통으로 가진 벤치마크 키
   const commonBenchKeys = useMemo(() => {
     if (!itemA?.benchmarks && !itemB?.benchmarks) return [];
     const keys = new Set([...Object.keys(itemA?.benchmarks ?? {}), ...Object.keys(itemB?.benchmarks ?? {})]);
-    return [...keys].filter(k => BENCH_LABELS[k]);
+    return [...keys].filter(k => BENCHMARK_LABELS[k]);
   }, [itemA, itemB]);
 
   return (
@@ -117,7 +117,7 @@ export default function ExploreCompare() {
       {tab === 'price' && <Pricing/>}
       {tab === 'bench' && <Benchmarks/>}
 
-      {/* ── 1:1 비교 탭 ── */}
+      {/* 1:1 비교 카드 */}
       {tab === 'vs' && (
         <div className="space-y-5">
           {/* 선택 UI */}
@@ -145,7 +145,7 @@ export default function ExploreCompare() {
                 </select>
               </div>
             </div>
-            <p className="text-[11px] text-gray-400 mt-2">💡 URL 파라미터 지원: <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">?models=gpt-5.4,claude-opus-4.6</code></p>
+            <p className="text-[11px] text-gray-400 mt-2">링크로 공유: <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">?models=gpt-5.4,claude-opus-4.6</code></p>
           </div>
 
           {/* 비교 카드 */}
@@ -168,7 +168,7 @@ export default function ExploreCompare() {
 
                 {/* 가격 */}
                 <div className="space-y-2">
-                  <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">가격 ($/1M 토큰)</h3>
+                  <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">가격($/1M 토큰)</h3>
                   <div className="grid grid-cols-2 gap-2">
                     <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-3 text-center">
                       <div className="text-[10px] text-gray-400 mb-0.5">입력</div>
@@ -203,9 +203,9 @@ export default function ExploreCompare() {
                       const winner = betterTag(scoreA, scoreB);
                       return (
                         <div key={key} className="flex items-center justify-between bg-gray-50 dark:bg-gray-800 rounded-lg px-3 py-2">
-                          <span className="text-xs text-gray-500 dark:text-gray-400">{BENCH_LABELS[key]}</span>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">{BENCHMARK_LABELS[key]}</span>
                           <span className="font-mono text-sm font-bold text-gray-900 dark:text-white">
-                            {scoreA != null ? scoreA.toFixed(1) : '—'}
+                            {scoreA != null ? scoreA.toFixed(1) : '-'}
                             {winner === 'a' && <span className="ml-1">✅</span>}
                           </span>
                         </div>
@@ -232,7 +232,7 @@ export default function ExploreCompare() {
 
                 {/* 가격 */}
                 <div className="space-y-2">
-                  <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">가격 ($/1M 토큰)</h3>
+                  <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">가격($/1M 토큰)</h3>
                   <div className="grid grid-cols-2 gap-2">
                     <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-3 text-center">
                       <div className="text-[10px] text-gray-400 mb-0.5">입력</div>
@@ -267,9 +267,9 @@ export default function ExploreCompare() {
                       const winner = betterTag(scoreA, scoreB);
                       return (
                         <div key={key} className="flex items-center justify-between bg-gray-50 dark:bg-gray-800 rounded-lg px-3 py-2">
-                          <span className="text-xs text-gray-500 dark:text-gray-400">{BENCH_LABELS[key]}</span>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">{BENCHMARK_LABELS[key]}</span>
                           <span className="font-mono text-sm font-bold text-gray-900 dark:text-white">
-                            {scoreB != null ? scoreB.toFixed(1) : '—'}
+                            {scoreB != null ? scoreB.toFixed(1) : '-'}
                             {winner === 'b' && <span className="ml-1">✅</span>}
                           </span>
                         </div>
@@ -281,11 +281,11 @@ export default function ExploreCompare() {
             </div>
           )}
 
-          {/* 선택 안 했을 때 */}
+          {/* 선택 전 안내 */}
           {(!itemA || !itemB) && (
             <div className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-10 text-center">
               <div className="text-4xl mb-3">⚖️</div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">위에서 모델 A와 모델 B를 선택하면 나란히 비교할 수 있어요.</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">위에서 모델 A와 모델 B를 선택하면 비교 카드가 표시됩니다.</p>
             </div>
           )}
         </div>

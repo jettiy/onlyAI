@@ -1,18 +1,7 @@
 import { useState, useEffect } from "react";
 import { cloudProviders } from '../data/cloudProviders';
-
-const LOGO_MAP: Record<string, string> = {
-  openai: "openai.png", anthropic: "anthropic.jpg", google: "google.png",
-  meta: "meta.jpg", xai: "xai.png", deepseek: "deepseek.png", minimax: "minimax.png",
-  alibaba: "alibaba.png", moonshot: "moonshot.png", zhipu: "zhipu.png",
-  xiaomi: "xiaomi.png", mistral: "mistral.jpg",
-};
-
-const PROVIDER_LOGO: Record<string, string> = {
-  "OpenAI": "openai", "Anthropic": "anthropic", "Google": "google", "Meta": "meta",
-  "xAI": "xai", "DeepSeek": "deepseek", "MiniMax": "minimax", "Alibaba": "alibaba",
-  "Moonshot": "moonshot", "Zhipu AI": "zhipu", "Xiaomi": "xiaomi", "Mistral": "mistral",
-};
+import { models } from '../data/models';
+import { getLogoUrl } from '../lib/logoUtils';
 
 interface PriceRow {
   model: string;
@@ -27,26 +16,51 @@ interface PriceRow {
 }
 
 const FALLBACK_PRICES: PriceRow[] = [
+  // ── OpenAI ──
   { model: 'GPT-5.4', provider: 'OpenAI', input: 2.50, output: 15.0, cacheRead: 0.25, cacheWrite: 2.50, context: '1M', note: '최고 성능', isNew: true },
   { model: 'GPT-5.4 mini', provider: 'OpenAI', input: 0.75, output: 4.50, cacheRead: 0.075, cacheWrite: 0.75, context: '128K', note: '가성비', isNew: true },
   { model: 'GPT-5.4 nano', provider: 'OpenAI', input: 0.20, output: 1.25, cacheRead: 0.02, cacheWrite: 0.20, context: '128K', note: '최저가', isNew: true },
-  { model: 'Claude Opus 4.6', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '1M', note: '긴 문맥' },
+  { model: 'GPT-5.3 Instant', provider: 'OpenAI', input: 1.25, output: 5.0, cacheRead: 0.125, cacheWrite: 1.25, context: '200K', note: '초고속', isNew: true },
+  { model: 'GPT-5.2', provider: 'OpenAI', input: 1.75, output: 14.0, cacheRead: 0.175, cacheWrite: 1.75, context: '200K', note: '검증됨' },
+  { model: 'GPT-5', provider: 'OpenAI', input: 1.25, output: 10.0, cacheRead: 0.125, cacheWrite: 1.25, context: '400K', note: '균형' },
+  { model: 'GPT-4.1', provider: 'OpenAI', input: 3.0, output: 12.0, cacheRead: 0.375, cacheWrite: 3.00, context: '1M', note: '코딩 강자' },
+  { model: 'GPT-4.1 Mini', provider: 'OpenAI', input: 0.80, output: 3.20, cacheRead: 0.08, cacheWrite: 0.80, context: '1M', note: '가성비' },
+  { model: 'GPT-4o', provider: 'OpenAI', input: 2.50, output: 10.0, cacheRead: 1.25, cacheWrite: 2.50, context: '128K', note: '멀티모달' },
+  { model: 'GPT-4o mini', provider: 'OpenAI', input: 0.15, output: 0.60, cacheRead: 0.075, cacheWrite: 0.15, context: '128K', note: '초저가' },
+  { model: 'o3', provider: 'OpenAI', input: 2.0, output: 8.0, cacheRead: 0.50, cacheWrite: 2.50, context: '200K', note: '추론' },
+  // ── Anthropic ──
+  { model: 'Claude Opus 4.6', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '1M', note: '최고 성능' },
+  { model: 'Claude Opus 4.5', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '200K', note: '검증됨' },
   { model: 'Claude Sonnet 4.6', provider: 'Anthropic', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.75, context: '1M', note: '균형', isNew: true },
   { model: 'Claude Haiku 4.5', provider: 'Anthropic', input: 1.0, output: 5.0, cacheRead: 0.08, cacheWrite: 1.25, context: '200K', note: '빠름' },
+  // ── Google ──
   { model: 'Gemini 3.1 Pro', provider: 'Google', input: 2.0, output: 12.0, cacheRead: 0.625, cacheWrite: 2.50, context: '1M', note: '멀티모달', isNew: true },
-  { model: 'Gemini 2.5 Flash', provider: 'Google', input: 0.15, output: 0.60, cacheRead: 0.0375, cacheWrite: 0.15, context: '1M', note: '최저가' },
-  { model: 'Grok 4.20', provider: 'xAI', input: 3.0, output: 15.0, context: '2M', note: 'NEW', isNew: true },
-  { model: 'o3', provider: 'OpenAI', input: 2.0, output: 8.0, cacheRead: 0.50, cacheWrite: 2.50, context: '200K', note: '추론' },
-  { model: 'MiniMax M2.7', provider: 'MiniMax', input: 0.30, output: 1.20, cacheRead: 0.03, cacheWrite: 0.30, context: '204K', note: 'NEW', isNew: true },
+  { model: 'Gemini 2.5 Pro', provider: 'Google', input: 1.25, output: 10.0, cacheRead: 0.3125, cacheWrite: 1.25, context: '1M', note: '가성비' },
+  { model: 'Gemini 2.5 Flash', provider: 'Google', input: 0.30, output: 2.5, cacheRead: 0.075, cacheWrite: 0.30, context: '1M', note: '저가' },
+  { model: 'Gemini 2.5 Flash-Lite', provider: 'Google', input: 0.10, output: 0.40, cacheRead: 0.025, cacheWrite: 0.10, context: '1M', note: '최저가' },
+  // ── xAI ──
+  { model: 'Grok 4.20', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '2M', note: '실시간', isNew: true },
+  { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '131K', note: '검증됨' },
+  // ── Meta ──
+  { model: 'Llama 4 Maverick', provider: 'Meta', input: 0.27, output: 0.85, cacheRead: 0.027, cacheWrite: 0.27, context: '1M', note: '오픈소스' },
+  { model: 'Llama 4 Scout', provider: 'Meta', input: 0.11, output: 0.34, cacheRead: 0.011, cacheWrite: 0.11, context: '10M', note: '초장문맥' },
+  // ── 중국 ──
+  { model: 'MiniMax M2.7', provider: 'MiniMax', input: 0.30, output: 1.20, cacheRead: 0.03, cacheWrite: 0.30, context: '204K', note: '에이전트', isNew: true },
+  { model: 'MiniMax M2.5', provider: 'MiniMax', input: 0.27, output: 0.95, cacheRead: 0.027, cacheWrite: 0.27, context: '197K', note: '검증됨' },
   { model: 'DeepSeek V3.2', provider: 'DeepSeek', input: 0.28, output: 0.42, cacheRead: 0.028, context: '128K', note: '가성비', isNew: true },
   { model: 'DeepSeek R1', provider: 'DeepSeek', input: 0.55, output: 2.19, cacheRead: 0.14, context: '128K', note: '추론' },
-  { model: 'Mistral Large 3', provider: 'Mistral', input: 2.0, output: 6.0, cacheRead: 0.50, cacheWrite: 2.00, context: '128K', note: '유럽' },
-  { model: 'Mistral Small 3.1', provider: 'Mistral', input: 0.20, output: 0.60, cacheRead: 0.02, cacheWrite: 0.12, context: '128K', note: '경량' },
-  { model: 'Llama 4 Maverick', provider: 'Meta', input: 0.88, output: 0.88, cacheRead: 0.088, context: '1M', note: '오픈소스', isNew: true },
-  { model: 'Qwen3 235B', provider: 'Alibaba', input: 0.40, output: 1.20, cacheRead: 0.04, context: '128K', note: '중국 오픈소스' },
-  { model: 'MiMo V2 Pro', provider: 'Xiaomi', input: 0.50, output: 1.50, context: '1M', note: '초장문맥' },
-  { model: 'GLM-5', provider: 'Zhipu AI', input: 0.60, output: 2.0, context: '200K', note: '코딩 특화' },
-  { model: 'Kimi K2.5', provider: 'Moonshot', input: 0.70, output: 2.10, context: '256K', note: '장문맥' },
+  { model: 'Qwen3 235B', provider: 'Alibaba', input: 0.40, output: 1.20, cacheRead: 0.04, cacheWrite: 0.40, context: '128K', note: '한·중 특화' },
+  { model: 'Qwen3 32B', provider: 'Alibaba', input: 0.10, output: 0.40, cacheRead: 0.01, cacheWrite: 0.10, context: '128K', note: '오픈소스' },
+  { model: 'Qwen3 7B', provider: 'Alibaba', input: 0.04, output: 0.12, context: '128K', note: '초저가' },
+  { model: 'GLM-5', provider: 'Zhipu AI', input: 0.60, output: 2.0, cacheRead: 0.06, cacheWrite: 0.60, context: '128K', note: '코딩 특화' },
+  { model: 'GLM-5 Turbo', provider: 'Zhipu AI', input: 1.20, output: 4.0, cacheRead: 0.12, cacheWrite: 1.20, context: '128K', note: '초고속' },
+  { model: 'Kimi K2.5', provider: 'Moonshot', input: 0.70, output: 2.10, cacheRead: 0.07, cacheWrite: 0.70, context: '262K', note: '에이전트' },
+  { model: 'MiMo V2 Pro', provider: 'Xiaomi', input: 0.50, output: 1.50, cacheRead: 0.05, cacheWrite: 0.50, context: '1M', note: '초장문맥' },
+  // ── 기타 ──
+  { model: 'Mistral Large 3', provider: 'Mistral', input: 0.50, output: 1.50, cacheRead: 0.05, cacheWrite: 0.50, context: '262K', note: '유럽' },
+  { model: 'Mistral Small 3', provider: 'Mistral', input: 0.10, output: 0.30, cacheRead: 0.01, cacheWrite: 0.10, context: '32K', note: '경량' },
+  { model: 'Command R+', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '128K', note: 'RAG' },
+  { model: 'Command A', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '256K', note: 'RAG' },
 ];
 
 const NOTE_STYLE: Record<string, string> = {
@@ -58,6 +72,7 @@ const NOTE_STYLE: Record<string, string> = {
   'NEW':       'bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400',
   '균형':      'bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300',
   '빠름':      'bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300',
+  '초고속':    'bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300',
   '추론':      'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300',
   '오픈소스':  'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
   '유럽':      'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300',
@@ -65,7 +80,14 @@ const NOTE_STYLE: Record<string, string> = {
   '중국 오픈소스': 'bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300',
   '초장문맥':  'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
   '코딩 특화': 'bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300',
-  '장문맥':  'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+  '장문맥':    'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+  '코딩 강자': 'bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300',
+  '한·중 특화': 'bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300',
+  '에이전트':  'bg-fuchsia-100 dark:bg-fuchsia-900/40 text-fuchsia-700 dark:text-fuchsia-300',
+  '검증됨':    'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400',
+  '실시간':    'bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300',
+  'RAG':       'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300',
+  '초저가':    'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300',
 };
 
 function Pagination({ current, total, onChange }: { current: number; total: number; onChange: (p: number) => void }) {
@@ -108,6 +130,7 @@ export default function Pricing() {
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<string>('');
   const [tablePage, setTablePage] = useState(1);
+  const [showCacheCols, setShowCacheCols] = useState(false);
   const ITEMS_PER_PAGE = 8;
 
   useEffect(() => {
@@ -141,6 +164,14 @@ export default function Pricing() {
   const maxInput = Math.max(...prices.map(p => p.input));
   const sorted = [...prices].sort((a, b) => a.input - b.input);
 
+  // Helper: get logo URL from provider name
+  const providerLogoMap: Record<string, string | null> = {};
+  prices.forEach(p => {
+    if (!providerLogoMap[p.provider]) {
+      providerLogoMap[p.provider] = getLogoUrl(undefined, p.provider);
+    }
+  });
+
   return (
     <div className="space-y-6">
       <div>
@@ -167,12 +198,11 @@ export default function Pricing() {
           <h2 className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-5">입력 토큰 가격 ($/1M tokens)</h2>
           <div className="space-y-3">
             {sorted.map((row) => {
-              const logoId = PROVIDER_LOGO[row.provider] || '';
-              const logoSrc = LOGO_MAP[logoId];
+              const logoSrc = providerLogoMap[row.provider];
               return (
                 <div key={row.model} className="flex items-center gap-3">
                   <div className="w-36 flex items-center gap-2 shrink-0">
-                    {logoSrc && <img src={`/logos/${logoSrc}`} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
+                    {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                     <span className="text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{row.model}</span>
                   </div>
                   <div className="flex-1 relative h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
@@ -204,7 +234,14 @@ export default function Pricing() {
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
           <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-between">
             <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">전체 가격표</h2>
-            <p className="text-[10px] text-gray-400">{prices.length}개 모델 중 {(tablePage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(tablePage * ITEMS_PER_PAGE, prices.length)}개 표시</p>
+            <div className="flex items-center gap-3">
+              <label className="flex items-center gap-1.5 cursor-pointer select-none">
+                <input type="checkbox" checked={showCacheCols} onChange={e => setShowCacheCols(e.target.checked)}
+                  className="w-3.5 h-3.5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer" />
+                <span className="text-[11px] text-gray-500 dark:text-gray-400">캐시 읽기/쓰기 표시</span>
+              </label>
+              <p className="text-[10px] text-gray-400">{prices.length}개 모델 중 {(tablePage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(tablePage * ITEMS_PER_PAGE, prices.length)}개 표시</p>
+            </div>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -213,21 +250,20 @@ export default function Pricing() {
                   <th className="text-left px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">모델</th>
                   <th className="text-right px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">입력</th>
                   <th className="text-right px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">출력</th>
-                  <th className="text-right px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">캐시 읽기</th>
-                  <th className="text-right px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">캐시 쓰기</th>
+                  {showCacheCols && <th className="text-right px-3 py-3 font-semibold text-emerald-600 dark:text-emerald-400">캐시 읽기</th>}
+                  {showCacheCols && <th className="text-right px-3 py-3 font-semibold text-orange-600 dark:text-orange-400">캐시 쓰기</th>}
                   <th className="text-center px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">컨텍스트</th>
                   <th className="text-center px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">특징</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
                 {paged.map((row) => {
-                  const logoId = PROVIDER_LOGO[row.provider] || '';
-                  const logoSrc = LOGO_MAP[logoId];
+                  const logoSrc = providerLogoMap[row.provider];
                   return (
                     <tr key={row.model} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-2">
-                          {logoSrc && <img src={`/logos/${logoSrc}`} alt="" className="w-5 h-5 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
+                          {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                           <div>
                             <div className="font-medium text-gray-900 dark:text-white">{row.model} {row.isNew && <span className="text-[8px] font-bold text-red-500 ml-1">NEW</span>}</div>
                             <div className="text-[10px] text-gray-400">{row.provider}</div>
@@ -236,8 +272,8 @@ export default function Pricing() {
                       </td>
                       <td className="px-3 py-3 text-right font-mono text-gray-900 dark:text-white">${row.input}</td>
                       <td className="px-3 py-3 text-right font-mono text-gray-900 dark:text-white">${row.output}</td>
-                      <td className="px-3 py-3 text-right font-mono text-emerald-600">{row.cacheRead ? `$${row.cacheRead}` : '—'}</td>
-                      <td className="px-3 py-3 text-right font-mono text-orange-600">{row.cacheWrite ? `$${row.cacheWrite}` : '—'}</td>
+                      {showCacheCols && <td className="px-3 py-3 text-right font-mono text-emerald-600 dark:text-emerald-400">{row.cacheRead ? `$${row.cacheRead}` : '—'}</td>}
+                      {showCacheCols && <td className="px-3 py-3 text-right font-mono text-orange-600 dark:text-orange-400">{row.cacheWrite ? `$${row.cacheWrite}` : '—'}</td>}
                       <td className="px-3 py-3 text-center text-gray-500 dark:text-gray-400">{row.context}</td>
                       <td className="px-3 py-3 text-center">
                         {row.note && <span className={`px-2 py-0.5 text-xs rounded-full font-semibold ${NOTE_STYLE[row.note] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-600'}`}>{row.note}</span>}
@@ -281,7 +317,7 @@ export default function Pricing() {
                     <td className="px-3 py-2 text-right font-mono text-emerald-600">
                       -{Math.round((1 - row.cacheRead! / row.input) * 100)}%
                     </td>
-                    <td className="px-3 py-2 text-right font-mono text-orange-600">${row.cacheWrite || '—'}</td>
+                    <td className="px-3 py-2 text-right font-mono text-orange-600">{row.cacheWrite || '—'}</td>
                   </tr>
                 ))}
               </tbody>

@@ -35,6 +35,7 @@ const LOGO_MAP: Record<string, string> = {
   zhipu: "zhipu.png",
   xiaomi: "xiaomi.png",
   mistral: "mistral.jpg",
+  cohere: "cohere.png",
 };
 
 const DATA: ModelBench[] = [
@@ -101,6 +102,42 @@ const DATA: ModelBench[] = [
   {
     name: "Mistral Large 3", company: "Mistral", logoId: "mistral", color: "#14b8a6",
     scores: { mmlu: 74.5, gpqa: 43.0, math: 72.0, ifeval: 78.0, humaneval: 82.5, coding: 28.0, swe: 33.0, musr: 50.0 },
+  },
+  {
+    name: "Claude Haiku 4.5", company: "Anthropic", logoId: "anthropic", color: "#fb923c",
+    scores: { mmlu: 74.0, gpqa: 44.0, math: 72.5, ifeval: 87.0, humaneval: 84.0, coding: 22.0, swe: 30.0, musr: 52.0 },
+  },
+  {
+    name: "Claude Opus 4.5", company: "Anthropic", logoId: "anthropic", color: "#d97706",
+    scores: { mmlu: 84.5, gpqa: 65.0, math: 87.5, ifeval: 89.0, humaneval: 93.5, coding: 65.0, swe: 72.0, musr: 74.5 },
+  },
+  {
+    name: "Gemini 2.5 Flash", company: "Google", logoId: "google", color: "#38bdf8",
+    scores: { mmlu: 77.0, gpqa: 55.0, math: 85.0, ifeval: 86.0, humaneval: 87.5, coding: 38.0, swe: 45.0, musr: 64.0 },
+  },
+  {
+    name: "GPT-4o", company: "OpenAI", logoId: "openai", color: "#a3e635",
+    scores: { mmlu: 76.5, gpqa: 53.5, math: 76.5, ifeval: 84.0, humaneval: 87.0, coding: 33.0, swe: 41.0, musr: 58.0 },
+  },
+  {
+    name: "GPT-4o mini", company: "OpenAI", logoId: "openai", color: "#bef264",
+    scores: { mmlu: 70.0, gpqa: 40.0, math: 68.0, ifeval: 80.0, humaneval: 80.0, coding: 18.0, swe: 25.0, musr: 45.0 },
+  },
+  {
+    name: "Qwen3 32B", company: "Alibaba", logoId: "alibaba", color: "#fb923c",
+    scores: { mmlu: 73.0, gpqa: 45.0, math: 82.0, ifeval: 78.0, humaneval: 84.0, coding: 28.0, swe: 36.0, musr: 55.0 },
+  },
+  {
+    name: "GLM-5 Turbo", company: "Zhipu AI", logoId: "zhipu", color: "#a78bfa",
+    scores: { mmlu: 77.0, gpqa: 49.0, math: 86.0, ifeval: 79.0, humaneval: 90.5, coding: 34.0, swe: 43.0, musr: 60.0 },
+  },
+  {
+    name: "Mistral Small 3.1", company: "Mistral", logoId: "mistral", color: "#5eead4",
+    scores: { mmlu: 68.0, gpqa: 37.0, math: 65.0, ifeval: 75.0, humaneval: 76.0, coding: 18.0, swe: 22.0, musr: 42.0 },
+  },
+  {
+    name: "Command A", company: "Cohere", logoId: "cohere", color: "#64748b",
+    scores: { mmlu: 69.0, gpqa: 38.0, math: 62.0, ifeval: 76.0, humaneval: 75.0, coding: 15.0, swe: 20.0, musr: 44.0 },
   },
 ];
 

@@ -17,7 +17,7 @@ export interface ImageModel {
 
 export const imageModels: ImageModel[] = [
   {
-    id: "nano-banana-pro", name: "Nano Banana Pro", company: "fal", flag: "",
+    id: "nano-banana-pro", name: "Nano Banana Pro", company: "fal", flag: "", logoId: "fal",
     releaseDate: "2025-12", tier: "pro",
     maxResolution: "1024×1024", quality: "high",
     price: "$0.15/장",
@@ -46,7 +46,7 @@ export const imageModels: ImageModel[] = [
     weaknesses: ["초기 단계", "스타일 제한"],
   },
   {
-    id: "seedream-5.0-lite", name: "Seedream 5.0 Lite", company: "ByteDance", flag: "",
+    id: "seedream-5.0-lite", name: "Seedream 5.0 Lite", company: "ByteDance", flag: "", logoId: "bytedance",
     releaseDate: "2026-01", tier: "pro",
     maxResolution: "1024×1024", quality: "high",
     price: "$0.04/장",
@@ -65,7 +65,7 @@ export const imageModels: ImageModel[] = [
     weaknesses: ["Preview 상태", "해상도 제한"],
   },
   {
-    id: "flux-2-pro", name: "Flux 2", company: "Black Forest Labs", flag: "",
+    id: "flux-2-pro", name: "Flux 2", company: "Black Forest Labs", flag: "", logoId: "bfl",
     releaseDate: "2025-11", tier: "pro",
     maxResolution: "1024×1024", quality: "high",
     price: "$0.03~$0.06/장",
@@ -75,7 +75,7 @@ export const imageModels: ImageModel[] = [
     isNew: true,
   },
   {
-    id: "recraft-v4", name: "Recraft V4", company: "Recraft", flag: "",
+    id: "recraft-v4", name: "Recraft V4", company: "Recraft", flag: "", logoId: "recraft",
     releaseDate: "2025-01", tier: "pro",
     maxResolution: "1024×1024", quality: "high",
     price: "$0.04~$0.08/장",
@@ -84,7 +84,7 @@ export const imageModels: ImageModel[] = [
     weaknesses: ["전문가용", "가격 편차"],
   },
   {
-    id: "ideogram-v3", name: "Ideogram V3", company: "Ideogram", flag: "",
+    id: "ideogram-v3", name: "Ideogram V3", company: "Ideogram", flag: "", logoId: "ideogram",
     releaseDate: "2025-06", tier: "consumer",
     maxResolution: "1024×1024", quality: "high",
     price: "$0.008~$0.016/장",
@@ -93,7 +93,7 @@ export const imageModels: ImageModel[] = [
     weaknesses: ["품질 한계", "스타일 제한"],
   },
   {
-    id: "nano-banana-2", name: "Nano Banana 2", company: "fal", flag: "",
+    id: "nano-banana-2", name: "Nano Banana 2", company: "fal", flag: "", logoId: "fal",
     releaseDate: "2025-12", tier: "consumer",
     maxResolution: "1024×1024", quality: "medium",
     price: "$0.04/장",
@@ -141,7 +141,7 @@ export const imageModels: ImageModel[] = [
     weaknesses: ["구형 모델", "최신 모델 대비 품질 낮음"],
   },
   {
-    id: "sd-3.5", name: "SD 3.5", company: "Stability AI", flag: "",
+    id: "sd-3.5", name: "SD 3.5", company: "Stability AI", flag: "", logoId: "stability",
     releaseDate: "2024-10", tier: "open",
     maxResolution: "1024×1024", quality: "medium",
     price: "$0.065/장",

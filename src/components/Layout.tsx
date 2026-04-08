@@ -62,6 +62,13 @@ const NAV = [
     ],
   },
   {
+    label: '🖼️ 이미지 AI', path: '/image', icon: '🖼️', short: '이미지',
+    mobileHide: true, mobileGroup: 'explore',
+    children: [
+      { path: '/image', label: '비교', icon: '🖼️' },
+    ],
+  },
+  {
     label: '뉴스 브리핑', path: '/news', icon: '📰', short: '뉴스', children: [], mobileHide: false,
   },
   {

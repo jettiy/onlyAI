@@ -18,7 +18,7 @@ export interface VideoModel {
 
 export const videoModels: VideoModel[] = [
   {
-    id: "seedance-2.0", name: "Seedance 2.0", company: "ByteDance", flag: "",
+    id: "seedance-2.0", name: "Seedance 2.0", company: "ByteDance", flag: "", logoId: "bytedance",
     releaseDate: "2026-03", tier: "pro",
     maxResolution: "1080p", maxDuration: "10s", maxFps: "30fps",
     price: "API 미제공",
@@ -28,7 +28,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "skyreels-v4", name: "SkyReels V4", company: "Skywork AI(昆仑万维)", flag: "",
+    id: "skyreels-v4", name: "SkyReels V4", company: "Skywork AI(昆仑万维)", flag: "", logoId: "skywork",
     releaseDate: "2026-03", tier: "pro",
     maxResolution: "1080p", maxDuration: "10s", maxFps: "30fps",
     price: "$7.20/분",
@@ -38,7 +38,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "kling-3.0", name: "Kling 3.0", company: "快手(Kuaishou)", flag: "",
+    id: "kling-3.0", name: "Kling 3.0", company: "快手(Kuaishou)", flag: "", logoId: "klingai",
     releaseDate: "2026-02", tier: "pro",
     maxResolution: "1080p", maxDuration: "15s", maxFps: "30fps",
     price: "$13.44/분",
@@ -58,7 +58,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "kling-3.0-omni", name: "Kling 3.0 Omni", company: "快手(Kuaishou)", flag: "",
+    id: "kling-3.0-omni", name: "Kling 3.0 Omni", company: "快手(Kuaishou)", flag: "", logoId: "klingai",
     releaseDate: "2026-02", tier: "pro",
     maxResolution: "1080p", maxDuration: "15s", maxFps: "30fps",
     price: "$13.44/분",
@@ -68,7 +68,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "pixverse-v5.6", name: "PixVerse V5.6", company: "PixVerse", flag: "",
+    id: "pixverse-v5.6", name: "PixVerse V5.6", company: "PixVerse", flag: "", logoId: "pixverse",
     releaseDate: "2026-03", tier: "pro",
     maxResolution: "720p", maxDuration: "5s", maxFps: "24fps",
     price: "$9.00/분",
@@ -78,7 +78,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "vidu-q3-pro", name: "Vidu Q3 Pro", company: "生数科技", flag: "",
+    id: "vidu-q3-pro", name: "Vidu Q3 Pro", company: "生数科技", flag: "", logoId: "vidu",
     releaseDate: "2026-01", tier: "consumer",
     maxResolution: "720p", maxDuration: "8s", maxFps: "24fps",
     price: "$2.10/분",
@@ -116,7 +116,7 @@ export const videoModels: VideoModel[] = [
     weaknesses: ["10초 길이 제한", "25fps"],
   },
   {
-    id: "runway-gen-4.5", name: "Runway Gen-4.5", company: "Runway", flag: "",
+    id: "runway-gen-4.5", name: "Runway Gen-4.5", company: "Runway", flag: "", logoId: "runway",
     releaseDate: "2026-02", tier: "pro",
     maxResolution: "720p", maxDuration: "10s", maxFps: "24fps",
     price: "$15.00/분",
@@ -126,7 +126,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "luma-ray-3.14", name: "Luma Ray 3.14", company: "Luma", flag: "",
+    id: "luma-ray-3.14", name: "Luma Ray 3.14", company: "Luma", flag: "", logoId: "luma",
     releaseDate: "2026-01", tier: "consumer",
     maxResolution: "1080p", maxDuration: "18s", maxFps: "24fps",
     price: "$3.00/분",
@@ -136,7 +136,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "pika-2.5", name: "Pika 2.5", company: "Pika Labs", flag: "",
+    id: "pika-2.5", name: "Pika 2.5", company: "Pika Labs", flag: "", logoId: "pika",
     releaseDate: "2025-11", tier: "consumer",
     maxResolution: "1080p", maxDuration: "10s", maxFps: "24fps",
     price: "$5.76/분",
@@ -145,7 +145,7 @@ export const videoModels: VideoModel[] = [
     weaknesses: ["사실감 부족", "10초 제한"],
   },
   {
-    id: "ltx-video-2.3", name: "LTX Video 2.3", company: "LTX", flag: "",
+    id: "ltx-video-2.3", name: "LTX Video 2.3", company: "LTX", flag: "", logoId: "ltx",
     releaseDate: "2026-04", tier: "open",
     maxResolution: "1080p", maxDuration: "30s", maxFps: "24fps",
     price: "$3.60/분",

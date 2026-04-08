@@ -273,17 +273,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {(() => {
               const exploreActive = loc.pathname.startsWith('/explore');
               const mobileNav = NAV.filter(s => !s.mobileHide);
-              // 탐색 통합 탭을 맨 앞에 삽입
-              const exploreTab = { path: '/explore/compare', icon: '📊', short: '탐색' };
-              return [
-                ...mobileNav.slice(0, 1), // 홈
-                <Link key="_explore" to="/explore/compare"
-                  className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${exploreActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
-                  <span className="text-xl">{exploreTab.icon}</span>
-                  <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">{exploreTab.short}</span>
-                  {exploreActive && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
-                </Link>,
-                ...mobileNav.slice(1).map(s => {
+              return <>
+                {mobileNav.slice(0, 1).map(s => {
                   const a = isActive(s.path);
                   return (
                     <Link key={s.path} to={s.path}
@@ -293,8 +284,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       {a && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
                     </Link>
                   );
-                }),
-              ];
+                })}
+                <Link key="_explore" to="/explore/compare"
+                  className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${exploreActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
+                  <span className="text-xl">📊</span>
+                  <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">탐색</span>
+                  {exploreActive && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
+                </Link>
+                {mobileNav.slice(1).map(s => {
+                  const a = isActive(s.path);
+                  return (
+                    <Link key={s.path} to={s.path}
+                      className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${a ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
+                      <span className="text-xl">{s.icon}</span>
+                      <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">{s.short}</span>
+                      {a && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
+                    </Link>
+                  );
+                })}
+              </>;
             })()}
           </div>
         </nav>

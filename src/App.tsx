@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 
@@ -50,7 +50,7 @@ export default function App() {
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/explore" element={<Explore />} />
+            <Route path="/explore" element={<Navigate to="/explore/compare" replace />} />
             <Route path="/explore/timeline" element={<ExploreTimeline />} />
             <Route path="/explore/compare" element={<ExploreCompare />} />
             <Route path="/explore/promo" element={<ExplorePromo />} />

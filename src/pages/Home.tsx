@@ -27,10 +27,10 @@ function timeAgo(dateStr: string) {
 
 const SECTIONS = [
   {
-    icon: '🔭',
-    label: 'AI 모델 탐색하기',
-    desc: '타임라인·가격·벤치마크·추천',
-    to: '/explore',
+    icon: '📊',
+    label: 'AI 모델 비교',
+    desc: '비교·랭킹·가격 계산기',
+    to: '/explore/compare',
     color: 'from-blue-500 to-blue-600',
     light: 'bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-900',
     textColor: 'text-blue-700 dark:text-blue-300',
@@ -108,7 +108,7 @@ export default function Home() {
 
   useEffect(() => {
     if (TOP_NEWS.length < 2) return;
-    const timer = setInterval(nextHero, 10000);
+    const timer = setInterval(nextHero, 3000);
     return () => clearInterval(timer);
   }, [TOP_NEWS.length, nextHero]);
   const navigate = useNavigate();

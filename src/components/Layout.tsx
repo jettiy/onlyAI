@@ -25,34 +25,47 @@ function InfinityLogo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
 }
 
 const NAV = [
-  { label: '홈', path: '/', icon: '🏠', short: '홈', children: [] },
+  { label: '홈', path: '/', icon: '🏠', short: '홈', children: [], mobileHide: false },
   {
-    label: 'AI 모델 탐색하기', path: '/explore', icon: '🔭', short: '탐색',
+    label: 'AI 모델 비교', path: '/explore/compare', icon: '📊', short: '모델비교',
+    mobileHide: true, mobileGroup: 'explore',
     children: [
-      { path: '/explore/timeline', label: '타임라인', icon: '🗓️' },
       { path: '/explore/compare', label: '한눈에 비교', icon: '⚖️' },
       { path: '/explore/ranking', label: '랭킹', icon: '🏆' },
       { path: '/explore/calculator', label: '가격 계산기', icon: '🧮' },
+    ],
+  },
+  {
+    label: '모델 히스토리', path: '/explore/timeline', icon: '📈', short: '히스토리',
+    mobileHide: true, mobileGroup: 'explore',
+    children: [
+      { path: '/explore/timeline', label: '타임라인', icon: '🗓️' },
+      { path: '/explore/promo', label: '프로모션 현황', icon: '🎁' },
+    ],
+  },
+  {
+    label: '성능 테스트', path: '/explore/tokenizer', icon: '🧪', short: '성능테스트',
+    mobileHide: true, mobileGroup: 'explore',
+    children: [
       { path: '/explore/tokenizer', label: '토큰 체험기', icon: '🔤' },
-      { path: '/explore/prompt-bench', label: '프롬프트 벤치마크', icon: '🎯' },
       { path: '/explore/context-window', label: '컨텍스트 시각화', icon: '📏' },
       { path: '/explore/korean-bench', label: '한국어 성능', icon: '🇰🇷' },
-      { path: '/explore/promo', label: '프로모션 현황', icon: '🎁' },
+      { path: '/explore/prompt-bench', label: '프롬프트 벤치마크', icon: '🎯' },
       { path: '/explore/guide', label: '시작 가이드', icon: '🎯' },
     ],
   },
   {
-    label: '비디오 AI', path: '/video', icon: '🎬', short: '비디오',
+    label: '비디오 AI', path: '/video', icon: '🎬', short: '비디오', mobileHide: false,
     children: [
       { path: '/video/timeline', label: '비디오 AI 타임라인', icon: '🎥' },
       { path: '/video/compare', label: '비디오 AI 비교', icon: '🎬' },
     ],
   },
   {
-    label: '뉴스 브리핑', path: '/news', icon: '📰', short: '뉴스', children: [],
+    label: '뉴스 브리핑', path: '/news', icon: '📰', short: '뉴스', children: [], mobileHide: false,
   },
   {
-    label: '프롬프트 적용하기', path: '/prompts', icon: '📋', short: '프롬프트',
+    label: '프롬프트 적용하기', path: '/prompts', icon: '📋', short: '프롬프트', mobileHide: false,
     children: [
       { path: '/prompts/intro', label: '프롬프트가 뭔가요?', icon: '💡' },
       { path: '/prompts/how', label: '프롬프트 작성법', icon: '✏️' },
@@ -60,7 +73,7 @@ const NAV = [
     ],
   },
   {
-    label: 'OpenClaw 활용하기', path: '/openclaw', icon: '🦞', short: 'OpenClaw',
+    label: 'OpenClaw 활용하기', path: '/openclaw', icon: '🦞', short: 'OpenClaw', mobileHide: false,
     children: [
       { path: '/openclaw/intro', label: 'OpenClaw란?', icon: '🌐' },
       { path: '/openclaw/guide', label: '활용법', icon: '📖' },
@@ -69,7 +82,7 @@ const NAV = [
     ],
   },
   {
-    label: 'AI 정보 학습하기', path: '/learn', icon: '🧠', short: '학습',
+    label: 'AI 정보 학습하기', path: '/learn', icon: '🧠', short: '학습', mobileHide: false,
     children: [
       { path: '/learn/glossary', label: '용어사전', icon: '📖' },
       { path: '/learn/simulator', label: '협업 시뮬레이터', icon: '🤝' },
@@ -81,12 +94,26 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const loc = useLocation();
   const { dark, toggle } = useDarkMode();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [expanded, setExpanded] = useState<string[]>(['/explore','/video','/news','/prompts','/openclaw','/learn']);
+  const [expanded, setExpanded] = useState<string[]>(['/explore/compare','/explore/timeline','/explore/tokenizer','/video','/news','/prompts','/openclaw','/learn']);
 
-  const isActive = (path: string) => path === '/' ? loc.pathname === '/' : loc.pathname.startsWith(path);
+  const isActive = (path: string) => {
+    if (path === '/') return loc.pathname === '/';
+    // /explore sub-categories: match if path starts with any /explore/* child
+    if (path.startsWith('/explore/')) {
+      return loc.pathname === path || loc.pathname.startsWith(path);
+    }
+    return loc.pathname.startsWith(path);
+  };
   const toggle2 = (p: string) => setExpanded(prev => prev.includes(p) ? prev.filter(x => x !== p) : [...prev, p]);
 
-  const currentSection = NAV.find(s => s.path !== '/' && loc.pathname.startsWith(s.path));
+  const currentSection = NAV.find(s => {
+    if (s.path === '/') return false;
+    if (s.path.startsWith('/explore/')) {
+      // Check if any child of this section matches
+      return s.children.some(c => loc.pathname === c.path || loc.pathname.startsWith(c.path + '/'));
+    }
+    return loc.pathname.startsWith(s.path);
+  });
   const currentChild = NAV.flatMap(s => s.children).find(c => loc.pathname === c.path);
 
   return (
@@ -188,37 +215,87 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           {mobileOpen && (
             <div className="border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 pb-3 max-h-[72vh] overflow-y-auto">
-              {NAV.map(s => (
-                <div key={s.path} className="px-4 pt-3">
-                  <Link to={s.path} onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-2 py-1.5 text-sm font-bold text-gray-700 dark:text-gray-200">
-                    <span>{s.icon}</span><span>{s.label}</span>
-                  </Link>
-                  {s.children.map(c => (
-                    <Link key={c.path} to={c.path} onClick={() => setMobileOpen(false)}
-                      className={`flex items-center gap-2 pl-6 py-1.5 text-xs rounded-lg ${loc.pathname === c.path ? 'text-blue-600 font-semibold' : 'text-gray-500 dark:text-gray-400'}`}>
-                      <span>{c.icon}</span><span>{c.label}</span>
-                    </Link>
-                  ))}
-                </div>
-              ))}
+              {(() => {
+                const exploreSections = NAV.filter(s => s.mobileGroup === 'explore');
+                const otherSections = NAV.filter(s => !s.mobileGroup);
+                const isExploreActive = loc.pathname.startsWith('/explore');
+                return (
+                  <>
+                    {/* 탐색 통합 메뉴 */}
+                    <div className="px-4 pt-3">
+                      <button
+                        onClick={() => setMobileOpen(prev => !prev)}
+                        className="flex items-center justify-between w-full py-1.5 text-sm font-bold text-gray-700 dark:text-gray-200">
+                        <span className="flex items-center gap-2">
+                          <span>📊</span><span>AI 모델 탐색</span>
+                        </span>
+                        <span className="text-gray-400 text-xs">▼</span>
+                      </button>
+                      {exploreSections.map(s => (
+                        <div key={s.path} className="ml-2 mt-1">
+                          <Link to={s.path} onClick={() => setMobileOpen(false)}
+                            className={`flex items-center gap-2 py-1.5 text-xs font-bold ${isExploreActive && isActive(s.path) ? 'text-blue-600' : 'text-gray-600 dark:text-gray-300'}`}>
+                            <span>{s.icon}</span><span>{s.label}</span>
+                          </Link>
+                          {s.children.map(c => (
+                            <Link key={c.path} to={c.path} onClick={() => setMobileOpen(false)}
+                              className={`flex items-center gap-2 pl-6 py-1.5 text-xs rounded-lg ${loc.pathname === c.path ? 'text-blue-600 font-semibold' : 'text-gray-500 dark:text-gray-400'}`}>
+                              <span>{c.icon}</span><span>{c.label}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                    {/* 나머지 메뉴 */}
+                    {otherSections.map(s => (
+                      <div key={s.path} className="px-4 pt-3">
+                        <Link to={s.path} onClick={() => setMobileOpen(false)}
+                          className="flex items-center gap-2 py-1.5 text-sm font-bold text-gray-700 dark:text-gray-200">
+                          <span>{s.icon}</span><span>{s.label}</span>
+                        </Link>
+                        {s.children.map(c => (
+                          <Link key={c.path} to={c.path} onClick={() => setMobileOpen(false)}
+                            className={`flex items-center gap-2 pl-6 py-1.5 text-xs rounded-lg ${loc.pathname === c.path ? 'text-blue-600 font-semibold' : 'text-gray-500 dark:text-gray-400'}`}>
+                            <span>{c.icon}</span><span>{c.label}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </>
+                );
+              })()}
             </div>
           )}
         </header>
         <main className="flex-1 pb-20"><div className="px-4 py-4">{children}</div></main>
         <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
           <div className="flex items-center justify-around h-16">
-            {NAV.map(s => {
-              const a = isActive(s.path);
-              return (
-                <Link key={s.path} to={s.path}
-                  className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${a ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
-                  <span className="text-xl">{s.icon}</span>
-                  <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">{s.short}</span>
-                  {a && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
-                </Link>
-              );
-            })}
+            {(() => {
+              const exploreActive = loc.pathname.startsWith('/explore');
+              const mobileNav = NAV.filter(s => !s.mobileHide);
+              // 탐색 통합 탭을 맨 앞에 삽입
+              const exploreTab = { path: '/explore/compare', icon: '📊', short: '탐색' };
+              return [
+                ...mobileNav.slice(0, 1), // 홈
+                <Link key="_explore" to="/explore/compare"
+                  className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${exploreActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
+                  <span className="text-xl">{exploreTab.icon}</span>
+                  <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">{exploreTab.short}</span>
+                  {exploreActive && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
+                </Link>,
+                ...mobileNav.slice(1).map(s => {
+                  const a = isActive(s.path);
+                  return (
+                    <Link key={s.path} to={s.path}
+                      className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${a ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
+                      <span className="text-xl">{s.icon}</span>
+                      <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">{s.short}</span>
+                      {a && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
+                    </Link>
+                  );
+                }),
+              ];
+            })()}
           </div>
         </nav>
       </div>

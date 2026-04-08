@@ -17,7 +17,7 @@ const TERMS: Record<string, string> = {
   'cross-site':'크로스사이트','trusted':'신뢰된','gateway':'게이트웨이','session':'세션',
   'agent':'에이전트','compaction':'압축','chat':'채팅','view':'뷰','setting':'설정',
   'module':'모듈','deploy':'배포','install':'설치','remove':'제거','add':'추가',
-  'enable':'활성화','disable':'비활성화','compaction':'압축','provider':'공급자',
+  'enable':'활성화','disable':'비활성화','provider':'공급자',
   'startup':'시작','trigger':'트리거','cron':'크론','workflow':'워크플로우',
   'heartbeat':'하트비트','node':'노드','device':'디바이스','pairing':'페어링',
   'message':'메시지','channel':'채널','group':'그룹','policy':'정책',

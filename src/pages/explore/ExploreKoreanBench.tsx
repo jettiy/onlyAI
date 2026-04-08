@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { logoIdToPath } from "../../lib/logoUtils";
 
 interface KoreanBench {
   name: string;
   company: string;
-  flag: string;
+  logoId?: string;
   color: string;
   isNew?: boolean;
   scores: Record<string, number | null>;
@@ -21,72 +22,72 @@ const BENCHMARKS = [
 
 const DATA: KoreanBench[] = [
   {
-    name: "GPT-5", company: "OpenAI", flag: "🇺🇸", color: "#10b981",
+    name: "GPT-5", company: "OpenAI", logoId: "openai", color: "#10b981",
     scores: { korean: 94.2, kornli: 92.8, korsts: 88.5, kmmlu: 85.3, kobest: 91.7 },
     koreanGrade: "A+", notes: ["한국어 생성 능력 매우 우수", "문맥 이해 뛰어남", "높은 가격이 단점"],
   },
   {
-    name: "Claude Opus 4.6", company: "Anthropic", flag: "🇺🇸", color: "#f59e0b",
+    name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", color: "#f59e0b",
     scores: { korean: 93.5, kornli: 91.5, korsts: 87.2, kmmlu: 84.0, kobest: 90.2 },
     koreanGrade: "A+", notes: ["긴 문맥에서도 일관성 유지", "한국어 작문 자연스러움"],
   },
   {
-    name: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", color: "#3b82f6",
+    name: "Gemini 3.1 Pro", company: "Google", logoId: "google", color: "#3b82f6",
     scores: { korean: 92.8, kornli: 90.2, korsts: 86.8, kmmlu: 83.5, kobest: 89.5 },
     koreanGrade: "A+", notes: ["멀티모달에서 한국어 지원", "1M 컨텍스트 활용 가능"],
   },
   {
-    name: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", color: "#6366f1",
+    name: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", color: "#6366f1",
     scores: { korean: 88.0, kornli: 85.2, korsts: 80.5, kmmlu: 78.0, kobest: 84.3 },
     koreanGrade: "A", notes: ["추론 과정에서 중국어 혼용 가능성", "가격 대비 훌륭한 성능"],
   },
   {
-    name: "GLM-5", company: "Zhipu AI", flag: "🇨🇳", color: "#8b5cf6",
+    name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", color: "#8b5cf6",
     scores: { korean: 87.5, kornli: 84.0, korsts: 79.8, kmmlu: 77.5, kobest: 83.5 },
     koreanGrade: "A", notes: ["중국 AI 중 한국어 강점", "무료 API 제공"],
   },
   {
-    name: "GPT-5 Mini", company: "OpenAI", flag: "🇺🇸", color: "#10b981",
+    name: "GPT-5 Mini", company: "OpenAI", logoId: "openai", color: "#10b981",
     scores: { korean: 89.5, kornli: 87.0, korsts: 82.3, kmmlu: 79.5, kobest: 86.0 },
     koreanGrade: "A", notes: ["가성비 최고 수준", "GPT-5와 유사한 한국어 품질"],
   },
   {
-    name: "Qwen3 235B", company: "Alibaba", flag: "🇨🇳", color: "#f97316",
+    name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", color: "#f97316",
     scores: { korean: 85.2, kornli: 82.0, korsts: 77.5, kmmlu: 74.0, kobest: 81.5 },
     koreanGrade: "B+", notes: ["한자어 중심 어휘에 강함", "오픈소스 중 최상위권"],
   },
   {
-    name: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", color: "#f59e0b",
+    name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", color: "#f59e0b",
     scores: { korean: 91.0, kornli: 89.5, korsts: 85.0, kmmlu: 82.0, kobest: 88.5 },
     koreanGrade: "A+", notes: ["Opus 대비 95% 한국어 성능", "가격 효율 우수"],
   },
   {
-    name: "DeepSeek V3.2", company: "DeepSeek", flag: "🇨🇳", color: "#6366f1",
+    name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", color: "#6366f1",
     scores: { korean: 84.0, kornli: 80.5, korsts: 75.8, kmmlu: 72.5, kobest: 80.0 },
     koreanGrade: "B+", notes: ["초저가 한국어 옵션", "기본적인 대화에 적합"],
   },
   {
-    name: "Llama 3.3 70B", company: "Meta", flag: "🇺🇸", color: "#64748b",
+    name: "Llama 3.3 70B", company: "Meta", logoId: "meta", color: "#64748b",
     scores: { korean: 76.5, kornli: 73.0, korsts: 68.5, kmmlu: 65.0, kobest: 72.0 },
     koreanGrade: "B", notes: ["영어 중심 학습으로 한국어 약함", "파인튜닝으로 개선 가능"],
   },
   {
-    name: "MiMo V2 Pro", company: "Xiaomi", flag: "🇨🇳", color: "#ec4899",
+    name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", color: "#ec4899",
     scores: { korean: 83.0, kornli: 79.5, korsts: 74.5, kmmlu: 71.0, kobest: 79.0 },
     koreanGrade: "B+", notes: ["1M 컨텍스트에서 한국어 처리 가능", "신규 모델"],
   },
   {
-    name: "MiniMax M2.7", company: "MiniMax", flag: "🇨🇳", color: "#7c3aed",
+    name: "MiniMax M2.7", company: "MiniMax", logoId: "minimax", color: "#7c3aed",
     scores: { korean: 81.5, kornli: 78.0, korsts: 73.0, kmmlu: 69.5, kobest: 77.5 },
     koreanGrade: "B", notes: ["한국어 기본 소통 가능", "중국어 번역 활용 시 유리"],
   },
   {
-    name: "Grok 3", company: "xAI", flag: "🇺🇸", color: "#ef4444",
+    name: "Grok 3", company: "xAI", logoId: "xai", color: "#ef4444",
     scores: { korean: 86.0, kornli: 83.5, korsts: 79.0, kmmlu: 76.0, kobest: 82.5 },
     koreanGrade: "A", notes: ["실시간 X 데이터 반영", "한국어 트렌드 파악 가능"],
   },
   {
-    name: "Gemini 2.5 Flash", company: "Google", flag: "🇺🇸", color: "#3b82f6",
+    name: "Gemini 2.5 Flash", company: "Google", logoId: "google", color: "#3b82f6",
     scores: { korean: 87.0, kornli: 84.5, korsts: 80.0, kmmlu: 76.5, kobest: 83.0 },
     koreanGrade: "A", notes: ["최저가 한글 AI 옵션", "빠른 응답 속도"],
   },
@@ -99,6 +100,12 @@ const GRADE_COLORS: Record<string, string> = {
   "B": "bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300",
   "C": "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400",
 };
+
+function CompanyLogo({ logoId, name }: { logoId?: string; name: string }) {
+  const src = logoIdToPath(logoId);
+  if (!src) return <span className="text-sm">{name[0]}</span>;
+  return <img src={src} alt={name} className="w-4 h-4 rounded-sm object-contain" loading="lazy" />;
+}
 
 export default function ExploreKoreanBench() {
   const [activeBench, setActiveBench] = useState("korean");
@@ -160,13 +167,12 @@ export default function ExploreKoreanBench() {
         {sorted.map((m, idx) => {
           const score = m.scores[activeBench] ?? 0;
           const pct = (score / maxScore) * 100;
-          const isKorean = m.flag === "🇨🇳";
           return (
             <div key={m.name} className="flex items-center gap-3">
               <div className="w-5 text-xs text-gray-400 text-right shrink-0 font-medium">{idx + 1}</div>
               <div className="w-32 shrink-0">
                 <div className="flex items-center gap-1">
-                  <span className="text-sm">{m.flag}</span>
+                  <CompanyLogo logoId={m.logoId} name={m.company} />
                   <span className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate">{m.name}</span>
                   {m.isNew && <span className="text-[9px] font-bold text-red-500">NEW</span>}
                 </div>
@@ -214,7 +220,7 @@ export default function ExploreKoreanBench() {
                   <tr key={m.name} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                     <td className="px-4 py-2.5">
                       <div className="flex items-center gap-1.5">
-                        <span>{m.flag}</span>
+                        <CompanyLogo logoId={m.logoId} name={m.company} />
                         <span className="font-semibold text-gray-800 dark:text-gray-200 truncate max-w-[110px]">{m.name}</span>
                       </div>
                     </td>
@@ -249,7 +255,7 @@ export default function ExploreKoreanBench() {
           <div key={m.name} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-1.5">
-                <span className="text-base">{m.flag}</span>
+                <CompanyLogo logoId={m.logoId} name={m.company} />
                 <span className="text-sm font-bold text-gray-900 dark:text-white">{m.name}</span>
               </div>
               <span className={`px-1.5 py-0.5 text-[9px] rounded-full font-bold ${GRADE_COLORS[m.koreanGrade]}`}>

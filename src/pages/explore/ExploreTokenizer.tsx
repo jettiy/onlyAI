@@ -1,22 +1,23 @@
 import { useState, useCallback } from "react";
+import { logoIdToPath } from "../../lib/logoUtils";
 
 // Approximate token counts per model family (characters per token ratio)
 const MODEL_TOKENIZERS = [
-  { id: "gpt-5", name: "GPT-5", company: "OpenAI", flag: "🇺🇸", charPerToken: 2.8, encoding: "cl100k_base", isNew: true },
-  { id: "gpt-5-mini", name: "GPT-5 Mini", company: "OpenAI", flag: "🇺🇸", charPerToken: 2.8, encoding: "cl100k_base" },
-  { id: "gpt-5-nano", name: "GPT-5 Nano", company: "OpenAI", flag: "🇺🇸", charPerToken: 2.9, encoding: "o200k_base" },
-  { id: "claude-opus", name: "Claude Opus 4.6", company: "Anthropic", flag: "🇺🇸", charPerToken: 3.0, encoding: "claude-3" },
-  { id: "claude-sonnet", name: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", charPerToken: 3.0, encoding: "claude-3" },
-  { id: "gemini-pro", name: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", charPerToken: 2.6, encoding: "gemini" },
-  { id: "gemini-flash", name: "Gemini 2.5 Flash", company: "Google", flag: "🇺🇸", charPerToken: 2.6, encoding: "gemini" },
-  { id: "grok-3", name: "Grok 3", company: "xAI", flag: "🇺🇸", charPerToken: 2.8, encoding: "tiktoken-v2" },
-  { id: "deepseek-r1", name: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", charPerToken: 2.2, encoding: "deepseek" },
-  { id: "deepseek-v3", name: "DeepSeek V3.2", company: "DeepSeek", flag: "🇨🇳", charPerToken: 2.2, encoding: "deepseek" },
-  { id: "qwen3", name: "Qwen3 235B", company: "Alibaba", flag: "🇨🇳", charPerToken: 1.8, encoding: "qwen" },
-  { id: "glm5", name: "GLM-5", company: "Zhipu AI", flag: "🇨🇳", charPerToken: 2.0, encoding: "glm" },
-  { id: "mimo", name: "MiMo V2 Pro", company: "Xiaomi", flag: "🇨🇳", charPerToken: 2.1, encoding: "mimo" },
-  { id: "minimax", name: "MiniMax M2.7", company: "MiniMax", flag: "🇨🇳", charPerToken: 2.0, encoding: "minimax" },
-  { id: "kimi", name: "Kimi K2.5", company: "Moonshot", flag: "🇨🇳", charPerToken: 2.0, encoding: "kimi" },
+  { id: "gpt-5", name: "GPT-5", company: "OpenAI", logoId: "openai", charPerToken: 2.8, encoding: "cl100k_base", isNew: true },
+  { id: "gpt-5-mini", name: "GPT-5 Mini", company: "OpenAI", logoId: "openai", charPerToken: 2.8, encoding: "cl100k_base" },
+  { id: "gpt-5-nano", name: "GPT-5 Nano", company: "OpenAI", logoId: "openai", charPerToken: 2.9, encoding: "o200k_base" },
+  { id: "claude-opus", name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", charPerToken: 3.0, encoding: "claude-3" },
+  { id: "claude-sonnet", name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", charPerToken: 3.0, encoding: "claude-3" },
+  { id: "gemini-pro", name: "Gemini 3.1 Pro", company: "Google", logoId: "google", charPerToken: 2.6, encoding: "gemini" },
+  { id: "gemini-flash", name: "Gemini 2.5 Flash", company: "Google", logoId: "google", charPerToken: 2.6, encoding: "gemini" },
+  { id: "grok-3", name: "Grok 3", company: "xAI", logoId: "xai", charPerToken: 2.8, encoding: "tiktoken-v2" },
+  { id: "deepseek-r1", name: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", charPerToken: 2.2, encoding: "deepseek" },
+  { id: "deepseek-v3", name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", charPerToken: 2.2, encoding: "deepseek" },
+  { id: "qwen3", name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", charPerToken: 1.8, encoding: "qwen" },
+  { id: "glm5", name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", charPerToken: 2.0, encoding: "glm" },
+  { id: "mimo", name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", charPerToken: 2.1, encoding: "mimo" },
+  { id: "minimax", name: "MiniMax M2.7", company: "MiniMax", logoId: "minimax", charPerToken: 2.0, encoding: "minimax" },
+  { id: "kimi", name: "Kimi K2.5", company: "Moonshot", logoId: "moonshot", charPerToken: 2.0, encoding: "kimi" },
 ];
 
 const SAMPLE_TEXTS = [
@@ -35,6 +36,12 @@ function estimateTokens(text: string, charPerToken: number): number {
 function estimateCost(tokens: number, inputPrice: number): string {
   const cost = (tokens / 1_000_000) * inputPrice;
   return cost < 0.01 ? `<$0.01` : `$${cost.toFixed(3)}`;
+}
+
+function CompanyLogo({ logoId, name }: { logoId?: string; name: string }) {
+  const src = logoIdToPath(logoId);
+  if (!src) return <span className="text-xs">{name[0]}</span>;
+  return <img src={src} alt={name} className="w-4 h-4 rounded-sm object-contain" loading="lazy" />;
 }
 
 export default function ExploreTokenizer() {
@@ -119,7 +126,7 @@ export default function ExploreTokenizer() {
                     : "bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
                 }`}
               >
-                {m.flag} {m.name}
+                <CompanyLogo logoId={m.logoId} name={m.company} /> {m.name}
               </button>
             );
           })}
@@ -145,7 +152,7 @@ export default function ExploreTokenizer() {
                   <div key={r.id} className="flex items-center gap-3">
                     <div className="w-32 shrink-0">
                       <div className="flex items-center gap-1">
-                        <span className="text-xs">{r.flag}</span>
+                        <CompanyLogo logoId={r.logoId} name={r.company} />
                         <span className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate">{r.name}</span>
                         {r.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
                       </div>

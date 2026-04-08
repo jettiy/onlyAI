@@ -15,5 +15,18 @@ export function useDarkMode() {
     localStorage.setItem("aicompass-dark", String(dark));
   }, [dark]);
 
+  // System theme change listener
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = (e: MediaQueryListEvent) => {
+      // Only apply if user hasn't set a manual preference
+      if (localStorage.getItem("aicompass-dark") === null) {
+        setDark(e.matches);
+      }
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   return { dark, toggle: () => setDark((d) => !d) };
 }

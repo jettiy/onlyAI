@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { logoIdToPath } from "../../lib/logoUtils";
 
 interface PromptResult {
   model: string;
   company: string;
-  flag: string;
+  logoId?: string;
   score: number;
   response: string;
   time: string;
@@ -52,51 +53,57 @@ const PROMPTS = [
 
 const RESULTS: Record<string, PromptResult[]> = {
   summary: [
-    { model: "GPT-5", company: "OpenAI", flag: "🇺🇸", score: 95, response: "삼성전자가 HBM4E 양산을 2026년 하반기부터 시작한다. 이 칩은 엔비디아 블랙웰 울트라에 탑재될 전망이다. 성공 시 AI 반도체 시장 판도 변화가 예상된다.", time: "1.2s", strengths: ["핵심 정보 완벽 추출", "자연스러운 문장"], weaknesses: ["비용 정보 누락"] },
-    { model: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", score: 93, response: "삼성전자가 차세대 AI 반도체 HBM4E 개발을 완료해 하반기 양산에 돌입한다. 엔비디아 최신 AI 칩에 탑재될 가능성이 높아 시장 재편이 예상된다.", time: "1.8s", strengths: ["문맥 이해 우수", "간결한 표현"], weaknesses: [] },
-    { model: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", score: 91, response: "삼성전자는 HBM4E를 통해 대역폭을 2배 향상시켰다. 2026년 하반기 양산 예정이며 엔비디아 블랙웰 울트라 탑재 전망이다. AI 반도체 시장 판도 변화 가능성이 있다.", time: "1.5s", strengths: ["수치 정확 반영", "구조적 요약"], weaknesses: ["약간 딱딱한 어조"] },
-    { model: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", score: 87, response: "삼성전자는 HBM4E 개발 완료. 2026년 하반기 양산. 엔비디아 블랙웰 울트라 탑재 예상. 성공 시 시장 판도 변화.", time: "2.1s", strengths: ["속도 비교적 빠름", "핵심 정보 포함"], weaknesses: ["문장이 끊김", "어색한 한국어"] },
-    { model: "Qwen3 235B", company: "Alibaba", flag: "🇨🇳", score: 83, response: "삼성전자가 HBM4E를 개발 완료하고 2026 하반기에 양산한다고 발표했다. 대역폭이 HBM3E 대비 2배 향상되었고, 엔비디아 칩에 탑재될 전망이다.", time: "2.5s", strengths: ["정보 누락 없음"], weaknesses: ["중국어식 표현", "자연스럽지 않음"] },
-    { model: "GLM-5", company: "Zhipu AI", flag: "🇨🇳", score: 80, response: "삼성전자 HBM4E 양산 계획 발표. 2026년 하반기부터 시작. 엔비디아 탑재 예상. AI 반도체 시장에 영향 예상.", time: "2.0s", strengths: ["빠른 응답"], weaknesses: ["요약 품질 낮음", "문법 오류"] },
+    { model: "GPT-5", company: "OpenAI", logoId: "openai", score: 95, response: "삼성전자가 HBM4E 양산을 2026년 하반기부터 시작한다. 이 칩은 엔비디아 블랙웰 울트라에 탑재될 전망이다. 성공 시 AI 반도체 시장 판도 변화가 예상된다.", time: "1.2s", strengths: ["핵심 정보 완벽 추출", "자연스러운 문장"], weaknesses: ["비용 정보 누락"] },
+    { model: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", score: 93, response: "삼성전자가 차세대 AI 반도체 HBM4E 개발을 완료해 하반기 양산에 돌입한다. 엔비디아 최신 AI 칩에 탑재될 가능성이 높아 시장 재편이 예상된다.", time: "1.8s", strengths: ["문맥 이해 우수", "간결한 표현"], weaknesses: [] },
+    { model: "Gemini 3.1 Pro", company: "Google", logoId: "google", score: 91, response: "삼성전자는 HBM4E를 통해 대역폭을 2배 향상시켰다. 2026년 하반기 양산 예정이며 엔비디아 블랙웰 울트라 탑재 전망이다. AI 반도체 시장 판도 변화 가능성이 있다.", time: "1.5s", strengths: ["수치 정확 반영", "구조적 요약"], weaknesses: ["약간 딱딱한 어조"] },
+    { model: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", score: 87, response: "삼성전자는 HBM4E 개발 완료. 2026년 하반기 양산. 엔비디아 블랙웰 울트라 탑재 예상. 성공 시 시장 판도 변화.", time: "2.1s", strengths: ["속도 비교적 빠름", "핵심 정보 포함"], weaknesses: ["문장이 끊김", "어색한 한국어"] },
+    { model: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", score: 83, response: "삼성전자가 HBM4E를 개발 완료하고 2026 하반기에 양산한다고 발표했다. 대역폭이 HBM3E 대비 2배 향상되었고, 엔비디아 칩에 탑재될 전망이다.", time: "2.5s", strengths: ["정보 누락 없음"], weaknesses: ["중국어식 표현", "자연스럽지 않음"] },
+    { model: "GLM-5", company: "Zhipu AI", logoId: "zhipu", score: 80, response: "삼성전자 HBM4E 양산 계획 발표. 2026년 하반기부터 시작. 엔비디아 탑재 예상. AI 반도체 시장에 영향 예상.", time: "2.0s", strengths: ["빠른 응답"], weaknesses: ["요약 품질 낮음", "문법 오류"] },
   ],
   translate: [
-    { model: "GPT-5", company: "OpenAI", flag: "🇺🇸", score: 96, response: "트랜스포머 아키텍처는 자연어 처리를 다루는 방식을 근본적으로 바꿔놓았다.", time: "0.8s", strengths: ["완벽한 한국어", "전문 용어 적절"], weaknesses: [] },
-    { model: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", score: 95, response: "트랜스포머 구조는 자연어 처리에 접근하는 방식을 근본적으로 변화시켰다.", time: "1.0s", strengths: ["자연스러운 흐름", "정확한 의미 전달"], weaknesses: [] },
-    { model: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", score: 94, response: "트랜스포머 아키텍처는 우리가 자연어 처리를 다루는 방식을 근본적으로 바꿔놓았습니다.", time: "0.9s", strengths: ["정확한 번역"], weaknesses: ["존댓말 혼용"] },
-    { model: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", score: 82, response: "变换器架构从根本上改变了我们处理自然语言的方式。", time: "1.5s", strengths: [], weaknesses: ["한국어로 번역 실패", "중국어로 응답"] },
-    { model: "Qwen3 235B", company: "Alibaba", flag: "🇨🇳", score: 78, response: "트랜스포머 아키텍처는 자연어 처리에 접근하는 우리의 방법을 근본적으로 바꾸었다.", time: "1.2s", strengths: ["의미 전달"], weaknesses: ["어색한 문장 구조"] },
+    { model: "GPT-5", company: "OpenAI", logoId: "openai", score: 96, response: "트랜스포머 아키텍처는 자연어 처리를 다루는 방식을 근본적으로 바꿔놓았다.", time: "0.8s", strengths: ["완벽한 한국어", "전문 용어 적절"], weaknesses: [] },
+    { model: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", score: 95, response: "트랜스포머 구조는 자연어 처리에 접근하는 방식을 근본적으로 변화시켰다.", time: "1.0s", strengths: ["자연스러운 흐름", "정확한 의미 전달"], weaknesses: [] },
+    { model: "Gemini 3.1 Pro", company: "Google", logoId: "google", score: 94, response: "트랜스포머 아키텍처는 우리가 자연어 처리를 다루는 방식을 근본적으로 바꿔놓았습니다.", time: "0.9s", strengths: ["정확한 번역"], weaknesses: ["존댓말 혼용"] },
+    { model: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", score: 82, response: "变换器架构从根本上改变了我们处理自然语言的方式。", time: "1.5s", strengths: [], weaknesses: ["한국어로 번역 실패", "중국어로 응답"] },
+    { model: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", score: 78, response: "트랜스포머 아키텍처는 자연어 처리에 접근하는 우리의 방법을 근본적으로 바꾸었다.", time: "1.2s", strengths: ["의미 전달"], weaknesses: ["어색한 문장 구조"] },
   ],
   code: [
-    { model: "GPT-5", company: "OpenAI", flag: "🇺🇸", score: 97, response: "✅ 완전한 TODO 앱 구현. TypeScript 타입 정의, 에러 핸들링, 반응형 UI 모두 포함.", time: "3.2s", strengths: ["완벽한 구현", "타입 안전성", "클린 코드"], weaknesses: ["응답 길이 약간 김"] },
-    { model: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", score: 96, response: "✅ 완전한 TODO 앱 구현. 커스텀 훅 패턴, 접근성 고려.", time: "2.8s", strengths: ["구조화된 코드", "주석 풍부"], weaknesses: [] },
-    { model: "Grok 3", company: "xAI", flag: "🇺🇸", score: 93, response: "✅ 기능 구현 완료. localStorage 연동 정상 동작.", time: "3.0s", strengths: ["깔끔한 UI 코드"], weaknesses: ["타입 정어 부족"] },
-    { model: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", score: 88, response: "✅ 기본 기능 구현. TODO 추가/완료/삭제 가능.", time: "4.5s", strengths: ["논리적 사고 과정 표시"], weaknesses: ["CSS 없음", "영어 주석"] },
-    { model: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", score: 91, response: "✅ 완전한 구현. 추가로 필터링 기능까지 포함.", time: "2.5s", strengths: ["빠른 구현", "추가 기능"], weaknesses: ["약간의 구식 패턴"] },
-    { model: "GLM-5", company: "Zhipu AI", flag: "🇨🇳", score: 85, response: "✅ TODO 앱 기본 구현 완료.", time: "3.8s", strengths: ["동작하는 코드"], weaknesses: ["에러 처리 미흡", "중국어 변수명"] },
+    { model: "GPT-5", company: "OpenAI", logoId: "openai", score: 97, response: "✅ 완전한 TODO 앱 구현. TypeScript 타입 정의, 에러 핸들링, 반응형 UI 모두 포함.", time: "3.2s", strengths: ["완벽한 구현", "타입 안전성", "클린 코드"], weaknesses: ["응답 길이 약간 김"] },
+    { model: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", score: 96, response: "✅ 완전한 TODO 앱 구현. 커스텀 훅 패턴, 접근성 고려.", time: "2.8s", strengths: ["구조화된 코드", "주석 풍부"], weaknesses: [] },
+    { model: "Grok 3", company: "xAI", logoId: "xai", score: 93, response: "✅ 기능 구현 완료. localStorage 연동 정상 동작.", time: "3.0s", strengths: ["깔끔한 UI 코드"], weaknesses: ["타입 정어 부족"] },
+    { model: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", score: 88, response: "✅ 기본 기능 구현. TODO 추가/완료/삭제 가능.", time: "4.5s", strengths: ["논리적 사고 과정 표시"], weaknesses: ["CSS 없음", "영어 주석"] },
+    { model: "Gemini 3.1 Pro", company: "Google", logoId: "google", score: 91, response: "✅ 완전한 구현. 추가로 필터링 기능까지 포함.", time: "2.5s", strengths: ["빠른 구현", "추가 기능"], weaknesses: ["약간의 구식 패턴"] },
+    { model: "GLM-5", company: "Zhipu AI", logoId: "zhipu", score: 85, response: "✅ TODO 앱 기본 구현 완료.", time: "3.8s", strengths: ["동작하는 코드"], weaknesses: ["에러 처리 미흡", "중국어 변수명"] },
   ],
   reasoning: [
-    { model: "GPT-5", company: "OpenAI", flag: "🇺🇸", score: 98, response: "C가 맨 앞입니다. 조건 분석: A>B, C>A이므로 C>A>B. B는 맨 앞이 아니므로 순서는 C>A>B가 확정됩니다.", time: "1.5s", strengths: ["정확한 추론", "명확한 설명"], weaknesses: [] },
-    { model: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", score: 97, response: "C가 맨 앞입니다. 단계별로 분석하면...[추론 과정 생략]...따라서 C>A>B의 순서가 됩니다.", time: "3.0s", strengths: ["상세한 추론 과정", "100% 정확"], weaknesses: ["추론 과정이 긺"] },
-    { model: "Claude Opus 4.6", company: "Anthropic", flag: "🇺🇸", score: 97, response: "C가 맨 앞에 섭니다. A는 B 앞, C는 A 뒤이므로 C가 가장 뒤처 보이지만, \"B는 맨 앞이 아니다\"라는 조건에서 최종 순서는 C>A>B입니다.", time: "1.8s", strengths: ["정확", "설명 친절"], weaknesses: [] },
-    { model: "Grok 3", company: "xAI", flag: "🇺🇸", score: 95, response: "C가 맨 앞입니다. A>B, C>A → C>A>B. B는 2번째 위치.", time: "1.2s", strengths: ["빠르고 정확"], weaknesses: ["설명이 간결함"] },
-    { model: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", score: 93, response: "C가 맨 앞입니다. 순서는 C>A>B입니다. A>B이고 C>A이므로 자연스럽게 C>A>B가 도출됩니다.", time: "1.3s", strengths: ["정확"], weaknesses: [] },
-    { model: "Qwen3 235B", company: "Alibaba", flag: "🇨🇳", score: 85, response: "C가 맨 앞입니다. A>B, C>A, B≠맨앞. C>A>B.", time: "2.0s", strengths: ["정답 맞춤"], weaknesses: ["추론 과정 미흡"] },
+    { model: "GPT-5", company: "OpenAI", logoId: "openai", score: 98, response: "C가 맨 앞입니다. 조건 분석: A>B, C>A이므로 C>A>B. B는 맨 앞이 아니므로 순서는 C>A>B가 확정됩니다.", time: "1.5s", strengths: ["정확한 추론", "명확한 설명"], weaknesses: [] },
+    { model: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", score: 97, response: "C가 맨 앞입니다. 단계별로 분석하면...[추론 과정 생략]...따라서 C>A>B의 순서가 됩니다.", time: "3.0s", strengths: ["상세한 추론 과정", "100% 정확"], weaknesses: ["추론 과정이 긺"] },
+    { model: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", score: 97, response: "C가 맨 앞에 섭니다. A는 B 앞, C는 A 뒤이므로 C가 가장 뒤처 보이지만, \"B는 맨 앞이 아니다\"라는 조건에서 최종 순서는 C>A>B입니다.", time: "1.8s", strengths: ["정확", "설명 친절"], weaknesses: [] },
+    { model: "Grok 3", company: "xAI", logoId: "xai", score: 95, response: "C가 맨 앞입니다. A>B, C>A → C>A>B. B는 2번째 위치.", time: "1.2s", strengths: ["빠르고 정확"], weaknesses: ["설명이 간결함"] },
+    { model: "Gemini 3.1 Pro", company: "Google", logoId: "google", score: 93, response: "C가 맨 앞입니다. 순서는 C>A>B입니다. A>B이고 C>A이므로 자연스럽게 C>A>B가 도출됩니다.", time: "1.3s", strengths: ["정확"], weaknesses: [] },
+    { model: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", score: 85, response: "C가 맨 앞입니다. A>B, C>A, B≠맨앞. C>A>B.", time: "2.0s", strengths: ["정답 맞춤"], weaknesses: ["추론 과정 미흡"] },
   ],
   creative: [
-    { model: "GPT-5", company: "OpenAI", flag: "🇺🇸", score: 94, response: "2060년의 서울, 용산구의 한 카페에서 AI 비서 '미래'가 주문을 받고 있었다. 테이블 앞의 지은은 손목의 바이오칩을 톡하자...", time: "2.5s", strengths: ["생생한 묘사", "자연스러운 한국어", "매력적인 전개"], weaknesses: [] },
-    { model: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", score: 93, response: "2060년 서울의 아침은 AI가 지키고 있었다. 도시의 모든 시스템을 관리하는 '서울AI'가 한강의 수질을 점검하는 동안...", time: "3.0s", strengths: ["세계관 구축 훌륭", "감성적 글쓰기"], weaknesses: ["약간 긺"] },
-    { model: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", score: 90, response: "2060년, 서울의 지하철에는 더 이상 운전사가 없었다. AI가 모든 것을 관리하는 세상, 그 속에서도 사람들은 아침 출근길에...", time: "2.0s", strengths: ["현실적 설정"], weaknesses: ["클리셰적 전개"] },
-    { model: "Grok 3", company: "xAI", flag: "🇺🇸", score: 88, response: "서울, 2060년. 반려 AI 로봇 '지훈'과 함께 한강 공원을 걷는 지수. AI와 인간이 함께 춤추는 거리...", time: "1.8s", strengths: ["독특한 시각"], weaknesses: ["SF 요소 부족"] },
-    { model: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", score: 75, response: "2060年的首尔，AI已经深入人们生活的方方面面。在一个普通的早晨，人工智能助手正在为用户准备早餐...", time: "2.5s", strengths: ["스토리 구조"], weaknesses: ["한국어로 안 씀", "중국어 응답"] },
+    { model: "GPT-5", company: "OpenAI", logoId: "openai", score: 94, response: "2060년의 서울, 용산구의 한 카페에서 AI 비서 '미래'가 주문을 받고 있었다. 테이블 앞의 지은은 손목의 바이오칩을 톡하자...", time: "2.5s", strengths: ["생생한 묘사", "자연스러운 한국어", "매력적인 전개"], weaknesses: [] },
+    { model: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", score: 93, response: "2060년 서울의 아침은 AI가 지키고 있었다. 도시의 모든 시스템을 관리하는 '서울AI'가 한강의 수질을 점검하는 동안...", time: "3.0s", strengths: ["세계관 구축 훌륭", "감성적 글쓰기"], weaknesses: ["약간 긺"] },
+    { model: "Gemini 3.1 Pro", company: "Google", logoId: "google", score: 90, response: "2060년, 서울의 지하철에는 더 이상 운전사가 없었다. AI가 모든 것을 관리하는 세상, 그 속에서도 사람들은 아침 출근길에...", time: "2.0s", strengths: ["현실적 설정"], weaknesses: ["클리셰적 전개"] },
+    { model: "Grok 3", company: "xAI", logoId: "xai", score: 88, response: "서울, 2060년. 반려 AI 로봇 '지훈'과 함께 한강 공원을 걷는 지수. AI와 인간이 함께 춤추는 거리...", time: "1.8s", strengths: ["독특한 시각"], weaknesses: ["SF 요소 부족"] },
+    { model: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", score: 75, response: "2060年的首尔，AI已经深入人们生活的方方面面。在一个普通的早晨，人工智能助手正在为用户准备早餐...", time: "2.5s", strengths: ["스토리 구조"], weaknesses: ["한국어로 안 씀", "중국어 응답"] },
   ],
   korean: [
-    { model: "GPT-5", company: "OpenAI", flag: "🇺🇸", score: 96, response: "1. 놀람: \"뭐래? 진짜?\" 2. 분노: \"뭐래? 뭘 그렇게 말해?\" 3. 호기심: \"뭐래? 자세히 말해봐\" 4. 환영: \"뭐래? 잘했네!\" 5. 혼잣말: \"아이고, 뭐래...\"", time: "1.5s", strengths: ["완벽한 뉘앙스 구분", "자연스러운 예시"], weaknesses: [] },
-    { model: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", score: 95, response: "1. 단순 호기심: 상대방 말을 놓쳤을 때 2. 놀람/경악: 믿기 어려운 내용을 들었을 때 3. 분노: 불쾌한 발언을 들었을 때...", time: "2.0s", strengths: ["구조적 설명", "상황 묘사 정확"], weaknesses: [] },
-    { model: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", score: 90, response: "1. 놀람: \"뭐래?! 진짜로?\" 2. 화남: \"뭐래? 어떻게 그런 말을...\" 3. 궁금: \"뭐래? 무슨 말이야?\"...", time: "1.3s", strengths: ["기본 뉘앙스 파악"], weaknesses: ["미묘한 차이 설명 부족"] },
-    { model: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", score: 70, response: "이 문장은 다양한 뉘앙스를 가집니다. 1. 의문 2. 놀람 3. 비난...", time: "2.5s", strengths: ["카테고리 분류"], weaknesses: ["한국어 미묘한 뉘앙스 부족", "구체성 부족"] },
-    { model: "Qwen3 235B", company: "Alibaba", flag: "🇨🇳", score: 65, response: "\"그 사람 뭐래?\"는 여러 가지 의미가 있을 수 있습니다...", time: "2.0s", strengths: [], weaknesses: ["한국어 뉘앙스 이해 부족", "일반적인 설명만"] },
+    { model: "GPT-5", company: "OpenAI", logoId: "openai", score: 96, response: "1. 놀람: \"뭐래? 진짜?\" 2. 분노: \"뭐래? 뭘 그렇게 말해?\" 3. 호기심: \"뭐래? 자세히 말해봐\" 4. 환영: \"뭐래? 잘했네!\" 5. 혼잣말: \"아이고, 뭐래...\"", time: "1.5s", strengths: ["완벽한 뉘앙스 구분", "자연스러운 예시"], weaknesses: [] },
+    { model: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", score: 95, response: "1. 단순 호기심: 상대방 말을 놓쳤을 때 2. 놀람/경악: 믿기 어려운 내용을 들었을 때 3. 분노: 불쾌한 발언을 들었을 때...", time: "2.0s", strengths: ["구조적 설명", "상황 묘사 정확"], weaknesses: [] },
+    { model: "Gemini 3.1 Pro", company: "Google", logoId: "google", score: 90, response: "1. 놀람: \"뭐래?! 진짜로?\" 2. 화남: \"뭐래? 어떻게 그런 말을...\" 3. 궁금: \"뭐래? 무슨 말이야?\"...", time: "1.3s", strengths: ["기본 뉘앙스 파악"], weaknesses: ["미묘한 차이 설명 부족"] },
+    { model: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", score: 70, response: "이 문장은 다양한 뉘앙스를 가집니다. 1. 의문 2. 놀람 3. 비난...", time: "2.5s", strengths: ["카테고리 분류"], weaknesses: ["한국어 미묘한 뉘앙스 부족", "구체성 부족"] },
+    { model: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", score: 65, response: "\"그 사람 뭐래?\"는 여러 가지 의미가 있을 수 있습니다...", time: "2.0s", strengths: [], weaknesses: ["한국어 뉘앙스 이해 부족", "일반적인 설명만"] },
   ],
 };
+
+function CompanyLogo({ logoId, name }: { logoId?: string; name: string }) {
+  const src = logoIdToPath(logoId);
+  if (!src) return <span className="text-sm">{name[0]}</span>;
+  return <img src={src} alt={name} className="w-4 h-4 rounded-sm object-contain" loading="lazy" />;
+}
 
 export default function ExplorePromptBench() {
   const [activePrompt, setActivePrompt] = useState("summary");
@@ -151,7 +158,7 @@ export default function ExplorePromptBench() {
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
                   <span className="text-lg">{medal || `#${idx + 1}`}</span>
-                  <span className="text-sm">{r.flag}</span>
+                  <CompanyLogo logoId={r.logoId} name={r.company} />
                   <span className="text-sm font-bold text-gray-900 dark:text-white">{r.model}</span>
                   <span className="text-[10px] text-gray-400">{r.company}</span>
                 </div>

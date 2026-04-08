@@ -32,6 +32,7 @@ export interface AICompany {
   region: Region;
   country: string;
   flag: string;
+  logoId?: string;
   description: string;
   website: string;
   playgroundUrl: string;
@@ -40,79 +41,79 @@ export interface AICompany {
 // ── 회사 목록 ───────────────────────────────────────────────────
 export const companies: AICompany[] = [
   {
-    id: 'openai', name: 'OpenAI', region: 'us', country: '미국', flag: '🇺🇸',
+    id: 'openai', name: 'OpenAI', region: 'us', country: '미국', flag: '', logoId: 'openai',
     description: 'GPT 시리즈 제작사. ChatGPT로 AI 붐을 일으킨 기업.',
     website: 'https://openai.com/api/pricing/',
     playgroundUrl: 'https://platform.openai.com/playground',
   },
   {
-    id: 'anthropic', name: 'Anthropic', region: 'us', country: '미국', flag: '🇺🇸',
+    id: 'anthropic', name: 'Anthropic', region: 'us', country: '미국', flag: '', logoId: 'anthropic',
     description: '안전 중심 AI 연구소. Claude 시리즈 제작.',
     website: 'https://www.anthropic.com/pricing',
     playgroundUrl: 'https://claude.ai',
   },
   {
-    id: 'google', name: 'Google', region: 'us', country: '미국', flag: '🇺🇸',
+    id: 'google', name: 'Google', region: 'us', country: '미국', flag: '', logoId: 'google',
     description: 'Gemini·Gemma 시리즈. 멀티모달 AI 선두.',
     website: 'https://ai.google.dev/gemini-api/docs/pricing',
     playgroundUrl: 'https://aistudio.google.com',
   },
   {
-    id: 'meta', name: 'Meta', region: 'us', country: '미국', flag: '🇺🇸',
+    id: 'meta', name: 'Meta', region: 'us', country: '미국', flag: '', logoId: 'meta',
     description: 'Llama 오픈소스로 AI 민주화를 이끄는 기업.',
     website: 'https://ai.meta.com/llama/',
     playgroundUrl: 'https://groq.com',
   },
   {
-    id: 'xai', name: 'xAI', region: 'us', country: '미국', flag: '🇺🇸',
+    id: 'xai', name: 'xAI', region: 'us', country: '미국', flag: '', logoId: 'xai',
     description: '일론 머스크 설립. Grok 시리즈. X(트위터) 실시간 연동.',
     website: 'https://docs.x.ai/developers/models',
     playgroundUrl: 'https://x.ai/grok',
   },
   {
-    id: 'minimax', name: 'MiniMax', region: 'china', country: '중국', flag: '🇨🇳',
+    id: 'minimax', name: 'MiniMax', region: 'china', country: '중국', flag: '', logoId: 'minimax',
     description: '중국 AI 유니콘. M2 시리즈, 홍콩 상장사.',
     website: 'https://platform.minimax.io/docs/pricing/overview',
     playgroundUrl: 'https://platform.minimax.io',
   },
   {
-    id: 'deepseek', name: 'DeepSeek', region: 'china', country: '중국', flag: '🇨🇳',
+    id: 'deepseek', name: 'DeepSeek', region: 'china', country: '중국', flag: '', logoId: 'deepseek',
     description: '초저가 고성능 오픈소스로 AI 가격 파괴 주도.',
     website: 'https://api-docs.deepseek.com/quick_start/pricing',
     playgroundUrl: 'https://chat.deepseek.com',
   },
   {
-    id: 'alibaba', name: 'Alibaba', region: 'china', country: '중국', flag: '🇨🇳',
+    id: 'alibaba', name: 'Alibaba', region: 'china', country: '중국', flag: '', logoId: 'alibaba',
     description: '큐원(Qwen) 시리즈. MAU 2억 명 돌파. 알리바바 클라우드.',
     website: 'https://www.alibabacloud.com/help/en/model-studio/model-pricing',
     playgroundUrl: 'https://qwen.ai',
   },
   {
-    id: 'moonshot', name: 'Moonshot', region: 'china', country: '중국', flag: '🇨🇳',
+    id: 'moonshot', name: 'Moonshot', region: 'china', country: '중국', flag: '', logoId: 'moonshot',
     description: 'Kimi K2·K2.5 시리즈. 1조 파라미터 MoE, 262K 컨텍스트. 에이전트·코딩 강자.',
     website: 'https://platform.moonshot.ai/docs/pricing/chat',
     playgroundUrl: 'https://kimi.moonshot.cn',
   },
   {
-    id: 'zhipu', name: 'Zhipu AI', region: 'china', country: '중국', flag: '🇨🇳',
+    id: 'zhipu', name: 'Zhipu AI', region: 'china', country: '중국', flag: '', logoId: 'zhipu',
     description: 'GLM(Z.ai) 시리즈. 코딩·추론 특화 중국 AI 연구소.',
     website: 'https://docs.z.ai/guides/overview/pricing',
     playgroundUrl: 'https://chatglm.cn',
   },
   {
-    id: 'xiaomi', name: 'Xiaomi', region: 'china', country: '중국', flag: '🇨🇳',
+    id: 'xiaomi', name: 'Xiaomi', region: 'china', country: '중국', flag: '', logoId: 'xiaomi',
     description: 'MiMo-V2-Pro·Omni 출시 (2026.03.19). 1조 파라미터, 1M 컨텍스트. OpenRouter "Hunter Alpha"로 1위 달성 후 정체 공개.',
     website: 'https://platform.xiaomimimo.com/#/docs/pricing',
     playgroundUrl: 'https://aistudio.xiaomimimo.com',
   },
   {
-    id: 'mistral', name: 'Mistral', region: 'other', country: '프랑스', flag: '🇫🇷',
+    id: 'mistral', name: 'Mistral', region: 'other', country: '프랑스', flag: '', logoId: 'mistral',
     description: '유럽 최대 AI 스타트업. 오픈소스+상업 모델 병행.',
     website: 'https://mistral.ai/pricing',
     playgroundUrl: 'https://chat.mistral.ai',
   },
   {
-    id: 'cohere', name: 'Cohere', region: 'other', country: '캐나다', flag: '🇨🇦',
+    id: 'cohere', name: 'Cohere', region: 'other', country: '캐나다', flag: '', logoId: 'cohere',
     description: '기업용 RAG·검색 연동 특화. Command 시리즈.',
     website: 'https://cohere.com/pricing',
     playgroundUrl: 'https://coral.cohere.com',

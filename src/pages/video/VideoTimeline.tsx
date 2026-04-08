@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { videoModels, TIMELINE_EVENTS } from "../../data/videoModels";
+import { logoIdToPath } from "../../lib/logoUtils";
 
 const YEARS = ["2024", "2025", "2026"];
 type Year = typeof YEARS[number];
@@ -63,7 +64,7 @@ export default function VideoTimeline() {
               <div className="flex-1 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-xs font-mono text-gray-400">{event.date}</span>
-                  <span className="text-sm">{event.flag}</span>
+                  {event.logoId && (() => { const s = logoIdToPath(event.logoId); return s ? <img src={s} alt={event.company} className="w-4 h-4 rounded-sm object-contain" loading="lazy" /> : <span className="text-sm">{event.company[0]}</span>; })()}
                   <span className="text-sm font-bold text-gray-900 dark:text-white">{event.title}</span>
                   {event.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
                   <span className="text-[10px] text-gray-400">{event.company}</span>
@@ -85,7 +86,7 @@ export default function VideoTimeline() {
             {modelsByYear[activeYear].map(m => (
               <div key={m.id} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-3">
                 <div className="flex items-center gap-1 mb-1">
-                  <span>{m.flag}</span>
+                  {m.logoId && (() => { const s = logoIdToPath(m.logoId); return s ? <img src={s} alt={m.company} className="w-4 h-4 rounded-sm object-contain" loading="lazy" /> : <span className="text-xs text-gray-400">{m.company[0]}</span>; })()}
                   <span className="text-xs font-bold text-gray-900 dark:text-white">{m.name}</span>
                   {m.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
                 </div>

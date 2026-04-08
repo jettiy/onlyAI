@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { videoModels, type VideoModel } from "../../data/videoModels";
+import { logoIdToPath } from "../../lib/logoUtils";
 
 type SortKey = "date" | "resolution" | "duration" | "price";
 
@@ -87,7 +88,7 @@ export default function ExploreVideoCompare() {
                 <tr key={m.id} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-1.5">
-                      <span>{m.flag}</span>
+                      {m.logoId && (() => { const s = logoIdToPath(m.logoId); return s ? <img src={s} alt={m.company} className="w-4 h-4 rounded-sm object-contain" loading="lazy" /> : <span className="text-xs text-gray-400">{m.company[0]}</span>; })()}
                       <span className="font-bold text-gray-900 dark:text-white">{m.name}</span>
                       {m.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
                     </div>
@@ -128,7 +129,7 @@ export default function ExploreVideoCompare() {
           <div key={m.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-1.5">
-                <span className="text-base">{m.flag}</span>
+                {m.logoId && (() => { const s = logoIdToPath(m.logoId); return s ? <img src={s} alt={m.company} className="w-4 h-4 rounded-sm object-contain" loading="lazy" /> : <span className="text-xs text-gray-400">{m.company[0]}</span>; })()}
                 <span className="text-sm font-bold text-gray-900 dark:text-white">{m.name}</span>
                 {m.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
               </div>

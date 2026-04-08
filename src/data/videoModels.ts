@@ -3,6 +3,7 @@ export interface VideoModel {
   name: string;
   company: string;
   flag: string;
+  logoId?: string;
   releaseDate: string;
   tier: "pro" | "consumer" | "open";
   maxResolution: string;
@@ -17,7 +18,7 @@ export interface VideoModel {
 
 export const videoModels: VideoModel[] = [
   {
-    id: "sora3", name: "Sora 3", company: "OpenAI", flag: "🇺🇸",
+    id: "sora3", name: "Sora 3", company: "OpenAI", flag: "", logoId: "openai",
     releaseDate: "2026-02", tier: "pro",
     maxResolution: "4K", maxDuration: "60s", maxFps: "60fps",
     price: "$0.20/초",
@@ -27,7 +28,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "kling2", name: "Kling 2.0", company: "快手(Kuaishou)", flag: "🇨🇳",
+    id: "kling2", name: "Kling 2.0", company: "快手(Kuaishou)", flag: "",
     releaseDate: "2025-12", tier: "pro",
     maxResolution: "4K", maxDuration: "120s", maxFps: "60fps",
     price: "무료/유료 하이브리드",
@@ -36,7 +37,7 @@ export const videoModels: VideoModel[] = [
     weaknesses: ["큐잉 시간 김", "중국어 우선"],
   },
   {
-    id: "runway4", name: "Runway Gen-4", company: "Runway", flag: "🇺🇸",
+    id: "runway4", name: "Runway Gen-4", company: "Runway", flag: "",
     releaseDate: "2025-06", tier: "pro",
     maxResolution: "4K", maxDuration: "30s", maxFps: "60fps",
     price: "$12/월부터",
@@ -45,7 +46,7 @@ export const videoModels: VideoModel[] = [
     weaknesses: ["길이 제한", "구독제"],
   },
   {
-    id: "minimax-video", name: "MiniMax Video-01", company: "MiniMax", flag: "🇨🇳",
+    id: "minimax-video", name: "MiniMax Video-01", company: "MiniMax", flag: "", logoId: "minimax",
     releaseDate: "2025-08", tier: "consumer",
     maxResolution: "1080p", maxDuration: "6s", maxFps: "25fps",
     price: "무료",
@@ -54,7 +55,7 @@ export const videoModels: VideoModel[] = [
     weaknesses: ["해상도 제한", "길이 6초만"],
   },
   {
-    id: "vidu2", name: "Vidu 2.0", company: "生数科技", flag: "🇨🇳",
+    id: "vidu2", name: "Vidu 2.0", company: "生数科技", flag: "",
     releaseDate: "2026-01", tier: "consumer",
     maxResolution: "4K", maxDuration: "32s", maxFps: "30fps",
     price: "무료/유료",
@@ -64,7 +65,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "pika3", name: "Pika 3.0", company: "Pika Labs", flag: "🇺🇸",
+    id: "pika3", name: "Pika 3.0", company: "Pika Labs", flag: "",
     releaseDate: "2025-10", tier: "consumer",
     maxResolution: "1080p", maxDuration: "10s", maxFps: "24fps",
     price: "무료/유료",
@@ -73,7 +74,7 @@ export const videoModels: VideoModel[] = [
     weaknesses: ["사실감 부족", "길이 제한"],
   },
   {
-    id: "stable-video", name: "Stable Video 2", company: "Stability AI", flag: "🇬🇧",
+    id: "stable-video", name: "Stable Video 2", company: "Stability AI", flag: "",
     releaseDate: "2025-09", tier: "open",
     maxResolution: "1080p", maxDuration: "8s", maxFps: "24fps",
     price: "오픈소스",
@@ -82,7 +83,7 @@ export const videoModels: VideoModel[] = [
     weaknesses: ["품질 낮음", "길이 짧음"],
   },
   {
-    id: "cogvideox", name: "CogVideoX-5B", company: "智谱AI", flag: "🇨🇳",
+    id: "cogvideox", name: "CogVideoX-5B", company: "智谱AI", flag: "", logoId: "zhipu",
     releaseDate: "2025-07", tier: "open",
     maxResolution: "720p", maxDuration: "6s", maxFps: "16fps",
     price: "오픈소스",
@@ -91,7 +92,7 @@ export const videoModels: VideoModel[] = [
     weaknesses: ["해상도 낮음", "품질 한계"],
   },
   {
-    id: "google-veo3", name: "Veo 3", company: "Google", flag: "🇺🇸",
+    id: "google-veo3", name: "Veo 3", company: "Google", flag: "", logoId: "google",
     releaseDate: "2026-03", tier: "pro",
     maxResolution: "4K", maxDuration: "60s", maxFps: "60fps",
     price: "Google AI Studio",
@@ -101,7 +102,7 @@ export const videoModels: VideoModel[] = [
     isNew: true,
   },
   {
-    id: "hailuo", name: "Hailuo (MiniMax)", company: "MiniMax", flag: "🇨🇳",
+    id: "hailuo", name: "Hailuo (MiniMax)", company: "MiniMax", flag: "", logoId: "minimax",
     releaseDate: "2025-06", tier: "consumer",
     maxResolution: "1080p", maxDuration: "6s", maxFps: "25fps",
     price: "무료",
@@ -112,21 +113,21 @@ export const videoModels: VideoModel[] = [
 ];
 
 export const TIMELINE_EVENTS = [
-  { date: "2024-01", title: "Sora 공개", company: "OpenAI", flag: "🇺🇸", desc: "OpenAI가 최초로 긴 영상 생성 AI Sora를 공개. 업계에 충격." },
-  { date: "2024-03", title: "Stable Video 1.0", company: "Stability AI", flag: "🇬🇧", desc: "오픈소스 비디오 AI 첫 공개." },
-  { date: "2024-06", title: "Kling 1.0", company: "快手", flag: "🇨🇳", desc: "중국 최초 고성능 비디오 AI." },
-  { date: "2024-07", title: "Runway Gen-3 Alpha", company: "Runway", flag: "🇺🇸", desc: "10초 고해상도 비디오 생성." },
-  { date: "2024-09", title: "Pika 1.5", company: "Pika Labs", flag: "🇺🇸", desc: "리피치·인페인팅 기능 추가." },
-  { date: "2024-11", title: "Vidu 1.0", company: "生数科技", flag: "🇨🇳", desc: "중국 오픈소스 비디오 AI 등장." },
-  { date: "2025-02", title: "Sora 공식 출시", company: "OpenAI", flag: "🇺🇸", desc: "ChatGPT 통합으로 일반 사용자에게 공개." },
-  { date: "2025-05", title: "CogVideoX", company: "智谱AI", flag: "🇨🇳", desc: "Zhipu AI 오픈소스 비디오 모델 공개." },
-  { date: "2025-06", title: "Runway Gen-4", company: "Runway", flag: "🇺🇸", desc: "4K 60fps 지원, 프로 등급." },
-  { date: "2025-06", title: "MiniMax Video", company: "MiniMax", flag: "🇨🇳", desc: "Hailuo AI, SNS 바이럴 대박." },
-  { date: "2025-08", title: "Kling 1.6", company: "快手", flag: "🇨🇳", desc: "영어 지원 강화, 2분 영상 테스트." },
-  { date: "2025-09", title: "Pika 2.0", company: "Pika Labs", flag: "🇺🇸", desc: "개선된 일관성과 애니메이션 품질." },
-  { date: "2025-10", title: "Pika 3.0", company: "Pika Labs", flag: "🇺🇸", desc: "새로운 애니메이션 엔진." },
-  { date: "2025-12", title: "Kling 2.0", company: "快手", flag: "🇨🇳", desc: "4K 60fps, 2분 길이 영상 생성." },
-  { date: "2026-01", title: "Vidu 2.0", company: "生数科技", flag: "🇨🇳", desc: "4K 지원, 오픈소스 커뮤니티 확대." },
-  { date: "2026-02", title: "Sora 3", company: "OpenAI", flag: "🇺🇸", desc: "사실적 물리 시뮬레이션, 60초 4K." },
-  { date: "2026-03", title: "Google Veo 3", company: "Google", flag: "🇺🇸", desc: "YouTube 통합, 오디오 생성 포함.", isNew: true },
+  { date: "2024-01", title: "Sora 공개", company: "OpenAI", flag: "", logoId: "openai", desc: "OpenAI가 최초로 긴 영상 생성 AI Sora를 공개. 업계에 충격." },
+  { date: "2024-03", title: "Stable Video 1.0", company: "Stability AI", flag: "", desc: "오픈소스 비디오 AI 첫 공개." },
+  { date: "2024-06", title: "Kling 1.0", company: "快手", flag: "", desc: "중국 최초 고성능 비디오 AI." },
+  { date: "2024-07", title: "Runway Gen-3 Alpha", company: "Runway", flag: "", desc: "10초 고해상도 비디오 생성." },
+  { date: "2024-09", title: "Pika 1.5", company: "Pika Labs", flag: "", desc: "리피치·인페인팅 기능 추가." },
+  { date: "2024-11", title: "Vidu 1.0", company: "生数科技", flag: "", desc: "중국 오픈소스 비디오 AI 등장." },
+  { date: "2025-02", title: "Sora 공식 출시", company: "OpenAI", flag: "", logoId: "openai", desc: "ChatGPT 통합으로 일반 사용자에게 공개." },
+  { date: "2025-05", title: "CogVideoX", company: "智谱AI", flag: "", logoId: "zhipu", desc: "Zhipu AI 오픈소스 비디오 모델 공개." },
+  { date: "2025-06", title: "Runway Gen-4", company: "Runway", flag: "", desc: "4K 60fps 지원, 프로 등급." },
+  { date: "2025-06", title: "MiniMax Video", company: "MiniMax", flag: "", logoId: "minimax", desc: "Hailuo AI, SNS 바이럴 대박." },
+  { date: "2025-08", title: "Kling 1.6", company: "快手", flag: "", desc: "영어 지원 강화, 2분 영상 테스트." },
+  { date: "2025-09", title: "Pika 2.0", company: "Pika Labs", flag: "", desc: "개선된 일관성과 애니메이션 품질." },
+  { date: "2025-10", title: "Pika 3.0", company: "Pika Labs", flag: "", desc: "새로운 애니메이션 엔진." },
+  { date: "2025-12", title: "Kling 2.0", company: "快手", flag: "", desc: "4K 60fps, 2분 길이 영상 생성." },
+  { date: "2026-01", title: "Vidu 2.0", company: "生数科技", flag: "", desc: "4K 지원, 오픈소스 커뮤니티 확대." },
+  { date: "2026-02", title: "Sora 3", company: "OpenAI", flag: "", logoId: "openai", desc: "사실적 물리 시뮬레이션, 60초 4K." },
+  { date: "2026-03", title: "Google Veo 3", company: "Google", flag: "", logoId: "google", desc: "YouTube 통합, 오디오 생성 포함.", isNew: true },
 ];

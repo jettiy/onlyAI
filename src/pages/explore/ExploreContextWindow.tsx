@@ -1,28 +1,29 @@
 import { useState } from "react";
+import { logoIdToPath } from "../../lib/logoUtils";
 
 interface ContextModel {
   name: string;
   company: string;
-  flag: string;
+  logoId?: string;
   tokens: number;
   color: string;
   isNew?: boolean;
 }
 
 const MODELS: ContextModel[] = [
-  { name: "GPT-5", company: "OpenAI", flag: "🇺🇸", tokens: 128000, color: "#10b981", isNew: true },
-  { name: "GPT-5 Mini", company: "OpenAI", flag: "🇺🇸", tokens: 128000, color: "#34d399" },
-  { name: "Claude Opus 4.6", company: "Anthropic", flag: "🇺🇸", tokens: 200000, color: "#f59e0b" },
-  { name: "Claude Sonnet 4.6", company: "Anthropic", flag: "🇺🇸", tokens: 200000, color: "#fbbf24" },
-  { name: "Gemini 3.1 Pro", company: "Google", flag: "🇺🇸", tokens: 1048576, color: "#3b82f6", isNew: true },
-  { name: "Gemini 2.5 Flash", company: "Google", flag: "🇺🇸", tokens: 1048576, color: "#60a5fa" },
-  { name: "DeepSeek R1", company: "DeepSeek", flag: "🇨🇳", tokens: 128000, color: "#6366f1" },
-  { name: "DeepSeek V3.2", company: "DeepSeek", flag: "🇨🇳", tokens: 128000, color: "#818cf8", isNew: true },
-  { name: "Qwen3 235B", company: "Alibaba", flag: "🇨🇳", tokens: 128000, color: "#f97316" },
-  { name: "MiMo V2 Pro", company: "Xiaomi", flag: "🇨🇳", tokens: 1048576, color: "#ec4899", isNew: true },
-  { name: "GLM-5", company: "Zhipu AI", flag: "🇨🇳", tokens: 200000, color: "#8b5cf6" },
-  { name: "Kimi K2.5", company: "Moonshot", flag: "🇨🇳", tokens: 262144, color: "#14b8a6" },
-  { name: "MiniMax M2.7", company: "MiniMax", flag: "🇨🇳", tokens: 128000, color: "#7c3aed", isNew: true },
+  { name: "GPT-5", company: "OpenAI", logoId: "openai", tokens: 128000, color: "#10b981", isNew: true },
+  { name: "GPT-5 Mini", company: "OpenAI", logoId: "openai", tokens: 128000, color: "#34d399" },
+  { name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", tokens: 200000, color: "#f59e0b" },
+  { name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", tokens: 200000, color: "#fbbf24" },
+  { name: "Gemini 3.1 Pro", company: "Google", logoId: "google", tokens: 1048576, color: "#3b82f6", isNew: true },
+  { name: "Gemini 2.5 Flash", company: "Google", logoId: "google", tokens: 1048576, color: "#60a5fa" },
+  { name: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", tokens: 128000, color: "#6366f1" },
+  { name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", tokens: 128000, color: "#818cf8", isNew: true },
+  { name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", tokens: 128000, color: "#f97316" },
+  { name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", tokens: 1048576, color: "#ec4899", isNew: true },
+  { name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", tokens: 200000, color: "#8b5cf6" },
+  { name: "Kimi K2.5", company: "Moonshot", logoId: "moonshot", tokens: 262144, color: "#14b8a6" },
+  { name: "MiniMax M2.7", company: "MiniMax", logoId: "minimax", tokens: 128000, color: "#7c3aed", isNew: true },
 ];
 
 const REAL_WORLD = [
@@ -46,6 +47,12 @@ function tokensToText(tokens: number): string {
   if (chars >= 1000000) return `약 ${Math.round(chars / 10000).toLocaleString()}만 글자`;
   if (chars >= 1000) return `약 ${Math.round(chars).toLocaleString()} 글자`;
   return `약 ${Math.round(chars)} 글자`;
+}
+
+function CompanyLogo({ logoId, name, size = 4 }: { logoId?: string; name: string; size?: number }) {
+  const src = logoIdToPath(logoId);
+  if (!src) return <span className={`text-${size < 4 ? 'xs' : 'base'}`}>{name[0]}</span>;
+  return <img src={src} alt={name} className="w-4 h-4 rounded-sm object-contain" loading="lazy" />;
 }
 
 export default function ExploreContextWindow() {
@@ -86,7 +93,7 @@ export default function ExploreContextWindow() {
                   : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
             >
-              {m.flag} {m.name} ({formatTokens(m.tokens)})
+              <CompanyLogo logoId={m.logoId} name={m.company} /> {m.name} ({formatTokens(m.tokens)})
             </button>
           ))}
         </div>
@@ -96,8 +103,8 @@ export default function ExploreContextWindow() {
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h2 className="text-base font-black text-gray-900 dark:text-white">
-              {active.flag} {active.name}
+            <h2 className="text-base font-black text-gray-900 dark:text-white flex items-center gap-1.5">
+              <CompanyLogo logoId={active.logoId} name={active.company} size={5} /> {active.name}
             </h2>
             <p className="text-xs text-gray-400">{active.company} · {formatTokens(active.tokens)} 토큰 · {tokensToText(active.tokens)}</p>
           </div>
@@ -174,7 +181,7 @@ export default function ExploreContextWindow() {
               <div key={m.name} className={`flex items-center gap-3 ${isActive ? "bg-blue-50 dark:bg-blue-950/20 -mx-2 px-2 py-1 rounded-lg" : ""}`}>
                 <div className="w-28 shrink-0">
                   <div className="flex items-center gap-1">
-                    <span className="text-xs">{m.flag}</span>
+                    <CompanyLogo logoId={m.logoId} name={m.company} />
                     <span className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate">{m.name}</span>
                     {m.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
                   </div>

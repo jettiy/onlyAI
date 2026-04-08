@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
-import { useNewsRSS, categoryColor } from '../hooks/useNewsRSS';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useNewsRSS } from '../hooks/useNewsRSS';
+import { models } from '../data/models';
 
 const CAT_COLORS: Record<string, { bg: string; text: string; bar: string }> = {
   '모델 출시':       { bg: 'bg-violet-50 dark:bg-violet-950/30',  text: 'text-violet-600 dark:text-violet-400',  bar: 'bg-violet-500' },
@@ -32,6 +34,17 @@ const SECTIONS = [
     color: 'from-blue-500 to-blue-600',
     light: 'bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-900',
     textColor: 'text-blue-700 dark:text-blue-300',
+    wide: true as const,
+  },
+  {
+    icon: '📰',
+    label: '뉴스 브리핑',
+    desc: 'AI 소식·GitHub 트렌딩',
+    to: '/news',
+    color: 'from-gray-600 to-gray-700',
+    light: 'bg-gray-50 dark:bg-gray-900/30 border-gray-200 dark:border-gray-800',
+    textColor: 'text-gray-700 dark:text-gray-300',
+    wide: false as const,
   },
   {
     icon: '📋',
@@ -41,6 +54,17 @@ const SECTIONS = [
     color: 'from-violet-500 to-violet-600',
     light: 'bg-violet-50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-900',
     textColor: 'text-violet-700 dark:text-violet-300',
+    wide: false as const,
+  },
+  {
+    icon: '🎬',
+    label: '비디오 AI',
+    desc: '타임라인·모델 비교',
+    to: '/video',
+    color: 'from-pink-500 to-rose-500',
+    light: 'bg-pink-50 dark:bg-pink-950/20 border-pink-200 dark:border-pink-900',
+    textColor: 'text-pink-700 dark:text-pink-300',
+    wide: false as const,
   },
   {
     icon: '🦞',
@@ -50,6 +74,7 @@ const SECTIONS = [
     color: 'from-orange-500 to-amber-500',
     light: 'bg-orange-50 dark:bg-orange-950/20 border-orange-200 dark:border-orange-900',
     textColor: 'text-orange-700 dark:text-orange-300',
+    wide: false as const,
   },
   {
     icon: '🧠',
@@ -59,29 +84,48 @@ const SECTIONS = [
     color: 'from-emerald-500 to-teal-500',
     light: 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-900',
     textColor: 'text-emerald-700 dark:text-emerald-300',
+    wide: false as const,
   },
 ];
+
+// 랜덤 추천 모델 2개
+const featuredModels = models.filter(m => m.isFeatured);
+function getRandomPair() {
+  const shuffled = [...featuredModels].sort(() => Math.random() - 0.5);
+  return [shuffled[0], shuffled[1]];
+}
 
 export default function Home() {
   const { news: allNews, lastUpdated } = useNewsRSS();
   const TOP_NEWS = allNews.slice(0, 5);
   const hero = TOP_NEWS[0];
   const secondary = TOP_NEWS.slice(1, 3);
+  const navigate = useNavigate();
+
+  const [compareA, setCompareA] = useState('');
+  const [compareB, setCompareB] = useState('');
+  const [randomPair] = useState(() => getRandomPair());
 
   const curDate = lastUpdated
     ? lastUpdated.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })
     : '자동 수집';
 
+  const handleCompare = () => {
+    if (compareA && compareB) {
+      navigate(`/explore/compare?models=${compareA},${compareB}`);
+    }
+  };
+
   return (
     <div className="space-y-8">
 
       {/* ── HERO SECTION ── */}
-      <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 p-7 text-white relative">
+      <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 p-4 md:p-7 text-white relative">
         <div className="absolute inset-0 opacity-[0.04]"
           style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
         <div className="relative">
           <p className="text-[11px] tracking-[0.3em] font-bold text-gray-400 uppercase mb-2">AI Intelligence Guide</p>
-          <h1 className="text-3xl font-black leading-tight mb-2" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="text-2xl md:text-3xl font-black leading-tight mb-2" style={{ letterSpacing: '-0.02em' }}>
             AI, <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">이것만</span> 보면<br />다 알 수 있어요
           </h1>
           <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-md">
@@ -98,19 +142,106 @@ export default function Home() {
               ⚖️ 모델 비교하기
             </Link>
           </div>
+
+          {/* ── 오늘의 핫뉴스 ── */}
+          {hero && (
+            <div className="mt-5 pt-4 border-t border-white/10">
+              <p className="text-[10px] tracking-widest font-bold text-gray-500 uppercase mb-2">📌 오늘의 핫뉴스</p>
+              <a href={hero.url} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-2">
+                <span className={`text-[9px] font-black tracking-widest uppercase px-1.5 py-0.5 rounded shrink-0 ${CAT_COLORS[hero.category]?.bg ?? 'bg-gray-800'} ${CAT_COLORS[hero.category]?.text ?? 'text-gray-400'}`}>
+                  {hero.category}
+                </span>
+                <span className="text-sm font-semibold text-gray-300 group-hover:text-white transition-colors line-clamp-1">
+                  {hero.title}
+                </span>
+                <span className="text-[10px] text-gray-500 shrink-0">→</span>
+              </a>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* ── 4 SECTION CARDS ── */}
-      <div className="grid grid-cols-2 gap-3">
-        {SECTIONS.map(s => (
-          <Link key={s.to} to={s.to}
-            className={`group relative block rounded-xl border p-4 hover:shadow-md transition-all ${s.light}`}>
-            <span className="text-2xl mb-2 block">{s.icon}</span>
-            <p className={`text-sm font-bold mb-0.5 ${s.textColor}`}>{s.label}</p>
-            <p className="text-[11px] text-gray-500 dark:text-gray-400">{s.desc}</p>
+      {/* ── 6 SECTION CARDS ── */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+        {SECTIONS.map((s, i) => {
+          // 첫 번째 카드 (AI 모델 탐색하기)와 뉴스 브리핑은 첫 줄에
+          const isFirstRow = i <= 1;
+          return (
+            <Link
+              key={s.to}
+              to={s.to}
+              className={`group relative block rounded-xl border p-4 hover:shadow-md transition-all ${s.light} ${
+                i === 0 ? 'sm:col-span-2 md:col-span-2' : ''
+              }`}
+            >
+              <span className="text-2xl mb-2 block">{s.icon}</span>
+              <p className={`text-sm font-bold mb-0.5 ${s.textColor}`}>{s.label}</p>
+              <p className="text-[11px] text-gray-500 dark:text-gray-400">{s.desc}</p>
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* ── ⚡ 빠른 모델 비교 위젯 ── */}
+      <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 md:p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-lg">⚡</span>
+          <h3 className="text-sm font-bold text-gray-900 dark:text-white">빠른 모델 비교</h3>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+          <div>
+            <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 mb-1 block">모델 A</label>
+            <select
+              value={compareA}
+              onChange={e => setCompareA(e.target.value)}
+              className="w-full text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">선택하세요</option>
+              {models.map(m => (
+                <option key={m.id} value={m.id}>{m.name} ({m.company})</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 mb-1 block">모델 B</label>
+            <select
+              value={compareB}
+              onChange={e => setCompareB(e.target.value)}
+              className="w-full text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">선택하세요</option>
+              {models.map(m => (
+                <option key={m.id} value={m.id}>{m.name} ({m.company})</option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <div className="flex flex-wrap items-center gap-3">
+          <button
+            onClick={handleCompare}
+            disabled={!compareA || !compareB}
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-blue-500 to-violet-500 text-white rounded-xl text-sm font-bold hover:from-blue-600 hover:to-violet-600 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            ⚖️ 비교하기
+          </button>
+          <Link to="/explore/compare" className="text-[11px] text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+            전체 비교 페이지 →
           </Link>
-        ))}
+        </div>
+        {randomPair[0] && randomPair[1] && (
+          <div className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
+            <p className="text-[10px] font-semibold text-gray-400 dark:text-gray-500 mb-2">💡 추천 비교</p>
+            <button
+              onClick={() => { setCompareA(randomPair[0].id); setCompareB(randomPair[1].id); }}
+              className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              <span className="font-semibold">{randomPair[0].name}</span>
+              <span className="text-gray-300 dark:text-gray-600">vs</span>
+              <span className="font-semibold">{randomPair[1].name}</span>
+              <span className="text-[10px]">클릭하여 선택 →</span>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* ── DIVIDER ── */}
@@ -139,7 +270,7 @@ export default function Home() {
         const cat = CAT_COLORS[hero.category] ?? CAT_COLORS['연구·논문'];
         return (
           <a href={hero.url} target="_blank" rel="noopener noreferrer" className="group block">
-            <div className={`relative overflow-hidden rounded-2xl ${cat.bg} border border-gray-200 dark:border-gray-800 p-6 hover:shadow-xl transition-all duration-300`}>
+            <div className={`relative overflow-hidden rounded-2xl ${cat.bg} border border-gray-200 dark:border-gray-800 p-4 md:p-6 hover:shadow-xl transition-all duration-300`}>
               <div className={`absolute left-0 top-0 bottom-0 w-1 ${cat.bar} rounded-l-2xl`} />
               <div className="pl-3">
                 <div className="flex items-center gap-2 mb-3 flex-wrap">
@@ -148,7 +279,7 @@ export default function Home() {
                   </span>
                   <span className="text-[10px] text-gray-400 dark:text-gray-500 font-mono">{timeAgo(hero.date)} · {hero.source}</span>
                 </div>
-                <h2 className="text-xl font-black text-gray-900 dark:text-white leading-tight mb-2 group-hover:text-current transition-colors" style={{ letterSpacing: '-0.02em' }}>
+                <h2 className="text-lg md:text-xl font-black text-gray-900 dark:text-white leading-tight mb-2 group-hover:text-current transition-colors" style={{ letterSpacing: '-0.02em' }}>
                   {hero.title}
                 </h2>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 line-clamp-2">{hero.summary}</p>

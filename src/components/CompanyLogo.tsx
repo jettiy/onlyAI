@@ -1,18 +1,18 @@
-// 공용 회사 로고 컴포넌트
+// 공용 회사 로고 컴포넌트 — artificialanalysis.ai 스타일 모노톤 SVG
 const LOGO_MAP: Record<string, string> = {
-  openai: "openai.png",
-  anthropic: "anthropic_new.png",
-  google: "google.png",
-  meta: "meta_new.png",
-  xai: "xai.png",
-  deepseek: "deepseek.png",
-  minimax: "minimax.png",
-  alibaba: "alibaba.png",
+  openai: "aa_openai.svg",
+  anthropic: "aa_anthropic.svg",
+  google: "aa_google.svg",
+  meta: "aa_meta.svg",
+  xai: "aa_xai.svg",
+  deepseek: "aa_deepseek.svg",
+  minimax: "aa_minimax.svg",
+  alibaba: "aa_alibaba.svg",
   moonshot: "moonshot.png",
-  zhipu: "zhipu_new.png",
-  xiaomi: "xiaomi.png",
+  zhipu: "aa_zhipu.svg",
+  xiaomi: "aa_xiaomi.svg",
   mistral: "mistral_new.png",
-  cohere: "cohere.png",
+  cohere: "aa_cohere.svg",
 };
 
 const COMPANY_LOGO: Record<string, string> = {
@@ -40,7 +40,7 @@ export function CompanyLogo({ company, size = 18, className = "" }: { company: s
     <img
       src={`/logos/${src}`}
       alt={company}
-      className={`rounded-sm object-contain inline-block ${className}`}
+      className={`object-contain inline-block ${className}`}
       style={{ width: size, height: size }}
       loading="lazy"
     />

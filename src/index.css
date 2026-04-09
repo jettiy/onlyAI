@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 @tailwind base;
@@ -7,7 +6,7 @@
 
 @layer base {
   body {
-    font-family: "Noto Sans KR", "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   .font-mono, code, pre, .price-num {
@@ -28,15 +27,21 @@
     --cat-policy: #DC2626;
     --cat-tool: #0284C7;
     --cat-multi: #DB2777;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    color-scheme: dark;
   }
 }
 
 @layer utilities {
-  .safe-area-bottom {
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
-
-/* 다크모드 스크롤바 */
-.dark ::-webkit-scrollbar-track { background: #1f2937; }
-.dark ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }

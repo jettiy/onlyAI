@@ -144,7 +144,7 @@ export default function Home() {
             AI 입문자부터 실무자까지, 한 곳에서 시작하세요.
           </p>
           <div className="flex flex-wrap gap-2">
-            <Link to="/explore/guide"
+            <Link to="/recommend"
               className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-gray-900 rounded-xl text-sm font-bold hover:bg-gray-100 transition-colors">
               🎯 AI 추천받기
             </Link>

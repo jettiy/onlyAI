@@ -17,9 +17,9 @@ interface PriceRow {
 
 const FALLBACK_PRICES: PriceRow[] = [
   // ── OpenAI ──
-  { model: 'GPT-5.4', provider: 'OpenAI', input: 2.50, output: 15.0, cacheRead: 0.25, cacheWrite: 2.50, context: '1M', note: '최고 성능', isNew: true },
-  { model: 'GPT-5.4 mini', provider: 'OpenAI', input: 0.75, output: 4.50, cacheRead: 0.075, cacheWrite: 0.75, context: '128K', note: '가성비', isNew: true },
-  { model: 'GPT-5.4 nano', provider: 'OpenAI', input: 0.20, output: 1.25, cacheRead: 0.02, cacheWrite: 0.20, context: '128K', note: '최저가', isNew: true },
+  { model: 'GPT-5.4', provider: 'OpenAI', input: 2.50, output: 15.0, cacheRead: 0.25, cacheWrite: 2.50, context: '270K', note: '최고 성능', isNew: true },
+  { model: 'GPT-5.4 mini', provider: 'OpenAI', input: 0.75, output: 4.50, cacheRead: 0.075, cacheWrite: 0.75, context: '270K', note: '가성비', isNew: true },
+  { model: 'GPT-5.4 nano', provider: 'OpenAI', input: 0.20, output: 1.25, cacheRead: 0.02, cacheWrite: 0.20, context: '270K', note: '최저가', isNew: true },
   { model: 'GPT-5.3 Instant', provider: 'OpenAI', input: 1.25, output: 5.0, cacheRead: 0.125, cacheWrite: 1.25, context: '200K', note: '초고속', isNew: true },
   { model: 'GPT-5.2', provider: 'OpenAI', input: 1.75, output: 14.0, cacheRead: 0.175, cacheWrite: 1.75, context: '200K', note: '검증됨' },
   { model: 'GPT-5', provider: 'OpenAI', input: 1.25, output: 10.0, cacheRead: 0.125, cacheWrite: 1.25, context: '400K', note: '균형' },
@@ -32,14 +32,14 @@ const FALLBACK_PRICES: PriceRow[] = [
   { model: 'Claude Opus 4.6', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '1M', note: '최고 성능' },
   { model: 'Claude Opus 4.5', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '200K', note: '검증됨' },
   { model: 'Claude Sonnet 4.6', provider: 'Anthropic', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.75, context: '1M', note: '균형', isNew: true },
-  { model: 'Claude Haiku 4.5', provider: 'Anthropic', input: 1.0, output: 5.0, cacheRead: 0.08, cacheWrite: 1.25, context: '200K', note: '빠름' },
+  { model: 'Claude Haiku 4.5', provider: 'Anthropic', input: 1.0, output: 5.0, cacheRead: 0.10, cacheWrite: 1.25, context: '200K', note: '빠름' },
   // ── Google ──
   { model: 'Gemini 3.1 Pro', provider: 'Google', input: 2.0, output: 12.0, cacheRead: 0.625, cacheWrite: 2.50, context: '1M', note: '멀티모달', isNew: true },
   { model: 'Gemini 2.5 Pro', provider: 'Google', input: 1.25, output: 10.0, cacheRead: 0.3125, cacheWrite: 1.25, context: '1M', note: '가성비' },
   { model: 'Gemini 2.5 Flash', provider: 'Google', input: 0.30, output: 2.5, cacheRead: 0.075, cacheWrite: 0.30, context: '1M', note: '저가' },
   { model: 'Gemini 2.5 Flash-Lite', provider: 'Google', input: 0.10, output: 0.40, cacheRead: 0.025, cacheWrite: 0.10, context: '1M', note: '최저가' },
   // ── xAI ──
-  { model: 'Grok 4.20', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '2M', note: '실시간', isNew: true },
+  { model: 'Grok 4.20', provider: 'xAI', input: 2.0, output: 6.0, cacheRead: 0.20, cacheWrite: 2.00, context: '2M', note: '실시간', isNew: true },
   { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '131K', note: '검증됨' },
   // ── Meta ──
   { model: 'Llama 4 Maverick', provider: 'Meta', input: 0.27, output: 0.85, cacheRead: 0.027, cacheWrite: 0.27, context: '1M', note: '오픈소스' },
@@ -47,7 +47,7 @@ const FALLBACK_PRICES: PriceRow[] = [
   // ── 중국 ──
   { model: 'MiniMax M2.7', provider: 'MiniMax', input: 0.30, output: 1.20, cacheRead: 0.03, cacheWrite: 0.30, context: '204K', note: '에이전트', isNew: true },
   { model: 'MiniMax M2.5', provider: 'MiniMax', input: 0.27, output: 0.95, cacheRead: 0.027, cacheWrite: 0.27, context: '197K', note: '검증됨' },
-  { model: 'DeepSeek V3.2', provider: 'DeepSeek', input: 0.28, output: 0.42, cacheRead: 0.028, context: '128K', note: '가성비', isNew: true },
+  { model: 'DeepSeek V3.2', provider: 'DeepSeek', input: 0.28, output: 0.42, cacheRead: 0.028, context: '128K', note: '가성비' },
   { model: 'DeepSeek R1', provider: 'DeepSeek', input: 0.55, output: 2.19, cacheRead: 0.14, context: '128K', note: '추론' },
   { model: 'Qwen3 235B', provider: 'Alibaba', input: 0.40, output: 1.20, cacheRead: 0.04, cacheWrite: 0.40, context: '128K', note: '한·중 특화' },
   { model: 'Qwen3 32B', provider: 'Alibaba', input: 0.10, output: 0.40, cacheRead: 0.01, cacheWrite: 0.10, context: '128K', note: '오픈소스' },

@@ -1,17 +1,17 @@
 // 공용 회사 로고 컴포넌트
 const LOGO_MAP: Record<string, string> = {
   openai: "openai.png",
-  anthropic: "anthropic.jpg",
+  anthropic: "anthropic_new.png",
   google: "google.png",
-  meta: "meta.jpg",
+  meta: "meta_new.png",
   xai: "xai.png",
   deepseek: "deepseek.png",
   minimax: "minimax.png",
   alibaba: "alibaba.png",
   moonshot: "moonshot.png",
-  zhipu: "zhipu.png",
+  zhipu: "zhipu_new.png",
   xiaomi: "xiaomi.png",
-  mistral: "mistral.jpg",
+  mistral: "mistral_new.png",
   cohere: "cohere.png",
 };
 

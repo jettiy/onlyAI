@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
 import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
+import { CompanyLogo, COMPANY_LOGO } from '../components/CompanyLogo';
 
 const CAT_COLORS: Record<string, { bg: string; text: string; bar: string }> = {
   '모델 출시':       { bg: 'bg-violet-50 dark:bg-violet-950/30',  text: 'text-violet-600 dark:text-violet-400',  bar: 'bg-violet-500' },
@@ -89,6 +90,12 @@ const SECTIONS = [
   },
 ];
 
+const TOP_MODELS = [
+  { name: 'GPT-5.4', companyId: 'openai', tagline: '가장 강력한 AI, 코딩·에이전트에 최적화' },
+  { name: 'Claude Sonnet 4.6', companyId: 'anthropic', tagline: '균형잡힌 성능, 1M 컨텍스트' },
+  { name: 'Gemini 2.5 Flash', companyId: 'google', tagline: '가성비 최고, 빠른 응답 속도' },
+];
+
 // 랜덤 추천 모델 2개
 const featuredModels = models.filter(m => m.isFeatured);
 function getRandomPair() {
@@ -146,6 +153,39 @@ export default function Home() {
 
           {/* ── 미니 추천 퀴즈 위젯 ── */}
           <MiniRecommend navigate={navigate} />
+
+          <div className="mt-4">
+            <div className="flex items-center justify-between mb-2">
+              <p className="text-xs font-bold tracking-widest text-gray-400 uppercase">인기 AI 모델 TOP 3</p>
+              <Link to="/explore/compare" className="text-[11px] text-gray-400 hover:text-gray-200 transition-colors">
+                자세히 보기 →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {TOP_MODELS.map(model => {
+                const displayName = Object.entries(COMPANY_LOGO).find(([, value]) => value === model.companyId)?.[0] ?? model.companyId;
+                return (
+                  <div
+                    key={model.name}
+                    className="rounded-xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] transition-colors p-3"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center">
+                        <CompanyLogo company={displayName} size={24} />
+                      </span>
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-white truncate">{model.name}</p>
+                        <p className="text-[11px] text-gray-400 truncate">{model.tagline}</p>
+                      </div>
+                    </div>
+                    <Link to="/explore/compare" className="mt-2 inline-flex text-[11px] text-blue-300 hover:text-blue-200">
+                      자세히 보기 →
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
           <div className="flex flex-wrap gap-2 mt-4">
             <Link to="/recommend"

@@ -3,6 +3,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { recommend, type RecommendResult } from '../lib/recommendEngine';
 import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
 import { CompanyLogo, COMPANY_LOGO } from '../components/CompanyLogo';
+import { ScoreTooltip } from '../components/ScoreTooltip';
 import { models } from '../data/models';
 
 const MEDALS = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣'];
@@ -51,13 +52,13 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
           {/* 점수 상세 */}
           <div className="mt-3 grid grid-cols-4 gap-2">
             {[
-              { label: '용도', value: result.detailScores.useCase, max: 40 },
-              { label: '가격', value: result.detailScores.budget, max: 30 },
-              { label: '한국어', value: result.detailScores.korean, max: 15 },
-              { label: '개인정보', value: result.detailScores.privacy, max: 15 },
+              { label: '용도', value: result.detailScores.useCase, max: 40, tip: 'useCase' as const },
+              { label: '가격', value: result.detailScores.budget, max: 30, tip: 'budget' as const },
+              { label: '한국어', value: result.detailScores.korean, max: 15, tip: 'korean' as const },
+              { label: '개인정보', value: result.detailScores.privacy, max: 15, tip: 'privacy' as const },
             ].map(s => (
               <div key={s.label} className="text-center">
-                <p className="text-[10px] text-gray-400 mb-1">{s.label}</p>
+                <p className="text-[10px] text-gray-400 mb-1">{s.label} <ScoreTooltip type={s.tip} /></p>
                 <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                   <div className="h-full bg-blue-500 rounded-full transition-all" style={{ width: `${(s.value / s.max) * 100}%` }} />
                 </div>
@@ -100,6 +101,8 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
 
 export default function RecommendPage() {
   const [params] = useSearchParams();
+  const hasUseCaseParam = params.has('useCases') || params.has('useCase');
+  const hasBudgetParam = params.has('budget');
 
   const results = useMemo(() => {
     const useCases = (params.get('useCases') || params.get('useCase') || '').split(',').filter(Boolean) as UseCase[];
@@ -107,6 +110,19 @@ export default function RecommendPage() {
     const privacy = (params.get('privacy') || 'medium') as 'high' | 'medium' | 'low';
     return recommend({ useCases, budget, privacy });
   }, [params]);
+
+  if (results.length === 0 && !hasUseCaseParam && !hasBudgetParam) {
+    return (
+      <div className="max-w-3xl mx-auto">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 text-center">
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">먼저 AI 추천 퀴즈를 진행해주세요!</p>
+          <Link to="/" className="inline-flex text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline">
+            홈으로 이동
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   const useCases = (params.get('useCases') || '').split(',').filter(Boolean);
   const budget = params.get('budget') || 'free';

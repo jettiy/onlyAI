@@ -4,7 +4,7 @@ import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTie
 
 const STEPS = ['용도', '예산', '환경', '개인정보'] as const;
 
-const USE_CASES: { key: UseCase; icon: string; label: string }[] = [
+const USE_CASES: { key: UseCase | 'all'; icon: string; label: string }[] = [
   { key: 'writing', icon: '✍️', label: '글쓰기·번역' },
   { key: 'coding', icon: '💻', label: '코딩·개발' },
   { key: 'image', icon: '🖼️', label: '이미지 생성' },
@@ -34,7 +34,7 @@ export default function RecommendQuiz() {
   const [budget, setBudget] = useState<BudgetTier>('free');
   const [privacy, setPrivacy] = useState<'high' | 'medium' | 'low'>('medium');
 
-  const toggleUseCase = (uc: string) => {
+  const toggleUseCase = (uc: UseCase | 'all') => {
     if (uc === 'all') {
       setSelectedUseCases([]);
       return;
@@ -85,7 +85,7 @@ export default function RecommendQuiz() {
           <p className="text-sm text-gray-500 dark:text-gray-400">복수 선택 가능합니다.</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {USE_CASES.map(uc => (
-              <button key={uc.key} onClick={() => toggleUseCase(uc.key)}
+              <button key={uc.key} onClick={() => toggleUseCase(uc.key as UseCase | 'all')}
                 className={`p-4 rounded-xl border-2 text-center transition-all ${
                   (uc.key === 'all' && selectedUseCases.length === 0) || selectedUseCases.includes(uc.key as UseCase)
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-sm'

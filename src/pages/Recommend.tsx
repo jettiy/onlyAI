@@ -15,7 +15,7 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
       <div className="flex items-start gap-4">
         <span className="text-3xl">{MEDALS[rank]}</span>
         <div className="w-10 h-10 rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 shrink-0">
-          {result.logoId && <CompanyLogo companyId={result.logoId} size={40} />}
+          {result.logoId && <CompanyLogo company={result.companyId} size={40} />}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">

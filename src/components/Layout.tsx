@@ -62,7 +62,7 @@ const NAV = [
     ],
   },
   {
-    label: '🖼️ 이미지 AI', path: '/image', icon: '🖼️', short: '이미지',
+    label: '이미지 AI', path: '/image', icon: '🖼️', short: '이미지',
     mobileHide: true, mobileGroup: 'explore',
     children: [
       { path: '/image', label: '비교', icon: '🖼️' },

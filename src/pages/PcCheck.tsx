@@ -12,6 +12,7 @@ export default function PcCheck() {
   const [customVram, setCustomVram] = useState('');
   const [ram, setRam] = useState('16');
   const [useTag, setUseTag] = useState('');
+  const popularGpus = ['RTX 4060', 'RTX 4070', 'RTX 4090', 'RX 7900 XTX', 'M3 Max'];
 
   // GPU 자동 검색 또는 수동 VRAM
   const detectedGpu = useMemo(() => {
@@ -52,6 +53,24 @@ export default function PcCheck() {
         {/* GPU 검색 */}
         <div>
           <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block">🎮 그래픽카드 (GPU)</label>
+          <div className="mb-2">
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">Popular GPU quick select</p>
+            <div className="flex flex-wrap gap-2">
+              {popularGpus.map(gpu => (
+                <button
+                  key={gpu}
+                  type="button"
+                  onClick={() => {
+                    setGpuQuery(gpu);
+                    setCustomVram('');
+                  }}
+                  className="px-3 py-1.5 rounded-full text-xs font-semibold transition-all bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                >
+                  {gpu}
+                </button>
+              ))}
+            </div>
+          </div>
           <input
             type="text"
             value={gpuQuery}

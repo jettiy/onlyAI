@@ -33,6 +33,7 @@ const VideoTimeline = lazy(() => import("./pages/video/VideoTimeline").then(m =>
 const VideoCompare = lazy(() => import("./pages/video/VideoCompare").then(m => ({ default: m.default })));
 const ImageCompare = lazy(() => import("./pages/image/ImageCompare").then(m => ({ default: m.default })));
 const Recommend = lazy(() => import("./pages/Recommend").then(m => ({ default: m.default })));
+const PcCheck = lazy(() => import("./pages/PcCheck").then(m => ({ default: m.default })));
 
 
 function PageLoader() {
@@ -68,6 +69,7 @@ export default function App() {
             <Route path="/video/compare" element={<VideoCompare />} />
             <Route path="/image" element={<ImageCompare />} />
             <Route path="/recommend" element={<Recommend />} />
+            <Route path="/pc-check" element={<PcCheck />} />
             <Route path="/prompts" element={<PromptsHub />} />
             <Route path="/prompts/intro" element={<PromptsIntro />} />
             <Route path="/prompts/how" element={<PromptsHow />} />

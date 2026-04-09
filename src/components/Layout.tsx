@@ -69,6 +69,9 @@ const NAV = [
     ],
   },
   {
+    label: '내 PC 추천', path: '/pc-check', icon: '🖥️', short: 'PC 추천', children: [], mobileHide: false,
+  },
+  {
     label: '뉴스 브리핑', path: '/news', icon: '📰', short: '뉴스', children: [], mobileHide: false,
   },
   {

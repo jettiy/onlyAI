@@ -1,21 +1,31 @@
 {
   "name": "AI이것만",
   "short_name": "AI이것만",
-  "description": "AI 모델 가이드·뉴스·가격 비교 — GPT-5부터 DeepSeek까지 한국어로",
+  "description": "AI 모델 비교, 가격, 벤치마크, 뉴스를 한곳에서",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#111827",
+  "background_color": "#ffffff",
   "theme_color": "#3B82F6",
-  "lang": "ko",
   "icons": [
     {
-      "src": "/vite.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  ],
-  "categories": ["news", "education", "productivity"],
-  "screenshots": [],
-  "orientation": "portrait"
+  ]
 }

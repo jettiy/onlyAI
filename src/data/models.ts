@@ -23,6 +23,7 @@ export interface AIModel {
   useCases: string[];
   openRouterSlug?: string;
   sourceUrl: string;
+  url?: string;
   updatedAt: string;
 }
 
@@ -139,6 +140,7 @@ export const models: AIModel[] = [
     koreanSupport: 'A',
     useCases: ['에이전트', '전문가 분석', '복잡한 코딩', '컴퓨터 자동화'],
     sourceUrl: 'https://openai.com/api/pricing/',
+    url: 'https://chatgpt.com',
     updatedAt: '2026-04-08',
   },
   {
@@ -284,6 +286,7 @@ export const models: AIModel[] = [
     useCases: ['법률·연구', '복잡한 코딩', '에이전트 작업', '기업 분석'],
     openRouterSlug: 'anthropic/claude-opus-4-6',
     sourceUrl: 'https://www.anthropic.com/pricing',
+    url: 'https://claude.ai',
     updatedAt: '2026-04-08',
   },
   {
@@ -299,6 +302,7 @@ export const models: AIModel[] = [
     useCases: ['코딩 보조', '기업 챗봇', '데이터 분석', '문서 작성'],
     openRouterSlug: 'anthropic/claude-sonnet-4-6',
     sourceUrl: 'https://www.anthropic.com/pricing',
+    url: 'https://claude.ai',
     updatedAt: '2026-04-08',
   },
   {
@@ -345,6 +349,7 @@ export const models: AIModel[] = [
     koreanSupport: 'A',
     useCases: ['에이전트 코딩', '대용량 문서', '멀티모달 앱'],
     sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
+    url: 'https://gemini.google.com',
     updatedAt: '2026-04-08',
   },
   {
@@ -453,6 +458,7 @@ export const models: AIModel[] = [
     koreanSupport: 'B',
     useCases: ['실시간 뉴스', 'SNS 분석', '트렌드 파악'],
     sourceUrl: 'https://docs.x.ai/developers/models',
+    url: 'https://x.ai',
     updatedAt: '2026-04-08',
   },
   {
@@ -487,6 +493,7 @@ export const models: AIModel[] = [
     useCases: ['코딩 에이전트', '소프트웨어 개발', '자동화'],
     openRouterSlug: 'minimax/minimax-m2',
     sourceUrl: 'https://platform.minimax.io/docs/pricing/overview',
+    url: 'https://hailuoai.com',
     updatedAt: '2026-03-19',
   },
   {
@@ -519,6 +526,7 @@ export const models: AIModel[] = [
     useCases: ['개발자 도구', '수학·과학', '대량 API 호출'],
     openRouterSlug: 'deepseek/deepseek-v3.2',
     sourceUrl: 'https://api-docs.deepseek.com/quick_start/pricing',
+    url: 'https://chat.deepseek.com',
     updatedAt: '2026-04-08',
   },
   {
@@ -633,6 +641,7 @@ export const models: AIModel[] = [
     koreanSupport: 'B',
     useCases: ['코딩', '기업 챗봇', '에이전트'],
     sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
+    url: 'https://chatglm.cn',
     updatedAt: '2026-03-19',
   },
   {

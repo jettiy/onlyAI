@@ -3,15 +3,23 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { recommend, type RecommendResult } from '../lib/recommendEngine';
 import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
 import { CompanyLogo, COMPANY_LOGO } from '../components/CompanyLogo';
+import { models } from '../data/models';
 
 const MEDALS = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣'];
 
+// 모델 ID → 공식 사이트 URL 맵
+const modelUrlMap = new Map<string, string>();
+for (const m of models) {
+  if (m.url) modelUrlMap.set(m.id, m.url);
+}
+
 function ResultCard({ result, rank }: { result: RecommendResult; rank: number }) {
   const isTop3 = rank < 3;
+  const officialUrl = modelUrlMap.get(result.id);
   return (
     <div className={`bg-white dark:bg-gray-900 rounded-2xl border ${
       rank === 0 ? 'border-blue-400 dark:border-blue-600 ring-2 ring-blue-200 dark:ring-blue-900 shadow-lg' : 'border-gray-200 dark:border-gray-800'
-    } p-6 ${isTop3 ? '' : 'opacity-80'}`}>
+    } p-6 ${isTop3 ? '' : 'opacity-80'}`} style={{"position": "relative"}}>
       <div className="flex items-start gap-4">
         <span className="text-3xl">{MEDALS[rank]}</span>
           {(() => {
@@ -32,6 +40,12 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
               {result.monthlyEst}
             </span>
           </div>
+
+          {/* 추천 이유 */}
+          {result.reason && (
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{result.reason}</p>
+          )}
+
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{result.tagline}</p>
 
           {/* 점수 상세 */}
@@ -63,10 +77,20 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
             </div>
           )}
 
-          {/* 한국어 + 개인정보 */}
+          {/* 한국어 + 개인정보 + 바로 써보기 */}
           <div className="flex items-center gap-3 mt-2 text-xs text-gray-500 dark:text-gray-400">
             <span>🇰🇷 한국어 {result.korean}/10</span>
             <span>🔐 {result.privacy}</span>
+            {officialUrl && (
+              <a
+                href={officialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-auto px-3 py-1 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-medium text-xs transition-colors"
+              >
+                바로 써보기 →
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -99,6 +123,7 @@ export default function RecommendPage() {
           <span className="text-lg">🎯</span>
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">AI 추천 결과</h1>
         </div>
+        <p className="text-xs text-gray-400 mb-3">데이터 기준일: 2026년 4월</p>
         <div className="flex flex-wrap gap-2">
           {useCases.length > 0 ? useCases.map(uc => (
             <span key={uc} className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-blue-700 dark:text-blue-400 rounded-lg font-medium shadow-sm">

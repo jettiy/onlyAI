@@ -92,6 +92,12 @@ const NAV = [
     ],
   },
   {
+    label: 'OpenClaw 설치방법', path: '/openclaw/install', icon: '⚙️', short: '설치', mobileHide: false,
+    children: [
+      { path: '/openclaw/install', label: '설치 가이드', icon: '🎯' },
+    ],
+  },
+  {
     label: 'AI 정보 학습하기', path: '/learn', icon: '🧠', short: '학습', mobileHide: false,
     children: [
       { path: '/learn/glossary', label: '용어사전', icon: '📖' },

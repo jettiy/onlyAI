@@ -1,32 +1,35 @@
-// 공용 로고 유틸리티 — 국기 대신 기업 로고 사용
+// 공용 로고 유틸리티 — artificialanalysis.ai 스타일 모노톤 SVG
 const LOGO_MAP: Record<string, string> = {
-  openai: "openai.png",
-  anthropic: "anthropic.jpg",
-  google: "google.png",
-  meta: "meta.jpg",
-  xai: "xai.png",
-  deepseek: "deepseek.png",
-  minimax: "minimax.png",
-  alibaba: "alibaba.png",
+  // LLM providers
+  openai: "aa_openai.svg",
+  anthropic: "aa_anthropic.svg",
+  google: "aa_google.svg",
+  meta: "aa_meta.svg",
+  xai: "aa_xai.svg",
+  deepseek: "aa_deepseek.svg",
+  minimax: "aa_minimax.svg",
+  alibaba: "aa_alibaba.svg",
   moonshot: "moonshot.png",
-  zhipu: "zhipu.png",
-  xiaomi: "xiaomi.png",
-  mistral: "mistral.jpg",
-  cohere: "cohere.png",
-  klingai: "klingai.png",
-  bytedance: "bytedance.png",
-  pixverse: "pixverse.png",
-  vidu: "vidu.png",
-  runway: "runway.png",
-  luma: "luma.png",
+  zhipu: "aa_zhipu.svg",
+  xiaomi: "aa_xiaomi.svg",
+  mistral: "mistral_new.png",
+  cohere: "aa_cohere.svg",
+  // Video/Image providers
+  klingai: "aa_klingai.svg",
+  bytedance: "aa_bytedance.svg",
+  pixverse: "aa_pixverse.svg",
+  vidu: "aa_vidu.svg",
+  runway: "aa_runway.svg",
+  luma: "aa_luma.svg",
   pika: "pika.png",
-  skywork: "skywork.png",
+  skywork: "aa_skywork.svg",
   ltx: "ltx.png",
   stability: "stability.png",
-  bfl: "bfl.png",
-  ideogram: "ideogram.png",
+  bfl: "aa_bfl.svg",
+  ideogram: "aa_ideogram.svg",
   recraft: "recraft.png",
-  fal: "fal.png",
+  fal: "aa_fal.svg",
+  stepfun: "aa_stepfun.svg",
 };
 
 // company name → logoId
@@ -44,12 +47,10 @@ const NAME_TO_LOGO: Record<string, string> = {
   "Xiaomi": "xiaomi",
   "Mistral": "mistral",
   "Cohere": "cohere",
-  "快手(Kuaishou)": "klingai",
-  "生数科技": "",
-  "智谱AI": "",
   "ByteDance": "bytedance",
   "ByteDance(字节跳动)": "bytedance",
   "KlingAI": "klingai",
+  "快手(Kuaishou)": "klingai",
   "PixVerse": "pixverse",
   "Vidu": "vidu",
   "Runway": "runway",
@@ -63,38 +64,10 @@ const NAME_TO_LOGO: Record<string, string> = {
   "Ideogram": "ideogram",
   "Recraft": "recraft",
   "fal": "fal",
+  "StepFun": "stepfun",
 };
 
-// companyId → logoId (models.ts companies 배열의 id 기준)
-export const COMPANY_LOGO: Record<string, string> = {
-  openai: "openai.png",
-  anthropic: "anthropic.jpg",
-  google: "google.png",
-  meta: "meta.jpg",
-  xai: "xai.png",
-  deepseek: "deepseek.png",
-  minimax: "minimax.png",
-  alibaba: "alibaba.png",
-  moonshot: "moonshot.png",
-  zhipu: "zhipu.png",
-  xiaomi: "xiaomi.png",
-  mistral: "mistral.jpg",
-  cohere: "cohere.png",
-  klingai: "klingai.png",
-  bytedance: "bytedance.png",
-  pixverse: "pixverse.png",
-  vidu: "vidu.png",
-  runway: "runway.png",
-  luma: "luma.png",
-  pika: "pika.png",
-  skywork: "skywork.png",
-  ltx: "ltx.png",
-  stability: "stability.png",
-  bfl: "bfl.png",
-  ideogram: "ideogram.png",
-  recraft: "recraft.png",
-  fal: "fal.png",
-};
+export const COMPANY_LOGO: Record<string, string> = { ...LOGO_MAP };
 
 export function getLogoUrl(companyId?: string, companyName?: string): string | null {
   if (companyId && COMPANY_LOGO[companyId]) return `/logos/${COMPANY_LOGO[companyId]}`;
@@ -105,7 +78,6 @@ export function getLogoUrl(companyId?: string, companyName?: string): string | n
   return null;
 }
 
-// company logoId (models.ts의 logoId 필드용) → path
 export function logoIdToPath(logoId?: string): string | null {
   if (!logoId || !LOGO_MAP[logoId]) return null;
   return `/logos/${LOGO_MAP[logoId]}`;

@@ -25,6 +25,7 @@ const OpenClawIntroPage = lazy(() => import("./pages/openclaw/OpenClawIntroPage"
 const OpenClawGuide = lazy(() => import("./pages/openclaw/OpenClawGuide").then(m => ({ default: m.default })));
 const SkillTree = lazy(() => import("./pages/openclaw/SkillTree").then(m => ({ default: m.default })));
 const DevNews = lazy(() => import("./pages/openclaw/DevNews").then(m => ({ default: m.default })));
+const OpenClawInstall = lazy(() => import("./pages/openclaw/OpenClawInstall").then(m => ({ default: m.default })));
 const LearnHub = lazy(() => import("./pages/learn/LearnHub").then(m => ({ default: m.default })));
 const LearnGlossary = lazy(() => import("./pages/learn/LearnGlossary").then(m => ({ default: m.default })));
 const NewsBriefing = lazy(() => import("./pages/NewsBriefing").then(m => ({ default: m.default })));
@@ -79,6 +80,7 @@ export default function App() {
             <Route path="/openclaw/guide" element={<OpenClawGuide />} />
             <Route path="/openclaw/skills" element={<SkillTree />} />
             <Route path="/openclaw/devnews" element={<DevNews />} />
+            <Route path="/openclaw/install" element={<OpenClawInstall />} />
             <Route path="/learn" element={<LearnHub />} />
             <Route path="/learn/glossary" element={<LearnGlossary />} />
             <Route path="/learn/simulator" element={<LearnSimulator />} />

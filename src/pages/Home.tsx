@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
+import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
 
 const CAT_COLORS: Record<string, { bg: string; text: string; bar: string }> = {
   '모델 출시':       { bg: 'bg-violet-50 dark:bg-violet-950/30',  text: 'text-violet-600 dark:text-violet-400',  bar: 'bg-violet-500' },
@@ -136,17 +137,20 @@ export default function Home() {
           style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
         <div className="relative">
           <p className="text-[11px] tracking-[0.3em] font-bold text-gray-400 uppercase mb-2">AI Intelligence Guide</p>
-          <h1 className="text-2xl md:text-3xl font-black leading-tight mb-2" style={{ letterSpacing: '-0.02em' }}>
-            AI, <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">이것만</span> 보면<br />다 알 수 있어요
+          <h1 className="text-2xl md:text-3xl font-black leading-tight mb-1" style={{ letterSpacing: '-0.02em' }}>
+            나에게 <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">맞는 AI</span>를 찾아보세요
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-md">
-            AI 모델 비교·프롬프트 작성법·OpenClaw 자동화까지.<br />
-            AI 입문자부터 실무자까지, 한 곳에서 시작하세요.
+          <p className="text-gray-400 text-sm leading-relaxed mb-4 max-w-md">
+            4가지 질문만 답하면, 내 용도에 딱 맞는 AI 모델을 추천해드립니다.
           </p>
-          <div className="flex flex-wrap gap-2">
+
+          {/* ── 미니 추천 퀴즈 위젯 ── */}
+          <MiniRecommend navigate={navigate} />
+
+          <div className="flex flex-wrap gap-2 mt-4">
             <Link to="/recommend"
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-gray-900 rounded-xl text-sm font-bold hover:bg-gray-100 transition-colors">
-              🎯 AI 추천받기
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white/10 text-white rounded-xl text-sm font-semibold hover:bg-white/20 transition-colors border border-white/20">
+              📝 전체 퀴즈로 추천받기
             </Link>
             <Link to="/explore/compare"
               className="inline-flex items-center gap-1.5 px-4 py-2 bg-white/10 text-white rounded-xl text-sm font-semibold hover:bg-white/20 transition-colors border border-white/20">
@@ -338,6 +342,74 @@ export default function Home() {
         </div>
       )}
 
+    </div>
+  );
+}
+
+/* ── 미니 추천 퀴즈 위젯 (Hero 인라인) ── */
+const QUIZ_USES: { key: UseCase; icon: string; label: string }[] = [
+  { key: 'writing', icon: '✍️', label: '글쓰기' },
+  { key: 'coding', icon: '💻', label: '코딩' },
+  { key: 'image', icon: '🖼️', label: '이미지' },
+  { key: 'video', icon: '🎬', label: '비디오' },
+  { key: 'summary', icon: '📊', label: '요약' },
+  { key: 'chat', icon: '💬', label: '대화' },
+];
+
+const QUIZ_BUDGETS: { key: BudgetTier; icon: string; label: string }[] = [
+  { key: 'free', icon: '🆓', label: '무료' },
+  { key: 'cheap', icon: '💰', label: '1만↓' },
+  { key: 'mid', icon: '💳', label: '5만↓' },
+  { key: 'premium', icon: '💎', label: '상관없음' },
+];
+
+function MiniRecommend({ navigate }: { navigate: ReturnType<typeof useNavigate> }) {
+  const [useCase, setUseCase] = useState<UseCase | ''>('');
+  const [budget, setBudget] = useState<BudgetTier | ''>('');
+
+  const go = () => {
+    const params = new URLSearchParams();
+    if (useCase) params.set('useCase', useCase);
+    if (budget) params.set('budget', budget);
+    if (useCase && budget) {
+      navigate(`/recommend?${params.toString()}`);
+    } else {
+      navigate('/recommend');
+    }
+  };
+
+  return (
+    <div className="bg-white/[0.07] backdrop-blur-sm rounded-xl border border-white/10 p-4">
+      <p className="text-[10px] tracking-widest font-bold text-gray-400 uppercase mb-3">🎯 나는 AI를 이렇게 쓰고 싶어요</p>
+      <div className="flex flex-wrap gap-2 mb-3">
+        {QUIZ_USES.map(u => (
+          <button key={u.key} onClick={() => setUseCase(useCase === u.key ? '' : u.key)}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              useCase === u.key
+                ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
+                : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+            }`}>
+            <span>{u.icon}</span>{u.label}
+          </button>
+        ))}
+      </div>
+      <p className="text-[10px] tracking-widest font-bold text-gray-400 uppercase mb-3">💰 예산은 어떻게 되시나요?</p>
+      <div className="flex flex-wrap gap-2 mb-4">
+        {QUIZ_BUDGETS.map(b => (
+          <button key={b.key} onClick={() => setBudget(budget === b.key ? '' : b.key)}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              budget === b.key
+                ? 'bg-violet-500 text-white shadow-lg shadow-violet-500/25'
+                : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+            }`}>
+            <span>{b.icon}</span>{b.label}
+          </button>
+        ))}
+      </div>
+      <button onClick={go}
+        className="w-full py-2.5 rounded-xl text-sm font-bold transition-all bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600 text-white shadow-lg shadow-blue-500/20">
+        ✨ AI 추천 결과 보기
+      </button>
     </div>
   );
 }

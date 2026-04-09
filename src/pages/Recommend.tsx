@@ -73,7 +73,7 @@ export default function RecommendPage() {
   const [params] = useSearchParams();
 
   const results = useMemo(() => {
-    const useCases = (params.get('useCases') || '').split(',').filter(Boolean) as UseCase[];
+    const useCases = (params.get('useCases') || params.get('useCase') || '').split(',').filter(Boolean) as UseCase[];
     const budget = (params.get('budget') || 'free') as BudgetTier;
     const privacy = (params.get('privacy') || 'medium') as 'high' | 'medium' | 'low';
     return recommend({ useCases, budget, privacy });

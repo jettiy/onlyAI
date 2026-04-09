@@ -11,22 +11,22 @@ interface ModelBench {
   scores: Partial<Record<BenchmarkKey, number>>;
 }
 
-const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; category: string }[] = [
-  { key: "mmlu",      label: "MMLU-Pro",   desc: "다분야 지식 이해 (전문가 수준)", category: "지능" },
-  { key: "gpqa",      label: "GPQA Diamond", desc: "전문가 수준 질문 (박사급 난이도)", category: "지능" },
-  { key: "math",      label: "MATH-500",   desc: "수학 문제 해결 (경쟁 수준)", category: "지능" },
-  { key: "ifeval",    label: "IFEval",     desc: "지시어 준수도 (%)", category: "지능" },
-  { key: "humaneval", label: "HumanEval+", desc: "파이썬 코딩 정확도", category: "코딩" },
-  { key: "coding",    label: "SWE-bench",  desc: "실제 SW 버그 수정 (verified)", category: "코딩" },
-  { key: "swe",       label: "Aider polyglot", desc: "다언어 코드 편집 성공률 (%)", category: "코딩" },
-  { key: "musr",      label: "MUSR",       desc: "다단계 추론 정확도 (%)", category: "추론" },
+const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; tip: string; category: string }[] = [
+  { key: "mmlu",      label: "MMLU-Pro",   desc: "다분야 지식 이해 (전문가 수준)",     tip: "이 점수가 높으면 대학생 이상 수준에서 폭넓은 지식으로 정확한 답변을 해주는 AI입니다.", category: "지능" },
+  { key: "gpqa",      label: "GPQA Diamond", desc: "전문가 수준 질문 (박사급 난이도)",   tip: "이 점수가 높으면 일반 학자도 풀기 힘든 최고 수준의 전문 지식 질문에 답할 수 있습니다.", category: "지능" },
+  { key: "math",      label: "MATH-500",   desc: "수학 문제 해결 (경쟁 수준)",          tip: "이 점수가 높으면 복잡한 계산이나 단계별 사고가 필요한 수학 문제를 전문가처럼 풉니다.", category: "지능" },
+  { key: "ifeval",    label: "IFEval",     desc: "지시어 준수도 (%)",                   tip: "이 점수가 높으면 내가 원하는 세부 형식이나 규칙을 완벽하게 지켜 결과물을 만들어냅니다.", category: "지능" },
+  { key: "humaneval", label: "HumanEval+", desc: "파이썬 코딩 정확도",                tip: "이 점수가 높으면 코딩 실무자가 짠 것처럼 고품질 코드를 빠르고 정확하게 작성합니다.", category: "코딩" },
+  { key: "coding",    label: "SWE-bench",  desc: "실제 SW 버그 수정 (verified)",        tip: "이 점수가 높으면 실제 오픈소스 프로젝트의 버그를 스스로 찾아 수정할 수 있는 수준입니다.", category: "코딩" },
+  { key: "swe",       label: "Aider polyglot", desc: "다언어 코드 편집 성공률 (%)",      tip: "이 점수가 높으면 파이썬뿐 아니라 여러 프로그래밍 언어의 코드를 정확하게 편집할 수 있습니다.", category: "코딩" },
+  { key: "musr",      label: "MUSR",       desc: "다단계 추론 정확도 (%)",              tip: "이 점수가 높으면 복잡한 문제를 여러 단계로 나누어 논리적으로 해결하는 능력이 뛰어납니다.", category: "추론" },
 ];
 
 const LOGO_MAP: Record<string, string> = {
   openai: "openai.png",
-  anthropic: "anthropic.jpg",
+  anthropic: "anthropic.png",
   google: "google.png",
-  meta: "meta.jpg",
+  meta: "meta.png",
   xai: "xai.png",
   deepseek: "deepseek.png",
   minimax: "minimax.png",
@@ -34,7 +34,7 @@ const LOGO_MAP: Record<string, string> = {
   moonshot: "moonshot.png",
   zhipu: "zhipu.png",
   xiaomi: "xiaomi.png",
-  mistral: "mistral.jpg",
+  mistral: "mistral.png",
   cohere: "cohere.png",
 };
 
@@ -254,6 +254,7 @@ export default function Benchmarks() {
           <p className="text-sm font-semibold text-blue-800 dark:text-blue-300">{bench.label}</p>
         </div>
         <p className="text-xs text-blue-600 dark:text-blue-400 mt-0.5">{bench.desc}</p>
+        {bench.tip && <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">💡 {bench.tip}</p>}
       </div>
 
       {/* Bar chart with logos */}

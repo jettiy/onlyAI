@@ -206,11 +206,21 @@ export default function PcCheck() {
       )}
 
       {/* 안내 */}
-      <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-800">
+      <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-800 space-y-3">
         <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-          💡 <strong>로컬 AI란?</strong> 인터넷 없이 내 PC에서 직접 구동하는 AI 모델입니다. Ollama, LM Studio 같은 프로그램을 설치하면 쉽게 실행할 수 있습니다.<br />
-          데이터가 외부로 나가지 않아 보안이 좋고, API 비용이 들지 않습니다. 하지만 고성능 GPU가 필요합니다.
+          💡 <strong>로컬 AI란?</strong> 인터넷 없이 내 PC에서 직접 구동하는 AI 모델입니다. 데이터가 외부로 나가지 않아 보안이 좋고, API 비용이 들지 않습니다. 하지만 고성능 GPU가 필요합니다.
         </p>
+        <details className="group">
+          <summary className="text-xs font-semibold text-blue-600 dark:text-blue-400 cursor-pointer select-none">
+            🚀 Ollama로 3분 만에 시작하기
+          </summary>
+          <ol className="mt-2 ml-4 list-decimal space-y-1.5 text-xs text-gray-500 dark:text-gray-400">
+            <li><strong>Ollama 설치하기</strong> — 운영체제에 맞는 Ollama 프로그램을 다운로드하여 설치합니다. <a href="https://ollama.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">ollama.com</a></li>
+            <li><strong>AI 모델 다운로드</strong> — 터미널을 열고 <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded text-[10px]">ollama run llama3</code> 명령어를 입력해 사용할 모델을 다운로드합니다.</li>
+            <li><strong>대화 시작하기</strong> — 모델 준비가 완료되면 화면에 바로 질문을 입력하여 AI와 대화할 수 있습니다.</li>
+          </ol>
+          <p className="mt-2 text-[10px] text-gray-400">💡 더 많은 모델: <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">ollama run gemma3</code>, <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">ollama run phi4</code></p>
+        </details>
       </div>
     </div>
   );

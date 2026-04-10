@@ -67,13 +67,24 @@ function parseDate(str: string | undefined): string {
 }
 
 // Simple XML tag extraction without DOMParser (Edge Runtime compatible)
+function decodeEntities(text: string): string {
+  return text
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&apos;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ');
+}
+
 function extractTag(xml: string, tag: string): string {
   // Handle CDATA
   const cdataMatch = xml.match(new RegExp(`<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]></${tag}>`));
-  if (cdataMatch) return cdataMatch[1].trim();
+  if (cdataMatch) return decodeEntities(cdataMatch[1].trim());
   // Handle normal content
   const match = xml.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`));
-  if (match) return match[1].replace(/<[^>]+>/g, '').trim();
+  if (match) return decodeEntities(match[1].replace(/<[^>]+>/g, '').trim());
   return '';
 }
 

@@ -28,7 +28,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
   const mutedText = isDark ? "text-gray-400" : "text-gray-500";
   const subtleBg = isDark ? "bg-gray-800" : "bg-gray-50";
 
-  const koreanGradeStyles: Record<NonNullable<Model["koreanSupport"]>, string> = {
+  const koreanGradeStyles: Record<NonNullable<AIModel["koreanSupport"]>, string> = {
     A: isDark
       ? "bg-emerald-500/15 text-emerald-300 border-emerald-500/30"
       : "bg-emerald-50 text-emerald-700 border-emerald-200",

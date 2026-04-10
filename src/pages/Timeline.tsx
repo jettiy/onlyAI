@@ -126,6 +126,23 @@ const EVENTS: TimelineEvent[] = [
     description: "24B 코딩 전용 모델. 툴 사용으로 코드베이스 탐색·다중 파일 편집.",
     highlights: ["24B 코딩 특화", "소프트웨어 에이전트", "비전 지원", "763K 다운로드"],
   },
+  // ═══ 2026년 4월 (최신) ═══
+  {
+    id: "claude-mythos", date: "2026-04-07", displayDate: "2026년 4월 7일",
+    model: "Claude Mythos Preview", company: "Anthropic", companyId: "anthropic",
+    status: "released", category: "flagship",
+    description: "Anthropic 최고 모델. 사이버보안에 압도적 성능. Private Preview로 제한적 공개.",
+    highlights: ["Anthropic 최강 모델", "사이버보안 특화", "1M 컨텍스트", "Gated Research Preview"],
+    sourceUrl: "https://red.anthropic.com/2026/mythos-preview/",
+  },
+  {
+    id: "gpt-5-4-pro", date: "2026-03-05", displayDate: "2026년 3월 17일",
+    model: "GPT-5.4 Pro", company: "OpenAI", companyId: "openai",
+    status: "released", category: "flagship",
+    description: "GPT-5.4 최고 티어. Codex+GPT-5 통합. 전용 GPU 할당. $30/$180.",
+    highlights: ["Codex+GPT-5 통합", "$30/$180", "1M 컨텍스트", "전용 GPU 할당"],
+    sourceUrl: "https://openai.com/api/pricing/",
+  },
   {
     id: "ministral-3", date: "2026-04", displayDate: "2026년 4월",
     model: "Ministral 3", company: "Mistral", companyId: "mistral",

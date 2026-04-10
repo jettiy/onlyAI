@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const ZAI_KEY = process.env.ZAI_API_KEY || '';
-const ZAI_ENDPOINT = 'https://api.z.ai/api/coding/paas/v4/chat/completions';
+const ZAI_ENDPOINT = 'https://api.z.ai/api/paas/v4/chat/completions';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {

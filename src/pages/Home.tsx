@@ -4,6 +4,7 @@ import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
 import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
 import { CompanyLogo, COMPANY_LOGO } from '../components/CompanyLogo';
+import ModelDetailModal from '../components/ModelDetailModal';
 
 const CAT_COLORS: Record<string, { bg: string; text: string; bar: string }> = {
   '모델 출시':       { bg: 'bg-violet-50 dark:bg-violet-950/30',  text: 'text-violet-600 dark:text-violet-400',  bar: 'bg-violet-500' },
@@ -108,6 +109,7 @@ export default function Home() {
   const TOP_NEWS = allNews.slice(0, 5);
   const secondary = TOP_NEWS.slice(1, 3);
   const [heroIdx, setHeroIdx] = useState(0);
+  const [selectedModel, setSelectedModel] = useState<typeof models[0] | null>(null);
   const hero = TOP_NEWS[heroIdx] ?? TOP_NEWS[0];
 
   const nextHero = useCallback(() => {
@@ -153,6 +155,7 @@ export default function Home() {
 
           {/* ── 미니 추천 퀴즈 위젯 ── */}
           <MiniRecommend navigate={navigate} />
+          {selectedModel && <ModelDetailModal model={selectedModel} onClose={() => setSelectedModel(null)} />}
 
           <div className="mt-4">
             <div className="flex items-center justify-between mb-2">
@@ -167,7 +170,8 @@ export default function Home() {
                 return (
                   <div
                     key={model.name}
-                    className="rounded-xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] transition-colors p-3"
+                    onClick={() => setSelectedModel(model)}
+                    className="rounded-xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] transition-colors p-3 cursor-pointer"
                   >
                     <div className="flex items-center gap-2">
                       <span className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center">

@@ -4,19 +4,19 @@ import { recommend, type RecommendResult } from '../lib/recommendEngine';
 import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
 import { CompanyLogo, COMPANY_LOGO } from '../components/CompanyLogo';
 import { ScoreTooltip } from '../components/ScoreTooltip';
-import { models } from '../data/models';
+import { models, companies } from '../data/models';
 
 const MEDALS = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣'];
 
-// 모델 ID → 공식 사이트 URL 맵
-const modelUrlMap = new Map<string, string>();
-for (const m of models) {
-  if (m.url) modelUrlMap.set(m.id, m.url);
+// companyId → playground URL 맵
+const companyPlaygroundMap = new Map<string, string>();
+for (const c of companies) {
+  if (c.playgroundUrl) companyPlaygroundMap.set(c.id, c.playgroundUrl);
 }
 
 function ResultCard({ result, rank }: { result: RecommendResult; rank: number }) {
   const isTop3 = rank < 3;
-  const officialUrl = modelUrlMap.get(result.id);
+  const officialUrl = companyPlaygroundMap.get(result.companyId);
   return (
     <div className={`bg-white dark:bg-gray-900 rounded-2xl border ${
       rank === 0 ? 'border-blue-400 dark:border-blue-600 ring-2 ring-blue-200 dark:ring-blue-900 shadow-lg' : 'border-gray-200 dark:border-gray-800'

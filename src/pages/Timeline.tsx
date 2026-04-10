@@ -14,22 +14,24 @@ interface TimelineEvent {
   highlights: string[];
   category: "flagship" | "efficient" | "open" | "multimodal";
   isKoreanFriendly?: boolean;
+  sourceUrl?: string;
 }
 
 const COMPANY_LOGOS: Record<string, string> = {
-  openai: '/logos/openai.png',
-  anthropic: '/logos/anthropic.jpg',
-  google: '/logos/google.png',
-  meta: '/logos/meta.jpg',
-  xai: '/logos/xai.png',
-  minimax: '/logos/minimax.png',
-  deepseek: '/logos/deepseek.png',
-  alibaba: '/logos/alibaba.png',
-  moonshot: '/logos/moonshot.png',
-  xiaomi: '/logos/xiaomi.png',
-  mistral: '/logos/mistral.jpg',
-  zhipu: '/logos/zhipu.png',
-  cohere: '/logos/cohere.png',
+  openai: '/logos/aa_openai.svg',
+  anthropic: '/logos/aa_anthropic.svg',
+  google: '/logos/aa_google_mono.svg',
+  meta: '/logos/aa_meta.svg',
+  xai: '/logos/aa_xai.svg',
+  minimax: '/logos/aa_minimax.svg',
+  deepseek: '/logos/aa_deepseek.svg',
+  alibaba: '/logos/aa_alibaba.svg',
+  moonshot: '/logos/aa_moonshot.svg',
+  xiaomi: '/logos/aa_xiaomi.svg',
+  mistral: '/logos/aa_mistral.svg',
+  zhipu: '/logos/aa_zhipu.svg',
+  nvidia: '/logos/aa_nvidia.svg',
+  amazon: '/logos/aa_amazon.svg',
 };
 
 const STATUS_STYLE: Record<TimelineStatus, { bg: string; text: string; label: string; dot: string }> = {
@@ -46,122 +48,218 @@ const CAT_COLORS: Record<string, { bar: string; label: string }> = {
 };
 
 const EVENTS: TimelineEvent[] = [
-  // ── 2026년 3월 (최신) ──
+  // ═══ 2026년 4월 (최신) ═══
+  {
+    id: "glm-5-1", date: "2026-04", displayDate: "2026년 4월 7일",
+    model: "GLM-5.1 (추론/비추론)", company: "Zhipu AI", companyId: "zhipu",
+    status: "released", category: "flagship", isKoreanFriendly: false,
+    description: "GLM-5 후속. SWE-Bench Pro 최고 성능. 에이전트 엔지니어링 특화.",
+    highlights: ["SWE-Bench Pro 1위", "추론·비추론 모델", "에이전트 엔지니어링", "AA 지능지수 51"],
+  },
+  {
+    id: "muse-spark", date: "2026-04", displayDate: "2026년 4월 8일",
+    model: "Muse Spark", company: "Meta", companyId: "meta",
+    status: "released", category: "multimodal",
+    description: "Meta가 AI 경쟁에 복귀하며 공개한 신규 모델.",
+    highlights: ["Meta 신규 모델", "AA 지능지수 52", "공개 분석 보고서"],
+  },
+  {
+    id: "gemma-4", date: "2026-04", displayDate: "2026년 4월 3~6일",
+    model: "Gemma 4 (E2B/E4B/26B/31B)", company: "Google", companyId: "google",
+    status: "released", category: "open", isKoreanFriendly: false,
+    description: "Google의 미국산 오픈 웨이트 프론티어. Apache 2.0. 추론·에이전트·코딩·멀티모달.",
+    highlights: ["Apache 2.0 오픈소스", "E2B~31B 4종 사이즈", "오디오 지원", "AA 지능지수 32(31B)"],
+  },
+  {
+    id: "nemotron-cascade-2", date: "2026-04", displayDate: "2026년 4월",
+    model: "Nemotron Cascade 2", company: "NVIDIA", companyId: "nvidia",
+    status: "released", category: "efficient",
+    description: "30B MoE, 3B만 활성. 강력한 추론·에이전트 성능을 작은 모델로 구현.",
+    highlights: ["30B MoE (3B 활성)", "NVIDIA 오픈소스", "추론·에이전트", "80K+ 다운로드"],
+  },
+  {
+    id: "minimax-m27", date: "2026-04", displayDate: "2026년 4월",
+    model: "MiniMax M2.7", company: "MiniMax", companyId: "minimax",
+    status: "released", category: "flagship",
+    description: "자가진화(Self-Evolution) AI. 코딩·에이전트·생산성 특화.",
+    highlights: ["자가진화 기능", "코딩·에이전트 특화", "62K+ 다운로드", "공개 분석 보고서"],
+  },
+  {
+    id: "grok-4-20", date: "2026-04", displayDate: "2026년 4월 8일",
+    model: "Grok 4.20", company: "xAI", companyId: "xai",
+    status: "released", category: "flagship",
+    description: "xAI 최신 플래그십. 추론 모델 AA 지능지수 49.",
+    highlights: ["추론·비추론 2종", "AA 지능지수 49(추론)", "가격 인하 ($2/$6)", "xAI 플랫폼"],
+  },
+  {
+    id: "qwen3-6-plus", date: "2026-04", displayDate: "2026년 4월 8일",
+    model: "Qwen3.6 Plus", company: "Alibaba", companyId: "alibaba",
+    status: "released", category: "flagship", isKoreanFriendly: true,
+    description: "Qwen 시리즈 최신. AA 지능지수 50으로 최상위권.",
+    highlights: ["AA 지능지수 50", "한국어 우수", "알리바바 클라우드"],
+  },
+  {
+    id: "kimi-k2-5", date: "2026-04", displayDate: "2026년 4월",
+    model: "Kimi K2.5", company: "Moonshot", companyId: "moonshot",
+    status: "released", category: "multimodal",
+    description: "오픈소스 네이티브 멀티모달 에이전트. 비전·언어·에이전트 통합.",
+    highlights: ["네이티브 멀티모달", "에이전트 기능", "233K+ 다운로드", "오픈소스"],
+  },
+  {
+    id: "solar-pro-3", date: "2026-04", displayDate: "2026년 4월 6일",
+    model: "Solar Pro 3", company: "Upstage", companyId: "upstage",
+    status: "released", category: "flagship", isKoreanFriendly: true,
+    description: "한국 Upstage 최신 모델.",
+    highlights: ["한국어 특화", "AA 지능지수 26", "업스테이지"],
+  },
+  {
+    id: "nova-2-0", date: "2026-04", displayDate: "2026년 4월 7일",
+    model: "Nova 2.0 Lite / Omni", company: "Amazon", companyId: "amazon",
+    status: "released", category: "flagship",
+    description: "Amazon Bedrock 신규 모델. Lite(고추론)/Omni(중추론) 2종.",
+    highlights: ["Amazon Bedrock 전용", "2종 모델", "Bedrock 성능 벤치마크"],
+  },
+  {
+    id: "devstral-small-2", date: "2026-04", displayDate: "2026년 4월",
+    model: "Devstral Small 2", company: "Mistral", companyId: "mistral",
+    status: "released", category: "open",
+    description: "24B 코딩 전용 모델. 툴 사용으로 코드베이스 탐색·다중 파일 편집.",
+    highlights: ["24B 코딩 특화", "소프트웨어 에이전트", "비전 지원", "763K 다운로드"],
+  },
+  {
+    id: "ministral-3", date: "2026-04", displayDate: "2026년 4월",
+    model: "Ministral 3", company: "Mistral", companyId: "mistral",
+    status: "released", category: "efficient",
+    description: "엣지 배포 최적화. 3B/8B/14B 3종. 다양한 하드웨어에서 구동.",
+    highlights: ["엣지 배포 최적", "3B/8B/14B", "비전 지원", "906K 다운로드"],
+  },
+  {
+    id: "nemotron-3-super", date: "2026-04", displayDate: "2026년 4월",
+    model: "Nemotron 3 Super", company: "NVIDIA", companyId: "nvidia",
+    status: "released", category: "open",
+    description: "120B 오픈 MoE, 12B만 활성. 다중 에이전트 애플리케이션 최적.",
+    highlights: ["120B MoE (12B 활성)", "다중 에이전트", "NVIDIA 오픈소스", "213K 다운로드"],
+  },
+  {
+    id: "minimax-m25", date: "2026-04", displayDate: "2026년 4월",
+    model: "MiniMax M2.5", company: "MiniMax", companyId: "minimax",
+    status: "released", category: "flagship",
+    description: "Lightning AI에서 성능 벤치마크 가능한 신규 모델.",
+    highlights: ["Lightning AI 지원", "에이전트 기능"],
+  },
+
+  // ═══ 2026년 3월 ═══
   {
     id: "mimo-v2-pro", date: "2026-03", displayDate: "2026년 3월 18일",
     model: "MiMo-V2-Pro", company: "Xiaomi", companyId: "xiaomi",
-    status: "released", category: "flagship", isKoreanFriendly: false,
-    description: "OpenRouter 'Hunter Alpha'로 일일 사용량 1위 달성 후 정체 공개. 1T+ 파라미터 MoE, 1M 컨텍스트.",
+    status: "released", category: "flagship",
+    description: "OpenRouter 'Hunter Alpha'로 일일 사용량 1위 달성 후 정체 공개. 1T+ 파라미터 MoE.",
     highlights: ["1조 파라미터 MoE", "1M 컨텍스트", "에이전트 특화", "OpenRouter 일일 1위"],
   },
   {
-    id: "minimax-m27", date: "2026-03", displayDate: "2026년 3월 17일",
-    model: "MiniMax M2.7", company: "MiniMax", companyId: "minimax",
-    status: "released", category: "flagship", isKoreanFriendly: false,
-    description: "자가진화(Self-Evolution) AI. 소프트웨어 엔지니어링 50% 자동화. Agent Teams 기능.",
-    highlights: ["자가진화 기능", "에이전트 팀", "소프트웨어 엔지니어링", "$0.30/1M 입력"],
+    id: "gpt-5-4", date: "2026-03", displayDate: "2026년 3월 5일",
+    model: "GPT-5.4 / mini / nano", company: "OpenAI", companyId: "openai",
+    status: "released", category: "flagship", isKoreanFriendly: true,
+    description: "네이티브 컴퓨터 사용 기능. 1.1M 컨텍스트. 전문 업무 에이전트 최강.",
+    highlights: ["컴퓨터 사용 기능", "1.1M 컨텍스트", "3종 사이즈", "$2.50/1M 입력"],
   },
   {
-    id: "gpt-5-4", date: "2026-03", displayDate: "2026년 3월 5일",
-    model: "GPT-5.4", company: "OpenAI", companyId: "openai",
-    status: "released", category: "flagship", isKoreanFriendly: true,
-    description: "네이티브 컴퓨터 사용 기능 탑재. 1.1M 컨텍스트. 전문 업무 에이전트 최강.",
-    highlights: ["컴퓨터 사용 기능", "1.1M 컨텍스트", "GPT-5.4 mini 동시 출시", "$2.50/1M 입력"],
+    id: "qwen3-5-omni-plus", date: "2026-03", displayDate: "2026년 3월 28일",
+    model: "Qwen3.5 Omni Plus / Flash", company: "Alibaba", companyId: "alibaba",
+    status: "released", category: "multimodal", isKoreanFriendly: true,
+    description: "Qwen 3.5 오픈소스 멀티모달. Plus(AA 39) / Flash(AA 26).",
+    highlights: ["오픈소스 멀티모달", "비전+툴+추론", "9종 사이즈(0.8B~122B)", "5.6M 다운로드"],
   },
-  // ── 2026년 2월 ──
+
+  // ═══ 2026년 2월 ═══
   {
     id: "claude-4-6", date: "2026-02", displayDate: "2026년 2월 5일",
     model: "Claude Opus 4.6 / Sonnet 4.6", company: "Anthropic", companyId: "anthropic",
     status: "released", category: "flagship", isKoreanFriendly: true,
-    description: "500개 이상 오픈소스 보안취약점 자동 발견. Opus급 코딩을 Sonnet 가격에.",
-    highlights: ["보안 취약점 탐지", "Sonnet = Opus급 코딩", "컴퓨터 사용 강화", "$5/$25 (Opus)"],
+    description: "500+ 오픈소스 보안취약점 자동 발견. Opus급 코딩을 Sonnet 가격에.",
+    highlights: ["보안 취약점 탐지", "Sonnet = Opus급 코딩", "컴퓨터 사용 강화", "1M 컨텍스트"],
   },
   {
     id: "gemini-3-1", date: "2026-02", displayDate: "2026년 2월 19일",
     model: "Gemini 3.1 Pro", company: "Google", companyId: "google",
     status: "released", category: "flagship", isKoreanFriendly: true,
-    description: "개선된 추론·코딩·에이전트 코딩. Deep Think 조정 가능. 1M 컨텍스트.",
-    highlights: ["에이전트 코딩 강화", "조정 가능한 Deep Think", "1M 컨텍스트", "$2/$12 입력/출력"],
-  },
-  {
-    id: "kimi-k2-5", date: "2026-02", displayDate: "2026년 2월 17일",
-    model: "Kimi K2.5", company: "Moonshot", companyId: "moonshot",
-    status: "released", category: "multimodal", isKoreanFriendly: false,
-    description: "오픈소스 네이티브 멀티모달 에이전트. Agent Swarm 기술. 1T 파라미터 MoE.",
-    highlights: ["오픈소스 1T MoE", "네이티브 멀티모달", "Agent Swarm", "256K 컨텍스트"],
+    description: "에이전트 코딩 강화. 조정 가능한 Deep Think. 1M 컨텍스트.",
+    highlights: ["에이전트 코딩 강화", "Deep Think 조정", "1M 컨텍스트", "$2/$12"],
   },
   {
     id: "glm-5", date: "2026-02", displayDate: "2026년 2월 11일",
     model: "GLM-5", company: "Zhipu AI", companyId: "zhipu",
-    status: "released", category: "flagship", isKoreanFriendly: false,
-    description: "즈푸AI 최신 플래그십. 744B 파라미터. 에이전트·코딩·긴 작업 특화.",
+    status: "released", category: "flagship",
+    description: "즈푸AI 최신 플래그십. 744B 파라미터. 에이전트·코딩 특화.",
     highlights: ["744B 파라미터", "에이전트 엔지니어링", "오픈소스", "203K 컨텍스트"],
   },
-  // ── 2026년 1월 ──
+
+  // ═══ 2026년 1월 ═══
   {
     id: "deepseek-v3-2", date: "2026-01", displayDate: "2026년 1월",
     model: "DeepSeek V3.2", company: "DeepSeek", companyId: "deepseek",
-    status: "released", category: "open", isKoreanFriendly: false,
-    description: "1,800개 환경·85K 복잡 명령어로 에이전트 훈련. 오픈소스. 캐시 히트 $0.028/1M.",
-    highlights: ["에이전트 특화 훈련", "오픈소스", "$0.028 캐시 히트", "685B MoE"],
+    status: "released", category: "open",
+    description: "1,800개 환경·85K 명령어로 에이전트 훈련. 오픈소스 MIT. 캐시 $0.028/1M.",
+    highlights: ["에이전트 특화", "오픈소스 MIT", "685B MoE (37B 활성)", "초저가"],
   },
   {
     id: "qwen-3", date: "2026-01", displayDate: "2026년 1월",
-    model: "Qwen 3-235B", company: "Alibaba", companyId: "alibaba",
+    model: "Qwen 3 (235B / MoE)", company: "Alibaba", companyId: "alibaba",
     status: "released", category: "flagship", isKoreanFriendly: true,
-    description: "MAU 2억 돌파 Qwen 앱 기반 모델. 한·중·영 3개국어 최상위 성능.",
-    highlights: ["한국어 A등급", "235B 파라미터", "$0.5/1M 입력", "128K 컨텍스트"],
+    description: "한·중·영 3개국어 최상위. Dense + MoE 다양한 사이즈.",
+    highlights: ["한국어 A등급", "Dense + MoE", "$0.5/1M 입력", "26.3M 다운로드"],
   },
-  // ── 2025년 ──
+
+  // ═══ 2025년 ═══
   {
     id: "llama-4", date: "2025-04", displayDate: "2025년 4월",
     model: "Llama 4 Maverick / Scout", company: "Meta", companyId: "meta",
-    status: "released", category: "open", isKoreanFriendly: false,
-    description: "Meta 오픈소스 MoE. Scout는 10M(!) 컨텍스트로 업계 최장. 상업 무료.",
-    highlights: ["Scout: 10M 컨텍스트", "오픈소스 MoE", "상업 무료", "$0.11/1M (Scout)"],
+    status: "released", category: "open",
+    description: "Meta 오픈소스 MoE. Scout 10M 컨텍스트로 업계 최장. 상업 무료.",
+    highlights: ["Scout: 10M 컨텍스트", "오픈소스 MoE", "상업 무료"],
   },
   {
     id: "gpt-4-1", date: "2025-04", displayDate: "2025년 4월",
     model: "GPT-4.1 시리즈", company: "OpenAI", companyId: "openai",
     status: "released", category: "efficient", isKoreanFriendly: true,
-    description: "코딩·지시 이행 최적화. 1M 컨텍스트. Nano는 $0.20/1M 초저가.",
-    highlights: ["1M 컨텍스트", "코딩 최적화", "GPT-4.1 Nano $0.20/1M", "파인튜닝 지원"],
+    description: "코딩·지시 이행 최적화. 1M 컨텍스트. Nano $0.20/1M 초저가.",
+    highlights: ["1M 컨텍스트", "코딩 최적화", "Nano $0.20/1M"],
   },
 
-  // ── 출시 예정 ──
+  // ═══ 출시 예정 ═══
   {
     id: "gpt-6", date: "2026-Q3", displayDate: "2026년 하반기 (예상)",
     model: "GPT-6", company: "OpenAI", companyId: "openai",
-    status: "expected", category: "flagship", isKoreanFriendly: true,
+    status: "expected", category: "flagship",
     description: "OpenAI 차세대 메이저 버전. 추론·에이전트·멀티모달 전면 강화 예상.",
-    highlights: ["메이저 업그레이드", "멀티모달 강화", "자율 에이전트", "출시 미확인"],
+    highlights: ["메이저 업그레이드", "멀티모달 강화", "자율 에이전트"],
   },
   {
     id: "claude-5", date: "2026-Q3", displayDate: "2026년 중후반 (예상)",
     model: "Claude 5 시리즈", company: "Anthropic", companyId: "anthropic",
-    status: "expected", category: "flagship", isKoreanFriendly: true,
-    description: "Anthropic 차세대 메이저 모델. 현재 Claude 4.x 시리즈 이후 다음 세대.",
+    status: "expected", category: "flagship",
+    description: "Anthropic 차세대 메이저 모델.",
     highlights: ["차세대 아키텍처", "에이전트 강화", "안전성 업그레이드"],
   },
   {
     id: "gemini-3-2", date: "2026-Q2", displayDate: "2026년 Q2~Q3 (예상)",
     model: "Gemini 3.2", company: "Google", companyId: "google",
     status: "expected", category: "flagship", isKoreanFriendly: true,
-    description: "Gemini 3.1의 후속. Google I/O 2026 전후 발표 예상.",
+    description: "Gemini 3.1 후속. Google I/O 2026 전후 발표 예상.",
     highlights: ["Google I/O 발표 예상", "멀티모달 강화", "긴 컨텍스트"],
   },
   {
     id: "deepseek-v4", date: "2026-Q2", displayDate: "2026년 Q2 (예상)",
     model: "DeepSeek V4", company: "DeepSeek", companyId: "deepseek",
-    status: "rumored", category: "open", isKoreanFriendly: false,
-    description: "코딩 특화 V4 루머. 2026년 초 Reuters 보도로 알려진 예정 모델.",
+    status: "rumored", category: "open",
+    description: "코딩 특화 V4 루머.",
     highlights: ["코딩 특화", "오픈소스 예상", "루머 단계"],
   },
   {
     id: "llama-5", date: "2026-Q4", displayDate: "2026년 하반기 (예상)",
     model: "Llama 5", company: "Meta", companyId: "meta",
-    status: "rumored", category: "open", isKoreanFriendly: false,
-    description: "Meta 차세대 오픈소스 LLM. 구체적 정보는 아직 없음.",
+    status: "rumored", category: "open",
+    description: "Meta 차세대 오픈소스 LLM.",
     highlights: ["오픈소스 예상", "루머 단계"],
   },
 ];
@@ -188,7 +286,6 @@ export default function Timeline() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🗓️ AI 모델 출시 타임라인</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -196,7 +293,6 @@ export default function Timeline() {
         </p>
       </div>
 
-      {/* Filters */}
       <div className="flex gap-2 flex-wrap">
         {FILTER_OPTIONS.map((f) => (
           <button key={f.value} onClick={() => setFilter(f.value as typeof filter)}
@@ -221,7 +317,6 @@ export default function Timeline() {
         ))}
       </div>
 
-      {/* Released section */}
       {released.length > 0 && (
         <div>
           <div className="flex items-center gap-3 mb-4">
@@ -240,7 +335,6 @@ export default function Timeline() {
         </div>
       )}
 
-      {/* Upcoming section */}
       {upcoming.length > 0 && (
         <div>
           <div className="flex items-center gap-3 mb-4 mt-6">
@@ -267,7 +361,7 @@ export default function Timeline() {
       )}
 
       <p className="text-xs text-gray-400 dark:text-gray-500 text-center pt-2">
-        출시 예정·루머 정보는 공개된 자료 기반이며, 변경될 수 있어요 · 마지막 업데이트: 2026-03-20
+        출처: artificialanalysis.ai/changelog · 출시 예정·루머 정보는 변경될 수 있어요 · 마지막 업데이트: 2026-04-11
       </p>
     </div>
   );
@@ -279,19 +373,16 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
 
   return (
     <div className="flex gap-4 items-start pl-6">
-      {/* Dot on the timeline line */}
       <div
         className={`absolute w-[11px] h-[11px] rounded-full border-2 border-white dark:border-gray-950 ${status.dot} flex-shrink-0`}
         style={{ left: 0, marginTop: '14px' }}
       />
 
-      {/* Card */}
       <div className="flex-1 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-md hover:border-gray-300 dark:hover:border-gray-700 transition-all relative overflow-hidden">
         <div className={`absolute top-0 left-0 right-0 h-0.5 ${cat.bar}`} />
 
         <div className="flex items-start justify-between gap-3 flex-wrap">
           <div className="flex-1 min-w-0">
-            {/* Date + Status */}
             <div className="flex items-center gap-2 flex-wrap mb-1.5">
               <span className="text-[10px] font-mono text-gray-400">{event.displayDate}</span>
               <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${status.bg} ${status.text}`}>
@@ -306,7 +397,6 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
               )}
             </div>
 
-            {/* Company + Model */}
             <div className="flex items-center gap-2 mb-1.5">
               {COMPANY_LOGOS[event.companyId] && (
                 <div className="w-6 h-6 rounded-md overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex-shrink-0">
@@ -326,7 +416,6 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
 
             <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-2">{event.description}</p>
 
-            {/* Highlights */}
             <div className="flex flex-wrap gap-1">
               {event.highlights.map((h) => (
                 <span key={h} className="text-[10px] px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full">

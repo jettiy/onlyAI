@@ -40,7 +40,6 @@ const NAV = [
     mobileHide: true, mobileGroup: 'explore',
     children: [
       { path: '/explore/timeline', label: '타임라인', icon: '🗓️' },
-      { path: '/explore/promo', label: '프로모션 현황', icon: '🎁' },
     ],
   },
   {

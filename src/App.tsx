@@ -8,7 +8,6 @@ import { lazy, Suspense } from "react";
 const Explore = lazy(() => import("./pages/explore/Explore").then(m => ({ default: m.default })));
 const ExploreTimeline = lazy(() => import("./pages/explore/ExploreTimeline").then(m => ({ default: m.default })));
 const ExploreCompare = lazy(() => import("./pages/explore/ExploreCompare").then(m => ({ default: m.default })));
-const ExplorePromo = lazy(() => import("./pages/explore/ExplorePromo").then(m => ({ default: m.default })));
 const ExploreGuide = lazy(() => import("./pages/explore/ExploreGuide").then(m => ({ default: m.default })));
 const ExploreRanking = lazy(() => import("./pages/explore/ExploreRanking").then(m => ({ default: m.default })));
 const ExploreCalculator = lazy(() => import("./pages/explore/ExploreCalculator").then(m => ({ default: m.default })));
@@ -58,7 +57,6 @@ export default function App() {
             <Route path="/explore" element={<Navigate to="/explore/compare" replace />} />
             <Route path="/explore/timeline" element={<ExploreTimeline />} />
             <Route path="/explore/compare" element={<ExploreCompare />} />
-            <Route path="/explore/promo" element={<ExplorePromo />} />
             <Route path="/explore/guide" element={<ExploreGuide />} />
             <Route path="/explore/ranking" element={<ExploreRanking />} />
             <Route path="/explore/calculator" element={<ExploreCalculator />} />

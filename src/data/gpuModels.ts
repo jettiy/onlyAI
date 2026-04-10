@@ -82,6 +82,20 @@ const OLLAMA_BASE = 'https://ollama.com/library/';
 export const LOCAL_MODELS: LocalModel[] = [
   // ─── 초소형 (4GB 이하) ───
   {
+    id: 'gemma4-e2b', name: 'Gemma 4 E2B', provider: 'Google',
+    minVram: 1, recVram: 3, minRam: 4, quant: 'Q4', size: '~2GB',
+    desc: '초경량 에이전트 모델, 온디바이스에서 툴호출 가능',
+    tags: ['대화', '요약', '테스트'],
+    ollamaCmd: 'ollama pull gemma4:2b', ollamaUrl: `${OLLAMA_BASE}gemma4`, isNew: true,
+  },
+  {
+    id: 'gemma4-e4b', name: 'Gemma 4 E4B', provider: 'Google',
+    minVram: 2, recVram: 4, minRam: 4, quant: 'Q4', size: '~3GB',
+    desc: '엣지 디바이스 최적, 라즈베리파이 가능',
+    tags: ['대화', '요약', '테스트'],
+    ollamaCmd: 'ollama pull gemma4:4b', ollamaUrl: `${OLLAMA_BASE}gemma4`, isNew: true,
+  },
+  {
     id: 'gemma3-4b', name: 'Gemma 3 4B', provider: 'Google',
     minVram: 2, recVram: 3, minRam: 4, quant: 'Q4', size: '~3GB',
     desc: '라즈베리파이도 구동 가능, 128K 컨텍스트',
@@ -156,6 +170,13 @@ export const LOCAL_MODELS: LocalModel[] = [
 
   // ─── 중형 (12-16GB VRAM) ───
   {
+    id: 'glm-4.7-flash', name: 'GLM-4.7 Flash', provider: 'Zhipu AI',
+    minVram: 5, recVram: 8, minRam: 16, quant: 'Q4', size: '~6GB',
+    desc: '30B MoE 30B급 최강, 한국어 강점, Apache 2.0',
+    tags: ['한국어', '코딩', '대화', '요약', '추론'],
+    ollamaCmd: 'ollama pull glm-4.7-flash', ollamaUrl: `${OLLAMA_BASE}glm-4.7-flash`, isNew: true,
+  },
+  {
     id: 'qwen3-14b', name: 'Qwen 3 14B', provider: 'Alibaba',
     minVram: 8, recVram: 10, minRam: 16, quant: 'Q4', size: '~9GB',
     desc: '2026 최고 올라운더, GPT-4급 성능',
@@ -192,6 +213,13 @@ export const LOCAL_MODELS: LocalModel[] = [
   },
 
   // ─── 대형 (16-24GB VRAM) ───
+  {
+    id: 'deepseek-v3.2', name: 'DeepSeek V3.2', provider: 'DeepSeek',
+    minVram: 16, recVram: 22, minRam: 32, quant: 'Q4', size: '~22GB',
+    desc: '685B MoE(37B 활성), GPT-5급 성능, MIT 라이선스',
+    tags: ['한국어', '코딩', '대화', '요약', '추론'],
+    ollamaCmd: 'ollama pull deepseek-v3.2', ollamaUrl: `${OLLAMA_BASE}deepseek-v3.2`, isNew: true,
+  },
   {
     id: 'gemma3-27b', name: 'Gemma 3 27B', provider: 'Google',
     minVram: 12, recVram: 16, minRam: 24, quant: 'Q4', size: '~16GB',

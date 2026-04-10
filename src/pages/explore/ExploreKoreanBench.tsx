@@ -22,9 +22,9 @@ const BENCHMARKS = [
 
 const DATA: KoreanBench[] = [
   {
-    name: "GPT-5", company: "OpenAI", logoId: "openai", color: "#10b981",
-    scores: { korean: 94.2, kornli: 92.8, korsts: 88.5, kmmlu: 85.3, kobest: 91.7 },
-    koreanGrade: "A+", notes: ["한국어 생성 능력 매우 우수", "문맥 이해 뛰어남", "높은 가격이 단점"],
+    name: "GPT-5.4", company: "OpenAI", logoId: "openai", color: "#10b981",
+    scores: { korean: 95.1, kornli: 93.5, korsts: 89.2, kmmlu: 86.8, kobest: 92.5 },
+    koreanGrade: "A+", notes: ["한국어 생성 능력 최상위", "문맥 이해 뛰어남", "SWE-bench 62.3% 1위"],
   },
   {
     name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", color: "#f59e0b",
@@ -39,7 +39,7 @@ const DATA: KoreanBench[] = [
   {
     name: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", color: "#6366f1",
     scores: { korean: 88.0, kornli: 85.2, korsts: 80.5, kmmlu: 78.0, kobest: 84.3 },
-    koreanGrade: "A", notes: ["추론 과정에서 중국어 혼용 가능성", "가격 대비 훌륭한 성능"],
+    koreanGrade: "A", notes: ["가격 대비 훌륭한 성능", "685B MoE 구조"],
   },
   {
     name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", color: "#8b5cf6",
@@ -47,9 +47,9 @@ const DATA: KoreanBench[] = [
     koreanGrade: "A", notes: ["중국 AI 중 한국어 강점", "무료 API 제공"],
   },
   {
-    name: "GPT-5 Mini", company: "OpenAI", logoId: "openai", color: "#10b981",
-    scores: { korean: 89.5, kornli: 87.0, korsts: 82.3, kmmlu: 79.5, kobest: 86.0 },
-    koreanGrade: "A", notes: ["가성비 최고 수준", "GPT-5와 유사한 한국어 품질"],
+    name: "GPT-5.4 mini", company: "OpenAI", logoId: "openai", color: "#10b981",
+    scores: { korean: 90.2, kornli: 87.5, korsts: 83.0, kmmlu: 80.2, kobest: 86.8 },
+    koreanGrade: "A", notes: ["가성비 최고 수준", "GPT-5.4와 유사한 한국어 품질"],
   },
   {
     name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", color: "#f97316",
@@ -62,9 +62,9 @@ const DATA: KoreanBench[] = [
     koreanGrade: "A+", notes: ["Opus 대비 95% 한국어 성능", "가격 효율 우수"],
   },
   {
-    name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", color: "#6366f1",
-    scores: { korean: 84.0, kornli: 80.5, korsts: 75.8, kmmlu: 72.5, kobest: 80.0 },
-    koreanGrade: "B+", notes: ["초저가 한국어 옵션", "기본적인 대화에 적합"],
+    name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", color: "#818cf8",
+    scores: { korean: 88.5, kornli: 85.8, korsts: 81.2, kmmlu: 78.5, kobest: 85.0 },
+    koreanGrade: "A", notes: ["가격 대비 최강 성능", "GPT-5.4 수준", "685B MoE 구조"],
   },
   {
     name: "Llama 3.3 70B", company: "Meta", logoId: "meta", color: "#64748b",

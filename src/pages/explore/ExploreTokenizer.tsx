@@ -3,16 +3,15 @@ import { logoIdToPath } from "../../lib/logoUtils";
 
 // Approximate token counts per model family (characters per token ratio)
 const MODEL_TOKENIZERS = [
-  { id: "gpt-5", name: "GPT-5", company: "OpenAI", logoId: "openai", charPerToken: 2.8, encoding: "cl100k_base", isNew: true },
-  { id: "gpt-5-mini", name: "GPT-5 Mini", company: "OpenAI", logoId: "openai", charPerToken: 2.8, encoding: "cl100k_base" },
-  { id: "gpt-5-nano", name: "GPT-5 Nano", company: "OpenAI", logoId: "openai", charPerToken: 2.9, encoding: "o200k_base" },
+  { id: "gpt-5.4", name: "GPT-5.4", company: "OpenAI", logoId: "openai", charPerToken: 2.8, encoding: "o200k_base", isNew: true },
+  { id: "gpt-5.4-mini", name: "GPT-5.4 mini", company: "OpenAI", logoId: "openai", charPerToken: 2.8, encoding: "o200k_base" },
+  { id: "gpt-5.4-nano", name: "GPT-5.4 nano", company: "OpenAI", logoId: "openai", charPerToken: 2.9, encoding: "o200k_base" },
   { id: "claude-opus", name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", charPerToken: 3.0, encoding: "claude-3" },
   { id: "claude-sonnet", name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", charPerToken: 3.0, encoding: "claude-3" },
   { id: "gemini-pro", name: "Gemini 3.1 Pro", company: "Google", logoId: "google", charPerToken: 2.6, encoding: "gemini" },
   { id: "gemini-flash", name: "Gemini 2.5 Flash", company: "Google", logoId: "google", charPerToken: 2.6, encoding: "gemini" },
   { id: "grok-3", name: "Grok 3", company: "xAI", logoId: "xai", charPerToken: 2.8, encoding: "tiktoken-v2" },
-  { id: "deepseek-r1", name: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", charPerToken: 2.2, encoding: "deepseek" },
-  { id: "deepseek-v3", name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", charPerToken: 2.2, encoding: "deepseek" },
+  { id: "deepseek-v3.2", name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", charPerToken: 2.2, encoding: "deepseek", isNew: true },
   { id: "qwen3", name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", charPerToken: 1.8, encoding: "qwen" },
   { id: "glm5", name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", charPerToken: 2.0, encoding: "glm" },
   { id: "mimo", name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", charPerToken: 2.1, encoding: "mimo" },
@@ -47,7 +46,7 @@ function CompanyLogo({ logoId, name }: { logoId?: string; name: string }) {
 export default function ExploreTokenizer() {
   const [text, setText] = useState(SAMPLE_TEXTS[0].text);
   const [selectedModels, setSelectedModels] = useState<string[]>([
-    "gpt-5", "claude-opus", "gemini-pro", "deepseek-r1", "qwen3", "glm5"
+    "gpt-5.4", "claude-opus", "gemini-pro", "deepseek-v3.2", "qwen3", "glm5"
   ]);
 
   const toggleModel = (id: string) => {

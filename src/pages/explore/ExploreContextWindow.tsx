@@ -11,13 +11,12 @@ interface ContextModel {
 }
 
 const MODELS: ContextModel[] = [
-  { name: "GPT-5", company: "OpenAI", logoId: "openai", tokens: 128000, color: "#10b981", isNew: true },
-  { name: "GPT-5 Mini", company: "OpenAI", logoId: "openai", tokens: 128000, color: "#34d399" },
+  { name: "GPT-5.4", company: "OpenAI", logoId: "openai", tokens: 270000, color: "#10b981", isNew: true },
+  { name: "GPT-5.4 mini", company: "OpenAI", logoId: "openai", tokens: 270000, color: "#34d399" },
   { name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", tokens: 200000, color: "#f59e0b" },
   { name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", tokens: 200000, color: "#fbbf24" },
   { name: "Gemini 3.1 Pro", company: "Google", logoId: "google", tokens: 1048576, color: "#3b82f6", isNew: true },
   { name: "Gemini 2.5 Flash", company: "Google", logoId: "google", tokens: 1048576, color: "#60a5fa" },
-  { name: "DeepSeek R1", company: "DeepSeek", logoId: "deepseek", tokens: 128000, color: "#6366f1" },
   { name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", tokens: 128000, color: "#818cf8", isNew: true },
   { name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", tokens: 128000, color: "#f97316" },
   { name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", tokens: 1048576, color: "#ec4899", isNew: true },

@@ -23,7 +23,7 @@ const LOGO_MAP: Record<string, string> = {
   luma: "aa_luma.svg",
   pika: "pika.png",
   skywork: "aa_skywork.svg",
-  ltx: "ltx.png",
+  ltx: "aa_ltx.svg",
   stability: "stability.png",
   bfl: "aa_bfl.svg",
   ideogram: "aa_ideogram.svg",

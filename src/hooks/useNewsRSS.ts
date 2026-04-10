@@ -79,7 +79,8 @@ export function useNewsRSS() {
       }
 
       if (data?.updatedAtKST) {
-        setLastUpdated(new Date(data.updatedAtKST));
+        const d = new Date(data.updatedAtKST);
+        if (!isNaN(d.getTime())) setLastUpdated(d);
       }
     } catch {
       setError(true);

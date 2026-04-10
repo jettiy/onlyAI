@@ -66,6 +66,7 @@ export default function App() {
             <Route path="/explore/tokenizer" element={<ExploreTokenizer />} />
             <Route path="/explore/prompt-bench" element={<ExplorePromptBench />} />
             <Route path="/explore/context-window" element={<ExploreContextWindow />} />
+            <Route path="/video" element={<Navigate to="/video/compare" replace />} />
             <Route path="/video/timeline" element={<VideoTimeline />} />
             <Route path="/video/compare" element={<VideoCompare />} />
             <Route path="/image" element={<ImageCompare />} />

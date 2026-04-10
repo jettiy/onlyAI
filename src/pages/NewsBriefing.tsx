@@ -56,12 +56,13 @@ export default function NewsBriefing() {
   }
 
   const formatDate = (d: string) => {
+    if (!d) return '';
+    const dd = new Date(d);
+    if (isNaN(dd.getTime())) return d;
     if (d === today) return '오늘';
-    const diff = Math.floor((new Date(today).getTime() - new Date(d).getTime()) / 86400000);
+    const diff = Math.floor((Date.now() - dd.getTime()) / 86400000);
     if (diff === 1) return '어제';
-    try {
-      return new Date(d).toLocaleDateString('ko-KR', { month: 'short', day: 'numeric', weekday: 'short' });
-    } catch { return d; }
+    return dd.toLocaleDateString('ko-KR', { month: 'short', day: 'numeric', weekday: 'short' });
   };
 
   // Sidebar: category + source items

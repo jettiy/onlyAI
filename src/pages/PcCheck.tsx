@@ -539,6 +539,7 @@ function ModelCard({ model, vram }: { model: LocalModel; vram: number }) {
           <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${tier.color} bg-white/80 dark:bg-black/20`}>{tier.label}</span>
           <h3 className="text-sm font-bold text-gray-900 dark:text-white">{model.name}</h3>
           <span className="text-[10px] text-gray-400">{model.provider}</span>
+          {model.isNew && <span className="text-[10px] px-1.5 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full font-bold">NEW</span>}
         </div>
         <span className="text-xs text-gray-400 font-mono">{model.size}</span>
       </div>
@@ -548,10 +549,18 @@ function ModelCard({ model, vram }: { model: LocalModel; vram: number }) {
           <span key={t} className="text-[10px] px-2 py-0.5 bg-black/5 dark:bg-white/10 rounded-full text-gray-600 dark:text-gray-400">#{t}</span>
         ))}
       </div>
-      <div className="flex gap-4 text-[10px] text-gray-400">
+      <div className="flex gap-4 text-[10px] text-gray-400 mb-3">
         <span>VRAM: 최소 {model.minVram}GB / 권장 {model.recVram}GB</span>
         <span>RAM: 최소 {model.minRam}GB</span>
         <span>양자화: {model.quant}</span>
+      </div>
+      {/* Ollama 실행 버튼 */}
+      <div className="flex items-center gap-2">
+        <code className="flex-1 text-[10px] bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded font-mono truncate">{model.ollamaCmd}</code>
+        <a href={model.ollamaUrl} target="_blank" rel="noopener noreferrer"
+          className="px-2.5 py-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-[10px] font-bold hover:opacity-80 transition-opacity whitespace-nowrap">
+          Ollama에서 실행 →
+        </a>
       </div>
     </div>
   );

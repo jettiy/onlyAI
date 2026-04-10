@@ -8,21 +8,24 @@ interface ContextModel {
   tokens: number;
   color: string;
   isNew?: boolean;
+  sourceUrl: string;
 }
 
 const MODELS: ContextModel[] = [
-  { name: "GPT-5.4", company: "OpenAI", logoId: "openai", tokens: 270000, color: "#10b981", isNew: true },
-  { name: "GPT-5.4 mini", company: "OpenAI", logoId: "openai", tokens: 270000, color: "#34d399" },
-  { name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", tokens: 200000, color: "#f59e0b" },
-  { name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", tokens: 200000, color: "#fbbf24" },
-  { name: "Gemini 3.1 Pro", company: "Google", logoId: "google", tokens: 1048576, color: "#3b82f6", isNew: true },
-  { name: "Gemini 2.5 Flash", company: "Google", logoId: "google", tokens: 1048576, color: "#60a5fa" },
-  { name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", tokens: 128000, color: "#818cf8", isNew: true },
-  { name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", tokens: 128000, color: "#f97316" },
-  { name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", tokens: 1048576, color: "#ec4899", isNew: true },
-  { name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", tokens: 200000, color: "#8b5cf6" },
-  { name: "Kimi K2.5", company: "Moonshot", logoId: "moonshot", tokens: 262144, color: "#14b8a6" },
-  { name: "MiniMax M2.7", company: "MiniMax", logoId: "minimax", tokens: 128000, color: "#7c3aed", isNew: true },
+  { name: "GPT-5.4", company: "OpenAI", logoId: "openai", tokens: 1000000, color: "#10b981", isNew: true, sourceUrl: "https://openai.com/index/introducing-gpt-5-4/" },
+  { name: "GPT-5.4 mini", company: "OpenAI", logoId: "openai", tokens: 1000000, color: "#34d399", sourceUrl: "https://openai.com/index/introducing-gpt-5-4/" },
+  { name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", tokens: 200000, color: "#f59e0b", sourceUrl: "https://docs.anthropic.com/en/docs/about-claude/models" },
+  { name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", tokens: 200000, color: "#fbbf24", sourceUrl: "https://docs.anthropic.com/en/docs/about-claude/models" },
+  { name: "Gemini 3.1 Pro", company: "Google", logoId: "google", tokens: 1048576, color: "#3b82f6", isNew: true, sourceUrl: "https://ai.google.dev/gemini-api/docs/models" },
+  { name: "Gemini 2.5 Flash", company: "Google", logoId: "google", tokens: 1048576, color: "#60a5fa", sourceUrl: "https://ai.google.dev/gemini-api/docs/models" },
+  { name: "DeepSeek V3.2", company: "DeepSeek", logoId: "deepseek", tokens: 128000, color: "#818cf8", isNew: true, sourceUrl: "https://api-docs.deepseek.com/" },
+  { name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", tokens: 128000, color: "#f97316", sourceUrl: "https://qwen.readthedocs.io/en/latest/" },
+  { name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", tokens: 1000000, color: "#ec4899", isNew: true, sourceUrl: "https://mimo.xiaomi.com/mimo-v2-pro" },
+  { name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", tokens: 200000, color: "#8b5cf6", sourceUrl: "https://glm-5.org/" },
+  { name: "GLM-5.1", company: "Zhipu AI", logoId: "zhipu", tokens: 200000, color: "#a78bfa", isNew: true, sourceUrl: "https://glm-5.org/" },
+  { name: "Kimi K2.5", company: "Moonshot", logoId: "moonshot", tokens: 262144, color: "#14b8a6", isNew: true, sourceUrl: "https://kimi.moonshot.cn/" },
+  { name: "MiniMax M2.7", company: "MiniMax", logoId: "minimax", tokens: 128000, color: "#7c3aed", isNew: true, sourceUrl: "https://www.minimaxi.com/" },
+  { name: "Nemotron 3 Super", company: "NVIDIA", logoId: "nvidia", tokens: 128000, color: "#06b6d4", isNew: true, sourceUrl: "https://build.nvidia.com/" },
 ];
 
 const REAL_WORLD = [
@@ -213,6 +216,23 @@ export default function ExploreContextWindow() {
         <p className="text-xs text-blue-600 dark:text-blue-400 leading-relaxed">
           • 128K는 대학 전공책 1권 + 여유. 소설책 반 권 정도로 이해하기 쉬운 크기예요.
         </p>
+      </div>
+
+      {/* Sources */}
+      <div className="bg-gray-50 dark:bg-gray-900 rounded-xl px-4 py-3 border border-gray-200 dark:border-gray-800 space-y-2">
+        <p className="text-xs font-semibold text-gray-700 dark:text-gray-300">📋 데이터 출처</p>
+        <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-relaxed">
+          컨텍스트 윈도우 데이터는 각 AI 회사의 공식 문서를 기준으로 합니다.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
+          {MODELS.map(m => (
+            <a key={m.name} href={m.sourceUrl} target="_blank" rel="noopener noreferrer"
+              className="text-[10px] text-blue-500 hover:underline truncate block">
+              {m.name} → 공식 문서
+            </a>
+          ))}
+        </div>
+        <p className="text-[10px] text-gray-400">마지막 업데이트: 2026-04-11</p>
       </div>
     </div>
   );

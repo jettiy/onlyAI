@@ -55,8 +55,9 @@ function parseSpecsText(text: string): { cpu: string; gpu: string; ram: number }
 // WebGPU로 GPU 정보 감지
 async function detectGpuViaWebGPU(): Promise<{ name: string; vram?: number } | null> {
   try {
-    if (!navigator.gpu) return null;
-    const adapter = await navigator.gpu.requestAdapter();
+    const nav = navigator as any;
+    if (!nav.gpu) return null;
+    const adapter = await nav.gpu.requestAdapter();
     if (!adapter) return null;
     const info = (adapter as any).info;
     if (!info) return null;

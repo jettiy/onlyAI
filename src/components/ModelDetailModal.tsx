@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CompanyLogo } from "./CompanyLogo";
 import { tierColors, tierLabels, type AIModel } from "../data/models";
 
-type Model = AIModel & { cachedInputPrice?: number | null };
-
 interface ModelDetailModalProps {
-  model: Model;
+  model: AIModel;
   onClose: () => void;
 }
 
@@ -16,9 +14,7 @@ const formatPrice = (price?: number | null) => {
 };
 
 export default function ModelDetailModal({ model, onClose }: ModelDetailModalProps) {
-  const [isDark] = useState(
-    () => typeof document !== "undefined" && document.body.classList.contains("dark")
-  );
+  const [isDark] = useState(() => document.documentElement.classList.contains('dark'));
 
   const inputPriceValue = model.inputPrice ?? 0;
   const outputPriceValue = model.outputPrice ?? 0;

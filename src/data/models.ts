@@ -23,6 +23,7 @@ export interface AIModel {
   useCases: string[];
   openRouterSlug?: string;
   sourceUrl: string;
+  cachedInputPrice?: number | null;
   url?: string;
   updatedAt: string;
 }

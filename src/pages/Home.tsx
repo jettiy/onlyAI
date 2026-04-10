@@ -91,11 +91,8 @@ const SECTIONS = [
   },
 ];
 
-const TOP_MODELS = [
-  { name: 'GPT-5.4', companyId: 'openai', tagline: '가장 강력한 AI, 코딩·에이전트에 최적화' },
-  { name: 'Claude Sonnet 4.6', companyId: 'anthropic', tagline: '균형잡힌 성능, 1M 컨텍스트' },
-  { name: 'Gemini 2.5 Flash', companyId: 'google', tagline: '가성비 최고, 빠른 응답 속도' },
-];
+const TOP_MODEL_IDS = ['gpt-5.4', 'claude-sonnet-4.6', 'gemini-2.5-flash'];
+const TOP_MODELS = TOP_MODEL_IDS.map(id => models.find(m => m.id === id)).filter(Boolean) as typeof models;
 
 // 랜덤 추천 모델 2개
 const featuredModels = models.filter(m => m.isFeatured);
@@ -166,7 +163,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {TOP_MODELS.map(model => {
-                const displayName = Object.entries(COMPANY_LOGO).find(([, value]) => value === model.companyId)?.[0] ?? model.companyId;
+                const displayName = Object.entries(COMPANY_LOGO).find(([, value]) => value === model.companyId)?.[0] ?? model.company;
                 return (
                   <div
                     key={model.name}
@@ -179,7 +176,7 @@ export default function Home() {
                       </span>
                       <div className="min-w-0">
                         <p className="text-sm font-semibold text-white truncate">{model.name}</p>
-                        <p className="text-[11px] text-gray-400 truncate">{model.tagline}</p>
+                        <p className="text-[11px] text-gray-400 truncate">{model.strengths?.[0] ?? model.description.slice(0, 30)}</p>
                       </div>
                     </div>
                     <Link to="/explore/compare" className="mt-2 inline-flex text-[11px] text-blue-300 hover:text-blue-200">

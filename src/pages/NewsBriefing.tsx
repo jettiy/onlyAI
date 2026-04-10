@@ -326,11 +326,13 @@ export default function NewsBriefing() {
                           <span className="text-[10px] text-gray-400">{item.source}</span>
                         </div>
                         <h4 className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
-                          {item.title}
+                          {item.titleKo || item.title}
                         </h4>
-                        {item.summary && (
+                        {item.summaryKo ? (
+                          <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-2">{item.summaryKo}</p>
+                        ) : item.summary ? (
                           <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-2">{item.summary}</p>
-                        )}
+                        ) : null}
                       </div>
                     </div>
                   </a>
@@ -435,11 +437,13 @@ export default function NewsBriefing() {
                         <span className="text-[10px] text-gray-400">{item.source}</span>
                       </div>
                       <h4 className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
-                        {item.title}
+                        {item.titleKo || item.title}
                       </h4>
-                      {item.summary && (
+                      {item.summaryKo ? (
+                        <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-2">{item.summaryKo}</p>
+                      ) : item.summary ? (
                         <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-2">{item.summary}</p>
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 </a>

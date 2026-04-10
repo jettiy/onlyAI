@@ -204,6 +204,57 @@ async function fetchGithubTrending(): Promise<any[]> {
   }
 }
 
+// ─── GLM-5 Turbo 번역 ───────────────────────────────────
+interface NewsTranslateItem {
+  id: string;
+  title: string;
+  summary: string;
+  lang: string;
+}
+
+async function translateNewsItems(items: NewsTranslateItem[]): Promise<Map<string, { title: string; summary: string }>> {
+  const apiKey = (typeof process !== 'undefined' && process.env?.ZAI_API_KEY) ?? '';
+  if (!apiKey) return new Map();
+
+  // 영어/중국어 기사만 필터링 (최대 15개)
+  const toTranslate = items.filter(i => i.lang === 'en' || i.lang === 'zh').slice(0, 15);
+  if (toTranslate.length === 0) return new Map();
+
+  const prompt = `다음 AI 뉴스 기사를 한국어로 자연스럽게 번역해줘. 제목은 간결하게, 요약은 2~3문장으로 비전공자도 이해할 수 있게.
+JSON 배열로 출력 (코드블록 금지):
+[{"id":"원본id","title":"한국어 제목","summary":"한국어 요약"}]
+
+기사:
+${toTranslate.map((item, i) => `[${i + 1}] ID:${item.id}
+TITLE: ${item.title}
+SUMMARY: ${item.summary}`).join('\n---\n')}`;
+
+  try {
+    const res = await fetch('https://api.z.ai/api/paas/v4/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+      body: JSON.stringify({ model: 'glm-5-turbo', messages: [{ role: 'user', content: prompt }], temperature: 0.3, max_tokens: 4000 }),
+      signal: AbortSignal.timeout(30000),
+    });
+    if (!res.ok) return new Map();
+    const data = await res.json();
+    const content: string = data?.choices?.[0]?.message?.content ?? '';
+    const jsonStr = content.replace(/```json?\s*/gi, '').replace(/```/g, '').trim();
+    const parsed = JSON.parse(jsonStr);
+    if (!Array.isArray(parsed)) return new Map();
+    const map = new Map<string, { title: string; summary: string }>();
+    for (const item of parsed) {
+      if (item.id && (item.title || item.summary)) {
+        map.set(item.id, { title: item.title ?? '', summary: item.summary ?? '' });
+      }
+    }
+    return map.size > 0 ? map : new Map();
+  } catch (err) {
+    console.error('GLM news translation failed:', err instanceof Error ? err.message : err);
+    return new Map();
+  }
+}
+
 let cachedResponse: { data: string; timestamp: number } | null = null;
 
 export default async function handler(request: Request) {
@@ -239,6 +290,16 @@ export default async function handler(request: Request) {
 
     // Sort by date desc
     uniqueRSS.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    // Translate non-Korean news with GLM-5 Turbo
+    const translated = await translateNewsItems(uniqueRSS.map(i => ({ id: i.id, title: i.title, summary: i.summary, lang: i.lang })));
+    for (const item of uniqueRSS) {
+      const t = translated.get(item.id);
+      if (t) {
+        if (t.title) item.titleKo = t.title;
+        if (t.summary) item.summaryKo = t.summary;
+      }
+    }
 
     const sourceStats: Record<string, number> = {};
     newsResults.forEach((r, i) => {

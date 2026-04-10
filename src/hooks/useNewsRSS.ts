@@ -18,6 +18,8 @@ export interface NewsItem {
   isGithub?: boolean;
   sourceLang?: string;
   sourceFlag?: string;
+  titleKo?: string;
+  summaryKo?: string;
 }
 
 export type NewsCategory =

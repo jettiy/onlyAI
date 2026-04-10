@@ -25,7 +25,7 @@ const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; tip: string;
 const LOGO_MAP: Record<string, string> = {
   openai: "aa_openai.svg",
   anthropic: "aa_anthropic.svg",
-  google: "aa_google.svg",
+  google: "aa_google_mono.svg",
   meta: "aa_meta.svg",
   xai: "aa_xai.svg",
   deepseek: "aa_deepseek.svg",

@@ -84,8 +84,8 @@ export default function ExploreVideoCompare() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
-              {filtered.map(m => (
-                <tr key={m.id} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+              {filtered.map((m, idx) => (
+                <tr key={m.id} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${idx % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-1.5">
                       {m.logoId && (() => { const s = logoIdToPath(m.logoId); return s ? <img src={s} alt={m.company} className="w-4 h-4 rounded-sm object-contain" loading="lazy" /> : <span className="text-xs text-gray-400">{m.company[0]}</span>; })()}

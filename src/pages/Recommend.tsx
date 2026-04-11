@@ -135,7 +135,7 @@ export default function RecommendPage() {
           <span className="text-lg">🎯</span>
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">AI 추천 결과</h1>
         </div>
-        <p className="text-xs text-gray-400 mb-3">데이터 기준일: 2026년 4월</p>
+        <p className="text-xs text-gray-400 mb-3">데이터 기준일: 2026-04-11 (정기 업데이트)</p>
         <div className="flex flex-wrap gap-2">
           {useCases.length > 0 ? useCases.map(uc => (
             <span key={uc} className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-blue-700 dark:text-blue-400 rounded-lg font-medium shadow-sm">
@@ -176,7 +176,7 @@ export default function RecommendPage() {
       <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-800">
         <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
           💡 추천 점수는 용도 매칭(40점), 가격 적합도(30점), 한국어 성능(15점), 개인정보 보호(15점)로 계산됩니다.
-          가격은 2026년 4월 기준이며 변경될 수 있습니다.
+          가격은 2026-04-11 기준이며 변경될 수 있습니다.
         </p>
       </div>
     </div>

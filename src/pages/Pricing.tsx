@@ -261,7 +261,7 @@ export default function Pricing() {
                 {paged.map((row) => {
                   const logoSrc = providerLogoMap[row.provider];
                   return (
-                    <tr key={row.model} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    <tr key={row.model} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${paged.indexOf(row) % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-2">
                           {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
@@ -310,8 +310,8 @@ export default function Pricing() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
-                {prices.filter(p => p.cacheRead).sort((a, b) => a.cacheRead! - b.cacheRead!).map(row => (
-                  <tr key={row.model}>
+                {prices.filter(p => p.cacheRead).sort((a, b) => a.cacheRead! - b.cacheRead!).map((row, idx) => (
+                  <tr key={row.model} className={idx % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}>
                     <td className="px-3 py-2 font-medium text-gray-900 dark:text-white">{row.model}</td>
                     <td className="px-3 py-2 text-right font-mono text-gray-600">${row.input}</td>
                     <td className="px-3 py-2 text-right font-mono text-emerald-600 font-bold">${row.cacheRead}</td>

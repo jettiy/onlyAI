@@ -297,7 +297,7 @@ export default function Benchmarks() {
             </thead>
             <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
               {DATA.slice((summaryPage - 1) * ITEMS_PER_PAGE, summaryPage * ITEMS_PER_PAGE).map((m) => (
-                <tr key={m.name} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                <tr key={m.name} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${DATA.indexOf(m) % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
                   <td className="px-4 py-2.5">
                     <div className="flex items-center gap-2">
                       <LogoImg logoId={m.logoId} name={m.company} size={16} />

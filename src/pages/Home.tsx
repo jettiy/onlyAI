@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
 import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
-import { CompanyLogo, COMPANY_LOGO } from '../components/CompanyLogo';
+import { CompanyLogo } from '../components/CompanyLogo';
 import ModelDetailModal from '../components/ModelDetailModal';
 
 const CAT_COLORS: Record<string, { bg: string; text: string; bar: string }> = {
@@ -163,7 +163,6 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {TOP_MODELS.map(model => {
-                const displayName = Object.entries(COMPANY_LOGO).find(([, value]) => value === model.companyId)?.[0] ?? model.company;
                 return (
                   <div
                     key={model.name}
@@ -172,7 +171,7 @@ export default function Home() {
                   >
                     <div className="flex items-center gap-2">
                       <span className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center">
-                        <CompanyLogo company={displayName} size={24} />
+                        <CompanyLogo company={model.company} size={24} />
                       </span>
                       <div className="min-w-0">
                         <p className="text-sm font-semibold text-white truncate">{model.name}</p>

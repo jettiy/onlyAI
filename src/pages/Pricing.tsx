@@ -355,6 +355,159 @@ export default function Pricing() {
           ))}
         </div>
       )}
+
+      {/* Token cost calculator */}
+      {tab === 'calc' && <PriceCalculator prices={prices} />}
+    </div>
+  );
+}
+
+/* ── 가격 계산기 컴포넌트 ── */
+function PriceCalculator({ prices }: { prices: PriceRow[] }) {
+  const [inputTokens, setInputTokens] = useState<string>('');
+  const [outputTokens, setOutputTokens] = useState<string>('');
+  const inputNum = Number(inputTokens) || 0;
+  const outputNum = Number(outputTokens) || 0;
+
+  const calculations = useMemo(() => {
+    if (inputNum === 0 && outputNum === 0) return [];
+    return prices
+      .map(p => ({
+        ...p,
+        monthlyCost: (inputNum / 1_000_000) * p.input + (outputNum / 1_000_000) * p.output,
+      }))
+      .sort((a, b) => a.monthlyCost - b.monthlyCost);
+  }, [inputNum, outputNum, prices]);
+
+  const maxCost = calculations.length > 0 ? calculations[calculations.length - 1].monthlyCost : 1;
+
+  return (
+    <div className="space-y-5">
+      {/* Input */}
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
+        <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">🔢 월간 토큰 사용량 입력</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1.5">입력 토큰 수</label>
+            <input
+              type="number"
+              min="0"
+              placeholder="월간 입력 토큰 수"
+              value={inputTokens}
+              onChange={e => setInputTokens(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            {inputNum > 0 && (
+              <p className="text-[10px] text-gray-400 mt-1">
+                ≈ {(inputNum / 1_000_000).toFixed(2)}M 토큰
+              </p>
+            )}
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1.5">출력 토큰 수</label>
+            <input
+              type="number"
+              min="0"
+              placeholder="월간 출력 토큰 수"
+              value={outputTokens}
+              onChange={e => setOutputTokens(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            {outputNum > 0 && (
+              <p className="text-[10px] text-gray-400 mt-1">
+                ≈ {(outputNum / 1_000_000).toFixed(2)}M 토큰
+              </p>
+            )}
+          </div>
+        </div>
+        {(inputNum > 0 || outputNum > 0) && (
+          <div className="mt-3 flex items-center gap-2 text-xs text-gray-400">
+            <span>총 {(inputNum + outputNum).toLocaleString()} 토큰</span>
+            <span>·</span>
+            <span>입력 {(inputNum / 1_000_000).toFixed(2)}M + 출력 {(outputNum / 1_000_000).toFixed(2)}M</span>
+          </div>
+        )}
+      </div>
+
+      {/* Results */}
+      {calculations.length > 0 ? (
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+          <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">💰 월간 예상 비용 (저렴한 순)</h2>
+            <p className="text-[10px] text-gray-400 mt-0.5">* 가격은 $/1M 토큰 기준</p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-8">#</th>
+                  <th className="text-left px-3 py-3 font-semibold text-gray-500 dark:text-gray-400">모델</th>
+                  <th className="text-right px-3 py-3 font-semibold text-gray-500 dark:text-gray-400">입력 단가</th>
+                  <th className="text-right px-3 py-3 font-semibold text-gray-500 dark:text-gray-400">출력 단가</th>
+                  <th className="text-right px-4 py-3 font-semibold text-gray-700 dark:text-gray-300">월간 비용</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+                {calculations.map((row, idx) => {
+                  const barPct = maxCost > 0 ? Math.max((row.monthlyCost / maxCost) * 100, 2) : 0;
+                  const barColor = idx === 0 ? '#22c55e' : idx <= 2 ? '#3b82f6' : '#94a3b8';
+                  return (
+                    <tr key={row.model} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${idx % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
+                      <td className="px-4 py-3 text-xs font-bold text-gray-400">{idx + 1}</td>
+                      <td className="px-3 py-3">
+                        <div className="font-medium text-gray-900 dark:text-white">{row.model}</div>
+                        <div className="text-[10px] text-gray-400">{row.provider}</div>
+                      </td>
+                      <td className="px-3 py-3 text-right font-mono text-gray-600 dark:text-gray-400 text-xs">${row.input}/M</td>
+                      <td className="px-3 py-3 text-right font-mono text-gray-600 dark:text-gray-400 text-xs">${row.output}/M</td>
+                      <td className="px-4 py-3">
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 h-4 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                            <div className="h-full rounded-full" style={{ width: `${barPct}%`, backgroundColor: barColor }} />
+                          </div>
+                          <span className={`font-mono font-bold shrink-0 ${idx === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-900 dark:text-white'}`}>
+                            ${row.monthlyCost < 0.01 ? '<0.01' : row.monthlyCost.toFixed(2)}
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          {calculations.length > 0 && (
+            <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                💡 가장 저렴한 모델: <strong className="text-emerald-600 dark:text-emerald-400">{calculations[0].model}</strong> (${calculations[0].monthlyCost < 0.01 ? '<0.01' : calculations[0].monthlyCost.toFixed(2)}/월)
+                {calculations.length > 1 && (
+                  <> · 가장 비싼 모델: <strong className="text-red-500">{calculations[calculations.length - 1].model}</strong> (${calculations[calculations.length - 1].monthlyCost.toFixed(2)}/월)</>
+                )}
+              </p>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-10 text-center">
+          <div className="text-4xl mb-3">🧮</div>
+          <p className="text-sm text-gray-400">위에 월간 토큰 사용량을 입력하면 모델별 비용이 계산됩니다.</p>
+          <div className="mt-4 flex flex-wrap gap-2 justify-center">
+            {[
+              { label: '소규모 (100K/50K)', input: '100000', output: '50000' },
+              { label: '중간 (1M/500K)', input: '1000000', output: '500000' },
+              { label: '대규모 (10M/5M)', input: '10000000', output: '5000000' },
+            ].map(preset => (
+              <button
+                key={preset.label}
+                onClick={() => { setInputTokens(preset.input); setOutputTokens(preset.output); }}
+                className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-lg text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              >
+                {preset.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

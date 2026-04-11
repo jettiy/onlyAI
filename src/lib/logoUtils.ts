@@ -9,10 +9,10 @@ const LOGO_MAP: Record<string, string> = {
   deepseek: "aa_deepseek.svg",
   minimax: "aa_minimax.svg",
   alibaba: "aa_alibaba.svg",
-  moonshot: "aa_stepfun.svg",
+  moonshot: "aa_moonshot.svg",
   zhipu: "aa_zhipu.svg",
   xiaomi: "aa_xiaomi.svg",
-  mistral: "mistral.jpg",
+  mistral: "aa_mistral.svg",
   cohere: "aa_cohere.svg",
   // Video/Image providers
   klingai: "aa_klingai.svg",
@@ -30,7 +30,15 @@ const LOGO_MAP: Record<string, string> = {
   recraft: "aa_recraft.svg",
   fal: "aa_fal.svg",
   stepfun: "aa_stepfun.svg",
+  nvidia: "aa_nvidia.svg",
+  amazon: "aa_amazon.svg",
+  upstage: "aa_upstage.svg",
 };
+
+// logoId → full path
+export const LOGO_ID_TO_PATH: Record<string, string> = Object.fromEntries(
+  Object.entries(LOGO_MAP).map(([k, v]) => [k, `/logos/${v}`])
+);
 
 // company name → logoId
 const NAME_TO_LOGO: Record<string, string> = {
@@ -51,6 +59,9 @@ const NAME_TO_LOGO: Record<string, string> = {
   "ByteDance(字节跳动)": "bytedance",
   "KlingAI": "klingai",
   "快手(Kuaishou)": "klingai",
+  "快手": "klingai",
+  "阿里巴巴(阿里)": "alibaba",
+  "Skywork AI(快手)": "skywork",
   "PixVerse": "pixverse",
   "Vidu": "vidu",
   "Runway": "runway",
@@ -65,6 +76,9 @@ const NAME_TO_LOGO: Record<string, string> = {
   "Recraft": "recraft",
   "fal": "fal",
   "StepFun": "stepfun",
+  "NVIDIA": "nvidia",
+  "Amazon": "amazon",
+  "Upstage": "upstage",
 };
 
 export const COMPANY_LOGO: Record<string, string> = { ...LOGO_MAP };

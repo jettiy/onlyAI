@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { models, companies } from "../data/models";
+import { LOGO_ID_TO_PATH } from "../lib/logoUtils";
 
 type Answer = {
   step: number;
@@ -130,21 +131,6 @@ function scoreModel(modelId: string, answers: Answer[]): number {
   return score;
 }
 
-const COMPANY_LOGOS: Record<string, string> = {
-  openai: '/logos/openai.png',
-  anthropic: '/logos/anthropic.jpg',
-  google: '/logos/google.png',
-  meta: '/logos/meta.jpg',
-  xai: '/logos/xai.png',
-  minimax: '/logos/minimax.png',
-  deepseek: '/logos/deepseek.png',
-  alibaba: '/logos/alibaba.png',
-  moonshot: '/logos/moonshot.png',
-  xiaomi: '/logos/xiaomi.png',
-  mistral: '/logos/mistral.jpg',
-  cohere: '/logos/cohere.png',
-  zhipu: '/logos/deepseek.png',
-};
 
 const TIER_COLORS: Record<string, string> = {
   flagship: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 border border-violet-200 dark:border-violet-800',
@@ -351,9 +337,9 @@ export default function Quiz() {
                       <span className="text-2xl shrink-0 mt-0.5">{medal}</span>
 
                       {/* Logo */}
-                      {COMPANY_LOGOS[m.companyId] ? (
+                      {LOGO_ID_TO_PATH[m.companyId] ? (
                         <div className="w-8 h-8 rounded-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex-shrink-0 flex items-center justify-center p-0.5 mt-0.5">
-                          <img src={COMPANY_LOGOS[m.companyId]} alt={m.company} className="w-full h-full object-contain"
+                          <img src={LOGO_ID_TO_PATH[m.companyId]} alt={m.company} className="w-full h-full object-contain"
                             onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }} />
                         </div>
                       ) : (

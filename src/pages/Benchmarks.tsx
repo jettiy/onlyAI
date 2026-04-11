@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getLogoUrl } from "../lib/logoUtils";
 
 type BenchmarkKey = "mmlu" | "humaneval" | "math" | "gpqa" | "swe" | "ifeval" | "musr" | "coding";
 
@@ -21,22 +22,6 @@ const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; tip: string;
   { key: "swe",       label: "Aider polyglot", desc: "다언어 코드 편집 성공률 (%)",      tip: "이 점수가 높으면 파이썬뿐 아니라 여러 프로그래밍 언어의 코드를 정확하게 편집할 수 있습니다.", category: "코딩" },
   { key: "musr",      label: "MUSR",       desc: "다단계 추론 정확도 (%)",              tip: "이 점수가 높으면 복잡한 문제를 여러 단계로 나누어 논리적으로 해결하는 능력이 뛰어납니다.", category: "추론" },
 ];
-
-const LOGO_MAP: Record<string, string> = {
-  openai: "aa_openai.svg",
-  anthropic: "aa_anthropic.svg",
-  google: "aa_google_mono.svg",
-  meta: "aa_meta.svg",
-  xai: "aa_xai.svg",
-  deepseek: "aa_deepseek.svg",
-  minimax: "aa_minimax.svg",
-  alibaba: "aa_alibaba.svg",
-  moonshot: "moonshot.png",
-  zhipu: "aa_zhipu.svg",
-  xiaomi: "aa_xiaomi.svg",
-  mistral: "mistral_new.png",
-  cohere: "aa_cohere.svg",
-};
 
 const DATA: ModelBench[] = [
   {
@@ -142,11 +127,11 @@ const DATA: ModelBench[] = [
 ];
 
 function LogoImg({ logoId, name, size = 18 }: { logoId: string; name: string; size?: number }) {
-  const src = LOGO_MAP[logoId];
+  const src = getLogoUrl(logoId);
   if (!src) return <span className="text-sm">🤖</span>;
   return (
     <img
-      src={`/logos/${src}`}
+      src={src}
       alt={name}
       className="rounded-sm object-contain"
       style={{ width: size, height: size }}

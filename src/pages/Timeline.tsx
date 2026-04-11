@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LOGO_ID_TO_PATH } from "../lib/logoUtils";
 
 type TimelineStatus = "released" | "expected" | "rumored";
 
@@ -17,22 +18,6 @@ interface TimelineEvent {
   sourceUrl?: string;
 }
 
-const COMPANY_LOGOS: Record<string, string> = {
-  openai: '/logos/aa_openai.svg',
-  anthropic: '/logos/aa_anthropic.svg',
-  google: '/logos/aa_google_mono.svg',
-  meta: '/logos/aa_meta.svg',
-  xai: '/logos/aa_xai.svg',
-  minimax: '/logos/aa_minimax.svg',
-  deepseek: '/logos/aa_deepseek.svg',
-  alibaba: '/logos/aa_alibaba.svg',
-  moonshot: '/logos/aa_moonshot.svg',
-  xiaomi: '/logos/aa_xiaomi.svg',
-  mistral: '/logos/aa_mistral.svg',
-  zhipu: '/logos/aa_zhipu.svg',
-  nvidia: '/logos/aa_nvidia.svg',
-  amazon: '/logos/aa_amazon.svg',
-};
 
 const STATUS_STYLE: Record<TimelineStatus, { bg: string; text: string; label: string; dot: string }> = {
   released: { bg: "bg-emerald-50 dark:bg-emerald-900/20", text: "text-emerald-600 dark:text-emerald-400", label: "출시됨", dot: "bg-emerald-500" },
@@ -415,10 +400,10 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
             </div>
 
             <div className="flex items-center gap-2 mb-1.5">
-              {COMPANY_LOGOS[event.companyId] && (
+              {LOGO_ID_TO_PATH[event.companyId] && (
                 <div className="w-6 h-6 rounded-md overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex-shrink-0">
                   <img
-                    src={COMPANY_LOGOS[event.companyId]}
+                    src={LOGO_ID_TO_PATH[event.companyId]}
                     alt={event.company}
                     className="w-full h-full object-contain p-[1px]"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}

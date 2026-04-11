@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { recommend, type RecommendResult } from '../lib/recommendEngine';
 import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
-import { CompanyLogo, COMPANY_LOGO } from '../components/CompanyLogo';
+import { CompanyLogo } from '../components/CompanyLogo';
 import { ScoreTooltip } from '../components/ScoreTooltip';
 import { models, companies } from '../data/models';
 
@@ -17,20 +17,16 @@ for (const c of companies) {
 function ResultCard({ result, rank }: { result: RecommendResult; rank: number }) {
   const isTop3 = rank < 3;
   const officialUrl = companyPlaygroundMap.get(result.companyId);
+  const companyName = companies.find(c => c.id === result.companyId)?.name ?? result.companyId;
   return (
     <div className={`bg-white dark:bg-gray-900 rounded-2xl border ${
       rank === 0 ? 'border-blue-400 dark:border-blue-600 ring-2 ring-blue-200 dark:ring-blue-900 shadow-lg' : 'border-gray-200 dark:border-gray-800'
     } p-6 ${isTop3 ? '' : 'opacity-80'}`} style={{"position": "relative"}}>
       <div className="flex items-start gap-4">
         <span className="text-3xl">{MEDALS[rank]}</span>
-          {(() => {
-            const displayName = Object.entries(COMPANY_LOGO).find(([, v]) => v === result.companyId)?.[0] ?? result.companyId;
-            return (
-              <div className="w-10 h-10 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shrink-0 flex items-center justify-center">
-                <CompanyLogo company={displayName} size={40} />
+        <div className="w-10 h-10 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shrink-0 flex items-center justify-center">
+                <CompanyLogo company={companyName} size={40} />
               </div>
-            );
-          })()}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">{result.name}</h3>

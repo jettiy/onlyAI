@@ -3,26 +3,10 @@ import {
   models, companies, tierLabels, tierColors, priceExamples,
   type Region, type ModelTier, type AIModel
 } from "../data/models";
+import { LOGO_ID_TO_PATH } from "../lib/logoUtils";
 
 
 type View = "featured" | "all" | string; // string = companyId
-
-// ── Real company logos (defined at module scope to avoid re-creation) ──
-const COMPANY_LOGOS: Record<string, string> = {
-  openai:    '/logos/openai.png',
-  anthropic: '/logos/anthropic.jpg',
-  google:    '/logos/google.png',
-  meta:      '/logos/meta.jpg',
-  xai:       '/logos/xai.png',
-  minimax:   '/logos/minimax.png',
-  deepseek:  '/logos/deepseek.png',
-  alibaba:   '/logos/alibaba.png',
-  moonshot:  '/logos/moonshot.png',
-  zhipu:     '/logos/zhipu.png',
-  xiaomi:    '/logos/xiaomi.png',
-  mistral:   '/logos/mistral.jpg',
-  cohere:    '/logos/cohere.png',
-};
 
 const regionGroups: { region: Region; flag: string; label: string; subFlags?: string }[] = [
   { region: "us",    flag: "🇺🇸", label: "미국" },
@@ -415,9 +399,9 @@ export default function Models() {
                           )}
                         >
                           <span className="flex items-center gap-2 font-medium">
-                            {COMPANY_LOGOS[company.id] ? (
+                            {LOGO_ID_TO_PATH[company.id] ? (
                               <div className="w-5 h-5 rounded overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex-shrink-0">
-                                <img src={COMPANY_LOGOS[company.id]} alt={company.name} className="w-full h-full object-contain p-[1px]" />
+                                <img src={LOGO_ID_TO_PATH[company.id]} alt={company.name} className="w-full h-full object-contain p-[1px]" />
                               </div>
                             ) : (
                               <span className="text-base">{company.flag}</span>
@@ -596,10 +580,10 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap mb-1">
             {/* Real Logo */}
-            {COMPANY_LOGOS[model.companyId] ? (
+            {LOGO_ID_TO_PATH[model.companyId] ? (
               <div className="w-7 h-7 rounded-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex-shrink-0 flex items-center justify-center p-0.5">
                 <img
-                  src={COMPANY_LOGOS[model.companyId]}
+                  src={LOGO_ID_TO_PATH[model.companyId]}
                   alt={model.company}
                   className="w-full h-full object-contain"
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}

@@ -431,8 +431,8 @@ export const models: AIModel[] = [
     name: 'Gemini 2.5 Flash-Lite',
     company: 'Google', companyId: 'google', region: 'us',
     tier: 'efficient', isFeatured: false,
-    description: '초저가 Google 모델. 입력 $0.10/1M. 1M 컨텍스트.',
-    strengths: ['초저가', '1M 컨텍스트', '빠름', '대량 처리'],
+    description: '초저가 Google 모델. 입력 $0.10/1M. 1M 컨텍스트. ⚠️ 2026년 6월 1일 종료 예정.',
+    strengths: ['초저가', '1M 컨텍스트', '빠름', '⚠️ 6/1 종료'],
     inputPrice: 0.10, outputPrice: 0.40, contextWindow: '1M',
     isLocal: false, isNew: false, releaseDate: '2026-01',
     koreanSupport: 'B',
@@ -534,7 +534,7 @@ export const models: AIModel[] = [
     description: 'M2.5는 M2.7 이전 안정 버전. 197K 컨텍스트. 입력 $0.27/1M. 코딩·에이전트 워크플로 적합.',
     strengths: ['안정성', '코딩', '에이전트', '197K 컨텍스트'],
     inputPrice: 0.27, outputPrice: 0.95, contextWindow: '197K',
-    isLocal: false, isNew: false, releaseDate: '2025-10',
+    isLocal: false, isNew: false, releaseDate: '2026-02',
     koreanSupport: 'B',
     useCases: ['코딩 보조', '에이전트 워크플로', '대량 처리'],
     sourceUrl: 'https://platform.minimax.io/docs/pricing/overview',
@@ -566,7 +566,7 @@ export const models: AIModel[] = [
     tier: 'strong', isFeatured: false,
     description: '추론 전문 모델. 수학·코딩·논리 특화. 입력 $0.55/출력 $2.19. 64K 컨텍스트.',
     strengths: ['추론 전문', '수학', '코딩', '논리'],
-    inputPrice: 0.28, outputPrice: 0.42, contextWindow: '131K',
+    inputPrice: 0.55, outputPrice: 2.19, contextWindow: '131K',
     params: '671B MoE',
     isLocal: false, isNew: false, releaseDate: '2025-01',
     koreanSupport: 'B',
@@ -809,7 +809,7 @@ export const models: AIModel[] = [
     tier: 'efficient', isFeatured: false,
     description: '경량 오픈소스 모델. 입력 $0.1/출력 $0.3. 32K 컨텍스트. 기업 배포 최적화.',
     strengths: ['가성비', '기업 배포', '오픈소스', '빠름'],
-    inputPrice: 0.1, outputPrice: 0.3, contextWindow: '32K',
+    inputPrice: 0.1, outputPrice: 0.3, contextWindow: '128K',
     isLocal: false, isNew: false, releaseDate: '2025-05',
     koreanSupport: 'C',
     useCases: ['기업 챗봇', 'RAG', '비용 절감'],
@@ -867,9 +867,9 @@ export const tierColors: Record<ModelTier, string> = {
 };
 
 export const regionLabels: Record<Region, string> = {
-  us:    '🇺🇸 미국',
-  china: '🇨🇳 중국',
-  other: '🌍 기타',
+  us:    '미국',
+  china: '중국',
+  other: '기타',
 };
 
 // ── 가격 예시 데이터 ────────────────────────────

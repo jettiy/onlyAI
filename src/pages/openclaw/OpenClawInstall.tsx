@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-type InstallType = '' | 'windows' | 'mac' | 'docker';
+type InstallType = '' | 'windows' | 'mac' | 'docker' | 'cloud' | 'server';
 
 type StepBlock = {
   title: string;
@@ -26,22 +26,43 @@ type OptionCard = {
 
 const OPTIONS: OptionCard[] = [
   { id: 'windows', icon: '🪟', title: 'Windows (추천)', subtitle: 'PowerShell로 1분 설치' },
-  { id: 'mac', icon: '', title: 'Mac · Linux', subtitle: '터미널로 간편 설치' },
+  { id: 'mac', icon: '🍎', title: 'Mac / Linux', subtitle: '터미널로 간편 설치' },
   { id: 'docker', icon: '🐳', title: 'Docker', subtitle: '컨테이너로 격리 실행' },
+  { id: 'cloud', icon: '☁️', title: '클라우드 (Managed)', subtitle: '가입만 하면 끝 — 설치 불필요' },
+  { id: 'server', icon: '🖥️', title: '서버 (VPS/VM)', subtitle: 'PM2로 24/7 실행' },
 ];
+
+const NODE_JS_STEP: StepBlock = {
+  title: 'Node.js 설치 (필수 전제조건)',
+  desc: 'OpenClaw는 Node.js v22 이상이 필요합니다. 먼저 설치하세요.',
+  codeBlocks: [
+    { label: '버전 확인 (설치 후)', code: 'node --version' },
+    { label: 'Windows', code: 'https://nodejs.org 에서 LTS 다운로드 (v22+ 권장)' },
+    { label: 'Mac (Homebrew)', code: 'brew install node@22' },
+    { label: 'Linux (Ubuntu/Debian)', code: 'curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -\nsudo apt install -y nodejs' },
+  ],
+  bullets: [
+    'v22+ 이상 필요 — node --version 으로 확인',
+    'Windows: nodejs.org에서 LTS 설치 프로그램 다운로드',
+    'Mac: Homebrew가 없다면 먼저 brew.sh에서 설치',
+    'Linux: 위 curl 명령어로 Nodesource 저장소 추가 후 설치',
+  ],
+  note: '⚠️ npm 권한 문제 시 (Windows): 관리자 PowerShell에서 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser 실행',
+};
 
 const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
   windows: {
     title: 'Windows 설치',
     subtitle: 'PowerShell로 1분 만에 설치합니다.',
     steps: [
+      NODE_JS_STEP,
       {
-        title: 'Install Script Run',
+        title: 'OpenClaw 설치',
         desc: 'PowerShell을 열고 아래 명령어를 붙여넣습니다.',
-        codeBlocks: [{ code: 'iwr -useb https://openclaw.ai/install.ps1 | iex' }],
+        codeBlocks: [{ label: '설치 스크립트', code: 'iwr -useb https://openclaw.ai/install.ps1 | iex' }],
       },
       {
-        title: 'Initial Setup',
+        title: '초기 설정',
         desc: 'AI 제공자를 선택하고 기본 설정을 완료합니다.',
         codeBlocks: [{ code: 'openclaw onboard' }],
         bullets: [
@@ -51,13 +72,13 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
         ],
       },
       {
-        title: 'Start Gateway',
+        title: 'Gateway 실행',
         desc: 'WebUI와 메신저 연동을 위해 Gateway가 필요합니다.',
         codeBlocks: [{ code: 'openclaw gateway start' }],
         note: '모든 기능을 사용하려면 Gateway가 항상 켜져 있어야 합니다.',
       },
       {
-        title: 'Open Dashboard',
+        title: '대시보드 열기',
         desc: '브라우저에서 대시보드를 엽니다.',
         codeBlocks: [{ code: 'openclaw dashboard' }],
       },
@@ -67,32 +88,24 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
     title: 'Mac / Linux 설치',
     subtitle: '터미널에서 빠르게 설치합니다.',
     steps: [
+      NODE_JS_STEP,
       {
-        title: 'Install Script',
+        title: 'OpenClaw 설치',
         desc: '터미널을 열고 아래 명령어를 붙여넣습니다.',
-        codeBlocks: [{ code: 'curl -fsSL https://openclaw.ai/install.sh | bash' }],
+        codeBlocks: [{ label: '설치 스크립트', code: 'curl -fsSL https://openclaw.ai/install.sh | bash' }],
       },
       {
-        title: 'Initial Setup',
+        title: '초기 설정',
         codeBlocks: [{ code: 'openclaw onboard' }],
         bullets: ['ZAI 무료 추천', 'AI 제공자 선택'],
       },
       {
-        title: 'Start Gateway',
+        title: 'Gateway 실행',
         codeBlocks: [{ code: 'openclaw gateway start' }],
       },
       {
-        title: 'Open Dashboard',
+        title: '대시보드 열기',
         codeBlocks: [{ code: 'openclaw dashboard' }],
-      },
-      {
-        title: 'Background Run for Server',
-        desc: '24/7 실행을 위해 PM2를 사용합니다.',
-        codeBlocks: [
-          { code: 'npm install -g pm2' },
-          { code: 'pm2 start openclaw gateway start --name openclaw' },
-          { code: 'pm2 save && pm2 startup' },
-        ],
       },
     ],
   },
@@ -101,14 +114,17 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
     subtitle: '컨테이너로 격리해 실행합니다.',
     steps: [
       {
-        title: 'Install Docker',
-        desc: 'Docker Desktop이 필요합니다.',
-        bullets: ['Windows/Mac: docker.com에서 다운로드', 'Linux: sudo apt install docker.io'],
+        title: 'Docker 설치',
+        desc: 'Docker가 필요합니다.',
+        bullets: ['Windows/Mac: docker.com에서 Docker Desktop 다운로드', 'Linux: sudo apt install docker.io && sudo usermod -aG docker $USER'],
       },
+      NODE_JS_STEP,
       {
-        title: 'Create docker-compose.yml',
+        title: 'docker-compose.yml 작성',
+        desc: '아래 내용을 docker-compose.yml로 저장합니다.',
         codeBlocks: [
           {
+            label: 'docker-compose.yml',
             code: [
               "version: '3.8'",
               'services:',
@@ -126,13 +142,134 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
         ],
       },
       {
-        title: 'Run',
+        title: '컨테이너 실행',
         desc: 'Gateway가 컨테이너에서 바로 실행됩니다.',
         codeBlocks: [{ code: 'docker compose up -d' }],
       },
       {
-        title: 'Initial Setup',
+        title: '초기 설정',
+        desc: '컨테이너 내에서 onboard를 실행합니다.',
         codeBlocks: [{ code: 'docker exec -it openclaw openclaw onboard' }],
+      },
+      {
+        title: '대시보드 접속',
+        desc: '브라우저에서 접속합니다.',
+        codeBlocks: [{ code: 'http://localhost:18789' }],
+      },
+    ],
+  },
+  cloud: {
+    title: '클라우드 (Managed 서비스)',
+    subtitle: '가입만 하면 끝 — 서버 설치가 전혀 필요 없습니다.',
+    steps: [
+      {
+        title: 'Managed OpenClaw란?',
+        desc: 'MaxClaw, XiaoClaw 등은 OpenClaw를 클라우드에서 대신 호스팅해주는 서비스입니다. 직접 설치할 필요 없이 가입만 하면 즉시 사용 가능합니다.',
+        bullets: [
+          '🚀 설치 없이 가입만으로 즉시 사용',
+          '🌐 웹 대시보드 자동 제공',
+          '💬 Telegram, Discord, Slack 등 메신저 연동 자동 설정',
+          '🔑 API 키만 입력하면 끝',
+          '🔄 업데이트/유지보수 자동 처리',
+        ],
+      },
+      {
+        title: 'MaxClaw (maxclaw.ai)',
+        desc: 'OpenClaw의 Managed 서비스 중 하나입니다.',
+        bullets: [
+          '무료 플랜: 기본 기능 사용 가능',
+          '유료 플랜: 더 많은 API 호출, 프리미엄 AI 모델, 우선 지원',
+          '가입 → API 키 입력 → 메신저 연동 완료',
+        ],
+        codeBlocks: [{ label: 'MaxClaw 접속', code: 'https://maxclaw.ai' }],
+      },
+      {
+        title: 'XiaoClaw (xiaoclaw.ai)',
+        desc: '중국어 환경에 최적화된 Managed 서비스입니다.',
+        bullets: [
+          '무료 플랜: 기본 기능 제공',
+          '유료 플랜: 고급 AI 모델, 커스텀 스킬, 대시보드 기능',
+          '가입 후 웹 대시보드에서 바로 설정',
+        ],
+        codeBlocks: [{ label: 'XiaoClaw 접속', code: 'https://xiaoclaw.ai' }],
+      },
+      {
+        title: '가입 후 설정',
+        desc: 'Managed 서비스 공통 설정 순서입니다.',
+        bullets: [
+          '1. 가입 완료 (이메일 또는 SSO)',
+          '2. AI 제공자 API 키 입력 (OpenAI, Google 등)',
+          '3. 연동할 메신저 선택 (Telegram, Discord 등)',
+          '4. 대시보드에서 AI 페르소나, 스킬 설정',
+          '5. 바로 대화 시작!',
+        ],
+      },
+    ],
+  },
+  server: {
+    title: '서버 (VPS/VM) 설치',
+    subtitle: 'Ubuntu/Debian 서버에 PM2로 24/7 실행합니다.',
+    steps: [
+      NODE_JS_STEP,
+      {
+        title: 'OpenClaw 설치',
+        desc: '전역으로 설치합니다.',
+        codeBlocks: [
+          { code: 'npm install -g openclaw' },
+        ],
+      },
+      {
+        title: '초기 설정',
+        desc: 'AI 제공자를 선택하고 기본 설정을 완료합니다.',
+        codeBlocks: [{ code: 'openclaw onboard' }],
+        bullets: ['ZAI 무료 추천', 'API 키 입력'],
+      },
+      {
+        title: 'PM2로 백그라운드 실행',
+        desc: '서버 재부팅 후에도 자동 실행되도록 설정합니다.',
+        codeBlocks: [
+          { label: 'PM2 설치', code: 'npm install -g pm2' },
+          { label: 'Gateway를 PM2로 등록', code: 'pm2 start "openclaw gateway start" --name openclaw' },
+          { label: 'PM2 상태 확인', code: 'pm2 status' },
+          { label: '서버 재부팅 시 자동 실행', code: 'pm2 save && pm2 startup' },
+        ],
+        note: 'pm2 startup 명령 실행 후 출력되는 sudo 명령을 복사해서 실행하세요.',
+      },
+      {
+        title: 'Nginx 리버스 프록시 (선택)',
+        desc: '도메인과 HTTPS를 사용하려면 Nginx를 설정합니다.',
+        codeBlocks: [
+          { label: 'Nginx 설치', code: 'sudo apt install nginx -y' },
+          {
+            label: '/etc/nginx/sites-available/openclaw',
+            code: [
+              'server {',
+              '    listen 80;',
+              '    server_name your-domain.com;',
+              '',
+              '    location / {',
+              '        proxy_pass http://127.0.0.1:18789;',
+              '        proxy_http_version 1.1;',
+              '        proxy_set_header Upgrade $http_upgrade;',
+              '        proxy_set_header Connection "upgrade";',
+              '        proxy_set_header Host $host;',
+              '        proxy_set_header X-Real-IP $remote_addr;',
+              '    }',
+              '}',
+            ].join('\n'),
+          },
+          { label: '활성화', code: 'sudo ln -s /etc/nginx/sites-available/openclaw /etc/nginx/sites-enabled/\nsudo nginx -t && sudo systemctl reload nginx' },
+        ],
+      },
+      {
+        title: 'SSL/HTTPS 설정 (선택)',
+        desc: 'Let\'s Encrypt로 무료 SSL 인증서를 발급받습니다.',
+        codeBlocks: [
+          { label: 'Certbot 설치', code: 'sudo apt install certbot python3-certbot-nginx -y' },
+          { label: '인증서 발급', code: 'sudo certbot --nginx -d your-domain.com' },
+          { label: '자동 갱신 확인', code: 'sudo certbot renew --dry-run' },
+        ],
+        note: 'Certbot이 Nginx 설정을 자동으로 HTTPS로 변경합니다. 매 90일마다 자동 갱신됩니다.',
       },
     ],
   },
@@ -145,8 +282,10 @@ const TROUBLESHOOTING = [
   '설정 손상: openclaw doctor --fix',
   '포트 충돌: openclaw.json의 gateway.port 변경 (기본 18789)',
   'Windows 실행 정책: 관리자 PowerShell에서 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser',
+  'Node.js 버전 오류: node --version 으로 v22+ 확인, nvm use 22 또는 재설치',
+  'PM2 로그 확인: pm2 logs openclaw',
+  'Docker 권한 오류: sudo usermod -aG docker $USER (재로그인 필요)',
   'LLM 응답 없음: API 키/모델명 확인, Gateway 상태 확인',
-  '토큰 이슈: openclaw config get gateway.auth.token',
 ];
 
 function copyToClipboard(text: string) {
@@ -200,7 +339,7 @@ export default function OpenClawInstall() {
         <div className="mt-3">
           <h1 className="text-2xl font-black text-gray-900 dark:text-white">OpenClaw 설치 가이드</h1>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-            설치 환경을 선택하면 단계별로 안내합니다.
+            설치 환경을 선택하면 단계별로 안내합니다. 로컬/Docker/서버 설치에는 Node.js v22+가 필요합니다.
           </p>
         </div>
       </div>
@@ -218,7 +357,7 @@ export default function OpenClawInstall() {
             </button>
           )}
         </div>
-        <div className="grid sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {OPTIONS.map((o) => {
             const active = sel === o.id;
             return (

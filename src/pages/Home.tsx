@@ -6,7 +6,7 @@ import { useCaseLabels, budgetLabels, type UseCase, type BudgetTier } from '../d
 import { CompanyLogo } from '../components/CompanyLogo';
 
 /* ── 상수 ── */
-const TOP_MODEL_IDS = ['gpt-5-4', 'claude-sonnet-4-6', 'gemini-2-5-flash'];
+const TOP_MODEL_IDS = ['mimo-v2-pro', 'claude-sonnet-4-6', 'minimax-m2-7'];
 const TOP_MODELS: AIModel[] = TOP_MODEL_IDS.map(id => models.find(m => m.id === id)).filter(Boolean) as AIModel[];
 
 const QUICK_LINKS = [
@@ -91,7 +91,7 @@ export default function Home() {
       {/* ═══ 2. TOP 3 모델 카드 ═══ */}
       <section>
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-base font-bold text-gray-900 dark:text-white">🏆 인기 모델 TOP 3</h2>
+          <h2 className="text-base font-bold text-gray-900 dark:text-white">🏆 인기 모델 TOP 3 <span className="text-xs font-normal text-gray-400 ml-1">OpenRouter 기준</span></h2>
           <Link to="/explore/compare" className="text-xs text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
             전체 비교 →
           </Link>

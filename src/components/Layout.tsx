@@ -27,6 +27,9 @@ function InfinityLogo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
 const NAV = [
   { label: '홈', path: '/', icon: '🏠', short: '홈', children: [], mobileHide: false },
   {
+    label: 'AI 모델 추천', path: '/recommend', icon: '✨', short: '추천', children: [], mobileHide: false,
+  },
+  {
     label: 'AI 모델 비교', path: '/explore/compare', icon: '📊', short: '모델비교',
     mobileHide: true, mobileGroup: 'explore',
     children: [

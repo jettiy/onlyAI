@@ -12,7 +12,7 @@ const LOGO_MAP: Record<string, string> = {
   moonshot: "moonshot.png",
   zhipu: "aa_zhipu.svg",
   xiaomi: "aa_xiaomi.svg",
-  mistral: "mistral_new.png",
+  mistral: "mistral.jpg",
   cohere: "aa_cohere.svg",
   // Video/Image providers
   klingai: "aa_klingai.svg",

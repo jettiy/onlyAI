@@ -70,7 +70,29 @@ export default function ExploreVideoCompare() {
 
       {/* Table */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
-        <div className="overflow-x-auto">
+        {/* 모바일 카드 */}
+        <div className="md:hidden space-y-3 px-4 py-3">
+          {filtered.map(m => (
+            <div key={m.id} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
+              <div className="flex items-center gap-2 mb-2">
+                {m.logoId && (() => { const s = logoIdToPath(m.logoId); return s ? <img src={s} alt={m.company} className="w-5 h-5 rounded-sm object-contain" loading="lazy" /> : <span className="text-xs text-gray-400">{m.company[0]}</span>; })()}
+                <div>
+                  <div className="text-sm font-bold text-gray-900 dark:text-white">{m.name} {m.isNew && <span className="text-[8px] font-bold text-red-500 ml-1">NEW</span>}</div>
+                  <div className="text-[10px] text-gray-400">{m.company}</div>
+                </div>
+                <span className={`ml-auto px-2 py-0.5 rounded-full text-[9px] font-bold ${TIER_LABELS[m.tier]?.color}`}>{TIER_LABELS[m.tier]?.label}</span>
+              </div>
+              <div className="grid grid-cols-3 gap-1 text-[10px]">
+                <div className="text-gray-500">해상도 <span className="text-gray-900 dark:text-white font-semibold">{m.resolution || '—'}</span></div>
+                <div className="text-gray-500">길이 <span className="text-gray-900 dark:text-white font-semibold">{m.maxLength || '—'}</span></div>
+                <div className="text-gray-500">가격 <span className="text-gray-900 dark:text-white font-semibold">{m.price || '—'}</span></div>
+              </div>
+              {m.features && <div className="text-[10px] text-gray-400 mt-1">{m.features}</div>}
+            </div>
+          ))}
+        </div>
+        {/* 데스크탑 테이블 */}
+        <div className="overflow-x-auto hidden md:block">
           <table className="w-full text-xs">
             <thead>
               <tr className="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">

@@ -283,7 +283,31 @@ export default function Benchmarks() {
           <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">전체 벤치마크 요약표</h2>
           <p className="text-[10px] text-gray-400 mt-0.5">{DATA.length}개 모델 중 {(summaryPage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(summaryPage * ITEMS_PER_PAGE, DATA.length)}개 표시</p>
         </div>
-        <div className="overflow-x-auto">
+        {/* 모바일 카드 */}
+        <div className="md:hidden space-y-3 px-4 py-4">
+          {DATA.slice((summaryPage - 1) * ITEMS_PER_PAGE, summaryPage * ITEMS_PER_PAGE).map((m) => (
+            <div key={m.name} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <LogoImg logoId={m.logoId} name={m.company} size={20} />
+                <div>
+                  <div className="text-sm font-bold text-gray-900 dark:text-white">{m.name}</div>
+                  <div className="text-[10px] text-gray-400">{m.company}</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {BENCHMARKS.slice(0, 4).map((b) => {
+                  const v = m.scores[b.key];
+                  if (v === undefined) return <div key={b.key} className="text-xs text-gray-300 dark:text-gray-600">{b.label}: —</div>;
+                  const colMax = Math.max(...DATA.filter(x => x.scores[b.key] !== undefined).map(x => x.scores[b.key] ?? 0));
+                  const isTop = v === colMax;
+                  return <div key={b.key} className={`text-xs font-mono ${isTop ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-gray-600 dark:text-gray-400'}`}>{b.label}: {v.toFixed(1)}</div>;
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* 데스크탑 테이블 */}
+        <div className="overflow-x-auto hidden md:block">
           <table className="w-full text-xs">
             <thead>
               <tr className="border-b border-gray-100 dark:border-gray-800">

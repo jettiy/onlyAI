@@ -228,10 +228,7 @@ export default function Pricing() {
       )}
 
       {/* Full price table — 페이지네이션 적용 */}
-      {tab === 'table' && (() => {
-        const totalPages = Math.ceil(prices.length / ITEMS_PER_PAGE);
-        const paged = prices.slice((tablePage - 1) * ITEMS_PER_PAGE, tablePage * ITEMS_PER_PAGE);
-        return (
+      {tab === 'table' && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
           <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-between">
             <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">전체 가격표</h2>
@@ -244,7 +241,7 @@ export default function Pricing() {
               <p className="text-[10px] text-gray-400">{prices.length}개 모델 중 {(tablePage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(tablePage * ITEMS_PER_PAGE, prices.length)}개 표시</p>
             </div>
           </div>
-          <div className="overflow-x-auto">
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
@@ -258,10 +255,10 @@ export default function Pricing() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
-                {paged.map((row) => {
+                {prices.slice((tablePage - 1) * ITEMS_PER_PAGE, tablePage * ITEMS_PER_PAGE).map((row) => {
                   const logoSrc = providerLogoMap[row.provider];
                   return (
-                    <tr key={row.model} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${paged.indexOf(row) % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
+                    <tr key={row.model} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${prices.indexOf(row) % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-2">
                           {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
@@ -288,10 +285,30 @@ export default function Pricing() {
           <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
             <p className="text-xs text-gray-400 dark:text-gray-500">* 가격은 $/1M 토큰. 캐시 읽기 = 이전 대화 재사용 시 (최대 90% 할인). 캐시 쓰기 = 첫 프롬프트 저장 비용.</p>
           </div>
-          {totalPages > 1 && <Pagination current={tablePage} total={totalPages} onChange={setTablePage} />}
+          {Math.ceil(prices.length / ITEMS_PER_PAGE) > 1 && <Pagination current={tablePage} total={Math.ceil(prices.length / ITEMS_PER_PAGE)} onChange={setTablePage} />}
+          {/* Mobile cards */}
+          <div className="md:hidden grid gap-3 p-4">
+            {prices.slice((tablePage - 1) * ITEMS_PER_PAGE, tablePage * ITEMS_PER_PAGE).map((row) => {
+              const logoSrc = providerLogoMap[row.provider];
+              return (
+                <div key={row.model} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
+                    <span className="text-sm font-bold text-gray-900 dark:text-white">{row.model}</span>
+                    {row.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
+                  </div>
+                  <div className="grid grid-cols-3 gap-2">
+                    <div><div className="text-[10px] text-gray-400">입력</div><div className="text-xs font-bold text-gray-900 dark:text-white font-mono">${row.input}</div></div>
+                    <div><div className="text-[10px] text-gray-400">출력</div><div className="text-xs font-bold text-gray-900 dark:text-white font-mono">${row.output}</div></div>
+                    <div><div className="text-[10px] text-gray-400">컨텍스트</div><div className="text-xs font-bold text-gray-900 dark:text-white">{row.context}</div></div>
+                  </div>
+                  {row.note && <div className="mt-2"><span className={`px-2 py-0.5 text-[9px] rounded-full font-semibold ${NOTE_STYLE[row.note] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-600'}`}>{row.note}</span></div>}
+                </div>
+              );
+            })}
+          </div>
         </div>
-        );
-      })()}
+      )}
 
       {/* Cache price comparison */}
       {tab === 'cache' && (

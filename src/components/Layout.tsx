@@ -286,40 +286,29 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           )}
         </header>
         <main className="flex-1 pb-20"><div className="px-4 py-4">{children}</div></main>
-        <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
+        <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
           <div className="flex items-center justify-around h-16">
             {(() => {
-              const exploreActive = loc.pathname.startsWith('/explore');
-              const mobileNav = NAV.filter(s => !s.mobileHide);
+              const bottomTabs = [
+                { path: '/', label: '홈', icon: '🏠', active: loc.pathname === '/' },
+                { path: '/explore/compare', label: '비교', icon: '📊', active: loc.pathname.startsWith('/explore') },
+                { path: '/pricing', label: '가격', icon: '💰', active: loc.pathname === '/pricing' },
+                { path: '/recommend', label: '추천', icon: '✨', active: loc.pathname.startsWith('/recommend') },
+              ];
+              const moreActive = !bottomTabs.some(t => t.active);
               return <>
-                {mobileNav.slice(0, 1).map(s => {
-                  const a = isActive(s.path);
-                  return (
-                    <Link key={s.path} to={s.path}
-                      className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${a ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
-                      <span className="text-xl">{s.icon}</span>
-                      <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">{s.short}</span>
-                      {a && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
-                    </Link>
-                  );
-                })}
-                <Link key="_explore" to="/explore/compare"
-                  className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${exploreActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
-                  <span className="text-xl">📊</span>
-                  <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">탐색</span>
-                  {exploreActive && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
-                </Link>
-                {mobileNav.slice(1).map(s => {
-                  const a = isActive(s.path);
-                  return (
-                    <Link key={s.path} to={s.path}
-                      className={`flex flex-col items-center gap-0.5 px-1 py-2 rounded-xl min-w-0 ${a ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`}>
-                      <span className="text-xl">{s.icon}</span>
-                      <span className="text-[9px] font-semibold leading-tight text-center line-clamp-1 max-w-[52px]">{s.short}</span>
-                      {a && <span className="w-1 h-1 bg-blue-500 rounded-full"/>}
-                    </Link>
-                  );
-                })}
+                {bottomTabs.map(t => (
+                  <Link key={t.path} to={t.path} onClick={() => setMobileOpen(false)}
+                    className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl min-w-0 transition-colors ${t.active ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-400 dark:text-gray-500'}`}>
+                    <span className="text-xl">{t.icon}</span>
+                    <span className="text-[10px] font-semibold leading-tight">{t.label}</span>
+                  </Link>
+                ))}
+                <button onClick={() => setMobileOpen(v => !v)}
+                  className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl min-w-0 transition-colors ${mobileOpen || moreActive ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-400 dark:text-gray-500'}`}>
+                  <span className="text-xl">⋯</span>
+                  <span className="text-[10px] font-semibold leading-tight">더보기</span>
+                </button>
               </>;
             })()}
           </div>

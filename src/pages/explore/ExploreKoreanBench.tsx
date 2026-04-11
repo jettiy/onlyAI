@@ -163,7 +163,7 @@ export default function ExploreKoreanBench() {
       </div>
 
       {/* Bar chart */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 space-y-3">
+      <div className="hidden md:block bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 space-y-3">
         {sorted.map((m, idx) => {
           const score = m.scores[activeBench] ?? 0;
           const pct = (score / maxScore) * 100;
@@ -200,7 +200,29 @@ export default function ExploreKoreanBench() {
         <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
           <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">한국어 벤치마크 요약표</h2>
         </div>
-        <div className="overflow-x-auto">
+        {/* 모바일 카드 */}
+        <div className="md:hidden space-y-3 px-4">
+          {DATA.map(m => (
+            <div key={m.name} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <CompanyLogo logoId={m.logoId} name={m.company} />
+                <div>
+                  <div className="text-sm font-bold text-gray-900 dark:text-white">{m.name}</div>
+                  <span className={`px-1.5 py-0.5 text-[9px] rounded-full font-bold ${GRADE_COLORS[m.koreanGrade]}`}>{m.koreanGrade}</span>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-1">
+                {BENCHMARKS.map(b => {
+                  const v = m.scores[b.key];
+                  if (v === null) return <div key={b.key} className="text-[10px] text-gray-300 dark:text-gray-600">{b.label}: —</div>;
+                  return <div key={b.key} className="text-[10px] font-mono text-gray-600 dark:text-gray-400">{b.label}: {v.toFixed(1)}</div>;
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* 데스크탑 테이블 */}
+        <div className="overflow-x-auto hidden md:block">
           <table className="w-full text-xs">
             <thead>
               <tr className="border-b border-gray-100 dark:border-gray-800">

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { cloudProviders } from '../data/cloudProviders';
 import { models } from '../data/models';
 import { getLogoUrl } from '../lib/logoUtils';
@@ -125,7 +125,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
 }
 
 export default function Pricing() {
-  const [tab, setTab] = useState<'bar' | 'table' | 'cache' | 'api'>('bar');
+  const [tab, setTab] = useState<'bar' | 'table' | 'cache' | 'api' | 'calc'>('bar');
   const [prices, setPrices] = useState<PriceRow[]>(FALLBACK_PRICES);
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<string>('');
@@ -185,7 +185,7 @@ export default function Pricing() {
 
       {/* Tab switcher */}
       <div className="flex gap-2 overflow-x-auto pb-1">
-        {([['bar','입력가 시각화'],['table','전체 가격표'],['cache','캐시 가격 비교'],['api','API 서비스 비교']] as const).map(([key, label]) => (
+        {([['bar','입력가 시각화'],['table','전체 가격표'],['cache','캐시 가격 비교'],['api','API 서비스 비교'],['calc','가격 계산기']] as const).map(([key, label]) => (
           <button key={key} onClick={() => setTab(key)}
             className={`shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-colors ${tab === key ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200'}`}>
             {label}

@@ -214,10 +214,10 @@ export default function ExploreKoreanBench() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
-              {DATA.map(m => {
+              {DATA.map((m, rowIdx) => {
                 const colMaxes = BENCHMARKS.map(b => Math.max(...DATA.filter(x => x.scores[b.key] !== null).map(x => x.scores[b.key] ?? 0)));
                 return (
-                  <tr key={m.name} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                  <tr key={m.name} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${rowIdx % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
                     <td className="px-4 py-2.5">
                       <div className="flex items-center gap-1.5">
                         <CompanyLogo logoId={m.logoId} name={m.company} />

@@ -92,9 +92,9 @@ export const videoModels: VideoModel[] = [
     releaseDate: "2026-02", tier: "pro",
     maxResolution: "1080p", maxDuration: "20s", maxFps: "30fps",
     price: "$42.00/분",
-    description: "OpenAI 비디오 AI. 곧 중단 예정. 1080p 20초 생성. Pro 등급 $42/분으로 가장 비쌈.",
+    description: "OpenAI 비디오 AI. 2026년 4월 26일 웹/App 종료 예정 (API는 9/24 종료). 1080p 20초 생성.",
     strengths: ["20초 긴 영상", "1080p", "OpenAI 생태계"],
-    weaknesses: ["곧 중단 예정", "가격 매우 높음", "생성 시간 김"],
+    weaknesses: ["4/26 웹 종료 예정", "가격 매우 높음", "생성 시간 김"],
   },
   {
     id: "veo-3.1", name: "Veo 3.1", company: "Google", flag: "", logoId: "google",

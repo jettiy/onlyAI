@@ -158,11 +158,11 @@ const EVENTS: TimelineEvent[] = [
     highlights: ["120B MoE (12B 활성)", "다중 에이전트", "NVIDIA 오픈소스", "213K 다운로드"],
   },
   {
-    id: "minimax-m25", date: "2026-04", displayDate: "2026년 4월",
+    id: "minimax-m25", date: "2026-02-12", displayDate: "2026년 2월 12일",
     model: "MiniMax M2.5", company: "MiniMax", companyId: "minimax",
     status: "released", category: "flagship",
-    description: "Lightning AI에서 성능 벤치마크 가능한 신규 모델.",
-    highlights: ["Lightning AI 지원", "에이전트 기능"],
+    description: "M2 시리즈 에이전트 전용 모델. M2.5와 M2.5-Lightning 두 버전.",
+    highlights: ["에이전트 전용", "M2.5 / Lightning", "2월 출시"],
   },
 
   // ═══ 2026년 3월 ═══

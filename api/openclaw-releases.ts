@@ -1,7 +1,7 @@
 // Vercel Edge Function — OpenClaw GitHub Releases (한글 요약)
 // GET /api/openclaw-releases
 
-export const config = { runtime: 'edge' };
+export const config = { runtime: 'nodejs' };
 const CACHE_DURATION = 3600;
 
 // ─── 번역 사전 (fallback용) ───────────────────────────────────
@@ -271,9 +271,9 @@ export default async function handler(request: Request) {
   }
 
   try {
-    const res = await fetch('https://api.github.com/repos/openclaw/openclaw/releases?per_page=15', {
+    const res = await fetch('https://api.github.com/repos/openclaw/openclaw/releases?per_page=10', {
       headers: { 'Accept': 'application/vnd.github.v3+json' },
-      signal: AbortSignal.timeout(10000),
+      signal: AbortSignal.timeout(15000),
     });
     if (!res.ok) throw new Error('GitHub API error');
     const rawReleases: RawRelease[] = await res.json();

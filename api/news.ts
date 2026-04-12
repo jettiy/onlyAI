@@ -223,47 +223,99 @@ interface NewsTranslateItem {
   lang: string;
 }
 
+async function translateBatch(batch: NewsTranslateItem[], apiKey: string): Promise<Map<string, { title: string; summary: string }>> {
+  const prompt = `다음 AI 뉴스 기사를 한국어로 자연스럽게 번역해줘. 제목은 간결하게, 요약은 2~3문장으로 비전공자도 이해할 수 있게.
+JSON 배열만 출력 (코드블록, 마크다운 금지):
+[{"id":"원본id","title":"한국어 제목","summary":"한국어 요약"}]
+
+기사:
+${batch.map((item, i) => `[${i + 1}] ID:${item.id}
+TITLE: ${item.title}
+SUMMARY: ${item.summary}`).join('\n---\n')}`;
+
+  const res = await fetch('https://api.z.ai/api/paas/v4/chat/completions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+    body: JSON.stringify({ model: 'glm-5-turbo', messages: [{ role: 'user', content: prompt }], temperature: 0.3, max_tokens: 2000 }),
+    signal: AbortSignal.timeout(60000),
+  });
+  if (!res.ok) throw new Error(`GLM API ${res.status}`);
+  const data = await res.json();
+  const content: string = data?.choices?.[0]?.message?.content ?? '';
+
+  // JSON 파싱 강화: 코드블록·마크다운 제거
+  let jsonStr = content
+    .replace(/^\s*```(?:json)?\s*/gi, '')
+    .replace(/\s*```\s*$/g, '')
+    .replace(/^\s*```/gm, '')
+    .replace(/```\s*$/gm, '')
+    .trim();
+
+  // 배열만 추출 (LLM이 여분 텍스트를 감쌀 때)
+  const arrMatch = jsonStr.match(/\[[\s\S]*\]/);
+  if (arrMatch) jsonStr = arrMatch[0];
+
+  const parsed = JSON.parse(jsonStr);
+  if (!Array.isArray(parsed)) throw new Error('Not an array');
+
+  const map = new Map<string, { title: string; summary: string }>();
+  for (const item of parsed) {
+    try {
+      if (item.id && typeof item.id === 'string' && (item.title || item.summary)) {
+        map.set(item.id, {
+          title: typeof item.title === 'string' ? item.title : '',
+          summary: typeof item.summary === 'string' ? item.summary : '',
+        });
+      }
+    } catch { /* skip malformed item */ }
+  }
+  return map;
+}
+
 async function translateNewsItems(items: NewsTranslateItem[]): Promise<Map<string, { title: string; summary: string }>> {
   const apiKey = (typeof process !== 'undefined' && process.env?.ZAI_API_KEY) ?? '';
   if (!apiKey) return new Map();
 
-  // 영어/중국어 기사만 필터링 (최대 15개)
   const toTranslate = items.filter(i => i.lang === 'en' || i.lang === 'zh').slice(0, 15);
   if (toTranslate.length === 0) return new Map();
 
-  const prompt = `다음 AI 뉴스 기사를 한국어로 자연스럽게 번역해줘. 제목은 간결하게, 요약은 2~3문장으로 비전공자도 이해할 수 있게.
-JSON 배열로 출력 (코드블록 금지):
-[{"id":"원본id","title":"한국어 제목","summary":"한국어 요약"}]
-
-기사:
-${toTranslate.map((item, i) => `[${i + 1}] ID:${item.id}
-TITLE: ${item.title}
-SUMMARY: ${item.summary}`).join('\n---\n')}`;
-
-  try {
-    const res = await fetch('https://api.z.ai/api/paas/v4/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-      body: JSON.stringify({ model: 'glm-5-turbo', messages: [{ role: 'user', content: prompt }], temperature: 0.3, max_tokens: 4000 }),
-      signal: AbortSignal.timeout(30000),
-    });
-    if (!res.ok) return new Map();
-    const data = await res.json();
-    const content: string = data?.choices?.[0]?.message?.content ?? '';
-    const jsonStr = content.replace(/```json?\s*/gi, '').replace(/```/g, '').trim();
-    const parsed = JSON.parse(jsonStr);
-    if (!Array.isArray(parsed)) return new Map();
-    const map = new Map<string, { title: string; summary: string }>();
-    for (const item of parsed) {
-      if (item.id && (item.title || item.summary)) {
-        map.set(item.id, { title: item.title ?? '', summary: item.summary ?? '' });
-      }
-    }
-    return map.size > 0 ? map : new Map();
-  } catch (err) {
-    console.error('GLM news translation failed:', err instanceof Error ? err.message : err);
-    return new Map();
+  // 5개씩 배치로 나누어 병렬 처리
+  const BATCH_SIZE = 5;
+  const batches: NewsTranslateItem[][] = [];
+  for (let i = 0; i < toTranslate.length; i += BATCH_SIZE) {
+    batches.push(toTranslate.slice(i, i + BATCH_SIZE));
   }
+
+  const result = new Map<string, { title: string; summary: string }>();
+
+  // 1차 시도: 모든 배치 병렬
+  const firstPass = await Promise.allSettled(
+    batches.map(batch => translateBatch(batch, apiKey))
+  );
+
+  const failedBatches: number[] = [];
+  firstPass.forEach((outcome, idx) => {
+    if (outcome.status === 'fulfilled' && outcome.value.size > 0) {
+      for (const [k, v] of outcome.value) result.set(k, v);
+    } else {
+      failedBatches.push(idx);
+    }
+  });
+
+  // 2차 시도: 실패한 배치 재시도
+  if (failedBatches.length > 0) {
+    console.log(`Retrying ${failedBatches.length} failed translation batch(es)`);
+    const retry = await Promise.allSettled(
+      failedBatches.map(idx => translateBatch(batches[idx], apiKey))
+    );
+    retry.forEach(outcome => {
+      if (outcome.status === 'fulfilled') {
+        for (const [k, v] of outcome.value) result.set(k, v);
+      }
+    });
+  }
+
+  return result;
 }
 
 let cachedResponse: { data: string; timestamp: number } | null = null;

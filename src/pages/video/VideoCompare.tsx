@@ -83,11 +83,11 @@ export default function ExploreVideoCompare() {
                 <span className={`ml-auto px-2 py-0.5 rounded-full text-[9px] font-bold ${TIER_LABELS[m.tier]?.color}`}>{TIER_LABELS[m.tier]?.label}</span>
               </div>
               <div className="grid grid-cols-3 gap-1 text-[10px]">
-                <div className="text-gray-500">해상도 <span className="text-gray-900 dark:text-white font-semibold">{m.resolution || '—'}</span></div>
-                <div className="text-gray-500">길이 <span className="text-gray-900 dark:text-white font-semibold">{m.maxLength || '—'}</span></div>
+                <div className="text-gray-500">해상도 <span className="text-gray-900 dark:text-white font-semibold">{m.maxResolution || '—'}</span></div>
+                <div className="text-gray-500">길이 <span className="text-gray-900 dark:text-white font-semibold">{m.maxDuration || '—'}</span></div>
                 <div className="text-gray-500">가격 <span className="text-gray-900 dark:text-white font-semibold">{m.price || '—'}</span></div>
               </div>
-              {m.features && <div className="text-[10px] text-gray-400 mt-1">{m.features}</div>}
+              
             </div>
           ))}
         </div>

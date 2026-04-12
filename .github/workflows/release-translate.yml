@@ -1,0 +1,24 @@
+name: OpenClaw Releases Translation
+on:
+  schedule:
+    - cron: '0 15 * * 0'  # 매주 일요일 자정 KST (15:00 UTC)
+  workflow_dispatch:  # 수동 실행 가능
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Fetch & Translate Releases
+        env:
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+        run: node scripts/translate-releases.mjs
+      
+      - name: Commit translated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/releases-ko.json
+          git diff --cached --quiet || git commit -m "chore: update releases Korean translation [skip ci]"
+          git push

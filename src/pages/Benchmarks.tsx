@@ -26,11 +26,11 @@ const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; tip: string;
 const DATA: ModelBench[] = [
   {
     name: "GPT-5.4", company: "OpenAI", logoId: "openai", color: "#10b981", isNew: true,
-    scores: { mmlu: 88.5, gpqa: 71.0, math: 93.5, ifeval: 92.0, humaneval: 97.2, coding: 62.0, swe: 72.0, musr: 80.5 },
+    scores: { mmlu: 88.5, gpqa: 92.0, math: 93.5, ifeval: 92.0, humaneval: 97.2, coding: 74.9, swe: 72.0, musr: 80.5 },
   },
   {
     name: "Claude Opus 4.6", company: "Anthropic", logoId: "anthropic", color: "#f59e0b",
-    scores: { mmlu: 86.2, gpqa: 68.5, math: 89.8, ifeval: 90.5, humaneval: 96.0, coding: 75.0, swe: 78.5, musr: 76.2 },
+    scores: { mmlu: 86.2, gpqa: 89.7, math: 89.8, ifeval: 90.5, humaneval: 96.0, coding: 80.8, swe: 78.5, musr: 76.2 },
   },
   {
     name: "Claude Sonnet 4.6", company: "Anthropic", logoId: "anthropic", color: "#fbbf24",
@@ -62,23 +62,23 @@ const DATA: ModelBench[] = [
   },
   {
     name: "Qwen3 235B", company: "Alibaba", logoId: "alibaba", color: "#f97316",
-    scores: { mmlu: 79.5, gpqa: 53.0, math: 90.5, ifeval: 82.0, humaneval: 89.8, coding: 38.5, swe: 48.0, musr: 66.5 },
+    scores: { mmlu: 79.5, gpqa: 87.4, math: 90.5, ifeval: 82.0, humaneval: 89.8, coding: 38.5, swe: 48.0, musr: 66.5 },
   },
   {
     name: "GLM-5", company: "Zhipu AI", logoId: "zhipu", color: "#8b5cf6",
-    scores: { mmlu: 78.0, gpqa: 50.5, math: 88.5, ifeval: 80.0, humaneval: 91.5, coding: 36.0, swe: 45.0, musr: 62.0 },
+    scores: { mmlu: 86.0, gpqa: 83.3, math: 88.5, ifeval: 80.0, humaneval: 91.5, coding: 67.8, swe: 45.0, musr: 62.0 },
   },
   {
     name: "MiMo V2 Pro", company: "Xiaomi", logoId: "xiaomi", color: "#a855f7",
-    scores: { mmlu: 76.5, gpqa: 48.0, math: 83.0, ifeval: 78.5, humaneval: 87.0, coding: 33.0, swe: 42.0, musr: 58.0 },
+    scores: { mmlu: 76.5, gpqa: 87.0, math: 83.0, ifeval: 78.5, humaneval: 87.0, coding: 33.0, swe: 42.0, musr: 58.0 },
   },
   {
     name: "MiniMax M2.7", company: "MiniMax", logoId: "minimax", color: "#7c3aed", isNew: true,
-    scores: { mmlu: 76.0, gpqa: 47.5, math: 80.0, ifeval: 77.0, humaneval: 85.0, coding: 30.0, swe: 38.0, musr: 55.0 },
+    scores: { mmlu: 76.0, gpqa: 86.6, math: 80.0, ifeval: 77.0, humaneval: 85.0, coding: 73.8, swe: 38.0, musr: 55.0 },
   },
   {
     name: "Kimi K2.5", company: "Moonshot", logoId: "moonshot", color: "#14b8a6",
-    scores: { mmlu: 77.5, gpqa: 49.0, math: 82.0, ifeval: 79.0, humaneval: 88.0, coding: 35.0, swe: 43.0, musr: 60.0 },
+    scores: { mmlu: 77.5, gpqa: 84.1, math: 82.0, ifeval: 79.0, humaneval: 88.0, coding: 68.6, swe: 43.0, musr: 60.0 },
   },
   {
     name: "Llama 4 Maverick", company: "Meta", logoId: "meta", color: "#64748b",
@@ -348,7 +348,7 @@ export default function Benchmarks() {
           </table>
         </div>
         <div className="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-          <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: 공식 기술 보고서, artificialanalysis.ai, Arena leaderboard (2026.04)</p>
+          <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: artificialanalysis.ai · 각 모델 공식 기술 보고서 · 2026년 4월 기준</p>
         </div>
         {/* 페이지네이션 — 요약표만 */}
         {Math.ceil(DATA.length / ITEMS_PER_PAGE) > 1 && (

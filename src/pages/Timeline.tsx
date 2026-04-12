@@ -35,7 +35,7 @@ const CAT_COLORS: Record<string, { bar: string; label: string }> = {
 const EVENTS: TimelineEvent[] = [
   // ═══ 2026년 4월 (최신) ═══
   {
-    id: "glm-5-1", date: "2026-04", displayDate: "2026년 4월 7일",
+    id: "glm-5-1", date: "2026-03", displayDate: "2026년 3월 27일",
     model: "GLM-5.1 (추론/비추론)", company: "Zhipu AI", companyId: "zhipu",
     status: "released", category: "flagship", isKoreanFriendly: false,
     description: "GLM-5 후속. SWE-Bench Pro 최고 성능. 에이전트 엔지니어링 특화.",

@@ -195,7 +195,8 @@ export default async function handler(request: Request) {
 
   try {
     // 1. 정적 파일 시도 (GitHub Actions에서 미리 번역한 데이터)
-    const staticRes = await fetch(new URL('/data/releases-ko.json', request.url));
+    const origin = request.headers.get('x-forwarded-host') ? `https://${request.headers.get('x-forwarded-host')}` : new URL(request.url).origin;
+    const staticRes = await fetch(`${origin}/data/releases-ko.json`);
     if (staticRes.ok) {
       const data = await staticRes.json();
       return new Response(JSON.stringify(data), {

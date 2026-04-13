@@ -34,16 +34,16 @@ const OPTIONS: OptionCard[] = [
 
 const NODE_JS_STEP: StepBlock = {
   title: 'Node.js 설치 (필수 전제조건)',
-  desc: 'OpenClaw는 Node.js v22 이상이 필요합니다. 먼저 설치하세요.',
+  desc: 'OpenClaw는 Node.js v24(권장) 또는 v22.14+ 이상이 필요합니다. 먼저 설치하세요.',
   codeBlocks: [
     { label: '버전 확인 (설치 후)', code: 'node --version' },
-    { label: 'Windows', code: 'https://nodejs.org 에서 LTS 다운로드 (v22+ 권장)' },
-    { label: 'Mac (Homebrew)', code: 'brew install node@22' },
-    { label: 'Linux (Ubuntu/Debian)', code: 'curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -\nsudo apt install -y nodejs' },
+    { label: 'Windows', code: 'https://nodejs.org 에서 v24 LTS 다운로드' },
+    { label: 'Mac (Homebrew)', code: 'brew install node@24' },
+    { label: 'Linux (Ubuntu/Debian)', code: 'curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -\nsudo apt install -y nodejs' },
   ],
   bullets: [
-    'v22+ 이상 필요 — node --version 으로 확인',
-    'Windows: nodejs.org에서 LTS 설치 프로그램 다운로드',
+    'v24 권장, v22.14+ 최소 — node --version 으로 확인',
+    'Windows: nodejs.org에서 v24 LTS 설치 프로그램 다운로드',
     'Mac: Homebrew가 없다면 먼저 brew.sh에서 설치',
     'Linux: 위 curl 명령어로 Nodesource 저장소 추가 후 설치',
   ],
@@ -64,7 +64,7 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
       {
         title: '초기 설정',
         desc: 'AI 제공자를 선택하고 기본 설정을 완료합니다.',
-        codeBlocks: [{ code: 'openclaw onboard' }],
+        codeBlocks: [{ code: 'openclaw onboard --install-daemon' }],
         bullets: [
           'ZAI 무료 추천 (한국 특화)',
           'OpenAI, Google, Anthropic 지원',
@@ -96,7 +96,7 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
       },
       {
         title: '초기 설정',
-        codeBlocks: [{ code: 'openclaw onboard' }],
+        codeBlocks: [{ code: 'openclaw onboard --install-daemon' }],
         bullets: ['ZAI 무료 추천', 'AI 제공자 선택'],
       },
       {
@@ -164,44 +164,63 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
     steps: [
       {
         title: 'Managed OpenClaw란?',
-        desc: 'MaxClaw, XiaoClaw 등은 OpenClaw를 클라우드에서 대신 호스팅해주는 서비스입니다. 직접 설치할 필요 없이 가입만 하면 즉시 사용 가능합니다.',
+        desc: '각 AI 회사가 OpenClaw를 클라우드에서 호스팅해주는 서비스입니다. 직접 설치할 필요 없이 가입만 하면 즉시 사용 가능합니다.',
         bullets: [
           '🚀 설치 없이 가입만으로 즉시 사용',
-          '🌐 웹 대시보드 자동 제공',
-          '💬 Telegram, Discord, Slack 등 메신저 연동 자동 설정',
+          '💬 Telegram, WeChat 등 메신저 연동',
           '🔑 API 키만 입력하면 끝',
           '🔄 업데이트/유지보수 자동 처리',
         ],
       },
       {
-        title: 'MaxClaw (maxclaw.ai)',
-        desc: 'OpenClaw의 Managed 서비스 중 하나입니다.',
+        title: 'MiMo Claw (샤오미)',
+        desc: '샤오미 MiMo Studio에서 제공하는 Managed OpenClaw입니다.',
         bullets: [
-          '무료 플랜: 기본 기능 사용 가능',
-          '유료 플랜: 더 많은 API 호출, 프리미엄 AI 모델, 우선 지원',
-          '가입 → API 키 입력 → 메신저 연동 완료',
+          '🆓 신규 가입 시 1시간 무료 체험',
+          '샤오미 MiMo AI 모델 기반',
+          '가입 후 바로 대화 가능',
         ],
-        codeBlocks: [{ label: 'MaxClaw 접속', code: 'https://maxclaw.ai' }],
+        codeBlocks: [{ label: 'MiMo Claw 접속', code: 'https://aistudio.xiaomimimo.com/#/' }],
       },
       {
-        title: 'XiaoClaw (xiaoclaw.ai)',
-        desc: '중국어 환경에 최적화된 Managed 서비스입니다.',
+        title: 'MAX Claw (미니맥스)',
+        desc: '미니맥스(MiniMax)에서 제공하는 Managed OpenClaw입니다.',
         bullets: [
-          '무료 플랜: 기본 기능 제공',
-          '유료 플랜: 고급 AI 모델, 커스텀 스킬, 대시보드 기능',
-          '가입 후 웹 대시보드에서 바로 설정',
+          '💰 비용 발생 (유료)',
+          '미니맥스 M2.7 AI 모델 기반',
+          '가입 후 API 키 입력 → 즉시 사용',
         ],
-        codeBlocks: [{ label: 'XiaoClaw 접속', code: 'https://xiaoclaw.ai' }],
+        codeBlocks: [{ label: 'MAX Claw 접속', code: 'https://agent.minimax.io/max-claw' }],
       },
       {
-        title: '가입 후 설정',
-        desc: 'Managed 서비스 공통 설정 순서입니다.',
+        title: 'AutoClaw (즈푸/Zhipu)',
+        desc: '즈푸(Zhipu AI / GLM)에서 제공하는 Managed OpenClaw입니다.',
         bullets: [
-          '1. 가입 완료 (이메일 또는 SSO)',
-          '2. AI 제공자 API 키 입력 (OpenAI, Google 등)',
-          '3. 연동할 메신저 선택 (Telegram, Discord 등)',
-          '4. 대시보드에서 AI 페르소나, 스킬 설정',
-          '5. 바로 대화 시작!',
+          '🆓 제공되지만 ⚠️ 한국에서는 이용 불가',
+          'GLM-5 AI 모델 기반',
+          '중국 IP 또는 중국 계정 필요',
+        ],
+        codeBlocks: [{ label: 'AutoClaw 접속', code: 'https://autoglm.z.ai/autoclaw/?channel=zai' }],
+      },
+      {
+        title: 'Kimi Claw (키미/Moonshot)',
+        desc: 'Moonshot AI(키미)에서 제공하는 Managed OpenClaw입니다.',
+        bullets: [
+          '💰 비용 발생 (유료)',
+          'Kimi AI 모델 기반',
+          '긴 컨텍스트 창 특화',
+          '가입 후 바로 대화 가능',
+        ],
+        codeBlocks: [{ label: 'Kimi Claw 접속', code: 'https://www.kimi.com/bot' }],
+      },
+      {
+        title: '비교 요약',
+        desc: '각 서비스를 한눈에 비교해보세요.',
+        bullets: [
+          '🆓 무료: MiMo Claw (1시간), AutoClaw (한국 불가)',
+          '💰 유료: MAX Claw, Kimi Claw',
+          '🇰🇷 한국 이용 가능: MiMo Claw, MAX Claw, Kimi Claw',
+          '🚫 한국 이용 불가: AutoClaw (즈푸)',
         ],
       },
     ],
@@ -215,13 +234,13 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
         title: 'OpenClaw 설치',
         desc: '전역으로 설치합니다.',
         codeBlocks: [
-          { code: 'npm install -g openclaw' },
+          { code: 'npm install -g openclaw@latest' },
         ],
       },
       {
         title: '초기 설정',
         desc: 'AI 제공자를 선택하고 기본 설정을 완료합니다.',
-        codeBlocks: [{ code: 'openclaw onboard' }],
+        codeBlocks: [{ code: 'openclaw onboard --install-daemon' }],
         bullets: ['ZAI 무료 추천', 'API 키 입력'],
       },
       {

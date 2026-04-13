@@ -1,7 +1,7 @@
 // Vercel Edge Function — OpenClaw GitHub Releases (한글 요약)
 // GET /api/openclaw-releases
 
-export const config = { runtime: 'nodejs' };
+export const config = { runtime: 'edge' };
 const CACHE_DURATION = 3600;
 
 // ─── 번역 사전 (fallback용) ───────────────────────────────────

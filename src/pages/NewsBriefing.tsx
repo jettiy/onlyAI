@@ -6,7 +6,6 @@ type ViewTab = 'briefing' | 'sources';
 const SOURCE_TABS = [
   { key: 'all', label: '전체', icon: '📰' },
   { key: 'AI타임스', label: 'AI타임스', icon: '🇰🇷' },
-  { key: 'GeekNews', label: 'GeekNews', icon: '🇰🇷' },
   { key: '36氪', label: '36氪', icon: '🇨🇳' },
   { key: 'Hugging Face', label: 'Hugging Face', icon: '🤗' },
   { key: 'TechCrunch', label: 'TechCrunch', icon: '🇺🇸' },
@@ -14,7 +13,7 @@ const SOURCE_TABS = [
 ] as const;
 
 const SOURCE_ICONS: Record<string, string> = {
-  'AI타임스': '📰', 'GeekNews': '🇰🇷', 'Hugging Face': '🤗',
+  'AI타임스': '📰', 'Hugging Face': '🤗',
   '36氪': '🇨🇳', 'TechCrunch': '🇺🇸', 'GitHub': '🐙',
 };
 
@@ -71,7 +70,7 @@ export default function NewsBriefing() {
       <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">📰 AI 뉴스 브리핑</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          AI타임스 · GeekNews · 36氪 · Hugging Face · TechCrunch에서 자동 수집
+          AI타임스 · 36氪 · Hugging Face · TechCrunch에서 자동 수집
           {lastUpdated && (
             <span className="ml-1">
               · <span className="text-gray-400">{lastUpdated.toLocaleString('ko-KR', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })} 업데이트</span>

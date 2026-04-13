@@ -8,7 +8,7 @@ type Year = typeof YEARS[number];
 export default function VideoTimeline() {
   const [activeYear, setActiveYear] = useState<Year>("2026");
 
-  const filteredEvents = TIMELINE_EVENTS.filter(e => e.date.startsWith(activeYear));
+  const filteredEvents = TIMELINE_EVENTS.filter(e => e.date.startsWith(activeYear)).reverse();
   const modelsByYear = YEARS.reduce<Record<string, typeof videoModels>>((acc, year) => {
     acc[year] = videoModels.filter(m => m.releaseDate.startsWith(year));
     return acc;

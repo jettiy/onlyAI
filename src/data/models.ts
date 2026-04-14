@@ -578,6 +578,22 @@ export const models: AIModel[] = [
 
   // Alibaba ─────────────────────
   {
+    id: 'qwen-3.6-plus',
+    name: 'Qwen 3.6 Plus',
+    company: 'Alibaba', companyId: 'alibaba', region: 'china',
+    tier: 'flagship', isFeatured: true,
+    description: '알리바바 차세대 플래그십. 1M 컨텍스트, 강력한 추론, 에이전트 능력 향상.',
+    strengths: ['초대형 컨텍스트(1M)', '강력한 추론', '에이전트/도구 호출', '멀티모달'],
+    inputPrice: 0.325, outputPrice: 1.3, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-04',
+    koreanSupport: 'A',
+    useCases: ['초대형 문서 분석', '에이전트 워크플로', '멀티모달 처리', '한·중 고급 작업'],
+    openRouterSlug: 'qwen/qwen3.6-plus',
+    sourceUrl: 'https://www.alibabacloud.com/help/en/model-studio/model-pricing',
+    url: 'https://chat.qwen.ai',
+    updatedAt: '2026-04-14',
+  },
+  {
     id: 'qwen-3-235b',
     name: 'Qwen 3-235B',
     company: 'Alibaba', companyId: 'alibaba', region: 'china',

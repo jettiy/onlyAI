@@ -2,6 +2,7 @@ import { useState } from "react";
 import { getLogoUrl } from "../lib/logoUtils";
 
 type BenchmarkKey = "mmlu" | "humaneval" | "math" | "gpqa" | "swe" | "ifeval" | "musr" | "coding";
+type MainTab = "benchmarks" | "popularity";
 
 interface ModelBench {
   name: string;
@@ -10,6 +11,15 @@ interface ModelBench {
   color: string;
   isNew?: boolean;
   scores: Partial<Record<BenchmarkKey, number>>;
+}
+
+interface PopularityEntry {
+  rank: number;
+  name: string;
+  company: string;
+  companyId: string;
+  requests: string;
+  score: number;
 }
 
 const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; tip: string; category: string }[] = [
@@ -21,6 +31,19 @@ const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; tip: string;
   { key: "coding",    label: "SWE-bench",  desc: "실제 SW 버그 수정 (verified)",        tip: "이 점수가 높으면 실제 오픈소스 프로젝트의 버그를 스스로 찾아 수정할 수 있는 수준입니다.", category: "코딩" },
   { key: "swe",       label: "Aider polyglot", desc: "다언어 코드 편집 성공률 (%)",      tip: "이 점수가 높으면 파이썬뿐 아니라 여러 프로그래밍 언어의 코드를 정확하게 편집할 수 있습니다.", category: "코딩" },
   { key: "musr",      label: "MUSR",       desc: "다단계 추론 정확도 (%)",              tip: "이 점수가 높으면 복잡한 문제를 여러 단계로 나누어 논리적으로 해결하는 능력이 뛰어납니다.", category: "추론" },
+];
+
+const popularityData: PopularityEntry[] = [
+  { rank: 1, name: 'MiMo V2 Pro', company: 'Xiaomi', companyId: 'xiaomi', requests: '4.65T', score: 98 },
+  { rank: 2, name: 'Claude Sonnet 4.6', company: 'Anthropic', companyId: 'anthropic', requests: '2.18T', score: 95 },
+  { rank: 3, name: 'MiniMax M2.7', company: 'MiniMax', companyId: 'minimax', requests: '1.92T', score: 92 },
+  { rank: 4, name: 'DeepSeek V3.2', company: 'DeepSeek', companyId: 'deepseek', requests: '1.22T', score: 88 },
+  { rank: 5, name: 'Qwen 3.6 Plus', company: 'Qwen', companyId: 'alibaba', requests: '1.10T', score: 86 },
+  { rank: 6, name: 'GPT-5.4', company: 'OpenAI', companyId: 'openai', requests: '0.95T', score: 84 },
+  { rank: 7, name: 'GLM-5', company: 'Zhipu', companyId: 'zhipu', requests: '0.72T', score: 80 },
+  { rank: 8, name: 'Gemini 2.5 Pro', company: 'Google', companyId: 'google', requests: '0.68T', score: 78 },
+  { rank: 9, name: 'Llama 4 Maverick', company: 'Meta', companyId: 'meta', requests: '0.55T', score: 75 },
+  { rank: 10, name: 'Mistral Large 2', company: 'Mistral', companyId: 'mistral', requests: '0.42T', score: 72 },
 ];
 
 const DATA: ModelBench[] = [
@@ -175,7 +198,119 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
   );
 }
 
+/* 인기도 랭킹 컴포넌트 */
+function PopularityRanking() {
+  const scoreColor = (score: number) => {
+    if (score >= 95) return 'bg-emerald-500';
+    if (score >= 85) return 'bg-blue-500';
+    if (score >= 75) return 'bg-amber-500';
+    return 'bg-gray-400';
+  };
+
+  const rankBadge = (rank: number) => {
+    if (rank === 1) return <span className="text-base">🥇</span>;
+    if (rank === 2) return <span className="text-base">🥈</span>;
+    if (rank === 3) return <span className="text-base">🥉</span>;
+    return <span className="text-xs font-bold text-gray-400">{rank}</span>;
+  };
+
+  return (
+    <div className="space-y-4">
+      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
+        <p className="text-xs text-blue-600 dark:text-blue-400">
+          OpenRouter 실사용량 기반 (2026년 4월). API 요청량 = 실제 개발자 선택 지표.
+        </p>
+      </div>
+
+      {/* 모바일 카드 */}
+      <div className="md:hidden space-y-3">
+        {popularityData.map((item, idx) => (
+          <div
+            key={item.name}
+            className={`rounded-xl border border-gray-200 dark:border-gray-800 p-4 ${idx % 2 === 0 ? 'bg-white dark:bg-gray-900' : 'bg-gray-50 dark:bg-gray-800/50'}`}
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-7 text-center shrink-0">{rankBadge(item.rank)}</div>
+              <LogoImg logoId={item.companyId} name={item.company} size={22} />
+              <div className="min-w-0 flex-1">
+                <div className="text-sm font-bold text-gray-900 dark:text-white truncate">{item.name}</div>
+                <div className="text-[10px] text-gray-400">{item.company}</div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[10px] text-gray-400">요청량</span>
+              <span className="text-xs font-bold text-gray-700 dark:text-gray-300">{item.requests}</span>
+            </div>
+            <div className="space-y-1">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-gray-400">인기 점수</span>
+                <span className="text-xs font-bold text-gray-700 dark:text-gray-300">{item.score}</span>
+              </div>
+              <div className="h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div
+                  className={`h-full rounded-full transition-all duration-500 ${scoreColor(item.score)}`}
+                  style={{ width: `${item.score}%` }}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 데스크탑 테이블 */}
+      <div className="hidden md:block bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+              <th className="text-center px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-12">순위</th>
+              <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400">모델</th>
+              <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400">회사</th>
+              <th className="text-right px-4 py-3 font-semibold text-gray-500 dark:text-gray-400">요청량</th>
+              <th className="text-center px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-48">인기 점수</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
+            {popularityData.map((item, idx) => (
+              <tr
+                key={item.name}
+                className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${idx % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}
+              >
+                <td className="text-center px-4 py-3">
+                  {rankBadge(item.rank)}
+                </td>
+                <td className="px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <LogoImg logoId={item.companyId} name={item.company} size={20} />
+                    <span className="font-semibold text-gray-800 dark:text-gray-200">{item.name}</span>
+                  </div>
+                </td>
+                <td className="px-4 py-3 text-gray-500 dark:text-gray-400">{item.company}</td>
+                <td className="text-right px-4 py-3 font-mono font-bold text-gray-700 dark:text-gray-300">{item.requests}</td>
+                <td className="px-4 py-3">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-1 h-2.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full rounded-full transition-all duration-500 ${scoreColor(item.score)}`}
+                        style={{ width: `${item.score}%` }}
+                      />
+                    </div>
+                    <span className="text-xs font-bold text-gray-600 dark:text-gray-300 w-8 text-right">{item.score}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div className="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+          <p className="text-[10px] text-gray-400 dark:text-gray-500">* 출처: OpenRouter API 실사용량 통계 · 2026년 4월 기준 · T = 트리llion (조)</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Benchmarks() {
+  const [activeTab, setActiveTab] = useState<MainTab>("benchmarks");
   const [activeBench, setActiveBench] = useState<BenchmarkKey>("mmlu");
   const [summaryPage, setSummaryPage] = useState(1);
   const ITEMS_PER_PAGE = 8;
@@ -200,174 +335,206 @@ export default function Benchmarks() {
         </p>
       </div>
 
-      {/* Category filter */}
-      <div className="flex gap-2 flex-wrap">
-        {categories.map(c => (
-          <button
-            key={c}
-            onClick={() => setCatFilter(c)}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
-              catFilter === c ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900" : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200"
-            }`}
-          >
-            {c}
-          </button>
-        ))}
+      {/* 메인 탭 선택 */}
+      <div className="flex gap-2">
+        <button
+          onClick={() => setActiveTab("benchmarks")}
+          className={`px-4 py-2 rounded-xl text-sm font-semibold transition-colors ${
+            activeTab === "benchmarks"
+              ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
+              : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+          }`}
+        >
+          📊 벤치마크
+        </button>
+        <button
+          onClick={() => setActiveTab("popularity")}
+          className={`px-4 py-2 rounded-xl text-sm font-semibold transition-colors ${
+            activeTab === "popularity"
+              ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
+              : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+          }`}
+        >
+          🔥 인기도
+        </button>
       </div>
 
-      {/* Benchmark selector */}
-      <div className="flex gap-2 overflow-x-auto pb-1">
-        {filteredBenchmarks.map((b) => (
-          <button
-            key={b.key}
-            onClick={() => setActiveBench(b.key)}
-            className={`shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-colors ${
-              activeBench === b.key
-                ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
-                : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
-            }`}
-          >
-            {b.label}
-          </button>
-        ))}
-      </div>
+      {/* 인기도 탭 */}
+      {activeTab === "popularity" && <PopularityRanking />}
 
-      {/* Benchmark description */}
-      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
-        <div className="flex items-center gap-2">
-          <span className="text-[10px] font-bold px-1.5 py-0.5 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 rounded">{bench.category}</span>
-          <p className="text-sm font-semibold text-blue-800 dark:text-blue-300">{bench.label}</p>
-        </div>
-        <p className="text-xs text-blue-600 dark:text-blue-400 mt-0.5">{bench.desc}</p>
-        {bench.tip && <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">💡 {bench.tip}</p>}
-      </div>
-
-      {/* Bar chart with logos */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 space-y-3">
-        {sorted.map((m, idx) => {
-          const score = m.scores[activeBench] ?? 0;
-          const pct = (score / maxScore) * 100;
-          const medal = idx === 0 ? "🥇" : idx === 1 ? "🥈" : idx === 2 ? "🥉" : null;
-          return (
-            <div key={m.name} className="flex items-center gap-3 group">
-              <div className="w-5 text-xs text-center shrink-0 font-medium">
-                {medal || <span className="text-gray-400">{idx + 1}</span>}
-              </div>
-              <div className="w-36 shrink-0 flex items-center gap-2">
-                <LogoImg logoId={m.logoId} name={m.company} />
-                <div className="min-w-0">
-                  <div className="flex items-center gap-1">
-                    <span className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate group-hover:text-blue-500 transition-colors">{m.name}</span>
-                    {m.isNew && <span className="text-[8px] font-bold text-red-500 shrink-0">NEW</span>}
-                  </div>
-                  <span className="text-[10px] text-gray-400">{m.company}</span>
-                </div>
-              </div>
-              <div className="flex-1 h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                <div
-                  className="h-full rounded-full transition-all duration-500"
-                  style={{ width: `${pct}%`, backgroundColor: m.color }}
-                />
-              </div>
-              <div className="w-14 text-right font-mono text-sm font-bold text-gray-900 dark:text-white shrink-0">
-                {score.toFixed(1)}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Summary table with logos — 페이지네이션 적용 */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
-        <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-          <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">전체 벤치마크 요약표</h2>
-          <p className="text-[10px] text-gray-400 mt-0.5">{DATA.length}개 모델 중 {(summaryPage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(summaryPage * ITEMS_PER_PAGE, DATA.length)}개 표시</p>
-        </div>
-        {/* 모바일 카드 */}
-        <div className="md:hidden space-y-3 px-4 py-4">
-          {DATA.slice((summaryPage - 1) * ITEMS_PER_PAGE, summaryPage * ITEMS_PER_PAGE).map((m) => (
-            <div key={m.name} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-              <div className="flex items-center gap-2 mb-3">
-                <LogoImg logoId={m.logoId} name={m.company} size={20} />
-                <div>
-                  <div className="text-sm font-bold text-gray-900 dark:text-white">{m.name}</div>
-                  <div className="text-[10px] text-gray-400">{m.company}</div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-2">
-                {BENCHMARKS.slice(0, 4).map((b) => {
-                  const v = m.scores[b.key];
-                  if (v === undefined) return <div key={b.key} className="text-xs text-gray-300 dark:text-gray-600">{b.label}: —</div>;
-                  const colMax = Math.max(...DATA.filter(x => x.scores[b.key] !== undefined).map(x => x.scores[b.key] ?? 0));
-                  const isTop = v === colMax;
-                  return <div key={b.key} className={`text-xs font-mono ${isTop ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-gray-600 dark:text-gray-400'}`}>{b.label}: {v.toFixed(1)}</div>;
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* 데스크탑 테이블 */}
-        <div className="overflow-x-auto hidden md:block">
-          <table className="w-full text-xs">
-            <thead>
-              <tr className="border-b border-gray-100 dark:border-gray-800">
-                <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-40">모델</th>
-                {BENCHMARKS.map((b) => (
-                  <th key={b.key} className={`text-right px-2 py-3 font-semibold ${activeBench === b.key ? "text-blue-600 dark:text-blue-400" : "text-gray-500 dark:text-gray-400"}`}>
-                    {b.label}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
-              {DATA.slice((summaryPage - 1) * ITEMS_PER_PAGE, summaryPage * ITEMS_PER_PAGE).map((m) => (
-                <tr key={m.name} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${DATA.indexOf(m) % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
-                  <td className="px-4 py-2.5">
-                    <div className="flex items-center gap-2">
-                      <LogoImg logoId={m.logoId} name={m.company} size={16} />
-                      <div className="min-w-0">
-                        <div className="font-semibold text-gray-800 dark:text-gray-200 truncate max-w-[100px]">{m.name}</div>
-                        <div className="text-[9px] text-gray-400">{m.company}</div>
-                      </div>
-                    </div>
-                  </td>
-                  {BENCHMARKS.map((b) => {
-                    const v = m.scores[b.key];
-                    if (v === undefined) return <td key={b.key} className="text-right px-2 py-2.5 text-gray-300 dark:text-gray-600">—</td>;
-                    const colMax = Math.max(...DATA.filter(x => x.scores[b.key] !== undefined).map(x => x.scores[b.key] ?? 0));
-                    const isTop = v === colMax;
-                    return (
-                      <td key={b.key} className={`text-right px-2 py-2.5 font-mono ${isTop ? "text-emerald-600 dark:text-emerald-400 font-bold" : "text-gray-600 dark:text-gray-400"}`}>
-                        {v.toFixed(1)}
-                      </td>
-                    );
-                  })}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-          <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: artificialanalysis.ai · 각 모델 공식 기술 보고서 · 2026년 4월 기준</p>
-        </div>
-        {/* 페이지네이션 — 요약표만 */}
-        {Math.ceil(DATA.length / ITEMS_PER_PAGE) > 1 && (
-          <Pagination current={summaryPage} total={Math.ceil(DATA.length / ITEMS_PER_PAGE)} onChange={(p) => { setSummaryPage(p); }} />
-        )}
-      </div>
-
-      {/* Benchmark explanations */}
-      <div className="grid sm:grid-cols-2 gap-3">
-        {BENCHMARKS.map((b) => (
-          <div key={b.key} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-sm font-black text-gray-900 dark:text-white">{b.label}</span>
-              <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded">{b.category}</span>
-            </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{b.desc}</p>
+      {/* 벤치마크 탭 */}
+      {activeTab === "benchmarks" && (
+        <>
+          {/* Category filter */}
+          <div className="flex gap-2 flex-wrap">
+            {categories.map(c => (
+              <button
+                key={c}
+                onClick={() => setCatFilter(c)}
+                className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
+                  catFilter === c ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900" : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200"
+                }`}
+              >
+                {c}
+              </button>
+            ))}
           </div>
-        ))}
-      </div>
+
+          {/* Benchmark selector */}
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {filteredBenchmarks.map((b) => (
+              <button
+                key={b.key}
+                onClick={() => setActiveBench(b.key)}
+                className={`shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-colors ${
+                  activeBench === b.key
+                    ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                }`}
+              >
+                {b.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Benchmark description */}
+          <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-bold px-1.5 py-0.5 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 rounded">{bench.category}</span>
+              <p className="text-sm font-semibold text-blue-800 dark:text-blue-300">{bench.label}</p>
+            </div>
+            <p className="text-xs text-blue-600 dark:text-blue-400 mt-0.5">{bench.desc}</p>
+            {bench.tip && <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">💡 {bench.tip}</p>}
+          </div>
+
+          {/* Bar chart with logos */}
+          <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 space-y-3">
+            {sorted.map((m, idx) => {
+              const score = m.scores[activeBench] ?? 0;
+              const pct = (score / maxScore) * 100;
+              const medal = idx === 0 ? "🥇" : idx === 1 ? "🥈" : idx === 2 ? "🥉" : null;
+              return (
+                <div key={m.name} className="flex items-center gap-3 group">
+                  <div className="w-5 text-xs text-center shrink-0 font-medium">
+                    {medal || <span className="text-gray-400">{idx + 1}</span>}
+                  </div>
+                  <div className="w-36 shrink-0 flex items-center gap-2">
+                    <LogoImg logoId={m.logoId} name={m.company} />
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1">
+                        <span className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate group-hover:text-blue-500 transition-colors">{m.name}</span>
+                        {m.isNew && <span className="text-[8px] font-bold text-red-500 shrink-0">NEW</span>}
+                      </div>
+                      <span className="text-[10px] text-gray-400">{m.company}</span>
+                    </div>
+                  </div>
+                  <div className="flex-1 h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all duration-500"
+                      style={{ width: `${pct}%`, backgroundColor: m.color }}
+                    />
+                  </div>
+                  <div className="w-14 text-right font-mono text-sm font-bold text-gray-900 dark:text-white shrink-0">
+                    {score.toFixed(1)}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Summary table with logos — 페이지네이션 적용 */}
+          <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+            <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+              <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">전체 벤치마크 요약표</h2>
+              <p className="text-[10px] text-gray-400 mt-0.5">{DATA.length}개 모델 중 {(summaryPage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(summaryPage * ITEMS_PER_PAGE, DATA.length)}개 표시</p>
+            </div>
+            {/* 모바일 카드 */}
+            <div className="md:hidden space-y-3 px-4 py-4">
+              {DATA.slice((summaryPage - 1) * ITEMS_PER_PAGE, summaryPage * ITEMS_PER_PAGE).map((m) => (
+                <div key={m.name} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <LogoImg logoId={m.logoId} name={m.company} size={20} />
+                    <div>
+                      <div className="text-sm font-bold text-gray-900 dark:text-white">{m.name}</div>
+                      <div className="text-[10px] text-gray-400">{m.company}</div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {BENCHMARKS.slice(0, 4).map((b) => {
+                      const v = m.scores[b.key];
+                      if (v === undefined) return <div key={b.key} className="text-xs text-gray-300 dark:text-gray-600">{b.label}: —</div>;
+                      const colMax = Math.max(...DATA.filter(x => x.scores[b.key] !== undefined).map(x => x.scores[b.key] ?? 0));
+                      const isTop = v === colMax;
+                      return <div key={b.key} className={`text-xs font-mono ${isTop ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-gray-600 dark:text-gray-400'}`}>{b.label}: {v.toFixed(1)}</div>;
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* 데스크탑 테이블 */}
+            <div className="overflow-x-auto hidden md:block">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-40">모델</th>
+                    {BENCHMARKS.map((b) => (
+                      <th key={b.key} className={`text-right px-2 py-3 font-semibold ${activeBench === b.key ? "text-blue-600 dark:text-blue-400" : "text-gray-500 dark:text-gray-400"}`}>
+                        {b.label}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
+                  {DATA.slice((summaryPage - 1) * ITEMS_PER_PAGE, summaryPage * ITEMS_PER_PAGE).map((m) => (
+                    <tr key={m.name} className={`hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors ${DATA.indexOf(m) % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
+                      <td className="px-4 py-2.5">
+                        <div className="flex items-center gap-2">
+                          <LogoImg logoId={m.logoId} name={m.company} size={16} />
+                          <div className="min-w-0">
+                            <div className="font-semibold text-gray-800 dark:text-gray-200 truncate max-w-[100px]">{m.name}</div>
+                            <div className="text-[9px] text-gray-400">{m.company}</div>
+                          </div>
+                        </div>
+                      </td>
+                      {BENCHMARKS.map((b) => {
+                        const v = m.scores[b.key];
+                        if (v === undefined) return <td key={b.key} className="text-right px-2 py-2.5 text-gray-300 dark:text-gray-600">—</td>;
+                        const colMax = Math.max(...DATA.filter(x => x.scores[b.key] !== undefined).map(x => x.scores[b.key] ?? 0));
+                        const isTop = v === colMax;
+                        return (
+                          <td key={b.key} className={`text-right px-2 py-2.5 font-mono ${isTop ? "text-emerald-600 dark:text-emerald-400 font-bold" : "text-gray-600 dark:text-gray-400"}`}>
+                            {v.toFixed(1)}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+              <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: artificialanalysis.ai · 각 모델 공식 기술 보고서 · 2026년 4월 기준</p>
+            </div>
+            {/* 페이지네이션 — 요약표만 */}
+            {Math.ceil(DATA.length / ITEMS_PER_PAGE) > 1 && (
+              <Pagination current={summaryPage} total={Math.ceil(DATA.length / ITEMS_PER_PAGE)} onChange={(p) => { setSummaryPage(p); }} />
+            )}
+          </div>
+
+          {/* Benchmark explanations */}
+          <div className="grid sm:grid-cols-2 gap-3">
+            {BENCHMARKS.map((b) => (
+              <div key={b.key} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-sm font-black text-gray-900 dark:text-white">{b.label}</span>
+                  <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded">{b.category}</span>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

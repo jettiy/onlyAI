@@ -299,15 +299,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               return <>
                 {bottomTabs.map(t => (
                   <Link key={t.path} to={t.path} onClick={() => setMobileOpen(false)}
-                    className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl min-w-0 transition-colors ${t.active ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-400 dark:text-gray-500'}`}>
+                    className={`flex flex-col items-center justify-center gap-0.5 px-3 py-2 rounded-xl min-w-0 min-h-[44px] transition-colors ${t.active ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-400 dark:text-gray-500'}`}>
                     <span className="text-xl">{t.icon}</span>
-                    <span className="text-[10px] font-semibold leading-tight">{t.label}</span>
+                    <span className={`font-semibold leading-tight ${t.active ? 'text-xs sm:text-sm' : 'text-[10px] sm:text-xs'}`}>{t.label}</span>
                   </Link>
                 ))}
                 <button onClick={() => setMobileOpen(v => !v)}
-                  className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl min-w-0 transition-colors ${mobileOpen || moreActive ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-400 dark:text-gray-500'}`}>
+                  className={`flex flex-col items-center justify-center gap-0.5 px-3 py-2 rounded-xl min-w-0 min-h-[44px] transition-colors ${mobileOpen || moreActive ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-400 dark:text-gray-500'}`}>
                   <span className="text-xl">⋯</span>
-                  <span className="text-[10px] font-semibold leading-tight">더보기</span>
+                  <span className={`font-semibold leading-tight ${mobileOpen || moreActive ? 'text-xs sm:text-sm' : 'text-[10px] sm:text-xs'}`}>더보기</span>
                 </button>
               </>;
             })()}

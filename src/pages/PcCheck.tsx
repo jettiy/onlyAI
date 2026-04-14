@@ -351,7 +351,7 @@ export default function PcCheck() {
           <textarea value={pasteText} onChange={e => setPasteText(e.target.value)}
             placeholder={`예시:\n프로세서: 12th Gen Intel(R) Core(TM) i9-12900K 3.20 GHz\n설치된 RAM: 64.0GB\n그래픽: NVIDIA GeForce RTX 4090`}
             rows={5}
-            className="w-full text-sm rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400 font-mono resize-none"
+            className="w-full text-base rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400 font-mono resize-none"
           />
           <button onClick={handleTextParse} disabled={!pasteText.trim()}
             className="w-full px-4 py-3 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white rounded-xl font-bold text-sm transition-all">
@@ -403,7 +403,7 @@ export default function PcCheck() {
             </div>
             <input type="text" value={gpuQuery} onChange={e => { setGpuQuery(e.target.value); setCustomVram(''); }}
               placeholder="또는 GPU 이름 직접 입력 (예: RTX 4060, M3 Max)"
-              className="w-full text-sm rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400"
+              className="w-full text-base rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400"
               list="gpu-list"
             />
             <datalist id="gpu-list">{GPUs.map(g => <option key={g.name} value={g.name} />)}</datalist>
@@ -422,7 +422,7 @@ export default function PcCheck() {
             <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block">또는 VRAM 직접 입력 (GB)</label>
             <input type="number" value={customVram} onChange={e => setCustomVram(e.target.value)}
               placeholder="예: 12" min="0" max="128"
-              className="w-full text-sm rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400"
+              className="w-full text-base rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400"
             />
           </div>
 
@@ -430,7 +430,7 @@ export default function PcCheck() {
           <div>
             <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block">🧠 시스템 RAM (GB)</label>
             <select value={ram} onChange={e => setRam(e.target.value)}
-              className="w-full text-sm rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              className="w-full text-base rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="8">8 GB</option>
               <option value="16">16 GB</option>
               <option value="32">32 GB</option>

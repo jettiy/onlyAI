@@ -1,0 +1,28 @@
+name: Build News Data
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # 6시간마다 (0,6,12,18시 UTC = 9,15,21,3시 KST)
+  workflow_dispatch:  # 수동 실행 가능
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build news data
+        env:
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+        run: node scripts/build-news.mjs
+
+      - name: Commit news data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/news.json
+          git diff --cached --quiet || git commit -m "chore: update news data [skip ci]"
+          git push

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-type InstallType = '' | 'windows' | 'mac' | 'docker' | 'cloud' | 'server';
+type InstallType = '' | 'windows' | 'mac' | 'docker' | 'cloud';
 
 type StepBlock = {
   title: string;
@@ -29,7 +29,6 @@ const OPTIONS: OptionCard[] = [
   { id: 'mac', icon: '🍎', title: 'Mac / Linux', subtitle: '터미널로 간편 설치' },
   { id: 'docker', icon: '🐳', title: 'Docker', subtitle: '컨테이너로 격리 실행' },
   { id: 'cloud', icon: '☁️', title: '클라우드 (Managed)', subtitle: '가입만 하면 끝 — 설치 불필요' },
-  { id: 'server', icon: '🖥️', title: '서버 (VPS/VM)', subtitle: 'PM2로 24/7 실행' },
 ];
 
 const NODE_JS_STEP: StepBlock = {
@@ -230,73 +229,6 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
       },
     ],
   },
-  server: {
-    title: '서버 (VPS/VM) 설치',
-    subtitle: 'Ubuntu/Debian 서버에 PM2로 24/7 실행합니다.',
-    steps: [
-      NODE_JS_STEP,
-      {
-        title: 'OpenClaw 설치',
-        desc: '전역으로 설치합니다.',
-        codeBlocks: [
-          { code: 'npm install -g openclaw@latest' },
-        ],
-      },
-      {
-        title: '초기 설정',
-        desc: 'AI 제공자를 선택하고 기본 설정을 완료합니다.',
-        codeBlocks: [{ code: 'openclaw onboard --install-daemon' }],
-        bullets: ['ZAI 무료 추천', 'API 키 입력'],
-      },
-      {
-        title: 'PM2로 백그라운드 실행',
-        desc: '서버 재부팅 후에도 자동 실행되도록 설정합니다.',
-        codeBlocks: [
-          { label: 'PM2 설치', code: 'npm install -g pm2' },
-          { label: 'Gateway를 PM2로 등록', code: 'pm2 start "openclaw gateway start" --name openclaw' },
-          { label: 'PM2 상태 확인', code: 'pm2 status' },
-          { label: '서버 재부팅 시 자동 실행', code: 'pm2 save && pm2 startup' },
-        ],
-        note: 'pm2 startup 명령 실행 후 출력되는 sudo 명령을 복사해서 실행하세요.',
-      },
-      {
-        title: 'Nginx 리버스 프록시 (선택)',
-        desc: '도메인과 HTTPS를 사용하려면 Nginx를 설정합니다.',
-        codeBlocks: [
-          { label: 'Nginx 설치', code: 'sudo apt install nginx -y' },
-          {
-            label: '/etc/nginx/sites-available/openclaw',
-            code: [
-              'server {',
-              '    listen 80;',
-              '    server_name your-domain.com;',
-              '',
-              '    location / {',
-              '        proxy_pass http://127.0.0.1:18789;',
-              '        proxy_http_version 1.1;',
-              '        proxy_set_header Upgrade $http_upgrade;',
-              '        proxy_set_header Connection "upgrade";',
-              '        proxy_set_header Host $host;',
-              '        proxy_set_header X-Real-IP $remote_addr;',
-              '    }',
-              '}',
-            ].join('\n'),
-          },
-          { label: '활성화', code: 'sudo ln -s /etc/nginx/sites-available/openclaw /etc/nginx/sites-enabled/\nsudo nginx -t && sudo systemctl reload nginx' },
-        ],
-      },
-      {
-        title: 'SSL/HTTPS 설정 (선택)',
-        desc: 'Let\'s Encrypt로 무료 SSL 인증서를 발급받습니다.',
-        codeBlocks: [
-          { label: 'Certbot 설치', code: 'sudo apt install certbot python3-certbot-nginx -y' },
-          { label: '인증서 발급', code: 'sudo certbot --nginx -d your-domain.com' },
-          { label: '자동 갱신 확인', code: 'sudo certbot renew --dry-run' },
-        ],
-        note: 'Certbot이 Nginx 설정을 자동으로 HTTPS로 변경합니다. 매 90일마다 자동 갱신됩니다.',
-      },
-    ],
-  },
 };
 
 const TROUBLESHOOTING = [
@@ -307,7 +239,6 @@ const TROUBLESHOOTING = [
   '포트 충돌: openclaw.json의 gateway.port 변경 (기본 18789)',
   'Windows 실행 정책: 관리자 PowerShell에서 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser',
   'Node.js 버전 오류: node --version 으로 v22+ 확인, nvm use 22 또는 재설치',
-  'PM2 로그 확인: pm2 logs openclaw',
   'Docker 권한 오류: sudo usermod -aG docker $USER (재로그인 필요)',
   'LLM 응답 없음: API 키/모델명 확인, Gateway 상태 확인',
 ];

@@ -28,13 +28,12 @@ export default async function handler(request: Request) {
     // In Vercel Edge, we fetch it from the same origin
     const url = new URL(request.url);
     const origin = url.origin;
-    let jsonStr: string | null = null;
 
     try {
       const res = await fetch(`${origin}/data/news.json`);
       if (res.ok) {
-        jsonStr = await res.text();
-        // Validate it's proper JSON
+        const jsonStr = await res.text();
+        // Validate it's proper JSON with expected structure
         const parsed = JSON.parse(jsonStr);
         if (parsed.news || parsed.github) {
           cachedResponse = { data: jsonStr, timestamp: Date.now() };
@@ -49,10 +48,11 @@ export default async function handler(request: Request) {
         }
       }
     } catch {
-      // File not found or invalid — fall through to live fetch
+      // File not found, fetch failed, or invalid JSON — fall through to live fetch
     }
 
     // ─── Fallback: Live RSS fetch ────────────────────────
+    console.log('news.json not available, using live RSS fallback');
     const { default: liveHandler } = await import('./news-live');
     return liveHandler(request);
   } catch (err) {

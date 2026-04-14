@@ -85,18 +85,13 @@ const NAV = [
     ],
   },
   {
-    label: 'OpenClaw 활용하기', path: '/openclaw', icon: '🦞', short: 'OpenClaw', mobileHide: false,
+    label: 'OpenClaw', path: '/openclaw', icon: '🦞', short: 'OpenClaw', mobileHide: false,
     children: [
+      { path: '/openclaw/install', label: '설치 가이드', icon: '⚙️' },
       { path: '/openclaw/intro', label: 'OpenClaw란?', icon: '🌐' },
       { path: '/openclaw/guide', label: '활용법', icon: '📖' },
       { path: '/openclaw/skills', label: '스킬트리 저장소', icon: '🌳' },
-      { path: '/openclaw/devnews', label: '개발자 소식', icon: '🛠️' },
-    ],
-  },
-  {
-    label: 'OpenClaw 설치방법', path: '/openclaw/install', icon: '⚙️', short: '설치', mobileHide: false,
-    children: [
-      { path: '/openclaw/install', label: '설치 가이드', icon: '🎯' },
+      { path: '/openclaw/devnews', label: '업데이트', icon: '🛠️' },
     ],
   },
   {

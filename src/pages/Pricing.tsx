@@ -123,6 +123,13 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
   );
 }
 
+function formatKRW(usd: number, rate: number): string {
+  const won = usd * rate;
+  if (won >= 1000) return `₩${Math.round(won).toLocaleString('ko-KR')}`;
+  if (won >= 1) return `₩${won.toLocaleString('ko-KR', { maximumFractionDigits: 0 })}`;
+  return `₩${won.toFixed(1)}`;
+}
+
 export default function Pricing() {
   const [tab, setTab] = useState<'bar' | 'table' | 'cache' | 'api' | 'calc'>('bar');
   const [prices, setPrices] = useState<PriceRow[]>(FALLBACK_PRICES);
@@ -130,7 +137,25 @@ export default function Pricing() {
   const [lastUpdated, setLastUpdated] = useState<string>('');
   const [tablePage, setTablePage] = useState(1);
   const [showCacheCols, setShowCacheCols] = useState(false);
+  const [showKRW, setShowKRW] = useState(true);
+  const [krwRate, setKrwRate] = useState<number>(1400);
   const ITEMS_PER_PAGE = 8;
+
+  useEffect(() => {
+    async function fetchExchangeRate() {
+      try {
+        const res = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+        if (res.ok) {
+          const data = await res.json();
+          const rate = data?.rates?.KRW;
+          if (rate) setKrwRate(Math.round(rate * 100) / 100);
+        }
+      } catch { /* keep default */ }
+    }
+    fetchExchangeRate();
+    const interval = setInterval(fetchExchangeRate, 30 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     async function fetchPrices() {
@@ -178,7 +203,15 @@ export default function Pricing() {
         <p className="text-sm text-gray-500 dark:text-gray-400">
           countless.dev 방식 참고. 입력/출력/캐시 가격 분리{lastUpdated && ` · ${lastUpdated} 업데이트`}.
         </p>
-        <p className="text-xs text-gray-400">데이터 기준일: {DATA_UPDATED_AT}</p>
+        <div className="flex items-center gap-3 mt-1">
+          <p className="text-xs text-gray-400">데이터 기준일: {DATA_UPDATED_AT}</p>
+          <label className="flex items-center gap-1.5 cursor-pointer select-none">
+            <input type="checkbox" checked={showKRW} onChange={e => setShowKRW(e.target.checked)}
+              className="w-3.5 h-3.5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer" />
+            <span className="text-[11px] text-gray-500 dark:text-gray-400">원화(₩) 병기</span>
+          </label>
+          {showKRW && <span className="text-[10px] text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">1$ = {krwRate.toLocaleString()}₩</span>}
+        </div>
         {loading && <div className="mt-2 flex items-center gap-2"><div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" /><span className="text-xs text-gray-400">가격 불러오는 중...</span></div>}
       </div>
 
@@ -211,6 +244,7 @@ export default function Pricing() {
                         backgroundColor: row.input < 0.5 ? '#22c55e' : row.input < 1.5 ? '#3b82f6' : row.input < 3 ? '#f59e0b' : '#ef4444' }} />
                   </div>
                   <div className="w-14 text-right text-sm font-bold text-gray-900 dark:text-white shrink-0 font-mono">${row.input}</div>
+                  {showKRW && <div className="w-20 text-right text-[11px] font-medium text-gray-400 dark:text-gray-500 shrink-0">{formatKRW(row.input, krwRate)}</div>}
                 </div>
               );
             })}
@@ -267,10 +301,10 @@ export default function Pricing() {
                           </div>
                         </div>
                       </td>
-                      <td className="px-3 py-3 text-right font-mono text-gray-900 dark:text-white">${row.input}</td>
-                      <td className="px-3 py-3 text-right font-mono text-gray-900 dark:text-white">${row.output}</td>
-                      {showCacheCols && <td className="px-3 py-3 text-right font-mono text-emerald-600 dark:text-emerald-400">{row.cacheRead ? `$${row.cacheRead}` : '—'}</td>}
-                      {showCacheCols && <td className="px-3 py-3 text-right font-mono text-orange-600 dark:text-orange-400">{row.cacheWrite ? `$${row.cacheWrite}` : '—'}</td>}
+                      <td className="px-3 py-3 text-right font-mono text-gray-900 dark:text-white">${row.input}{showKRW && <span className="block text-[10px] text-gray-400 font-normal">{formatKRW(row.input, krwRate)}</span>}</td>
+                      <td className="px-3 py-3 text-right font-mono text-gray-900 dark:text-white">${row.output}{showKRW && <span className="block text-[10px] text-gray-400 font-normal">{formatKRW(row.output, krwRate)}</span>}</td>
+                      {showCacheCols && <td className="px-3 py-3 text-right font-mono text-emerald-600 dark:text-emerald-400">{row.cacheRead ? <>{`$${row.cacheRead}`}{showKRW && <span className="block text-[10px] text-gray-400 font-normal">{formatKRW(row.cacheRead, krwRate)}</span>}</> : '—'}</td>}
+                      {showCacheCols && <td className="px-3 py-3 text-right font-mono text-orange-600 dark:text-orange-400">{row.cacheWrite ? <>{`$${row.cacheWrite}`}{showKRW && <span className="block text-[10px] text-gray-400 font-normal">{formatKRW(row.cacheWrite, krwRate)}</span>}</> : '—'}</td>}
                       <td className="px-3 py-3 text-center text-gray-500 dark:text-gray-400">{row.context}</td>
                       <td className="px-3 py-3 text-center">
                         {row.note && <span className={`px-2 py-0.5 text-xs rounded-full font-semibold ${NOTE_STYLE[row.note] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-600'}`}>{row.note}</span>}
@@ -282,7 +316,7 @@ export default function Pricing() {
             </table>
           </div>
           <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-            <p className="text-xs text-gray-400 dark:text-gray-500">* 가격은 $/1M 토큰. 캐시 읽기 = 이전 대화 재사용 시 (최대 90% 할인). 캐시 쓰기 = 첫 프롬프트 저장 비용.</p>
+            <p className="text-xs text-gray-400 dark:text-gray-500">* 가격은 $/1M 토큰{showKRW && ` (1$ = ${krwRate.toLocaleString()}₩)`}. 캐시 읽기 = 이전 대화 재사용 시 (최대 90% 할인). 캐시 쓰기 = 첫 프롬프트 저장 비용.</p>
           </div>
           {Math.ceil(prices.length / ITEMS_PER_PAGE) > 1 && <Pagination current={tablePage} total={Math.ceil(prices.length / ITEMS_PER_PAGE)} onChange={setTablePage} />}
           {/* Mobile cards */}
@@ -297,8 +331,8 @@ export default function Pricing() {
                     {row.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
                   </div>
                   <div className="grid grid-cols-3 gap-2">
-                    <div><div className="text-[10px] text-gray-400">입력</div><div className="text-xs font-bold text-gray-900 dark:text-white font-mono">${row.input}</div></div>
-                    <div><div className="text-[10px] text-gray-400">출력</div><div className="text-xs font-bold text-gray-900 dark:text-white font-mono">${row.output}</div></div>
+                    <div><div className="text-[10px] text-gray-400">입력</div><div className="text-xs font-bold text-gray-900 dark:text-white font-mono">${row.input}</div>{showKRW && <div className="text-[9px] text-gray-400">{formatKRW(row.input, krwRate)}</div>}</div>
+                    <div><div className="text-[10px] text-gray-400">출력</div><div className="text-xs font-bold text-gray-900 dark:text-white font-mono">${row.output}</div>{showKRW && <div className="text-[9px] text-gray-400">{formatKRW(row.output, krwRate)}</div>}</div>
                     <div><div className="text-[10px] text-gray-400">컨텍스트</div><div className="text-xs font-bold text-gray-900 dark:text-white">{row.context}</div></div>
                   </div>
                   {row.note && <div className="mt-2"><span className={`px-2 py-0.5 text-[9px] rounded-full font-semibold ${NOTE_STYLE[row.note] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-600'}`}>{row.note}</span></div>}
@@ -329,12 +363,12 @@ export default function Pricing() {
                 {prices.filter(p => p.cacheRead).sort((a, b) => a.cacheRead! - b.cacheRead!).map((row, idx) => (
                   <tr key={row.model} className={idx % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}>
                     <td className="px-3 py-2 font-medium text-gray-900 dark:text-white">{row.model}</td>
-                    <td className="px-3 py-2 text-right font-mono text-gray-600">${row.input}</td>
-                    <td className="px-3 py-2 text-right font-mono text-emerald-600 font-bold">${row.cacheRead}</td>
+                    <td className="px-3 py-2 text-right font-mono text-gray-600">${row.input}{showKRW && <div className="text-[9px] text-gray-400 font-normal">{formatKRW(row.input, krwRate)}</div>}</td>
+                    <td className="px-3 py-2 text-right font-mono text-emerald-600 font-bold">${row.cacheRead}{showKRW && <div className="text-[9px] text-emerald-500/60 font-normal">{formatKRW(row.cacheRead!, krwRate)}</div>}</td>
                     <td className="px-3 py-2 text-right font-mono text-emerald-600">
                       -{Math.round((1 - row.cacheRead! / row.input) * 100)}%
                     </td>
-                    <td className="px-3 py-2 text-right font-mono text-orange-600">{row.cacheWrite || '—'}</td>
+                    <td className="px-3 py-2 text-right font-mono text-orange-600">{row.cacheWrite ? `$${row.cacheWrite}` : '—'}{showKRW && row.cacheWrite && <div className="text-[9px] text-orange-500/60 font-normal">{formatKRW(row.cacheWrite, krwRate)}</div>}</td>
                   </tr>
                 ))}
               </tbody>
@@ -373,13 +407,13 @@ export default function Pricing() {
       )}
 
       {/* Token cost calculator */}
-      {tab === 'calc' && <PriceCalculator prices={prices} />}
+      {tab === 'calc' && <PriceCalculator prices={prices} showKRW={showKRW} krwRate={krwRate} />}
     </div>
   );
 }
 
 /* ── 가격 계산기 컴포넌트 ── */
-function PriceCalculator({ prices }: { prices: PriceRow[] }) {
+function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; showKRW: boolean; krwRate: number }) {
   const [inputTokens, setInputTokens] = useState<string>('');
   const [outputTokens, setOutputTokens] = useState<string>('');
   const inputNum = Number(inputTokens) || 0;
@@ -481,9 +515,12 @@ function PriceCalculator({ prices }: { prices: PriceRow[] }) {
                           <div className="flex-1 h-4 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                             <div className="h-full rounded-full" style={{ width: `${barPct}%`, backgroundColor: barColor }} />
                           </div>
-                          <span className={`font-mono font-bold shrink-0 ${idx === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-900 dark:text-white'}`}>
-                            ${row.monthlyCost < 0.01 ? '<0.01' : row.monthlyCost.toFixed(2)}
-                          </span>
+                          <div className="text-right shrink-0">
+                            <span className={`font-mono font-bold block ${idx === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-900 dark:text-white'}`}>
+                              ${row.monthlyCost < 0.01 ? '<0.01' : row.monthlyCost.toFixed(2)}
+                            </span>
+                            {showKRW && <span className="font-mono text-[10px] text-gray-400">{formatKRW(row.monthlyCost, krwRate)}</span>}
+                          </div>
                         </div>
                       </td>
                     </tr>
@@ -495,9 +532,9 @@ function PriceCalculator({ prices }: { prices: PriceRow[] }) {
           {calculations.length > 0 && (
             <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                💡 가장 저렴한 모델: <strong className="text-emerald-600 dark:text-emerald-400">{calculations[0].model}</strong> (${calculations[0].monthlyCost < 0.01 ? '<0.01' : calculations[0].monthlyCost.toFixed(2)}/월)
+                💡 가장 저렴한 모델: <strong className="text-emerald-600 dark:text-emerald-400">{calculations[0].model}</strong> (${calculations[0].monthlyCost < 0.01 ? '<0.01' : calculations[0].monthlyCost.toFixed(2)}/월){showKRW && <span className="text-gray-400"> ({formatKRW(calculations[0].monthlyCost, krwRate)}/월)</span>}
                 {calculations.length > 1 && (
-                  <> · 가장 비싼 모델: <strong className="text-red-500">{calculations[calculations.length - 1].model}</strong> (${calculations[calculations.length - 1].monthlyCost.toFixed(2)}/월)</>
+                  <> · 가장 비싼 모델: <strong className="text-red-500">{calculations[calculations.length - 1].model}</strong> (${calculations[calculations.length - 1].monthlyCost.toFixed(2)}/월){showKRW && <span className="text-gray-400"> ({formatKRW(calculations[calculations.length - 1].monthlyCost, krwRate)}/월)</span>}</>
                 )}
               </p>
             </div>

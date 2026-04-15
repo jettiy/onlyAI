@@ -17,18 +17,21 @@
   }
   :root {
     --safe-area-bottom: env(safe-area-inset-bottom, 0px);
-    --cat-model: #7C3AED;
-    --cat-research: #2563EB;
-    --cat-agent: #0891B2;
-    --cat-oss: #059669;
-    --cat-finetune: #D97706;
-    --cat-bench: #EA580C;
-    --cat-infra: #64748B;
-    --cat-policy: #DC2626;
-    --cat-tool: #0284C7;
-    --cat-multi: #DB2777;
-
+    --brand: #5B5FEF;
+    --brand-light: #EEEDFF;
+    --success: #22C55E;
+    --danger: #EF4444;
     --radius: 0.5rem;
+    /* Category colors: indigo opacity 3-level */
+    --cat-level-1: #5B5FEF;
+    --cat-level-2: #8B8FF5;
+    --cat-level-3: #B4B7FA;
+    /* News category colors using indigo shades */
+    --cat-model: #5B5FEF;
+    --cat-research: #4A4AC0;
+    --cat-agent: #6D6DE0;
+    --cat-oss: #22C55E;
+    --cat-infra: #64748B;
   }
 
   .dark {
@@ -43,5 +46,14 @@
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite linear;
+  }
+  .dark .skeleton {
+    background: linear-gradient(90deg, #1e1e2e 25%, #2a2a3a 50%, #1e1e2e 75%);
+    background-size: 200% 100%;
   }
 }

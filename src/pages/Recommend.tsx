@@ -4,7 +4,7 @@ import { recommend, type RecommendResult } from '../lib/recommendEngine';
 import { useCaseLabels, useCaseIcons, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
 import { CompanyLogo } from '../components/CompanyLogo';
 import { ScoreTooltip } from '../components/ScoreTooltip';
-import { models, companies } from '../data/models';
+import { models, companies, DATA_UPDATED_AT } from '../data/models';
 
 const MEDALS = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣'];
 
@@ -135,7 +135,7 @@ export default function RecommendPage() {
           <span className="text-lg">🎯</span>
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">AI 추천 결과</h1>
         </div>
-        <p className="text-xs text-gray-400 mb-3">데이터 기준일: 2026-04-11 (정기 업데이트)</p>
+        <p className="text-xs text-gray-400 mb-3">데이터 기준일: {DATA_UPDATED_AT} (정기 업데이트)</p>
         <div className="flex flex-wrap gap-2">
           {useCases.length > 0 ? useCases.map(uc => (
             <span key={uc} className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-blue-700 dark:text-blue-400 rounded-lg font-medium shadow-sm">

@@ -120,6 +120,12 @@ export const companies: AICompany[] = [
     website: 'https://cohere.com/pricing',
     playgroundUrl: 'https://coral.cohere.com',
   },
+  {
+    id: 'arcee', name: 'Arcee AI', region: 'us', country: '미국', flag: '', logoId: 'arcee',
+    description: '26인 미국 스타트업. 400B 파라미터 오픈소스 모델을 $2000만으로 학습. 에이전트 특화.',
+    website: 'https://www.arcee.ai/trinity',
+    playgroundUrl: 'https://www.arcee.ai/',
+  },
 ];
 
 // ── 모델 목록 ───────────────────────────────────────────────────
@@ -177,7 +183,7 @@ export const models: AIModel[] = [
     name: 'GPT-5.4 Pro',
     company: 'OpenAI', companyId: 'openai', region: 'us',
     tier: 'flagship', isFeatured: true,
-    description: 'GPT-5.4 최고 성능 티어. 1M 컨텍스트. 코딩+추론 통합(Codex 스택). 전문가·엔터프라이즈용.',
+    description: 'GPT-5.4 최고 성능 티어. 1M 컨텍스트. 코딩+추론 통합(Codex 스택). 전문가·엔터프라이즈용. (⚠️ 공식 가격 페이지 미표시, 확인 필요)',
     strengths: ['최고 성능', 'Codex 통합', '1M 컨텍스트', '전용 GPU'],
     inputPrice: 30.0, outputPrice: 180.0, contextWindow: '1M',
     isLocal: false, isNew: true, releaseDate: '2026-03',
@@ -185,7 +191,7 @@ export const models: AIModel[] = [
     useCases: ['복잡한 추론', '엔터프라이즈 코딩', '법률/의료 분석', '연구'],
     sourceUrl: 'https://openai.com/api/pricing/',
     url: 'https://chatgpt.com',
-    updatedAt: '2026-04-11',
+    updatedAt: '2026-04-16',
   },
   {
     id: 'gpt-5-3-instant',
@@ -363,7 +369,7 @@ export const models: AIModel[] = [
     koreanSupport: 'B',
     useCases: ['사이버보안', '보안 연구', '고급 분석', '연구'],
     sourceUrl: 'https://red.anthropic.com/2026/mythos-preview/',
-    updatedAt: '2026-04-11',
+    updatedAt: '2026-04-16',
   },
 
   // Google ─────────────────────
@@ -446,33 +452,48 @@ export const models: AIModel[] = [
     id: 'llama-4-maverick',
     name: 'Llama 4 Maverick',
     company: 'Meta', companyId: 'meta', region: 'us',
-    tier: 'strong', isFeatured: true,
-    description: '2025년 4월 출시. 오픈소스 MoE. 상업용 무료, 로컬 실행 가능. 1M 컨텍스트. Groq 경유 $0.27/1M.',
-    strengths: ['오픈소스', '무료 상업용', '로컬 가능', '1M 컨텍스트'],
+    tier: 'flagship', isFeatured: true,
+    description: '400B 파라미터, 1M 컨텍스트. 네이티브 멀티모달 MoE. 분산 추론 시 $0.19/Mtok. 오픈웨이트.',
+    strengths: ['멀티모달', '추론', '오픈소스', '코딩'],
     inputPrice: 0.27, outputPrice: 0.85, contextWindow: '1M',
     params: '400B MoE',
-    isLocal: true, isNew: false, releaseDate: '2025-04',
-    koreanSupport: 'C',
-    useCases: ['로컬 AI 서버', '파인튜닝', '비용 절감'],
+    isLocal: true, isNew: true, releaseDate: '2026-04-05',
+    koreanSupport: 'B',
+    useCases: ['멀티모달 처리', '복잡 추론', '코드 생성', '에이전트'],
     openRouterSlug: 'meta-llama/llama-4-maverick',
-    sourceUrl: 'https://groq.com/pricing',
-    updatedAt: '2026-03-19',
+    sourceUrl: 'https://www.llama.com/',
+    updatedAt: '2026-04-16',
   },
   {
     id: 'llama-4-scout',
     name: 'Llama 4 Scout',
     company: 'Meta', companyId: 'meta', region: 'us',
-    tier: 'efficient', isFeatured: false,
-    description: '2025년 4월 출시. Maverick 경량 버전. 10M(!) 컨텍스트. $0.11/1M 초저가 오픈소스.',
-    strengths: ['10M 컨텍스트', '초저가', '오픈소스', '로컬'],
+    tier: 'strong', isFeatured: false,
+    description: '10M 토큰 컨텍스트 창. 역대 최대 컨텍스트. 오픈웨이트 MoE.',
+    strengths: ['초장문 컨텍스트', '오픈소스', '다국어'],
     inputPrice: 0.11, outputPrice: 0.34, contextWindow: '10M',
     params: '109B MoE',
-    isLocal: true, isNew: false, releaseDate: '2025-04',
-    koreanSupport: 'C',
-    useCases: ['초장문 처리', '저비용 에이전트', '로컬 실행'],
+    isLocal: true, isNew: true, releaseDate: '2026-04-05',
+    koreanSupport: 'B',
+    useCases: ['초대규모 문서 분석', '장문 요약', '연구'],
     openRouterSlug: 'meta-llama/llama-4-scout',
-    sourceUrl: 'https://groq.com/pricing',
-    updatedAt: '2026-03-19',
+    sourceUrl: 'https://www.llama.com/',
+    updatedAt: '2026-04-16',
+  },
+  {
+    id: 'meta-muse-spark',
+    name: 'Muse Spark',
+    company: 'Meta', companyId: 'meta', region: 'us',
+    tier: 'flagship', isFeatured: false,
+    description: 'Alexandr Wang (Scale AI CEO)이 이끄는 Meta Superintelligence Labs 첫 모델. 상세 스펙 미공개.',
+    strengths: ['초거대 모델'],
+    inputPrice: null, outputPrice: null, contextWindow: '미공개',
+    params: '미공개',
+    isLocal: false, isNew: true, releaseDate: '2026-04-08',
+    koreanSupport: null,
+    useCases: ['TBA'],
+    sourceUrl: 'https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html',
+    updatedAt: '2026-04-16',
   },
 
   // xAI ─────────────────────
@@ -524,7 +545,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'minimax/minimax-m2',
     sourceUrl: 'https://platform.minimax.io/docs/pricing/overview',
     url: 'https://hailuoai.com',
-    updatedAt: '2026-03-19',
+    updatedAt: '2026-04-16',
   },
   {
     id: 'minimax-m2-5',
@@ -691,6 +712,21 @@ export const models: AIModel[] = [
     updatedAt: '2026-04-10',
   },
   {
+    id: 'glm-5-1-open',
+    name: 'GLM-5.1 (MIT)',
+    company: 'Zhipu AI', companyId: 'zhipu', region: 'china',
+    tier: 'flagship', isFeatured: true,
+    description: 'MIT 오픈소스 744B MoE (40B 활성). SWE-Bench Pro 58.4로 최고 성능. 코딩/에이전트 특화.',
+    strengths: ['코딩', '에이전트', '오픈소스', '긴 컨텍스트'],
+    inputPrice: null, outputPrice: null, contextWindow: '200K',
+    params: '744B MoE (40B active)',
+    isLocal: true, isNew: true, releaseDate: '2026-04',
+    koreanSupport: 'A',
+    useCases: ['코드 생성', '복잡 추론', '에이전트 워크플로우'],
+    sourceUrl: 'https://docs.z.ai/guides/llm/glm-5.1',
+    updatedAt: '2026-04-16',
+  },
+  {
     id: 'glm-5',
     name: 'GLM-5',
     company: 'Zhipu AI', companyId: 'zhipu', region: 'china',
@@ -834,6 +870,23 @@ export const models: AIModel[] = [
     updatedAt: '2026-03-19',
   },
 
+  // Arcee AI ─────────────────────
+  {
+    id: 'arcee-trinity',
+    name: 'Arcee Trinity',
+    company: 'Arcee AI', companyId: 'arcee', region: 'us',
+    tier: 'strong', isFeatured: false,
+    description: '400B MoE, Apache 2.0. Opus 4.6 대비 96% 저렴 ($0.90/Mtok output). 에이전트/툴사용 특화.',
+    strengths: ['에이전트', '툴사용', '오픈소스', '가성비'],
+    inputPrice: 0.15, outputPrice: 0.90, contextWindow: '128K',
+    params: '400B MoE',
+    isLocal: false, isNew: true, releaseDate: '2026-04-02',
+    koreanSupport: 'C',
+    useCases: ['에이전트 워크플로우', '툴사용', '긴 호라이즌 작업'],
+    sourceUrl: 'https://www.arcee.ai/trinity',
+    updatedAt: '2026-04-16',
+  },
+
   // Cohere ─────────────────────
   {
     id: 'command-r-plus',
@@ -866,6 +919,9 @@ export const models: AIModel[] = [
     updatedAt: '2026-03-19',
   },
 ];
+
+// ── 데이터 갱신일 ────────────────────────────────────────────────
+export const DATA_UPDATED_AT = '2026-04-16';
 
 // ── 헬퍼 ────────────────────────────────────────────────────────
 export const tierLabels: Record<ModelTier, string> = {

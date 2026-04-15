@@ -14,6 +14,8 @@ const LOGO_MAP: Record<string, string> = {
   xiaomi: "aa_xiaomi.svg",
   mistral: "aa_mistral.svg",
   cohere: "aa_cohere.svg",
+  // arcee: 로고 파일 미확보 — 추후 aa_arcee.svg 추가 시 활성화
+  // arcee: "aa_arcee.svg",
   // Video/Image providers
   klingai: "aa_klingai.svg",
   bytedance: "aa_bytedance.svg",
@@ -55,6 +57,7 @@ const NAME_TO_LOGO: Record<string, string> = {
   "Xiaomi": "xiaomi",
   "Mistral": "mistral",
   "Cohere": "cohere",
+  "Arcee AI": "arcee",
   "ByteDance": "bytedance",
   "ByteDance(字节跳动)": "bytedance",
   "KlingAI": "klingai",

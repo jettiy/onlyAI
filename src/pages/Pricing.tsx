@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { cloudProviders } from '../data/cloudProviders';
-import { models } from '../data/models';
+import { models, DATA_UPDATED_AT } from '../data/models';
 import { getLogoUrl } from '../lib/logoUtils';
 
 interface PriceRow {
@@ -178,7 +178,7 @@ export default function Pricing() {
         <p className="text-sm text-gray-500 dark:text-gray-400">
           countless.dev 방식 참고. 입력/출력/캐시 가격 분리{lastUpdated && ` · ${lastUpdated} 업데이트`}.
         </p>
-        <p className="text-xs text-gray-400">데이터 기준일: 2026년 4월</p>
+        <p className="text-xs text-gray-400">데이터 기준일: {DATA_UPDATED_AT}</p>
         {loading && <div className="mt-2 flex items-center gap-2"><div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" /><span className="text-xs text-gray-400">가격 불러오는 중...</span></div>}
       </div>
 

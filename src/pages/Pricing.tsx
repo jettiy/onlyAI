@@ -13,53 +13,91 @@ interface PriceRow {
   context: string;
   note?: string;
   isNew?: boolean;
+  koreanBilling?: boolean | null;
 }
 
 const FALLBACK_PRICES: PriceRow[] = [
   // ── OpenAI ──
-  { model: 'GPT-5.4', provider: 'OpenAI', input: 2.50, output: 15.0, cacheRead: 0.25, cacheWrite: 2.50, context: '270K', note: '최고 성능', isNew: true },
-  { model: 'GPT-5.4 mini', provider: 'OpenAI', input: 0.75, output: 4.50, cacheRead: 0.075, cacheWrite: 0.75, context: '270K', note: '가성비', isNew: true },
-  { model: 'GPT-5.4 nano', provider: 'OpenAI', input: 0.20, output: 1.25, cacheRead: 0.02, cacheWrite: 0.20, context: '270K', note: '최저가', isNew: true },
-  { model: 'GPT-5.2', provider: 'OpenAI', input: 1.75, output: 14.0, cacheRead: 0.175, cacheWrite: 1.75, context: '200K', note: '검증됨' },
-  { model: 'GPT-5', provider: 'OpenAI', input: 0.625, output: 5.0, cacheRead: 0.0625, cacheWrite: 0.625, context: '400K', note: '균형' },
-  { model: 'GPT-4.1', provider: 'OpenAI', input: 3.0, output: 12.0, cacheRead: 0.375, cacheWrite: 3.00, context: '1M', note: '코딩 강자' },
-  { model: 'GPT-4.1 Mini', provider: 'OpenAI', input: 0.80, output: 3.20, cacheRead: 0.08, cacheWrite: 0.80, context: '1M', note: '가성비' },
-  { model: 'GPT-4o', provider: 'OpenAI', input: 2.50, output: 10.0, cacheRead: 1.25, cacheWrite: 2.50, context: '128K', note: '멀티모달' },
-  { model: 'GPT-4o mini', provider: 'OpenAI', input: 0.15, output: 0.60, cacheRead: 0.075, cacheWrite: 0.15, context: '128K', note: '초저가' },
-  { model: 'o3', provider: 'OpenAI', input: 2.0, output: 8.0, cacheRead: 0.50, cacheWrite: 2.50, context: '200K', note: '추론' },
+  { model: 'GPT-5.4', provider: 'OpenAI', input: 2.50, output: 15.0, cacheRead: 0.25, cacheWrite: 2.50, context: '270K', note: '최고 성능', isNew: true, koreanBilling: true,
+  },
+  { model: 'GPT-5.4 mini', provider: 'OpenAI', input: 0.75, output: 4.50, cacheRead: 0.075, cacheWrite: 0.75, context: '270K', note: '가성비', isNew: true, koreanBilling: true,
+  },
+  { model: 'GPT-5.4 nano', provider: 'OpenAI', input: 0.20, output: 1.25, cacheRead: 0.02, cacheWrite: 0.20, context: '270K', note: '최저가', isNew: true, koreanBilling: true,
+  },
+  { model: 'GPT-5.2', provider: 'OpenAI', input: 1.75, output: 14.0, cacheRead: 0.175, cacheWrite: 1.75, context: '200K', note: '검증됨', koreanBilling: true,
+  },
+  { model: 'GPT-5', provider: 'OpenAI', input: 0.625, output: 5.0, cacheRead: 0.0625, cacheWrite: 0.625, context: '400K', note: '균형', koreanBilling: true,
+  },
+  { model: 'GPT-4.1', provider: 'OpenAI', input: 3.0, output: 12.0, cacheRead: 0.375, cacheWrite: 3.00, context: '1M', note: '코딩 강자', koreanBilling: true,
+  },
+  { model: 'GPT-4.1 Mini', provider: 'OpenAI', input: 0.80, output: 3.20, cacheRead: 0.08, cacheWrite: 0.80, context: '1M', note: '가성비', koreanBilling: true,
+  },
+  { model: 'GPT-4o', provider: 'OpenAI', input: 2.50, output: 10.0, cacheRead: 1.25, cacheWrite: 2.50, context: '128K', note: '멀티모달', koreanBilling: true,
+  },
+  { model: 'GPT-4o mini', provider: 'OpenAI', input: 0.15, output: 0.60, cacheRead: 0.075, cacheWrite: 0.15, context: '128K', note: '초저가', koreanBilling: true,
+  },
+  { model: 'o3', provider: 'OpenAI', input: 2.0, output: 8.0, cacheRead: 0.50, cacheWrite: 2.50, context: '200K', note: '추론', koreanBilling: true,
+  },
   // ── Anthropic ──
-  { model: 'Claude Opus 4.6', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '1M', note: '최고 성능' },
-  { model: 'Claude Opus 4.5', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '200K', note: '검증됨' },
-  { model: 'Claude Sonnet 4.6', provider: 'Anthropic', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.75, context: '1M', note: '균형', isNew: true },
-  { model: 'Claude Haiku 4.5', provider: 'Anthropic', input: 1.0, output: 5.0, cacheRead: 0.10, cacheWrite: 1.25, context: '200K', note: '빠름' },
+  { model: 'Claude Opus 4.6', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '1M', note: '최고 성능', koreanBilling: true,
+  },
+  { model: 'Claude Opus 4.5', provider: 'Anthropic', input: 5.0, output: 25.0, cacheRead: 0.50, cacheWrite: 6.25, context: '200K', note: '검증됨', koreanBilling: true,
+  },
+  { model: 'Claude Sonnet 4.6', provider: 'Anthropic', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.75, context: '1M', note: '균형', isNew: true, koreanBilling: true,
+  },
+  { model: 'Claude Haiku 4.5', provider: 'Anthropic', input: 1.0, output: 5.0, cacheRead: 0.10, cacheWrite: 1.25, context: '200K', note: '빠름', koreanBilling: true,
+  },
   // ── Google ──
-  { model: 'Gemini 3.1 Pro', provider: 'Google', input: 2.0, output: 12.0, cacheRead: 0.625, cacheWrite: 2.50, context: '1M', note: '멀티모달', isNew: true },
-  { model: 'Gemini 2.5 Pro', provider: 'Google', input: 1.25, output: 10.0, cacheRead: 0.3125, cacheWrite: 1.25, context: '1M', note: '가성비' },
-  { model: 'Gemini 2.5 Flash', provider: 'Google', input: 0.30, output: 2.5, cacheRead: 0.075, cacheWrite: 0.30, context: '1M', note: '저가' },
-  { model: 'Gemini 2.5 Flash-Lite', provider: 'Google', input: 0.10, output: 0.40, cacheRead: 0.025, cacheWrite: 0.10, context: '1M', note: '최저가' },
+  { model: 'Gemini 3.1 Pro', provider: 'Google', input: 2.0, output: 12.0, cacheRead: 0.625, cacheWrite: 2.50, context: '1M', note: '멀티모달', isNew: true, koreanBilling: true,
+  },
+  { model: 'Gemini 2.5 Pro', provider: 'Google', input: 1.25, output: 10.0, cacheRead: 0.3125, cacheWrite: 1.25, context: '1M', note: '가성비', koreanBilling: true,
+  },
+  { model: 'Gemini 2.5 Flash', provider: 'Google', input: 0.30, output: 2.5, cacheRead: 0.075, cacheWrite: 0.30, context: '1M', note: '저가', koreanBilling: true,
+  },
+  { model: 'Gemini 2.5 Flash-Lite', provider: 'Google', input: 0.10, output: 0.40, cacheRead: 0.025, cacheWrite: 0.10, context: '1M', note: '최저가', koreanBilling: true,
+  },
   // ── xAI ──
-  { model: 'Grok 4.20', provider: 'xAI', input: 2.0, output: 6.0, cacheRead: 0.20, cacheWrite: 2.00, context: '2M', note: '실시간', isNew: true },
-  { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '131K', note: '검증됨' },
+  { model: 'Grok 4.20', provider: 'xAI', input: 2.0, output: 6.0, cacheRead: 0.20, cacheWrite: 2.00, context: '2M', note: '실시간', isNew: true, koreanBilling: null,
+  },
+  { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '131K', note: '검증됨', koreanBilling: null,
+  },
   // ── Meta ──
-  { model: 'Llama 4 Maverick', provider: 'Meta', input: 0.27, output: 0.85, cacheRead: 0.027, cacheWrite: 0.27, context: '1M', note: '오픈소스' },
-  { model: 'Llama 4 Scout', provider: 'Meta', input: 0.11, output: 0.34, cacheRead: 0.011, cacheWrite: 0.11, context: '10M', note: '초장문맥' },
+  { model: 'Llama 4 Maverick', provider: 'Meta', input: 0.27, output: 0.85, cacheRead: 0.027, cacheWrite: 0.27, context: '1M', note: '오픈소스', koreanBilling: true,
+  },
+  { model: 'Llama 4 Scout', provider: 'Meta', input: 0.11, output: 0.34, cacheRead: 0.011, cacheWrite: 0.11, context: '10M', note: '초장문맥', koreanBilling: true,
+  },
   // ── 중국 ──
-  { model: 'MiniMax M2.7', provider: 'MiniMax', input: 0.30, output: 1.20, cacheRead: 0.03, cacheWrite: 0.30, context: '204K', note: '에이전트', isNew: true },
-  { model: 'MiniMax M2.5', provider: 'MiniMax', input: 0.27, output: 0.95, cacheRead: 0.027, cacheWrite: 0.27, context: '197K', note: '검증됨' },
-  { model: 'DeepSeek V3.2', provider: 'DeepSeek', input: 0.28, output: 0.42, cacheRead: 0.028, context: '128K', note: '가성비' },
-  { model: 'DeepSeek R1', provider: 'DeepSeek', input: 0.55, output: 2.19, cacheRead: 0.14, context: '128K', note: '추론' },
-  { model: 'Qwen3 235B', provider: 'Alibaba', input: 0.40, output: 1.20, cacheRead: 0.04, cacheWrite: 0.40, context: '128K', note: '한·중 특화' },
-  { model: 'Qwen3 32B', provider: 'Alibaba', input: 0.10, output: 0.40, cacheRead: 0.01, cacheWrite: 0.10, context: '128K', note: '오픈소스' },
-  { model: 'Qwen3 7B', provider: 'Alibaba', input: 0.04, output: 0.12, context: '128K', note: '초저가' },
-  { model: 'GLM-5', provider: 'Zhipu AI', input: 1.00, output: 3.20, cacheRead: 0.10, cacheWrite: 1.00, context: '128K', note: '코딩 특화' },
-  { model: 'GLM-5 Turbo', provider: 'Zhipu AI', input: 0.96, output: 3.20, cacheRead: 0.096, cacheWrite: 0.96, context: '128K', note: '초고속' },
-  { model: 'Kimi K2.5', provider: 'Moonshot', input: 0.60, output: 2.10, cacheRead: 0.06, cacheWrite: 0.60, context: '262K', note: '에이전트' },
-  { model: 'MiMo V2 Pro', provider: 'Xiaomi', input: 1.00, output: 3.00, cacheRead: 0.10, cacheWrite: 1.00, context: '1M', note: '초장문맥' },
+  { model: 'MiniMax M2.7', provider: 'MiniMax', input: 0.30, output: 1.20, cacheRead: 0.03, cacheWrite: 0.30, context: '204K', note: '에이전트', isNew: true, koreanBilling: true,
+  },
+  { model: 'MiniMax M2.5', provider: 'MiniMax', input: 0.27, output: 0.95, cacheRead: 0.027, cacheWrite: 0.27, context: '197K', note: '검증됨', koreanBilling: true,
+  },
+  { model: 'DeepSeek V3.2', provider: 'DeepSeek', input: 0.28, output: 0.42, cacheRead: 0.028, context: '128K', note: '가성비', koreanBilling: true,
+  },
+  { model: 'DeepSeek R1', provider: 'DeepSeek', input: 0.55, output: 2.19, cacheRead: 0.14, context: '128K', note: '추론', koreanBilling: true,
+  },
+  { model: 'Qwen3 235B', provider: 'Alibaba', input: 0.40, output: 1.20, cacheRead: 0.04, cacheWrite: 0.40, context: '128K', note: '한·중 특화', koreanBilling: true,
+  },
+  { model: 'Qwen3 32B', provider: 'Alibaba', input: 0.10, output: 0.40, cacheRead: 0.01, cacheWrite: 0.10, context: '128K', note: '오픈소스', koreanBilling: true,
+  },
+  { model: 'Qwen3 7B', provider: 'Alibaba', input: 0.04, output: 0.12, context: '128K', note: '초저가', koreanBilling: true,
+  },
+  { model: 'GLM-5', provider: 'Zhipu AI', input: 1.00, output: 3.20, cacheRead: 0.10, cacheWrite: 1.00, context: '128K', note: '코딩 특화', koreanBilling: true,
+  },
+  { model: 'GLM-5 Turbo', provider: 'Zhipu AI', input: 0.96, output: 3.20, cacheRead: 0.096, cacheWrite: 0.96, context: '128K', note: '초고속', koreanBilling: true,
+  },
+  { model: 'Kimi K2.5', provider: 'Moonshot', input: 0.60, output: 2.10, cacheRead: 0.06, cacheWrite: 0.60, context: '262K', note: '에이전트', koreanBilling: true,
+  },
+  { model: 'MiMo V2 Pro', provider: 'Xiaomi', input: 1.00, output: 3.00, cacheRead: 0.10, cacheWrite: 1.00, context: '1M', note: '초장문맥', koreanBilling: true,
+  },
   // ── 기타 ──
-  { model: 'Mistral Large 3', provider: 'Mistral', input: 0.50, output: 1.50, cacheRead: 0.05, cacheWrite: 0.50, context: '262K', note: '유럽' },
-  { model: 'Mistral Small 3', provider: 'Mistral', input: 0.10, output: 0.30, cacheRead: 0.01, cacheWrite: 0.10, context: '32K', note: '경량' },
-  { model: 'Command R+', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '128K', note: 'RAG' },
-  { model: 'Command A', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '256K', note: 'RAG' },
+  { model: 'Mistral Large 3', provider: 'Mistral', input: 0.50, output: 1.50, cacheRead: 0.05, cacheWrite: 0.50, context: '262K', note: '유럽', koreanBilling: true,
+  },
+  { model: 'Mistral Small 3', provider: 'Mistral', input: 0.10, output: 0.30, cacheRead: 0.01, cacheWrite: 0.10, context: '32K', note: '경량', koreanBilling: true,
+  },
+  { model: 'Command R+', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '128K', note: 'RAG', koreanBilling: null,
+  },
+  { model: 'Command A', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '256K', note: 'RAG', koreanBilling: null,
+  },
 ];
 
 const NOTE_STYLE: Record<string, string> = {
@@ -174,6 +212,7 @@ export default function Pricing() {
             context: row.context,
             note: row.tier,
             isNew: row.isNew,
+            koreanBilling: row.koreanBilling,
           }));
           setPrices(mapped);
           setLastUpdated(data.updatedAtKST ?? '');
@@ -234,9 +273,11 @@ export default function Pricing() {
               const logoSrc = providerLogoMap[row.provider];
               return (
                 <div key={row.model} className="flex items-center gap-3">
-                  <div className="w-36 flex items-center gap-2 shrink-0">
+                  <div className="w-44 flex items-center gap-2 shrink-0">
                     {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                     <span className="text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{row.model}</span>
+                    {row.koreanBilling === true && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-semibold whitespace-nowrap">🇰🇷</span>}
+                    {row.koreanBilling === null && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold whitespace-nowrap">🔍</span>}
                   </div>
                   <div className="flex-1 relative h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div className="h-full rounded-full transition-all duration-500"
@@ -296,7 +337,10 @@ export default function Pricing() {
                         <div className="flex items-center gap-2">
                           {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                           <div>
-                            <div className="font-medium text-gray-900 dark:text-white">{row.model} {row.isNew && <span className="text-[8px] font-bold text-red-500 ml-1">NEW</span>}</div>
+                            <div className="font-medium text-gray-900 dark:text-white">{row.model} {row.isNew && <span className="text-[8px] font-bold text-red-500 ml-1">NEW</span>}
+                              {row.koreanBilling === true && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-semibold">🇰🇷 결제가능</span>}
+                              {row.koreanBilling === null && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold">🔍 확인필요</span>}
+                            </div>
                             <div className="text-[10px] text-gray-400">{row.provider}</div>
                           </div>
                         </div>
@@ -329,6 +373,8 @@ export default function Pricing() {
                     {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                     <span className="text-sm font-bold text-gray-900 dark:text-white">{row.model}</span>
                     {row.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
+                    {row.koreanBilling === true && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-semibold">🇰🇷</span>}
+                    {row.koreanBilling === null && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold">🔍</span>}
                   </div>
                   <div className="grid grid-cols-3 gap-2">
                     <div><div className="text-[10px] text-gray-400">입력</div><div className="text-xs font-bold text-gray-900 dark:text-white font-mono">${row.input}</div>{showKRW && <div className="text-[9px] text-gray-400">{formatKRW(row.input, krwRate)}</div>}</div>

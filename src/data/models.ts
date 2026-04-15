@@ -26,6 +26,7 @@ export interface AIModel {
   cachedInputPrice?: number | null;
   url?: string;
   updatedAt: string;
+  koreanBilling?: boolean | null;
 }
 
 export interface AICompany {
@@ -149,6 +150,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://openai.com/api/pricing/',
     url: 'https://chatgpt.com',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-5-4-mini',
@@ -163,6 +165,7 @@ export const models: AIModel[] = [
     useCases: ['코딩 보조', '컴퓨터 자동화', '서브에이전트', '대량 API'],
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-5-4-nano',
@@ -177,6 +180,7 @@ export const models: AIModel[] = [
     useCases: ['대량 분류', '단순 챗봇', '저비용 API'],
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-5-4-pro',
@@ -192,6 +196,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://openai.com/api/pricing/',
     url: 'https://chatgpt.com',
     updatedAt: '2026-04-16',
+    koreanBilling: true,
   },
   {
     id: 'gpt-5-3-instant',
@@ -206,6 +211,7 @@ export const models: AIModel[] = [
     useCases: ['실시간 챗봇', '스트리밍', '빠른 코딩 보조'],
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-5-2',
@@ -220,6 +226,7 @@ export const models: AIModel[] = [
     useCases: ['복잡한 코딩', '고품질 분석', '창의적 글쓰기'],
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-5',
@@ -234,6 +241,7 @@ export const models: AIModel[] = [
     useCases: ['코드 작성', '수학 문제', '장문 분석'],
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-4o-mini',
@@ -248,6 +256,7 @@ export const models: AIModel[] = [
     useCases: ['대량 분류', '챗봇', '요약', '저비용 API'],
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-4o',
@@ -262,6 +271,7 @@ export const models: AIModel[] = [
     useCases: ['멀티모달 앱', '음성 AI', '실시간 챗봇'],
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-4-1',
@@ -277,6 +287,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'openai/gpt-4.1',
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gpt-4-1-mini',
@@ -292,6 +303,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'openai/gpt-4.1-mini',
     sourceUrl: 'https://openai.com/api/pricing/',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
 
   // Anthropic ─────────────────────
@@ -310,6 +322,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://www.anthropic.com/pricing',
     url: 'https://claude.ai',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'claude-sonnet-4-6',
@@ -326,6 +339,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://www.anthropic.com/pricing',
     url: 'https://claude.ai',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'claude-opus-4-5',
@@ -341,6 +355,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'anthropic/claude-opus-4-5',
     sourceUrl: 'https://www.anthropic.com/pricing',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'claude-haiku-4-5',
@@ -356,6 +371,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'anthropic/claude-haiku-4-5',
     sourceUrl: 'https://www.anthropic.com/pricing',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'claude-mythos-preview',
@@ -370,6 +386,7 @@ export const models: AIModel[] = [
     useCases: ['사이버보안', '보안 연구', '고급 분석', '연구'],
     sourceUrl: 'https://red.anthropic.com/2026/mythos-preview/',
     updatedAt: '2026-04-16',
+    koreanBilling: true,
   },
 
   // Google ─────────────────────
@@ -387,6 +404,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
     url: 'https://gemini.google.com',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gemini-3-pro',
@@ -401,6 +419,7 @@ export const models: AIModel[] = [
     useCases: ['이미지·영상 분석', '대용량 문서', '코딩'],
     sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gemini-2-5-pro',
@@ -416,6 +435,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'google/gemini-2.5-pro',
     sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gemini-2-5-flash',
@@ -431,6 +451,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'google/gemini-2.5-flash',
     sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'gemini-2-5-flash-lite',
@@ -445,6 +466,7 @@ export const models: AIModel[] = [
     useCases: ['대량 처리', '빠른 분류', '저비용 API'],
     sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
 
   // Meta ─────────────────────
@@ -463,6 +485,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'meta-llama/llama-4-maverick',
     sourceUrl: 'https://www.llama.com/',
     updatedAt: '2026-04-16',
+    koreanBilling: true,
   },
   {
     id: 'llama-4-scout',
@@ -479,6 +502,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'meta-llama/llama-4-scout',
     sourceUrl: 'https://www.llama.com/',
     updatedAt: '2026-04-16',
+    koreanBilling: true,
   },
   {
     id: 'meta-muse-spark',
@@ -494,6 +518,7 @@ export const models: AIModel[] = [
     useCases: ['TBA'],
     sourceUrl: 'https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html',
     updatedAt: '2026-04-16',
+    koreanBilling: true,
   },
 
   // xAI ─────────────────────
@@ -511,6 +536,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://docs.x.ai/developers/models',
     url: 'https://x.ai',
     updatedAt: '2026-04-08',
+    koreanBilling: null,
   },
   {
     id: 'grok-3',
@@ -526,6 +552,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'x-ai/grok-3-beta',
     sourceUrl: 'https://docs.x.ai/developers/models',
     updatedAt: '2026-04-08',
+    koreanBilling: null,
   },
 
   // ===== 🇨🇳 중국 =====
@@ -546,6 +573,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://platform.minimax.io/docs/pricing/overview',
     url: 'https://hailuoai.com',
     updatedAt: '2026-04-16',
+    koreanBilling: true,
   },
   {
     id: 'minimax-m2-5',
@@ -560,6 +588,7 @@ export const models: AIModel[] = [
     useCases: ['코딩 보조', '에이전트 워크플로', '대량 처리'],
     sourceUrl: 'https://platform.minimax.io/docs/pricing/overview',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
 
   // DeepSeek ─────────────────────
@@ -579,6 +608,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://api-docs.deepseek.com/quick_start/pricing',
     url: 'https://chat.deepseek.com',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
   {
     id: 'deepseek-r1',
@@ -595,6 +625,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'deepseek/deepseek-r1',
     sourceUrl: 'https://api-docs.deepseek.com/quick_start/pricing',
     updatedAt: '2026-04-08',
+    koreanBilling: true,
   },
 
   // Alibaba ─────────────────────
@@ -613,6 +644,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://www.alibabacloud.com/help/en/model-studio/model-pricing',
     url: 'https://chat.qwen.ai',
     updatedAt: '2026-04-14',
+    koreanBilling: true,
   },
   {
     id: 'qwen-3-235b',
@@ -628,6 +660,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'qwen/qwen3-235b',
     sourceUrl: 'https://www.alibabacloud.com/help/en/model-studio/model-pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'qwen-3-7b',
@@ -643,6 +676,7 @@ export const models: AIModel[] = [
     useCases: ['엣지 디바이스', '로컬 챗봇', '초저가 API'],
     sourceUrl: 'https://www.alibabacloud.com/help/en/model-studio/model-pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'qwen-3-32b',
@@ -659,6 +693,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'qwen/qwen3-32b',
     sourceUrl: 'https://www.alibabacloud.com/help/en/model-studio/model-pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
 
   // Moonshot ─────────────────────
@@ -677,6 +712,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'moonshotai/kimi-k2.5',
     sourceUrl: 'https://platform.moonshot.ai/docs/pricing/chat',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'kimi-k2',
@@ -693,6 +729,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'moonshotai/kimi-k2',
     sourceUrl: 'https://platform.moonshot.ai/docs/pricing/chat',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
 
   // Zhipu AI ─────────────────────
@@ -710,6 +747,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
     url: 'https://chatglm.cn',
     updatedAt: '2026-04-10',
+    koreanBilling: true,
   },
   {
     id: 'glm-5-1-open',
@@ -725,6 +763,7 @@ export const models: AIModel[] = [
     useCases: ['코드 생성', '복잡 추론', '에이전트 워크플로우'],
     sourceUrl: 'https://docs.z.ai/guides/llm/glm-5.1',
     updatedAt: '2026-04-16',
+    koreanBilling: true,
   },
   {
     id: 'glm-5',
@@ -740,6 +779,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
     url: 'https://chatglm.cn',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'glm-5-turbo',
@@ -754,6 +794,7 @@ export const models: AIModel[] = [
     useCases: ['빠른 분석', '실시간 챗봇', '기업 자동화'],
     sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'glm-4-7',
@@ -769,6 +810,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'z-ai/glm-4.7',
     sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'glm-4-7-flash',
@@ -784,6 +826,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'z-ai/glm-4.7-flash',
     sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
 
   // Xiaomi ─────────────────────
@@ -802,6 +845,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'openrouter/hunter-alpha',
     sourceUrl: 'https://platform.xiaomimimo.com/#/docs/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'mimo-v2-omni',
@@ -817,6 +861,7 @@ export const models: AIModel[] = [
     useCases: ['멀티모달 에이전트', '음성 AI', '영상 분석', '문서 처리'],
     sourceUrl: 'https://platform.xiaomimimo.com/#/docs/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'mimo-v2-flash',
@@ -833,6 +878,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'xiaomi/mimo-v2-flash',
     sourceUrl: 'https://platform.xiaomimimo.com/#/docs/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
 
   // ===== 🌍 기타 국가 =====
@@ -853,6 +899,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'mistralai/mistral-large-2512',
     sourceUrl: 'https://mistral.ai/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
   {
     id: 'mistral-small-3',
@@ -868,6 +915,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'mistralai/mistral-small-3',
     sourceUrl: 'https://mistral.ai/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: true,
   },
 
   // Arcee AI ─────────────────────
@@ -885,6 +933,7 @@ export const models: AIModel[] = [
     useCases: ['에이전트 워크플로우', '툴사용', '긴 호라이즌 작업'],
     sourceUrl: 'https://www.arcee.ai/trinity',
     updatedAt: '2026-04-16',
+    koreanBilling: null,
   },
 
   // Cohere ─────────────────────
@@ -902,6 +951,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'cohere/command-r-plus',
     sourceUrl: 'https://cohere.com/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: null,
   },
   {
     id: 'command-a',
@@ -917,6 +967,7 @@ export const models: AIModel[] = [
     openRouterSlug: 'cohere/command-a',
     sourceUrl: 'https://cohere.com/pricing',
     updatedAt: '2026-03-19',
+    koreanBilling: null,
   },
 ];
 

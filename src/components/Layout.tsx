@@ -28,8 +28,6 @@ import {
   Compass,
   Video,
   Image,
-  Hash,
-  Zap,
 } from 'lucide-react';
 
 /* ──────────────────────────── Infinity Logo ──────────────────────────── */
@@ -106,15 +104,10 @@ const TOP_NAV: MegaItem[] = [
   { label: '가격', path: '/pricing' },
   { label: '추천', path: '/recommend' },
   { label: '뉴스', path: '/news' },
-  {
-    label: '더보기',
-    children: [
-      { path: '/pc-check', label: '내 PC 추천', icon: <Monitor size={18} /> },
-      { path: '/prompts', label: '프롬프트 적용하기', icon: <FileText size={18} /> },
-      { path: '/openclaw', label: 'OpenClaw', icon: <Octagon size={18} /> },
-      { path: '/learn', label: 'AI 정보 학습하기', icon: <BookOpen size={18} /> },
-    ],
-  },
+  { label: '비디오 AI', path: '/video/timeline' },
+  { label: '이미지 AI', path: '/image' },
+  { label: '내 PC', path: '/pc-check' },
+  { label: 'OpenClaw', path: '/openclaw' },
 ];
 
 const MOBILE_BOTTOM_TABS: { path: string; label: string; icon: ReactNode }[] = [

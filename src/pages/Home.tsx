@@ -38,10 +38,10 @@ const DUMMY_NEWS = [
 ];
 
 const CAT_COLORS: Record<string, string> = {
-  '모델 출시': 'text-violet-500',
-  '연구·논문': 'text-blue-500',
-  '오픈소스': 'text-emerald-500',
-  '인프라·하드웨어': 'text-slate-400',
+  '모델 출시': 'text-brand',
+  '연구·논문': 'text-brand-dark',
+  '오픈소스': 'text-success',
+  '인프라·하드웨어': 'text-gray-400',
 };
 
 const QUIZ_USES: { key: UseCase; icon: string; label: string }[] = [

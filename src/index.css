@@ -4,10 +4,58 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Design Tokens ── */
+:root {
+  /* Brand */
+  --brand: #5B5FEF;
+  --brand-light: #8183EF;
+  --brand-dark: #4A4DD4;
+  --brand-50: #EDEDFF;
+
+  /* Semantic */
+  --success: #22C55E;
+  --success-light: #4ADE80;
+  --danger: #EF4444;
+  --danger-light: #F87171;
+
+  /* Neutrals */
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+
+  /* Category: indigo opacity 3-level */
+  --cat-level-1: #5B5FEF;
+  --cat-level-2: #8B8FF5;
+  --cat-level-3: #B4B7FA;
+
+  /* News categories */
+  --cat-model: #5B5FEF;
+  --cat-research: #4A4AC0;
+  --cat-agent: #6D6DE0;
+  --cat-oss: #22C55E;
+  --cat-infra: #64748B;
+
+  /* Base */
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --radius: 0.5rem;
+}
+
+.dark {
+  color-scheme: dark;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --bg-primary: #111827;
+  --bg-secondary: #1F2937;
+}
+
+/* ── Base ── */
 @layer base {
   body {
     font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
   }
   .font-mono, code, pre, .price-num {
     font-family: "JetBrains Mono", "SF Mono", monospace;
@@ -15,30 +63,9 @@
   .font-inter {
     font-family: "Inter", sans-serif;
   }
-  :root {
-    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
-    --brand: #5B5FEF;
-    --brand-light: #EEEDFF;
-    --success: #22C55E;
-    --danger: #EF4444;
-    --radius: 0.5rem;
-    /* Category colors: indigo opacity 3-level */
-    --cat-level-1: #5B5FEF;
-    --cat-level-2: #8B8FF5;
-    --cat-level-3: #B4B7FA;
-    /* News category colors using indigo shades */
-    --cat-model: #5B5FEF;
-    --cat-research: #4A4AC0;
-    --cat-agent: #6D6DE0;
-    --cat-oss: #22C55E;
-    --cat-infra: #64748B;
-  }
-
-  .dark {
-    color-scheme: dark;
-  }
 }
 
+/* ── Utilities ── */
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none;
@@ -47,6 +74,8 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Skeleton loading shimmer */
   .skeleton {
     background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
     background-size: 200% 100%;

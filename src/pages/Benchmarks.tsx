@@ -202,7 +202,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
 function PopularityRanking() {
   const scoreColor = (score: number) => {
     if (score >= 95) return 'bg-emerald-500';
-    if (score >= 85) return 'bg-blue-500';
+    if (score >= 85) return 'bg-brand-500';
     if (score >= 75) return 'bg-amber-500';
     return 'bg-gray-400';
   };
@@ -216,8 +216,8 @@ function PopularityRanking() {
 
   return (
     <div className="space-y-4">
-      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
-        <p className="text-xs text-blue-600 dark:text-blue-400">
+      <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">
+        <p className="text-xs text-brand-600 dark:text-brand-400">
           OpenRouter 실사용량 기반 (2026년 4월). API 요청량 = 실제 개발자 선택 지표.
         </p>
       </div>
@@ -398,12 +398,12 @@ export default function Benchmarks() {
           </div>
 
           {/* Benchmark description */}
-          <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
+          <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold px-1.5 py-0.5 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 rounded">{bench.category}</span>
-              <p className="text-sm font-semibold text-blue-800 dark:text-blue-300">{bench.label}</p>
+              <span className="text-[10px] font-bold px-1.5 py-0.5 bg-brand-200 dark:bg-brand-800 text-brand-800 dark:text-brand-200 rounded">{bench.category}</span>
+              <p className="text-sm font-semibold text-brand-800 dark:text-brand-300">{bench.label}</p>
             </div>
-            <p className="text-xs text-blue-600 dark:text-blue-400 mt-0.5">{bench.desc}</p>
+            <p className="text-xs text-brand-600 dark:text-brand-400 mt-0.5">{bench.desc}</p>
             {bench.tip && <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">💡 {bench.tip}</p>}
           </div>
 
@@ -422,7 +422,7 @@ export default function Benchmarks() {
                     <LogoImg logoId={m.logoId} name={m.company} />
                     <div className="min-w-0">
                       <div className="flex items-center gap-1">
-                        <span className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate group-hover:text-blue-500 transition-colors">{m.name}</span>
+                        <span className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate group-hover:text-brand-500 transition-colors">{m.name}</span>
                         {m.isNew && <span className="text-[8px] font-bold text-red-500 shrink-0">NEW</span>}
                       </div>
                       <span className="text-[10px] text-gray-400">{m.company}</span>
@@ -478,7 +478,7 @@ export default function Benchmarks() {
                   <tr className="border-b border-gray-100 dark:border-gray-800">
                     <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-40">모델</th>
                     {BENCHMARKS.map((b) => (
-                      <th key={b.key} className={`text-right px-2 py-3 font-semibold ${activeBench === b.key ? "text-blue-600 dark:text-blue-400" : "text-gray-500 dark:text-gray-400"}`}>
+                      <th key={b.key} className={`text-right px-2 py-3 font-semibold ${activeBench === b.key ? "text-brand-600 dark:text-brand-400" : "text-gray-500 dark:text-gray-400"}`}>
                         {b.label}
                       </th>
                     ))}

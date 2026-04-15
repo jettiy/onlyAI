@@ -11,7 +11,7 @@ interface GlossaryTerm {
 }
 
 const categoryColors: Record<GlossaryCategory, string> = {
-  '기초개념': 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
+  '기초개념': 'bg-brand-100 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300',
   '학습기법': 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300',
   '아키텍처': 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300',
   '실사용':   'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300',
@@ -287,7 +287,7 @@ export default function Glossary() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="용어를 검색해보세요 (예: 토큰, RAG, 파인튜닝...)"
-          className="w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm transition-colors"
+          className="w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition-colors"
         />
         {search && (
           <button
@@ -349,7 +349,7 @@ export default function Glossary() {
           {filtered.map((term) => (
             <div
               key={term.korean}
-              className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:border-blue-200 dark:hover:border-blue-700 transition-colors flex flex-col gap-2"
+              className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:border-brand-200 dark:hover:border-brand-700 transition-colors flex flex-col gap-2"
             >
               {/* 카테고리 배지 */}
               <div className="flex items-center gap-2 flex-wrap">
@@ -369,9 +369,9 @@ export default function Glossary() {
 
               {/* 예시 */}
               {term.example && (
-                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-2.5 border border-blue-100 dark:border-blue-800">
-                  <p className="text-[11px] font-semibold text-blue-600 dark:text-blue-400 mb-0.5">💡 예시</p>
-                  <p className="text-xs text-blue-700 dark:text-blue-300">{term.example}</p>
+                <div className="bg-brand-50 dark:bg-brand-900/20 rounded-lg p-2.5 border border-brand-100 dark:border-brand-800">
+                  <p className="text-[11px] font-semibold text-brand-600 dark:text-brand-400 mb-0.5">💡 예시</p>
+                  <p className="text-xs text-brand-700 dark:text-brand-300">{term.example}</p>
                 </div>
               )}
             </div>

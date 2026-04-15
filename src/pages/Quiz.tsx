@@ -134,7 +134,7 @@ function scoreModel(modelId: string, answers: Answer[]): number {
 
 const TIER_COLORS: Record<string, string> = {
   flagship: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 border border-violet-200 dark:border-violet-800',
-  strong: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800',
+  strong: 'bg-brand-100 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300 border border-brand-200 dark:border-brand-800',
   efficient: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800',
   local: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 border border-amber-200 dark:border-amber-800',
 };
@@ -214,7 +214,7 @@ export default function Quiz() {
             </div>
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
               <div
-                className="bg-blue-500 h-2 rounded-full transition-all duration-500"
+                className="bg-brand-500 h-2 rounded-full transition-all duration-500"
                 style={{ width: `${((step) / STEPS.length) * 100}%` }}
               />
             </div>
@@ -237,15 +237,15 @@ export default function Quiz() {
                     className={
                       "w-full flex items-center gap-4 px-5 py-4 rounded-xl border-2 text-left transition-all hover:scale-[1.01] active:scale-[0.99] " +
                       (isSelected
-                        ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
-                        : "border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 bg-white dark:bg-gray-800")
+                        ? "border-brand-500 bg-brand-50 dark:bg-brand-900/20"
+                        : "border-gray-200 dark:border-gray-700 hover:border-brand-300 dark:hover:border-brand-600 bg-white dark:bg-gray-800")
                     }
                   >
                     <span className="text-2xl">{opt.icon}</span>
-                    <span className={"font-semibold text-sm " + (isSelected ? "text-blue-700 dark:text-blue-300" : "text-gray-700 dark:text-gray-300")}>
+                    <span className={"font-semibold text-sm " + (isSelected ? "text-brand-700 dark:text-brand-300" : "text-gray-700 dark:text-gray-300")}>
                       {opt.label}
                     </span>
-                    {isSelected && <span className="ml-auto text-blue-500 font-bold">✓</span>}
+                    {isSelected && <span className="ml-auto text-brand-500 font-bold">✓</span>}
                   </button>
                 );
               })}
@@ -290,7 +290,7 @@ export default function Quiz() {
       ) : (
         /* Results */
         <div className="space-y-4">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/40 dark:to-indigo-950/40 rounded-2xl border border-blue-100 dark:border-blue-900 p-5 text-center">
+          <div className="bg-gradient-to-r from-brand-50 to-brand-50 dark:from-brand-950/40 dark:to-brand-950/40 rounded-2xl border border-brand-100 dark:border-brand-900 p-5 text-center">
             <div className="text-3xl mb-2">🎉</div>
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">추천 결과</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">내 답변 기준으로 가장 잘 맞는 모델 TOP 5예요.</p>
@@ -357,7 +357,7 @@ export default function Quiz() {
                             <span className={
                               "px-2 py-0.5 text-[10px] font-bold rounded-full border " +
                               (m.koreanSupport === 'A'
-                                ? "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800"
+                                ? "bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 border-brand-200 dark:border-brand-800"
                                 : m.koreanSupport === 'B'
                                 ? "bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 border-yellow-200 dark:border-yellow-800"
                                 : "bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700")
@@ -386,7 +386,7 @@ export default function Quiz() {
                           <div className="flex gap-2">
                             {co?.playgroundUrl && (
                               <a href={co.playgroundUrl} target="_blank" rel="noopener noreferrer"
-                                className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors">
+                                className="px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold rounded-lg transition-colors">
                                 바로 사용 →
                               </a>
                             )}
@@ -412,13 +412,13 @@ export default function Quiz() {
           <div className="flex gap-3">
             <button
               onClick={reset}
-              className="flex-1 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 font-semibold text-sm text-gray-700 dark:text-gray-300 hover:border-blue-400 hover:text-blue-600 transition-colors"
+              className="flex-1 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 font-semibold text-sm text-gray-700 dark:text-gray-300 hover:border-brand-400 hover:text-brand-600 transition-colors"
             >
               🔄 다시 하기
             </button>
             <Link
               to="/models"
-              className="flex-1 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold text-sm text-white text-center transition-colors"
+              className="flex-1 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 font-semibold text-sm text-white text-center transition-colors"
             >
               📋 전체 모델 보기
             </Link>

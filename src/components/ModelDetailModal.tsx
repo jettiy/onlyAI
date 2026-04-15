@@ -106,7 +106,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
                 <div>
                   <div className={`h-2 w-full rounded-full ${isDark ? "bg-gray-700" : "bg-gray-200"}`}>
                     <div
-                      className="h-2 rounded-full bg-blue-500"
+                      className="h-2 rounded-full bg-brand-500"
                       style={{ width: `${inputPct}%` }}
                     />
                   </div>
@@ -153,7 +153,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
               {model.useCases.map((useCase) => (
                 <span
                   key={useCase}
-                  className={`px-2.5 py-1 rounded-full text-xs font-semibold ${isDark ? "bg-blue-500/15 text-blue-200" : "bg-blue-50 text-blue-700"}`}
+                  className={`px-2.5 py-1 rounded-full text-xs font-semibold ${isDark ? "bg-brand-500/15 text-brand-200" : "bg-brand-50 text-brand-700"}`}
                 >
                   {useCase}
                 </span>
@@ -189,7 +189,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
                 href={model.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-blue-400 hover:text-blue-300"
+                className="text-sm font-semibold text-brand-400 hover:text-brand-300"
               >
                 공식 문서 →
               </a>

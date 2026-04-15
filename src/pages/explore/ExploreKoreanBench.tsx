@@ -96,7 +96,7 @@ const DATA: KoreanBench[] = [
 const GRADE_COLORS: Record<string, string> = {
   "A+": "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300",
   "A": "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300",
-  "B+": "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300",
+  "B+": "bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300",
   "B": "bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300",
   "C": "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400",
 };
@@ -157,9 +157,9 @@ export default function ExploreKoreanBench() {
       </div>
 
       {/* Benchmark info */}
-      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
-        <p className="text-sm font-semibold text-blue-800 dark:text-blue-300">{bench.label}</p>
-        <p className="text-xs text-blue-600 dark:text-blue-400 mt-0.5">{bench.desc}</p>
+      <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">
+        <p className="text-sm font-semibold text-brand-800 dark:text-brand-300">{bench.label}</p>
+        <p className="text-xs text-brand-600 dark:text-brand-400 mt-0.5">{bench.desc}</p>
       </div>
 
       {/* Bar chart */}
@@ -229,7 +229,7 @@ export default function ExploreKoreanBench() {
                 <th className="text-left px-4 py-3 font-semibold text-gray-500 dark:text-gray-400 w-36">모델</th>
                 <th className="text-center px-3 py-3 font-semibold text-gray-500 dark:text-gray-400">등급</th>
                 {BENCHMARKS.map(b => (
-                  <th key={b.key} className={`text-right px-3 py-3 font-semibold ${activeBench === b.key ? "text-blue-600 dark:text-blue-400" : "text-gray-500 dark:text-gray-400"}`}>
+                  <th key={b.key} className={`text-right px-3 py-3 font-semibold ${activeBench === b.key ? "text-brand-600 dark:text-brand-400" : "text-gray-500 dark:text-gray-400"}`}>
                     {b.label}
                   </th>
                 ))}
@@ -287,7 +287,7 @@ export default function ExploreKoreanBench() {
             <div className="space-y-1">
               {m.notes.map(n => (
                 <div key={n} className="flex items-start gap-1.5 text-xs text-gray-500 dark:text-gray-400">
-                  <span className="text-blue-500 mt-0.5 shrink-0">•</span>
+                  <span className="text-brand-500 mt-0.5 shrink-0">•</span>
                   <span>{n}</span>
                 </div>
               ))}

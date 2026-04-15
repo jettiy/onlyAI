@@ -16,7 +16,7 @@ const SOURCES = [
 
 const SOURCE_COLORS: Record<string, string> = {
   "Hugging Face Blog": "bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-800",
-  "AI타임스":          "bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-800",
+  "AI타임스":          "bg-brand-50 dark:bg-brand-900/20 text-brand-700 dark:text-brand-400 border border-brand-200 dark:border-brand-800",
   "GeekNews":          "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800",
   "GitHub Trending":   "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600",
 };
@@ -56,7 +56,7 @@ function GithubCard({ item }: { item: NewsItem }) {
               {item.url.replace("https://github.com/", "")}
             </span>
             {item.language && (
-              <span className="text-xs px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">
+              <span className="text-xs px-2 py-0.5 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 border border-brand-100 dark:border-brand-800">
                 {item.language}
               </span>
             )}
@@ -85,7 +85,7 @@ function NewsCard({ item }: { item: NewsItem }) {
       href={item.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col gap-2 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-blue-300 dark:hover:border-blue-600 transition-all hover:shadow-md"
+      className="group flex flex-col gap-2 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-brand-300 dark:hover:border-brand-600 transition-all hover:shadow-md"
     >
       <div className="flex items-center gap-2 flex-wrap">
         {item.isNew && (
@@ -99,7 +99,7 @@ function NewsCard({ item }: { item: NewsItem }) {
         </span>
         <span className="text-[10px] text-gray-400 dark:text-gray-500 ml-auto">{timeAgo(item.date)}</span>
       </div>
-      <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-400 line-clamp-2">
+      <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug group-hover:text-brand-600 dark:group-hover:text-brand-400 line-clamp-2">
         {item.title}
       </h3>
       <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed">
@@ -112,7 +112,7 @@ function NewsCard({ item }: { item: NewsItem }) {
           ))}
         </div>
       )}
-      <div className="text-xs text-blue-500 dark:text-blue-400 font-medium mt-0.5">읽기 →</div>
+      <div className="text-xs text-brand-500 dark:text-brand-400 font-medium mt-0.5">읽기 →</div>
     </a>
   );
 }
@@ -124,7 +124,7 @@ function HeroCard({ item }: { item: NewsItem }) {
       href={item.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-gray-700 p-5 hover:border-blue-500 transition-all hover:shadow-xl hover:shadow-blue-900/20"
+      className="group block bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-gray-700 p-5 hover:border-brand-500 transition-all hover:shadow-xl hover:shadow-brand-900/20"
     >
       <div className="flex items-center gap-2 mb-3 flex-wrap">
         {item.isNew && (
@@ -135,7 +135,7 @@ function HeroCard({ item }: { item: NewsItem }) {
         </span>
         <span className="text-[10px] text-gray-400 ml-auto">{timeAgo(item.date)}</span>
       </div>
-      <h2 className="text-base font-black text-white mb-2 leading-snug group-hover:text-blue-300 transition-colors line-clamp-3">
+      <h2 className="text-base font-black text-white mb-2 leading-snug group-hover:text-brand-300 transition-colors line-clamp-3">
         {item.title}
       </h2>
       <p className="text-sm text-gray-300 mb-3 line-clamp-2 leading-relaxed">{item.summary}</p>
@@ -145,7 +145,7 @@ function HeroCard({ item }: { item: NewsItem }) {
             <span key={t} className="text-[10px] px-2 py-0.5 bg-gray-700 text-gray-300 rounded">#{t}</span>
           ))}
         </div>
-        <span className="text-xs text-blue-400 font-medium">자세히 읽기 →</span>
+        <span className="text-xs text-brand-400 font-medium">자세히 읽기 →</span>
       </div>
     </a>
   );
@@ -224,7 +224,7 @@ export default function News() {
           className={"flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border transition-colors " + (
             refreshing || loading
               ? "border-gray-200 dark:border-gray-700 text-gray-400"
-              : "border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+              : "border-brand-200 dark:border-brand-800 text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/20"
           )}
         >
           <svg className={"w-4 h-4 " + ((refreshing || loading) ? "animate-spin" : "")} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,8 +260,8 @@ export default function News() {
               onClick={() => setCatFilter(c)}
               className={"px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border transition-colors " + (
                 catFilter === c
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-blue-200"
+                  ? "bg-brand-600 text-white border-brand-600"
+                  : "bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-brand-200"
               )}
             >
               {c}
@@ -281,14 +281,14 @@ export default function News() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="모델명, 기술, 키워드로 검색..."
-            className="w-full pl-10 pr-4 py-2.5 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:border-blue-400 text-gray-900 dark:text-white placeholder-gray-400"
+            className="w-full pl-10 pr-4 py-2.5 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:border-brand-400 text-gray-900 dark:text-white placeholder-gray-400"
           />
         </div>
       )}
 
       {/* ── 로딩 인디케이터 ── */}
       {loading && (
-        <div className="flex items-center gap-2 text-sm text-blue-500 dark:text-blue-400 py-2">
+        <div className="flex items-center gap-2 text-sm text-brand-500 dark:text-brand-400 py-2">
           <svg className="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>

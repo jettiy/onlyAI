@@ -21,7 +21,7 @@ export default function ImageCompare() {
 
   const TIER_LABELS: Record<string, { label: string; color: string }> = {
     pro: { label: "프로", color: "bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300" },
-    consumer: { label: "소비자", color: "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300" },
+    consumer: { label: "소비자", color: "bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300" },
     open: { label: "오픈소스", color: "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300" },
   };
 
@@ -64,7 +64,7 @@ export default function ImageCompare() {
               onClick={() => setSortBy(key)}
               className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
                 sortBy === key
-                  ? "bg-blue-600 text-white"
+                  ? "bg-brand-600 text-white"
                   : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200"
               }`}
             >

@@ -103,7 +103,7 @@ export const koreanServices: KoreanService[] = [
 ];
 
 export const CATEGORY_COLORS: Record<KoreanService["category"], { bg: string; text: string; icon: string }> = {
-  챗봇: { bg: "bg-blue-50 dark:bg-blue-950/30", text: "text-blue-600 dark:text-blue-400", icon: "💬" },
+  챗봇: { bg: "bg-brand-50 dark:bg-brand-950/30", text: "text-brand-600 dark:text-brand-400", icon: "💬" },
   이미지: { bg: "bg-purple-50 dark:bg-purple-950/30", text: "text-purple-600 dark:text-purple-400", icon: "🎨" },
   영상: { bg: "bg-red-50 dark:bg-red-950/30", text: "text-red-600 dark:text-red-400", icon: "🎬" },
   문서: { bg: "bg-amber-50 dark:bg-amber-950/30", text: "text-amber-600 dark:text-amber-400", icon: "📄" },

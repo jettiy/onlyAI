@@ -14,8 +14,8 @@ const ITEMS = [
     path: '/prompts/how', icon: '✏️', label: '프롬프트 작성법',
     desc: `AIM·RISEN·CARE 등 검증된 프레임워크로 원하는 답변을 이끌어내는 방법.`,
     tag: '핵심 스킬',
-    color: 'text-blue-600 dark:text-blue-400',
-    border: 'border-blue-200 dark:border-blue-900',
+    color: 'text-brand-600 dark:text-brand-400',
+    border: 'border-brand-200 dark:border-brand-900',
   },
   {
     path: '/prompts/library', icon: '📚', label: '프롬프트 저장소',

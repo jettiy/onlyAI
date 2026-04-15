@@ -68,12 +68,12 @@ export default function RecommendQuiz() {
         {STEPS.map((s, i) => (
           <div key={s} className="flex items-center gap-2 flex-1">
             <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
-              i < step ? 'bg-blue-600 text-white' : i === step ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 ring-2 ring-blue-500' : 'bg-gray-100 dark:bg-gray-800 text-gray-400'
+              i < step ? 'bg-brand-600 text-white' : i === step ? 'bg-brand-100 dark:bg-brand-900/50 text-brand-600 dark:text-brand-400 ring-2 ring-brand-500' : 'bg-gray-100 dark:bg-gray-800 text-gray-400'
             }`}>
               {i < step ? '✓' : i + 1}
             </div>
-            <span className={`text-xs font-medium hidden sm:block ${i === step ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400'}`}>{s}</span>
-            {i < STEPS.length - 1 && <div className={`flex-1 h-0.5 ${i < step ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'}`} />}
+            <span className={`text-xs font-medium hidden sm:block ${i === step ? 'text-brand-600 dark:text-brand-400' : 'text-gray-400'}`}>{s}</span>
+            {i < STEPS.length - 1 && <div className={`flex-1 h-0.5 ${i < step ? 'bg-brand-600' : 'bg-gray-200 dark:bg-gray-700'}`} />}
           </div>
         ))}
       </div>
@@ -88,8 +88,8 @@ export default function RecommendQuiz() {
               <button key={uc.key} onClick={() => toggleUseCase(uc.key as UseCase | 'all')}
                 className={`p-4 rounded-xl border-2 text-center transition-all ${
                   (uc.key === 'all' && selectedUseCases.length === 0) || selectedUseCases.includes(uc.key as UseCase)
-                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-sm'
-                    : 'border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-800'
+                    ? 'border-brand-500 bg-brand-50 dark:bg-brand-900/20 shadow-sm'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-brand-300 dark:hover:border-brand-800'
                 }`}>
                 <span className="text-2xl block mb-1">{uc.icon}</span>
                 <span className="text-sm font-medium text-gray-900 dark:text-white">{uc.label}</span>
@@ -108,8 +108,8 @@ export default function RecommendQuiz() {
               <button key={b.key} onClick={() => setBudget(b.key)}
                 className={`w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all ${
                   budget === b.key
-                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-sm'
-                    : 'border-gray-200 dark:border-gray-700 hover:border-blue-300'
+                    ? 'border-brand-500 bg-brand-50 dark:bg-brand-900/20 shadow-sm'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-brand-300'
                 }`}>
                 <span className="text-2xl">{b.icon}</span>
                 <div className="text-left">
@@ -134,7 +134,7 @@ export default function RecommendQuiz() {
               { icon: '🔍', label: '둘 다 궁금해', desc: '비교해보고 싶어', key: 'both' },
             ].map(opt => (
               <button key={opt.key}
-                className="w-full flex items-center gap-4 p-4 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-300 transition-all"
+                className="w-full flex items-center gap-4 p-4 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-brand-300 transition-all"
                 onClick={() => setStep(3)}>
                 <span className="text-2xl">{opt.icon}</span>
                 <div className="text-left">
@@ -157,8 +157,8 @@ export default function RecommendQuiz() {
               <button key={opt.key} onClick={() => setPrivacy(opt.key as typeof privacy)}
                 className={`w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all ${
                   privacy === opt.key
-                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-sm'
-                    : 'border-gray-200 dark:border-gray-700 hover:border-blue-300'
+                    ? 'border-brand-500 bg-brand-50 dark:bg-brand-900/20 shadow-sm'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-brand-300'
                 }`}>
                 <span className="text-2xl">{opt.icon}</span>
                 <div className="text-left">
@@ -180,12 +180,12 @@ export default function RecommendQuiz() {
         ) : <div />}
         {step < 3 ? (
           <button onClick={() => setStep(step + 1)} disabled={!canNext()}
-            className="px-6 py-2.5 rounded-lg text-sm font-bold bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 transition-colors">
+            className="px-6 py-2.5 rounded-lg text-sm font-bold bg-brand-600 text-white hover:bg-brand-700 disabled:opacity-50 transition-colors">
             다음 →
           </button>
         ) : (
           <button onClick={handleSubmit}
-            className="px-8 py-3 rounded-lg text-sm font-bold bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-md">
+            className="px-8 py-3 rounded-lg text-sm font-bold bg-brand-600 text-white hover:bg-brand-700 transition-colors shadow-md">
             🎯 결과 보기
           </button>
         )}

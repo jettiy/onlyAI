@@ -42,9 +42,9 @@ const KOREAN_SERVICES: KoreanService[] = [
   },
   {
     id: "vrew", name: "Vrew", category: "영상", emoji: "🎬",
-    color: "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800",
-    accent: "text-blue-600 dark:text-blue-400",
-    bar: "bg-blue-500",
+    color: "bg-brand-50 dark:bg-brand-950/30 border-brand-200 dark:border-brand-800",
+    accent: "text-brand-600 dark:text-brand-400",
+    bar: "bg-brand-500",
     desc: "유튜버·크리에이터 필수 도구. AI로 자막 자동 생성, 번역, AI 더빙까지. 국내 영상 편집 1위.",
     features: ["자막 자동 생성", "AI 더빙·보이스", "영상 번역 (40개 언어)", "텍스트 기반 편집"],
     price: "기본 무료 / 프리미엄 월 9,900원~", isFree: true, isNew: false,
@@ -163,7 +163,7 @@ export default function KoreanAI() {
           <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">무료 이용 가능</div>
         </div>
         <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-3 text-center">
-          <div className="text-2xl font-black text-blue-600">{KOREAN_SERVICES.filter(s => s.isNew).length}</div>
+          <div className="text-2xl font-black text-brand-600">{KOREAN_SERVICES.filter(s => s.isNew).length}</div>
           <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">신규 등록</div>
         </div>
       </div>
@@ -228,7 +228,7 @@ function ServiceCard({ service }: { service: KoreanService }) {
             <div className="flex items-center gap-1.5">
               <h3 className="text-sm font-bold text-gray-900 dark:text-white">{service.name}</h3>
               {service.isNew && (
-                <span className="text-[9px] font-bold px-1.5 py-0.5 bg-blue-500 text-white rounded-full">NEW</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 bg-brand-500 text-white rounded-full">NEW</span>
               )}
             </div>
             <span className={`text-[10px] font-medium ${service.accent}`}>{service.category}</span>

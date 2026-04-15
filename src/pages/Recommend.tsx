@@ -20,7 +20,7 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
   const companyName = companies.find(c => c.id === result.companyId)?.name ?? result.companyId;
   return (
     <div className={`bg-white dark:bg-gray-900 rounded-2xl border ${
-      rank === 0 ? 'border-blue-400 dark:border-blue-600 ring-2 ring-blue-200 dark:ring-blue-900 shadow-lg' : 'border-gray-200 dark:border-gray-800'
+      rank === 0 ? 'border-brand-400 dark:border-brand-600 ring-2 ring-brand-200 dark:ring-brand-900 shadow-lg' : 'border-gray-200 dark:border-gray-800'
     } p-6 ${isTop3 ? '' : 'opacity-80'}`} style={{"position": "relative"}}>
       <div className="flex items-start gap-4">
         <span className="text-3xl">{MEDALS[rank]}</span>
@@ -30,7 +30,7 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">{result.name}</h3>
-            <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-bold">
+            <span className="text-xs px-2 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 font-bold">
               {result.score}점
             </span>
             <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium">
@@ -56,7 +56,7 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
               <div key={s.label} className="text-center">
                 <p className="text-[10px] text-gray-400 mb-1">{s.label} <ScoreTooltip type={s.tip} /></p>
                 <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                  <div className="h-full bg-blue-500 rounded-full transition-all" style={{ width: `${(s.value / s.max) * 100}%` }} />
+                  <div className="h-full bg-brand-500 rounded-full transition-all" style={{ width: `${(s.value / s.max) * 100}%` }} />
                 </div>
                 <p className="text-[10px] font-bold text-gray-600 dark:text-gray-400 mt-0.5">{Math.round(s.value)}</p>
               </div>
@@ -83,7 +83,7 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
                 href={officialUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-auto px-3 py-1 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-medium text-xs transition-colors"
+                className="ml-auto px-3 py-1 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-medium text-xs transition-colors"
               >
                 바로 써보기 →
               </a>
@@ -112,7 +112,7 @@ export default function RecommendPage() {
       <div className="max-w-3xl mx-auto">
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 text-center">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">먼저 AI 추천 퀴즈를 진행해주세요!</p>
-          <Link to="/" className="inline-flex text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline">
+          <Link to="/" className="inline-flex text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline">
             홈으로 이동
           </Link>
         </div>
@@ -130,7 +130,7 @@ export default function RecommendPage() {
   return (
     <div className="max-w-3xl mx-auto space-y-8">
       {/* 선택 요약 */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-5 border border-blue-200 dark:border-blue-900">
+      <div className="bg-brand-50 dark:bg-brand-900/20 rounded-2xl p-5 border border-brand-200 dark:border-brand-900">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-lg">🎯</span>
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">AI 추천 결과</h1>
@@ -138,11 +138,11 @@ export default function RecommendPage() {
         <p className="text-xs text-gray-400 mb-3">데이터 기준일: {DATA_UPDATED_AT} (정기 업데이트)</p>
         <div className="flex flex-wrap gap-2">
           {useCases.length > 0 ? useCases.map(uc => (
-            <span key={uc} className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-blue-700 dark:text-blue-400 rounded-lg font-medium shadow-sm">
+            <span key={uc} className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-brand-700 dark:text-brand-400 rounded-lg font-medium shadow-sm">
               {useCaseIcons[uc as UseCase]} {useCaseLabels[uc as UseCase]}
             </span>
           )) : (
-            <span className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-blue-700 dark:text-blue-400 rounded-lg font-medium shadow-sm">
+            <span className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-brand-700 dark:text-brand-400 rounded-lg font-medium shadow-sm">
               🎯 전체
             </span>
           )}
@@ -164,7 +164,7 @@ export default function RecommendPage() {
 
       {/* 하단 액션 */}
       <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-800">
-        <Link to="/" className="text-sm text-blue-600 dark:text-blue-400 font-medium hover:underline">
+        <Link to="/" className="text-sm text-brand-600 dark:text-brand-400 font-medium hover:underline">
           ← 다시 추천받기
         </Link>
         <Link to="/explore/compare" className="text-sm text-gray-500 dark:text-gray-400 font-medium hover:underline">

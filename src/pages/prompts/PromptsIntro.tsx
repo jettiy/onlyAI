@@ -64,12 +64,12 @@ export default function PromptsIntro() {
           ))}
         </div>
       </div>
-      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl p-5">
-        <h3 className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">💡 핵심 원칙</h3>
+      <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl p-5">
+        <h3 className="text-sm font-bold text-brand-800 dark:text-brand-300 mb-2">💡 핵심 원칙</h3>
         <ul className="space-y-1.5">
           {['구체적으로 말하세요 — "좀 더" 보다 "3줄로" 가 낫습니다', '맥락을 제공하세요 — 왜, 누구를 위해, 어떤 형식으로', '역할을 부여하세요 — "전문 번역가로서"', '예시를 보여주세요 — AI는 패턴을 학습해요'].map(tip => (
-            <li key={tip} className="text-xs text-blue-700 dark:text-blue-300 flex items-start gap-2">
-              <span className="text-blue-400 shrink-0 mt-0.5">▸</span>{tip}
+            <li key={tip} className="text-xs text-brand-700 dark:text-brand-300 flex items-start gap-2">
+              <span className="text-brand-400 shrink-0 mt-0.5">▸</span>{tip}
             </li>
           ))}
         </ul>

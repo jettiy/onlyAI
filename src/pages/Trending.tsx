@@ -20,7 +20,7 @@ const clawhubTrending = [
 ];
 
 const langColors: Record<string, string> = {
-  "TypeScript": "bg-blue-100 text-blue-600",
+  "TypeScript": "bg-brand-100 text-brand-600",
   "Python": "bg-yellow-100 text-yellow-700",
   "C++": "bg-red-100 text-red-600",
 };
@@ -65,18 +65,18 @@ export default function Trending() {
           <p className="text-sm text-gray-400">주간 Star 수 기준 AI 카테고리 상위 5개</p>
           {githubTrending.map((repo) => (
             <a key={repo.name} href={repo.url} target="_blank" rel="noopener noreferrer"
-              className="block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-5 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-md transition-all group">
+              className="block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-5 hover:border-brand-400 dark:hover:border-brand-600 hover:shadow-md transition-all group">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2 flex-wrap">
                     <span className="text-2xl font-bold text-gray-200 dark:text-gray-700">#{repo.rank}</span>
-                    <h3 className="text-sm font-bold text-gray-900 dark:text-white font-mono group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{repo.name}</h3>
+                    <h3 className="text-sm font-bold text-gray-900 dark:text-white font-mono group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">{repo.name}</h3>
                     {repo.lang && <span className={(langColors[repo.lang] || "bg-gray-100 text-gray-600") + " px-2 py-0.5 text-xs rounded-full font-medium"}>{repo.lang}</span>}
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{repo.desc}</p>
                   <div className="flex flex-wrap gap-1 items-center">
                     {repo.tags.map((t) => <span key={t} className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs rounded-full">{t}</span>)}
-                    <span className="ml-auto text-xs text-blue-400 group-hover:text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">GitHub에서 보기 ↗</span>
+                    <span className="ml-auto text-xs text-brand-400 group-hover:text-brand-600 opacity-0 group-hover:opacity-100 transition-opacity">GitHub에서 보기 ↗</span>
                   </div>
                 </div>
                 <div className="text-right shrink-0">
@@ -141,7 +141,7 @@ export default function Trending() {
                 const inp = parseFloat(model.pricing.prompt) * 1_000_000;
                 const out = parseFloat(model.pricing.completion) * 1_000_000;
                 return (
-                  <div key={model.id} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:border-blue-200 transition-colors">
+                  <div key={model.id} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:border-brand-200 transition-colors">
                     <div className="flex items-start justify-between gap-3 flex-wrap">
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">

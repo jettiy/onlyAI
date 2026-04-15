@@ -58,7 +58,7 @@ export default function Guide() {
         {steps.map((s) => (
           <div key={s.step} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-10 rounded-full bg-blue-600 text-white text-sm font-bold flex items-center justify-center shrink-0">
+              <span className="w-10 h-10 rounded-full bg-brand-600 text-white text-sm font-bold flex items-center justify-center shrink-0">
                 {s.step}
               </span>
               <div>
@@ -71,7 +71,7 @@ export default function Guide() {
               <div className="space-y-2">
                 {s.options.map((opt) => (
                   <div key={opt.label} className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-950 rounded-lg">
-                    <span className="text-blue-500 text-xs mt-1">▶</span>
+                    <span className="text-brand-500 text-xs mt-1">▶</span>
                     <div>
                       <p className="text-sm font-medium text-gray-900 dark:text-white">{opt.label}</p>
                       <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{opt.rec}</p>
@@ -133,9 +133,9 @@ export default function Guide() {
         ))}
       </div>
 
-      <div className="bg-blue-50 rounded-xl border border-blue-100 p-6 text-center">
-        <p className="text-blue-800 font-medium mb-1">더 자세한 정보가 필요하신가요?</p>
-        <p className="text-blue-600 text-sm">각 클라우드 서비스의 가격 비교는 클라우드 가격 페이지에서 확인하세요.</p>
+      <div className="bg-brand-50 rounded-xl border border-brand-100 p-6 text-center">
+        <p className="text-brand-800 font-medium mb-1">더 자세한 정보가 필요하신가요?</p>
+        <p className="text-brand-600 text-sm">각 클라우드 서비스의 가격 비교는 클라우드 가격 페이지에서 확인하세요.</p>
       </div>
     </div>
   );

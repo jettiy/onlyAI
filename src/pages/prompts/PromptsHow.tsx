@@ -94,7 +94,7 @@ export default function PromptsHow() {
                 <h2 className="text-sm font-bold text-gray-900 dark:text-white">{t.title}</h2>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{t.desc}</p>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 border-l-2 border-blue-400">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 border-l-2 border-brand-400">
                 <p className="text-[10px] font-bold text-gray-500 dark:text-gray-400 mb-1">예시</p>
                 <p className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed font-mono whitespace-pre-line">{t.example}</p>
               </div>

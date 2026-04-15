@@ -9,11 +9,11 @@ const INVITE_LINKS = {
     url: "https://z.ai/subscribe?ic=ODRIAQZZSF",
     benefit: "Claude Code·Cline 등 20개 이상 코딩 도구 완전 지원 · 월 $10부터 시작",
     badge: "특가 코딩 플랜",
-    color: "from-blue-600 to-violet-600",
-    bgLight: "bg-blue-50 dark:bg-blue-950/30",
-    border: "border-blue-200 dark:border-blue-800",
-    accent: "text-blue-700 dark:text-blue-300",
-    bar: "bg-blue-500",
+    color: "from-brand-600 to-violet-600",
+    bgLight: "bg-brand-50 dark:bg-brand-950/30",
+    border: "border-brand-200 dark:border-brand-800",
+    accent: "text-brand-700 dark:text-brand-300",
+    bar: "bg-brand-500",
     cta: "GLM 코딩 플랜 가입하기",
     desc: "초대 코드 포함 링크로 가입하면 한정 특가 할인을 받을 수 있어요.",
   },
@@ -212,7 +212,7 @@ function InviteCard({ type }: { type: "zhipu" | "minimax" }) {
 function StepCard({ step, isLast }: { step: InstallStep; isLast: boolean }) {
   const BADGE_COLOR: Record<string, string> = {
     "필수": "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
-    "설치": "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
+    "설치": "bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400",
     "설정": "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400",
     "선택": "bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400",
     "완료": "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400",
@@ -259,7 +259,7 @@ export default function OpenClawIntro() {
   return (
     <div className="space-y-8">
       {/* 헤더 */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-violet-600 to-blue-600 rounded-2xl p-6 text-white">
+      <div className="relative overflow-hidden bg-gradient-to-br from-violet-600 to-brand-600 rounded-2xl p-6 text-white">
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
         <div className="relative">
@@ -313,7 +313,7 @@ export default function OpenClawIntro() {
         </div>
 
         {/* 다른 서비스 레퍼럴 정보 */}
-        <h3 className="text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-3">🔗 기타 AI 서비스 레퍼럴 현황</h3>
+        <h3 className="text-[11px] font-bold text-brand-600 dark:text-brand-400 uppercase tracking-widest mb-3">🔗 기타 AI 서비스 레퍼럴 현황</h3>
         <div className="space-y-2">
           {[
             {
@@ -361,7 +361,7 @@ export default function OpenClawIntro() {
           ].map((s) => {
             const STATUS_STYLE: Record<string, { bg: string; text: string; label: string }> = {
               available: { bg: "bg-emerald-100 dark:bg-emerald-900/30", text: "text-emerald-700 dark:text-emerald-400", label: "레퍼럴 있음" },
-              limited:   { bg: "bg-blue-100 dark:bg-blue-900/30",    text: "text-blue-700 dark:text-blue-400",    label: "제한적 가능" },
+              limited:   { bg: "bg-brand-100 dark:bg-brand-900/30",    text: "text-brand-700 dark:text-brand-400",    label: "제한적 가능" },
               "partner-only": { bg: "bg-amber-100 dark:bg-amber-900/30", text: "text-amber-700 dark:text-amber-400", label: "파트너 전용" },
               none:      { bg: "bg-gray-100 dark:bg-gray-800",       text: "text-gray-500 dark:text-gray-400",    label: "레퍼럴 없음" },
             };
@@ -382,7 +382,7 @@ export default function OpenClawIntro() {
                 </div>
                 {s.url && (
                   <a href={s.url} target="_blank" rel="noopener noreferrer"
-                    className="shrink-0 text-[11px] text-blue-600 dark:text-blue-400 hover:underline whitespace-nowrap">
+                    className="shrink-0 text-[11px] text-brand-600 dark:text-brand-400 hover:underline whitespace-nowrap">
                     바로가기 →
                   </a>
                 )}
@@ -437,11 +437,11 @@ export default function OpenClawIntro() {
               </li>
             </ul>
           </div>
-          <div className={`rounded-xl p-4 border transition-all ${tab === "local" ? "border-blue-400 dark:border-blue-600 bg-blue-50 dark:bg-blue-950/30" : "border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"}`}>
+          <div className={`rounded-xl p-4 border transition-all ${tab === "local" ? "border-brand-400 dark:border-brand-600 bg-brand-50 dark:bg-brand-950/30" : "border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"}`}>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-lg">💻</span>
               <span className="text-sm font-bold text-gray-900 dark:text-white">로컬 설치</span>
-              {tab === "local" && <span className="text-[10px] px-1.5 py-0.5 bg-blue-500 text-white rounded font-bold ml-auto">현재 선택</span>}
+              {tab === "local" && <span className="text-[10px] px-1.5 py-0.5 bg-brand-500 text-white rounded font-bold ml-auto">현재 선택</span>}
             </div>
             <ul className="space-y-1">
               {["완전한 데이터 프라이버시", "인터넷 없이도 작동", "커스터마이징 무제한", "비용: API 사용료만"].map((t) => (
@@ -469,7 +469,7 @@ export default function OpenClawIntro() {
 
         {/* 클라우드 탭일 때 MiniMax 가입 CTA */}
         {tab === "cloud" && (
-          <div className="mt-4 bg-gradient-to-r from-violet-600 to-blue-600 rounded-xl p-4 text-white flex items-center justify-between gap-4 flex-wrap">
+          <div className="mt-4 bg-gradient-to-r from-violet-600 to-brand-600 rounded-xl p-4 text-white flex items-center justify-between gap-4 flex-wrap">
             <div>
               <p className="text-sm font-bold">MiniMax로 클라우드 시작하기</p>
               <p className="text-violet-200 text-xs mt-0.5">초대 링크로 가입하면 10% 할인 + API 크레딧 지급</p>
@@ -489,16 +489,16 @@ export default function OpenClawIntro() {
       {/* 링크 */}
       <div className="flex gap-3 flex-wrap text-xs">
         <a href="https://docs.openclaw.ai" target="_blank" rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline">📖 공식 문서</a>
+          className="text-brand-600 dark:text-brand-400 hover:underline">📖 공식 문서</a>
         <span className="text-gray-300 dark:text-gray-700">|</span>
         <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline">🔗 GitHub</a>
+          className="text-brand-600 dark:text-brand-400 hover:underline">🔗 GitHub</a>
         <span className="text-gray-300 dark:text-gray-700">|</span>
         <a href="https://discord.com/invite/clawd" target="_blank" rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline">💬 Discord 커뮤니티</a>
+          className="text-brand-600 dark:text-brand-400 hover:underline">💬 Discord 커뮤니티</a>
         <span className="text-gray-300 dark:text-gray-700">|</span>
         <a href="https://clawhub.com" target="_blank" rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline">🛠️ ClawHub 스킬</a>
+          className="text-brand-600 dark:text-brand-400 hover:underline">🛠️ ClawHub 스킬</a>
       </div>
     </div>
   );

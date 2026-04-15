@@ -92,7 +92,7 @@ export default function ExploreRanking() {
         </p>
         {loading && (
           <div className="mt-2 flex items-center gap-2">
-            <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+            <div className="w-4 h-4 border-2 border-brand-500 border-t-transparent rounded-full animate-spin" />
             <span className="text-xs text-gray-400">라이브 랭킹 불러오는 중...</span>
           </div>
         )}
@@ -109,7 +109,7 @@ export default function ExploreRanking() {
                 <div className="text-2xl mb-1">{medals[idx]}</div>
                 <div className="text-sm font-bold text-gray-900 dark:text-white truncate">{m.name}</div>
                 <div className="text-[10px] text-gray-400 mb-1">{m.org}</div>
-                <div className="text-lg font-black bg-gradient-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent">
+                <div className="text-lg font-black bg-gradient-to-r from-brand-500 to-violet-600 bg-clip-text text-transparent">
                   {m.elo}
                 </div>
                 <div className="text-[9px] text-gray-400">ELO</div>
@@ -147,14 +147,14 @@ export default function ExploreRanking() {
 
         {filtered.map((m) => {
           const pct = (m.elo / topElo) * 100;
-          const barColor = m.rank <= 3 ? "from-amber-400 to-orange-500" : m.rank <= 10 ? "from-blue-400 to-violet-500" : "from-gray-400 to-gray-500";
+          const barColor = m.rank <= 3 ? "from-amber-400 to-orange-500" : m.rank <= 10 ? "from-brand-400 to-violet-500" : "from-gray-400 to-gray-500";
           return (
             <div key={m.name} className="flex items-center gap-3 group">
               <div className={`w-5 text-xs text-center shrink-0 font-bold ${m.rank <= 3 ? "text-amber-500" : "text-gray-400"}`}>
                 {m.rank <= 3 ? ["🥇", "🥈", "🥉"][m.rank - 1] : m.rank}
               </div>
               <div className="w-32 shrink-0">
-                <div className="text-xs font-bold text-gray-900 dark:text-white truncate group-hover:text-blue-500 transition-colors">{m.name}</div>
+                <div className="text-xs font-bold text-gray-900 dark:text-white truncate group-hover:text-brand-500 transition-colors">{m.name}</div>
                 <div className="text-[10px] text-gray-400">{m.org}</div>
               </div>
               <div className="flex-1 relative h-6 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
@@ -179,9 +179,9 @@ export default function ExploreRanking() {
       </div>
 
       {/* Info */}
-      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
-        <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">ℹ️ LMSYS Chatbot Arena란?</p>
-        <p className="text-xs text-blue-600 dark:text-blue-400 leading-relaxed">
+      <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">
+        <p className="text-xs font-semibold text-brand-800 dark:text-brand-300 mb-1">ℹ️ LMSYS Chatbot Arena란?</p>
+        <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">
           두 모델이 동시에 답변하고 사용자가 직접 더 나은 답변을 선택하는 블라인드 테스트입니다.
           수만 명의 투표로 계산된 ELO 점수가 모델의 실제 사용 성능을 잘 반영합니다.
           공식 사이트: <a href="https://chat.lmsys.org" target="_blank" rel="noopener" className="underline">chat.lmsys.org</a>

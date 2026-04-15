@@ -56,7 +56,7 @@ export default function VideoTimeline() {
                 <div className={`w-3 h-3 rounded-full border-2 ${
                   event.isNew
                     ? "bg-red-500 border-red-300"
-                    : "bg-blue-500 border-blue-300"
+                    : "bg-brand-500 border-brand-300"
                 }`} />
               </div>
 
@@ -107,7 +107,7 @@ export default function VideoTimeline() {
           <div className="text-[10px] text-gray-400">등록된 모델</div>
         </div>
         <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 text-center">
-          <div className="text-2xl font-black text-blue-600">{videoModels.filter(m => m.maxResolution === "4K").length}</div>
+          <div className="text-2xl font-black text-brand-600">{videoModels.filter(m => m.maxResolution === "4K").length}</div>
           <div className="text-[10px] text-gray-400">4K 지원</div>
         </div>
         <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 text-center">

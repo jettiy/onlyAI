@@ -72,7 +72,7 @@ export default function DevNews() {
 
       {loading && (
         <div className="flex items-center gap-2 py-8 justify-center">
-          <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+          <div className="w-5 h-5 border-2 border-brand-500 border-t-transparent rounded-full animate-spin" />
           <span className="text-sm text-gray-400">GitHub에서 릴리즈 불러오는 중...</span>
         </div>
       )}
@@ -87,7 +87,7 @@ export default function DevNews() {
           {['전체', ...Array.from(new Set(releases.map(r => r.tagLabel)))].map(tag => (
             <button key={tag} onClick={() => setExpandedTag(tag === '전체' ? null : (expandedTag === tag ? null : tag))}
               className={`text-[11px] px-2.5 py-1 rounded-full font-medium transition-all ${expandedTag === tag || (tag === '전체' && !expandedTag)
-                ? 'bg-blue-500 text-white shadow-sm' : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
+                ? 'bg-brand-500 text-white shadow-sm' : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
               {tag}
             </button>
           ))}
@@ -126,7 +126,7 @@ export default function DevNews() {
                 {showOriginal[u.tag] && u.summary && (
                   <p className="text-xs text-gray-400 dark:text-gray-500 leading-relaxed whitespace-pre-line mt-1 pt-1 border-t border-gray-100 dark:border-gray-800">{u.summary}</p>
                 )}
-                <span className="text-[10px] text-blue-500 group-hover:underline mt-2 block">GitHub에서 자세히 보기 →</span>
+                <span className="text-[10px] text-brand-500 group-hover:underline mt-2 block">GitHub에서 자세히 보기 →</span>
               </a>
             ))}
           </div>
@@ -144,7 +144,7 @@ export default function DevNews() {
                 <span className="text-[10px] text-gray-400">{r.eta}</span>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{r.desc}</p>
-              <span className={`text-[10px] px-2 py-0.5 rounded font-medium ${r.status === '개발 중' ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400'}`}>{r.status}</span>
+              <span className={`text-[10px] px-2 py-0.5 rounded font-medium ${r.status === '개발 중' ? 'bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400' : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400'}`}>{r.status}</span>
             </div>
           ))}
         </div>

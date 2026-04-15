@@ -11,8 +11,8 @@ const ITEMS = [
     path: '/explore/timeline', icon: '🗓️', label: '타임라인',
     desc: 'GPT-2부터 Gemini 3까지. AI 모델 출시 역사를 연대순으로 정리했어요.',
     badge: '전체 흐름 보기',
-    bg: 'bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-900',
-    text: 'text-blue-700 dark:text-blue-300',
+    bg: 'bg-brand-50 dark:bg-brand-950/20 border-brand-200 dark:border-brand-900',
+    text: 'text-brand-700 dark:text-brand-300',
   },
   {
     path: '/explore/compare', icon: '⚖️', label: '한눈에 비교',
@@ -87,7 +87,7 @@ export default function Explore() {
           ].map((s, i) => (
             <div key={s.step} className="flex items-center gap-2">
               <Link to={s.to}
-                className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 transition-colors text-sm font-semibold text-gray-700 dark:text-gray-300">
+                className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-brand-400 transition-colors text-sm font-semibold text-gray-700 dark:text-gray-300">
                 <span className="text-[10px] font-mono text-gray-400">{s.step}</span>
                 {s.label}
               </Link>

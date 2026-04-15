@@ -11,7 +11,7 @@ export default function ExplorePromo() {
   ];
   const statusColors: Record<string, string> = {
     active: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400',
-    user: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400',
+    user: 'bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400',
     none: 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400',
   };
   const statusLabels: Record<string, string> = { active: '✅ 바로 사용 가능', user: '🔗 계정에서 발급', none: '❌ 레퍼럴 없음' };
@@ -37,7 +37,7 @@ export default function ExplorePromo() {
             </div>
             {s.url && (
               <a href={s.url} target="_blank" rel="noopener noreferrer"
-                className="shrink-0 px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-blue-300 hover:text-blue-600 transition-colors whitespace-nowrap">
+                className="shrink-0 px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-brand-300 hover:text-brand-600 transition-colors whitespace-nowrap">
                 바로가기 →
               </a>
             )}

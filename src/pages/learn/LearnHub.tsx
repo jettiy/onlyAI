@@ -27,7 +27,7 @@ const TOPICS = [
     icon: '🔍', label: '모델 선택 가이드',
     desc: '용도별 맞는 AI 모델 고르기 — 코딩, 글쓰기, 이미지, 요약에 최적화된 모델 추천',
     tags: ['실전 팁', '초심자'],
-    color: 'text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-900',
+    color: 'text-brand-600 dark:text-brand-400 border-brand-200 dark:border-brand-900',
     link: '/explore/compare',
   },
   {
@@ -89,7 +89,7 @@ export default function LearnHub() {
       <div>
         <div className="flex items-center justify-between mb-3">
           <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">오늘의 용어 미리보기</p>
-          <Link to="/learn/glossary" className="text-xs text-blue-600 dark:text-blue-400 font-semibold hover:underline">전체 보기 →</Link>
+          <Link to="/learn/glossary" className="text-xs text-brand-600 dark:text-brand-400 font-semibold hover:underline">전체 보기 →</Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {QUICK_TERMS.map(t => (

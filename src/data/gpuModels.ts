@@ -317,5 +317,5 @@ export const VRAM_TIERS = [
   { max: 8, label: '4~8GB', color: 'text-orange-500', desc: '소형~MoE 모델 가능 (Qwen 3 30B-A3B)', icon: '🟠' },
   { max: 16, label: '8~16GB', color: 'text-yellow-500', desc: '중형 모델 가능 (Qwen 3 14B, Gemma 3 27B)', icon: '🟡' },
   { max: 24, label: '16~24GB', color: 'text-green-500', desc: '대부분 모델 구동 가능 (Qwen 3 32B)', icon: '🟢' },
-  { max: Infinity, label: '24GB+', color: 'text-blue-500', desc: '최고 성능 모델 구동 가능 (70B+)', icon: '🔵' },
+  { max: Infinity, label: '24GB+', color: 'text-brand-500', desc: '최고 성능 모델 구동 가능 (70B+)', icon: '🔵' },
 ];

@@ -31,7 +31,7 @@ const BENCH_DATA: Record<string, { mmlu: number; humaneval: number; math: number
 
 const TIERS: Record<string, { label: string; color: string }> = {
   flagship: { label: "최고 성능", color: "bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300" },
-  strong: { label: "강력", color: "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300" },
+  strong: { label: "강력", color: "bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300" },
   efficient: { label: "효율", color: "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300" },
   local: { label: "로컬", color: "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400" },
 };
@@ -87,7 +87,7 @@ function ModelCard({ model, rank }: { model: SelectedModel; rank: number }) {
 
       {/* Korean support */}
       {model.koreanSupport && (
-        <div className="mb-3 px-3 py-2 bg-blue-50 dark:bg-blue-950/30 rounded-xl">
+        <div className="mb-3 px-3 py-2 bg-brand-50 dark:bg-brand-950/30 rounded-xl">
           <span className="text-xs font-semibold">{KOREAN_LABELS[model.koreanSupport] || `🇰🇷 ${model.koreanSupport}`}</span>
         </div>
       )}
@@ -179,7 +179,7 @@ export default function ExploreSideBySide() {
                 disabled={!isSelected && selected.length >= 3}
                 className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                   isSelected
-                    ? "bg-blue-600 text-white ring-2 ring-blue-300"
+                    ? "bg-brand-600 text-white ring-2 ring-brand-300"
                     : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
                 }`}
               >

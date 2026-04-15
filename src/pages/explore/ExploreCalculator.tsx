@@ -128,7 +128,7 @@ export default function ExploreCalculator() {
             type="number"
             value={inputValue}
             onChange={e => setInputValue(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500"
             placeholder={inputMode === "cost" ? "10" : "1000000"}
           />
           <p className="text-[10px] text-gray-400 mt-1">{CONVERSIONS[inputMode].desc}</p>
@@ -184,7 +184,7 @@ export default function ExploreCalculator() {
                     />
                   ) : (
                     <div
-                      className="h-full rounded-full bg-gradient-to-r from-blue-400 to-violet-500 transition-all duration-500"
+                      className="h-full rounded-full bg-gradient-to-r from-brand-400 to-violet-500 transition-all duration-500"
                       style={{ width: `${expensive.cost > 0 ? (r.cost / expensive.cost) * 100 : 0}%` }}
                     />
                   )}

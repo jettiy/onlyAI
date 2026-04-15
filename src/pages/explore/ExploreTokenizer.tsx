@@ -91,7 +91,7 @@ export default function ExploreTokenizer() {
         <textarea
           value={text}
           onChange={e => setText(e.target.value)}
-          className="w-full h-32 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
+          className="w-full h-32 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm resize-none focus:outline-none focus:ring-2 focus:ring-brand-500 font-mono"
           placeholder="비교할 텍스트를 입력하세요..."
         />
         <div className="flex flex-wrap gap-2">
@@ -121,7 +121,7 @@ export default function ExploreTokenizer() {
                 onClick={() => toggleModel(m.id)}
                 className={`px-2.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                   sel
-                    ? "bg-blue-600 text-white"
+                    ? "bg-brand-600 text-white"
                     : "bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
                 }`}
               >
@@ -183,17 +183,17 @@ export default function ExploreTokenizer() {
           </div>
 
           {/* Insight box */}
-          <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3">
-            <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">💡 인사이트</p>
+          <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">
+            <p className="text-xs font-semibold text-brand-800 dark:text-brand-300 mb-1">💡 인사이트</p>
             {results.length >= 2 && (
-              <p className="text-xs text-blue-600 dark:text-blue-400 leading-relaxed">
+              <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">
                 같은 텍스트도 <strong>{results[0].name}</strong>은 {results[0].tokens.toLocaleString()}토큰,
                 <strong>{results[results.length - 1].name}</strong>은 {results[results.length - 1].tokens.toLocaleString()}토큰으로 처리합니다.
                 {(results[results.length - 1].tokens - results[0].tokens) > 0 &&
                   ` 최대 {((1 - results[0].tokens / results[results.length - 1].tokens) * 100).toFixed(0)}%의 토큰 절약 효과가 있어요.`}
               </p>
             )}
-            <p className="text-[10px] text-blue-500 dark:text-blue-500 mt-1.5">
+            <p className="text-[10px] text-brand-500 dark:text-brand-500 mt-1.5">
               * 토큰 수는 추정치입니다. 실제 토큰 수는 모델의 토크나이저에 따라 다를 수 있어요.
             </p>
           </div>

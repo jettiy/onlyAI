@@ -90,7 +90,7 @@ export default function NewsBriefing() {
           <div className="text-xs text-gray-500">오늘 새로운</div>
         </div>
         <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-3 text-center">
-          <div className="text-2xl font-black text-blue-600">{github.length}</div>
+          <div className="text-2xl font-black text-brand-600">{github.length}</div>
           <div className="text-xs text-gray-500">GitHub 인기</div>
         </div>
         <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-3 text-center">
@@ -118,7 +118,7 @@ export default function NewsBriefing() {
                 }}
                 className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition-all whitespace-nowrap ${
                   isActive
-                    ? 'bg-blue-500 text-white shadow-sm'
+                    ? 'bg-brand-500 text-white shadow-sm'
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
@@ -145,7 +145,7 @@ export default function NewsBriefing() {
               onClick={() => setCategoryFilter('all')}
               className={`text-[11px] px-2.5 py-1 rounded-full font-medium transition-all whitespace-nowrap ${
                 categoryFilter === 'all'
-                  ? 'bg-blue-500 text-white shadow-sm'
+                  ? 'bg-brand-500 text-white shadow-sm'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
             >
@@ -157,7 +157,7 @@ export default function NewsBriefing() {
                 onClick={() => setCategoryFilter(categoryFilter === cat ? 'all' : cat)}
                 className={`text-[11px] px-2.5 py-1 rounded-full font-medium transition-all whitespace-nowrap ${
                   categoryFilter === cat
-                    ? 'bg-blue-500 text-white shadow-sm'
+                    ? 'bg-brand-500 text-white shadow-sm'
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
@@ -171,7 +171,7 @@ export default function NewsBriefing() {
       {/* Loading */}
       {loading && (
         <div className="flex items-center gap-2 py-8 justify-center">
-          <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+          <div className="w-5 h-5 border-2 border-brand-500 border-t-transparent rounded-full animate-spin" />
           <span className="text-sm text-gray-400">뉴스 불러오는 중...</span>
         </div>
       )}
@@ -209,7 +209,7 @@ export default function NewsBriefing() {
                       )}
                     </div>
                   </div>
-                  <h4 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                  <h4 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors line-clamp-2">
                     {repo.title}
                   </h4>
                   {repo.summary && (
@@ -248,7 +248,7 @@ export default function NewsBriefing() {
                     {item.category}
                   </span>
                 </div>
-                <h4 className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                <h4 className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors line-clamp-2">
                   {item.titleKo || item.title}
                 </h4>
               </a>
@@ -278,7 +278,7 @@ export default function NewsBriefing() {
                       {item.category}
                     </span>
                   </div>
-                  <h4 className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                  <h4 className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors line-clamp-2">
                     {item.titleKo || item.title}
                   </h4>
                 </a>
@@ -295,7 +295,7 @@ export default function NewsBriefing() {
             {(['briefing', 'sources'] as ViewTab[]).map(t => (
               <button key={t} onClick={() => setTab(t)}
                 className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all ${tab === t
-                  ? 'bg-blue-500 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200'}`}>
+                  ? 'bg-brand-500 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200'}`}>
                 {t === 'briefing' ? '📰 뉴스' : '📊 소스 분석'}
               </button>
             ))}
@@ -312,7 +312,7 @@ export default function NewsBriefing() {
                       <p className="text-xs text-gray-400">{count}건</p>
                     </div>
                     <div className="w-24 bg-gray-100 dark:bg-gray-800 rounded-full h-1.5">
-                      <div className="bg-blue-500 rounded-full h-1.5" style={{ width: `${(count / news.length) * 100}%` }} />
+                      <div className="bg-brand-500 rounded-full h-1.5" style={{ width: `${(count / news.length) * 100}%` }} />
                     </div>
                   </div>
                 ))}

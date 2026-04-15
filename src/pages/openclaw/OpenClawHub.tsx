@@ -23,7 +23,7 @@ const ITEMS = [
     path: '/openclaw/devnews', icon: '🛠️', label: '개발자 소식',
     desc: 'OpenClaw 최신 릴리즈 업데이트와 앞으로의 로드맵을 확인해요.',
     tag: '최신 정보',
-    color: 'text-blue-600 dark:text-blue-400',
+    color: 'text-brand-600 dark:text-brand-400',
   },
 ];
 

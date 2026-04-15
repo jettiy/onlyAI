@@ -88,10 +88,10 @@ function ComparePanel({ selectedIds, onClose, onRemove }: {
               <tr>
                 <td className="px-4 py-3 text-xs text-gray-500 dark:text-gray-400 font-medium">컨텍스트</td>
                 {compareModels.map((m) => (
-                  <td key={m.id} className={"px-4 py-3 text-xs font-bold " + (parseInt(m.contextWindow) === maxCtx ? "text-blue-600 dark:text-blue-400" : "text-gray-700 dark:text-gray-300")}>
+                  <td key={m.id} className={"px-4 py-3 text-xs font-bold " + (parseInt(m.contextWindow) === maxCtx ? "text-brand-600 dark:text-brand-400" : "text-gray-700 dark:text-gray-300")}>
                     {m.contextWindow}
                     {parseInt(m.contextWindow) === maxCtx && (
-                      <span className="ml-1 text-[10px] bg-blue-100 dark:bg-blue-900/30 text-blue-600 px-1 rounded">최대</span>
+                      <span className="ml-1 text-[10px] bg-brand-100 dark:bg-brand-900/30 text-brand-600 px-1 rounded">최대</span>
                     )}
                   </td>
                 ))}
@@ -198,7 +198,7 @@ export default function Models() {
           disabled={compareIds.length < 2}
           className={"flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm border-2 transition-all " + (
             compareIds.length >= 2
-              ? "bg-blue-600 text-white border-blue-600 hover:bg-blue-700"
+              ? "bg-brand-600 text-white border-brand-600 hover:bg-brand-700"
               : "bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-600 border-gray-200 dark:border-gray-700 cursor-not-allowed"
           )}
         >
@@ -213,7 +213,7 @@ export default function Models() {
       </div>
 
       {compareIds.length > 0 && compareIds.length < 2 && (
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-3 text-sm text-blue-700 dark:text-blue-300">
+        <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-xl p-3 text-sm text-brand-700 dark:text-brand-300">
           ⚡ 모델을 하나 더 선택하면 비교할 수 있어요. (최대 3개)
         </div>
       )}
@@ -223,9 +223,9 @@ export default function Models() {
           {compareIds.map((id) => {
             const m = models.find((m) => m.id === id);
             return m ? (
-              <span key={id} className="flex items-center gap-1 px-2 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full text-xs font-medium">
+              <span key={id} className="flex items-center gap-1 px-2 py-1 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 rounded-full text-xs font-medium">
                 {m.name}
-                <button onClick={() => toggleCompare(id)} className="ml-0.5 text-blue-400 hover:text-blue-600">✕</button>
+                <button onClick={() => toggleCompare(id)} className="ml-0.5 text-brand-400 hover:text-brand-600">✕</button>
               </span>
             ) : null;
           })}
@@ -233,15 +233,15 @@ export default function Models() {
       )}
 
       {/* 가격 계산기 배너 */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/40 dark:to-indigo-950/40 rounded-2xl border border-blue-100 dark:border-blue-900 p-4">
+      <div className="bg-gradient-to-r from-brand-50 to-brand-50 dark:from-brand-950/40 dark:to-brand-950/40 rounded-2xl border border-brand-100 dark:border-brand-900 p-4">
         <div className="flex items-center justify-between gap-3 flex-wrap">
           <div>
-            <p className="font-semibold text-blue-800 dark:text-blue-300 text-sm">💡 1M 토큰이 뭔가요?</p>
-            <p className="text-xs text-blue-600 dark:text-blue-400 mt-0.5">실제 사용 예시로 비용을 직접 계산해보세요.</p>
+            <p className="font-semibold text-brand-800 dark:text-brand-300 text-sm">💡 1M 토큰이 뭔가요?</p>
+            <p className="text-xs text-brand-600 dark:text-brand-400 mt-0.5">실제 사용 예시로 비용을 직접 계산해보세요.</p>
           </div>
           <button
             onClick={() => setShowPriceCalc(!showPriceCalc)}
-            className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 transition-colors"
           >
             {showPriceCalc ? "닫기" : "비용 계산기 열기"}
           </button>
@@ -250,7 +250,7 @@ export default function Models() {
         {showPriceCalc && (
           <div className="mt-4 space-y-4">
             <div>
-              <p className="text-xs font-semibold text-blue-700 dark:text-blue-400 mb-2">사용 사례 선택</p>
+              <p className="text-xs font-semibold text-brand-700 dark:text-brand-400 mb-2">사용 사례 선택</p>
               <div className="flex flex-wrap gap-2">
                 {priceExamples.map((e, i) => (
                   <button
@@ -258,7 +258,7 @@ export default function Models() {
                     onClick={() => setSelectedExample(i)}
                     className={"px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border " + (
                       selectedExample === i
-                        ? "bg-blue-600 text-white border-blue-600"
+                        ? "bg-brand-600 text-white border-brand-600"
                         : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700"
                     )}
                   >
@@ -268,7 +268,7 @@ export default function Models() {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 rounded-xl p-4 border border-blue-100 dark:border-blue-900">
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-4 border border-brand-100 dark:border-brand-900">
               <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">{ex.icon} {ex.useCase}</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{ex.description}</p>
 
@@ -307,7 +307,7 @@ export default function Models() {
                           </span>
                           <span className="text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{m.name}</span>
                         </div>
-                        <span className={"text-xs font-bold shrink-0 " + (monthlyCost < 1 ? "text-green-600" : monthlyCost < 5 ? "text-blue-600" : "text-gray-700 dark:text-gray-300")}>
+                        <span className={"text-xs font-bold shrink-0 " + (monthlyCost < 1 ? "text-green-600" : monthlyCost < 5 ? "text-brand-600" : "text-gray-700 dark:text-gray-300")}>
                           {monthlyCost < 0.01 ? "< $0.01" : `$${monthlyCost.toFixed(2)}`}
                           <span className="text-gray-400 font-normal">/월</span>
                         </span>
@@ -331,8 +331,8 @@ export default function Models() {
             onClick={() => setView("featured")}
             className={"w-full flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold border-2 transition-all " + (
               view === "featured"
-                ? "bg-blue-600 text-white border-blue-600"
-                : "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-800 hover:border-blue-300"
+                ? "bg-brand-600 text-white border-brand-600"
+                : "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-800 hover:border-brand-300"
             )}
           >
             <span>⭐</span> 주요 모델 추천
@@ -361,14 +361,14 @@ export default function Models() {
             return (
               <div key={region} className={"rounded-xl border-2 overflow-hidden transition-all " + (
                 hasActiveCompany
-                  ? "border-blue-300 dark:border-blue-700"
+                  ? "border-brand-300 dark:border-brand-700"
                   : "border-gray-200 dark:border-gray-800"
               )}>
                 <button
                   onClick={() => setOpenRegion(isOpen ? null : region)}
                   className={"w-full flex items-center justify-between px-4 py-3 transition-colors " + (
                     hasActiveCompany
-                      ? "bg-blue-50 dark:bg-blue-900/20"
+                      ? "bg-brand-50 dark:bg-brand-900/20"
                       : "bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800"
                   )}
                 >
@@ -394,7 +394,7 @@ export default function Models() {
                           onClick={() => setView(company.id)}
                           className={"w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm transition-all " + (
                             isActive
-                              ? "bg-blue-600 text-white"
+                              ? "bg-brand-600 text-white"
                               : "text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-800"
                           )}
                         >
@@ -410,7 +410,7 @@ export default function Models() {
                           </span>
                           <span className={"text-xs px-1.5 py-0.5 rounded-full font-medium " + (
                             isActive
-                              ? "bg-blue-500 text-white"
+                              ? "bg-brand-500 text-white"
                               : "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
                           )}>{count}개</span>
                         </button>
@@ -434,14 +434,14 @@ export default function Models() {
                 <h2 className="text-lg font-bold text-gray-900 dark:text-white">{selectedCompany.name}</h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400">{selectedCompany.country} · {selectedCompany.description}</p>
                 <a href={selectedCompany.website} target="_blank" rel="noopener noreferrer"
-                  className="text-xs text-blue-500 hover:text-blue-700 mt-1 inline-block">
+                  className="text-xs text-brand-500 hover:text-brand-700 mt-1 inline-block">
                   공식 가격 페이지 →
                 </a>
               </div>
             </div>
           ) : view === "featured" ? (
-            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800 p-4">
-              <p className="text-sm font-medium text-blue-700 dark:text-blue-400">⭐ 각 국가 대표 추천 모델만 선별했어요. 좌측에서 회사·전체 보기를 선택하세요.</p>
+            <div className="bg-brand-50 dark:bg-brand-900/20 rounded-xl border border-brand-100 dark:border-brand-800 p-4">
+              <p className="text-sm font-medium text-brand-700 dark:text-brand-400">⭐ 각 국가 대표 추천 모델만 선별했어요. 좌측에서 회사·전체 보기를 선택하세요.</p>
             </div>
           ) : (
             <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
@@ -459,7 +459,7 @@ export default function Models() {
                 placeholder="모델명, 회사, 용도로 검색..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-4 py-2.5 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500"
+                className="w-full pl-9 pr-4 py-2.5 text-sm bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500"
               />
               {searchQuery && (
                 <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-sm">
@@ -473,7 +473,7 @@ export default function Models() {
                 <button key={t} onClick={() => setTierFilter(t)}
                   className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors " + (
                     tierFilter === t
-                      ? "bg-blue-600 text-white border-blue-600"
+                      ? "bg-brand-600 text-white border-brand-600"
                       : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400"
                   )}>
                   {t === "all" ? "전체 등급" : tierLabels[t]}
@@ -501,7 +501,7 @@ export default function Models() {
             <div className="text-center py-16 text-gray-400 dark:text-gray-500">
               <p className="text-4xl mb-3">🔍</p>
               <p className="font-semibold text-gray-600 dark:text-gray-400">"{searchQuery}"에 해당하는 모델이 없어요</p>
-              <button onClick={() => setSearchQuery("")} className="mt-3 text-sm text-blue-500 hover:underline">검색 초기화</button>
+              <button onClick={() => setSearchQuery("")} className="mt-3 text-sm text-brand-500 hover:underline">검색 초기화</button>
             </div>
           ) : displayedModels.length === 0 ? (
             <div className="text-center py-16 text-gray-400">조건에 맞는 모델이 없어요.</div>
@@ -554,7 +554,7 @@ export default function Models() {
                 disabled={compareIds.length < 2}
                 className={"px-4 py-2 rounded-xl font-bold text-sm transition-all whitespace-nowrap " + (
                   compareIds.length >= 2
-                    ? "bg-blue-500 hover:bg-blue-400 text-white cursor-pointer"
+                    ? "bg-brand-500 hover:bg-brand-400 text-white cursor-pointer"
                     : "bg-white/20 dark:bg-black/20 opacity-50 cursor-not-allowed"
                 )}
               >
@@ -575,7 +575,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
   const isSelected = compareIds.includes(model.id);
   const canAdd = compareIds.length < 3 || isSelected;
   return (
-    <div className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-colors " + (isSelected ? "border-blue-400 dark:border-blue-600" : "border-gray-200 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700")}>
+    <div className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-colors " + (isSelected ? "border-brand-400 dark:border-brand-600" : "border-gray-200 dark:border-gray-800 hover:border-brand-200 dark:hover:border-brand-700")}>
       <div className="flex items-start justify-between gap-3 flex-wrap">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap mb-1">
@@ -603,7 +603,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
           </div>
           <button
             onClick={() => onCompanyClick(model.companyId)}
-            className="text-xs text-blue-500 hover:text-blue-700 mb-1.5 underline underline-offset-2"
+            className="text-xs text-brand-500 hover:text-brand-700 mb-1.5 underline underline-offset-2"
           >
             {model.company} 전체 모델 →
           </button>
@@ -616,7 +616,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
               <span className={
                 "px-2 py-0.5 text-[10px] font-bold rounded-full border " +
                 (model.koreanSupport === 'A'
-                  ? "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800"
+                  ? "bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 border-brand-200 dark:border-brand-800"
                   : model.koreanSupport === 'B'
                   ? "bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 border-yellow-200 dark:border-yellow-800"
                   : "bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700"
@@ -643,12 +643,12 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
                 : <p className="text-xs text-gray-400">미공개</p>
             }
             <a href={model.sourceUrl} target="_blank" rel="noopener noreferrer"
-              className="text-[10px] text-blue-400 hover:text-blue-600 mt-1 block">
+              className="text-[10px] text-brand-400 hover:text-brand-600 mt-1 block">
               출처 →
             </a>
             {companyData?.playgroundUrl && (
               <a href={companyData.playgroundUrl} target="_blank" rel="noopener noreferrer"
-                className="mt-2 flex items-center justify-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors w-full">
+                className="mt-2 flex items-center justify-center gap-1 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold rounded-lg transition-colors w-full">
                 바로 사용하기 →
               </a>
             )}
@@ -657,16 +657,16 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
       </div>
       <div className="mt-2.5 pt-2.5 border-t border-gray-100 dark:border-gray-800 flex flex-wrap gap-1 items-center">
         {model.useCases.map((u) => (
-          <span key={u} className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">{u}</span>
+          <span key={u} className="px-2 py-0.5 bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-xs rounded-full">{u}</span>
         ))}
         <button
           onClick={() => onToggleCompare(model.id)}
           disabled={!canAdd}
           className={"ml-auto flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border transition-all " + (
             isSelected
-              ? "bg-blue-600 text-white border-blue-600"
+              ? "bg-brand-600 text-white border-brand-600"
               : canAdd
-                ? "bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:text-blue-600"
+                ? "bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-brand-400 hover:text-brand-600"
                 : "opacity-30 cursor-not-allowed bg-white dark:bg-gray-800 text-gray-400 border-gray-200"
           )}
         >

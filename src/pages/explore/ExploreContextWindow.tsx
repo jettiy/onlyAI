@@ -91,7 +91,7 @@ export default function ExploreContextWindow() {
               onClick={() => setSelectedModel(m.name)}
               className={`px-2.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                 selectedModel === m.name
-                  ? "bg-blue-600 text-white"
+                  ? "bg-brand-600 text-white"
                   : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
             >
@@ -111,7 +111,7 @@ export default function ExploreContextWindow() {
             <p className="text-xs text-gray-400">{active.company} · {formatTokens(active.tokens)} 토큰 · {tokensToText(active.tokens)}</p>
           </div>
           <div className="text-right">
-            <div className="text-2xl font-black bg-gradient-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-black bg-gradient-to-r from-brand-500 to-violet-600 bg-clip-text text-transparent">
               {formatTokens(active.tokens)}
             </div>
             <div className="text-[10px] text-gray-400">tokens</div>
@@ -160,7 +160,7 @@ export default function ExploreContextWindow() {
               </div>
               <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-blue-400 to-violet-500 transition-all duration-500"
+                  className="h-full rounded-full bg-gradient-to-r from-brand-400 to-violet-500 transition-all duration-500"
                   style={{ width: `${Math.min(item.width, 100)}%` }}
                 />
               </div>
@@ -180,7 +180,7 @@ export default function ExploreContextWindow() {
             const pct = (m.tokens / maxTokens) * 100;
             const isActive = m.name === selectedModel;
             return (
-              <div key={m.name} className={`flex items-center gap-3 ${isActive ? "bg-blue-50 dark:bg-blue-950/20 -mx-2 px-2 py-1 rounded-lg" : ""}`}>
+              <div key={m.name} className={`flex items-center gap-3 ${isActive ? "bg-brand-50 dark:bg-brand-950/20 -mx-2 px-2 py-1 rounded-lg" : ""}`}>
                 <div className="w-28 shrink-0">
                   <div className="flex items-center gap-1">
                     <CompanyLogo logoId={m.logoId} name={m.company} />
@@ -205,15 +205,15 @@ export default function ExploreContextWindow() {
       </div>
 
       {/* Fun facts */}
-      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 rounded-xl px-4 py-3 space-y-1.5">
-        <p className="text-xs font-semibold text-blue-800 dark:text-blue-300">💡 재미있는 사실</p>
-        <p className="text-xs text-blue-600 dark:text-blue-400 leading-relaxed">
+      <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3 space-y-1.5">
+        <p className="text-xs font-semibold text-brand-800 dark:text-brand-300">💡 재미있는 사실</p>
+        <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">
           • Gemini 3.1 Pro의 1M 컨텍스트는 소설 약 4권 분량이에요. 영화 시나리오 10편도 충분히 담을 수 있어요.
         </p>
-        <p className="text-xs text-blue-600 dark:text-blue-400 leading-relaxed">
+        <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">
           • Claude의 200K 컨텍스트는 소설 약 1.3권. 한 번의 프롬프트에 전체 소설을 넣고 질문할 수 있어요.
         </p>
-        <p className="text-xs text-blue-600 dark:text-blue-400 leading-relaxed">
+        <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">
           • 128K는 대학 전공책 1권 + 여유. 소설책 반 권 정도로 이해하기 쉬운 크기예요.
         </p>
       </div>
@@ -227,7 +227,7 @@ export default function ExploreContextWindow() {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
           {MODELS.map(m => (
             <a key={m.name} href={m.sourceUrl} target="_blank" rel="noopener noreferrer"
-              className="text-[10px] text-blue-500 hover:underline truncate block">
+              className="text-[10px] text-brand-500 hover:underline truncate block">
               {m.name} → 공식 문서
             </a>
           ))}

@@ -24,12 +24,12 @@ const DIFFICULTY_COLORS: Record<string, string> = {
 const CAT_COLORS: Record<string, string> = {
   'AI 활용': 'bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400',
   '글쓰기': 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400',
-  '코딩': 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
+  '코딩': 'bg-brand-100 text-brand-700 dark:bg-brand-900/30 dark:text-brand-400',
   '마케팅': 'bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-400',
   '업무': 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400',
   '자기계발': 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
   '여행': 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400',
-  '분석': 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400',
+  '분석': 'bg-brand-100 text-brand-700 dark:bg-brand-900/30 dark:text-brand-400',
   '교육': 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400',
 };
 
@@ -608,9 +608,9 @@ function PromptModal({ prompt, onClose }: { prompt: Prompt; onClose: () => void 
         {/* Body */}
         <div className="overflow-y-auto flex-1 p-5 space-y-4">
           {/* Expected Output */}
-          <div className="bg-blue-50 dark:bg-blue-950/30 rounded-xl p-4 border border-blue-100 dark:border-blue-900/50">
-            <p className="text-[10px] font-black uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-1.5">💬 AI가 이렇게 답해줘요</p>
-            <p className="text-sm text-blue-800 dark:text-blue-200 leading-relaxed">{prompt.expectedOutput}</p>
+          <div className="bg-brand-50 dark:bg-brand-950/30 rounded-xl p-4 border border-brand-100 dark:border-brand-900/50">
+            <p className="text-[10px] font-black uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-1.5">💬 AI가 이렇게 답해줘요</p>
+            <p className="text-sm text-brand-800 dark:text-brand-200 leading-relaxed">{prompt.expectedOutput}</p>
           </div>
 
           {/* Prompt text */}
@@ -689,7 +689,7 @@ export default function PromptsLibrary() {
           placeholder="프롬프트 검색..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-9 pr-4 py-2.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full pl-9 pr-4 py-2.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500"
         />
       </div>
 
@@ -735,7 +735,7 @@ export default function PromptsLibrary() {
         {(selectedCategory !== '전체' || searchQuery || selectedDifficulty !== '전체') && (
           <button
             onClick={() => { setSelectedCategory('전체'); setSearchQuery(''); setSelectedDifficulty('전체'); }}
-            className="ml-2 text-blue-500 hover:underline"
+            className="ml-2 text-brand-500 hover:underline"
           >
             필터 초기화
           </button>
@@ -758,7 +758,7 @@ export default function PromptsLibrary() {
               <span className="text-[10px] text-gray-400 shrink-0">❤️ {p.likes.toLocaleString()}</span>
             </div>
 
-            <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug mb-1 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
               {p.title}
             </h3>
             <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3 line-clamp-2">
@@ -771,7 +771,7 @@ export default function PromptsLibrary() {
                   <span key={tag} className="text-[9px] px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-400 rounded-full">#{tag}</span>
                 ))}
               </div>
-              <span className="text-[10px] font-semibold text-blue-500">복사 →</span>
+              <span className="text-[10px] font-semibold text-brand-500">복사 →</span>
             </div>
           </button>
         ))}

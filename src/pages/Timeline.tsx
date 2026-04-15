@@ -21,13 +21,13 @@ interface TimelineEvent {
 
 const STATUS_STYLE: Record<TimelineStatus, { bg: string; text: string; label: string; dot: string }> = {
   released: { bg: "bg-emerald-50 dark:bg-emerald-900/20", text: "text-emerald-600 dark:text-emerald-400", label: "출시됨", dot: "bg-emerald-500" },
-  expected: { bg: "bg-blue-50 dark:bg-blue-900/20",    text: "text-blue-600 dark:text-blue-400",    label: "출시 예정", dot: "bg-blue-500" },
+  expected: { bg: "bg-brand-50 dark:bg-brand-900/20",    text: "text-brand-600 dark:text-brand-400",    label: "출시 예정", dot: "bg-brand-500" },
   rumored:  { bg: "bg-amber-50 dark:bg-amber-900/20",   text: "text-amber-600 dark:text-amber-400",   label: "루머",     dot: "bg-amber-400" },
 };
 
 const CAT_COLORS: Record<string, { bar: string; label: string }> = {
   flagship:   { bar: "bg-violet-500", label: "플래그십" },
-  efficient:  { bar: "bg-blue-400",   label: "경량·효율" },
+  efficient:  { bar: "bg-brand-400",   label: "경량·효율" },
   open:       { bar: "bg-emerald-500", label: "오픈소스" },
   multimodal: { bar: "bg-pink-500",   label: "멀티모달" },
 };
@@ -340,7 +340,7 @@ export default function Timeline() {
       {upcoming.length > 0 && (
         <div>
           <div className="flex items-center gap-3 mb-4 mt-6">
-            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
+            <div className="w-3 h-3 bg-brand-500 rounded-full animate-pulse" />
             <h2 className="text-sm font-bold text-gray-900 dark:text-white">출시 예정 / 루머</h2>
             <span className="text-xs text-gray-400">{upcoming.length}개</span>
           </div>
@@ -393,7 +393,7 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
               </span>
               <span className="text-[10px] text-gray-400">{cat.label}</span>
               {event.isKoreanFriendly && (
-                <span className="text-[10px] font-semibold px-1.5 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded">
+                <span className="text-[10px] font-semibold px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded">
                   🇰🇷 한국어 우수
                 </span>
               )}

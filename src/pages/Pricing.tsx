@@ -57,9 +57,9 @@ const FALLBACK_PRICES: PriceRow[] = [
   { model: 'Gemini 2.5 Flash-Lite', provider: 'Google', input: 0.10, output: 0.40, cacheRead: 0.025, cacheWrite: 0.10, context: '1M', note: '최저가', koreanBilling: true,
   },
   // ── xAI ──
-  { model: 'Grok 4.20', provider: 'xAI', input: 2.0, output: 6.0, cacheRead: 0.20, cacheWrite: 2.00, context: '2M', note: '실시간', isNew: true, koreanBilling: null,
+  { model: 'Grok 4.20', provider: 'xAI', input: 2.0, output: 6.0, cacheRead: 0.20, cacheWrite: 2.00, context: '2M', note: '실시간', isNew: true, koreanBilling: true,
   },
-  { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '131K', note: '검증됨', koreanBilling: null,
+  { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '131K', note: '검증됨', koreanBilling: true,
   },
   // ── Meta ──
   { model: 'Llama 4 Maverick', provider: 'Meta', input: 0.27, output: 0.85, cacheRead: 0.027, cacheWrite: 0.27, context: '1M', note: '오픈소스', koreanBilling: true,
@@ -94,15 +94,15 @@ const FALLBACK_PRICES: PriceRow[] = [
   },
   { model: 'Mistral Small 3', provider: 'Mistral', input: 0.10, output: 0.30, cacheRead: 0.01, cacheWrite: 0.10, context: '32K', note: '경량', koreanBilling: true,
   },
-  { model: 'Command R+', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '128K', note: 'RAG', koreanBilling: null,
+  { model: 'Command R+', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '128K', note: 'RAG', koreanBilling: true,
   },
-  { model: 'Command A', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '256K', note: 'RAG', koreanBilling: null,
+  { model: 'Command A', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '256K', note: 'RAG', koreanBilling: true,
   },
 ];
 
 const NOTE_STYLE: Record<string, string> = {
   '최고 성능': 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300',
-  '긴 문맥':   'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+  '긴 문맥':   'bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300',
   '멀티모달':  'bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300',
   '가성비':    'bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300',
   '최저가':    'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300',
@@ -112,18 +112,18 @@ const NOTE_STYLE: Record<string, string> = {
   '초고속':    'bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300',
   '추론':      'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300',
   '오픈소스':  'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
-  '유럽':      'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300',
+  '유럽':      'bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300',
   '경량':      'bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300',
   '중국 오픈소스': 'bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300',
-  '초장문맥':  'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+  '초장문맥':  'bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300',
   '코딩 특화': 'bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300',
-  '장문맥':    'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
+  '장문맥':    'bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300',
   '코딩 강자': 'bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300',
   '한·중 특화': 'bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300',
   '에이전트':  'bg-fuchsia-100 dark:bg-fuchsia-900/40 text-fuchsia-700 dark:text-fuchsia-300',
   '검증됨':    'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400',
   '실시간':    'bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300',
-  'RAG':       'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300',
+  'RAG':       'bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300',
   '초저가':    'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300',
 };
 
@@ -246,12 +246,12 @@ export default function Pricing() {
           <p className="text-xs text-gray-400">데이터 기준일: {DATA_UPDATED_AT}</p>
           <label className="flex items-center gap-1.5 cursor-pointer select-none">
             <input type="checkbox" checked={showKRW} onChange={e => setShowKRW(e.target.checked)}
-              className="w-3.5 h-3.5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer" />
+              className="w-3.5 h-3.5 rounded border-gray-300 text-brand-600 focus:ring-brand-500 cursor-pointer" />
             <span className="text-[11px] text-gray-500 dark:text-gray-400">원화(₩) 병기</span>
           </label>
           {showKRW && <span className="text-[10px] text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">1$ = {krwRate.toLocaleString()}₩</span>}
         </div>
-        {loading && <div className="mt-2 flex items-center gap-2"><div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" /><span className="text-xs text-gray-400">가격 불러오는 중...</span></div>}
+        {loading && <div className="mt-2 flex items-center gap-2"><div className="w-4 h-4 border-2 border-brand-500 border-t-transparent rounded-full animate-spin" /><span className="text-xs text-gray-400">가격 불러오는 중...</span></div>}
       </div>
 
       {/* Tab switcher */}
@@ -276,7 +276,7 @@ export default function Pricing() {
                   <div className="w-44 flex items-center gap-2 shrink-0">
                     {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                     <span className="text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{row.model}</span>
-                    {row.koreanBilling === true && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-semibold whitespace-nowrap">🇰🇷</span>}
+                    {row.koreanBilling === true && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold whitespace-nowrap">🇰🇷</span>}
                     {row.koreanBilling === null && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold whitespace-nowrap">🔍</span>}
                   </div>
                   <div className="flex-1 relative h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
@@ -309,7 +309,7 @@ export default function Pricing() {
             <div className="flex items-center gap-3">
               <label className="flex items-center gap-1.5 cursor-pointer select-none">
                 <input type="checkbox" checked={showCacheCols} onChange={e => setShowCacheCols(e.target.checked)}
-                  className="w-3.5 h-3.5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer" />
+                  className="w-3.5 h-3.5 rounded border-gray-300 text-brand-600 focus:ring-brand-500 cursor-pointer" />
                 <span className="text-[11px] text-gray-500 dark:text-gray-400">캐시 읽기/쓰기 표시</span>
               </label>
               <p className="text-[10px] text-gray-400">{prices.length}개 모델 중 {(tablePage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(tablePage * ITEMS_PER_PAGE, prices.length)}개 표시</p>
@@ -338,7 +338,7 @@ export default function Pricing() {
                           {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                           <div>
                             <div className="font-medium text-gray-900 dark:text-white">{row.model} {row.isNew && <span className="text-[8px] font-bold text-red-500 ml-1">NEW</span>}
-                              {row.koreanBilling === true && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-semibold">🇰🇷 결제가능</span>}
+                              {row.koreanBilling === true && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold">🇰🇷 결제가능</span>}
                               {row.koreanBilling === null && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold">🔍 확인필요</span>}
                             </div>
                             <div className="text-[10px] text-gray-400">{row.provider}</div>
@@ -373,7 +373,7 @@ export default function Pricing() {
                     {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                     <span className="text-sm font-bold text-gray-900 dark:text-white">{row.model}</span>
                     {row.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
-                    {row.koreanBilling === true && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-semibold">🇰🇷</span>}
+                    {row.koreanBilling === true && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold">🇰🇷</span>}
                     {row.koreanBilling === null && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold">🔍</span>}
                   </div>
                   <div className="grid grid-cols-3 gap-2">
@@ -434,7 +434,7 @@ export default function Pricing() {
             <div key={provider.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-base font-bold text-gray-900 dark:text-white">{provider.name}</h3>
-                {provider.badge && <span className="px-2 py-0.5 bg-blue-600 text-white text-[11px] rounded-full font-semibold">{provider.badge}</span>}
+                {provider.badge && <span className="px-2 py-0.5 bg-brand-600 text-white text-[11px] rounded-full font-semibold">{provider.badge}</span>}
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">{provider.description}</p>
               <div className="p-2.5 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 rounded-xl text-xs text-emerald-700 dark:text-emerald-300 mb-3">
@@ -444,7 +444,7 @@ export default function Pricing() {
                 {provider.pros.map((p) => <div key={p} className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300"><span className="text-emerald-500 mt-0.5 shrink-0">✓</span>{p}</div>)}
                 {provider.cons.map((c) => <div key={c} className="flex items-start gap-2 text-xs text-gray-400 dark:text-gray-500"><span className="text-red-400 mt-0.5 shrink-0">✗</span>{c}</div>)}
               </div>
-              <p className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-xs text-blue-600 dark:text-blue-400 font-medium">
+              <p className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-xs text-brand-600 dark:text-brand-400 font-medium">
                 추천 대상: {provider.bestFor}
               </p>
             </div>
@@ -491,7 +491,7 @@ function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; sho
               placeholder="월간 입력 토큰 수"
               value={inputTokens}
               onChange={e => setInputTokens(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500"
             />
             {inputNum > 0 && (
               <p className="text-[10px] text-gray-400 mt-1">
@@ -507,7 +507,7 @@ function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; sho
               placeholder="월간 출력 토큰 수"
               value={outputTokens}
               onChange={e => setOutputTokens(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500"
             />
             {outputNum > 0 && (
               <p className="text-[10px] text-gray-400 mt-1">

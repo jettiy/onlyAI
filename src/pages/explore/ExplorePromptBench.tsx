@@ -139,7 +139,7 @@ export default function ExplorePromptBench() {
       {/* Active prompt display */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-[10px] font-bold px-2 py-0.5 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded">
+          <span className="text-[10px] font-bold px-2 py-0.5 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 rounded">
             {PROMPTS.find(p => p.id === activePrompt)?.category}
           </span>
         </div>

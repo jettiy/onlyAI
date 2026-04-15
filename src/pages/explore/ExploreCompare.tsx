@@ -154,7 +154,7 @@ export default function ExploreCompare() {
               <div>
                 <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">모델 A</label>
                 <select value={selectA} onChange={e => setSelectA(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                  className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
                   <option value="">선택...</option>
                   {modelOptions.filter(o => o.value !== selectB).map(o => (
                     <option key={o.value} value={o.value}>{o.label}</option>
@@ -164,7 +164,7 @@ export default function ExploreCompare() {
               <div>
                 <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">모델 B</label>
                 <select value={selectB} onChange={e => setSelectB(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                  className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
                   <option value="">선택...</option>
                   {modelOptions.filter(o => o.value !== selectA).map(o => (
                     <option key={o.value} value={o.value}>{o.label}</option>
@@ -180,7 +180,7 @@ export default function ExploreCompare() {
             <div className="grid sm:grid-cols-2 gap-4">
               {/* 카드 A */}
               <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5 space-y-4 relative">
-                <div className="absolute top-3 right-3 text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-2 py-0.5 rounded-full">A</div>
+                <div className="absolute top-3 right-3 text-xs font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 px-2 py-0.5 rounded-full">A</div>
                 <div className="flex items-center gap-3">
                   {itemA.logoId && (() => {
                     const path = logoIdToPath(itemA.logoId);

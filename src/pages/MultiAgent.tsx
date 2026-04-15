@@ -47,7 +47,7 @@ const SCENARIOS: Scenario[] = [
     agents: [
       { id: "user",     role: "사용자",       model: "Human",           emoji: "👤", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 5, y: 42, description: "질문을 입력해요." },
       { id: "manager",  role: "매니저 에이전트", model: "GPT-5.4",        emoji: "🧠", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 28, y: 42, description: "작업을 분해하고 서브에이전트에 배분해요." },
-      { id: "searcher", role: "검색 에이전트",  model: "DeepSeek V3.2",  emoji: "🔍", color: "bg-blue-100 dark:bg-blue-900/40",   accent: "text-blue-700 dark:text-blue-300", bar: "#2563EB", x: 55, y: 14, description: "웹 검색·API 호출을 담당해요." },
+      { id: "searcher", role: "검색 에이전트",  model: "DeepSeek V3.2",  emoji: "🔍", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 55, y: 14, description: "웹 검색·API 호출을 담당해요." },
       { id: "analyst",  role: "분석 에이전트",  model: "Claude Sonnet",  emoji: "📊", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 55, y: 50, description: "수집된 데이터를 분석·정리해요." },
       { id: "writer",   role: "작성 에이전트",  model: "Claude Opus",    emoji: "✍️", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300", bar: "#D97706", x: 55, y: 82, description: "최종 보고서를 작성해요." },
       { id: "reviewer", role: "검증 에이전트",  model: "Gemini 3.1 Pro", emoji: "✅", color: "bg-pink-100 dark:bg-pink-900/40",   accent: "text-pink-700 dark:text-pink-300", bar: "#DB2777", x: 80, y: 42, description: "결과물의 사실 관계·품질을 검증해요." },
@@ -72,7 +72,7 @@ const SCENARIOS: Scenario[] = [
     agents: [
       { id: "user",       role: "사용자",        model: "Human",           emoji: "👤", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 4, y: 42, description: "기능 요구사항을 전달해요." },
       { id: "architect",  role: "설계 에이전트",  model: "GPT-5.4",         emoji: "🏗️", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 24, y: 42, description: "시스템 아키텍처·API 설계." },
-      { id: "coder",      role: "코딩 에이전트",  model: "Claude Sonnet",   emoji: "💻", color: "bg-blue-100 dark:bg-blue-900/40",   accent: "text-blue-700 dark:text-blue-300", bar: "#2563EB", x: 48, y: 22, description: "실제 코드를 작성해요." },
+      { id: "coder",      role: "코딩 에이전트",  model: "Claude Sonnet",   emoji: "💻", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 48, y: 22, description: "실제 코드를 작성해요." },
       { id: "tester",     role: "테스트 에이전트", model: "DeepSeek V3.2",  emoji: "🧪", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 48, y: 62, description: "유닛·통합 테스트 자동 생성." },
       { id: "reviewer",   role: "코드 리뷰어",    model: "Gemini 3.1 Pro",  emoji: "🔍", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300", bar: "#D97706", x: 72, y: 42, description: "보안·성능·가독성 리뷰." },
       { id: "deployer",   role: "배포 에이전트",  model: "MiMo-V2-Pro",    emoji: "🚀", color: "bg-pink-100 dark:bg-pink-900/40",   accent: "text-pink-700 dark:text-pink-300", bar: "#DB2777", x: 90, y: 42, description: "CI/CD 파이프라인 실행·배포." },
@@ -96,7 +96,7 @@ const SCENARIOS: Scenario[] = [
     agents: [
       { id: "user",      role: "투자자",        model: "Human",           emoji: "👤", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 4, y: 42, description: "종목·종합 분석 요청." },
       { id: "manager",   role: "리드 에이전트",  model: "GPT-5.4",         emoji: "🧠", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 26, y: 42, description: "분석 조율·최종 판단." },
-      { id: "market",    role: "시황 에이전트",  model: "Gemini 3.1 Pro",  emoji: "📊", color: "bg-blue-100 dark:bg-blue-900/40",   accent: "text-blue-700 dark:text-blue-300", bar: "#2563EB", x: 52, y: 12, description: "거시경제·시장 흐름 분석." },
+      { id: "market",    role: "시황 에이전트",  model: "Gemini 3.1 Pro",  emoji: "📊", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 52, y: 12, description: "거시경제·시장 흐름 분석." },
       { id: "news",      role: "뉴스 에이전트",  model: "DeepSeek V3.2",  emoji: "📰", color: "bg-cyan-100 dark:bg-cyan-900/40",   accent: "text-cyan-700 dark:text-cyan-300", bar: "#0891B2", x: 52, y: 42, description: "실시간 뉴스·공시 수집." },
       { id: "financial", role: "재무 에이전트",  model: "Claude Opus",    emoji: "💰", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 52, y: 72, description: "재무제표·밸류에이션 분석." },
       { id: "risk",      role: "리스크 에이전트", model: "Qwen3-235B",    emoji: "⚠️", color: "bg-orange-100 dark:bg-orange-900/40", accent: "text-orange-700 dark:text-orange-300", bar: "#EA580C", x: 76, y: 42, description: "리스크 요인·시나리오 분석." },
@@ -122,7 +122,7 @@ const SCENARIOS: Scenario[] = [
     agents: [
       { id: "user",     role: "사용자",          model: "Telegram",        emoji: "📱", color: "bg-gray-100 dark:bg-gray-800",       accent: "text-gray-700 dark:text-gray-300",    bar: "#6B7280", x: 4,  y: 42, description: "텔레그램으로 명령·질문을 입력해요." },
       { id: "gateway",  role: "OpenClaw 게이트웨이", model: "OpenClaw Core",  emoji: "🦞", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 26, y: 42, description: "메시지 라우팅·크론·세션 관리 담당." },
-      { id: "main",     role: "메인 에이전트",    model: "MiniMax M2.7",    emoji: "🧠", color: "bg-blue-100 dark:bg-blue-900/40",    accent: "text-blue-700 dark:text-blue-300",    bar: "#2563EB", x: 50, y: 22, description: "자연어 이해·작업 분해·응답 생성." },
+      { id: "main",     role: "메인 에이전트",    model: "MiniMax M2.7",    emoji: "🧠", color: "bg-brand-100 dark:bg-brand-900/40",    accent: "text-brand-700 dark:text-brand-300",    bar: "#2563EB", x: 50, y: 22, description: "자연어 이해·작업 분해·응답 생성." },
       { id: "subagent", role: "서브 에이전트",    model: "Claude Sonnet",   emoji: "⚡", color: "bg-cyan-100 dark:bg-cyan-900/40",    accent: "text-cyan-700 dark:text-cyan-300",    bar: "#0891B2", x: 50, y: 62, description: "복잡한 분석·코딩 등 전문 작업 처리." },
       { id: "cron",     role: "크론 스케줄러",    model: "OpenClaw Cron",   emoji: "⏰", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300",  bar: "#D97706", x: 74, y: 22, description: "정해진 시간에 작업 자동 실행." },
       { id: "notify",   role: "알림 에이전트",    model: "Telegram Bot",    emoji: "🔔", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 74, y: 62, description: "보고서·알림을 텔레그램으로 전송." },
@@ -145,7 +145,7 @@ const SCENARIOS: Scenario[] = [
 
 // ─── 메시지 타입 스타일 ────────────────────────────────────────────────────────
 const MSG_STYLE: Record<Message["type"], { bg: string; text: string; label: string }> = {
-  task:   { bg: "bg-blue-100 dark:bg-blue-900/40",    text: "text-blue-700 dark:text-blue-300",   label: "지시" },
+  task:   { bg: "bg-brand-100 dark:bg-brand-900/40",    text: "text-brand-700 dark:text-brand-300",   label: "지시" },
   result: { bg: "bg-emerald-100 dark:bg-emerald-900/40", text: "text-emerald-700 dark:text-emerald-300", label: "결과" },
   tool:   { bg: "bg-amber-100 dark:bg-amber-900/40",  text: "text-amber-700 dark:text-amber-300", label: "도구" },
   review: { bg: "bg-violet-100 dark:bg-violet-900/40",text: "text-violet-700 dark:text-violet-300",label: "검토" },
@@ -433,7 +433,7 @@ export default function MultiAgent() {
       </div>
 
       {/* 개념 설명 */}
-      <div className="bg-gradient-to-br from-violet-50 to-blue-50 dark:from-violet-950/30 dark:to-blue-950/30 rounded-2xl p-5 border border-violet-100 dark:border-violet-900/40">
+      <div className="bg-gradient-to-br from-violet-50 to-brand-50 dark:from-violet-950/30 dark:to-brand-950/30 rounded-2xl p-5 border border-violet-100 dark:border-violet-900/40">
         <h3 className="text-sm font-black text-gray-900 dark:text-white mb-3">🤝 멀티에이전트 협업이란?</h3>
         <div className="grid sm:grid-cols-3 gap-3">
           {[

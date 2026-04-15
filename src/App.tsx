@@ -36,11 +36,30 @@ const Recommend = lazy(() => import("./pages/Recommend").then(m => ({ default: m
 const PcCheck = lazy(() => import("./pages/PcCheck").then(m => ({ default: m.default })));
 
 
+function SkeletonRow() {
+  return (
+    <div className="space-y-6 animate-pulse max-w-4xl mx-auto">
+      <div className="h-48 rounded-2xl skeleton" />
+      <div className="grid grid-cols-3 gap-3">
+        <div className="h-40 rounded-2xl skeleton" />
+        <div className="h-40 rounded-2xl skeleton" />
+        <div className="h-40 rounded-2xl skeleton" />
+      </div>
+      <div className="h-60 rounded-2xl skeleton" />
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div className="h-28 rounded-2xl skeleton" />
+        <div className="h-28 rounded-2xl skeleton" />
+        <div className="h-28 rounded-2xl skeleton" />
+      </div>
+    </div>
+  );
+}
+
 function PageLoader() {
   return (
     <div className="flex items-center justify-center min-h-[50vh]">
       <div className="flex flex-col items-center gap-3">
-        <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-brand border-t-transparent rounded-full animate-spin" />
         <p className="text-sm text-slate-400">로딩 중...</p>
       </div>
     </div>

@@ -148,7 +148,7 @@ export default function Pricing() {
         if (res.ok) {
           const data = await res.json();
           const rate = data?.rates?.KRW;
-          if (rate) setKrwRate(Math.round(rate * 100) / 100);
+          if (rate && rate > 1000 && rate < 10000) setKrwRate(Math.round(rate * 100) / 100);
         }
       } catch { /* keep default */ }
     }

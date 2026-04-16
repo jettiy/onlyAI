@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
 import { type UseCase, type BudgetTier } from '../data/modelStrengths';
+import { recommend } from '../lib/recommendEngine';
 import { CompanyLogo } from '../components/CompanyLogo';
 import { WEEKLY_RANKING, RANKING_SOURCE } from '../data/rankings';
 import {
@@ -432,6 +433,16 @@ function MiniRecommend({ navigate }: { navigate: ReturnType<typeof useNavigate> 
   const [useCase, setUseCase] = useState<UseCase | ''>('');
   const [budget, setBudget] = useState<BudgetTier | ''>('');
 
+  // 실시간 미리보기
+  const preview = useMemo(() => {
+    if (!useCase && !budget) return [];
+    return recommend({
+      useCases: useCase ? [useCase] : [],
+      budget: (budget || 'free') as BudgetTier,
+      privacy: 'medium',
+    }).slice(0, 3);
+  }, [useCase, budget]);
+
   const go = () => {
     const params = new URLSearchParams();
     if (useCase) params.set('useCase', useCase);
@@ -476,12 +487,30 @@ function MiniRecommend({ navigate }: { navigate: ReturnType<typeof useNavigate> 
         ))}
       </div>
 
+      {/* 실시간 미리보기 */}
+      {preview.length > 0 && (
+        <div className="mb-4 space-y-2 animate-fade-in">
+          <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider">추천 결과 미리보기</p>
+          {preview.map((r, i) => (
+            <div key={r.id} className="flex items-center gap-3 p-2.5 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
+              <span className="text-sm">{['🥇','🥈','🥉'][i]}</span>
+              <CompanyLogo company={r.companyId} size={20} />
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-bold text-gray-900 dark:text-white truncate">{r.name}</p>
+                <p className="text-[10px] text-gray-400">{r.tagline}</p>
+              </div>
+              <span className="text-[10px] font-bold text-brand-600 dark:text-brand-400">{r.score}점</span>
+            </div>
+          ))}
+        </div>
+      )}
+
       <button onClick={go}
         className="w-full py-2.5 rounded-xl text-sm font-bold text-white shadow-lg transition-all hover:opacity-90 flex items-center justify-center gap-2"
         style={{ backgroundColor: '#5B5FEF', boxShadow: '0 4px 14px rgba(91,95,239,0.3)' }}
       >
         <Sparkles className="w-4 h-4" />
-        AI 추천 결과 보기
+        {preview.length > 0 ? '전체 결과 보기' : 'AI 추천 결과 보기'}
       </button>
     </section>
   );

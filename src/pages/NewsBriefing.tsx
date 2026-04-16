@@ -6,7 +6,7 @@ type ViewTab = 'briefing' | 'sources';
 const SOURCE_TABS = [
   { key: 'all', label: '전체', icon: '📰' },
   { key: 'AI타임스', label: 'AI타임스', icon: '🇰🇷' },
-  { key: '36氪', label: '36氪', icon: '🇨🇳' },
+  { key: '36氪', label: '36氪 (준비 중)', icon: '🇨🇳', disabled: true },
   { key: 'Hugging Face', label: 'Hugging Face', icon: '🤗' },
   { key: 'TechCrunch', label: 'TechCrunch', icon: '🇺🇸' },
   { key: 'github', label: 'GitHub', icon: '🐙' },
@@ -109,22 +109,26 @@ export default function NewsBriefing() {
                 ? github.length
                 : sourceCount[st.key] ?? 0;
             const isActive = sourceFilter === st.key;
+            const isDisabled = 'disabled' in st && st.disabled;
             return (
               <button
                 key={st.key}
                 onClick={() => {
+                  if (isDisabled) return;
                   setSourceFilter(st.key);
                   setCategoryFilter('all');
                 }}
                 className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition-all whitespace-nowrap ${
-                  isActive
-                    ? 'bg-brand-500 text-white shadow-sm'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                  isDisabled
+                    ? 'bg-gray-50 dark:bg-gray-800/50 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-60'
+                    : isActive
+                      ? 'bg-brand-500 text-white shadow-sm'
+                      : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
                 <span>{st.icon}</span>
                 <span>{st.label}</span>
-                {count > 0 && (
+                {!isDisabled && count > 0 && (
                   <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${
                     isActive ? 'bg-white/20' : 'bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400'
                   }`}>

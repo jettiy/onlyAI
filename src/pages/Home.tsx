@@ -20,6 +20,40 @@ import {
 /* ── 상수 ── */
 const TOP3_RANKING = WEEKLY_RANKING.slice(0, 3);
 
+/* ── 용도별 추천 카드 ── */
+const USE_CASE_CARDS = [
+  {
+    icon: '✍️', label: '글쓰기', desc: '블로그·보고서·번역',
+    useCase: 'writing' as UseCase,
+    color: 'bg-violet-50 dark:bg-violet-950/30 border-violet-200 dark:border-violet-800',
+  },
+  {
+    icon: '💻', label: '코딩', desc: '코드 생성·디버깅',
+    useCase: 'coding' as UseCase,
+    color: 'bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800',
+  },
+  {
+    icon: '💬', label: '한국어 대화', desc: '자연스러운 한국어',
+    useCase: 'chat' as UseCase,
+    color: 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800',
+  },
+  {
+    icon: '📊', label: '요약·분석', desc: '문서·데이터 요약',
+    useCase: 'summary' as UseCase,
+    color: 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800',
+  },
+  {
+    icon: '🖼️', label: '이미지 생성', desc: '그림·디자인·로고',
+    useCase: 'image' as UseCase,
+    color: 'bg-pink-50 dark:bg-pink-950/30 border-pink-200 dark:border-pink-800',
+  },
+  {
+    icon: '🎬', label: '비디오 생성', desc: '숏폼·광고·영상',
+    useCase: 'video' as UseCase,
+    color: 'bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800',
+  },
+];
+
 const QUICK_LINKS = [
   { icon: Scale, label: 'AI 비교하기', desc: '모델 가격·성능 비교', to: '/explore/compare', color: 'bg-brand' },
   { icon: Monitor, label: 'PC 체크', desc: '내 PC에서 AI 구동 가능?', to: '/pc-check', color: 'bg-success' },
@@ -195,7 +229,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 3. 빠른 시작 ═══ */}
+      {/* ═══ 3. 용도별 AI 추천 ═══ */}
+      <section className="animate-fade-in">
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-base font-bold text-gray-900 dark:text-white">용도별 AI 추천</h2>
+          <Link to="/recommend" className="text-xs text-gray-500 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors">
+            더 자세히 <ArrowRight className="inline w-3 h-3" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {USE_CASE_CARDS.map(uc => {
+            const top2 = strengths
+              .filter(s => s.scores[uc.useCase] >= 8)
+              .sort((a, b) => b.scores[uc.useCase] - a.scores[uc.useCase])
+              .slice(0, 2);
+            return (
+              <Link
+                key={uc.useCase}
+                to={`/recommend?useCase=${uc.useCase}`}
+                className={`group block rounded-2xl border p-4 hover:shadow-md transition-all ${uc.color}`}
+              >
+                <span className="text-xl mb-2 block">{uc.icon}</span>
+                <p className="text-sm font-bold text-gray-900 dark:text-white mb-0.5">{uc.label}</p>
+                <p className="text-[11px] text-gray-500 dark:text-gray-400 mb-3">{uc.desc}</p>
+                {top2.length > 0 && (
+                  <div className="space-y-1.5">
+                    {top2.map(s => (
+                      <div key={s.id} className="flex items-center justify-between">
+                        <div className="flex items-center gap-1.5">
+                          <CompanyLogo company={s.companyId} size={14} />
+                          <span className="text-[11px] font-semibold text-gray-700 dark:text-gray-300">{s.name}</span>
+                        </div>
+                        <span className="text-[10px] font-mono text-gray-400">{s.monthlyEst}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ═══ 4. 빠른 시작 ═══ */}
       <section className="animate-fade-in">
         <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3">빠른 시작</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">

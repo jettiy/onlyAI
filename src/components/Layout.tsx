@@ -104,16 +104,12 @@ const TOP_NAV: MegaItem[] = [
   { label: '가격', path: '/pricing' },
   { label: '추천', path: '/recommend' },
   { label: '뉴스', path: '/news' },
-  { label: '비디오 AI', path: '/video/timeline' },
-  { label: '이미지 AI', path: '/image' },
-  { label: '내 PC', path: '/pc-check' },
-  { label: 'OpenClaw', path: '/openclaw' },
 ];
 
 const MOBILE_BOTTOM_TABS: { path: string; label: string; icon: ReactNode }[] = [
+  { path: '/', label: '홈', icon: <Home size={20} /> },
   { path: '/explore/compare', label: '비교', icon: <BarChart3 size={20} /> },
   { path: '/recommend', label: '추천', icon: <Sparkles size={20} /> },
-  { path: '/pricing', label: '가격', icon: <DollarSign size={20} /> },
   { path: '/news', label: '뉴스', icon: <Newspaper size={20} /> },
 ];
 

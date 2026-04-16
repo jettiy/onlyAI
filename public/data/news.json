@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-16T14:03:15.242Z",
-  "updatedAtKST": "2026. 4. 16. PM 11:03:15",
+  "updatedAt": "2026-04-16T19:25:12.949Z",
+  "updatedAtKST": "2026. 4. 17. AM 4:25:12",
   "stats": {
     "aitimes": 20,
     "36kr": 11,
     "hf": 20,
-    "tc": 18,
+    "tc": 17,
     "github": 10,
-    "total": 68
+    "total": 67
   },
   "news": [
     {
@@ -251,7 +251,7 @@
       "lang": "ko"
     },
     {
-      "id": "hf-0-https://huggingface.co/blog/train-multimodal-sentence-transformers",
+      "id": "hf-1-https://huggingface.co/blog/train-multimodal-sentence-transformers",
       "title": "Training and Finetuning Multimodal Embedding & Reranker Models with Sentence Transformers",
       "summary": "",
       "date": "2026-04-16",
@@ -263,7 +263,91 @@
       "lang": "en"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/04/16/meta-raises-quest-3-and-quest-3s-prices-due-to-ram-shortage/",
+      "id": "tc-0-https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/",
+      "title": "OpenAI takes aim at Anthropic with beefed-up Codex that gives it more power over your desktop",
+      "summary": "OpenAI's agentic coding tool has gotten a major makeover, with a variety of new powers and abilities.",
+      "date": "2026-04-16",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/04/16/anthropic-cpo-leaves-figmas-board-after-reports-he-will-offer-a-competing-product/",
+      "title": "Anthropic CPO leaves Figma&#8217;s board after reports he will offer a competing product",
+      "summary": "Krieger's departure and any forthcoming design tools will be another data point for investors who fear the SaaSpocalypse — that the largest AI labs will come to dominate software businesses, a thesis ",
+      "date": "2026-04-16",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/16/anthropic-cpo-leaves-figmas-board-after-reports-he-will-offer-a-competing-product/",
+      "category": "개발 도구",
+      "lang": "en"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/04/16/google-now-lets-you-explore-the-web-side-by-side-with-ai-mode/",
+      "title": "Google now lets you explore the web side-by-side with AI Mode",
+      "summary": "Now, when you're using AI Mode on Chrome desktop, clicking a link will open the web page side-by-side with AI Mode.",
+      "date": "2026-04-16",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/16/google-now-lets-you-explore-the-web-side-by-side-with-ai-mode/",
+      "category": "개발 도구",
+      "lang": "en"
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/04/16/insightfinder-raises-15m-to-help-companies-figure-out-where-ai-agents-go-wrong/",
+      "title": "InsightFinder raises $15M to help companies figure out where AI agents go wrong",
+      "summary": "According to CEO Helen Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong — it's also diagnosing how the entire tech stack operates now th",
+      "date": "2026-04-16",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/16/insightfinder-raises-15m-to-help-companies-figure-out-where-ai-agents-go-wrong/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/04/16/ai-traffic-to-us-retailers-rose-393-in-q1-and-its-boosting-their-revenue-too/",
+      "title": "AI traffic to US retailers rose 393% in Q1, and it&#8217;s boosting their revenue too",
+      "summary": "Adobe says AI traffic to U.S. retail sites also jumped 269% in March, with visitors converting better and generating more revenue than non-AI shoppers.",
+      "date": "2026-04-16",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/16/ai-traffic-to-us-retailers-rose-393-in-q1-and-its-boosting-their-revenue-too/",
+      "category": "투자·기업",
+      "lang": "en"
+    },
+    {
+      "id": "tc-5-https://techcrunch.com/2026/04/16/robloxs-ai-assistant-gets-new-agentic-tools-to-plan-build-and-test-games/",
+      "title": "Roblox’s AI assistant gets new agentic tools to plan, build, and test games",
+      "summary": "The new tools are designed to help creators throughout the entire development process.",
+      "date": "2026-04-16",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/16/robloxs-ai-assistant-gets-new-agentic-tools-to-plan-build-and-test-games/",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-7-https://techcrunch.com/2026/04/16/runway-ceo-says-ai-could-help-hollywood-make-50-films-instead-of-one-100m-blockbuster/",
+      "title": "Runway CEO says AI could help Hollywood make 50 films instead of one $100M blockbuster",
+      "summary": "Runway’s CEO says AI could help studios make dozens of films for the cost of one, betting volume will boost hit-making odds.",
+      "date": "2026-04-16",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/16/runway-ceo-says-ai-could-help-hollywood-make-50-films-instead-of-one-100m-blockbuster/",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "tc-8-https://techcrunch.com/2026/04/16/meta-raises-quest-3-and-quest-3s-prices-due-to-ram-shortage/",
       "title": "Meta raises Quest 3 and Quest 3S prices due to RAM shortage",
       "summary": "Starting April 19, the price of the Meta Quest 3S (128GB) and Meta Quest 3S (256GB) will go up by $50 to $349.99 and $449.99, respectively. The price of the Meta Quest 3 is going up by $100 to $599.99",
       "date": "2026-04-16",
@@ -275,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/04/16/canvas-ai-assistant-can-now-call-various-tools-to-make-designs-for-you/",
+      "id": "tc-9-https://techcrunch.com/2026/04/16/canvas-ai-assistant-can-now-call-various-tools-to-make-designs-for-you/",
       "title": "Canva&#8217;s AI assistant can now call various tools to make designs for you",
       "summary": "The latest version of Canva's AI assistant lets users create editable designs with text prompts.",
       "date": "2026-04-16",
@@ -287,9 +371,9 @@
       "lang": "en"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/04/16/this-simulation-startup-wants-to-be-the-cursor-for-physical-ai/",
+      "id": "tc-10-https://techcrunch.com/2026/04/16/this-simulation-startup-wants-to-be-the-cursor-for-physical-ai/",
       "title": "This simulation startup wants to be the Cursor for physical AI",
-      "summary": "Antioch raised a $8.5 million seed round to create simulation tools for a new generation of robot builders.",
+      "summary": "Antioch raised an $8.5 million seed round to create simulation tools for a new generation of robot builders.",
       "date": "2026-04-16",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -299,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-1-https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+      "id": "hf-2-https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
       "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
       "summary": "",
       "date": "2026-04-15",
@@ -311,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-2-https://huggingface.co/blog/Hcompany/holotab",
+      "id": "hf-3-https://huggingface.co/blog/Hcompany/holotab",
       "title": "Meet HoloTab by HCompany. Your AI browser companion.",
       "summary": "",
       "date": "2026-04-15",
@@ -323,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/",
+      "id": "tc-12-https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/",
       "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
       "summary": "OpenAI has expanded the capabilities of its agent-building toolkit, as agentic AI continues to grow in popularity.",
       "date": "2026-04-15",
@@ -335,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/04/15/hightouch-reaches-100m-arr-fueled-by-marketing-tools-powered-by-ai/",
+      "id": "tc-13-https://techcrunch.com/2026/04/15/hightouch-reaches-100m-arr-fueled-by-marketing-tools-powered-by-ai/",
       "title": "Hightouch reaches $100M ARR fueled by marketing tools powered by AI",
       "summary": "The startup says it grew its ARR by $70 million in just 20 months after launching an AI agent platform for marketers.",
       "date": "2026-04-15",
@@ -347,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/04/15/linkedin-data-shows-ai-isnt-to-blame-for-hiring-decline-yet/",
+      "id": "tc-14-https://techcrunch.com/2026/04/15/linkedin-data-shows-ai-isnt-to-blame-for-hiring-decline-yet/",
       "title": "LinkedIn data shows AI isn&#8217;t to blame for hiring decline&#8230; yet",
       "summary": "LinkedIn says hiring is down 20% since 2022, but blames higher interest rates — not AI — for the slowdown.",
       "date": "2026-04-15",
@@ -359,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/04/15/ai-learning-app-gizmo-levels-up-with-13m-users-and-a-22m-investment/",
+      "id": "tc-15-https://techcrunch.com/2026/04/15/ai-learning-app-gizmo-levels-up-with-13m-users-and-a-22m-investment/",
       "title": "AI learning app Gizmo levels up with 13M users and a $22M investment",
       "summary": "Gizmo, an AI-powered learning platform, has attracted more than 13 million users and just secured $22 million in Series A funding.",
       "date": "2026-04-15",
@@ -371,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/04/15/can-ai-judge-journalism-a-thiel-backed-startup-says-yes-even-if-it-risks-chilling-whistleblowers/",
+      "id": "tc-16-https://techcrunch.com/2026/04/15/can-ai-judge-journalism-a-thiel-backed-startup-says-yes-even-if-it-risks-chilling-whistleblowers/",
       "title": "Can AI judge journalism? A Thiel-backed startup says yes, even if it risks chilling whistleblowers",
       "summary": "Objection, a Thiel-backed startup, aims to use AI to judge journalism, letting users pay to challenge stories. Critics warn it could chill whistleblowers and reshape how media accountability works.",
       "date": "2026-04-15",
@@ -383,7 +467,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
+      "id": "tc-17-https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
       "title": "Google rolls out a native Gemini app for Mac",
       "summary": "You can share anything on their screen with Gemini to get help with what they're looking at in the moment, including local files.",
       "date": "2026-04-15",
@@ -395,7 +479,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/podcast/the-musician-turned-biotech-founder-waiting-to-fundraise/",
+      "id": "tc-18-https://techcrunch.com/podcast/the-musician-turned-biotech-founder-waiting-to-fundraise/",
       "title": "The musician-turned-biotech-founder waiting to fundraise",
       "summary": "When Grammy-nominated singer-songwriter&#160;Aloe Blacc&#160;got COVID despite being vaccinated and boosted, he tried to fund research for a better solution.&#160;What&#160;he&#160;quickly&#160;found&",
       "date": "2026-04-15",
@@ -407,103 +491,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/04/15/indias-vibe-coding-startup-emergent-enters-openclaw-like-ai-agent-space/",
-      "title": "India&#8217;s vibe-coding startup Emergent enters OpenClaw-like AI agent space",
-      "summary": "Emergent's Wingman lets users manage and automate tasks through chat on platforms like WhatsApp and Telegram.",
-      "date": "2026-04-15",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/15/indias-vibe-coding-startup-emergent-enters-openclaw-like-ai-agent-space/",
-      "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "tc-12-https://techcrunch.com/2026/04/15/after-sale-of-its-shoe-business-allbirds-pivots-to-ai/",
-      "title": "After sale of its shoe business, Allbirds pivots to AI",
-      "summary": "Allbirds is ditching wool sneakers for AI servers, rebranding as NewBird AI after locking in a $50M convertible financing facility.",
-      "date": "2026-04-15",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/15/after-sale-of-its-shoe-business-allbirds-pivots-to-ai/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-13-https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/",
-      "title": "Reid Hoffman weighs in on the &#8216;tokenmaxxing&#8217; debate",
-      "summary": "Reid Hoffman says tracking AI token use can gauge adoption, but cautions it should be paired with context and not treated as a direct productivity metric.",
-      "date": "2026-04-15",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-14-https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/",
-      "title": "Adobe&#8217;s new Firefly AI assistant can use Creative Cloud apps to complete tasks",
-      "summary": "Adobe says the assistant can work across apps like Firefly, Photoshop, Premiere, Lightroom, Express,  Illustrator and its other apps to do tasks for you.",
-      "date": "2026-04-15",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-15-https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/",
-      "title": "Gitar, a startup that uses agents to secure code, emerges from stealth with $9 million",
-      "summary": "The company uses AI to review code that, more often than not these days, has also been generated by AI.",
-      "date": "2026-04-15",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/",
-      "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "tc-16-https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/",
-      "title": "This startup is betting tokenmaxxing will create the next compute giant",
-      "summary": "Parasail raised $32 million in a Series A, signaling a fractured future of models and compute.",
-      "date": "2026-04-15",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/",
-      "title": "Anthropic&#8217;s rise is giving some OpenAI investors second thoughts",
-      "summary": "One investor who has backed both companies told the FT that justifying OpenAI's recent round required assuming an IPO valuation of $1.2 trillion or more — making Anthropic's current $380 billion valua",
-      "date": "2026-04-15",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/",
-      "category": "투자·기업",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/",
-      "title": "Anthropic co-founder confirms the company briefed the Trump administration on Mythos",
-      "summary": "In an interview at the Semafor World Economy summit this week, Anthropic co-founder Jack Clark explained why the company was still engaged with the U.S. government while simultaneously suing them.",
-      "date": "2026-04-14",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/",
-      "category": "산업·정책",
-      "lang": "en"
-    },
-    {
-      "id": "hf-4-https://huggingface.co/blog/multimodal-sentence-transformers",
+      "id": "hf-5-https://huggingface.co/blog/multimodal-sentence-transformers",
       "title": "Multimodal Embedding & Reranker Models with Sentence Transformers",
       "summary": "",
       "date": "2026-04-09",
@@ -515,7 +503,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-5-https://huggingface.co/blog/safetensors-joins-pytorch-foundation",
+      "id": "hf-6-https://huggingface.co/blog/safetensors-joins-pytorch-foundation",
       "title": "Safetensors is Joining the PyTorch Foundation",
       "summary": "",
       "date": "2026-04-08",
@@ -527,7 +515,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-6-https://huggingface.co/blog/gemma4",
+      "id": "hf-7-https://huggingface.co/blog/gemma4",
       "title": "Welcome Gemma 4: Frontier multimodal intelligence on device",
       "summary": "",
       "date": "2026-04-02",
@@ -539,7 +527,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-7-https://huggingface.co/blog/tiiuae/falcon-perception",
+      "id": "hf-8-https://huggingface.co/blog/tiiuae/falcon-perception",
       "title": "Falcon Perception",
       "summary": "",
       "date": "2026-04-01",
@@ -551,7 +539,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-9-https://huggingface.co/blog/ibm-granite/granite-4-vision",
+      "id": "hf-10-https://huggingface.co/blog/ibm-granite/granite-4-vision",
       "title": "Granite 4.0 3B Vision: Compact Multimodal Intelligence for Enterprise Documents",
       "summary": "",
       "date": "2026-03-31",
@@ -563,7 +551,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-10-https://huggingface.co/blog/OpenMed/training-mrna-models-25-species",
+      "id": "hf-11-https://huggingface.co/blog/OpenMed/training-mrna-models-25-species",
       "title": "Training mRNA Language Models Across 25 Species for $165",
       "summary": "",
       "date": "2026-03-31",
@@ -575,7 +563,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-11-https://huggingface.co/blog/trl-v1",
+      "id": "hf-12-https://huggingface.co/blog/trl-v1",
       "title": "TRL v1.0: Post-Training Library Built to Move with the Field",
       "summary": "",
       "date": "2026-03-31",
@@ -587,7 +575,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-13-https://huggingface.co/blog/ServiceNow-AI/eva",
+      "id": "hf-14-https://huggingface.co/blog/ServiceNow-AI/eva",
       "title": "A New Framework for Evaluating Voice Agents (EVA)",
       "summary": "",
       "date": "2026-03-24",
@@ -599,7 +587,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-14-https://huggingface.co/blog/nvidia/domain-specific-embedding-finetune",
+      "id": "hf-15-https://huggingface.co/blog/nvidia/domain-specific-embedding-finetune",
       "title": "Build a Domain-Specific Embedding Model in Under a Day",
       "summary": "",
       "date": "2026-03-20",
@@ -611,7 +599,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-15-https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026",
+      "id": "hf-16-https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026",
       "title": "State of Open Source on Hugging Face: Spring 2026",
       "summary": "",
       "date": "2026-03-17",
@@ -623,7 +611,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-16-https://huggingface.co/blog/Hcompany/holotron-12b",
+      "id": "hf-17-https://huggingface.co/blog/Hcompany/holotron-12b",
       "title": "Holotron-12B - High Throughput Computer Use Agent",
       "summary": "",
       "date": "2026-03-17",
@@ -635,7 +623,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-17-https://huggingface.co/blog/storage-buckets",
+      "id": "hf-18-https://huggingface.co/blog/storage-buckets",
       "title": "Introducing Storage Buckets on the Hugging Face Hub",
       "summary": "",
       "date": "2026-03-10",
@@ -647,7 +635,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-19-https://huggingface.co/blog/ulysses-sp",
+      "id": "hf-20-https://huggingface.co/blog/ulysses-sp",
       "title": "Ulysses Sequence Parallelism: Training with Million-Token Contexts",
       "summary": "",
       "date": "2026-03-09",
@@ -659,7 +647,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-21-https://huggingface.co/blog/nxp/bringing-robotics-ai-to-embedded-platforms",
+      "id": "hf-22-https://huggingface.co/blog/nxp/bringing-robotics-ai-to-embedded-platforms",
       "title": "Bringing Robotics AI to Embedded Platforms: Dataset Recording, VLA Fine‑Tuning, and On‑Device Optimizations",
       "summary": "",
       "date": "2026-03-05",
@@ -671,7 +659,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-22-https://huggingface.co/blog/modular-diffusers",
+      "id": "hf-23-https://huggingface.co/blog/modular-diffusers",
       "title": "Introducing Modular Diffusers - Composable Building Blocks for Diffusion Pipelines",
       "summary": "",
       "date": "2026-03-05",
@@ -683,7 +671,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-23-https://huggingface.co/blog/Photoroom/prx-part3",
+      "id": "hf-24-https://huggingface.co/blog/Photoroom/prx-part3",
       "title": "PRX Part 3 — Training a Text-to-Image Model in 24h!",
       "summary": "",
       "date": "2026-03-03",
@@ -695,7 +683,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-24-https://huggingface.co/blog/moe-transformers",
+      "id": "hf-25-https://huggingface.co/blog/moe-transformers",
       "title": "Mixture of Experts (MoEs) in Transformers",
       "summary": "",
       "date": "2026-02-26",
@@ -709,69 +697,47 @@
   ],
   "github": [
     {
-      "id": "gh-522158088",
-      "title": "zhayujie/CowAgent — CowAgent (chatgpt-on-wechat) 是基于大模型的超级AI助理，能主动思考和任务规划、访问操作系统和外部资源、创造和执行Skills、通过长期记忆和知识库不断成长，比OpenClaw更轻量和便捷。同时支持微信、飞书、钉钉、企微、QQ、公众号、网页等接入，可选择OpenAI/Claude/Gemini/DeepSeek/ Qwen/GLM/Kimi/LinkAI，能处理文本、语音、图片和文件，可快速搭建个人AI助理和企业数字员工。",
-      "summary": "CowAgent (chatgpt-on-wechat) 是基于大模型的超级AI助理，能主动思考和任务规划、访问操作系统和外部资源、创造和执行Skills、通过长期记忆和知识库不断成长，比OpenClaw更轻量和便捷。同时支持微信、飞书、钉钉、企微、QQ、公众号、网页等接入，可选择OpenAI/Claude/Gemini/DeepSeek/ Qwen/GLM/Kimi/LinkAI，能处理文本、语音、图片和文件，可快速搭建个人AI助理和企业数字员工。",
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
       "date": "2026-04-16",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/zhayujie/CowAgent",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 43342,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "chatgpt-on-wechat",
-        "claude",
-        "deepseek"
-      ]
-    },
-    {
-      "id": "gh-1024554267",
-      "title": "NousResearch/hermes-agent — The agent that grows with you",
-      "summary": "The agent that grows with you",
-      "date": "2026-04-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/NousResearch/hermes-agent",
+      "url": "https://github.com/CopilotKit/CopilotKit",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 92564,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "date": "2026-04-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 23059,
+      "stars": 30268,
       "language": "TypeScript",
       "tags": [
+        "agent",
+        "agent-native",
+        "agentic-ai",
         "agents",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-817326197",
+      "title": "screenpipe/screenpipe — Run agents that work for you based on what you do. AI finally knows what you are doing",
+      "summary": "Run agents that work for you based on what you do. AI finally knows what you are doing",
+      "date": "2026-04-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/screenpipe/screenpipe",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 18225,
+      "language": "Rust",
+      "tags": [
+        "agents",
+        "agi",
         "ai",
-        "chatbots",
-        "evals",
-        "javascript"
+        "computer-vision",
+        "llm"
       ]
     },
     {
@@ -786,7 +752,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 133768,
+      "stars": 133783,
       "language": "Python",
       "tags": [
         "agents",
@@ -797,112 +763,135 @@
       ]
     },
     {
-      "id": "gh-979115477",
-      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "id": "gh-764723738",
+      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
+      "summary": "Automate browser based workflows with AI",
       "date": "2026-04-16",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/bytedance/deer-flow",
+      "url": "https://github.com/Skyvern-AI/skyvern",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 61988,
+      "stars": 21188,
       "language": "Python",
+      "tags": [
+        "ai",
+        "api",
+        "automation",
+        "browser",
+        "browser-automation"
+      ]
+    },
+    {
+      "id": "gh-1201656210",
+      "title": "MemPalace/mempalace — The best-benchmarked open-source AI memory system. And it's free.",
+      "summary": "The best-benchmarked open-source AI memory system. And it's free.",
+      "date": "2026-04-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/MemPalace/mempalace",
+      "category": "오픈소스",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 47067,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "chromadb",
+        "llm",
+        "mcp",
+        "memory"
+      ]
+    },
+    {
+      "id": "gh-839037098",
+      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "date": "2026-04-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/mastra-ai/mastra",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 23062,
+      "language": "TypeScript",
+      "tags": [
+        "agents",
+        "ai",
+        "chatbots",
+        "evals",
+        "javascript"
+      ]
+    },
+    {
+      "id": "gh-1156956890",
+      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
+      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
+      "date": "2026-04-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 30243,
+      "language": "Rust",
       "tags": [
         "agent",
         "agentic",
-        "agentic-framework",
-        "agentic-workflow",
+        "ai",
+        "infra",
+        "ml"
+      ]
+    },
+    {
+      "id": "gh-1020144870",
+      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "date": "2026-04-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/archestra-ai/archestra",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3578,
+      "language": "TypeScript",
+      "tags": [
+        "a2a",
+        "a2a-mcp",
+        "acp",
+        "agent",
         "ai"
       ]
     },
     {
-      "id": "gh-1147094660",
-      "title": "HKUDS/nanobot — \"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\"",
-      "summary": "\"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "id": "gh-958830659",
+      "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
       "date": "2026-04-16",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/HKUDS/nanobot",
+      "url": "https://github.com/google/adk-python",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 39769,
+      "stars": 19019,
       "language": "Python",
       "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-1123338559",
-      "title": "vercel-labs/open-agents — An open source template for building cloud agents.",
-      "summary": "An open source template for building cloud agents.",
-      "date": "2026-04-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/vercel-labs/open-agents",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3001,
-      "language": "TypeScript",
-      "tags": [
         "agent",
+        "agentic",
+        "agentic-ai",
         "agents",
-        "ai",
-        "background-agents"
-      ]
-    },
-    {
-      "id": "gh-1179413000",
-      "title": "Narcooo/inkos — Autonomous novel writing AI Agent — agents write, audit, and revise novels with human review gates",
-      "summary": "Autonomous novel writing AI Agent — agents write, audit, and revise novels with human review gates",
-      "date": "2026-04-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Narcooo/inkos",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 4441,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "ai",
-        "ai-agent",
-        "ai-novel",
-        "ai-writing"
-      ]
-    },
-    {
-      "id": "gh-1005233473",
-      "title": "campfirein/byterover-cli — ByteRover CLI (brv) - The portable memory layer for  autonomous coding agents (formerly Cipher)",
-      "summary": "ByteRover CLI (brv) - The portable memory layer for  autonomous coding agents (formerly Cipher)",
-      "date": "2026-04-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/campfirein/byterover-cli",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 4535,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "ai",
-        "autonomous-agents",
-        "cli",
-        "coding-assistant"
+        "agents-sdk"
       ]
     },
     {
@@ -917,7 +906,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 2599,
+      "stars": 2653,
       "language": "TypeScript",
       "tags": [
         "agent",

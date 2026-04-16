@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
 import { type UseCase, type BudgetTier } from '../data/modelStrengths';
+import { strengths } from '../data/modelStrengths';
 import { recommend } from '../lib/recommendEngine';
 import { CompanyLogo } from '../components/CompanyLogo';
 import { WEEKLY_RANKING, RANKING_SOURCE } from '../data/rankings';

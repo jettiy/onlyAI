@@ -5,7 +5,7 @@ import { useState } from "react";
 const INVITE_LINKS = {
   zhipu: {
     name: "즈푸AI (Z.ai / GLM)",
-    logo: "/logos/zhipu.png",
+    logo: "/logos/aa_zhipu.svg",
     url: "https://z.ai/subscribe?ic=ODRIAQZZSF",
     benefit: "Claude Code·Cline 등 20개 이상 코딩 도구 완전 지원 · 월 $10부터 시작",
     badge: "특가 코딩 플랜",
@@ -16,20 +16,6 @@ const INVITE_LINKS = {
     bar: "bg-brand-500",
     cta: "GLM 코딩 플랜 가입하기",
     desc: "초대 코드 포함 링크로 가입하면 한정 특가 할인을 받을 수 있어요.",
-  },
-  minimax: {
-    name: "MiniMax (미니맥스)",
-    logo: "/logos/minimax.png",
-    url: "https://platform.minimax.io/register?group_id=2028654236509679678",
-    benefit: "M2.7 모델 포함 API 이용 · 레퍼럴 가입 시 10% 할인 + API 크레딧 지급",
-    badge: "레퍼럴 초대",
-    color: "from-violet-600 to-pink-500",
-    bgLight: "bg-violet-50 dark:bg-violet-950/30",
-    border: "border-violet-200 dark:border-violet-800",
-    accent: "text-violet-700 dark:text-violet-300",
-    bar: "bg-violet-500",
-    cta: "MiniMax 가입하기",
-    desc: "초대 링크로 가입하면 첫 결제 10% 할인 및 API 크레딧을 받을 수 있어요.",
   },
 };
 
@@ -82,14 +68,14 @@ const LOCAL_STEPS: InstallStep[] = [
 const CLOUD_STEPS: InstallStep[] = [
   {
     step: 1,
-    title: "MiniMax 가입",
-    desc: "아래 초대 링크로 MiniMax 계정을 만들어요. 레퍼럴 가입 시 10% 할인과 크레딧이 지급돼요.",
+    title: "Z.AI 가입",
+    desc: "아래 초대 링크로 Z.AI 계정을 만들어요. 레퍼럴 가입 시 특가 할인 혜택이 있어요.",
     badge: "필수",
   },
   {
     step: 2,
     title: "OpenClaw 클라우드 플랜 선택",
-    desc: "개인용은 Free 플랜, 자동화·에이전트 기능은 Pro 플랜을 선택하세요. MiniMax 결제와 연동돼요.",
+    desc: "개인용은 Free 플랜, 자동화·에이전트 기능은 Pro 플랜을 선택하세요.",
     badge: "플랜",
   },
   {
@@ -147,7 +133,7 @@ const FEATURES = [
 
 // ─── 컴포넌트 ─────────────────────────────────────────────────────────────────
 
-function InviteCard({ type }: { type: "zhipu" | "minimax" }) {
+function InviteCard({ type }: { type: "zhipu" }) {
   const link = INVITE_LINKS[type];
   const [copied, setCopied] = useState(false);
 
@@ -307,9 +293,8 @@ export default function OpenClawIntro() {
 
         {/* 활성 초대 링크 (준석님 보유) */}
         <h3 className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-3">✅ 활성 초대 링크 (바로 사용 가능)</h3>
-        <div className="grid sm:grid-cols-2 gap-4 mb-6">
+        <div className="mb-6">
           <InviteCard type="zhipu" />
-          <InviteCard type="minimax" />
         </div>
 
         {/* 다른 서비스 레퍼럴 정보 */}
@@ -427,7 +412,7 @@ export default function OpenClawIntro() {
               {tab === "cloud" && <span className="text-[10px] px-1.5 py-0.5 bg-violet-500 text-white rounded font-bold ml-auto">현재 선택</span>}
             </div>
             <ul className="space-y-1">
-              {["설치 불필요, 즉시 시작", "서버 관리·업데이트 자동", "어디서나 접근 가능", "비용: MiniMax 구독 포함"].map((t) => (
+              {["설치 불필요, 즉시 시작", "서버 관리·업데이트 자동", "어디서나 접근 가능", "비용: Z.AI 구독 포함"].map((t) => (
                 <li key={t} className="text-[11px] text-gray-600 dark:text-gray-400 flex items-center gap-1.5">
                   <span className="text-emerald-500">✓</span> {t}
                 </li>
@@ -467,18 +452,18 @@ export default function OpenClawIntro() {
           ))}
         </div>
 
-        {/* 클라우드 탭일 때 MiniMax 가입 CTA */}
+        {/* 클라우드 탭일 때 Z.AI 가입 CTA */}
         {tab === "cloud" && (
-          <div className="mt-4 bg-gradient-to-r from-violet-600 to-brand-600 rounded-xl p-4 text-white flex items-center justify-between gap-4 flex-wrap">
+          <div className="mt-4 bg-gradient-to-r from-brand-600 to-violet-600 rounded-xl p-4 text-white flex items-center justify-between gap-4 flex-wrap">
             <div>
-              <p className="text-sm font-bold">MiniMax로 클라우드 시작하기</p>
-              <p className="text-violet-200 text-xs mt-0.5">초대 링크로 가입하면 10% 할인 + API 크레딧 지급</p>
+              <p className="text-sm font-bold">Z.AI로 클라우드 시작하기</p>
+              <p className="text-brand-200 text-xs mt-0.5">초대 링크로 가입하면 특가 할인 혜택</p>
             </div>
             <a
-              href="https://platform.minimax.io/register?group_id=2028654236509679678"
+              href="https://z.ai/subscribe?ic=ODRIAQZZSF"
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 px-4 py-2 bg-white text-violet-700 rounded-xl text-xs font-bold hover:bg-violet-50 transition-colors shadow-sm"
+              className="shrink-0 px-4 py-2 bg-white text-brand-700 rounded-xl text-xs font-bold hover:bg-brand-50 transition-colors shadow-sm"
             >
               지금 가입하기 →
             </a>

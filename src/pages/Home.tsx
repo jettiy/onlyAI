@@ -376,21 +376,44 @@ export default function Home() {
 
       {/* ═══ 6. CTA 배너 ═══ */}
       <section
-        className="rounded-2xl p-8 text-center text-white animate-fade-in"
-        style={{ background: 'linear-gradient(135deg, #5B5FEF, #7C6AEF)' }}
+        className="rounded-2xl p-6 md:p-8 text-center text-white animate-fade-in relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #5B5FEF 0%, #7C6AEF 50%, #9B8AEF 100%)' }}
       >
-        <h2 className="text-xl md:text-2xl font-black mb-2">지금 바로 시작하세요</h2>
-        <p className="text-sm text-white/80 mb-5 max-w-md mx-auto">
-          58개 AI 모델 중 나에게 맞는 모델을 찾아보세요
-        </p>
-        <Link
-          to="/recommend"
-          className="inline-flex items-center gap-2 rounded-xl px-6 py-2.5 text-sm font-bold transition-all hover:opacity-90 shadow-lg"
-          style={{ backgroundColor: '#FFFFFF', color: '#5B5FEF' }}
-        >
-          무료로 시작하기
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+        {/* 장식 원 */}
+        <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/5 pointer-events-none" />
+        <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-white/5 pointer-events-none" />
+        <div className="relative z-10">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <div className="flex -space-x-2">
+              {['openai', 'anthropic', 'google', 'meta'].map(c => (
+                <span key={c} className="w-7 h-7 rounded-full bg-white/20 border-2 border-white/30 flex items-center justify-center">
+                  <CompanyLogo company={c} size={14} />
+                </span>
+              ))}
+            </div>
+          </div>
+          <h2 className="text-xl md:text-2xl font-black mb-1.5">어떤 AI가 나에게 맞을까?</h2>
+          <p className="text-sm text-white/80 mb-5 max-w-sm mx-auto">
+            2가지만 선택하면 최적의 AI 모델을 추천해드립니다
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              to="/recommend"
+              className="inline-flex items-center gap-2 rounded-xl px-6 py-2.5 text-sm font-bold transition-all hover:opacity-90 shadow-lg"
+              style={{ backgroundColor: '#FFFFFF', color: '#5B5FEF' }}
+            >
+              <Sparkles className="w-4 h-4" />
+              무료로 AI 찾기
+            </Link>
+            <Link
+              to="/explore/compare"
+              className="inline-flex items-center gap-2 rounded-xl px-6 py-2.5 text-sm font-semibold text-white border border-white/30 transition-all hover:bg-white/10"
+            >
+              <BarChart3 className="w-4 h-4" />
+              전체 모델 비교
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* ═══ 데이터 기준일 ═══ */}

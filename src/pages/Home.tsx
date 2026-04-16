@@ -128,10 +128,12 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
+      {/* ═══ Bento Grid: 2열 레이아웃 ═══ */}
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
 
       {/* ═══ 1. HERO ═══ */}
-      <section className="rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 md:p-10 animate-fade-in">
+      <section className="lg:col-span-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 md:p-10 animate-fade-in">
         <div className="max-w-2xl mx-auto text-center">
           {/* Badge */}
           <span
@@ -185,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* ═══ 2. TOP 3 모델 카드 (OpenRouter 랭킹) ═══ */}
-      <section className="animate-fade-in">
+      <section className="lg:col-span-3 animate-fade-in">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <h2 className="text-base font-bold text-gray-900 dark:text-white">이번주 인기 모델</h2>
@@ -231,7 +233,7 @@ export default function Home() {
       </section>
 
       {/* ═══ 3. 용도별 AI 추천 ═══ */}
-      <section className="animate-fade-in">
+      <section className="lg:col-span-2 animate-fade-in">
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-base font-bold text-gray-900 dark:text-white">용도별 AI 추천</h2>
           <Link to="/recommend" className="text-xs text-gray-500 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors">
@@ -273,7 +275,7 @@ export default function Home() {
       </section>
 
       {/* ═══ 4. 빠른 시작 ═══ */}
-      <section className="animate-fade-in">
+      <section className="lg:col-span-5 animate-fade-in">
         <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3">빠른 시작</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {QUICK_LINKS.map(link => {
@@ -296,7 +298,7 @@ export default function Home() {
       </section>
 
       {/* ═══ 4. 가격 한눈에 보기 ═══ */}
-      <section className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5 animate-fade-in">
+      <section className="lg:col-span-3 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5 animate-fade-in">
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-base font-bold text-gray-900 dark:text-white">가격 한눈에 보기</h2>
           <Link to="/pricing" className="text-xs text-gray-500 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors">
@@ -344,7 +346,7 @@ export default function Home() {
       </section>
 
       {/* ═══ 5. 최근 업데이트 ═══ */}
-      <section className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5 animate-fade-in">
+      <section className="lg:col-span-2 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5 animate-fade-in">
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-base font-bold text-gray-900 dark:text-white">최근 업데이트</h2>
           <Link to="/news" className="text-xs text-gray-500 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors">
@@ -377,7 +379,7 @@ export default function Home() {
 
       {/* ═══ 6. CTA 배너 ═══ */}
       <section
-        className="rounded-2xl p-6 md:p-8 text-center text-white animate-fade-in relative overflow-hidden"
+        className="lg:col-span-5 rounded-2xl p-6 md:p-8 text-center text-white animate-fade-in relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #5B5FEF 0%, #7C6AEF 50%, #9B8AEF 100%)' }}
       >
         {/* 장식 원 */}
@@ -416,7 +418,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      </div>
       {/* ═══ 데이터 기준일 ═══ */}
       <p className="text-[11px] text-gray-400 dark:text-gray-500 text-center">
         데이터 기준일: 2026년 4월 16일 · 모델 정보는 정기적으로 업데이트됩니다

@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer,
   BarChart, Bar, Cell,
-} from "recharts";
+} from "../../lib/safeRecharts";
 import {
   WEEKLY_RANKING, MONTHLY_RANKING, RANKING_TIMELINE, RANKING_SOURCE,
   type RankingEntry,

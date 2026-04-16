@@ -400,16 +400,27 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
             </div>
 
             <div className="flex items-center gap-2 mb-1.5">
-              {LOGO_ID_TO_PATH[event.companyId] && (
-                <div className="w-6 h-6 rounded-md overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex-shrink-0">
+              <div className="w-6 h-6 rounded-md overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex-shrink-0 flex items-center justify-center">
+                {LOGO_ID_TO_PATH[event.companyId] ? (
                   <img
                     src={LOGO_ID_TO_PATH[event.companyId]}
                     alt={event.company}
                     className="w-full h-full object-contain p-[1px]"
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
                   />
-                </div>
-              )}
+                ) : null}
+                <span
+                  className="w-full h-full items-center justify-center text-[9px] font-bold text-gray-500 dark:text-gray-400"
+                  style={{ display: LOGO_ID_TO_PATH[event.companyId] ? 'none' : 'flex' }}
+                >
+                  {event.company.charAt(0)}
+                </span>
+              </div>
               <div>
                 <span className="text-[10px] text-gray-400">{event.company}</span>
                 <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-tight">{event.model}</h3>

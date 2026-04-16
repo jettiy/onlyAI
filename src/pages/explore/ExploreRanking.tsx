@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import {
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer,
   BarChart, Bar, Cell,
@@ -156,18 +156,21 @@ export default function ExploreRanking() {
                 </linearGradient>
               ))}
             </defs>
+            {/* @ts-expect-error recharts/react18 */}
             <XAxis dataKey="week" tick={{ fontSize: 10 }} stroke="#6b7280" />
+            {/* @ts-expect-error recharts/react18 */}
             <YAxis tick={{ fontSize: 10 }} stroke="#6b7280" unit="T" />
+            {/* @ts-expect-error recharts/react18 */}
             <Tooltip content={<ChartTooltip />} />
             {WEEKLY_RANKING.slice(0, 5).map((m, i) => (
+              <Fragment key={m.model}>{/* @ts-expect-error recharts/react18 */}
               <Area
-                key={m.model}
                 type="monotone"
                 dataKey={m.model}
                 stroke={AREA_COLORS[i]}
                 fill={`url(#grad-${i})`}
                 strokeWidth={2}
-              />
+              /></Fragment>
             ))}
           </AreaChart>
         </ResponsiveContainer>
@@ -290,6 +293,7 @@ export default function ExploreRanking() {
           <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-4">📊 토큰 사용량 비교</h2>
           <ResponsiveContainer width="100%" height={350}>
             <BarChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 60 }}>
+              {/* @ts-expect-error recharts/react18 */}
               <XAxis
                 dataKey="model"
                 tick={{ fontSize: 9, fill: "#9ca3af" }}
@@ -298,7 +302,9 @@ export default function ExploreRanking() {
                 interval={0}
                 height={60}
               />
+              {/* @ts-expect-error recharts/react18 */}
               <YAxis tick={{ fontSize: 10, fill: "#9ca3af" }} unit="T" />
+              {/* @ts-expect-error recharts/react18 */}
               <Tooltip
                 contentStyle={{
                   backgroundColor: "#1f2937",
@@ -309,6 +315,7 @@ export default function ExploreRanking() {
                 }}
                 formatter={(value: number) => [`${value}T`, "토큰"]}
               />
+              {/* @ts-expect-error recharts/react18 */}
               <Bar dataKey="tokensNum" radius={[6, 6, 0, 0]} maxBarSize={40}>
                 {data.map((m, i) => (
                   <Cell

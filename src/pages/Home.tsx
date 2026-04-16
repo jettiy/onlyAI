@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
-import { models, type AIModel } from '../data/models';
-import { useCaseLabels, budgetLabels, type UseCase, type BudgetTier } from '../data/modelStrengths';
+import { models } from '../data/models';
+import { type UseCase, type BudgetTier } from '../data/modelStrengths';
 import { CompanyLogo } from '../components/CompanyLogo';
+import { WEEKLY_RANKING, RANKING_SOURCE } from '../data/rankings';
 import {
   Scale,
   Monitor,
@@ -17,8 +18,7 @@ import {
 } from 'lucide-react';
 
 /* ── 상수 ── */
-const TOP_MODEL_IDS = ['mimo-v2-pro', 'claude-sonnet-4-6', 'minimax-m2-7'];
-const TOP_MODELS: AIModel[] = TOP_MODEL_IDS.map(id => models.find(m => m.id === id)).filter(Boolean) as AIModel[];
+const TOP3_RANKING = WEEKLY_RANKING.slice(0, 3);
 
 const QUICK_LINKS = [
   { icon: Scale, label: 'AI 비교하기', desc: '모델 가격·성능 비교', to: '/explore/compare', color: 'bg-brand' },
@@ -149,52 +149,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 2. TOP 3 모델 카드 ═══ */}
+      {/* ═══ 2. TOP 3 모델 카드 (OpenRouter 랭킹) ═══ */}
       <section className="animate-fade-in">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <h2 className="text-base font-bold text-gray-900 dark:text-white">이번주 인기 모델</h2>
-            <span className="text-[11px] font-normal text-gray-400">OpenRouter 기준</span>
+            <span className="text-[11px] font-normal text-gray-400">{RANKING_SOURCE}</span>
           </div>
-          <Link to="/explore/compare" className="text-xs text-gray-500 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors">
-            전체 비교 <ArrowRight className="inline w-3 h-3" />
+          <Link to="/explore/ranking" className="text-xs text-gray-500 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors">
+            전체 랭킹 <ArrowRight className="inline w-3 h-3" />
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {TOP_MODELS.map((model, idx) => (
-            <Link
-              key={model.id}
-              to={`/explore/compare?models=${model.id}`}
+          {TOP3_RANKING.map((entry, idx) => (
+            <div
+              key={entry.model}
               className="group block rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 hover:shadow-lg hover:border-[#5B5FEF]/30 dark:hover:border-[#5B5FEF]/50 transition-all"
             >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2.5">
                   <span className="w-10 h-10 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center">
-                    <CompanyLogo company={model.company} size={28} />
+                    <CompanyLogo company={entry.company} size={28} />
                   </span>
                   <div>
-                    <p className="text-sm font-bold text-gray-900 dark:text-white">{model.name}</p>
-                    <p className="text-[11px] text-gray-400">{model.company}</p>
+                    <p className="text-sm font-bold text-gray-900 dark:text-white">{entry.model}</p>
+                    <p className="text-[11px] text-gray-400">{entry.company}</p>
                   </div>
                 </div>
                 <span className="text-2xl font-black text-gray-200 dark:text-gray-700">#{idx + 1}</span>
               </div>
               <div className="flex items-baseline gap-1 mb-2">
-                {model.inputPrice != null && model.outputPrice != null ? (
-                  <>
-                    <span className="text-lg font-black text-gray-900 dark:text-white">
-                      ${model.inputPrice}
-                    </span>
-                    <span className="text-[11px] text-gray-400">/ ${model.outputPrice} per 1M tok</span>
-                  </>
-                ) : (
-                  <span className="text-sm font-semibold text-emerald-500">무료</span>
-                )}
+                <span className="text-lg font-black text-gray-900 dark:text-white">
+                  {entry.tokens}
+                </span>
+                <span className="text-[11px] text-gray-400">토큰</span>
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-1">
-                {model.strengths?.[0] ?? model.description.slice(0, 40)}
-              </p>
-            </Link>
+              <div className="flex items-center gap-2">
+                <span className={`text-xs font-bold ${entry.change === 'NEW' ? 'text-emerald-500' : entry.change.startsWith('+') ? 'text-red-500' : entry.change.startsWith('-') ? 'text-blue-500' : 'text-gray-400'}`}>
+                  {entry.change}
+                </span>
+                <span className="text-[11px] text-gray-400">전 주 대비</span>
+              </div>
+            </div>
           ))}
         </div>
       </section>

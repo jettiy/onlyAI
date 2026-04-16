@@ -1,9 +1,18 @@
 import { useState } from "react";
-import { WEEKLY_RANKING, MONTHLY_RANKING, RANKING_SOURCE, type RankingEntry } from "../../data/rankings";
+import {
+  AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer,
+  BarChart, Bar, Cell,
+} from "recharts";
+import {
+  WEEKLY_RANKING, MONTHLY_RANKING, RANKING_TIMELINE, RANKING_SOURCE,
+  type RankingEntry,
+} from "../../data/rankings";
 import { CompanyLogo } from "../../components/CompanyLogo";
 
 type Period = "weekly" | "monthly";
+type View = "chart" | "list";
 
+/* ── helpers ── */
 function getChangeColor(change: string) {
   if (change === "NEW") return "text-emerald-500";
   const val = parseInt(change, 10);
@@ -20,8 +29,58 @@ function getChangeBg(change: string) {
   return "bg-gray-100 dark:bg-gray-800";
 }
 
+function getCategoryLabel(cat: string) {
+  switch (cat) {
+    case "flagship": return "🚀 플래그십";
+    case "value": return "💎 가성비";
+    case "free": return "🆓 무료";
+    default: return cat;
+  }
+}
+
+const AREA_COLORS = ["#f59e0b", "#fb923c", "#8b5cf6", "#6366f1", "#10b981"];
+
+/* ── Custom tooltip ── */
+function ChartTooltip({ active, payload, label }: any) {
+  if (!active || !payload) return null;
+  return (
+    <div className="bg-gray-900 text-white rounded-lg px-3 py-2 text-xs shadow-xl border border-gray-700">
+      <p className="font-bold mb-1">{label}</p>
+      {payload.map((p: any, i: number) => (
+        <p key={i} style={{ color: p.color }} className="flex justify-between gap-4">
+          <span>{p.name}</span>
+          <span className="font-mono">{p.value.toFixed(2)}T</span>
+        </p>
+      ))}
+    </div>
+  );
+}
+
+/* ── Share Donut (CSS only) ── */
+function ShareRing({ share, color }: { share: number; color: string }) {
+  const pct = Math.min(share, 100);
+  return (
+    <div className="relative w-10 h-10">
+      <svg viewBox="0 0 36 36" className="w-10 h-10 -rotate-90">
+        <circle cx="18" cy="18" r="15.9" fill="none" className="stroke-gray-200 dark:stroke-gray-700" strokeWidth="3" />
+        <circle cx="18" cy="18" r="15.9" fill="none" stroke="currentColor"
+          className={color}
+          strokeWidth="3"
+          strokeDasharray={`${pct} ${100 - pct}`}
+          strokeLinecap="round"
+        />
+      </svg>
+      <span className="absolute inset-0 flex items-center justify-center text-[9px] font-bold text-gray-700 dark:text-gray-300">
+        {share}%
+      </span>
+    </div>
+  );
+}
+
+/* ── Main Component ── */
 export default function ExploreRanking() {
   const [period, setPeriod] = useState<Period>("weekly");
+  const [view, setView] = useState<View>("list");
 
   const data: RankingEntry[] = period === "weekly" ? WEEKLY_RANKING : MONTHLY_RANKING;
   const topModel = data[0];
@@ -29,32 +88,93 @@ export default function ExploreRanking() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🏆 AI 모델 인기 랭킹</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          OpenRouter 토큰 사용량 기준 — 가장 많이 쓰이는 AI 모델 순위예요.
-        </p>
+      {/* ── 헤더 ── */}
+      <div className="flex items-start justify-between gap-4 flex-wrap">
+        <div>
+          <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">
+            🏆 AI 모델 인기 랭킹
+          </h1>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            OpenRouter 토큰 사용량 기준 — 가장 많이 쓰이는 AI 모델 순위예요.
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          {/* 기간 토글 */}
+          <div className="flex bg-gray-100 dark:bg-gray-800 rounded-lg p-0.5">
+            {(["weekly", "monthly"] as const).map((p) => (
+              <button
+                key={p}
+                onClick={() => setPeriod(p)}
+                className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                  period === p
+                    ? "bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm"
+                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                }`}
+              >
+                {p === "weekly" ? "이번 주" : "이번 달"}
+              </button>
+            ))}
+          </div>
+          {/* 뷰 토글 */}
+          <div className="flex bg-gray-100 dark:bg-gray-800 rounded-lg p-0.5">
+            <button
+              onClick={() => setView("list")}
+              className={`px-2.5 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                view === "list"
+                  ? "bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+              title="리스트 뷰"
+            >
+              ☰
+            </button>
+            <button
+              onClick={() => setView("chart")}
+              className={`px-2.5 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                view === "chart"
+                  ? "bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+              title="차트 뷰"
+            >
+              📊
+            </button>
+          </div>
+        </div>
       </div>
 
-      {/* 기간 탭 */}
-      <div className="flex gap-2">
-        {(["weekly", "monthly"] as const).map((p) => (
-          <button
-            key={p}
-            onClick={() => setPeriod(p)}
-            className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-              period === p
-                ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
-                : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
-            }`}
-          >
-            {p === "weekly" ? "이번 주" : "이번 달"}
-          </button>
-        ))}
+      {/* ── 트렌드 Area Chart ── */}
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
+        <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-3">📈 토큰 사용량 추이</h2>
+        <ResponsiveContainer width="100%" height={200}>
+          <AreaChart data={RANKING_TIMELINE} margin={{ top: 5, right: 5, left: -20, bottom: 0 }}>
+            <defs>
+              {WEEKLY_RANKING.slice(0, 5).map((m, i) => (
+                <linearGradient key={m.model} id={`grad-${i}`} x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor={AREA_COLORS[i]} stopOpacity={0.3} />
+                  <stop offset="95%" stopColor={AREA_COLORS[i]} stopOpacity={0} />
+                </linearGradient>
+              ))}
+            </defs>
+            <XAxis dataKey="week" tick={{ fontSize: 10 }} stroke="#6b7280" />
+            <YAxis tick={{ fontSize: 10 }} stroke="#6b7280" unit="T" />
+            <Tooltip content={<ChartTooltip />} />
+            {WEEKLY_RANKING.slice(0, 5).map((m, i) => (
+              <Area
+                key={m.model}
+                type="monotone"
+                dataKey={m.model}
+                stroke={AREA_COLORS[i]}
+                fill={`url(#grad-${i})`}
+                strokeWidth={2}
+              />
+            ))}
+          </AreaChart>
+        </ResponsiveContainer>
       </div>
 
-      {/* Top 3 Podium */}
-      {topModel && (
+      {/* ── Top 3 Podium ── */}
+      {topModel && view === "list" && (
         <div className="grid grid-cols-3 gap-3">
           {[data[1], data[0], data[2]].filter(Boolean).map((m, idx) => {
             const medals = ["🥈", "🥇", "🥉"];
@@ -62,7 +182,7 @@ export default function ExploreRanking() {
             return (
               <div
                 key={m.model}
-                className={`bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-4 text-center ${sizes[idx]}`}
+                className={`bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-4 text-center transition-transform hover:scale-[1.02] ${sizes[idx]}`}
               >
                 <div className="text-2xl mb-1">{medals[idx]}</div>
                 <div className="flex items-center justify-center gap-1.5 mb-1">
@@ -74,70 +194,141 @@ export default function ExploreRanking() {
                   {m.tokens}
                 </div>
                 <div className="text-[9px] text-gray-400">토큰</div>
+                <div className="mt-2">
+                  <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${getChangeColor(m.change)} ${getChangeBg(m.change)}`}>
+                    {m.change}
+                  </span>
+                </div>
               </div>
             );
           })}
         </div>
       )}
 
-      {/* Ranking List */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 space-y-3">
-        <div className="flex items-center gap-3 mb-4 pb-3 border-b border-gray-100 dark:border-gray-800">
-          <div className="w-5 text-xs font-semibold text-gray-400 text-center">순위</div>
-          <div className="w-36 text-xs font-semibold text-gray-400">모델</div>
-          <div className="flex-1 text-xs font-semibold text-gray-400">토큰 사용량</div>
-          <div className="w-16 text-xs font-semibold text-gray-400 text-right">토큰</div>
-          <div className="w-14 text-xs font-semibold text-gray-400 text-center">변동</div>
-        </div>
+      {/* ── 리스트 뷰 ── */}
+      {view === "list" && (
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+          {/* 테이블 헤더 */}
+          <div className="flex items-center gap-3 px-6 py-3 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-800">
+            <div className="w-6 text-[10px] font-semibold text-gray-400 text-center">#</div>
+            <div className="w-40 text-[10px] font-semibold text-gray-400">모델</div>
+            <div className="flex-1 text-[10px] font-semibold text-gray-400">사용량</div>
+            <div className="w-10 text-[10px] font-semibold text-gray-400 text-center">점유율</div>
+            <div className="w-14 text-[10px] font-semibold text-gray-400 text-right">토큰</div>
+            <div className="w-12 text-[10px] font-semibold text-gray-400 text-center">변동</div>
+          </div>
 
-        {data.map((m) => {
-          const pct = (m.tokensNum / maxTokens) * 100;
-          const barColor =
-            m.rank <= 3
-              ? "from-amber-400 to-orange-500"
-              : m.rank <= 6
-              ? "from-brand-400 to-violet-500"
-              : "from-gray-400 to-gray-500";
-          return (
-            <div key={m.model} className="flex items-center gap-3 group">
+          {/* 행 */}
+          {data.map((m) => {
+            const pct = (m.tokensNum / maxTokens) * 100;
+            return (
               <div
-                className={`w-5 text-xs text-center shrink-0 font-bold ${
-                  m.rank <= 3 ? "text-amber-500" : "text-gray-400"
-                }`}
+                key={m.model}
+                className="flex items-center gap-3 px-6 py-3 border-b border-gray-100 dark:border-gray-800/50 hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors group"
               >
-                {m.rank <= 3 ? ["🥇", "🥈", "🥉"][m.rank - 1] : m.rank}
-              </div>
-              <div className="w-36 shrink-0 flex items-center gap-2">
-                <CompanyLogo company={m.company} size={18} />
-                <div>
-                  <div className="text-xs font-bold text-gray-900 dark:text-white truncate group-hover:text-brand-500 transition-colors">
-                    {m.model}
+                {/* 순위 */}
+                <div className="w-6 text-center shrink-0">
+                  {m.rank <= 3 ? (
+                    <span className="text-sm">{["🥇", "🥈", "🥉"][m.rank - 1]}</span>
+                  ) : (
+                    <span className="text-xs font-bold text-gray-400">{m.rank}</span>
+                  )}
+                </div>
+
+                {/* 모델명 + 회사 */}
+                <div className="w-40 shrink-0 flex items-center gap-2">
+                  <CompanyLogo company={m.company} size={20} />
+                  <div className="min-w-0">
+                    <div className="text-xs font-bold text-gray-900 dark:text-white truncate group-hover:text-brand-500 transition-colors">
+                      {m.model}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="text-[10px] text-gray-400">{m.company}</span>
+                      <span className="text-[8px] px-1 py-0.5 rounded bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400">
+                        {getCategoryLabel(m.category)}
+                      </span>
+                    </div>
                   </div>
-                  <div className="text-[10px] text-gray-400">{m.company}</div>
+                </div>
+
+                {/* 토큰 바 */}
+                <div className="flex-1 relative h-7 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+                  <div
+                    className={`h-full rounded-lg bg-gradient-to-r ${m.color} transition-all duration-700 ease-out`}
+                    style={{ width: `${pct}%` }}
+                  />
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[9px] font-mono text-gray-500 dark:text-gray-400">
+                    {m.share}%
+                  </span>
+                </div>
+
+                {/* 점유율 도넛 */}
+                <div className="w-10 shrink-0 flex justify-center">
+                  <ShareRing share={m.share} color={m.rank <= 3 ? "text-amber-500" : m.category === "free" ? "text-emerald-500" : "text-violet-500"} />
+                </div>
+
+                {/* 토큰 수 */}
+                <div className="w-14 text-right text-xs font-black text-gray-900 dark:text-white shrink-0 font-mono">
+                  {m.tokens}
+                </div>
+
+                {/* 변동 */}
+                <div className="w-12 text-center shrink-0">
+                  <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${getChangeColor(m.change)} ${getChangeBg(m.change)}`}>
+                    {m.change}
+                  </span>
                 </div>
               </div>
-              <div className="flex-1 relative h-6 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                <div
-                  className={`h-full rounded-full bg-gradient-to-r ${barColor} transition-all duration-500`}
-                  style={{ width: `${pct}%` }}
-                />
-              </div>
-              <div className="w-16 text-right text-sm font-black text-gray-900 dark:text-white shrink-0 font-mono">
-                {m.tokens}
-              </div>
-              <div className="w-14 text-center shrink-0">
-                <span
-                  className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${getChangeColor(m.change)} ${getChangeBg(m.change)}`}
-                >
-                  {m.change}
-                </span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
 
-      {/* 출처 */}
+      {/* ── 차트 뷰 ── */}
+      {view === "chart" && (
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
+          <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-4">📊 토큰 사용량 비교</h2>
+          <ResponsiveContainer width="100%" height={350}>
+            <BarChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 60 }}>
+              <XAxis
+                dataKey="model"
+                tick={{ fontSize: 9, fill: "#9ca3af" }}
+                angle={-35}
+                textAnchor="end"
+                interval={0}
+                height={60}
+              />
+              <YAxis tick={{ fontSize: 10, fill: "#9ca3af" }} unit="T" />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "#1f2937",
+                  border: "1px solid #374151",
+                  borderRadius: "8px",
+                  color: "#fff",
+                  fontSize: "12px",
+                }}
+                formatter={(value: number) => [`${value}T`, "토큰"]}
+              />
+              <Bar dataKey="tokensNum" radius={[6, 6, 0, 0]} maxBarSize={40}>
+                {data.map((m, i) => (
+                  <Cell
+                    key={i}
+                    className={`fill-current ${
+                      m.rank === 1 ? "text-amber-400" :
+                      m.rank === 2 ? "text-orange-400" :
+                      m.rank === 3 ? "text-yellow-500" :
+                      m.category === "free" ? "text-emerald-400" :
+                      "text-violet-400"
+                    }`}
+                  />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+
+      {/* ── 출처 ── */}
       <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">
         <p className="text-xs font-semibold text-brand-800 dark:text-brand-300 mb-1">ℹ️ 랭킹 출처</p>
         <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">

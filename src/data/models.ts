@@ -535,8 +535,8 @@ export const models: AIModel[] = [
     useCases: ['실시간 뉴스', 'SNS 분석', '트렌드 파악'],
     sourceUrl: 'https://docs.x.ai/developers/models',
     url: 'https://x.ai',
-    updatedAt: '2026-04-08',
-    koreanBilling: true,
+    updatedAt: '2026-04-16',
+    koreanBilling: null,
   },
   {
     id: 'grok-3',
@@ -551,8 +551,8 @@ export const models: AIModel[] = [
     useCases: ['기업 자동화', '데이터 추출', '코딩'],
     openRouterSlug: 'x-ai/grok-3-beta',
     sourceUrl: 'https://docs.x.ai/developers/models',
-    updatedAt: '2026-04-08',
-    koreanBilling: true,
+    updatedAt: '2026-04-16',
+    koreanBilling: null,
   },
 
   // ===== 🇨🇳 중국 =====
@@ -950,8 +950,8 @@ export const models: AIModel[] = [
     useCases: ['기업 RAG', '지식베이스 검색', '문서 Q&A'],
     openRouterSlug: 'cohere/command-r-plus',
     sourceUrl: 'https://cohere.com/pricing',
-    updatedAt: '2026-03-19',
-    koreanBilling: true,
+    updatedAt: '2026-04-16',
+    koreanBilling: null,
   },
   {
     id: 'command-a',
@@ -966,8 +966,8 @@ export const models: AIModel[] = [
     useCases: ['기업 RAG', '지식베이스 검색', '문서 Q&A'],
     openRouterSlug: 'cohere/command-a',
     sourceUrl: 'https://cohere.com/pricing',
-    updatedAt: '2026-03-19',
-    koreanBilling: true,
+    updatedAt: '2026-04-16',
+    koreanBilling: null,
   },
 ];
 

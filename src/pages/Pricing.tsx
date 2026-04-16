@@ -57,9 +57,9 @@ const FALLBACK_PRICES: PriceRow[] = [
   { model: 'Gemini 2.5 Flash-Lite', provider: 'Google', input: 0.10, output: 0.40, cacheRead: 0.025, cacheWrite: 0.10, context: '1M', note: '최저가', koreanBilling: true,
   },
   // ── xAI ──
-  { model: 'Grok 4.20', provider: 'xAI', input: 2.0, output: 6.0, cacheRead: 0.20, cacheWrite: 2.00, context: '2M', note: '실시간', isNew: true, koreanBilling: true,
+  { model: 'Grok 4.20', provider: 'xAI', input: 2.0, output: 6.0, cacheRead: 0.20, cacheWrite: 2.00, context: '2M', note: '실시간', isNew: true, koreanBilling: null,
   },
-  { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '131K', note: '검증됨', koreanBilling: true,
+  { model: 'Grok 3', provider: 'xAI', input: 3.0, output: 15.0, cacheRead: 0.30, cacheWrite: 3.00, context: '131K', note: '검증됨', koreanBilling: null,
   },
   // ── Meta ──
   { model: 'Llama 4 Maverick', provider: 'Meta', input: 0.27, output: 0.85, cacheRead: 0.027, cacheWrite: 0.27, context: '1M', note: '오픈소스', koreanBilling: true,
@@ -94,9 +94,9 @@ const FALLBACK_PRICES: PriceRow[] = [
   },
   { model: 'Mistral Small 3', provider: 'Mistral', input: 0.10, output: 0.30, cacheRead: 0.01, cacheWrite: 0.10, context: '32K', note: '경량', koreanBilling: true,
   },
-  { model: 'Command R+', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '128K', note: 'RAG', koreanBilling: true,
+  { model: 'Command R+', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '128K', note: 'RAG', koreanBilling: null,
   },
-  { model: 'Command A', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '256K', note: 'RAG', koreanBilling: true,
+  { model: 'Command A', provider: 'Cohere', input: 2.50, output: 10.0, cacheRead: 0.25, cacheWrite: 2.50, context: '256K', note: 'RAG', koreanBilling: null,
   },
 ];
 

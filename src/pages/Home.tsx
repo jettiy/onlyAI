@@ -39,7 +39,7 @@ const DUMMY_NEWS = [
 
 const CAT_COLORS: Record<string, string> = {
   '모델 출시': 'text-violet-500',
-  '연구·논문': 'text-blue-500',
+  '연구·논문': 'text-brand-500',
   '오픈소스': 'text-emerald-500',
   '인프라·하드웨어': 'text-slate-400',
 };

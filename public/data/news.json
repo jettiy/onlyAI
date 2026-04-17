@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-17T07:59:25.890Z",
-  "updatedAtKST": "2026. 4. 17. PM 4:59:25",
+  "updatedAt": "2026-04-17T13:45:59.292Z",
+  "updatedAtKST": "2026. 4. 17. PM 10:45:59",
   "stats": {
     "aitimes": 20,
-    "36kr": 14,
+    "36kr": 12,
     "hf": 20,
     "tc": 17,
-    "github": 10,
-    "total": 67
+    "github": 7,
+    "total": 64
   },
   "news": [
     {
@@ -251,7 +251,19 @@
       "lang": "ko"
     },
     {
-      "id": "hf-1-https://huggingface.co/blog/train-multimodal-sentence-transformers",
+      "id": "hf-0-https://huggingface.co/blog/ecom-rlve",
+      "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
+      "summary": "",
+      "date": "2026-04-16",
+      "source": "Hugging Face",
+      "sourceLang": "en",
+      "sourceFlag": "🤗",
+      "url": "https://huggingface.co/blog/ecom-rlve",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "hf-2-https://huggingface.co/blog/train-multimodal-sentence-transformers",
       "title": "Training and Finetuning Multimodal Embedding & Reranker Models with Sentence Transformers",
       "summary": "",
       "date": "2026-04-16",
@@ -431,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-2-https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+      "id": "hf-3-https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
       "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
       "summary": "",
       "date": "2026-04-15",
@@ -443,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-3-https://huggingface.co/blog/Hcompany/holotab",
+      "id": "hf-4-https://huggingface.co/blog/Hcompany/holotab",
       "title": "Meet HoloTab by HCompany. Your AI browser companion.",
       "summary": "",
       "date": "2026-04-15",
@@ -491,7 +503,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-5-https://huggingface.co/blog/multimodal-sentence-transformers",
+      "id": "hf-6-https://huggingface.co/blog/multimodal-sentence-transformers",
       "title": "Multimodal Embedding & Reranker Models with Sentence Transformers",
       "summary": "",
       "date": "2026-04-09",
@@ -503,7 +515,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-6-https://huggingface.co/blog/safetensors-joins-pytorch-foundation",
+      "id": "hf-7-https://huggingface.co/blog/safetensors-joins-pytorch-foundation",
       "title": "Safetensors is Joining the PyTorch Foundation",
       "summary": "",
       "date": "2026-04-08",
@@ -515,7 +527,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-7-https://huggingface.co/blog/gemma4",
+      "id": "hf-8-https://huggingface.co/blog/gemma4",
       "title": "Welcome Gemma 4: Frontier multimodal intelligence on device",
       "summary": "",
       "date": "2026-04-02",
@@ -527,7 +539,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-8-https://huggingface.co/blog/tiiuae/falcon-perception",
+      "id": "hf-9-https://huggingface.co/blog/tiiuae/falcon-perception",
       "title": "Falcon Perception",
       "summary": "",
       "date": "2026-04-01",
@@ -539,7 +551,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-10-https://huggingface.co/blog/ibm-granite/granite-4-vision",
+      "id": "hf-11-https://huggingface.co/blog/ibm-granite/granite-4-vision",
       "title": "Granite 4.0 3B Vision: Compact Multimodal Intelligence for Enterprise Documents",
       "summary": "",
       "date": "2026-03-31",
@@ -551,7 +563,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-11-https://huggingface.co/blog/OpenMed/training-mrna-models-25-species",
+      "id": "hf-12-https://huggingface.co/blog/OpenMed/training-mrna-models-25-species",
       "title": "Training mRNA Language Models Across 25 Species for $165",
       "summary": "",
       "date": "2026-03-31",
@@ -563,7 +575,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-12-https://huggingface.co/blog/trl-v1",
+      "id": "hf-13-https://huggingface.co/blog/trl-v1",
       "title": "TRL v1.0: Post-Training Library Built to Move with the Field",
       "summary": "",
       "date": "2026-03-31",
@@ -575,7 +587,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-14-https://huggingface.co/blog/ServiceNow-AI/eva",
+      "id": "hf-15-https://huggingface.co/blog/ServiceNow-AI/eva",
       "title": "A New Framework for Evaluating Voice Agents (EVA)",
       "summary": "",
       "date": "2026-03-24",
@@ -587,7 +599,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-15-https://huggingface.co/blog/nvidia/domain-specific-embedding-finetune",
+      "id": "hf-16-https://huggingface.co/blog/nvidia/domain-specific-embedding-finetune",
       "title": "Build a Domain-Specific Embedding Model in Under a Day",
       "summary": "",
       "date": "2026-03-20",
@@ -599,7 +611,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-16-https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026",
+      "id": "hf-17-https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026",
       "title": "State of Open Source on Hugging Face: Spring 2026",
       "summary": "",
       "date": "2026-03-17",
@@ -611,7 +623,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-17-https://huggingface.co/blog/Hcompany/holotron-12b",
+      "id": "hf-18-https://huggingface.co/blog/Hcompany/holotron-12b",
       "title": "Holotron-12B - High Throughput Computer Use Agent",
       "summary": "",
       "date": "2026-03-17",
@@ -623,7 +635,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-18-https://huggingface.co/blog/storage-buckets",
+      "id": "hf-19-https://huggingface.co/blog/storage-buckets",
       "title": "Introducing Storage Buckets on the Hugging Face Hub",
       "summary": "",
       "date": "2026-03-10",
@@ -635,7 +647,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-20-https://huggingface.co/blog/ulysses-sp",
+      "id": "hf-21-https://huggingface.co/blog/ulysses-sp",
       "title": "Ulysses Sequence Parallelism: Training with Million-Token Contexts",
       "summary": "",
       "date": "2026-03-09",
@@ -647,7 +659,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-22-https://huggingface.co/blog/nxp/bringing-robotics-ai-to-embedded-platforms",
+      "id": "hf-23-https://huggingface.co/blog/nxp/bringing-robotics-ai-to-embedded-platforms",
       "title": "Bringing Robotics AI to Embedded Platforms: Dataset Recording, VLA Fine‑Tuning, and On‑Device Optimizations",
       "summary": "",
       "date": "2026-03-05",
@@ -659,7 +671,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-23-https://huggingface.co/blog/modular-diffusers",
+      "id": "hf-24-https://huggingface.co/blog/modular-diffusers",
       "title": "Introducing Modular Diffusers - Composable Building Blocks for Diffusion Pipelines",
       "summary": "",
       "date": "2026-03-05",
@@ -671,7 +683,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-24-https://huggingface.co/blog/Photoroom/prx-part3",
+      "id": "hf-25-https://huggingface.co/blog/Photoroom/prx-part3",
       "title": "PRX Part 3 — Training a Text-to-Image Model in 24h!",
       "summary": "",
       "date": "2026-03-03",
@@ -680,18 +692,6 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/Photoroom/prx-part3",
       "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-25-https://huggingface.co/blog/moe-transformers",
-      "title": "Mixture of Experts (MoEs) in Transformers",
-      "summary": "",
-      "date": "2026-02-26",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/moe-transformers",
-      "category": "연구·논문",
       "lang": "en"
     }
   ],
@@ -708,7 +708,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 95093,
+      "stars": 95945,
       "language": "Python",
       "tags": [
         "ai",
@@ -719,177 +719,112 @@
       ]
     },
     {
-      "id": "gh-1201656210",
-      "title": "MemPalace/mempalace — The best-benchmarked open-source AI memory system. And it's free.",
-      "summary": "The best-benchmarked open-source AI memory system. And it's free.",
+      "id": "gh-552661142",
+      "title": "langchain-ai/langchain — The agent engineering platform",
+      "summary": "The agent engineering platform",
       "date": "2026-04-17",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/MemPalace/mempalace",
-      "category": "오픈소스",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 47261,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "chromadb",
-        "llm",
-        "mcp",
-        "memory"
-      ]
-    },
-    {
-      "id": "gh-1033778670",
-      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
-      "summary": "Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
-      "date": "2026-04-17",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/iOfficeAI/AionUi",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 22044,
-      "language": "TypeScript",
-      "tags": [
-        "acp",
-        "ai",
-        "ai-agent",
-        "chat",
-        "chatbot"
-      ]
-    },
-    {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
-      "date": "2026-04-17",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
+      "url": "https://github.com/langchain-ai/langchain",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 138081,
-      "language": "TypeScript",
+      "stars": 133862,
+      "language": "Python",
+      "tags": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-730534580",
+      "title": "infiniflow/ragflow — RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+      "summary": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+      "date": "2026-04-17",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/infiniflow/ragflow",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 78351,
+      "language": "Python",
       "tags": [
         "agent",
+        "agentic",
         "agentic-ai",
-        "agentic-framework",
         "agentic-workflow",
         "ai"
       ]
     },
     {
-      "id": "gh-522158088",
-      "title": "zhayujie/CowAgent — CowAgent (chatgpt-on-wechat) 是基于大模型的超级AI助理，能主动思考和任务规划、访问操作系统和外部资源、创造和执行Skills、通过长期记忆和知识库不断成长，比OpenClaw更轻量和便捷。同时支持微信、飞书、钉钉、企微、QQ、公众号、网页等接入，可选择OpenAI/Claude/Gemini/DeepSeek/ Qwen/GLM/Kimi/LinkAI，能处理文本、语音、图片和文件，可快速搭建个人AI助理和企业数字员工。",
-      "summary": "CowAgent (chatgpt-on-wechat) 是基于大模型的超级AI助理，能主动思考和任务规划、访问操作系统和外部资源、创造和执行Skills、通过长期记忆和知识库不断成长，比OpenClaw更轻量和便捷。同时支持微信、飞书、钉钉、企微、QQ、公众号、网页等接入，可选择OpenAI/Claude/Gemini/DeepSeek/ Qwen/GLM/Kimi/LinkAI，能处理文本、语音、图片和文件，可快速搭建个人AI助理和企业数字员工。",
+      "id": "gh-1131513930",
+      "title": "ZhuLinsen/daily_stock_analysis — LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
+      "summary": "LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
       "date": "2026-04-17",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/zhayujie/CowAgent",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 43372,
+      "stars": 30263,
       "language": "Python",
       "tags": [
+        "agent",
         "ai",
-        "ai-agent",
-        "chatgpt-on-wechat",
-        "claude",
-        "deepseek"
+        "aigc",
+        "gemini",
+        "llm"
       ]
     },
     {
-      "id": "gh-684031003",
-      "title": "dataelement/bisheng — BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent, Unified model management, Evaluation, SFT, Dataset Management, Enterprise-level System Management, Observability and more.",
-      "summary": "BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent, Unified model management, Evaluation, SFT, Dataset Management, Enterprise-level System Management, Observability and more.",
+      "id": "gh-73964895",
+      "title": "botpress/botpress — The open-source hub to build & deploy GPT/LLM Agents ⚡️",
+      "summary": "The open-source hub to build & deploy GPT/LLM Agents ⚡️",
       "date": "2026-04-17",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/dataelement/bisheng",
+      "url": "https://github.com/botpress/botpress",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 11313,
+      "stars": 14639,
       "language": "TypeScript",
       "tags": [
         "agent",
         "ai",
+        "botpress",
         "chatbot",
-        "enterprise",
-        "finetune"
-      ]
-    },
-    {
-      "id": "gh-1123338559",
-      "title": "vercel-labs/open-agents — An open source template for building cloud agents.",
-      "summary": "An open source template for building cloud agents.",
-      "date": "2026-04-17",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/vercel-labs/open-agents",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3389,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agents",
-        "ai",
-        "background-agents"
-      ]
-    },
-    {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "summary": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "date": "2026-04-17",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 75299,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-collaboration",
-        "agent-harness",
-        "ai",
         "chatgpt"
       ]
     },
     {
-      "id": "gh-1020144870",
-      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
       "date": "2026-04-17",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/archestra-ai/archestra",
-      "category": "연구·논문",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 3584,
+      "stars": 30286,
       "language": "TypeScript",
       "tags": [
-        "a2a",
-        "a2a-mcp",
-        "acp",
         "agent",
+        "agent-native",
+        "agentic-ai",
+        "agents",
         "ai"
       ]
     },
@@ -905,7 +840,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 2735,
+      "stars": 2756,
       "language": "TypeScript",
       "tags": [
         "agent",

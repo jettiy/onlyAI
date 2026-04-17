@@ -42,3 +42,18 @@ export const ResponsiveContainer: React.FC<AnyProps> = (props) =>
 
 export const Cell: React.FC<AnyProps> = (props) =>
   React.createElement(Recharts.Cell as any, props);
+
+export const ScatterChart: React.FC<AnyProps> = (props) =>
+  React.createElement(Recharts.ScatterChart as any, props);
+
+export const Scatter: React.FC<AnyProps> = (props) =>
+  React.createElement(Recharts.Scatter as any, props);
+
+export const CartesianGrid: React.FC<AnyProps> = (props) =>
+  React.createElement(Recharts.CartesianGrid as any, props);
+
+export const Legend: React.FC<AnyProps> = (props) =>
+  React.createElement(Recharts.Legend as any, props);
+
+export const ZAxis: React.FC<AnyProps> = (props) =>
+  React.createElement(Recharts.ZAxis as any, props);

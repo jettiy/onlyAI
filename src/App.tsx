@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import { useSEO } from "./hooks/useSEO";
 
 // Lazy-loaded routes for code splitting
 import { lazy, Suspense } from "react";
@@ -34,25 +35,11 @@ const VideoCompare = lazy(() => import("./pages/video/VideoCompare").then(m => (
 const ImageCompare = lazy(() => import("./pages/image/ImageCompare").then(m => ({ default: m.default })));
 const Recommend = lazy(() => import("./pages/Recommend").then(m => ({ default: m.default })));
 const PcCheck = lazy(() => import("./pages/PcCheck").then(m => ({ default: m.default })));
+const NotFound = lazy(() => import("./pages/NotFound").then(m => ({ default: m.default })));
 
-
-function SkeletonRow() {
-  return (
-    <div className="space-y-6 animate-pulse max-w-4xl mx-auto">
-      <div className="h-48 rounded-2xl skeleton" />
-      <div className="grid grid-cols-3 gap-3">
-        <div className="h-40 rounded-2xl skeleton" />
-        <div className="h-40 rounded-2xl skeleton" />
-        <div className="h-40 rounded-2xl skeleton" />
-      </div>
-      <div className="h-60 rounded-2xl skeleton" />
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-        <div className="h-28 rounded-2xl skeleton" />
-        <div className="h-28 rounded-2xl skeleton" />
-        <div className="h-28 rounded-2xl skeleton" />
-      </div>
-    </div>
-  );
+function SEOHandler() {
+  useSEO();
+  return null;
 }
 
 function PageLoader() {
@@ -69,6 +56,7 @@ function PageLoader() {
 export default function App() {
   return (
     <BrowserRouter>
+      <SEOHandler />
       <Layout>
         <Suspense fallback={<PageLoader />}>
           <Routes>
@@ -103,7 +91,7 @@ export default function App() {
             <Route path="/learn/glossary" element={<LearnGlossary />} />
             <Route path="/learn/simulator" element={<LearnSimulator />} />
             <Route path="/news" element={<NewsBriefing />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </Layout>

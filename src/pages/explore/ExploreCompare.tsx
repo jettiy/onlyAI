@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { models } from '../../data/models';
 import { logoIdToPath } from '../../lib/logoUtils';
 
@@ -175,7 +175,9 @@ function ModelSelect({
 
 /* ── 메인 컴포넌트 ── */
 export default function ExploreCompare() {
-  const [tab, setTab] = useState<'price' | 'bench' | 'vs'>('price');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialTab = searchParams.get('tab') === 'bench' ? 'bench' as const : searchParams.get('tab') === 'vs' ? 'vs' as const : 'price' as const;
+  const [tab, setTab] = useState<'price' | 'bench' | 'vs'>(initialTab);
   const [selectA, setSelectA] = useState('');
   const [selectB, setSelectB] = useState('');
   const [useCaseFilter, setUseCaseFilter] = useState('all');

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useNewsRSS, categoryColor } from "../hooks/useNewsRSS";
 
 type ViewTab = 'briefing' | 'sources';
@@ -22,6 +22,7 @@ export default function NewsBriefing() {
   const [tab, setTab] = useState<ViewTab>('briefing');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sourceFilter, setSourceFilter] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   // All unique categories and sources
   const categories = Array.from(new Set(news.map(n => n.category))).sort();
@@ -34,11 +35,12 @@ export default function NewsBriefing() {
     sourceCount[src] = (sourceCount[src] || 0) + 1;
   }
 
-  // Filter news by source + category
+  // Filter news by source + category + search
   const filtered = news.filter(n => {
     const matchCat = categoryFilter === 'all' || n.category === categoryFilter;
     const matchSrc = sourceFilter === 'all' || sourceFilter === 'github' || n.source === sourceFilter;
-    return matchCat && matchSrc;
+    const matchSearch = searchQuery === '' || (n.titleKo || n.title).toLowerCase().includes(searchQuery.toLowerCase());
+    return matchCat && matchSrc && matchSearch;
   });
 
   const today = new Date().toISOString().slice(0, 10);
@@ -77,6 +79,17 @@ export default function NewsBriefing() {
             </span>
           )}
         </p>
+      </div>
+
+      {/* Search Bar */}
+      <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-2">
+        <input
+            type="text"
+            placeholder="뉴스 제목 검색..."
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            className="w-full bg-transparent p-2 text-sm text-gray-900 dark:text-white focus:outline-none"
+        />
       </div>
 
       {/* Stats bar */}

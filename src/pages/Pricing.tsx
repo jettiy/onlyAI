@@ -264,6 +264,44 @@ export default function Pricing() {
         ))}
       </div>
 
+      {/* Z.AI Coding Plan */}
+      <div className="bg-gradient-to-br from-violet-50 to-indigo-50 dark:from-violet-950/30 dark:to-indigo-950/30 rounded-2xl border border-violet-200 dark:border-violet-800 p-5">
+        <div className="flex items-center gap-2 mb-1">
+          <span className="text-lg">💡</span>
+          <h2 className="text-base font-bold text-gray-900 dark:text-white">더 저렴하게 AI를 쓰는 방법</h2>
+        </div>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Z.AI Coding Plan — 한 가정 요금제처럼 AI를 무제한으로. Claude Code, Cline, OpenClaw 등 지원.</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b border-violet-200 dark:border-violet-700">
+                <th className="text-left px-3 py-2 font-semibold text-gray-600 dark:text-gray-300">플랜</th>
+                <th className="text-right px-3 py-2 font-semibold text-gray-600 dark:text-gray-300">월 가격</th>
+                <th className="text-right px-3 py-2 font-semibold text-gray-600 dark:text-gray-300">5시간당</th>
+                <th className="text-right px-3 py-2 font-semibold text-gray-600 dark:text-gray-300">주간</th>
+                <th className="text-left px-3 py-2 font-semibold text-gray-600 dark:text-gray-300">모델</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-violet-100 dark:divide-violet-800">
+              {[
+                { plan: 'Lite', price: '$10', per5h: '~80회', weekly: '~400회' },
+                { plan: 'Pro', price: '$18', per5h: '~400회', weekly: '~2,000회' },
+                { plan: 'Max', price: '$80', per5h: '~1,600회', weekly: '~8,000회' },
+              ].map(r => (
+                <tr key={r.plan}>
+                  <td className="px-3 py-2 font-bold text-gray-900 dark:text-white">{r.plan}</td>
+                  <td className="px-3 py-2 text-right font-mono font-bold text-violet-600 dark:text-violet-400">{r.price}{showKRW && <span className="block text-[9px] text-gray-400 font-normal">{formatKRW(Number(r.price.replace('$','')), krwRate)}</span>}</td>
+                  <td className="px-3 py-2 text-right font-mono text-gray-700 dark:text-gray-300">{r.per5h}</td>
+                  <td className="px-3 py-2 text-right font-mono text-gray-700 dark:text-gray-300">{r.weekly}</td>
+                  <td className="px-3 py-2 text-gray-500 dark:text-gray-400">GLM-5.1, Turbo, 4.7, 4.5-Air</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-[11px] text-violet-600 dark:text-violet-400 mt-3 font-medium">💰 월 실제 가치: 구독료의 15~30배 ($150~$2,400). 1프롬프트 = 모델 15~20회 호출. Vision, Web Search, Web Reader, Zread MCP 포함.</p>
+      </div>
+
       {/* Bar chart */}
       {tab === 'bar' && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
@@ -273,10 +311,10 @@ export default function Pricing() {
               const logoSrc = providerLogoMap[row.provider];
               return (
                 <div key={row.model} className="flex items-center gap-3">
-                  <div className="w-44 flex items-center gap-2 shrink-0">
+                  <div className="w-28 sm:w-44 flex items-center gap-2 shrink-0">
                     {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                     <span className="text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{row.model}</span>
-                    {row.koreanBilling === true && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold whitespace-nowrap">🇰🇷</span>}
+                    {row.koreanBilling === true && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold whitespace-nowrap">₩</span>}
                     {row.koreanBilling === null && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold whitespace-nowrap">🔍</span>}
                   </div>
                   <div className="flex-1 relative h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
@@ -285,7 +323,7 @@ export default function Pricing() {
                         backgroundColor: row.input < 0.5 ? '#22c55e' : row.input < 1.5 ? '#3b82f6' : row.input < 3 ? '#f59e0b' : '#ef4444' }} />
                   </div>
                   <div className="w-14 text-right text-sm font-bold text-gray-900 dark:text-white shrink-0 font-mono">${row.input}</div>
-                  {showKRW && <div className="w-20 text-right text-[11px] font-medium text-gray-400 dark:text-gray-500 shrink-0">{formatKRW(row.input, krwRate)}</div>}
+                  {showKRW && <div className="hidden sm:block w-20 text-right text-[11px] font-medium text-gray-400 dark:text-gray-500 shrink-0">{formatKRW(row.input, krwRate)}</div>}
                 </div>
               );
             })}
@@ -338,7 +376,7 @@ export default function Pricing() {
                           {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                           <div>
                             <div className="font-medium text-gray-900 dark:text-white">{row.model} {row.isNew && <span className="text-[8px] font-bold text-red-500 ml-1">NEW</span>}
-                              {row.koreanBilling === true && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold">🇰🇷 결제가능</span>}
+                              {row.koreanBilling === true && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold">₩ 결제 가능</span>}
                               {row.koreanBilling === null && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold">🔍 확인필요</span>}
                             </div>
                             <div className="text-[10px] text-gray-400">{row.provider}</div>
@@ -373,7 +411,7 @@ export default function Pricing() {
                     {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                     <span className="text-sm font-bold text-gray-900 dark:text-white">{row.model}</span>
                     {row.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
-                    {row.koreanBilling === true && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold">🇰🇷</span>}
+                    {row.koreanBilling === true && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold">₩</span>}
                     {row.koreanBilling === null && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold">🔍</span>}
                   </div>
                   <div className="grid grid-cols-3 gap-2">
@@ -423,6 +461,22 @@ export default function Pricing() {
           <div className="mt-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900 rounded-xl px-4 py-3">
             <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 mb-1">💡 캐싱 활용 팁</p>
             <p className="text-xs text-emerald-600 dark:text-emerald-500">동일한 시스템 프롬프트를 반복 사용할 때 캐시 읽기를 활용하면 비용을 크게 줄일 수 있습니다. Claude는 캐시 읽기가 90% 할인되며, Gemini도 비슷한 수준의 할인을 제공합니다.</p>
+          </div>
+          {/* Mobile cache cards */}
+          <div className="grid gap-3 mt-4 md:hidden">
+            {prices.filter(p => p.cacheRead).sort((a, b) => a.cacheRead! - b.cacheRead!).map((row) => (
+              <div key={row.model} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-3">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-bold text-gray-900 dark:text-white">{row.model}</span>
+                  <span className="text-xs font-bold text-emerald-600">-{Math.round((1 - row.cacheRead! / row.input) * 100)}%</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-xs">
+                  <div><div className="text-[10px] text-gray-400">일반 입력</div><div className="font-mono font-bold">${row.input}</div>{showKRW && <div className="text-[9px] text-gray-400">{formatKRW(row.input, krwRate)}</div>}</div>
+                  <div><div className="text-[10px] text-emerald-500">캐시 읽기</div><div className="font-mono font-bold text-emerald-600">${row.cacheRead}</div>{showKRW && <div className="text-[9px] text-gray-400">{formatKRW(row.cacheRead!, krwRate)}</div>}</div>
+                  <div><div className="text-[10px] text-orange-500">캐시 쓰기</div><div className="font-mono font-bold text-orange-600">{row.cacheWrite ? `$${row.cacheWrite}` : '—'}</div></div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
@@ -532,7 +586,7 @@ function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; sho
             <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">💰 월간 예상 비용 (저렴한 순)</h2>
             <p className="text-[10px] text-gray-400 mt-0.5">* 가격은 $/1M 토큰 기준</p>
           </div>
-          <div className="overflow-x-auto">
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-gray-100 dark:border-gray-800">
@@ -574,6 +628,27 @@ function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; sho
                 })}
               </tbody>
             </table>
+          </div>
+          {/* Mobile calculator cards */}
+          <div className="md:hidden grid gap-2 p-4">
+            {calculations.slice(0, 15).map((row, idx) => {
+              const barPct = maxCost > 0 ? Math.max((row.monthlyCost / maxCost) * 100, 2) : 0;
+              return (
+                <div key={row.model} className={`rounded-lg border p-3 ${idx === 0 ? 'border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/20' : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900'}`}>
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-gray-400">{idx + 1}</span>
+                      <span className="text-sm font-bold text-gray-900 dark:text-white">{row.model}</span>
+                    </div>
+                    <span className={`text-sm font-bold font-mono ${idx === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-900 dark:text-white'}`}>${row.monthlyCost < 0.01 ? '<0.01' : row.monthlyCost.toFixed(2)}</span>
+                  </div>
+                  {showKRW && <div className="text-[10px] text-gray-400 mb-2">{formatKRW(row.monthlyCost, krwRate)}/월</div>}
+                  <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                    <div className="h-full rounded-full" style={{ width: `${barPct}%`, backgroundColor: idx === 0 ? '#22c55e' : idx <= 2 ? '#3b82f6' : '#94a3b8' }} />
+                  </div>
+                </div>
+              );
+            })}
           </div>
           {calculations.length > 0 && (
             <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">

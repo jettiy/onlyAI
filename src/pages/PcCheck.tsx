@@ -145,7 +145,7 @@ export default function PcCheck() {
     return models.filter(m => m.tags.includes(useTag));
   };
 
-  const allTags = ['한국어', '코딩', '대화', '요약', '추론', '수학', '테스트', '검색', '다국어'];
+  const allTags = ['코딩', '대화', '요약', '추론', '수학', '테스트', '검색', '다국어', '창작'];
 
   // 감지된 스펙 적용
   const applySpecs = useCallback(() => {

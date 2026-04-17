@@ -167,6 +167,13 @@ export const LOCAL_MODELS: LocalModel[] = [
     tags: ['한국어', '코딩', '대화', '요약'],
     ollamaCmd: 'ollama pull qwen3:8b', ollamaUrl: `${OLLAMA_BASE}qwen3`, isNew: true,
   },
+  {
+    id: 'qwen3.5-9b', name: 'Qwen 3.5 9B', provider: 'Alibaba',
+    minVram: 6, recVram: 8, minRam: 8, quant: 'Q4', size: '~6GB',
+    desc: '한국어 강점 올라운더, Qwen 3 대비 성능 향상',
+    tags: ['한국어', '코딩', '대화', '요약', '추론'],
+    ollamaCmd: 'ollama pull qwen3.5:9b', ollamaUrl: `${OLLAMA_BASE}qwen3.5`, isNew: true,
+  },
 
   // ─── 중형 (12-16GB VRAM) ───
   {
@@ -175,6 +182,13 @@ export const LOCAL_MODELS: LocalModel[] = [
     desc: '30B MoE 30B급 최강, 한국어 강점, Apache 2.0',
     tags: ['한국어', '코딩', '대화', '요약', '추론'],
     ollamaCmd: 'ollama pull glm-4.7-flash', ollamaUrl: `${OLLAMA_BASE}glm-4.7-flash`, isNew: true,
+  },
+  {
+    id: 'qwen3.5-27b', name: 'Qwen 3.5 27B', provider: 'Alibaba',
+    minVram: 12, recVram: 16, minRam: 16, quant: 'Q4', size: '~16GB',
+    desc: '한국어 최고급 로컬 모델, GPT-4급 성능',
+    tags: ['한국어', '코딩', '대화', '요약', '추론'],
+    ollamaCmd: 'ollama pull qwen3.5:27b', ollamaUrl: `${OLLAMA_BASE}qwen3.5`, isNew: true,
   },
   {
     id: 'qwen3-14b', name: 'Qwen 3 14B', provider: 'Alibaba',

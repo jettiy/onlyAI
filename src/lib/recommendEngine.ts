@@ -1,10 +1,11 @@
 // ── AI 추천 엔진 ────────────────────────────────────────────────
-import { strengths, type UseCase, type BudgetTier } from '../data/modelStrengths';
+// 추천 3대 축: 한국어 성능(30%) + 경제성(35%) + 활용도(35%)
+import { strengths, type UseCase, type BudgetTier, type EnvPreference, envLabels } from '../data/modelStrengths';
 
 export interface RecommendInput {
   useCases: UseCase[];
   budget: BudgetTier;
-  privacy: 'high' | 'medium' | 'low'; // 매우 중요, 보통, 상관없음
+  env: EnvPreference; // 'cloud' | 'local' | 'both'
 }
 
 export interface RecommendResult {
@@ -16,15 +17,15 @@ export interface RecommendResult {
   tagline: string;
   monthlyEst: string;
   korean: number;
-  privacy: string;
+  envLabel: string;
+  isLocal: boolean;
   url?: string;
   reason?: string;
-  // 점수 항목별
+  // 점수 항목별 (총 100점)
   detailScores: {
-    useCase: number;  // 최대 40
-    budget: number;   // 최대 30
-    korean: number;   // 최대 15
-    privacy: number;  // 최대 15
+    useCase: number;   // 최대 35 (활용도)
+    budget: number;    // 최대 35 (경제성)
+    korean: number;    // 최대 30 (한국어 성능)
   };
   matchedUseCases: UseCase[];
 }
@@ -46,55 +47,44 @@ const useCaseReasonMap: Record<UseCase, string> = {
   chat: '대화 자연스러움',
 };
 
-function privacyScore(modelPrivacy: string, userPrivacy: string): number {
-  const map: Record<string, number> = {
-    'local-high': 15,
-    'open-high': 12,
-    'cloud-high': 3,
-    'local-medium': 12,
-    'open-medium': 10,
-    'cloud-medium': 8,
-    'local-low': 5,
-    'open-low': 5,
-    'cloud-low': 10,
-  };
-  return map[`${modelPrivacy}-${userPrivacy}`] ?? 5;
-}
-
 export function recommend(input: RecommendInput): RecommendResult[] {
   const compatibleBudgets = budgetCompatibility[input.budget];
 
-  const results = strengths.map(model => {
-    // 1. 용도 매칭 (40점)
-    let useCaseScore = 0;
+  // 환경 필터링
+  let candidates = strengths;
+  if (input.env === 'local') {
+    candidates = candidates.filter(m => m.env === 'local' || m.env === 'open');
+  } else if (input.env === 'cloud') {
+    candidates = candidates.filter(m => m.env !== 'local');
+  }
+  // 'both' → 모든 모델 포함
+
+  const results = candidates.map(model => {
+    // 1. 활용도 (35점) — 사용자 용도와 모델 강점 매칭
+    let useCaseScore: number;
     if (input.useCases.length === 0) {
-      // 전부 다 선택 시 평균
       const avg = Object.values(model.scores).reduce((a, b) => a + b, 0) / 6;
-      useCaseScore = (avg / 10) * 40;
+      useCaseScore = (avg / 10) * 35;
     } else {
       const maxScore = Math.max(...input.useCases.map(uc => model.scores[uc]));
       const avgScore = input.useCases.reduce((sum, uc) => sum + model.scores[uc], 0) / input.useCases.length;
-      // 최대 점수 60% + 평균 40%
-      useCaseScore = ((maxScore * 0.6 + avgScore * 0.4) / 10) * 40;
+      useCaseScore = ((maxScore * 0.6 + avgScore * 0.4) / 10) * 35;
     }
 
-    // 2. 가격 적합도 (30점)
+    // 2. 경제성 (35점) — 예산 대비 가성비
     let budgetScore: number;
     if (compatibleBudgets.includes(model.budget)) {
-      if (model.budget === 'free') budgetScore = 30;
-      else if (model.budget === input.budget) budgetScore = 25;
-      else budgetScore = 20;
+      if (model.budget === 'free') budgetScore = 35;
+      else if (model.budget === input.budget) budgetScore = 28;
+      else budgetScore = 22;
     } else {
       budgetScore = 2;
     }
 
-    // 3. 한국어 (15점)
-    const koreanScore = (model.korean / 10) * 15;
+    // 3. 한국어 성능 (30점) — 모델의 일반적 한국어 능력
+    const koreanScore = (model.korean / 10) * 30;
 
-    // 4. 개인정보 (15점)
-    const privScore = privacyScore(model.privacy, input.privacy);
-
-    const totalScore = useCaseScore + budgetScore + koreanScore + privScore;
+    const totalScore = useCaseScore + budgetScore + koreanScore;
 
     const matchedUseCases = input.useCases.length === 0
       ? (['writing', 'coding', 'image', 'video', 'summary', 'chat'] as UseCase[])
@@ -103,8 +93,13 @@ export function recommend(input: RecommendInput): RecommendResult[] {
     const selectedUseCases = input.useCases.length > 0 ? input.useCases : matchedUseCases;
     const reasonParts = selectedUseCases.map(uc => useCaseReasonMap[uc]).filter(Boolean);
     if (model.budget === 'free') reasonParts.push('무료로 사용 가능');
+    if (model.env === 'local' || model.env === 'open') reasonParts.push('로컬 실행 가능');
     if (model.budget === 'premium') reasonParts.push('프리미엄 성능');
     const reason = reasonParts.join(' · ');
+
+    const envLabel = model.env === 'local' ? '로컬 전용'
+      : model.env === 'open' ? '오픈소스 (로컬 가능)'
+      : '클라우드';
 
     return {
       id: model.id,
@@ -115,18 +110,17 @@ export function recommend(input: RecommendInput): RecommendResult[] {
       tagline: model.tagline,
       monthlyEst: model.monthlyEst,
       korean: model.korean,
-      privacy: model.privacy === 'local' ? '로컬 가능' : model.privacy === 'open' ? '오픈소스' : '클라우드',
+      envLabel,
+      isLocal: model.isLocal ?? (model.env === 'local' || model.env === 'open'),
       reason,
       detailScores: {
         useCase: Math.round(useCaseScore * 10) / 10,
         budget: Math.round(budgetScore * 10) / 10,
         korean: Math.round(koreanScore * 10) / 10,
-        privacy: Math.round(privScore * 10) / 10,
       },
       matchedUseCases,
     };
   });
 
-  // 점수순 정렬, 상위 5개 반환
   return results.sort((a, b) => b.score - a.score).slice(0, 5);
 }

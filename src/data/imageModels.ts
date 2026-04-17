@@ -149,4 +149,13 @@ export const imageModels: ImageModel[] = [
     strengths: ["오픈소스", "자체 호스팅", "커뮤니티 확장"],
     weaknesses: ["품질 한계", "설정 복잡", "가격 비쌈"],
   },
+  {
+    id: "glm-image", name: "GLM Image", company: "Z.AI", flag: "", logoId: "zhipu",
+    releaseDate: "2025-10", tier: "consumer",
+    maxResolution: "1024×1024", quality: "medium",
+    price: "Coding Plan 포함 (월 $10~)",
+    description: "Z.AI의 이미지 생성 모델. Coding Plan 구독 시 추가 비용 없이 사용 가능.",
+    strengths: ["Coding Plan 포함", "한국어 이미지 생성", "빠른 생성 속도"],
+    weaknesses: ["전용 API 가격 정보 없음", "프로급에 비해 품질 한계"],
+  },
 ];

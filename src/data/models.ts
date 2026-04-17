@@ -159,12 +159,12 @@ export const models: AIModel[] = [
     tier: 'efficient', isFeatured: true,
     description: 'GPT-5.4 아키텍처 경량 버전. 2026년 3월 출시. 코딩·컴퓨터 사용·서브에이전트에 강점.',
     strengths: ['최신 경량', '코딩', '컴퓨터 사용', '서브에이전트'],
-    inputPrice: 0.75, outputPrice: 4.50, contextWindow: '1M',
+    inputPrice: 0.75, outputPrice: 4.50, contextWindow: '400K',
     isLocal: false, isNew: true, releaseDate: '2026-03',
     koreanSupport: 'A',
     useCases: ['코딩 보조', '컴퓨터 자동화', '서브에이전트', '대량 API'],
     sourceUrl: 'https://openai.com/api/pricing/',
-    updatedAt: '2026-04-08',
+    updatedAt: '2026-04-17',
     koreanBilling: true,
   },
   {
@@ -174,7 +174,7 @@ export const models: AIModel[] = [
     tier: 'efficient', isFeatured: false,
     description: 'GPT-5.4 계열 최저가 모델. 2026년 3월 출시. 간단한 대량 작업에 최적.',
     strengths: ['최저가', '초고속', '대량 처리', '간단 작업'],
-    inputPrice: 0.20, outputPrice: 1.25, contextWindow: '1M',
+    inputPrice: 0.20, outputPrice: 1.25, contextWindow: '400K',
     isLocal: false, isNew: true, releaseDate: '2026-03',
     koreanSupport: 'B',
     useCases: ['대량 분류', '단순 챗봇', '저비용 API'],
@@ -308,20 +308,37 @@ export const models: AIModel[] = [
 
   // Anthropic ─────────────────────
   {
+    id: 'claude-opus-4-7',
+    name: 'Claude Opus 4.7',
+    company: 'Anthropic', companyId: 'anthropic', region: 'us',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 4월 16일 출시. Anthropic 최강 모델. 새로운 토크나이저(텍스트당 최대 35% 더 많은 토큰). CursorBench 70%(+12%p), 시각 정확도 98.5%(+44%p). Opus 4.6 대비 3배 더 많은 프로덕션 태스크 해결. xhigh effort 레벨 지원.',
+    strengths: ['Anthropic 최강', '시각 정확도 98.5%', '코딩·에이전트', '1M 컨텍스트', 'xhigh effort'],
+    inputPrice: 5.0, outputPrice: 25.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-04-16',
+    koreanSupport: 'A',
+    useCases: ['복잡한 코딩', '에이전트 작업', '시각 분석', '연구·법률'],
+    openRouterSlug: 'anthropic/claude-opus-4-7',
+    sourceUrl: 'https://www.anthropic.com/pricing',
+    url: 'https://claude.ai',
+    updatedAt: '2026-04-17',
+    koreanBilling: true,
+  },
+  {
     id: 'claude-opus-4-6',
     name: 'Claude Opus 4.6',
     company: 'Anthropic', companyId: 'anthropic', region: 'us',
-    tier: 'flagship', isFeatured: true,
-    description: 'Anthropic 최신 플래그십. 코딩·에이전트 작업 대폭 강화. 1M 컨텍스트 표준 가격 지원(3/13 GA). Terminal-Bench 2.0 최고점.',
-    strengths: ['최강 추론', '코딩', '에이전트', '1M 컨텍스트'],
+    tier: 'flagship', isFeatured: false,
+    description: 'Anthropic 플래그십(이전 세대). 코딩·에이전트 작업 강화. 1M 컨텍스트 표준 가격 지원. Fast Mode 베타 지원.',
+    strengths: ['강력한 추론', '코딩', '에이전트', '1M 컨텍스트', 'Fast Mode'],
     inputPrice: 5.0, outputPrice: 25.0, contextWindow: '1M',
-    isLocal: false, isNew: true, releaseDate: '2026-02',
+    isLocal: false, isNew: false, releaseDate: '2026-02',
     koreanSupport: 'A',
     useCases: ['법률·연구', '복잡한 코딩', '에이전트 작업', '기업 분석'],
     openRouterSlug: 'anthropic/claude-opus-4-6',
     sourceUrl: 'https://www.anthropic.com/pricing',
     url: 'https://claude.ai',
-    updatedAt: '2026-04-08',
+    updatedAt: '2026-04-17',
     koreanBilling: true,
   },
   {
@@ -454,6 +471,21 @@ export const models: AIModel[] = [
     koreanBilling: true,
   },
   {
+    id: 'gemini-3-flash',
+    name: 'Gemini 3 Flash',
+    company: 'Google', companyId: 'google', region: 'us',
+    tier: 'strong', isFeatured: false,
+    description: 'Google Gemini 3 Flash Preview. 1M 컨텍스트, 입력 $0.50/출력 $3.00. 빠르고 강력한 멀티모달 모델.',
+    strengths: ['빠름', '멀티모달', '1M 컨텍스트', 'Preview'],
+    inputPrice: 0.50, outputPrice: 3.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2025-12',
+    koreanSupport: 'B',
+    useCases: ['빠른 분석', '멀티모달 앱', '요약', '대량 API'],
+    sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
+    updatedAt: '2026-04-17',
+    koreanBilling: true,
+  },
+  {
     id: 'gemini-2-5-flash-lite',
     name: 'Gemini 2.5 Flash-Lite',
     company: 'Google', companyId: 'google', region: 'us',
@@ -465,7 +497,7 @@ export const models: AIModel[] = [
     koreanSupport: 'B',
     useCases: ['대량 처리', '빠른 분류', '저비용 API'],
     sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
-    updatedAt: '2026-04-08',
+    updatedAt: '2026-04-17',
     koreanBilling: true,
   },
 
@@ -738,7 +770,7 @@ export const models: AIModel[] = [
     name: 'GLM-5.1',
     company: 'Zhipu AI', companyId: 'zhipu', region: 'china',
     tier: 'flagship', isFeatured: true,
-    description: '즈푸AI 최신 코딩 특화 모델. 추론·코딩 강화. 입력 $1.4/출력 $4.4, 캐시 입력 $0.26.',
+    description: '즈푸AI 최신 코딩 특화 모델. 추론·코딩 강화. 입력 $1.4/출력 $4.4, 캐시 입력 $0.26. Coding Plan 구독 시 월 $10~$80로 사실상 무제한 사용 가능. Claude Code, Cline 등에서 코딩 전용으로도 사용.',
     strengths: ['코딩 특화', '추론', '에이전트', '128K'],
     inputPrice: 1.4, outputPrice: 4.4, cachedInputPrice: 0.26, contextWindow: '128K',
     isLocal: false, isNew: true, releaseDate: '2026-03',
@@ -786,7 +818,7 @@ export const models: AIModel[] = [
     name: 'GLM-5-Turbo',
     company: 'Zhipu AI', companyId: 'zhipu', region: 'china',
     tier: 'flagship', isFeatured: false,
-    description: '즈푸AI 플래그십 Turbo 버전. 빠른 응답 속도. 입력 $1.2/출력 $4.0, 캐시 입력 $0.24. 128K 컨텍스트.',
+    description: '즈푸AI 플래그십 Turbo 버전. 빠른 응답 속도. 입력 $1.2/출력 $4.0, 캐시 입력 $0.24. 128K 컨텍스트. Coding Plan 구독 시 월 $10~$80로 사실상 무제한 사용 가능.',
     strengths: ['빠른 플래그십', '응답 속도', '중국어', '128K'],
     inputPrice: 1.2, outputPrice: 4.0, cachedInputPrice: 0.24, contextWindow: '128K',
     isLocal: false, isNew: true, releaseDate: '2026-01',
@@ -817,7 +849,7 @@ export const models: AIModel[] = [
     name: 'GLM-4.7-Flash',
     company: 'Zhipu AI', companyId: 'zhipu', region: 'china',
     tier: 'efficient', isFeatured: false,
-    description: '즈푸AI 무료 경량 모델. 128K 컨텍스트. 중국 플랫폼에서 무료 제공.',
+    description: '즈푸AI 무료 경량 모델. 128K 컨텍스트. API 단독 사용 시 무료, Coding Plan에서도 무료 포함.',
     strengths: ['무료', '빠름', '중국어', '128K 컨텍스트'],
     inputPrice: 0, outputPrice: 0, contextWindow: '128K',
     isLocal: false, isNew: false, releaseDate: '2025-10',
@@ -972,7 +1004,7 @@ export const models: AIModel[] = [
 ];
 
 // ── 데이터 갱신일 ────────────────────────────────────────────────
-export const DATA_UPDATED_AT = '2026-04-16';
+export const DATA_UPDATED_AT = '2026-04-17';
 
 // ── 헬퍼 ────────────────────────────────────────────────────────
 export const tierLabels: Record<ModelTier, string> = {

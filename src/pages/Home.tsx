@@ -35,7 +35,7 @@ const USE_CASE_CARDS = [
     color: 'bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800',
   },
   {
-    icon: '💬', label: '한국어 대화', desc: '자연스러운 한국어',
+    icon: '💬', label: '대화·상담', desc: '자연스러운 대화',
     useCase: 'chat' as UseCase,
     color: 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800',
   },
@@ -141,17 +141,17 @@ export default function Home() {
             className="inline-block text-[11px] font-bold tracking-wider uppercase text-white px-3 py-1 rounded-full mb-4"
             style={{ backgroundColor: '#5B5FEF' }}
           >
-            한국어 AI 모델 비교 NO.1
+            AI 모델 비교 NO.1
           </span>
 
           {/* Heading */}
           <h1 className="text-2xl md:text-4xl font-black text-gray-900 dark:text-white leading-tight mb-2">
-            한국어 AI, 뭐가 제일 좋을까?
+            나에게 맞는 AI, 뭐가 제일 좋을까?
           </h1>
 
           {/* Subtitle */}
           <p className="text-sm text-gray-500 dark:text-gray-400 max-w-md mx-auto mb-6">
-            가격, 성능, 한국어 능력까지 — 58개 AI 모델을 한 곳에서 비교하세요
+            예산, 활용도, 성능까지 내게 딱 맞는 AI를 찾아보세요
           </p>
 
           {/* Search bar */}
@@ -161,7 +161,7 @@ export default function Home() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="찾는 모델이 있나요?"
+              placeholder="예산이나 용도를 입력해보세요"
               className="w-full border border-gray-200 dark:border-gray-700 rounded-xl pl-11 pr-4 py-3 text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5B5FEF]/30 focus:border-[#5B5FEF] transition-all"
             />
           </form>
@@ -187,7 +187,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 2. TOP 3 모델 카드 (OpenRouter 랭킹) ═══ */}
+      {/* ═══ 2. 나에게 맞는 AI 찾기 (퀴즈) ═══ */}
+      <MiniRecommend navigate={navigate} />
+
+      {/* ═══ 3. TOP 3 모델 카드 (OpenRouter 랭킹) ═══ */}
       <section className="lg:col-span-3 animate-fade-in">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
@@ -233,49 +236,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 3. 용도별 AI 추천 ═══ */}
-      <section className="lg:col-span-2 animate-fade-in">
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-base font-bold text-gray-900 dark:text-white">용도별 AI 추천</h2>
-          <Link to="/recommend" className="text-xs text-gray-500 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors">
-            더 자세히 <ArrowRight className="inline w-3 h-3" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {USE_CASE_CARDS.map(uc => {
-            const top2 = strengths
-              .filter(s => s.scores[uc.useCase] >= 8)
-              .sort((a, b) => b.scores[uc.useCase] - a.scores[uc.useCase])
-              .slice(0, 2);
-            return (
-              <Link
-                key={uc.useCase}
-                to={`/recommend?useCase=${uc.useCase}`}
-                className={`group block rounded-2xl border p-4 hover:shadow-md transition-all ${uc.color}`}
-              >
-                <span className="text-xl mb-2 block">{uc.icon}</span>
-                <p className="text-sm font-bold text-gray-900 dark:text-white mb-0.5">{uc.label}</p>
-                <p className="text-[11px] text-gray-500 dark:text-gray-400 mb-3">{uc.desc}</p>
-                {top2.length > 0 && (
-                  <div className="space-y-1.5">
-                    {top2.map(s => (
-                      <div key={s.id} className="flex items-center justify-between">
-                        <div className="flex items-center gap-1.5">
-                          <CompanyLogo company={s.companyId} size={14} />
-                          <span className="text-[11px] font-semibold text-gray-700 dark:text-gray-300">{s.name}</span>
-                        </div>
-                        <span className="text-[10px] font-mono text-gray-400">{s.monthlyEst}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* ═══ 4. 빠른 시작 ═══ */}
+      {/* ═══ 3. 빠른 시작 ═══ */}
       <section className="lg:col-span-5 animate-fade-in">
         <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3">빠른 시작</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -425,8 +386,7 @@ export default function Home() {
         데이터 기준일: 2026년 4월 16일 · 모델 정보는 정기적으로 업데이트됩니다
       </p>
 
-      {/* ═══ 7. 미니 추천 퀴즈 ═══ */}
-      <MiniRecommend navigate={navigate} />
+      {/* ═══ 미니 추천 퀴즈 (Hero 바로 아래로 이동) ═══ */}
     </div>
   );
 }
@@ -442,7 +402,7 @@ function MiniRecommend({ navigate }: { navigate: ReturnType<typeof useNavigate> 
     return recommend({
       useCases: useCase ? [useCase] : [],
       budget: (budget || 'free') as BudgetTier,
-      privacy: 'medium',
+      env: 'both',
     }).slice(0, 3);
   }, [useCase, budget]);
 

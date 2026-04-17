@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
 import { useSEO } from "./hooks/useSEO";
 
 // Lazy-loaded routes for code splitting
 import { lazy, Suspense } from "react";
 
+const Home = lazy(() => import("./pages/Home"));
 const Explore = lazy(() => import("./pages/explore/Explore").then(m => ({ default: m.default })));
 const ExploreTimeline = lazy(() => import("./pages/explore/ExploreTimeline").then(m => ({ default: m.default })));
 const ExploreCompare = lazy(() => import("./pages/explore/ExploreCompare").then(m => ({ default: m.default })));

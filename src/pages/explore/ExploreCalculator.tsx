@@ -54,14 +54,13 @@ export default function ExploreCalculator() {
   const ratio = RATIOS[ratioIdx];
   const totalTokens = useMemo(() => {
     const val = parseFloat(inputValue) || 0;
-    if (inputMode === "cost") return val; // special handling below
+    if (inputMode === "cost") return val; 
     const conv = CONVERSIONS[inputMode];
     return val * conv.factor;
   }, [inputValue, inputMode]);
 
   const results = useMemo(() => {
     if (inputMode === "cost") {
-      // Budget mode: how many tokens per model
       const budget = parseFloat(inputValue) || 0;
       return PRICES.map(p => {
         const blended = p.input * ratio.inputRatio + p.output * ratio.outputRatio;
@@ -70,7 +69,6 @@ export default function ExploreCalculator() {
       }).sort((a, b) => b.tokens - a.tokens);
     }
 
-    // Token mode: cost per model
     const inputTokens = totalTokens * ratio.inputRatio;
     const outputTokens = totalTokens * ratio.outputRatio;
     return PRICES.map(p => {
@@ -80,58 +78,68 @@ export default function ExploreCalculator() {
     }).sort((a, b) => a.cost - b.cost);
   }, [totalTokens, inputMode, ratio]);
 
-  const cheapest = results[0];
-  const expensive = results[results.length - 1];
-
-  const displayValue = useMemo(() => {
-    const val = parseFloat(inputValue) || 0;
-    if (inputMode === "cost") return `$${val.toLocaleString()}`;
-    if (inputMode === "tokens") return `${Math.round(val).toLocaleString()} 토큰`;
-    if (inputMode === "chars") return `${Math.round(val).toLocaleString()} 글자`;
-    return `${val} 페이지`;
-  }, [inputValue, inputMode]);
-
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🧮 API 가격 계산기</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          토큰, 글자, 페이지, 예산을 입력하면 각 모델의 비용을 비교해드립니다.
+          토큰 수 슬라이더로 조절하거나 예산을 입력하여 모델별 비용을 비교하세요.
         </p>
       </div>
 
       {/* Input Section */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5 space-y-4">
-        {/* Input mode selector */}
-        <div className="flex flex-wrap gap-2">
-          {(Object.entries(CONVERSIONS) as [InputMode, typeof CONVERSIONS[InputMode]][]).map(([key, val]) => (
-            <button
-              key={key}
-              onClick={() => { setInputMode(key); setInputValue(key === "cost" ? "10" : "1000000"); }}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
-                inputMode === key
-                  ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
-                  : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200"
-              }`}
-            >
-              {val.label}
-            </button>
-          ))}
-        </div>
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5 space-y-6">
+        {/* Token/Budget Slider */}
+        {inputMode !== "cost" && (
+            <div>
+                <label className="text-xs font-semibold text-gray-500 dark:text-gray-400 block mb-2">
+                    {CONVERSIONS[inputMode].label} 수: {parseFloat(inputValue).toLocaleString()}
+                </label>
+                <input
+                    type="range"
+                    min="1000"
+                    max="10000000"
+                    step="1000"
+                    value={inputValue}
+                    onChange={e => setInputValue(e.target.value)}
+                    className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-gray-900 dark:accent-white"
+                />
+            </div>
+        )}
+        
+        <div className="flex flex-wrap gap-4">
+            {/* Input mode selector */}
+            <div className="flex flex-col gap-2">
+                <label className="text-xs font-semibold text-gray-500 dark:text-gray-400">단위</label>
+                <div className="flex gap-2">
+                {(Object.entries(CONVERSIONS) as [InputMode, typeof CONVERSIONS[InputMode]][]).map(([key, val]) => (
+                    <button
+                    key={key}
+                    onClick={() => { setInputMode(key); setInputValue(key === "cost" ? "10" : "1000000"); }}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
+                        inputMode === key
+                        ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
+                        : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200"
+                    }`}
+                    >
+                    {val.label}
+                    </button>
+                ))}
+                </div>
+            </div>
 
-        {/* Input field */}
-        <div>
-          <label className="text-xs font-semibold text-gray-500 dark:text-gray-400 block mb-1">
-            {inputMode === "cost" ? "예산 입력 (USD)" : `${CONVERSIONS[inputMode].label} 수 입력`}
-          </label>
-          <input
-            type="number"
-            value={inputValue}
-            onChange={e => setInputValue(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500"
-            placeholder={inputMode === "cost" ? "10" : "1000000"}
-          />
-          <p className="text-[10px] text-gray-400 mt-1">{CONVERSIONS[inputMode].desc}</p>
+            {/* Cost Input if in cost mode */}
+            {inputMode === "cost" && (
+                <div className="flex-1">
+                    <label className="text-xs font-semibold text-gray-500 dark:text-gray-400 block mb-1">예산 (USD)</label>
+                    <input
+                        type="number"
+                        value={inputValue}
+                        onChange={e => setInputValue(e.target.value)}
+                        className="w-full px-4 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500"
+                    />
+                </div>
+            )}
         </div>
 
         {/* Ratio selector */}
@@ -157,82 +165,35 @@ export default function ExploreCalculator() {
 
       {/* Results */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
-        <div className="px-5 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-between">
+        <div className="px-5 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
           <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">
-            {inputMode === "cost" ? "💰 예산별 처리 가능 토큰 수" : "💰 예상 비용"}
+            📊 모델 비교 표
           </h2>
-          <span className="text-xs text-gray-400">{displayValue} 기준</span>
         </div>
-        <div className="divide-y divide-gray-50 dark:divide-gray-800">
-          {results.map((r, idx) => {
-            const isCheapest = idx === 0;
-            const isExpensive = idx === results.length - 1;
-            return (
-              <div key={r.name} className={`flex items-center gap-3 px-5 py-3 transition-colors ${isCheapest ? "bg-emerald-50/50 dark:bg-emerald-950/20" : ""}`}>
-                <div className={`w-5 text-xs text-center font-bold shrink-0 ${isCheapest ? "text-emerald-500" : "text-gray-300"}`}>
-                  {isCheapest ? "🏆" : idx + 1}
-                </div>
-                <div className="w-28 shrink-0">
-                  <div className="text-xs font-bold text-gray-900 dark:text-white truncate">{r.name}</div>
-                  <div className="text-[10px] text-gray-400">{r.provider}</div>
-                </div>
-                <div className="flex-1 relative h-5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                  {inputMode === "cost" ? (
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-green-500 transition-all duration-500"
-                      style={{ width: `${cheapest.tokens > 0 ? (r.tokens / cheapest.tokens) * 100 : 0}%` }}
-                    />
-                  ) : (
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-brand-400 to-violet-500 transition-all duration-500"
-                      style={{ width: `${expensive.cost > 0 ? (r.cost / expensive.cost) * 100 : 0}%` }}
-                    />
-                  )}
-                </div>
-                <div className="w-24 text-right shrink-0">
-                  {inputMode === "cost" ? (
-                    <div className="text-xs font-bold text-gray-900 dark:text-white font-mono">
-                      {r.tokens > 1_000_000 ? `${(r.tokens / 1_000_000).toFixed(1)}M` : r.tokens > 1000 ? `${(r.tokens / 1000).toFixed(0)}K` : r.tokens} 토큰
-                    </div>
-                  ) : (
-                    <div className="text-xs font-bold text-gray-900 dark:text-white font-mono">
-                      ${r.cost.toFixed(2)}
-                    </div>
-                  )}
-                </div>
-                {isCheapest && (
-                  <span className="px-1.5 py-0.5 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-[9px] rounded-full font-bold shrink-0">
-                    최저가
-                  </span>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Quick presets */}
-      <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
-        <h3 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">⚡ 빠른 프리셋</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          {[
-            { label: "챗봇 1회", value: "3000", mode: "tokens" as InputMode },
-            { label: "블로그 글 1편", value: "5000", mode: "tokens" as InputMode },
-            { label: "A4 10페이지", value: "10", mode: "pages" as InputMode },
-            { label: "월 $10 예산", value: "10", mode: "cost" as InputMode },
-            { label: "월 $50 예산", value: "50", mode: "cost" as InputMode },
-            { label: "1만 글자", value: "10000", mode: "chars" as InputMode },
-            { label: "100만 토큰", value: "1000000", mode: "tokens" as InputMode },
-            { label: "월 $100 예산", value: "100", mode: "cost" as InputMode },
-          ].map(p => (
-            <button
-              key={p.label}
-              onClick={() => { setInputMode(p.mode); setInputValue(p.value); }}
-              className="px-3 py-2 bg-white dark:bg-gray-800 rounded-xl text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-colors"
-            >
-              {p.label}
-            </button>
-          ))}
+        <div className="overflow-x-auto">
+            <table className="w-full text-sm text-left">
+                <thead className="text-xs text-gray-500 uppercase bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+                    <tr>
+                        <th className="px-5 py-3">모델</th>
+                        <th className="px-5 py-3 text-right">비용</th>
+                        <th className="px-5 py-3 text-right">처리량</th>
+                    </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+                    {results.map((r) => (
+                        <tr key={r.name} className="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                            <td className="px-5 py-3">
+                                <div className="font-bold text-gray-900 dark:text-white">{r.name}</div>
+                                <div className="text-[10px] text-gray-400">{r.provider}</div>
+                            </td>
+                            <td className="px-5 py-3 text-right font-mono font-bold">${r.cost.toFixed(2)}</td>
+                            <td className="px-5 py-3 text-right font-mono font-bold text-brand-600 dark:text-brand-400">
+                                {r.tokens > 1_000_000 ? `${(r.tokens / 1_000_000).toFixed(1)}M` : `${(r.tokens / 1000).toFixed(0)}K`} 토큰
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
       </div>
     </div>

@@ -33,6 +33,7 @@ const LearnSimulator = lazy(() => import("./pages/learn/LearnSimulator").then(m 
 const VideoTimeline = lazy(() => import("./pages/video/VideoTimeline").then(m => ({ default: m.default })));
 const VideoCompare = lazy(() => import("./pages/video/VideoCompare").then(m => ({ default: m.default })));
 const ImageCompare = lazy(() => import("./pages/image/ImageCompare").then(m => ({ default: m.default })));
+const Pricing = lazy(() => import("./pages/Pricing").then(m => ({ default: m.default })));
 const Recommend = lazy(() => import("./pages/Recommend").then(m => ({ default: m.default })));
 const PcCheck = lazy(() => import("./pages/PcCheck").then(m => ({ default: m.default })));
 const NotFound = lazy(() => import("./pages/NotFound").then(m => ({ default: m.default })));
@@ -75,6 +76,7 @@ export default function App() {
             <Route path="/video/timeline" element={<VideoTimeline />} />
             <Route path="/video/compare" element={<VideoCompare />} />
             <Route path="/image" element={<ImageCompare />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/recommend" element={<Recommend />} />
             <Route path="/pc-check" element={<PcCheck />} />
             <Route path="/prompts" element={<PromptsHub />} />

@@ -13,7 +13,6 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  ResponsiveContainer,
   CartesianGrid,
   Cell,
 } from '../lib/safeRecharts';
@@ -25,6 +24,8 @@ import {
   DollarSign,
   Wrench,
   Trophy,
+  TrendingUp,
+  Newspaper,
 } from 'lucide-react';
 
 /* ── 상수 ── */
@@ -105,7 +106,6 @@ const scatterData = strengths
   });
 
 function getScatterColor(score: number, price: number) {
-  // 가성비 = 높은 점수 + 낮은 가격 → 초록, 반대 → 빨강
   const ratio = (score / 10) / Math.max(price, 0.1);
   if (ratio > 0.8) return '#22C55E';
   if (ratio > 0.4) return '#5B5FEF';
@@ -158,7 +158,6 @@ export default function Home() {
       <section className="text-center py-10 md:py-16 animate-fade-in">
         {/* 로고 */}
         <div className="flex items-center justify-center gap-2 mb-5">
-          <span className="text-2xl">🤖</span>
           <span className="text-xl font-black text-gray-900 dark:text-white tracking-tight">AI이것만</span>
         </div>
 
@@ -186,11 +185,11 @@ export default function Home() {
 
         {/* 빠른 링크 */}
         <div className="flex items-center justify-center gap-4 text-xs text-gray-400">
-          <Link to="/explore/guide" className="hover:text-[#5B5FEF] transition-colors">✨ 추천받기</Link>
+          <Link to="/explore/guide" className="hover:text-[#5B5FEF] transition-colors inline-flex items-center gap-1"><Sparkles className="w-3 h-3" /> 추천받기</Link>
           <span>·</span>
-          <Link to="/pricing" className="hover:text-[#5B5FEF] transition-colors">💰 가격비교</Link>
+          <Link to="/pricing" className="hover:text-[#5B5FEF] transition-colors inline-flex items-center gap-1"><DollarSign className="w-3 h-3" /> 가격비교</Link>
           <span>·</span>
-          <Link to="/explore/compare" className="hover:text-[#5B5FEF] transition-colors">📊 전체 모델</Link>
+          <Link to="/explore/compare" className="hover:text-[#5B5FEF] transition-colors inline-flex items-center gap-1"><BarChart3 className="w-3 h-3" /> 전체 모델</Link>
         </div>
       </section>
 
@@ -235,7 +234,7 @@ export default function Home() {
               </span>
               <div>
                 <h3 className="text-sm font-bold text-gray-900 dark:text-white">활용도</h3>
-                <p className="text-[11px] text-gray-400">용�도별 최적 모델</p>
+                <p className="text-[11px] text-gray-400">용도별 최적 모델</p>
               </div>
             </div>
             <div className="space-y-2.5">
@@ -288,38 +287,36 @@ export default function Home() {
       {/* ═══ 3. 가성비 산점도 ═══ */}
       <section className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5 md:p-6 animate-fade-in">
         <div className="flex items-center justify-between mb-1">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white">💰 가격 vs 성능 — 가성비 한눈에</h2>
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">가격 vs 성능 — 가성비 한눈에</h2>
         </div>
         <p className="text-xs text-gray-400 mb-4">좌상단 = 가성비 최고 · 우하단 = 비싸고 약함 · 점수는 종합 평가 (코딩+글쓰기+요약 등)</p>
         <div className="w-full overflow-x-auto">
-          <div className="min-w-[480px] h-[320px] md:h-[380px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <ScatterChart margin={{ top: 10, right: 20, bottom: 10, left: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" className="dark:stroke-gray-700" />
-                <XAxis
-                  type="number"
-                  dataKey="price"
-                  name="가격"
-                  unit="$/M"
-                  tick={{ fontSize: 11, fill: '#9CA3AF' }}
-                  label={{ value: '가격 (입력+출력 $/1M토큰)', position: 'insideBottom', offset: -5, fontSize: 11, fill: '#9CA3AF' }}
-                />
-                <YAxis
-                  type="number"
-                  dataKey="score"
-                  name="점수"
-                  domain={[0, 10]}
-                  tick={{ fontSize: 11, fill: '#9CA3AF' }}
-                  label={{ value: '종합 점수', angle: -90, position: 'insideLeft', offset: 10, fontSize: 11, fill: '#9CA3AF' }}
-                />
-                <Tooltip content={<ScatterTooltipContent />} />
-                <Scatter data={scatterData} name="모델">
-                  {scatterData.map((entry, index) => (
-                    <Cell key={index} fill={getScatterColor(entry.score, entry.price)} />
-                  ))}
-                </Scatter>
-              </ScatterChart>
-            </ResponsiveContainer>
+          <div className="min-w-[480px]" style={{ height: 380 }}>
+            <ScatterChart width="100%" height="100%" margin={{ top: 10, right: 20, bottom: 10, left: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" className="dark:stroke-gray-700" />
+              <XAxis
+                type="number"
+                dataKey="price"
+                name="가격"
+                unit="$/M"
+                tick={{ fontSize: 11, fill: '#9CA3AF' }}
+                label={{ value: '가격 (입력+출력 $/1M토큰)', position: 'insideBottom', offset: -5, fontSize: 11, fill: '#9CA3AF' }}
+              />
+              <YAxis
+                type="number"
+                dataKey="score"
+                name="점수"
+                domain={[0, 10]}
+                tick={{ fontSize: 11, fill: '#9CA3AF' }}
+                label={{ value: '종합 점수', angle: -90, position: 'insideLeft', offset: 10, fontSize: 11, fill: '#9CA3AF' }}
+              />
+              <Tooltip content={<ScatterTooltipContent />} />
+              <Scatter data={scatterData} name="모델">
+                {scatterData.map((entry, index) => (
+                  <Cell key={index} fill={getScatterColor(entry.score, entry.price)} />
+                ))}
+              </Scatter>
+            </ScatterChart>
           </div>
         </div>
         <div className="flex items-center gap-4 mt-3 text-[10px] text-gray-400">
@@ -332,7 +329,7 @@ export default function Home() {
       {/* ═══ 4. 이번주 인기 모델 — 바 차트 ═══ */}
       <section className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5 md:p-6 animate-fade-in">
         <div className="flex items-center justify-between mb-1">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white">🔥 이번주 인기 모델</h2>
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">이번주 인기 모델</h2>
           <Link to="/explore/ranking" className="text-xs text-gray-400 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors flex items-center gap-1">
             전체 랭킹 <ArrowRight className="w-3 h-3" />
           </Link>
@@ -340,41 +337,41 @@ export default function Home() {
         <p className="text-xs text-gray-400 mb-5">OpenRouter 실제 사용량 기준 · 매주 업데이트</p>
 
         <div className="w-full overflow-x-auto">
-          <div className="min-w-[400px] h-[340px] md:h-[400px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                layout="vertical"
-                data={barData}
-                margin={{ top: 0, right: 20, bottom: 0, left: 0 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" className="dark:stroke-gray-700" horizontal={false} />
-                <XAxis
-                  type="number"
-                  tick={{ fontSize: 10, fill: '#9CA3AF' }}
-                  tickFormatter={(v: number) => `${v}T`}
-                />
-                <YAxis
-                  type="category"
-                  dataKey="name"
-                  tick={{ fontSize: 11, fill: '#6B7280' }}
-                  width={120}
-                />
-                <Tooltip
-                  formatter={(value: number) => [`${value}T 토큰`, '주간 사용량']}
-                  contentStyle={{
-                    backgroundColor: 'white',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '8px',
-                    fontSize: '12px',
-                  }}
-                />
-                <Bar dataKey="tokens" radius={[0, 6, 6, 0]} barSize={24}>
-                  {barData.map((entry, index) => (
-                    <Cell key={index} fill={entry.fill} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+          <div className="min-w-[400px]" style={{ height: 400 }}>
+            <BarChart
+              layout="vertical"
+              data={barData}
+              width="100%"
+              height="100%"
+              margin={{ top: 0, right: 20, bottom: 0, left: 0 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" className="dark:stroke-gray-700" horizontal={false} />
+              <XAxis
+                type="number"
+                tick={{ fontSize: 10, fill: '#9CA3AF' }}
+                tickFormatter={(v: number) => `${v}T`}
+              />
+              <YAxis
+                type="category"
+                dataKey="name"
+                tick={{ fontSize: 11, fill: '#6B7280' }}
+                width={120}
+              />
+              <Tooltip
+                formatter={(value: number) => [`${value}T 토큰`, '주간 사용량']}
+                contentStyle={{
+                  backgroundColor: 'white',
+                  border: '1px solid #e5e7eb',
+                  borderRadius: '8px',
+                  fontSize: '12px',
+                }}
+              />
+              <Bar dataKey="tokens" radius={[0, 6, 6, 0]} barSize={24}>
+                {barData.map((entry, index) => (
+                  <Cell key={index} fill={entry.fill} />
+                ))}
+              </Bar>
+            </BarChart>
           </div>
         </div>
       </section>
@@ -382,7 +379,7 @@ export default function Home() {
       {/* ═══ 5. 뉴스 ═══ */}
       <section className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5 animate-fade-in">
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-base font-bold text-gray-900 dark:text-white">📰 최근 AI 뉴스</h2>
+          <h2 className="text-base font-bold text-gray-900 dark:text-white">최근 AI 뉴스</h2>
           <Link to="/news" className="text-xs text-gray-400 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] transition-colors flex items-center gap-1">
             전체 보기 <ArrowRight className="w-3 h-3" />
           </Link>

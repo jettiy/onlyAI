@@ -4,7 +4,8 @@
 import { getLogoUrl } from "../lib/logoUtils";
 
 export function CompanyLogo({ company, size = 18, className = "" }: { company: string; size?: number; className?: string }) {
-  const src = getLogoUrl(undefined, company);
+  // company prop can be either companyId (e.g. 'zhipu') or companyName (e.g. 'Zhipu AI')
+  const src = getLogoUrl(company, undefined) || getLogoUrl(undefined, company);
   if (!src) {
     // Fallback: show first character as text
     return (

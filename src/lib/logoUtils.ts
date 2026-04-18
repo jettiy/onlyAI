@@ -11,6 +11,7 @@ const LOGO_MAP: Record<string, string> = {
   alibaba: "aa_alibaba.svg",
   moonshot: "aa_moonshot.svg",
   zhipu: "aa_zhipu.svg",
+  zai: "aa_zai.svg",
   xiaomi: "aa_xiaomi.svg",
   mistral: "aa_mistral.svg",
   cohere: "aa_cohere.svg",

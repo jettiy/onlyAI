@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none">
-  <!-- Z.AI stylized logo — two curved strokes forming abstract Z -->
-  <path d="M5 4h14l-1.5 1.8L7 18.2V20H19" stroke="#4338CA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M5 20h14" stroke="#4338CA" stroke-width="2.4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <g transform="translate(1, 1)">
+    <!-- Zhipu AI logo - Z letter, mono style -->
+    <path d="M12.38,5.68 L11.34,7.16 C11.18,7.39 10.9,7.54 10.62,7.54 H4.93 V5.68 H12.38 Z" fill="#1a1a2e"/>
+    <polygon points="19.44,5.68 10.51,18.32 4.56,18.32 13.49,5.68" fill="#1a1a2e"/>
+    <path d="M11.62,18.32 L12.66,16.84 C12.82,16.61 13.1,16.46 13.38,16.46 H19.06 V18.32 H11.62 Z" fill="#1a1a2e"/>
+  </g>
 </svg>

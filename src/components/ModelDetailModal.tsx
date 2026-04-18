@@ -177,6 +177,35 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
             )}
           </div>
 
+          {/* Arena Expert */}
+          {model.arenaScore != null && model.arenaScore != undefined && (
+            <div className={`rounded-xl border ${cardBorder} ${subtleBg} p-4 space-y-3`}>
+              <p className={`text-xs font-semibold ${mutedText}`}>Arena Expert</p>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <p className={`text-[11px] ${mutedText}`}>점수</p>
+                  <p className="text-base font-bold text-gray-900 dark:text-white">{model.arenaScore}</p>
+                </div>
+                <div>
+                  <p className={`text-[11px] ${mutedText}`}>신뢰구간</p>
+                  <p className="text-base font-bold text-gray-900 dark:text-white">{model.arenaCI ?? '-'}</p>
+                </div>
+                <div>
+                  <p className={`text-[11px] ${mutedText}`}>투표수</p>
+                  <p className="text-base font-bold text-gray-900 dark:text-white">
+                    {model.arenaVotes != null ? `${model.arenaVotes.toLocaleString()}표` : '-'}
+                  </p>
+                </div>
+                <div>
+                  <p className={`text-[11px] ${mutedText}`}>순위범위</p>
+                  <p className="text-base font-bold text-gray-900 dark:text-white">
+                    {model.arenaRankSpread ? `${model.arenaRankSpread}위` : '-'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Description */}
           <p className={`text-sm leading-relaxed ${isDark ? "text-gray-200" : "text-gray-700"}`}>
             {model.description}

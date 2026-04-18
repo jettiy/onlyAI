@@ -87,7 +87,25 @@ const performanceTop3 = [...strengths]
   })
   .slice(0, 3);
 
-// ── 산점도 데이터 ──
+// ── Arena Expert Top3 ──
+const arenaTop3 = [...models]
+  .filter(m => m.arenaScore != null && m.arenaScore != undefined)
+  .sort((a, b) => (b.arenaScore ?? 0) - (a.arenaScore ?? 0))
+  .slice(0, 3);
+
+const arenaMedals = ['🥇', '🥈', '🥉'] as const;
+const arenaAccents = [
+  'border-amber-300 dark:border-amber-500/50',
+  'border-gray-300 dark:border-gray-500/50',
+  'border-orange-300 dark:border-orange-500/50',
+] as const;
+const arenaBgs = [
+  'bg-gradient-to-br from-amber-50 to-white dark:from-amber-900/10 dark:to-gray-900',
+  'bg-gradient-to-br from-gray-50 to-white dark:from-gray-800/30 dark:to-gray-900',
+  'bg-gradient-to-br from-orange-50 to-white dark:from-orange-900/10 dark:to-gray-900',
+] as const;
+
+// ── 바 차트 데이터 ──
 const scatterData = strengths
   .filter(s => {
     const m = models.find(x => x.id === s.id);
@@ -113,7 +131,7 @@ function getScatterColor(score: number, price: number) {
   return '#EF4444';
 }
 
-// ── 바 차트 데이터 ──
+// ── 산점도 데이터 ──
 const barData = TOP_RANKING.map((r, i) => ({
   name: r.model,
   company: r.company,
@@ -335,6 +353,28 @@ export default function Home() {
           </Link>
         </div>
         <p className="text-xs text-gray-400 mb-5">OpenRouter 실제 사용량 + arena.ai Expert 랭킹 · 매주 업데이트</p>
+
+        {/* Arena Expert Top3 Cards */}
+        {arenaTop3.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+            {arenaTop3.map((m, i) => (
+              <div
+                key={m.id}
+                className={`rounded-xl border-2 ${arenaAccents[i]} ${arenaBgs[i]} p-4 flex items-center gap-3 transition-all hover:shadow-md`}
+              >
+                <span className="text-2xl shrink-0">{arenaMedals[i]}</span>
+                <div className="min-w-0">
+                  <p className="text-sm font-bold text-gray-900 dark:text-white truncate">{m.name}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    <span className="font-semibold text-gray-800 dark:text-gray-200">{m.arenaScore}</span>
+                    {m.arenaCI && <span className="ml-0.5">{m.arenaCI}</span>}
+                  </p>
+                  <p className="text-[11px] text-gray-400 dark:text-gray-500 truncate">{m.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="w-full overflow-x-auto">
           <div className="min-w-[400px]" style={{ height: 400 }}>

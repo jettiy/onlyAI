@@ -1,6 +1,7 @@
 // ── AI 추천 엔진 ────────────────────────────────────────────────
 // 추천 3대 축: 한국어 성능(30%) + 경제성(35%) + 활용도(35%)
 import { strengths, type UseCase, type BudgetTier, type EnvPreference, envLabels } from '../data/modelStrengths';
+import { models } from '../data/models';
 
 export interface RecommendInput {
   useCases: UseCase[];
@@ -84,7 +85,14 @@ export function recommend(input: RecommendInput): RecommendResult[] {
     // 3. 한국어 성능 (30점) — 모델의 일반적 한국어 능력
     const koreanScore = (model.korean / 10) * 30;
 
-    const totalScore = useCaseScore + budgetScore + koreanScore;
+    // 4. Arena Score 보너스 (최대 ~5점)
+    let arenaBonus = 0;
+    const modelData = models.find(m => m.id === model.id);
+    if (modelData?.arenaScore != null && modelData?.arenaScore != undefined) {
+      arenaBonus = (modelData.arenaScore / 1600) * 5;
+    }
+
+    const totalScore = useCaseScore + budgetScore + koreanScore + arenaBonus;
 
     const matchedUseCases = input.useCases.length === 0
       ? (['writing', 'coding', 'image', 'video', 'summary', 'chat'] as UseCase[])

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer,
   BarChart, Bar, Cell,
@@ -8,12 +8,77 @@ import {
   ARENA_EXPERT_TOP20,
   type RankingEntry,
 } from "../../data/rankings";
+import { models } from "../../data/models";
 import { CompanyLogo } from "../../components/CompanyLogo";
 
 type Period = "weekly" | "monthly";
 type View = "chart" | "list";
+type CategoryFilter = 'all' | 'chat' | 'code' | 'vision' | 'image' | 'video';
+type QuickFilter = 'all' | 'open' | 'proprietary' | 'reasoning';
 
 /* ── helpers ── */
+
+// 모델명 → 카테고리 매핑 (ranking display name → category)
+const MODEL_CATEGORY_MAP: Record<string, 'llm' | 'coding' | 'vision' | 'image' | 'video'> = {};
+models.forEach(m => {
+  // All current models in models.ts are LLM/chat models
+  // Special categories based on useCases and description
+  const desc = (m.description ?? '').toLowerCase();
+  const uc = m.useCases ?? [];
+  let cat: 'llm' | 'coding' | 'vision' | 'image' | 'video' = 'llm';
+  if (desc.includes('이미지 생성') || desc.includes('image generation') || uc.some(u => u.includes('이미지 생성'))) {
+    cat = 'image';
+  } else if (desc.includes('비디오') || desc.includes('video generation') || uc.some(u => u.includes('비디오'))) {
+    cat = 'video';
+  } else if (desc.includes('비전') || desc.includes('시각') || m.id.includes('vision') || uc.some(u => u.includes('비전'))) {
+    cat = 'vision';
+  } else if (m.id.includes('codestral') || uc.every(u => u.includes('코딩')) && uc.length > 0 && !uc.some(u => !u.includes('코딩'))) {
+    cat = 'coding';
+  }
+  MODEL_CATEGORY_MAP[m.name] = cat;
+});
+
+function getModelCategoryByName(name: string): 'llm' | 'coding' | 'vision' | 'image' | 'video' {
+  return MODEL_CATEGORY_MAP[name] ?? 'llm';
+}
+
+const CATEGORY_BUTTONS: { label: string; value: CategoryFilter }[] = [
+  { label: '전체', value: 'all' },
+  { label: '채팅', value: 'chat' },
+  { label: '코딩', value: 'code' },
+  { label: '비전', value: 'vision' },
+  { label: '이미지', value: 'image' },
+  { label: '비디오', value: 'video' },
+];
+
+const CATEGORY_TO_MODEL_CATEGORY: Record<CategoryFilter, 'llm' | 'coding' | 'vision' | 'image' | 'video' | null> = {
+  all: null,
+  chat: 'llm',
+  code: 'coding',
+  vision: 'vision',
+  image: 'image',
+  video: 'video',
+};
+
+const QUICK_FILTER_BUTTONS: { label: string; value: QuickFilter }[] = [
+  { label: '전체', value: 'all' },
+  { label: '오픈소스', value: 'open' },
+  { label: '상용', value: 'proprietary' },
+  { label: '추론모델', value: 'reasoning' },
+];
+
+// Known reasoning model name patterns
+const REASONING_MODEL_NAMES = new Set([
+  'Claude Opus 4.7', 'Claude Opus 4.6', 'Claude Opus 4.6 Thinking',
+  'Claude Sonnet 4.6',
+  'GPT-5.4', 'GPT-5.4 High',
+  'o3',
+  'DeepSeek R1',
+  'Gemini 3 Pro', 'Gemini 3.1 Pro', 'Gemini 3 Flash',
+  'MiMo-V2-Pro',
+  'GLM-5.1',
+]);
+
 function getChangeColor(change: string) {
   if (change === "NEW") return "text-emerald-500";
   const val = parseInt(change, 10);
@@ -82,13 +147,61 @@ function ShareRing({ share, color }: { share: number; color: string }) {
 export default function ExploreRanking() {
   const [period, setPeriod] = useState<Period>("weekly");
   const [view, setView] = useState<View>("list");
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>('all');
+  const [quickFilter, setQuickFilter] = useState<QuickFilter>('all');
 
-  const data: RankingEntry[] = period === "weekly" ? WEEKLY_RANKING : MONTHLY_RANKING;
+  // Filter ranking data by category
+  const baseData: RankingEntry[] = period === "weekly" ? WEEKLY_RANKING : MONTHLY_RANKING;
+  const data = useMemo(() => {
+    const targetCategory = CATEGORY_TO_MODEL_CATEGORY[categoryFilter];
+    if (!targetCategory) return baseData;
+    return baseData.filter(m => getModelCategoryByName(m.model) === targetCategory);
+  }, [baseData, categoryFilter]);
+
+  // Filter arena data
+  const filteredArena = useMemo(() => {
+    let result = ARENA_EXPERT_TOP20;
+
+    // Apply category filter
+    const targetCategory = CATEGORY_TO_MODEL_CATEGORY[categoryFilter];
+    if (targetCategory) {
+      result = result.filter(e => getModelCategoryByName(e.name) === targetCategory);
+    }
+
+    // Apply quick filter
+    if (quickFilter === 'open') {
+      result = result.filter(e => e.license === 'open');
+    } else if (quickFilter === 'proprietary') {
+      result = result.filter(e => e.license !== 'open');
+    } else if (quickFilter === 'reasoning') {
+      result = result.filter(e => REASONING_MODEL_NAMES.has(e.name));
+    }
+
+    return result;
+  }, [categoryFilter, quickFilter]);
+
   const topModel = data[0];
-  const maxTokens = Math.max(...data.map((m) => m.tokensNum));
+  const maxTokens = data.length > 0 ? Math.max(...data.map((m) => m.tokensNum)) : 0;
 
   return (
     <div className="space-y-6">
+      {/* ── 카테고리 필터 ── */}
+      <div className="flex flex-wrap gap-2">
+        {CATEGORY_BUTTONS.map(btn => (
+          <button
+            key={btn.value}
+            onClick={() => setCategoryFilter(btn.value)}
+            className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all ${
+              categoryFilter === btn.value
+                ? 'bg-brand-500 text-white'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+            }`}
+          >
+            {btn.label}
+          </button>
+        ))}
+      </div>
+
       {/* ── 헤더 ── */}
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
@@ -332,7 +445,24 @@ export default function ExploreRanking() {
       {/* ═══ arena.ai Expert 랭킹 ═══ */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
         <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-1">⚔️ arena.ai Expert 랭킹</h2>
-        <p className="text-xs text-gray-400 mb-4">전문가 블라인드 평가 · 295,028표 · 290개 모델 · 2026년 4월 17일</p>
+        <p className="text-xs text-gray-400 mb-3">전문가 블라인드 평가 · 295,028표 · 290개 모델 · 2026년 4월 17일</p>
+
+        {/* ── Quick Filter Buttons ── */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {QUICK_FILTER_BUTTONS.map(btn => (
+            <button
+              key={btn.value}
+              onClick={() => setQuickFilter(btn.value)}
+              className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all ${
+                quickFilter === btn.value
+                  ? 'bg-brand-500 text-white'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+            >
+              {btn.label}
+            </button>
+          ))}
+        </div>
         <div className="overflow-x-auto">
           <table className="w-full text-xs">
             <thead>
@@ -348,7 +478,7 @@ export default function ExploreRanking() {
               </tr>
             </thead>
             <tbody>
-              {ARENA_EXPERT_TOP20.map((e, i) => (
+              {filteredArena.map((e, i) => (
                 <tr key={i} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                   <td className="py-2.5 px-2 font-bold">
                     <span className={e.rank <= 3 ? `inline-flex items-center justify-center w-6 h-6 rounded-full text-white text-[10px] ${e.rank === 1 ? 'bg-amber-400' : e.rank === 2 ? 'bg-gray-400' : 'bg-amber-600'}` : ''}>

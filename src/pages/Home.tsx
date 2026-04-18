@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
@@ -105,8 +105,8 @@ const arenaBgs = [
   'bg-gradient-to-br from-orange-50 to-white dark:from-orange-900/10 dark:to-gray-900',
 ] as const;
 
-// ── 바 차트 데이터 ──
-const scatterData = strengths
+// ── 산점도 데이터 (필터 전) ──
+const allScatterData = strengths
   .filter(s => {
     const m = models.find(x => x.id === s.id);
     return m && m.inputPrice != null;
@@ -115,13 +115,27 @@ const scatterData = strengths
     const m = models.find(x => x.id === s.id)!;
     const avgScore = Object.values(s.scores).reduce((sum, v) => sum + v, 0) / 6;
     const totalPrice = (m.inputPrice ?? 0) + (m.outputPrice ?? 0);
+    const isOpenSource = s.env === 'open' || s.env === 'local';
+    const isFree = m.inputPrice === 0 && m.outputPrice === 0;
     return {
       name: s.name,
       companyId: s.companyId,
       price: totalPrice,
       score: Math.round(avgScore * 10) / 10,
+      isOpenSource,
+      isFree,
     };
   });
+
+// ── 바 차트 필터용 추론모델 ──
+const REASONING_MODEL_NAMES = new Set([
+  'Claude Opus 4.6', 'Claude Sonnet 4.6',
+  'GPT-5.4', 'o3',
+  'DeepSeek R1',
+  'Gemini 3 Pro', 'Gemini 3 Flash',
+  'MiMo-V2-Pro',
+  'GLM-5.1',
+]);
 
 function getScatterColor(score: number, price: number) {
   const ratio = (score / 10) / Math.max(price, 0.1);
@@ -131,13 +145,7 @@ function getScatterColor(score: number, price: number) {
   return '#EF4444';
 }
 
-// ── 산점도 데이터 ──
-const barData = TOP_RANKING.map((r, i) => ({
-  name: r.model,
-  company: r.company,
-  tokens: r.tokensNum,
-  fill: i === 0 ? '#5B5FEF' : i === 1 ? '#7C6AEF' : i === 2 ? '#9B8AEF' : i < 5 ? '#B8AAEF' : '#D4CAEF',
-}));
+
 
 /* ── 커스텀 Tooltip ── */
 function ScatterTooltipContent({ active, payload }: { active?: boolean; payload?: Array<{ payload?: { name: string; price: number; score: number } }> }) {
@@ -152,11 +160,54 @@ function ScatterTooltipContent({ active, payload }: { active?: boolean; payload?
   );
 }
 
+/* ── 필터 타입 ── */
+type ScatterFilter = 'all' | 'opensource' | 'proprietary' | 'free';
+type BarFilter = 'all' | 'reasoning' | 'general';
+
+const SCATTER_FILTER_BUTTONS: { label: string; value: ScatterFilter }[] = [
+  { label: '전체', value: 'all' },
+  { label: '오픈소스', value: 'opensource' },
+  { label: '상용', value: 'proprietary' },
+  { label: '무료', value: 'free' },
+];
+
+const BAR_FILTER_BUTTONS: { label: string; value: BarFilter }[] = [
+  { label: '전체', value: 'all' },
+  { label: '추론모델', value: 'reasoning' },
+  { label: '일반모델', value: 'general' },
+];
+
 /* ── 컴포넌트 ── */
 export default function Home() {
   const { news: allNews } = useNewsRSS();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
+  const [scatterFilter, setScatterFilter] = useState<ScatterFilter>('all');
+  const [barFilter, setBarFilter] = useState<BarFilter>('all');
+
+  // Filter scatter data
+  const scatterData = useMemo(() => {
+    switch (scatterFilter) {
+      case 'opensource': return allScatterData.filter(d => d.isOpenSource);
+      case 'proprietary': return allScatterData.filter(d => !d.isOpenSource);
+      case 'free': return allScatterData.filter(d => d.isFree);
+      default: return allScatterData;
+    }
+  }, [scatterFilter]);
+
+  // Filter bar data
+  const barData = useMemo(() => {
+    switch (barFilter) {
+      case 'reasoning': return TOP_RANKING.filter(r => REASONING_MODEL_NAMES.has(r.model));
+      case 'general': return TOP_RANKING.filter(r => !REASONING_MODEL_NAMES.has(r.model));
+      default: return TOP_RANKING;
+    }
+  }, [barFilter]).map((r, i, arr) => ({
+    name: r.model,
+    company: r.company,
+    tokens: r.tokensNum,
+    fill: i === 0 ? '#5B5FEF' : i === 1 ? '#7C6AEF' : i === 2 ? '#9B8AEF' : i < 5 ? '#B8AAEF' : '#D4CAEF',
+  }));
 
   const topNews = allNews.length > 0
     ? allNews.slice(0, 5)
@@ -307,7 +358,23 @@ export default function Home() {
         <div className="flex items-center justify-between mb-1">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">가격 vs 성능 — 가성비 한눈에</h2>
         </div>
-        <p className="text-xs text-gray-400 mb-4">좌상단 = 가성비 최고 · 우하단 = 비싸고 약함 · 점수는 종합 평가 (코딩+글쓰기+요약 등)</p>
+        <p className="text-xs text-gray-400 mb-3">좌상단 = 가성비 최고 · 우하단 = 비싸고 약함 · 점수는 종합 평가 (코딩+글쓰기+요약 등)</p>
+        {/* ── Scatter Filter Buttons ── */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {SCATTER_FILTER_BUTTONS.map(btn => (
+            <button
+              key={btn.value}
+              onClick={() => setScatterFilter(btn.value)}
+              className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all ${
+                scatterFilter === btn.value
+                  ? 'bg-brand-500 text-white'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+            >
+              {btn.label}
+            </button>
+          ))}
+        </div>
         <div className="w-full overflow-x-auto">
           <div className="min-w-[480px]" style={{ height: 380 }}>
             <ScatterChart width="100%" height="100%" margin={{ top: 10, right: 20, bottom: 10, left: 0 }}>
@@ -352,7 +419,24 @@ export default function Home() {
             전체 랭킹 <ArrowRight className="w-3 h-3" />
           </Link>
         </div>
-        <p className="text-xs text-gray-400 mb-5">OpenRouter 실제 사용량 + arena.ai Expert 랭킹 · 매주 업데이트</p>
+        <p className="text-xs text-gray-400 mb-4">OpenRouter 실제 사용량 + arena.ai Expert 랭킹 · 매주 업데이트</p>
+
+        {/* ── Bar Chart Filter Buttons ── */}
+        <div className="flex flex-wrap gap-2 mb-5">
+          {BAR_FILTER_BUTTONS.map(btn => (
+            <button
+              key={btn.value}
+              onClick={() => setBarFilter(btn.value)}
+              className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all ${
+                barFilter === btn.value
+                  ? 'bg-brand-500 text-white'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+            >
+              {btn.label}
+            </button>
+          ))}
+        </div>
 
         {/* Arena Expert Top3 Cards */}
         {arenaTop3.length > 0 && (

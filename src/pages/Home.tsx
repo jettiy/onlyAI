@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useNewsRSS } from '../hooks/useNewsRSS';
 import { models } from '../data/models';
 import { strengths } from '../data/modelStrengths';
-import { WEEKLY_RANKING, RANKING_SOURCE } from '../data/rankings';
+import { WEEKLY_RANKING, RANKING_SOURCE, ARENA_EXPERT_TOP20 } from '../data/rankings';
 import { CompanyLogo } from '../components/CompanyLogo';
 import {
   ScatterChart,
@@ -334,7 +334,7 @@ export default function Home() {
             전체 랭킹 <ArrowRight className="w-3 h-3" />
           </Link>
         </div>
-        <p className="text-xs text-gray-400 mb-5">OpenRouter 실제 사용량 기준 · 매주 업데이트</p>
+        <p className="text-xs text-gray-400 mb-5">OpenRouter 실제 사용량 + arena.ai Expert 랭킹 · 매주 업데이트</p>
 
         <div className="w-full overflow-x-auto">
           <div className="min-w-[400px]" style={{ height: 400 }}>
@@ -359,11 +359,17 @@ export default function Home() {
               />
               <Tooltip
                 formatter={(value: number) => [`${value}T 토큰`, '주간 사용량']}
-                contentStyle={{
-                  backgroundColor: 'white',
-                  border: '1px solid #e5e7eb',
-                  borderRadius: '8px',
-                  fontSize: '12px',
+                content={({ active, payload }) => {
+                  if (!active || !payload?.[0]?.payload) return null;
+                  const d = payload[0].payload as { name: string; tokens: number };
+                  const arena = ARENA_EXPERT_TOP20.find(a => a.name === d.name);
+                  return (
+                    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2 shadow-lg text-xs">
+                      <p className="font-bold text-gray-900 dark:text-white">{d.name}</p>
+                      <p className="text-gray-500">주간: <span className="font-semibold">{d.tokens}T 토큰</span></p>
+                      {arena && <p className="text-gray-500">Arena: <span className="font-semibold text-[#5B5FEF]">{arena.score}{arena.ci}</span> <span className="text-gray-400">({arena.votes}표)</span></p>}
+                    </div>
+                  );
                 }}
               />
               <Bar dataKey="tokens" radius={[0, 6, 6, 0]} barSize={24}>

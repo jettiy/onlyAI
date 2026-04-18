@@ -2,6 +2,33 @@
 // 출처: OpenRouter Rankings (https://openrouter.ai/rankings)
 // 최종 업데이트: 2026-04-16
 
+export interface ArenaExpertEntry {
+  rank: number;
+  modelId: string;
+  name: string;
+  company: string;
+  score: number;
+  ci: string;
+  votes: number;
+  rankSpread: string;
+  license: 'proprietary' | 'open';
+}
+
+export const ARENA_EXPERT_TOP20: ArenaExpertEntry[] = [
+  { rank: 1, modelId: 'claude-opus-4-7', name: 'Claude Opus 4.7', company: 'Anthropic', score: 1540, ci: '±28', votes: 6256, rankSpread: '4-17', license: 'proprietary' },
+  { rank: 2, modelId: 'claude-opus-4-6', name: 'Claude Opus 4.6', company: 'Anthropic', score: 1542, ci: '±16', votes: 2219, rankSpread: '2-35', license: 'proprietary' },
+  { rank: 3, modelId: 'claude-opus-4-7', name: 'Claude Opus 4.6 Thinking', company: 'Anthropic', score: 1542, ci: '±18', votes: 3027, rankSpread: '3-32', license: 'proprietary' },
+  { rank: 5, modelId: 'gpt-5-4', name: 'GPT-5.4 High', company: 'OpenAI', score: 1526, ci: '±21', votes: 0, rankSpread: '5-14', license: 'proprietary' },
+  { rank: 8, modelId: 'mimo-v2-pro', name: 'MiMo-V2-Pro', company: 'Xiaomi', score: 1499, ci: '±22', votes: 1469, rankSpread: '9', license: 'proprietary' },
+  { rank: 10, modelId: 'claude-sonnet-4-6', name: 'Claude Sonnet 4.6', company: 'Anthropic', score: 1498, ci: '±10', votes: 5812, rankSpread: '10-19', license: 'proprietary' },
+  { rank: 12, modelId: 'claude-opus-4-5', name: 'Claude Opus 4.5', company: 'Anthropic', score: 1504, ci: '±11', votes: 3027, rankSpread: '12-28', license: 'proprietary' },
+  { rank: 13, modelId: 'gpt-5-4', name: 'GPT-5.4', company: 'OpenAI', score: 1501, ci: '±12', votes: 2567, rankSpread: '13-21', license: 'proprietary' },
+  { rank: 18, modelId: 'glm-5.1', name: 'GLM-5.1', company: 'Zhipu AI', score: 1483, ci: '±26', votes: 489, rankSpread: '18-24', license: 'proprietary' },
+  { rank: 17, modelId: 'gemini-3-flash', name: 'Gemini 3 Flash', company: 'Google', score: 1483, ci: '±17', votes: 3674, rankSpread: '17-23', license: 'proprietary' },
+  { rank: 164, modelId: 'llama-4-maverick', name: 'Llama 4 Maverick', company: 'Meta', score: 1324, ci: '±13', votes: 1994, rankSpread: '164', license: 'open' },
+  { rank: 180, modelId: 'llama-4-scout', name: 'Llama 4 Scout', company: 'Meta', score: 1308, ci: '±16', votes: 1503, rankSpread: '180', license: 'open' },
+];
+
 export interface RankingEntry {
   rank: number;
   model: string;
@@ -47,4 +74,4 @@ export const RANKING_TIMELINE = [
   { week: "4월 W1", ...Object.fromEntries(WEEKLY_RANKING.slice(0, 5).map(m => [m.model, m.tokensNum])) },
 ];
 
-export const RANKING_SOURCE = "OpenRouter (2026년 4월 16일 크롤링)";
+export const RANKING_SOURCE = "OpenRouter + arena.ai Expert (2026년 4월 18일)";

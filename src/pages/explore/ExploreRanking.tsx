@@ -5,6 +5,7 @@ import {
 } from "../../lib/safeRecharts";
 import {
   WEEKLY_RANKING, MONTHLY_RANKING, RANKING_TIMELINE, RANKING_SOURCE,
+  ARENA_EXPERT_TOP20,
   type RankingEntry,
 } from "../../data/rankings";
 import { CompanyLogo } from "../../components/CompanyLogo";
@@ -327,6 +328,50 @@ export default function ExploreRanking() {
           </ResponsiveContainer>
         </div>
       )}
+
+      {/* ═══ arena.ai Expert 랭킹 ═══ */}
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
+        <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-1">⚔️ arena.ai Expert 랭킹</h2>
+        <p className="text-xs text-gray-400 mb-4">전문가 블라인드 평가 · 295,028표 · 290개 모델 · 2026년 4월 17일</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b border-gray-200 dark:border-gray-700 text-left text-gray-500">
+                <th className="py-2 px-2 w-12">순위</th>
+                <th className="py-2 px-2">모델</th>
+                <th className="py-2 px-2">회사</th>
+                <th className="py-2 px-2 text-right">점수</th>
+                <th className="py-2 px-2 text-right">신뢰구간</th>
+                <th className="py-2 px-2 text-right">투표수</th>
+                <th className="py-2 px-2 text-right">순위범위</th>
+                <th className="py-2 px-2 text-center">라이선스</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ARENA_EXPERT_TOP20.map((e, i) => (
+                <tr key={i} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                  <td className="py-2.5 px-2 font-bold">
+                    <span className={e.rank <= 3 ? `inline-flex items-center justify-center w-6 h-6 rounded-full text-white text-[10px] ${e.rank === 1 ? 'bg-amber-400' : e.rank === 2 ? 'bg-gray-400' : 'bg-amber-600'}` : ''}>
+                      {e.rank <= 3 ? ['', '🥇', '🥈', '🥉'][e.rank] : e.rank}
+                    </span>
+                  </td>
+                  <td className="py-2.5 px-2 font-semibold text-gray-900 dark:text-white">{e.name}</td>
+                  <td className="py-2.5 px-2 text-gray-500">{e.company}</td>
+                  <td className="py-2.5 px-2 text-right font-bold text-gray-900 dark:text-white">{e.score}</td>
+                  <td className="py-2.5 px-2 text-right text-gray-400">{e.ci}</td>
+                  <td className="py-2.5 px-2 text-right text-gray-500">{e.votes > 0 ? e.votes.toLocaleString() : '-'}</td>
+                  <td className="py-2.5 px-2 text-right text-gray-400">{e.rankSpread}</td>
+                  <td className="py-2.5 px-2 text-center">
+                    <span className={`px-1.5 py-0.5 rounded text-[10px] font-medium ${e.license === 'open' ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400' : 'bg-gray-100 dark:bg-gray-800 text-gray-500'}`}>
+                      {e.license === 'open' ? '오픈소스' : '상용'}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       {/* ── 출처 ── */}
       <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">

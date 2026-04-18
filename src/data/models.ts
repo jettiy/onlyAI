@@ -27,6 +27,10 @@ export interface AIModel {
   url?: string;
   updatedAt: string;
   koreanBilling?: boolean | null;
+  arenaScore?: number | null;
+  arenaCI?: string | null;
+  arenaVotes?: number | null;
+  arenaRankSpread?: string | null;
 }
 
 export interface AICompany {
@@ -139,6 +143,7 @@ export const models: AIModel[] = [
   {
     id: 'gpt-5-4',
     name: 'GPT-5.4',
+    arenaScore: 1501, arenaCI: '±12', arenaVotes: 2567, arenaRankSpread: '13-21',
     company: 'OpenAI', companyId: 'openai', region: 'us',
     tier: 'flagship', isFeatured: true,
     description: 'OpenAI 최신 플래그십. 네이티브 컴퓨터 사용 기능. 272K 표준(1M 시 2배 요금). 전문가용 업무 최강.',
@@ -323,6 +328,7 @@ export const models: AIModel[] = [
     url: 'https://claude.ai',
     updatedAt: '2026-04-17',
     koreanBilling: true,
+    arenaScore: 1540, arenaCI: '±28', arenaVotes: 6256, arenaRankSpread: '4-17',
   },
   {
     id: 'claude-opus-4-6',
@@ -340,9 +346,11 @@ export const models: AIModel[] = [
     url: 'https://claude.ai',
     updatedAt: '2026-04-17',
     koreanBilling: true,
+    arenaScore: 1542, arenaCI: '±16', arenaVotes: 2219, arenaRankSpread: '2-35',
   },
   {
     id: 'claude-sonnet-4-6',
+    arenaScore: 1498, arenaCI: '±10', arenaVotes: 5812, arenaRankSpread: '10-19',
     name: 'Claude Sonnet 4.6',
     company: 'Anthropic', companyId: 'anthropic', region: 'us',
     tier: 'strong', isFeatured: true,
@@ -373,6 +381,7 @@ export const models: AIModel[] = [
     sourceUrl: 'https://www.anthropic.com/pricing',
     updatedAt: '2026-04-08',
     koreanBilling: true,
+    arenaScore: 1504, arenaCI: '±11', arenaVotes: 3027, arenaRankSpread: '12-28',
   },
   {
     id: 'claude-haiku-4-5',
@@ -472,6 +481,7 @@ export const models: AIModel[] = [
   },
   {
     id: 'gemini-3-flash',
+    arenaScore: 1483, arenaCI: '±17', arenaVotes: 3674, arenaRankSpread: '17-23',
     name: 'Gemini 3 Flash',
     company: 'Google', companyId: 'google', region: 'us',
     tier: 'strong', isFeatured: false,
@@ -504,6 +514,7 @@ export const models: AIModel[] = [
   // Meta ─────────────────────
   {
     id: 'llama-4-maverick',
+    arenaScore: 1324, arenaCI: '±13', arenaVotes: 1994, arenaRankSpread: '164',
     name: 'Llama 4 Maverick',
     company: 'Meta', companyId: 'meta', region: 'us',
     tier: 'flagship', isFeatured: true,
@@ -521,6 +532,7 @@ export const models: AIModel[] = [
   },
   {
     id: 'llama-4-scout',
+    arenaScore: 1308, arenaCI: '±16', arenaVotes: 1503, arenaRankSpread: '180',
     name: 'Llama 4 Scout',
     company: 'Meta', companyId: 'meta', region: 'us',
     tier: 'strong', isFeatured: false,
@@ -592,6 +604,7 @@ export const models: AIModel[] = [
   // MiniMax ─────────────────────
   {
     id: 'minimax-m2-7',
+    arenaScore: 1480, arenaCI: null, arenaVotes: null, arenaRankSpread: null,
     name: 'MiniMax M2.7',
     company: 'MiniMax', companyId: 'minimax', region: 'china',
     tier: 'flagship', isFeatured: true,
@@ -609,6 +622,7 @@ export const models: AIModel[] = [
   },
   {
     id: 'minimax-m2-5',
+    arenaScore: 1460, arenaCI: null, arenaVotes: null, arenaRankSpread: null,
     name: 'MiniMax M2.5',
     company: 'MiniMax', companyId: 'minimax', region: 'china',
     tier: 'strong', isFeatured: false,
@@ -767,6 +781,7 @@ export const models: AIModel[] = [
   // Zhipu AI ─────────────────────
   {
     id: 'glm-5.1',
+    arenaScore: 1483, arenaCI: '±26', arenaVotes: 489, arenaRankSpread: '18-24',
     name: 'GLM-5.1',
     company: 'Zhipu AI', companyId: 'zhipu', region: 'china',
     tier: 'flagship', isFeatured: true,
@@ -864,6 +879,7 @@ export const models: AIModel[] = [
   // Xiaomi ─────────────────────
   {
     id: 'mimo-v2-pro',
+    arenaScore: 1499, arenaCI: '±22', arenaVotes: 1469, arenaRankSpread: '9',
     name: 'MiMo-V2-Pro (Hunter Alpha)',
     company: 'Xiaomi', companyId: 'xiaomi', region: 'china',
     tier: 'flagship', isFeatured: true,

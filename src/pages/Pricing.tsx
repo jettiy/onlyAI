@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { cloudProviders } from '../data/cloudProviders';
 import { models, DATA_UPDATED_AT } from '../data/models';
 import { getLogoUrl } from '../lib/logoUtils';
+import { estimateMonthlyCost, formatMonthlyCost } from '../lib/estimatedMonthlyCost';
 
 interface PriceRow {
   model: string;
@@ -168,6 +169,13 @@ function formatKRW(usd: number, rate: number): string {
   return `₩${won.toFixed(1)}`;
 }
 
+function formatMonthlyCostKRW(usdCost: number | null, rate: number): string {
+  if (usdCost == null) return '';
+  const won = usdCost * rate;
+  if (won >= 1000) return `약 ${Math.round(won).toLocaleString('ko-KR')}원/월`;
+  return `약 ${Math.round(won)}원/월`;
+}
+
 export default function Pricing() {
   const [tab, setTab] = useState<'bar' | 'table' | 'cache' | 'api' | 'calc'>('bar');
   const [prices, setPrices] = useState<PriceRow[]>(FALLBACK_PRICES);
@@ -324,6 +332,9 @@ export default function Pricing() {
                   </div>
                   <div className="w-14 text-right text-sm font-bold text-gray-900 dark:text-white shrink-0 font-mono">${row.input}</div>
                   {showKRW && <div className="hidden sm:block w-20 text-right text-[11px] font-medium text-gray-400 dark:text-gray-500 shrink-0">{formatKRW(row.input, krwRate)}</div>}
+                  <div className="w-16 text-right text-[11px] font-medium text-violet-600 dark:text-violet-400 shrink-0">
+                    {formatMonthlyCost(estimateMonthlyCost(row.input, row.output).total)}
+                  </div>
                 </div>
               );
             })}
@@ -360,6 +371,7 @@ export default function Pricing() {
                   <th className="text-left px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">모델</th>
                   <th className="text-right px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">입력</th>
                   <th className="text-right px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">출력</th>
+                  <th className="text-right px-3 py-3 font-semibold text-violet-600 dark:text-violet-400">월 예상 비용</th>
                   {showCacheCols && <th className="text-right px-3 py-3 font-semibold text-emerald-600 dark:text-emerald-400">캐시 읽기</th>}
                   {showCacheCols && <th className="text-right px-3 py-3 font-semibold text-orange-600 dark:text-orange-400">캐시 쓰기</th>}
                   <th className="text-center px-3 py-3 font-semibold text-gray-600 dark:text-gray-300">컨텍스트</th>
@@ -385,6 +397,17 @@ export default function Pricing() {
                       </td>
                       <td className="px-3 py-3 text-right font-mono text-gray-900 dark:text-white">${row.input}{showKRW && <span className="block text-[10px] text-gray-400 font-normal">{formatKRW(row.input, krwRate)}</span>}</td>
                       <td className="px-3 py-3 text-right font-mono text-gray-900 dark:text-white">${row.output}{showKRW && <span className="block text-[10px] text-gray-400 font-normal">{formatKRW(row.output, krwRate)}</span>}</td>
+                      <td className="px-3 py-3 text-right">
+                        {((): React.ReactNode => {
+                          const mc = estimateMonthlyCost(row.input, row.output);
+                          return mc.total == null ? <span className="text-[11px] text-gray-300">—</span> : (
+                            <div>
+                              <span className="text-xs font-bold text-violet-700 dark:text-violet-300">{formatMonthlyCost(mc.total)}</span>
+                              {showKRW && mc.total != null && <span className="block text-[10px] text-gray-400 font-normal">{formatMonthlyCostKRW(mc.total, krwRate)}</span>}
+                            </div>
+                          );
+                        })()}
+                      </td>
                       {showCacheCols && <td className="px-3 py-3 text-right font-mono text-emerald-600 dark:text-emerald-400">{row.cacheRead ? <>{`$${row.cacheRead}`}{showKRW && <span className="block text-[10px] text-gray-400 font-normal">{formatKRW(row.cacheRead, krwRate)}</span>}</> : '—'}</td>}
                       {showCacheCols && <td className="px-3 py-3 text-right font-mono text-orange-600 dark:text-orange-400">{row.cacheWrite ? <>{`$${row.cacheWrite}`}{showKRW && <span className="block text-[10px] text-gray-400 font-normal">{formatKRW(row.cacheWrite, krwRate)}</span>}</> : '—'}</td>}
                       <td className="px-3 py-3 text-center text-gray-500 dark:text-gray-400">{row.context}</td>

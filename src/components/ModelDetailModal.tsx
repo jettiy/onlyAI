@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CompanyLogo } from "./CompanyLogo";
 import { tierColors, tierLabels, type AIModel } from "../data/models";
+import { estimateMonthlyCost, formatMonthlyCost } from "../lib/estimatedMonthlyCost";
 
 interface ModelDetailModalProps {
   model: AIModel;
@@ -126,6 +127,13 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
                     <span className={mutedText}>출력</span>
                     <span className={mutedText}>{formatPrice(model.outputPrice)}</span>
                   </div>
+                </div>
+              </div>
+              {/* 월 예상 비용 */}
+              <div className={`mt-2 pt-2 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
+                <div className="flex justify-between items-center">
+                  <span className={`text-[11px] font-medium ${isDark ? 'text-violet-400' : 'text-violet-600'}`}>💡 하루 30분 대화 기준 월 예상 비용</span>
+                  <span className={`text-sm font-bold ${isDark ? 'text-violet-300' : 'text-violet-700'}`}>{formatMonthlyCost(estimateMonthlyCost(model.inputPrice, model.outputPrice).total)}</span>
                 </div>
               </div>
             </div>

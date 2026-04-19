@@ -3,6 +3,43 @@ import { CompanyLogo } from "./CompanyLogo";
 import { tierColors, tierLabels, type AIModel } from "../data/models";
 import { estimateMonthlyCost, formatMonthlyCost } from "../lib/estimatedMonthlyCost";
 
+/** 모델 용도 기반 추천 질문 */
+function getTryQuestions(model: AIModel): string[] {
+  const name = model.name.toLowerCase();
+  const strengths = model.strengths.map(s => s.toLowerCase());
+  const questions: string[] = [];
+
+  // 코딩/개발
+  if (strengths.some(s => s.includes('코딩') || s.includes('개발') || s.includes('코드')) || name.includes('code') || name.includes('codex')) {
+    questions.push("이 Python 코드에서 버그를 찾아줘", "REST API 엔드포인트를 작성해줘");
+  }
+  // 글쓰기/문서
+  if (strengths.some(s => s.includes('글') || s.includes('문서') || s.includes('작성')) || name.includes('writer')) {
+    questions.push("회의록을 5줄로 요약해줘", "블로그 글 주제 10개 추천해줘");
+  }
+  // 번역
+  if (strengths.some(s => s.includes('번역')) || name.includes('translat')) {
+    questions.push("이 영어 이메일을 한국어로 자연스럽게 번역해줘");
+  }
+  // 이미지
+  if (strengths.some(s => s.includes('이미지') || s.includes('그림') || s.includes('이미지 생성')) || name.includes('dall') || name.includes('image') || name.includes('flux')) {
+    questions.push("강아지가 우주복을 입고 있는 일러스트를 그려줘");
+  }
+  // 추론/분석
+  if (strengths.some(s => s.includes('추론') || s.includes('분석') || s.includes('논리')) || name.includes('o3') || name.includes('o1') || name.includes('reason')) {
+    questions.push("이 비즈니스 문제를 3가지 관점에서 분석해줘");
+  }
+  // 한국어
+  if (strengths.some(s => s.includes('한국어')) || model.koreanSupport === 'A' || model.koreanSupport === 'B') {
+    questions.push("존댓말로 정중한 이메일 초안을 작성해줘");
+  }
+  // 기본 질문 (항상)
+  if (questions.length < 3) {
+    questions.push("이메일을 공손하게 고쳐줘", "오늘 할 일을 우선순위대로 정리해줘", "어려운 개념을 초등학생도 이해할 수 있게 설명해줘");
+  }
+  return questions.slice(0, 4);
+}
+
 interface ModelDetailModalProps {
   model: AIModel;
   onClose: () => void;
@@ -213,6 +250,24 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
               </div>
             </div>
           )}
+
+          {/* 바로 써볼 질문 */}
+          <div className="space-y-2">
+            <p className={`text-xs font-semibold ${mutedText}`}>💡 바로 써볼 질문</p>
+            <div className="space-y-1.5">
+              {getTryQuestions(model).map((q, i) => (
+                <button
+                  key={i}
+                  onClick={() => navigator.clipboard.writeText(q)}
+                  className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-colors ${isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-gray-50 hover:bg-gray-100 text-gray-700'}`}
+                  title="클릭하면 복사됩니다"
+                >
+                  <span className="opacity-50 mr-1.5">{i + 1}.</span>{q}
+                  <span className="float-right opacity-30 text-[10px]">복사</span>
+                </button>
+              ))}
+            </div>
+          </div>
 
           {/* Description */}
           <p className={`text-sm leading-relaxed ${isDark ? "text-gray-200" : "text-gray-700"}`}>

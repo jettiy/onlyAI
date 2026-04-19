@@ -235,6 +235,32 @@ export default function ExploreCompare() {
         ))}
       </div>
 
+      {/* 한눈에 결론 */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {[
+          { label: '초보자에게 가장 쉬움', color: 'emerald', model: 'ChatGPT', reason: '가입만 하면 바로 사용 가능' },
+          { label: '가성비 최고', color: 'violet', model: 'GLM-5', reason: '무료 + 한국어 성능 우수' },
+          { label: '무료 시작 추천', color: 'blue', model: 'Gemini 2.5 Flash', reason: 'Google 계정으로 즉시 체험' },
+          { label: '한국어 강함', color: 'amber', model: 'GPT-5.4', reason: '한국어 ₩ 결제 + 최고 성능' },
+        ].map((c) => (
+          <div key={c.label} className={`rounded-xl border p-3.5 ${
+            c.color === 'emerald' ? 'border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10' :
+            c.color === 'violet' ? 'border-violet-200 dark:border-violet-800/50 bg-violet-50/50 dark:bg-violet-900/10' :
+            c.color === 'blue' ? 'border-blue-200 dark:border-blue-800/50 bg-blue-50/50 dark:bg-blue-900/10' :
+            'border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-900/10'
+          }`}>
+            <p className={`text-[10px] font-bold uppercase tracking-wider mb-1.5 ${
+              c.color === 'emerald' ? 'text-emerald-600 dark:text-emerald-400' :
+              c.color === 'violet' ? 'text-violet-600 dark:text-violet-400' :
+              c.color === 'blue' ? 'text-blue-600 dark:text-blue-400' :
+              'text-amber-600 dark:text-amber-400'
+            }`}>{c.label}</p>
+            <p className="text-sm font-bold text-gray-900 dark:text-white">{c.model}</p>
+            <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5">{c.reason}</p>
+          </div>
+        ))}
+      </div>
+
       {/* ═══ 가격 비교 탭 ═══ */}
       {tab === 'price' && (
         <div className="space-y-4">

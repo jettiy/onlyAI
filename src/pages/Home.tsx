@@ -260,6 +260,37 @@ export default function Home() {
           <span>·</span>
           <Link to="/explore/compare" className="hover:text-[#5B5FEF] transition-colors inline-flex items-center gap-1"><BarChart3 className="w-3 h-3" /> 전체 모델</Link>
         </div>
+
+        {/* 용도별 바로가기 */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-4 max-w-lg mx-auto">
+          {[
+            { label: '✍️ 글쓰기·문서', query: '글쓰기 문서 작성' },
+            { label: '🌐 번역·요약', query: '번역 요약' },
+            { label: '🎨 이미지 생성', query: '이미지 생성' },
+            { label: '💼 업무 생산성', query: '업무 생산성 코딩' },
+          ].map((item) => (
+            <button
+              key={item.query}
+              onClick={() => { setSearchQuery(item.query); handleSearch(new Event('click') as any); }}
+              className="px-3.5 py-2 rounded-xl text-xs font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-[#5B5FEF]/10 hover:text-[#5B5FEF] dark:hover:bg-[#5B5FEF]/20 dark:hover:text-[#8B8FFF] transition-all border border-transparent hover:border-[#5B5FEF]/20"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+
+        {/* 2차 필터 */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-2 max-w-lg mx-auto">
+          {['무료 우선', '월 1만원 이하', '한국어 잘함', '초보자 쉬움'].map((f) => (
+            <button
+              key={f}
+              onClick={() => { setSearchQuery(f); handleSearch(new Event('click') as any); }}
+              className="px-3 py-1.5 rounded-full text-[11px] font-medium text-gray-400 dark:text-gray-500 hover:text-[#5B5FEF] dark:hover:text-[#8B8FFF] hover:bg-[#5B5FEF]/5 transition-all"
+            >
+              {f}
+            </button>
+          ))}
+        </div>
       </section>
 
       {/* ═══ 2. HIGHLIGHTS — 3카드 ═══ */}

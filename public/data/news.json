@@ -1,17 +1,125 @@
 {
-  "updatedAt": "2026-04-20T08:20:52.184Z",
-  "updatedAtKST": "2026. 4. 20. PM 5:20:52",
+  "updatedAt": "2026-04-20T13:58:58.686Z",
+  "updatedAtKST": "2026. 4. 20. PM 10:58:58",
   "stats": {
     "aitimes": 20,
-    "36kr": 12,
+    "36kr": 8,
     "hf": 20,
     "tc": 17,
-    "github": 9,
-    "total": 66
+    "github": 8,
+    "total": 65
   },
   "news": [
     {
-      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=209490",
+      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=209470",
+      "title": "'클로드 미소스'를 파이토치로 재현한 오픈소스 프로젝트 '오픈미소스' 등장",
+      "summary": "앤트로픽이 개발한 차세대 AI 모델 ‘클로드 미소스(Claude Mythos)’의 구조를 둘러싼 궁금증이 이어지는 가운데, 이를 이론적으로 재구성하려는 오픈소스 프로젝트 ‘오픈미소스(OpenMythos)’가 공개돼 주목받고 있다. 카이 고메스 스웜즈(swarms.ai) CEO는 19일(현지시간) ‘클로드 미소스’를 재구성한 오픈소스 프로젝트 ‘오픈미소스’를",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209470",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=209496",
+      "title": "바이트댄스, 인간-사물 상호작용까지 반영하는 영상 AI ‘옴니쇼’ 공개",
+      "summary": "텍스트·이미지·오디오·포즈를 한번에 이해하고, 사람과 사물의 자연스러운 상호작용까지 구현하는 영상 생성 AI가 등장했다. 바이트댄스는 13일(현지시간) 텍스트와 이미지, 오디오, 포즈 데이터를 동시에 활용해 영상을 생성하는 차세대 AI 모델 ‘옴니쇼(OmniShow)’를 온라인 아카이브를 통해 공개했다.기존 영상 생성 AI의 한계를 넘어, 인간과 사물 간의",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209496",
+      "category": "멀티모달",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=209507",
+      "title": "\"딥시크-V4, 이번 주 출시\" 예측 등장...하드웨어 한계 돌파 가능성",
+      "summary": "딥시크가 차세대 초거대 모델 ‘딥시크-V4’를 이르면 다음 주 공개할 것으로 알려지면서 글로벌 AI 업계가 긴장하고 있다. 특히 미국의 수출 규제 속에서도 화웨이 칩만으로 최고 수준의 성능을 구현했다는 점이 부각되며, AI 인프라 경쟁 구도에 중대한 변화를 예고하고 있다.딥시크 소식에 정통한 장이판 프린스턴대학교 연구원은 19일(현지시간) 소셜미디어 X를 ",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209507",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=209497",
+      "title": "피지컬 인텔리전스, 훈련받지 않은 일까지 처리하는 로봇 모델 ‘파이0.7’ 공개",
+      "summary": "한번도 해보지 않은 일까지 스스로 해내는 로봇이 등장했다. 로봇 스타트업 피지컬 인텔리전스가 선보인 범용 모델 ‘파이0.7(π0.7)’은 다양한 작업에서 익힌 기술을 조합해 새로운 문제를 풀어내는 ‘일반화 능력’을 갖춘 것이 특징이다.피지컬 인텔리전스는 16일(현지시간) 기존처럼 특정 작업에 맞춰 학습된 전문가형 시스템을 넘어 학습 데이터에 없는 작업까지 ",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209497",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=209474",
+      "title": "중국, 휴머노이드 하프 마라톤서 기술 도약 선보여...\"인간 기록 돌파\"",
+      "summary": "중국 베이징에서 개최된 로봇 하프마라톤에서 휴머노이드 로봇이 인간 최고 기록을 넘어서는 성과를 내며 기술 도약을 과시했다. AP통신에 따르면, 19일(현지시간) 열린 이 대회에서 중국 스마트폰 업체 아너가 개발한 로봇이 1위를 차지했다.인간 참가자들과 21km 코스를 달리는 방식으로 진행된 이번 경기에서 아너의 로봇은 50분26초 만에 결승선을 통과했다. ",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209474",
+      "category": "로봇·자율주행",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=209506",
+      "title": "'AI 분석' 주요 기업 구내식당 순위 공개...1위 엔비디아·2위 오픈AI",
+      "summary": "미국 주요 기업의 구내식당 순위가 공개됐다. 기업들의 메뉴를 수집, AI로 분석한 결과다.18일(현지시간) 비즈니스 인사이더에 따르면, 미국의 유명 엔지니어이자 인터넷 아티스트인 라일리 왈츠는 최근 주요 기술 기업의 구내 식당 순위 사이트를 공개했다.'참고용(For Your Information) 점심'이라는 이름의 이 사이트는 왈츠가 오픈AI의 '코덱스'",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209506",
+      "category": "멀티모달",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=209492",
+      "title": "'멧돼지 추격' 영상으로 화제 된 폴란드의 휴머노이드 로봇",
+      "summary": "폴란드의 휴머노이드 로봇이 ‘국민 스타’로 떠오르며 세계적인 관심을 끌고 있다. 16일(현지시간) BBC에 따르면, 화제의 주인공은 ‘에드워드 바르호츠키’라는 이름의 로봇이다.특히 바르샤바 도심에서 멧돼지를 쫓는 영상이 45일 만에 온라인에서 15억회 이상의 조회수를 기록하는 등 폭발적인 인기를 얻고 있다. 에드워드는 단순한 기술 시연을 넘어 국민 로봇 칭",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209492",
+      "category": "투자·기업",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-8-https://www.aitimes.com/news/articleView.html?idxno=209504",
+      "title": "SK브로드밴드, 구성원 AX 역량 강화 ‘AI 에이전트 랩’ 운영",
+      "summary": "SK브로드밴드(대표 김성수)는 2026 조직문화의 핵심 키워드를 ‘AI와 일하기’ 및 ‘다이나믹 SKB’로 설정하고, 전 구성원의 AI 전문가화를 위한 대대적인 역량 강화에 나선다고 20일 밝혔다.SK브로드밴드는 3월부터 10월까지 전 구성원을 대상으로 한 AI 집중 교육 과정인 ‘AI 에이전트 랩’을 본격 운영한다. 전 구성원의 9% 수준이었던 중급 이상",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209504",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-9-https://www.aitimes.com/news/articleView.html?idxno=209502",
+      "title": "[게시판] 아이엘, 애지봇과 휴머노이드 개발 MOU 등 단신",
+      "summary": "■ 미래모빌리티 전문 아이엘은 중국 로봇 전문 애지봇과 휴머노이드 로봇 공동 개발과 양산을 위한 MOU를 체결했다고 밝혔다. 아이엘은 국내 제조 공정 데이터와 산업 현장의 운용 노하우를 애지봇의 휴머노이드 기술에 접목할 계획이다. 이를 통해 국내 산업 환경에 최적화된 로봇 솔루션을 개발, 실제 제조 공정의 파일럿 투입을 시작으로 단계적인 대량 양산에 착수할",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209502",
+      "category": "로봇·자율주행",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=209490",
       "title": "[게시판]  베스핀글로벌, 기업 AI 실무자 대상 'AI 베스터디' 개최 등 단신",
       "summary": "■ 베스핀글로벌(대표 허양호)은 기업 실무자의 AI 역량 강화를 위한 스터디 프로그램 'AI 베스터디(AI BESTudy)'를 개최한다고 밝혔다. AI 베스터디는 베스핀글로벌의 AX 프로젝트 노하우를 바탕으로 자연어를 SQL로 변환하는 NL2SQL 기반 방법론과 실제 사례, 아키텍처 설계부터 운영까지 실무 전반을 다룰 예정이다.■ 씽킹데이터(대표 뤼청통)는",
       "date": "2026-04-20",
@@ -23,7 +131,19 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=209486",
+      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=209500",
+      "title": "플리토, ‘이미지 번역 프로’ 출시…”디자인은 그대로·텍스트만 자연스럽게 변환”",
+      "summary": "AI 전문 플리토(대표 이정수)는 이미지 속 텍스트를 번역하면서도 글씨 색상, 테두리 등 디자인 속성까지 그대로 복원하는 ‘이미지 번역 프로(Image Translation Pro)’를 새롭게 출시했다고 20일 밝혔다.플리토는 지난해 4월28일 ‘이미지 번역’ 서비스를 공식 출시한 바 있다.이번 이미지 번역 프로는 이커머스 플랫폼에 맞춰 단순 텍스트 번역은",
+      "date": "2026-04-20",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209500",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-13-https://www.aitimes.com/news/articleView.html?idxno=209486",
       "title": "오픈AI·MS의 데이터센터 공사 40% 지연...서비스 확장 늦어지나",
       "summary": "AI 발전을 뒷받침할 핵심 인프라인 데이터센터 건설이 미국에서 잇달아 지연되며 산업 전반에 경고등이 켜지고 있다. 대형 기술 기업들이 막대한 자금을 투입하고 있음에도 여러 문제로 서비스 확장 속도가 늦어질 수 있다는 우려가 커지고 있다.파이낸셜 타임스는 17일(현지시간) 위성 데이터 분석 기업 신맥스(SynMax)의 데이트를 인용, 올해 완공 예정인 미국 ",
       "date": "2026-04-20",
@@ -35,7 +155,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=209466",
+      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=209466",
       "title": "로보티즈, 휴머노이드 'AI 사피엔스' 프로토타입 공개...AI 소스코드 오픈 공개",
       "summary": "로보티즈(대표 김병수)는 신규 액추에이터 '다이나믹셀-Q'를 탑재한 휴머노이드 'AI 사피엔스' 프로토타입을 공개했다고 20일 밝혔다. 정식 출시 일정과 가격은 미정이다.최근 유니트리 등 다수 글로벌 빅테크가 로봇의 기능에 따라 하드웨어를 분리한 것과 달리, AI 사피엔스는 단일 하드웨어만으로 보행부터 질주, 정교한 댄스, 외발서기 등이 가능한 것이 특징이",
       "date": "2026-04-20",
@@ -47,7 +167,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=209488",
+      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=209488",
       "title": "과기부, AI 특화 병원 시범사업 공모...\"권역별 의료 AI 네트워크 구축\"",
       "summary": "과학기술정보통신부(장관 배경훈)는 의료 현장의 AI 전환을 지원하기 위한 'AI 특화 병원 AX-레디 시범사업' 공모를 다음달 26일까지 진행한다고 밝혔다.이번 사업은 진단·치료부터 행정 효율화, 예후 관리까지 의료 전반에 걸친 AX 패키지 구현을 목표로 한다.종합병원급 이상 공공의료기관이 중심으로 AI 솔루션과 클라우드 기업이 참여하는 컨소시엄 형태로 지",
       "date": "2026-04-20",
@@ -59,7 +179,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=209477",
+      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=209477",
       "title": "구글, 마벨과 AI 칩 2종 개발 논의 중...추론 수요 확대 대비",
       "summary": "구글이 AI 모델의 추론 효율을 높이기 위한 새로운 반도체 개발에 나섰다. 19일(현지시간) 디 인포메이션에 따르면, 구글은 마벨과 협력해 두 종류의 AI 칩을 공동 설계하는 방안을 논의 중이다.핵심은 ▲TPU와 함께 작동하는 메모리 처리 유닛(MPU) ▲AI 모델 실행에 특화된 차세대 TPU 개발 등 두가지다.특히 MPU는 연산 중심의 TPU와 역할을 분",
       "date": "2026-04-20",
@@ -71,7 +191,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=209491",
+      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=209491",
       "title": "롯데이노베이트 \"AI 로봇 두뇌 '아이멤버', 일상부터 산업 현장까지 확장 전략\"",
       "summary": "롯데이노베이트는 로봇의 두뇌 역할로 작용하는 AI 플랫폼 '아이멤버'를 통해 일상 생활부터 산업 현장까지 피지컬 AI 적용을 확장하겠다고 20일 밝혔다.롯데이노베이트는 최근 AI 플랫폼 아이멤버를 활용해 피지컬 AI 확장에 본격적으로 나섰다. 지난 2월에는 휴머노이드 로봇과 AI 기술이 실제 유통 현장에서 어떻게 작동하는지를 보여주는 차세대 미래형 편의점 ",
       "date": "2026-04-20",
@@ -83,7 +203,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=209487",
+      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=209487",
       "title": "산업교육연구소, 영농형 태양광·햇빛소득마을 사업화 전략 세미나 개최",
       "summary": "영농형 태양광이 농업과 재생에너지를 결합한 새로운 사업 모델로 주목받으면서 정책과 기술, 수익화 전략을 한자리에서 짚는 세미나가 서울 구로동 KIEI 세미나실에서 열린다.산업교육연구소는 29일 온·오프라인 동시 방식으로 영농형 태양광·햇빛소득마을의 정부 정책과 최근 트렌드 및 사업화 전략 2차 세미나를 개최한다.이번 행사는 에너지 전환과 탄소중립 기조가 강",
       "date": "2026-04-20",
@@ -95,7 +215,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-8-https://www.aitimes.com/news/articleView.html?idxno=209481",
+      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=209481",
       "title": "에이전트·영상 이해 강화한 '그록 4.3' 출시...\"2주 간격으로 업데이트\"",
       "summary": "xAI가 최신 AI 모델 ‘그록(Grok) 4.3’를 베타 형태로 공개했다. 이번 모델은 기존 그록 4.2와 같은 규모를 유지하면서도 아키텍처를 개선하고, 더 긴 문맥 처리와 영상 이해 능력을 강화한 것이 핵심이다.xAI는 17일(현지시간) 업데이트 공지를 통해 5000억 매개변수 규모의 ‘그록 4.3’ 베타를 조용히 출시했다.초기에는 최상위 요금제인 '슈",
       "date": "2026-04-20",
@@ -107,7 +227,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-9-https://www.aitimes.com/news/articleView.html?idxno=209475",
+      "id": "aitimes-23-https://www.aitimes.com/news/articleView.html?idxno=209475",
       "title": "구글, 국내 기업 '에이전틱 AI' 비즈니스 혁신 사례 공개",
       "summary": "구글 클라우드는 국내 기업들의 구글 에이전틱 AI 도입 관련 성과를 20일 발표했다. 대표적인 기업으로 카카오뱅크와 CK ENM, 메가존소프트 등을 소개했다. 디지털 은행 전문 카카오뱅크는 1800여명의 임직원이 '제미나이 엔터프라이즈'를 사용 중이다. 단순 채팅 AI를 넘어, 구성원들의 내부 생산성 향상에 최적화된 정교한 지능형 플랫폼 생태계를 구축했다고",
       "date": "2026-04-20",
@@ -119,7 +239,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=209453",
+      "id": "aitimes-24-https://www.aitimes.com/news/articleView.html?idxno=209453",
       "title": "‘전남형 청년창업사관학교’ 2기 모집...2400만원 지원",
       "summary": "전라남도가 전국 광역자치단체 최초로 도입한 청년창업사관학교 2기 모집에 나서며 기술창업 생태계 확장에 속도를 내고 있다.전남은 5월15일까지 전남형 청년창업사관학교 제2기 지원자와 기업을 모집한다고 19일 밝혔다. 이번 사업은 청년이 지역에서 기술창업에 도전하고 창업 이후에도 안정적으로 성장할 수 있도록 뒷받침하는 데 초점이 맞춰져 있다.단순 창업 지원금 ",
       "date": "2026-04-20",
@@ -128,126 +248,6 @@
       "sourceFlag": "🇰🇷",
       "url": "https://www.aitimes.com/news/articleView.html?idxno=209453",
       "category": "산업·정책",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=209482",
-      "title": "한컴, 창사 첫 매출 2000억 목표...\"AI 사업으로 체질 개선\"",
-      "summary": "한글과컴퓨터(대표 변성준·김연수)는 20일 공시를 통해 올해 경영 목표로 별도 기준 매출 2100억원, 영업이익 600억원을 제시했다.지난해 매출 1753억원, 영업이익 509억원 대비 각각 20%, 18% 증가한 수치다. 단독 매출 2000억원을 넘길 경우, 이는 창사 이래 처음이 된다.한컴은 기존 오피스 소프트웨어 사업을 유지하면서 AI 부문 매출 비중",
-      "date": "2026-04-20",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209482",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-13-https://www.aitimes.com/news/articleView.html?idxno=209483",
-      "title": "씨이랩, 엔비디아 파트너십 최고 등급 ‘엘리트’ 획득...\"기업용 SW 부문 국내 유일\"",
-      "summary": "피지컬 AI 전문 씨이랩(대표 윤세혁, 채정환)은 엔비디아 파트너 네트워크(NPN)의 ‘엔비디아 엔터프라이즈 소프트웨어 컴피턴시’ 부문에서 최고 등급인 ‘엘리트(Elite)’ 레벨로 승격됐다고 20일 밝혔다.NPN은 엔비디아의 글로벌 파트너 생태계 프로그램으로, 파트너의 기술 역량과 실질적인 사업 성과를 평가해 등급을 부여한다. 그중 최고 등급인 '엘리트'",
-      "date": "2026-04-20",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209483",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-14-https://www.aitimes.com/news/articleView.html?idxno=209480",
-      "title": "뉴엔AI, 자체 LLM으로 '위해징후 사전 탐지' 알고리즘 개발 나서",
-      "summary": "AI 트렌드 분석 플랫폼 전문 뉴엔AI(대표 배성환)는 산업통상부 제품안전관리 고도화를 위한 핵심 연구개발(R&D) 연구 사업 수행기관으로 선정됐다고 20일 밝혔다.뉴엔AI는 한국제품안전관리원(KIPS)이 주관하는 ‘AI 기반 소비자 제품사고 징후 분석을 통한 안전관리 요인 연구’ 사업에 공동 연구개발기관으로 참여한다. 이번 사업은 올해 5월부터 12월까지",
-      "date": "2026-04-20",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209480",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=209468",
-      "title": "화제의 이미지 모델 '덕트 테이프'...'GPT-이미지-2' 출시 임박?",
-      "summary": "불과 몇 시간 등장했다가 사라진 정체불명의 AI 모델이 전 세계 AI 기술 커뮤니티를 뒤흔들었다. ‘덕트 테이프(Duct Tape)’라는 별칭으로 불리는 이 모델의 정체는 아직 공식 발표되지 않았지만, 드러난 성능만으로도 이미지 생성 AI의 기준을 다시 쓰고 있다는 평가가 나온다.레딧 등에서는 지난 4일(현지시간) AI 평가 플랫폼 LM 아레나에 정체불명의",
-      "date": "2026-04-20",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209468",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=209472",
-      "title": "인핸스, 네이버벤처스 전략적 투자 유치...\"네이버 생태계에 AI OS 접목 기대\"",
-      "summary": "인핸스(대표 이승현)는 네이버의 실리콘 밸리 투자법인(CVC) 네이버벤처스로부터 전략적 투자를 유치했다고 20일 밝혔다. 액수는 공개하지 않았다인핸스는 온톨로지 기술 기반 '산업 특화 AI 운영체제(OS)'를 운영하고 있다. AI OS는 삼성전자를 비롯한 글로벌 엔터프라이즈 30여곳에 도입됐으며 전세계 50개국에서 활용 중이다.네이버벤처스는 인핸스 기술이 ",
-      "date": "2026-04-20",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209472",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=209461",
-      "title": "\"AI가 알아서 내 감정 변화 읽는다\"...GIST, AI 감정 복원 기술 개발",
-      "summary": "광주과학기술원(GIST, 총장 임기철) AI융합학과 김경중 교수팀이 인간-컴퓨터 상호작용(HCI) 분야 글로벌 학술대회 'CHI 2026'에서 '인간처럼 감정을 읽는 효율적인 AI 기술'로 아너러블 멘션(Honorable Mention)을 수상했다고 20일 밝혔다. 이는 상위 5% 우수 논문에 수여된다.연구팀은 사람의 핵심적인 감정 기록만으로 전체 감정의 ",
-      "date": "2026-04-20",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209461",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=209465",
-      "title": "[양현상 칼럼] 국방 판을 바꾸는 4대 기술과 융합혁명",
-      "summary": "국방 기술의 무게중심이 이동하고 있다. 전통적으로 화력과 플랫폼 중심이던 군사력은 이제 반도체, AI, 로봇, 신소재라는 네 개의 기술 축 위에서 재정의되고 있다. 이 변화는 단순한 기술 발전이 아니라, 전쟁 수행 방식 자체를 바꾸는 구조적 전환이다. 최근 5년간의 글로벌 시장 추이를 보면 그 방향은 명확하다. 하드웨어 중심에서 소프트웨어 정의 국방으로, ",
-      "date": "2026-04-20",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209465",
-      "category": "인프라·하드웨어",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=209449",
-      "title": "[체험기] “20대인 내가 왜 웨어러블 로봇을?”…몇분 만에 깨진 선입견",
-      "summary": "최근 헬스케어 분야에서는 ‘웨어러블 로봇’이 자주 눈에 띈다. ‘착용하는 로봇’으로, 운동과 재활에 도움을 제공하는 사례도 많아진다는 내용이다.평균적인 운동 능력과 체력을 갖춘 20대 직장인이 굳이 보행 보조 로봇을 사용할 일은 없다. 대부분은 노령자나 재활, 무거운 짐을 옮길 때 도움이 된다는 생각이었다.전시장에서 몇번 보기는 했지만, 웨어러블 로봇은 체",
-      "date": "2026-04-19",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209449",
-      "category": "로봇·자율주행",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=209447",
-      "title": "파수AI “데이터 역량과 ‘컨테이너’ 기술로 AX 보안 표준 정립”",
-      "summary": "“AI 에이전트가 동시다발적으로 공격을 수행하는 시대가 오면서 보안 패러다임이 근본적으로 변했습니다. 파수AI는 ‘보안 컨테이너’ 내에서 프로그램 코드를 안전하게 구동하는 기술을 통해 AX 시대의 새로운 보안 표준을 제시하고자 합니다.”윤경구 파수AI 최고 기술책임자(CTO)는 AI 기술이 고도화될수록 보안 패러다임 역시 근본적인 변화가 불가피하다고 역설했",
-      "date": "2026-04-19",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209447",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-23-https://www.aitimes.com/news/articleView.html?idxno=209435",
-      "title": "\"두배 크기 트랜스포머 모델과 같은 성능 제공\"...새로운 아키텍처 ‘파르카에’ 등장",
-      "summary": "동일한 매개변수 수와 동일한 학습 데이터 조건에서도 기존 트랜스포머를 능가하는 새로운 아키텍처가 주목받고 있다.UC 샌디에고와 투게더 AI 연구진은 14일(현지시간) 루프형(looped) 구조를 적용한 트랜스포머 ‘파르카에(Parcae)’를 온라인 아카이브를 통해 공개했다. 대형언어모델(LLM)의 성능을 높이는 전통적인 방법은 더 많은 연산(FLOPS), ",
-      "date": "2026-04-19",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209435",
-      "category": "모델 출시",
       "lang": "ko"
     },
     {
@@ -697,23 +697,23 @@
   ],
   "github": [
     {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
+      "id": "gh-730534580",
+      "title": "infiniflow/ragflow — RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+      "summary": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
       "date": "2026-04-20",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
-      "category": "에이전트",
+      "url": "https://github.com/infiniflow/ragflow",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 138410,
-      "language": "TypeScript",
+      "stars": 78569,
+      "language": "Python",
       "tags": [
         "agent",
+        "agentic",
         "agentic-ai",
-        "agentic-framework",
         "agentic-workflow",
         "ai"
       ]
@@ -730,7 +730,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 23163,
+      "stars": 23168,
       "language": "TypeScript",
       "tags": [
         "agents",
@@ -741,25 +741,25 @@
       ]
     },
     {
-      "id": "gh-221654678",
-      "title": "deepset-ai/haystack — Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-      "summary": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+      "id": "gh-626805178",
+      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
+      "summary": "Production-ready platform for agentic workflow development.",
       "date": "2026-04-20",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/deepset-ai/haystack",
-      "category": "모델 출시",
+      "url": "https://github.com/langgenius/dify",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 24910,
-      "language": "MDX",
+      "stars": 138463,
+      "language": "TypeScript",
       "tags": [
         "agent",
-        "agents",
-        "ai",
-        "gemini",
-        "generative-ai"
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai"
       ]
     },
     {
@@ -774,7 +774,7 @@
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 183584,
+      "stars": 183601,
       "language": "Python",
       "tags": [
         "agentic-ai",
@@ -785,68 +785,47 @@
       ]
     },
     {
-      "id": "gh-1033778670",
-      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
-      "summary": "Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
+      "id": "gh-221654678",
+      "title": "deepset-ai/haystack — Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+      "summary": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
       "date": "2026-04-20",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/iOfficeAI/AionUi",
+      "url": "https://github.com/deepset-ai/haystack",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 22247,
-      "language": "TypeScript",
-      "tags": [
-        "acp",
-        "ai",
-        "ai-agent",
-        "chat",
-        "chatbot"
-      ]
-    },
-    {
-      "id": "gh-596516907",
-      "title": "arc53/DocsGPT — Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents.",
-      "summary": "Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents.",
-      "date": "2026-04-20",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/arc53/DocsGPT",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 17836,
-      "language": "Python",
-      "tags": [
-        "agent-builder",
-        "agents",
-        "ai",
-        "chatgpt",
-        "docsgpt"
-      ]
-    },
-    {
-      "id": "gh-1123338559",
-      "title": "vercel-labs/open-agents — An open source template for building cloud agents.",
-      "summary": "An open source template for building cloud agents.",
-      "date": "2026-04-20",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/vercel-labs/open-agents",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3861,
-      "language": "TypeScript",
+      "stars": 24914,
+      "language": "MDX",
       "tags": [
         "agent",
         "agents",
         "ai",
-        "background-agents"
+        "gemini",
+        "generative-ai"
+      ]
+    },
+    {
+      "id": "gh-522158088",
+      "title": "zhayujie/CowAgent — CowAgent (chatgpt-on-wechat) 是基于大模型的超级AI助理，能主动思考和任务规划、访问操作系统和外部资源、创造和执行Skills、通过长期记忆和知识库不断成长，比OpenClaw更轻量和便捷。同时支持微信、飞书、钉钉、企微、QQ、公众号、网页等接入，可选择OpenAI/Claude/Gemini/DeepSeek/ Qwen/GLM/Kimi/LinkAI，能处理文本、语音、图片和文件，可快速搭建个人AI助理和企业数字员工。",
+      "summary": "CowAgent (chatgpt-on-wechat) 是基于大模型的超级AI助理，能主动思考和任务规划、访问操作系统和外部资源、创造和执行Skills、通过长期记忆和知识库不断成长，比OpenClaw更轻量和便捷。同时支持微信、飞书、钉钉、企微、QQ、公众号、网页等接入，可选择OpenAI/Claude/Gemini/DeepSeek/ Qwen/GLM/Kimi/LinkAI，能处理文本、语音、图片和文件，可快速搭建个人AI助理和企业数字员工。",
+      "date": "2026-04-20",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/zhayujie/CowAgent",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 43547,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-agent",
+        "chatgpt-on-wechat",
+        "claude",
+        "deepseek"
       ]
     },
     {
@@ -861,7 +840,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 2813,
+      "stars": 2812,
       "language": "Python",
       "tags": [
         "agent",
@@ -872,25 +851,25 @@
       ]
     },
     {
-      "id": "gh-1062297179",
-      "title": "agentscope-ai/agentscope-java — AgentScope Java: Agent-Oriented Programming for Building LLM Applications",
-      "summary": "AgentScope Java: Agent-Oriented Programming for Building LLM Applications",
+      "id": "gh-684031003",
+      "title": "dataelement/bisheng — BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent, Unified model management, Evaluation, SFT, Dataset Management, Enterprise-level System Management, Observability and more.",
+      "summary": "BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent, Unified model management, Evaluation, SFT, Dataset Management, Enterprise-level System Management, Observability and more.",
       "date": "2026-04-20",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/agentscope-ai/agentscope-java",
+      "url": "https://github.com/dataelement/bisheng",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 2661,
-      "language": "Java",
+      "stars": 11321,
+      "language": "TypeScript",
       "tags": [
         "agent",
-        "agentic",
-        "agentic-ai",
         "ai",
-        "llm"
+        "chatbot",
+        "enterprise",
+        "finetune"
       ]
     }
   ]

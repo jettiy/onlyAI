@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { CompanyLogo } from "./CompanyLogo";
 import { tierColors, tierLabels, type AIModel } from "../data/models";
 import { estimateMonthlyCost, formatMonthlyCost } from "../lib/estimatedMonthlyCost";
+import { getAABenchmarks, type AABenchmarks } from "../lib/artificialAnalysis";
 
 /** 모델 용도 기반 추천 질문 */
 function getTryQuestions(model: AIModel): string[] {
@@ -53,6 +54,11 @@ const formatPrice = (price?: number | null) => {
 
 export default function ModelDetailModal({ model, onClose }: ModelDetailModalProps) {
   const [isDark] = useState(() => document.documentElement.classList.contains('dark'));
+  const [aaData, setAaData] = useState<AABenchmarks | null>(null);
+
+  useEffect(() => {
+    getAABenchmarks(model.name).then(setAaData);
+  }, [model.name]);
 
   const inputPriceValue = model.inputPrice ?? 0;
   const outputPriceValue = model.outputPrice ?? 0;
@@ -248,6 +254,45 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
                   </p>
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* Artificial Analysis 벤치마크 */}
+          {aaData && (aaData.intelligenceIndex || aaData.codingIndex || aaData.mmluPro) && (
+            <div className={`rounded-xl border ${cardBorder} ${subtleBg} p-4 space-y-3`}>
+              <div className="flex items-center justify-between">
+                <p className={`text-xs font-semibold ${mutedText}`}>📊 성능 분석</p>
+                <span className="text-[10px] opacity-50">Artificial Analysis</span>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                {aaData.intelligenceIndex && (
+                  <div>
+                    <p className={`text-[11px] ${mutedText}`}>지능 지수</p>
+                    <p className="text-base font-bold text-gray-900 dark:text-white">{aaData.intelligenceIndex}</p>
+                  </div>
+                )}
+                {aaData.codingIndex && (
+                  <div>
+                    <p className={`text-[11px] ${mutedText}`}>코딩 지수</p>
+                    <p className="text-base font-bold text-gray-900 dark:text-white">{aaData.codingIndex}</p>
+                  </div>
+                )}
+                {aaData.mmluPro && (
+                  <div>
+                    <p className={`text-[11px] ${mutedText}`}>MMLU-Pro</p>
+                    <p className="text-base font-bold text-gray-900 dark:text-white">{aaData.mmluPro}%</p>
+                  </div>
+                )}
+                {aaData.speed && (
+                  <div>
+                    <p className={`text-[11px] ${mutedText}`}>응답 속도</p>
+                    <p className="text-base font-bold text-gray-900 dark:text-white">{aaData.speed} t/s</p>
+                  </div>
+                )}
+              </div>
+              {aaData.updatedAt && (
+                <p className={`text-[10px] ${mutedText}`}>데이터: {aaData.updatedAt}</p>
+              )}
             </div>
           )}
 

@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-23T14:00:48.854Z",
-  "updatedAtKST": "2026. 4. 23. PM 11:00:48",
+  "updatedAt": "2026-04-23T19:22:10.586Z",
+  "updatedAtKST": "2026. 4. 24. AM 4:22:10",
   "stats": {
     "aitimes": 20,
     "36kr": 15,
     "hf": 20,
-    "tc": 18,
-    "github": 11,
-    "total": 69
+    "tc": 16,
+    "github": 10,
+    "total": 66
   },
   "news": [
     {
@@ -251,7 +251,43 @@
       "lang": "ko"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/04/23/ai-galaxy-hunters-are-adding-to-the-global-gpu-crunch/",
+      "id": "tc-0-https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/",
+      "title": "OpenAI releases GPT-5.5, bringing company one step closer to an AI &#8216;superapp&#8217;",
+      "summary": "OpenAI says its latest model offers increased capabilities across a broad variety of categories.",
+      "date": "2026-04-23",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/04/23/era-computer-raises-11m-to-build-a-software-platform-for-ai-gadgets/",
+      "title": "Era raises $11M to build a software platform for AI gadgets",
+      "summary": "Era thinks that we will see many form factors of AI hardware, including glasses, rings, and pendants.",
+      "date": "2026-04-23",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/23/era-computer-raises-11m-to-build-a-software-platform-for-ai-gadgets/",
+      "category": "인프라·하드웨어",
+      "lang": "en"
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/",
+      "title": "Another customer of troubled startup Delve suffered a big security incident",
+      "summary": "TechCrunch has confirmed that Delve was the compliance company that performed the security certifications for Context AI, the AI agent training startup that last week disclosed a security incident.",
+      "date": "2026-04-23",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/04/23/ai-galaxy-hunters-are-adding-to-the-global-gpu-crunch/",
       "title": "AI galaxy hunters are adding to the global GPU crunch",
       "summary": "Astronomers are turning to GPUs to find needles in the galactic haystack.",
       "date": "2026-04-23",
@@ -263,7 +299,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/",
+      "id": "tc-6-https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/",
       "title": "India&#8217;s app market is booming — but global platforms are capturing most of the gains",
       "summary": "Non-gaming apps, led by streaming and AI, are driving growth, even as India's spending per user lags global peers.",
       "date": "2026-04-23",
@@ -287,7 +323,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/",
+      "id": "tc-7-https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/",
       "title": "Tesla just increased its spending plan to $25B — here&#8217;s where the money is going",
       "summary": "Tesla's planned capex for 2026 is three times higher than what the company has historically spent. Its CFO said, as a result, Tesla will have a negative free cash flow the rest of the year.",
       "date": "2026-04-22",
@@ -299,7 +335,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/04/22/google-updates-workspace-to-make-ai-your-new-office-intern/",
+      "id": "tc-8-https://techcrunch.com/2026/04/22/google-updates-workspace-to-make-ai-your-new-office-intern/",
       "title": "Google updates Workspace to make AI your new office intern",
       "summary": "Google has introduced a host of new automated functions into Workspace, all of which are driven by Workspace Intelligence, its new AI system.",
       "date": "2026-04-22",
@@ -311,7 +347,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/04/22/hands-on-with-xs-new-ai-powered-custom-feeds/",
+      "id": "tc-9-https://techcrunch.com/2026/04/22/hands-on-with-xs-new-ai-powered-custom-feeds/",
       "title": "Hands on with X&#8217;s new AI-powered custom feeds",
       "summary": "X's AI-powered custom timelines are replacing Communities, with Grok-curated feeds...and new ad slots.",
       "date": "2026-04-22",
@@ -323,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/04/22/how-spacex-preempted-a-2b-fundraise-with-a-60b-buyout-offer/",
+      "id": "tc-10-https://techcrunch.com/2026/04/22/how-spacex-preempted-a-2b-fundraise-with-a-60b-buyout-offer/",
       "title": "How SpaceX preempted a $2B fundraise with a $60B buyout offer",
       "summary": "Cursor was on track to close a $2 billion funding round this week but chose to halt discussions after SpaceX offered a $10 billion \"collaboration fee\" and a path to a $60 billion acquisition.",
       "date": "2026-04-22",
@@ -335,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/04/22/google-cloud-next-new-tpu-ai-chips-compete-with-nvidia/",
+      "id": "tc-11-https://techcrunch.com/2026/04/22/google-cloud-next-new-tpu-ai-chips-compete-with-nvidia/",
       "title": "Google Cloud launches two new AI chips to compete with Nvidia",
       "summary": "Google's newest TPUs are faster and cheaper than the previous versions. But the company is still embracing Nvidia in its cloud — for now.",
       "date": "2026-04-22",
@@ -347,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/",
+      "id": "tc-12-https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/",
       "title": "Google turns Chrome into an AI co-worker for the workplace",
       "summary": "Google brings Gemini-powered \"auto browse\" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and more.",
       "date": "2026-04-22",
@@ -359,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/",
+      "id": "tc-13-https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/",
       "title": "Google makes an interesting choice with its new agent-building tool for enterprises",
       "summary": "Gemini Enterprise Agent Platform takes an interesting approach: It is geared for IT and technical users.",
       "date": "2026-04-22",
@@ -371,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/04/22/ai-overviews-are-coming-to-your-gmail-at-work/",
+      "id": "tc-14-https://techcrunch.com/2026/04/22/ai-overviews-are-coming-to-your-gmail-at-work/",
       "title": "AI Overviews are coming to your Gmail at work",
       "summary": "The AI Overviews will offer instant summaries pulled from across multiple emails.",
       "date": "2026-04-22",
@@ -383,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/04/22/openai-teams-up-with-infosys-to-bring-ai-tools-to-more-businesses/",
+      "id": "tc-15-https://techcrunch.com/2026/04/22/openai-teams-up-with-infosys-to-bring-ai-tools-to-more-businesses/",
       "title": "OpenAI teams up with Infosys to bring AI tools to more businesses",
       "summary": "Infosys said the integration will be used to help its clients modernize software development, automate workflows, and deploy AI systems, initially focusing software engineering, legacy modernization, ",
       "date": "2026-04-22",
@@ -395,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/04/22/ai-is-spitting-out-more-potential-drugs-than-ever-this-start-up-wants-to-figure-out-which-ones-matter/",
+      "id": "tc-16-https://techcrunch.com/2026/04/22/ai-is-spitting-out-more-potential-drugs-than-ever-this-start-up-wants-to-figure-out-which-ones-matter/",
       "title": "AI is spitting out more potential drugs than ever. This startup wants to figure out which ones matter.",
       "summary": "10x Science has raised a $4.8 million seed round to help pharmaceutical researchers understand complex molecules.",
       "date": "2026-04-22",
@@ -407,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/",
+      "id": "tc-17-https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/",
       "title": "Exclusive: Google deepens Thinking Machines Lab ties with new multibillion-dollar deal",
       "summary": "Mira Murati's Thinking Machines Lab has signed a multibillion-dollar deal with Google Cloud for AI infrastructure powered by Nvidia's latest GB300 chips, TechCrunch has exclusively learned.",
       "date": "2026-04-22",
@@ -416,30 +452,6 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/",
       "category": "인프라·하드웨어",
-      "lang": "en"
-    },
-    {
-      "id": "tc-15-https://techcrunch.com/2026/04/22/google-maps-is-about-to-get-a-big-dose-of-ai/",
-      "title": "Google Maps is about to get a big dose of AI",
-      "summary": "The new features, announced at Cloud Next in Las Vegas this week, add generative AI capabilities to Google's mapping platform, giving it enhanced visual and data analytics powers.",
-      "date": "2026-04-22",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/22/google-maps-is-about-to-get-a-big-dose-of-ai/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-16-https://techcrunch.com/2026/04/22/the-most-interesting-startups-showcased-at-google-cloud-next-2026/",
-      "title": "The most interesting startups showcased at Google Cloud Next 2026",
-      "summary": "Google wants AI startups on its cloud and has showcased a long list of them at its annual conference.",
-      "date": "2026-04-22",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/22/the-most-interesting-startups-showcased-at-google-cloud-next-2026/",
-      "category": "투자·기업",
       "lang": "en"
     },
     {
@@ -464,42 +476,6 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/cybersecurity-openness",
       "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/04/21/meta-will-record-employees-keystrokes-and-use-it-to-train-its-ai-models/",
-      "title": "Meta will record employees&#8217; keystrokes and use it to train its AI models",
-      "summary": "Meta says that it has a new internal tool that is converting mouse movements and button clicks into data that can train its AI models.",
-      "date": "2026-04-21",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/21/meta-will-record-employees-keystrokes-and-use-it-to-train-its-ai-models/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/",
-      "title": "Unauthorized group has gained access to Anthropic&#8217;s exclusive cyber tool Mythos, report claims",
-      "summary": "Anthropic told TechCrunch it is investigating the claims, but maintains that there is no evidence that its systems have been impacted.",
-      "date": "2026-04-21",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/",
-      "category": "개발 도구",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/04/21/spacex-is-working-with-cursor-and-has-an-option-to-buy-the-startup-for-60-billion/",
-      "title": "SpaceX is working with Cursor and has an option to buy the startup for $60B",
-      "summary": "The move could shore up weaknesses at each company, but it also reveals them. Neither Cursor nor xAI has proprietary models that can match the leading offerings from Anthropic and OpenAI — the same co",
-      "date": "2026-04-21",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/21/spacex-is-working-with-cursor-and-has-an-option-to-buy-the-startup-for-60-billion/",
-      "category": "모델 출시",
       "lang": "en"
     },
     {
@@ -709,113 +685,25 @@
   ],
   "github": [
     {
-      "id": "gh-656099147",
-      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
-      "summary": "Universal memory layer for AI Agents",
+      "id": "gh-839037098",
+      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
       "date": "2026-04-23",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/mem0ai/mem0",
+      "url": "https://github.com/mastra-ai/mastra",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 53896,
-      "language": "Python",
+      "stars": 23262,
+      "language": "TypeScript",
       "tags": [
         "agents",
         "ai",
-        "ai-agents",
-        "application",
-        "chatbots"
-      ]
-    },
-    {
-      "id": "gh-817326197",
-      "title": "screenpipe/screenpipe — Run agents that work for you based on what you do. AI finally knows what you are doing",
-      "summary": "Run agents that work for you based on what you do. AI finally knows what you are doing",
-      "date": "2026-04-23",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/screenpipe/screenpipe",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 18334,
-      "language": "Rust",
-      "tags": [
-        "agents",
-        "agi",
-        "ai",
-        "computer-vision",
-        "llm"
-      ]
-    },
-    {
-      "id": "gh-676672661",
-      "title": "langchain-ai/langgraph — Build resilient language agents as graphs.",
-      "summary": "Build resilient language agents as graphs.",
-      "date": "2026-04-23",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langchain-ai/langgraph",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 30142,
-      "language": "Python",
-      "tags": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "chatgpt",
-        "deepagents"
-      ]
-    },
-    {
-      "id": "gh-907754163",
-      "title": "airweave-ai/airweave — Open-source context retrieval layer for AI agents",
-      "summary": "Open-source context retrieval layer for AI agents",
-      "date": "2026-04-23",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/airweave-ai/airweave",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 6257,
-      "language": "Python",
-      "tags": [
-        "agent-infrastructure",
-        "ai",
-        "ai-agents",
-        "ai-infrastructure",
-        "api"
-      ]
-    },
-    {
-      "id": "gh-575865240",
-      "title": "AstrBotDevs/AstrBot — AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "summary": "AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "date": "2026-04-23",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/AstrBotDevs/AstrBot",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 30515,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "chatbot",
-        "chatgpt",
-        "discord"
+        "chatbots",
+        "evals",
+        "javascript"
       ]
     },
     {
@@ -830,7 +718,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 112433,
+      "stars": 112876,
       "language": "Python",
       "tags": [
         "ai",
@@ -841,113 +729,175 @@
       ]
     },
     {
-      "id": "gh-953683578",
-      "title": "oraios/serena — A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
-      "summary": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
+      "id": "gh-599524116",
+      "title": "SillyTavern/SillyTavern — LLM Frontend for Power Users.",
+      "summary": "LLM Frontend for Power Users.",
       "date": "2026-04-23",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/oraios/serena",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 23316,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "ai-coding",
-        "claude",
-        "claude-code"
-      ]
-    },
-    {
-      "id": "gh-962024783",
-      "title": "snyk/agent-scan — Security scanner for AI agents, MCP servers and agent skills.",
-      "summary": "Security scanner for AI agents, MCP servers and agent skills.",
-      "date": "2026-04-23",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/snyk/agent-scan",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 2229,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "mcp",
-        "modelcontextprotocol",
-        "security"
-      ]
-    },
-    {
-      "id": "gh-826170402",
-      "title": "elizaOS/eliza — Autonomous agents for everyone",
-      "summary": "Autonomous agents for everyone",
-      "date": "2026-04-23",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/elizaOS/eliza",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 18237,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agentic",
-        "ai",
-        "autonomous",
-        "chatbot"
-      ]
-    },
-    {
-      "id": "gh-997390194",
-      "title": "PurpleAILAB/Decepticon — Autonomous Hacking Agent for Red Team",
-      "summary": "Autonomous Hacking Agent for Red Team",
-      "date": "2026-04-23",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/PurpleAILAB/Decepticon",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 2504,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "cybersecurity",
-        "generative-ai",
-        "hacking"
-      ]
-    },
-    {
-      "id": "gh-1053598893",
-      "title": "looplj/axonhub — ⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
-      "summary": "⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
-      "date": "2026-04-23",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/looplj/axonhub",
+      "url": "https://github.com/SillyTavern/SillyTavern",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 3298,
-      "language": "Go",
+      "stars": 26101,
+      "language": "JavaScript",
+      "tags": [
+        "ai",
+        "chat",
+        "llm"
+      ]
+    },
+    {
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "date": "2026-04-23",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 30403,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-946380199",
+      "title": "openai/openai-agents-python — A lightweight, powerful framework for multi-agent workflows",
+      "summary": "A lightweight, powerful framework for multi-agent workflows",
+      "date": "2026-04-23",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/openai/openai-agents-python",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 24833,
+      "language": "Python",
+      "tags": [
+        "agents",
+        "ai",
+        "framework",
+        "llm",
+        "openai"
+      ]
+    },
+    {
+      "id": "gh-868173144",
+      "title": "kortix-ai/suna — The Autonomous Company Operating System",
+      "summary": "The Autonomous Company Operating System",
+      "date": "2026-04-23",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/kortix-ai/suna",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19651,
+      "language": "TypeScript",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "llm"
+      ]
+    },
+    {
+      "id": "gh-1182212878",
+      "title": "iOfficeAI/OfficeCLI — OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "summary": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "date": "2026-04-23",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 2062,
+      "language": "C#",
+      "tags": [
+        "agent",
+        "ai",
+        "cli",
+        "office",
+        "openclaw"
+      ]
+    },
+    {
+      "id": "gh-958830659",
+      "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "date": "2026-04-23",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/google/adk-python",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19219,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "agents-sdk"
+      ]
+    },
+    {
+      "id": "gh-1038686658",
+      "title": "MemMachine/MemMachine — Universal memory layer for AI Agents. It provides scalable, extensible, and interoperable memory storage and retrieval to streamline AI agent state management for next-generation autonomous systems.",
+      "summary": "Universal memory layer for AI Agents. It provides scalable, extensible, and interoperable memory storage and retrieval to streamline AI agent state management for next-generation autonomous systems.",
+      "date": "2026-04-23",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/MemMachine/MemMachine",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3531,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic-ai",
+        "agents",
+        "agents-sdk",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-221654678",
+      "title": "deepset-ai/haystack — Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+      "summary": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+      "date": "2026-04-23",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/deepset-ai/haystack",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 24962,
+      "language": "MDX",
       "tags": [
         "agent",
         "agents",
         "ai",
-        "anthropic",
-        "anthropic-api"
+        "gemini",
+        "generative-ai"
       ]
     }
   ]

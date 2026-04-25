@@ -64,22 +64,54 @@ export function useNewsRSS() {
     setLoading(true);
     setError(false);
     try {
+      // 1차: 정적 JSON 데이터 (GitHub Actions로 갱신)
+      const staticRes = await fetch('/data/rss-merged.json');
+      if (staticRes.ok) {
+        const data = await staticRes.json();
+        if (Array.isArray(data) && data.length > 0) {
+          const mapped: NewsItem[] = data.map((item: any, i: number) => ({
+            id: `rss-${i}`,
+            title: item.title || '(제목 없음)',
+            summary: item.summary || '',
+            date: item.date || '',
+            source: item.source || '',
+            url: item.url || '',
+            category: '오픈소스',
+            lang: 'en',
+          }));
+          setNews(mapped);
+          setGithub([]);
+          return;
+        }
+      }
+
+      // 2차: 기존 정적 데이터 파일
+      const newsRes = await fetch('/data/news.json');
+      if (newsRes.ok) {
+        const data = await newsRes.json();
+        if (Array.isArray(data) && data.length > 0) {
+          setNews(data);
+          return;
+        }
+      }
+      
+      // 3차: Vercel API 라우트 (기존)
       const res = await fetch('/api/news');
       if (!res.ok) throw new Error('API error');
-      const data = await res.json();
+      const apidata = await res.json();
 
-      if (data?.error) throw new Error(data.error);
+      if (apidata?.error) throw new Error(apidata.error);
 
-      if (data?.news?.length > 0) {
-        setNews(data.news);
+      if (apidata?.news?.length > 0) {
+        setNews(apidata.news);
       }
 
-      if (data?.github?.length > 0) {
-        setGithub(data.github);
+      if (apidata?.github?.length > 0) {
+        setGithub(apidata.github);
       }
 
-      if (data?.updatedAtKST) {
-        const d = new Date(data.updatedAtKST);
+      if (apidata?.updatedAtKST) {
+        const d = new Date(apidata.updatedAtKST);
         if (!isNaN(d.getTime())) setLastUpdated(d);
       }
     } catch {

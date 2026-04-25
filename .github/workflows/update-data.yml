@@ -1,0 +1,75 @@
+# ── 주기적 데이터 갱신 Workflow ────────────────────────────
+# Node.js로 OpenRouter 랭킹 + AI 뉴스 RSS를 주기적으로 수집하여
+# public/data/ 디렉토리에 JSON 파일로 저장하고,
+# 변경사항을 자동 commit → Vercel 재배포 트리거
+#
+# 실행 주기: 매 2시간
+# workflow_dispatch로 수동 실행 가능
+
+name: 데이터 갱신 (Data Refresh)
+
+on:
+  schedule:
+    # 2시간마다 실행 (UTC 기준)
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 20
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🛠 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: 📡 Fetch Data (Rankings + News)
+        run: node scripts/fetch-data.mjs
+      
+      - name: 🔍 Check for Changes
+        id: check
+        run: |
+          if [[ -n "$(git status --porcelain public/data/)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "변경사항 발견 ✅"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "변경사항 없음 — 스킵"
+          fi
+      
+      - name: 📝 Commit & Push
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "onlyAI Bot"
+          git config user.email "bot@onlyai.co.kr"
+          git add public/data/
+          # meta.json에서 갱신시각 읽기
+          UPDATED_AT=$(node -e "try{const m=require('./public/data/meta.json');console.log(m.updatedAtKST||'unknown')}catch(e){console.log('unknown')}" 2>/dev/null || date '+%Y-%m-%d %H:%M')
+          git commit -m "📊 데이터 갱신: ${UPDATED_AT} [skip ci]"
+          git push
+      
+      - name: 🚀 Trigger Vercel Deploy
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          curl -s -X POST "https://api.vercel.com/v1/integrations/deploy/prj_${{ secrets.VERCEL_PROJECT_ID }}/${{ secrets.VERCEL_DEPLOY_HOOK }}" > /dev/null
+          echo "Vercel 재배포 트리거 완료"
+      
+      - name: 📊 Summary
+        run: |
+          echo "## 수집 결과" >> "$GITHUB_STEP_SUMMARY"
+          node -e "
+            const fs=require('fs');
+            const d='./public/data';
+            const r=m=>{try{return JSON.parse(fs.readFileSync(d+'/'+m,'utf-8')).length}catch{return 0}};
+            const m=JSON.parse(fs.readFileSync(d+'/meta.json','utf-8'));
+            console.log('- 모델 가격: %d개\\n- 랭킹: %d개\\n- 뉴스: %d개\\n- 갱신시각: %s',r('models-pricing.json'),r('rankings.json'),r('rss-merged.json'),m.updatedAtKST||'N/A');
+          " >> "$GITHUB_STEP_SUMMARY"

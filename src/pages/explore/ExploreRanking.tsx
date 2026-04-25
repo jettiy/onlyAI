@@ -10,6 +10,7 @@ import {
 } from "../../data/rankings";
 import { models } from "../../data/models";
 import { CompanyLogo } from "../../components/CompanyLogo";
+import { Rocket, HeartHandshake, BarChart3, TrendingUp } from "lucide-react";
 
 type Period = "weekly" | "monthly";
 type View = "chart" | "list";
@@ -97,9 +98,9 @@ function getChangeBg(change: string) {
 
 function getCategoryLabel(cat: string) {
   switch (cat) {
-    case "flagship": return "🚀 플래그십";
+    case "flagship": return <><Rocket size={14} className="inline mr-0.5" /> 플래그십</>;
     case "value": return "💎 가성비";
-    case "free": return "🆓 무료";
+    case "free": return <><HeartHandshake size={14} className="inline mr-0.5" /> 무료</>;
     default: return cat;
   }
 }
@@ -251,7 +252,7 @@ export default function ExploreRanking() {
               }`}
               title="차트 뷰"
             >
-              📊
+              <BarChart3 size={16} className="inline" />
             </button>
           </div>
         </div>
@@ -259,7 +260,7 @@ export default function ExploreRanking() {
 
       {/* ── 트렌드 Area Chart ── */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
-        <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-3">📈 토큰 사용량 추이</h2>
+        <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-3"><TrendingUp size={16} className="inline mr-1" /> 토큰 사용량 추이</h2>
         <ResponsiveContainer width="100%" height={200}>
           <AreaChart data={RANKING_TIMELINE} margin={{ top: 5, right: 5, left: -20, bottom: 0 }}>
             <defs>
@@ -401,7 +402,7 @@ export default function ExploreRanking() {
       {/* ── 차트 뷰 ── */}
       {view === "chart" && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
-          <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-4">📊 토큰 사용량 비교</h2>
+          <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-4"><BarChart3 size={16} className="inline mr-1" /> 토큰 사용량 비교</h2>
           <ResponsiveContainer width="100%" height={350}>
             <BarChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 60 }}>
               <XAxis

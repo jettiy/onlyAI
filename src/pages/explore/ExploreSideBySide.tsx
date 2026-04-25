@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { models, type AIModel } from "../../data/models";
+import { Search, Brain, Circle, Rabbit } from "lucide-react";
 
 interface SelectedModel extends AIModel {
   benchScores?: {
@@ -74,7 +75,7 @@ function ModelCard({ model, rank }: { model: SelectedModel; rank: number }) {
       <div className="flex items-center justify-between mb-3">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-lg">{model.companyId === 'openai' ? '🤖' : model.companyId === 'anthropic' ? '🤖' : model.companyId === 'google' ? '🔵' : model.companyId === 'meta' ? '🦙' : model.companyId === 'deepseek' ? '🐋' : '🤖'}</span>
+            <span className="text-lg">{model.companyId === 'openai' ? <Brain className="inline w-5 h-5" /> : model.companyId === 'anthropic' ? <Brain className="inline w-5 h-5" /> : model.companyId === 'google' ? <Circle className="inline w-5 h-5 fill-blue-500 text-blue-500" /> : model.companyId === 'meta' ? <Rabbit className="inline w-5 h-5" /> : model.companyId === 'deepseek' ? <Rabbit className="inline w-5 h-5" /> : <Brain className="inline w-5 h-5" />}</span>
             <h3 className="text-base font-black text-gray-900 dark:text-white">{model.name}</h3>
             {model.isNew && <span className="text-[9px] font-bold text-red-500">NEW</span>}
           </div>
@@ -158,7 +159,8 @@ export default function ExploreSideBySide() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🔍 사이드바이사이드 비교</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">
+          <Search className="inline w-6 h-6 mr-1.5 -mt-0.5 text-brand-500" /> 사이드바이사이드 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           최대 3개 모델을 선택하여 스펙, 가격, 벤치마크를 나란히 비교하세요.
         </p>

@@ -17,21 +17,27 @@
   }
   :root {
     --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    /* DESIGN.md tokens: colors.brand */
     --brand: #5B5FEF;
     --brand-light: #EEEDFF;
+    /* Signal colors */
     --success: #22C55E;
     --danger: #EF4444;
+    --warning: #F59E0B;
+    /* Border radius */
     --radius: 0.5rem;
-    /* Category colors: indigo opacity 3-level */
-    --cat-level-1: #5B5FEF;
-    --cat-level-2: #8B8FF5;
-    --cat-level-3: #B4B7FA;
-    /* News category colors using indigo shades */
+    /* Category colors (news) */
     --cat-model: #5B5FEF;
     --cat-research: #4A4AC0;
     --cat-agent: #6D6DE0;
     --cat-oss: #22C55E;
     --cat-infra: #64748B;
+    /* Card colors */
+    --surface: #FFFFFF;
+    --surface-dark: #111827;
+    --border: #E5E7EB;
+    --border-dark: #1F2937;
+    --muted: #9CA3AF;
   }
 
   .dark {

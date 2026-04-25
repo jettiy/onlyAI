@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Search, Lightbulb, BookOpen } from "lucide-react";
 
 type GlossaryCategory = '기초개념' | '학습기법' | '아키텍처' | '실사용' | '성능지표';
 
@@ -273,7 +274,8 @@ export default function Glossary() {
     <div className="space-y-6">
       {/* 헤더 */}
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-1">📚 AI 용어 백과사전</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
+          <BookOpen className="inline w-8 h-8 mr-1 -mt-0.5 text-brand-500" /> AI 용어 백과사전</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           AI를 처음 접한 분도 쉽게 이해할 수 있도록 정리했어요. {glossaryData.length}개 용어 수록.
         </p>
@@ -281,7 +283,7 @@ export default function Glossary() {
 
       {/* 검색창 */}
       <div className="relative">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 text-sm">🔍</span>
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 w-4 h-4" />
         <input
           type="text"
           value={search}
@@ -341,7 +343,7 @@ export default function Glossary() {
       {/* 카드 그리드 */}
       {filtered.length === 0 ? (
         <div className="text-center py-20">
-          <p className="text-4xl mb-4">🔍</p>
+          <Search className="inline w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" />
           <p className="text-gray-500 dark:text-gray-400">검색 결과가 없어요. 다른 키워드를 입력해보세요.</p>
         </div>
       ) : (
@@ -370,7 +372,8 @@ export default function Glossary() {
               {/* 예시 */}
               {term.example && (
                 <div className="bg-brand-50 dark:bg-brand-900/20 rounded-lg p-2.5 border border-brand-100 dark:border-brand-800">
-                  <p className="text-[11px] font-semibold text-brand-600 dark:text-brand-400 mb-0.5">💡 예시</p>
+                  <p className="text-[11px] font-semibold text-brand-600 dark:text-brand-400 mb-0.5">
+                    <Lightbulb className="inline w-3.5 h-3.5 mr-0.5 -mt-0.5 text-brand-500" /> 예시</p>
                   <p className="text-xs text-brand-700 dark:text-brand-300">{term.example}</p>
                 </div>
               )}
@@ -380,7 +383,7 @@ export default function Glossary() {
       )}
 
       <p className="text-xs text-gray-400 dark:text-gray-600 text-center pt-4">
-        📚 AI 이것만 용어사전 · 계속 업데이트 중이에요!
+        <BookOpen className="inline w-3.5 h-3.5 mr-1 -mt-0.5 text-brand-400" /> AI 이것만 용어사전 · 계속 업데이트 중이에요!
       </p>
     </div>
   );

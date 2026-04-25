@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getLogoUrl } from "../lib/logoUtils";
+import { Medal, Award, Star, TrendingUp, BarChart3, Brain, Flame, Lightbulb } from 'lucide-react';
 
 type BenchmarkKey = "mmlu" | "humaneval" | "math" | "gpqa" | "swe" | "ifeval" | "musr" | "coding";
 type MainTab = "benchmarks" | "popularity";
@@ -151,7 +152,7 @@ const DATA: ModelBench[] = [
 
 function LogoImg({ logoId, name, size = 18 }: { logoId: string; name: string; size?: number }) {
   const src = getLogoUrl(logoId);
-  if (!src) return <span className="text-sm">🤖</span>;
+  if (!src) return <Brain className="w-[18px] h-[18px] text-gray-500 dark:text-gray-400" />;
   return (
     <img
       src={src}
@@ -208,9 +209,9 @@ function PopularityRanking() {
   };
 
   const rankBadge = (rank: number) => {
-    if (rank === 1) return <span className="text-base">🥇</span>;
-    if (rank === 2) return <span className="text-base">🥈</span>;
-    if (rank === 3) return <span className="text-base">🥉</span>;
+    if (rank === 1) return <Medal className="w-5 h-5 text-amber-500 fill-amber-200 dark:fill-amber-800" />;
+    if (rank === 2) return <Award className="w-5 h-5 text-gray-400 fill-gray-200 dark:fill-gray-700" />;
+    if (rank === 3) return <Star className="w-5 h-5 text-orange-400 fill-orange-200 dark:fill-orange-800" />;
     return <span className="text-xs font-bold text-gray-400">{rank}</span>;
   };
 
@@ -329,7 +330,7 @@ export default function Benchmarks() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">📊 벤치마크 비교</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><BarChart3 className="w-6 h-6 inline-block mr-2 text-blue-500" />벤치마크 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           주요 AI 모델의 공개 벤치마크 점수 비교. artificialanalysis.ai / 공식 기술 보고서 참고. 2026년 4월 기준.
         </p>
@@ -345,7 +346,7 @@ export default function Benchmarks() {
               : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
           }`}
         >
-          📊 벤치마크
+          <BarChart3 className="w-4 h-4 inline-block mr-1 text-blue-500" /> 벤치마크
         </button>
         <button
           onClick={() => setActiveTab("popularity")}
@@ -355,7 +356,7 @@ export default function Benchmarks() {
               : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
           }`}
         >
-          🔥 인기도
+          <Flame className="w-4 h-4 inline-block mr-1 text-orange-500" /> 인기도
         </button>
       </div>
 
@@ -404,7 +405,7 @@ export default function Benchmarks() {
               <p className="text-sm font-semibold text-brand-800 dark:text-brand-300">{bench.label}</p>
             </div>
             <p className="text-xs text-brand-600 dark:text-brand-400 mt-0.5">{bench.desc}</p>
-            {bench.tip && <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">💡 {bench.tip}</p>}
+            {bench.tip && <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1 leading-relaxed"><Lightbulb className="w-3.5 h-3.5 inline-block mr-1 text-amber-400" />{bench.tip}</p>}
           </div>
 
           {/* Bar chart with logos */}
@@ -412,7 +413,7 @@ export default function Benchmarks() {
             {sorted.map((m, idx) => {
               const score = m.scores[activeBench] ?? 0;
               const pct = (score / maxScore) * 100;
-              const medal = idx === 0 ? "🥇" : idx === 1 ? "🥈" : idx === 2 ? "🥉" : null;
+              const medal = idx === 0 ? <Medal className="w-4 h-4 text-amber-500 fill-amber-200 dark:fill-amber-800" /> : idx === 1 ? <Award className="w-4 h-4 text-gray-400 fill-gray-200 dark:fill-gray-700" /> : idx === 2 ? <Star className="w-4 h-4 text-orange-400 fill-orange-200 dark:fill-orange-800" /> : null;
               return (
                 <div key={m.name} className="flex items-center gap-3 group">
                   <div className="w-5 text-xs text-center shrink-0 font-medium">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LOGO_ID_TO_PATH } from "../lib/logoUtils";
+import { CalendarDays, Clock, MessageCircle, CheckCircle2 } from "lucide-react";
 
 type TimelineStatus = "released" | "expected" | "rumored";
 
@@ -289,7 +290,8 @@ export default function Timeline() {
   return (
     <div className="space-y-6">
       <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🗓️ AI 모델 출시 타임라인</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">
+          <CalendarDays className="inline w-6 h-6 mr-1.5 -mt-0.5 text-brand-500" /> AI 모델 출시 타임라인</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           최신 출시 모델 · 예정 모델 · 루머까지 한눈에 정리했어요
         </p>
@@ -388,7 +390,7 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
             <div className="flex items-center gap-2 flex-wrap mb-1.5">
               <span className="text-[10px] font-mono text-gray-400">{event.displayDate}</span>
               <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${status.bg} ${status.text}`}>
-                {event.status === "expected" ? "🔜 " : event.status === "rumored" ? "💬 " : "✅ "}
+                {event.status === "expected" ? <><Clock className="inline w-3 h-3 mr-0.5 -mt-0.5" /> </> : event.status === "rumored" ? <><MessageCircle className="inline w-3 h-3 mr-0.5 -mt-0.5" /> </> : <><CheckCircle2 className="inline w-3 h-3 mr-0.5 -mt-0.5" /> </>}
                 {status.label}
               </span>
               <span className="text-[10px] text-gray-400">{cat.label}</span>

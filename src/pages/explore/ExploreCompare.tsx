@@ -1,5 +1,6 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { DollarSign, BarChart3, Crosshair } from 'lucide-react';
 import { models } from '../../data/models';
 import { logoIdToPath } from '../../lib/logoUtils';
 
@@ -39,9 +40,9 @@ const BENCH_LABELS: Record<string, string> = {
 };
 
 const TABS = [
-  { key: 'price' as const, label: '💰 가격 비교' },
-  { key: 'bench' as const, label: '📊 벤치마크' },
-  { key: 'vs' as const, label: '⚔️ 1:1 대결' },
+  { key: 'price' as const, label: '가격 비교', icon: DollarSign },
+  { key: 'bench' as const, label: '벤치마크', icon: BarChart3 },
+  { key: 'vs' as const, label: '1:1 대결', icon: null },
 ];
 
 /* ── 헬퍼 ── */
@@ -230,6 +231,7 @@ export default function ExploreCompare() {
                 : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
             }`}
           >
+            {t.icon && <t.icon size={16} className="inline mr-1.5 -mt-0.5" />}
             {t.label}
           </button>
         ))}
@@ -558,10 +560,12 @@ export default function ExploreCompare() {
       {/* 하단 링크 */}
       <div className="flex flex-wrap gap-3 justify-center pt-4">
         <Link to="/recommend" className="text-sm text-[#5B5FEF] dark:text-[#8B8FFF] font-medium hover:underline">
-          🎯 용도별 추천 받기
+          <Crosshair size={14} className="inline mr-1 -mt-0.5" />
+          용도별 추천 받기
         </Link>
         <Link to="/pricing" className="text-sm text-[#5B5FEF] dark:text-[#8B8FFF] font-medium hover:underline">
-          💰 전체 가격표
+          <DollarSign size={14} className="inline mr-1 -mt-0.5" />
+          전체 가격표
         </Link>
       </div>
     </div>

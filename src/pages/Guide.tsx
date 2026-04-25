@@ -1,3 +1,7 @@
+import { Sparkles, Zap, Plug, DollarSign, Monitor, Cloud, Laptop, Wifi, ArrowRight } from 'lucide-react';
+
+const GUIDE_ICONS = [Sparkles, Plug, Zap, DollarSign] as const;
+
 const steps = [
   {
     step: '01',
@@ -27,10 +31,10 @@ const steps = [
     title: '클라우드 선택',
     desc: '클라우드를 쓴다면 어디가 좋을까요?',
     guides: [
-      { emoji: '🆓', title: '완전 무료로 시작', body: 'ChatGPT 무료, Claude 무료, Gemini 무료 — 가입 후 바로 사용. API 없이 웹에서만 사용 가능.' },
-      { emoji: '🔌', title: 'API가 필요하다면', body: 'OpenRouter 추천. 하나의 API 키로 GPT, Claude, Llama, MiniMax 등 300개 이상의 모델을 사용할 수 있어요.' },
-      { emoji: '⚡', title: '속도가 최우선이라면', body: 'Groq 무료 티어. LPU 칩 기반으로 업계 최고 속도. Llama 3.3 70B를 무료로 빠르게 사용 가능.' },
-      { emoji: '💸', title: '비용이 최우선이라면', body: 'DeepSeek API. 입력 $0.27/1M 토큰으로 업계 최저가 수준. 가입 시 $5 무료 크레딧 제공.' },
+      { title: '완전 무료로 시작', body: 'ChatGPT 무료, Claude 무료, Gemini 무료 — 가입 후 바로 사용. API 없이 웹에서만 사용 가능.' },
+      { title: 'API가 필요하다면', body: 'OpenRouter 추천. 하나의 API 키로 GPT, Claude, Llama, MiniMax 등 300개 이상의 모델을 사용할 수 있어요.' },
+      { title: '속도가 최우선이라면', body: 'Groq 무료 티어. LPU 칩 기반으로 업계 최고 속도. Llama 3.3 70B를 무료로 빠르게 사용 가능.' },
+      { title: '비용이 최우선이라면', body: 'DeepSeek API. 입력 $0.27/1M 토큰으로 업계 최저가 수준. 가입 시 $5 무료 크레딧 제공.' },
     ],
   },
   {
@@ -50,7 +54,7 @@ export default function Guide() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white dark:text-white mb-2">📖 AI 처음 시작 가이드</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2"><Sparkles className="w-7 h-7 inline-block mr-2 text-brand-500" />AI 처음 시작 가이드</h1>
         <p className="text-gray-500">AI를 처음 접하는 분을 위한 단계별 안내예요.</p>
       </div>
 
@@ -71,7 +75,7 @@ export default function Guide() {
               <div className="space-y-2">
                 {s.options.map((opt) => (
                   <div key={opt.label} className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-950 rounded-lg">
-                    <span className="text-brand-500 text-xs mt-1">▶</span>
+                    <ArrowRight className="w-3 h-3 text-brand-500 mt-1 shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-gray-900 dark:text-white">{opt.label}</p>
                       <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{opt.rec}</p>
@@ -87,8 +91,8 @@ export default function Guide() {
                   <thead>
                     <tr className="border-b border-gray-200 dark:border-gray-800">
                       <th className="text-left py-2 text-gray-500 dark:text-gray-400 font-medium w-24">항목</th>
-                      <th className="text-left py-2 text-gray-500 dark:text-gray-400 font-medium">🖥️ 로컬</th>
-                      <th className="text-left py-2 text-gray-500 dark:text-gray-400 font-medium">☁️ 클라우드</th>
+                      <th className="text-left py-2 text-gray-500 dark:text-gray-400 font-medium"><Laptop className="w-3.5 h-3.5 inline-block mr-1" /> 로컬</th>
+                      <th className="text-left py-2 text-gray-500 dark:text-gray-400 font-medium"><Cloud className="w-3.5 h-3.5 inline-block mr-1" /> 클라우드</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -106,13 +110,17 @@ export default function Guide() {
 
             {s.guides && (
               <div className="grid sm:grid-cols-2 gap-3">
-                {s.guides.map((g) => (
+                {s.guides.map((g, gi) => {
+                  const Icon = GUIDE_ICONS[gi];
+                  return (
                   <div key={g.title} className="p-4 bg-gray-50 dark:bg-gray-950 rounded-lg">
-                    <p className="text-lg mb-2">{g.emoji}</p>
-                    <p className="text-sm font-bold text-gray-900 dark:text-white dark:text-white mb-1">{g.title}</p>
-                    <p className="text-xs text-gray-600 dark:text-gray-400 dark:text-gray-400 leading-relaxed">{g.body}</p>
+                    <span className="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-2">
+                      <Icon className="w-5 h-5 text-brand-500" />
+                    </span>
+                    <p className="text-sm font-bold text-gray-900 dark:text-white mb-1">{g.title}</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{g.body}</p>
                   </div>
-                ))}
+                )})}
               </div>
             )}
 

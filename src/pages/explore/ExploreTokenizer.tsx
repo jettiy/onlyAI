@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import { logoIdToPath } from "../../lib/logoUtils";
+import { Lightbulb } from "lucide-react";
 
 // Approximate token counts per model family (characters per token ratio)
 const MODEL_TOKENIZERS = [
@@ -184,7 +185,7 @@ export default function ExploreTokenizer() {
 
           {/* Insight box */}
           <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">
-            <p className="text-xs font-semibold text-brand-800 dark:text-brand-300 mb-1">💡 인사이트</p>
+            <p className="text-xs font-semibold text-brand-800 dark:text-brand-300 mb-1"><Lightbulb size={14} className="inline mr-1" /> 인사이트</p>
             {results.length >= 2 && (
               <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">
                 같은 텍스트도 <strong>{results[0].name}</strong>은 {results[0].tokens.toLocaleString()}토큰,

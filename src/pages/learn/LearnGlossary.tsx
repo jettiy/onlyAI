@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Search, Lightbulb } from "lucide-react";
 
 type GlossaryCategory = '기초개념' | '학습기법' | '아키텍처' | '실사용' | '성능지표';
 
@@ -316,7 +317,7 @@ export default function LearnGlossary() {
 
       {/* 검색창 */}
       <div className="relative">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 text-sm">🔍</span>
+        <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500" />
         <input
           type="text"
           value={search}
@@ -376,7 +377,7 @@ export default function LearnGlossary() {
       {/* 카드 그리드 */}
       {filtered.length === 0 ? (
         <div className="text-center py-20">
-          <p className="text-4xl mb-4">🔍</p>
+          <p className="text-4xl mb-4"><Search size={40} className="inline text-gray-300 dark:text-gray-600" /></p>
           <p className="text-gray-500 dark:text-gray-400">검색 결과가 없어요. 다른 키워드를 입력해보세요.</p>
         </div>
       ) : (
@@ -405,7 +406,7 @@ export default function LearnGlossary() {
               {/* 예시 */}
               {term.example && (
                 <div className="bg-brand-50 dark:bg-brand-900/20 rounded-lg p-2.5 border border-brand-100 dark:border-brand-800">
-                  <p className="text-[11px] font-semibold text-brand-600 dark:text-brand-400 mb-0.5">💡 예시</p>
+                  <p className="text-[11px] font-semibold text-brand-600 dark:text-brand-400 mb-0.5"><Lightbulb size={12} className="inline mr-1 -mt-0.5" />예시</p>
                   <p className="text-xs text-brand-700 dark:text-brand-300">{term.example}</p>
                 </div>
               )}

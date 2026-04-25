@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
+import { BookOpen, Handshake, Search, Calculator, Image, Brain } from 'lucide-react';
 
 const ITEMS = [
   {
-    path: '/learn/glossary', icon: '📖', label: '용어사전',
+    path: '/learn/glossary', icon: BookOpen, label: '용어사전',
     desc: 'LLM·RAG·MoE·파인튜닝·임베딩. AI 핵심 용어 30개 이상을 쉽게 풀어서 정리했어요.',
     count: '30+ 용어',
   },
   {
-    path: '/learn/simulator', icon: '🤝', label: '협업 시뮬레이터',
+    path: '/learn/simulator', icon: Handshake, label: '협업 시뮬레이터',
     desc: '여러 AI가 역할을 나눠 협력하는 멀티에이전트 구조를 직접 체험해볼 수 있어요.',
     count: '인터랙티브',
   },
@@ -24,14 +25,14 @@ const QUICK_TERMS = [
 
 const TOPICS = [
   {
-    icon: '🔍', label: '모델 선택 가이드',
+    icon: Search, label: '모델 선택 가이드',
     desc: '용도별 맞는 AI 모델 고르기 — 코딩, 글쓰기, 이미지, 요약에 최적화된 모델 추천',
     tags: ['실전 팁', '초심자'],
     color: 'text-brand-600 dark:text-brand-400 border-brand-200 dark:border-brand-900',
     link: '/explore/compare',
   },
   {
-    icon: '🧮', label: '토큰과 가격 이해하기',
+    icon: Calculator, label: '토큰과 가격 이해하기',
     desc: '토큰이 뭔가요? 왜 길이마다 가격이 다른가요? 입력·출력 토큰 계산법과 실제 비용 예시',
     tags: ['비용 절감', '기본기'],
     color: 'text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-900',
@@ -59,7 +60,7 @@ const TOPICS = [
     link: '/explore/ranking',
   },
   {
-    icon: '🖼️', label: '이미지·비디오 AI 가이드',
+    icon: Image, label: '이미지·비디오 AI 가이드',
     desc: 'DALL·E·Midjourney·Kling·Runway 등 생성형 AI 모델 비교와 프롬프트 팁',
     tags: '생성형 AI',
     color: 'text-cyan-600 dark:text-cyan-400 border-cyan-200 dark:border-cyan-900',
@@ -78,7 +79,7 @@ export default function LearnHub() {
     <div className="space-y-8">
       {/* 헤더 */}
       <div className="border-b border-gray-200 dark:border-gray-800 pb-5">
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-2">🧠 AI 정보 학습하기</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-2"><Brain size={28} className="inline mr-1.5 -mt-1 text-brand-600 dark:text-brand-400" />AI 정보 학습하기</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 max-w-lg">
           AI를 쓰다 보면 모르는 용어들이 나와요. 개념을 잡고,
           모델 선택·비용·API까지 실전 지식을 쌓아보세요.
@@ -110,7 +111,11 @@ export default function LearnHub() {
             <Link key={t.label} to={t.link}
               className={`group bg-white dark:bg-gray-900 rounded-xl border ${t.color} p-4 hover:shadow-md transition-all`}>
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-xl">{t.icon}</span>
+                {typeof t.icon === 'string' ? (
+                  <span className="text-xl">{t.icon}</span>
+                ) : (
+                  <t.icon size={20} className="text-gray-700 dark:text-gray-300" />
+                )}
                 <h2 className={`text-sm font-bold ${t.color.split(' ')[0]}`}>{t.label}</h2>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-2">{t.desc}</p>
@@ -147,7 +152,9 @@ export default function LearnHub() {
         {ITEMS.map(item => (
           <Link key={item.path} to={item.path}
             className="group flex items-center gap-5 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5 hover:border-emerald-300 dark:hover:border-emerald-700 hover:shadow-md transition-all">
-            <span className="text-4xl shrink-0">{item.icon}</span>
+            <span className="text-4xl shrink-0">
+              {typeof item.icon === 'string' ? item.icon : <item.icon size={36} className="text-gray-700 dark:text-gray-300" />}
+            </span>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
                 <h2 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{item.label}</h2>

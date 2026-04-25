@@ -26,6 +26,9 @@ import {
   Trophy,
   TrendingUp,
   Newspaper,
+  Medal,
+  Award,
+  Star,
 } from 'lucide-react';
 
 /* ── 상수 ── */
@@ -93,7 +96,7 @@ const arenaTop3 = [...models]
   .sort((a, b) => (b.arenaScore ?? 0) - (a.arenaScore ?? 0))
   .slice(0, 3);
 
-const arenaMedals = ['🥇', '🥈', '🥉'] as const;
+const arenaMedals = [Medal, Award, Star] as const;
 const arenaAccents = [
   'border-amber-300 dark:border-amber-500/50',
   'border-gray-300 dark:border-gray-500/50',
@@ -232,7 +235,7 @@ export default function Home() {
 
         {/* 제목 */}
         <h1 className="text-2xl md:text-4xl font-black text-gray-900 dark:text-white leading-tight mb-3">
-          내게 맞는 AI 모델, <span className="text-[#5B5FEF] dark:text-[#8B8FFF]">한눈에 찾기</span>
+          나에게 맞는 AI, <span className="text-[#5B5FEF] dark:text-[#8B8FFF]">뭐가 제일 좋을까?</span>
         </h1>
 
         {/* 부제 */}
@@ -477,7 +480,7 @@ export default function Home() {
                 key={m.id}
                 className={`rounded-xl border-2 ${arenaAccents[i]} ${arenaBgs[i]} p-4 flex items-center gap-3 transition-all hover:shadow-md`}
               >
-                <span className="text-2xl shrink-0">{arenaMedals[i]}</span>
+                <span className="text-2xl shrink-0">{i === 0 ? <Medal className="w-6 h-6 text-amber-500 fill-amber-200 dark:fill-amber-800" /> : i === 1 ? <Award className="w-6 h-6 text-gray-400 fill-gray-200 dark:fill-gray-700" /> : <Star className="w-6 h-6 text-orange-400 fill-orange-200 dark:fill-orange-800" />}</span>
                 <div className="min-w-0">
                   <p className="text-sm font-bold text-gray-900 dark:text-white truncate">{m.name}</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">

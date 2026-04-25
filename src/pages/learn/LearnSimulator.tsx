@@ -1,11 +1,19 @@
 import { useState, useEffect, useRef } from "react";
+import {
+  User, Brain, Search, BarChart3, PenLine, CheckCircle2,
+  Building2, Laptop, FlaskConical, Rocket, TrendingUp,
+  Newspaper, Wallet, AlertTriangle, ClipboardList,
+  Smartphone, Zap, AlarmClock, Bell, Wrench,
+  Handshake, RefreshCw, Play, Hourglass,
+  FlaskRound, Telescope, GitFork,
+} from "lucide-react";
 
 // ─── 타입 ───────────────────────────────────────────────────────────────────
 interface AgentNode {
   id: string;
   role: string;
   model: string;
-  emoji: string;
+  iconName: string;
   color: string;        // tailwind bg class
   accent: string;       // tailwind text class
   bar: string;          // hex
@@ -26,7 +34,7 @@ interface Scenario {
   id: string;
   title: string;
   description: string;
-  icon: string;
+  iconName: string;
   agents: AgentNode[];
   flow: {
     delay: number;         // ms after prev
@@ -43,14 +51,14 @@ const SCENARIOS: Scenario[] = [
     id: "research",
     title: "AI 리서치 팀",
     description: "사용자 질문을 받아 검색·분석·요약·검증을 각 에이전트가 분담해요.",
-    icon: "🔬",
+    iconName: "FlaskRound",
     agents: [
-      { id: "user",     role: "사용자",       model: "Human",           emoji: "👤", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 5, y: 42, description: "질문을 입력해요." },
-      { id: "manager",  role: "매니저 에이전트", model: "GPT-5.4",        emoji: "🧠", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 28, y: 42, description: "작업을 분해하고 서브에이전트에 배분해요." },
-      { id: "searcher", role: "검색 에이전트",  model: "DeepSeek V3.2",  emoji: "🔍", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 55, y: 14, description: "웹 검색·API 호출을 담당해요." },
-      { id: "analyst",  role: "분석 에이전트",  model: "Claude Sonnet",  emoji: "📊", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 55, y: 50, description: "수집된 데이터를 분석·정리해요." },
-      { id: "writer",   role: "작성 에이전트",  model: "Claude Opus",    emoji: "✍️", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300", bar: "#D97706", x: 55, y: 82, description: "최종 보고서를 작성해요." },
-      { id: "reviewer", role: "검증 에이전트",  model: "Gemini 3.1 Pro", emoji: "✅", color: "bg-pink-100 dark:bg-pink-900/40",   accent: "text-pink-700 dark:text-pink-300", bar: "#DB2777", x: 80, y: 42, description: "결과물의 사실 관계·품질을 검증해요." },
+      { id: "user",     role: "사용자",       model: "Human",           iconName: "User", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 5, y: 42, description: "질문을 입력해요." },
+      { id: "manager",  role: "매니저 에이전트", model: "GPT-5.4",        iconName: "Brain", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 28, y: 42, description: "작업을 분해하고 서브에이전트에 배분해요." },
+      { id: "searcher", role: "검색 에이전트",  model: "DeepSeek V3.2",  iconName: "Search", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 55, y: 14, description: "웹 검색·API 호출을 담당해요." },
+      { id: "analyst",  role: "분석 에이전트",  model: "Claude Sonnet",  iconName: "BarChart3", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 55, y: 50, description: "수집된 데이터를 분석·정리해요." },
+      { id: "writer",   role: "작성 에이전트",  model: "Claude Opus",    iconName: "PenLine", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300", bar: "#D97706", x: 55, y: 82, description: "최종 보고서를 작성해요." },
+      { id: "reviewer", role: "검증 에이전트",  model: "Gemini 3.1 Pro", iconName: "CheckCircle2", color: "bg-pink-100 dark:bg-pink-900/40",   accent: "text-pink-700 dark:text-pink-300", bar: "#DB2777", x: 80, y: 42, description: "결과물의 사실 관계·품질을 검증해요." },
     ],
     flow: [
       { delay: 600,  from: "user",     to: "manager",  text: "2026년 AI 반도체 시장 동향 분석해줘", type: "task" },
@@ -68,14 +76,14 @@ const SCENARIOS: Scenario[] = [
     id: "coding",
     title: "AI 소프트웨어 개발팀",
     description: "설계·코딩·테스트·배포 각 단계를 전문 에이전트가 파이프라인으로 처리해요.",
-    icon: "💻",
+    iconName: "Laptop",
     agents: [
-      { id: "user",       role: "사용자",        model: "Human",           emoji: "👤", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 4, y: 42, description: "기능 요구사항을 전달해요." },
-      { id: "architect",  role: "설계 에이전트",  model: "GPT-5.4",         emoji: "🏗️", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 24, y: 42, description: "시스템 아키텍처·API 설계." },
-      { id: "coder",      role: "코딩 에이전트",  model: "Claude Sonnet",   emoji: "💻", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 48, y: 22, description: "실제 코드를 작성해요." },
-      { id: "tester",     role: "테스트 에이전트", model: "DeepSeek V3.2",  emoji: "🧪", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 48, y: 62, description: "유닛·통합 테스트 자동 생성." },
-      { id: "reviewer",   role: "코드 리뷰어",    model: "Gemini 3.1 Pro",  emoji: "🔍", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300", bar: "#D97706", x: 72, y: 42, description: "보안·성능·가독성 리뷰." },
-      { id: "deployer",   role: "배포 에이전트",  model: "MiMo-V2-Pro",    emoji: "🚀", color: "bg-pink-100 dark:bg-pink-900/40",   accent: "text-pink-700 dark:text-pink-300", bar: "#DB2777", x: 90, y: 42, description: "CI/CD 파이프라인 실행·배포." },
+      { id: "user",       role: "사용자",        model: "Human",           iconName: "User", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 4, y: 42, description: "기능 요구사항을 전달해요." },
+      { id: "architect",  role: "설계 에이전트",  model: "GPT-5.4",         iconName: "Building2", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 24, y: 42, description: "시스템 아키텍처·API 설계." },
+      { id: "coder",      role: "코딩 에이전트",  model: "Claude Sonnet",   iconName: "Laptop", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 48, y: 22, description: "실제 코드를 작성해요." },
+      { id: "tester",     role: "테스트 에이전트", model: "DeepSeek V3.2",  iconName: "FlaskConical", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 48, y: 62, description: "유닛·통합 테스트 자동 생성." },
+      { id: "reviewer",   role: "코드 리뷰어",    model: "Gemini 3.1 Pro",  iconName: "Search", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300", bar: "#D97706", x: 72, y: 42, description: "보안·성능·가독성 리뷰." },
+      { id: "deployer",   role: "배포 에이전트",  model: "MiMo-V2-Pro",    iconName: "Rocket", color: "bg-pink-100 dark:bg-pink-900/40",   accent: "text-pink-700 dark:text-pink-300", bar: "#DB2777", x: 90, y: 42, description: "CI/CD 파이프라인 실행·배포." },
     ],
     flow: [
       { delay: 600,  from: "user",      to: "architect", text: "실시간 알림 시스템 API 만들어줘", type: "task" },
@@ -92,15 +100,15 @@ const SCENARIOS: Scenario[] = [
     id: "investment",
     title: "AI 투자 분석팀",
     description: "시황·뉴스·재무·리스크 에이전트가 협력해 투자 의견을 생성해요.",
-    icon: "📈",
+    iconName: "TrendingUp",
     agents: [
-      { id: "user",      role: "투자자",        model: "Human",           emoji: "👤", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 4, y: 42, description: "종목·종합 분석 요청." },
-      { id: "manager",   role: "리드 에이전트",  model: "GPT-5.4",         emoji: "🧠", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 26, y: 42, description: "분석 조율·최종 판단." },
-      { id: "market",    role: "시황 에이전트",  model: "Gemini 3.1 Pro",  emoji: "📊", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 52, y: 12, description: "거시경제·시장 흐름 분석." },
-      { id: "news",      role: "뉴스 에이전트",  model: "DeepSeek V3.2",  emoji: "📰", color: "bg-cyan-100 dark:bg-cyan-900/40",   accent: "text-cyan-700 dark:text-cyan-300", bar: "#0891B2", x: 52, y: 42, description: "실시간 뉴스·공시 수집." },
-      { id: "financial", role: "재무 에이전트",  model: "Claude Opus",    emoji: "💰", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 52, y: 72, description: "재무제표·밸류에이션 분석." },
-      { id: "risk",      role: "리스크 에이전트", model: "Qwen3-235B",    emoji: "⚠️", color: "bg-orange-100 dark:bg-orange-900/40", accent: "text-orange-700 dark:text-orange-300", bar: "#EA580C", x: 76, y: 42, description: "리스크 요인·시나리오 분석." },
-      { id: "writer",    role: "보고서 에이전트", model: "Claude Sonnet",  emoji: "📋", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300", bar: "#D97706", x: 90, y: 42, description: "투자 의견서 최종 작성." },
+      { id: "user",      role: "투자자",        model: "Human",           iconName: "User", color: "bg-gray-100 dark:bg-gray-800", accent: "text-gray-700 dark:text-gray-300", bar: "#6B7280", x: 4, y: 42, description: "종목·종합 분석 요청." },
+      { id: "manager",   role: "리드 에이전트",  model: "GPT-5.4",         iconName: "Brain", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 26, y: 42, description: "분석 조율·최종 판단." },
+      { id: "market",    role: "시황 에이전트",  model: "Gemini 3.1 Pro",  iconName: "BarChart3", color: "bg-brand-100 dark:bg-brand-900/40",   accent: "text-brand-700 dark:text-brand-300", bar: "#2563EB", x: 52, y: 12, description: "거시경제·시장 흐름 분석." },
+      { id: "news",      role: "뉴스 에이전트",  model: "DeepSeek V3.2",  iconName: "Newspaper", color: "bg-cyan-100 dark:bg-cyan-900/40",   accent: "text-cyan-700 dark:text-cyan-300", bar: "#0891B2", x: 52, y: 42, description: "실시간 뉴스·공시 수집." },
+      { id: "financial", role: "재무 에이전트",  model: "Claude Opus",    iconName: "Wallet", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 52, y: 72, description: "재무제표·밸류에이션 분석." },
+      { id: "risk",      role: "리스크 에이전트", model: "Qwen3-235B",    iconName: "AlertTriangle", color: "bg-orange-100 dark:bg-orange-900/40", accent: "text-orange-700 dark:text-orange-300", bar: "#EA580C", x: 76, y: 42, description: "리스크 요인·시나리오 분석." },
+      { id: "writer",    role: "보고서 에이전트", model: "Claude Sonnet",  iconName: "ClipboardList", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300", bar: "#D97706", x: 90, y: 42, description: "투자 의견서 최종 작성." },
     ],
     flow: [
       { delay: 600,  from: "user",      to: "manager",   text: "텐센트 (00700.HK) 투자 의견 분석 요청", type: "task" },
@@ -118,15 +126,15 @@ const SCENARIOS: Scenario[] = [
     id: "openclaw",
     title: "OpenClaw 자동화",
     description: "OpenClaw가 텔레그램 명령을 받아 크론·에이전트·알림을 자동 조율하는 실제 작동 방식이에요.",
-    icon: "🦞",
+    iconName: "Telescope",
     agents: [
-      { id: "user",     role: "사용자",          model: "Telegram",        emoji: "📱", color: "bg-gray-100 dark:bg-gray-800",       accent: "text-gray-700 dark:text-gray-300",    bar: "#6B7280", x: 4,  y: 42, description: "텔레그램으로 명령·질문을 입력해요." },
-      { id: "gateway",  role: "OpenClaw 게이트웨이", model: "OpenClaw Core",  emoji: "🦞", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 26, y: 42, description: "메시지 라우팅·크론·세션 관리 담당." },
-      { id: "main",     role: "메인 에이전트",    model: "MiniMax M2.7",    emoji: "🧠", color: "bg-brand-100 dark:bg-brand-900/40",    accent: "text-brand-700 dark:text-brand-300",    bar: "#2563EB", x: 50, y: 22, description: "자연어 이해·작업 분해·응답 생성." },
-      { id: "subagent", role: "서브 에이전트",    model: "Claude Sonnet",   emoji: "⚡", color: "bg-cyan-100 dark:bg-cyan-900/40",    accent: "text-cyan-700 dark:text-cyan-300",    bar: "#0891B2", x: 50, y: 62, description: "복잡한 분석·코딩 등 전문 작업 처리." },
-      { id: "cron",     role: "크론 스케줄러",    model: "OpenClaw Cron",   emoji: "⏰", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300",  bar: "#D97706", x: 74, y: 22, description: "정해진 시간에 작업 자동 실행." },
-      { id: "notify",   role: "알림 에이전트",    model: "Telegram Bot",    emoji: "🔔", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 74, y: 62, description: "보고서·알림을 텔레그램으로 전송." },
-      { id: "skill",    role: "스킬 엔진",        model: "ClawHub Skills",  emoji: "🛠️", color: "bg-pink-100 dark:bg-pink-900/40",   accent: "text-pink-700 dark:text-pink-300",    bar: "#DB2777", x: 91, y: 42, description: "투자·날씨·뉴스 등 특화 기능 실행." },
+      { id: "user",     role: "사용자",          model: "Telegram",        iconName: "Smartphone", color: "bg-gray-100 dark:bg-gray-800",       accent: "text-gray-700 dark:text-gray-300",    bar: "#6B7280", x: 4,  y: 42, description: "텔레그램으로 명령·질문을 입력해요." },
+      { id: "gateway",  role: "OpenClaw 게이트웨이", model: "OpenClaw Core",  iconName: "GitFork", color: "bg-violet-100 dark:bg-violet-900/40", accent: "text-violet-700 dark:text-violet-300", bar: "#7C3AED", x: 26, y: 42, description: "메시지 라우팅·크론·세션 관리 담당." },
+      { id: "main",     role: "메인 에이전트",    model: "MiniMax M2.7",    iconName: "Brain", color: "bg-brand-100 dark:bg-brand-900/40",    accent: "text-brand-700 dark:text-brand-300",    bar: "#2563EB", x: 50, y: 22, description: "자연어 이해·작업 분해·응답 생성." },
+      { id: "subagent", role: "서브 에이전트",    model: "Claude Sonnet",   iconName: "Zap", color: "bg-cyan-100 dark:bg-cyan-900/40",    accent: "text-cyan-700 dark:text-cyan-300",    bar: "#0891B2", x: 50, y: 62, description: "복잡한 분석·코딩 등 전문 작업 처리." },
+      { id: "cron",     role: "크론 스케줄러",    model: "OpenClaw Cron",   iconName: "AlarmClock", color: "bg-amber-100 dark:bg-amber-900/40",  accent: "text-amber-700 dark:text-amber-300",  bar: "#D97706", x: 74, y: 22, description: "정해진 시간에 작업 자동 실행." },
+      { id: "notify",   role: "알림 에이전트",    model: "Telegram Bot",    iconName: "Bell", color: "bg-emerald-100 dark:bg-emerald-900/40", accent: "text-emerald-700 dark:text-emerald-300", bar: "#059669", x: 74, y: 62, description: "보고서·알림을 텔레그램으로 전송." },
+      { id: "skill",    role: "스킬 엔진",        model: "ClawHub Skills",  iconName: "Wrench", color: "bg-pink-100 dark:bg-pink-900/40",   accent: "text-pink-700 dark:text-pink-300",    bar: "#DB2777", x: 91, y: 42, description: "투자·날씨·뉴스 등 특화 기능 실행." },
     ],
     flow: [
       { delay: 600,  from: "user",     to: "gateway",  text: "오늘 홍콩 시장 마감 보고서 보내줘", type: "task" },
@@ -255,22 +263,29 @@ export default function LearnSimulator() {
     <div className="space-y-5">
       {/* 헤더 */}
       <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🤝 멀티에이전트 협업 시뮬레이터</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1 inline-flex items-center gap-2">
+          <Handshake className="w-6 h-6" /> 멀티에이전트 협업 시뮬레이터</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">여러 AI가 역할을 나눠 협력하는 방식을 실시간으로 시각화해요</p>
       </div>
 
       {/* 시나리오 선택 */}
       <div className="flex gap-2 flex-wrap">
-        {SCENARIOS.map((s) => (
+        {SCENARIOS.map((s) => {
+          const icons: Record<string, React.ComponentType<{className?: string}>> = {
+            FlaskRound, Laptop, TrendingUp, Telescope,
+          };
+          const ScenarioIcon = icons[s.iconName];
+          return (
           <button key={s.id} onClick={() => setScenarioId(s.id)}
             className={"flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold border transition-all " + (
               scenarioId === s.id
                 ? "bg-violet-600 text-white border-violet-600 shadow-lg shadow-violet-200 dark:shadow-violet-900/30"
                 : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-violet-300"
             )}>
-            <span>{s.icon}</span> {s.title}
+            {ScenarioIcon ? <ScenarioIcon className="w-4 h-4" /> : null} {s.title}
           </button>
-        ))}
+          );
+        })}
       </div>
 
       {/* 설명 + 컨트롤 */}
@@ -294,7 +309,11 @@ export default function LearnSimulator() {
                 ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed"
                 : "bg-violet-600 hover:bg-violet-700 text-white shadow-md shadow-violet-200 dark:shadow-violet-900/30"
             )}>
-            {running ? "⏳ 실행 중..." : "▶ 시뮬레이션 실행"}
+            {running ? (
+              <span className="inline-flex items-center gap-1"><Hourglass className="w-3 h-3" /> 실행 중...</span>
+            ) : (
+              <span className="inline-flex items-center gap-1"><Play className="w-3 h-3" /> 시뮬레이션 실행</span>
+            )}
           </button>
         </div>
       </div>
@@ -326,7 +345,16 @@ export default function LearnSimulator() {
                       <span className="absolute inset-0 rounded-xl animate-ping opacity-30"
                         style={{ backgroundColor: agent.bar }} />
                     )}
-                    <span className="text-xl leading-none">{agent.emoji}</span>
+                    {(() => {
+                      const agentIcons: Record<string, React.ComponentType<{className?:string}>> = {
+                        User, Brain, Search, BarChart3, PenLine, CheckCircle2,
+                        Building2, Laptop, FlaskConical, Rocket, TrendingUp,
+                        Newspaper, Wallet, AlertTriangle, ClipboardList,
+                        Smartphone, Zap, AlarmClock, Bell, Wrench, GitFork, Telescope,
+                      };
+                      const Ai = agentIcons[agent.iconName];
+                      return Ai ? <Ai className="w-5 h-5" /> : null;
+                    })()}
                     <div className="leading-tight">
                       <div className={`text-[10px] font-black tracking-wide ${agent.accent}`}>{agent.role}</div>
                       <div className="text-[9px] text-gray-400 whitespace-nowrap">{agent.model}</div>
@@ -360,7 +388,7 @@ export default function LearnSimulator() {
           {messages.length === 0 && !running && (
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <div className="text-center">
-                <div className="text-4xl mb-2">▶</div>
+                <Play className="w-10 h-10 mb-2 text-gray-300 dark:text-gray-600" />
                 <p className="text-sm text-gray-400 dark:text-gray-500">시뮬레이션 실행 버튼을 눌러보세요</p>
               </div>
             </div>
@@ -387,9 +415,31 @@ export default function LearnSimulator() {
                 <div key={msg.id}
                   className={`p-2 rounded-lg text-xs border transition-all ${style.bg} ${isLast ? "ring-1 ring-violet-400 dark:ring-violet-500" : ""}`}>
                   <div className="flex items-center gap-1 mb-1 flex-wrap">
-                    <span style={{color: f?.bar}} className="font-bold">{f?.emoji} {f?.role}</span>
+                    <span style={{color: f?.bar}} className="font-bold inline-flex items-center gap-1">
+                      {(() => {
+                        const logIcons: Record<string, React.ComponentType<{className?:string}>> = {
+                          User, Brain, Search, BarChart3, PenLine, CheckCircle2,
+                          Building2, Laptop, FlaskConical, Rocket, TrendingUp,
+                          Newspaper, Wallet, AlertTriangle, ClipboardList,
+                          Smartphone, Zap, AlarmClock, Bell, Wrench, GitFork, Telescope,
+                        };
+                        const Fi = f ? logIcons[f.iconName] : undefined;
+                        return Fi ? <Fi className="w-3 h-3" /> : null;
+                      })()} {f?.role}
+                    </span>
                     <span className="text-gray-400">→</span>
-                    <span style={{color: t?.bar}} className="font-bold">{t?.emoji} {t?.role}</span>
+                    <span style={{color: t?.bar}} className="font-bold inline-flex items-center gap-1">
+                      {(() => {
+                        const logIcons2: Record<string, React.ComponentType<{className?:string}>> = {
+                          User, Brain, Search, BarChart3, PenLine, CheckCircle2,
+                          Building2, Laptop, FlaskConical, Rocket, TrendingUp,
+                          Newspaper, Wallet, AlertTriangle, ClipboardList,
+                          Smartphone, Zap, AlarmClock, Bell, Wrench, GitFork, Telescope,
+                        };
+                        const Ti = t ? logIcons2[t.iconName] : undefined;
+                        return Ti ? <Ti className="w-3 h-3" /> : null;
+                      })()} {t?.role}
+                    </span>
                     <span className={`ml-auto text-[9px] px-1 py-0.5 rounded font-semibold ${style.text} opacity-80`}>{style.label}</span>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{msg.text}</p>
@@ -410,7 +460,16 @@ export default function LearnSimulator() {
                 ? "border-violet-300 dark:border-violet-700 shadow-sm"
                 : "border-gray-200 dark:border-gray-800"
             } bg-white dark:bg-gray-900 transition-all`}>
-              <span className="text-lg">{a.emoji}</span>
+              {(() => {
+                      const legendIcons: Record<string, React.ComponentType<{className?:string}>> = {
+                        User, Brain, Search, BarChart3, PenLine, CheckCircle2,
+                        Building2, Laptop, FlaskConical, Rocket, TrendingUp,
+                        Newspaper, Wallet, AlertTriangle, ClipboardList,
+                        Smartphone, Zap, AlarmClock, Bell, Wrench, GitFork, Telescope,
+                      };
+                      const Li = legendIcons[a.iconName];
+                      return Li ? <Li className="w-5 h-5" /> : null;
+                    })()}
               <div className="min-w-0">
                 <div className={`text-xs font-bold ${a.accent}`}>{a.role}</div>
                 <div className="text-[10px] text-gray-400 mb-0.5">{a.model}</div>
@@ -434,15 +493,17 @@ export default function LearnSimulator() {
 
       {/* 개념 설명 */}
       <div className="bg-gradient-to-br from-violet-50 to-brand-50 dark:from-violet-950/30 dark:to-brand-950/30 rounded-2xl p-5 border border-violet-100 dark:border-violet-900/40">
-        <h3 className="text-sm font-black text-gray-900 dark:text-white mb-3">🤝 멀티에이전트 협업이란?</h3>
+        <h3 className="text-sm font-black text-gray-900 dark:text-white mb-3 inline-flex items-center gap-2">
+          <Handshake className="w-5 h-5" /> 멀티에이전트 협업이란?
+        </h3>
         <div className="grid sm:grid-cols-3 gap-3">
           {[
-            { icon: "🏗️", title: "역할 분담", desc: "각 AI가 전문 역할을 맡아 병렬로 처리 → 단일 AI보다 복잡한 작업 수행 가능" },
-            { icon: "🔄", title: "파이프라인", desc: "작업이 단계별로 흐르며 이전 에이전트 결과가 다음 에이전트의 입력이 됨" },
-            { icon: "✅", title: "검증·피드백", desc: "검토 에이전트가 결과물을 확인하고 수정 요청 → 오류 자동 감소" },
+            { icon: Building2, title: "역할 분담", desc: "각 AI가 전문 역할을 맡아 병렬로 처리 → 단일 AI보다 복잡한 작업 수행 가능" },
+            { icon: RefreshCw, title: "파이프라인", desc: "작업이 단계별로 흐르며 이전 에이전트 결과가 다음 에이전트의 입력이 됨" },
+            { icon: CheckCircle2, title: "검증·피드백", desc: "검토 에이전트가 결과물을 확인하고 수정 요청 → 오류 자동 감소" },
           ].map((c) => (
             <div key={c.title} className="bg-white/60 dark:bg-gray-900/60 rounded-xl p-3">
-              <div className="text-xl mb-1">{c.icon}</div>
+              <c.icon className="w-5 h-5 mb-1" />
               <div className="text-xs font-bold text-gray-900 dark:text-white mb-1">{c.title}</div>
               <div className="text-[11px] text-gray-600 dark:text-gray-400 leading-relaxed">{c.desc}</div>
             </div>

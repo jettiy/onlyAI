@@ -1,10 +1,17 @@
 import { useState } from "react";
+import type { LucideIcon } from 'lucide-react';
+import {
+  Bot, MessageCircle, Film, Mic,
+  BookOpen, ScanEye, Smile, Search,
+  Building, Sun, Sparkles, Globe,
+  CheckCircle2,
+} from 'lucide-react';
 
 interface KoreanService {
   id: string;
   name: string;
   category: string;
-  emoji: string;
+  icon: LucideIcon;
   color: string;
   accent: string;
   bar: string;
@@ -19,7 +26,7 @@ interface KoreanService {
 
 const KOREAN_SERVICES: KoreanService[] = [
   {
-    id: "wrtn", name: "뤼튼", category: "챗봇", emoji: "🤖",
+    id: "wrtn", name: "뤼튼", category: "챗봇", icon: Bot,
     color: "bg-purple-50 dark:bg-purple-950/30 border-purple-200 dark:border-purple-800",
     accent: "text-purple-600 dark:text-purple-400",
     bar: "bg-purple-500",
@@ -30,7 +37,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "처음 AI를 시작한다면 뤼튼부터",
   },
   {
-    id: "clovax", name: "HyperCLOVA X", category: "챗봇", emoji: "🟢",
+    id: "clovax", name: "HyperCLOVA X", category: "챗봇", icon: MessageCircle,
     color: "bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800",
     accent: "text-green-600 dark:text-green-400",
     bar: "bg-green-500",
@@ -41,7 +48,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "한국 맥락 이해가 필요한 업무에",
   },
   {
-    id: "vrew", name: "Vrew", category: "영상", emoji: "🎬",
+    id: "vrew", name: "Vrew", category: "영상", icon: Film,
     color: "bg-brand-50 dark:bg-brand-950/30 border-brand-200 dark:border-brand-800",
     accent: "text-brand-600 dark:text-brand-400",
     bar: "bg-brand-500",
@@ -52,7 +59,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "영상 콘텐츠 제작자 필수",
   },
   {
-    id: "typecast", name: "타입캐스트", category: "음성", emoji: "🎙️",
+    id: "typecast", name: "타입캐스트", category: "음성", icon: Mic,
     color: "bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800",
     accent: "text-rose-600 dark:text-rose-400",
     bar: "bg-rose-500",
@@ -63,7 +70,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "한국어 AI 음성·나레이션 제작에",
   },
   {
-    id: "qanda", name: "콴다 (QANDA)", category: "교육", emoji: "📚",
+    id: "qanda", name: "콴다 (QANDA)", category: "교육", icon: BookOpen,
     color: "bg-teal-50 dark:bg-teal-950/30 border-teal-200 dark:border-teal-800",
     accent: "text-teal-600 dark:text-teal-400",
     bar: "bg-teal-500",
@@ -74,7 +81,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "수학·과학 학습에 최적",
   },
   {
-    id: "gauss", name: "삼성 가우스", category: "기업", emoji: "🔵",
+    id: "gauss", name: "삼성 가우스", category: "기업", icon: ScanEye,
     color: "bg-sky-50 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800",
     accent: "text-sky-600 dark:text-sky-400",
     bar: "bg-sky-500",
@@ -85,7 +92,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "Galaxy 사용자라면 이미 탑재되어 있어요",
   },
   {
-    id: "kakao", name: "카카오 AI", category: "챗봇", emoji: "💛",
+    id: "kakao", name: "카카오 AI", category: "챗봇", icon: Smile,
     color: "bg-yellow-50 dark:bg-yellow-950/30 border-yellow-200 dark:border-yellow-800",
     accent: "text-yellow-600 dark:text-yellow-500",
     bar: "bg-yellow-400",
@@ -96,7 +103,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "카카오 생태계를 적극 활용하는 분들에게",
   },
   {
-    id: "naver-cue", name: "CUE:", category: "검색", emoji: "🔍",
+    id: "naver-cue", name: "CUE:", category: "검색", icon: Search,
     color: "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800",
     accent: "text-emerald-600 dark:text-emerald-400",
     bar: "bg-emerald-500",
@@ -107,7 +114,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "네이버 검색 파워유저에게 최적",
   },
   {
-    id: "hiai", name: "LG AI 연구원", category: "기업", emoji: "🏢",
+    id: "hiai", name: "LG AI 연구원", category: "기업", icon: Building,
     color: "bg-red-50 dark:bg-red-950/30 border-red-200 dark:border-red-800",
     accent: "text-red-600 dark:text-red-400",
     bar: "bg-red-500",
@@ -118,7 +125,7 @@ const KOREAN_SERVICES: KoreanService[] = [
     why: "제조·연구 분야 기업 솔루션으로",
   },
   {
-    id: "upstage", name: "Upstage Solar", category: "기업", emoji: "☀️",
+    id: "upstage", name: "Upstage Solar", category: "기업", icon: Sun,
     color: "bg-orange-50 dark:bg-orange-950/30 border-orange-200 dark:border-orange-800",
     accent: "text-orange-600 dark:text-orange-400",
     bar: "bg-orange-500",
@@ -146,7 +153,10 @@ export default function KoreanAI() {
     <div className="space-y-6">
       {/* Header */}
       <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🇰🇷 국내 AI 서비스</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">
+          <Globe className="w-6 h-6 inline-block mr-2 text-brand-500" />
+          국내 AI 서비스
+        </h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           한국에서 만들거나 한국어에 최적화된 AI 서비스 모음
         </p>
@@ -187,7 +197,8 @@ export default function KoreanAI() {
               ? "bg-emerald-600 text-white border-emerald-600"
               : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-emerald-200"
           )}>
-          ✅ 무료만 보기
+          <CheckCircle2 className="w-3 h-3 inline-block mr-1" />
+          무료만 보기
         </button>
       </div>
 
@@ -210,6 +221,7 @@ export default function KoreanAI() {
 }
 
 function ServiceCard({ service }: { service: KoreanService }) {
+  const Icon = service.icon;
   return (
     <a
       href={service.url}
@@ -223,7 +235,9 @@ function ServiceCard({ service }: { service: KoreanService }) {
       {/* Header */}
       <div className="flex items-start justify-between mb-2">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">{service.emoji}</span>
+          <span className="w-10 h-10 rounded-xl bg-white/60 dark:bg-gray-800/50 flex items-center justify-center">
+            <Icon className={`w-5 h-5 ${service.accent}`} />
+          </span>
           <div>
             <div className="flex items-center gap-1.5">
               <h3 className="text-sm font-bold text-gray-900 dark:text-white">{service.name}</h3>
@@ -248,7 +262,8 @@ function ServiceCard({ service }: { service: KoreanService }) {
 
       {/* Why use it */}
       <div className={`text-[10px] font-semibold mb-2 ${service.accent}`}>
-        💡 {service.why}
+        <Sparkles className="w-3 h-3 inline-block mr-0.5 -mt-0.5" />
+        {service.why}
       </div>
 
       {/* Features */}

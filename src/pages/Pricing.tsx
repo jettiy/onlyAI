@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import { Search, DollarSign, Lightbulb, Gift, Hash, Calculator } from "lucide-react";
 import { cloudProviders } from '../data/cloudProviders';
 import { models, DATA_UPDATED_AT } from '../data/models';
 import { getLogoUrl } from '../lib/logoUtils';
@@ -265,7 +266,7 @@ export default function Pricing() {
                           <div>
                             <div className="font-medium text-gray-900 dark:text-white">{row.model} {row.isNew && <span className="text-[8px] font-bold text-red-500 ml-1">NEW</span>}
                               {row.koreanBilling === true && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold">₩ 결제 가능</span>}
-                              {row.koreanBilling === null && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold">🔍 확인필요</span>}
+                              {row.koreanBilling === null && <span className="ml-1.5 text-[9px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold inline-flex items-center gap-0.5"><Search className="w-2.5 h-2.5" /> 확인필요</span>}
                             </div>
                             <div className="text-[10px] text-gray-400">{row.provider}</div>
                           </div>
@@ -303,7 +304,7 @@ export default function Pricing() {
                     <span className="text-sm font-bold text-gray-900 dark:text-white">{row.model}</span>
                     {row.isNew && <span className="text-[8px] font-bold text-red-500">NEW</span>}
                     {row.koreanBilling === true && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold">₩</span>}
-                    {row.koreanBilling === null && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold">🔍</span>}
+                    {row.koreanBilling === null && <span className="text-[8px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold inline-flex items-center"><Search className="w-2 h-2" /></span>}
                   </div>
                   <div className="grid grid-cols-3 gap-2">
                     <div><div className="text-[10px] text-gray-400">입력</div><div className="text-xs font-bold text-gray-900 dark:text-white font-mono">${row.input}</div>{showKRW && <div className="text-[9px] text-gray-400">{formatKRW(row.input, krwRate)}</div>}</div>
@@ -318,7 +319,7 @@ export default function Pricing() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">💰 AI API 가격 비교</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1 inline-flex items-center gap-2"><DollarSign className="w-6 h-6" /> AI API 가격 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           countless.dev 방식 참고. 입력/출력/캐시 가격 분리{lastUpdated && ` · ${lastUpdated} 업데이트`}.
         </p>
@@ -371,7 +372,7 @@ export default function Pricing() {
       {/* Z.AI Coding Plan */}
       <div className="bg-gradient-to-br from-violet-50 to-indigo-50 dark:from-violet-950/30 dark:to-indigo-950/30 rounded-2xl border border-violet-200 dark:border-violet-800 p-5">
         <div className="flex items-center gap-2 mb-1">
-          <span className="text-lg">💡</span>
+          <Lightbulb className="w-5 h-5 text-amber-500" />
           <h2 className="text-base font-bold text-gray-900 dark:text-white">더 저렴하게 AI를 쓰는 방법</h2>
         </div>
         <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Z.AI Coding Plan — 한 가정 요금제처럼 AI를 무제한으로. Claude Code, Cline, OpenClaw 등 지원.</p>
@@ -403,7 +404,7 @@ export default function Pricing() {
             </tbody>
           </table>
         </div>
-        <p className="text-[11px] text-violet-600 dark:text-violet-400 mt-3 font-medium">💰 월 실제 가치: 구독료의 15~30배 ($150~$2,400). 1프롬프트 = 모델 15~20회 호출. Vision, Web Search, Web Reader, Zread MCP 포함.</p>
+        <p className="text-[11px] text-violet-600 dark:text-violet-400 mt-3 font-medium"><DollarSign className="w-3 h-3 inline-block mr-0.5" /> 월 실제 가치: 구독료의 15~30배 ($150~$2,400). 1프롬프트 = 모델 15~20회 호출. Vision, Web Search, Web Reader, Zread MCP 포함.</p>
       </div>
 
       {/* Bar chart */}
@@ -419,7 +420,7 @@ export default function Pricing() {
                     {logoSrc && <img src={logoSrc} alt="" className="w-4 h-4 rounded-sm object-contain" onError={e => (e.target as HTMLImageElement).style.display='none'} />}
                     <span className="text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{row.model}</span>
                     {row.koreanBilling === true && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold whitespace-nowrap">₩</span>}
-                    {row.koreanBilling === null && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold whitespace-nowrap">🔍</span>}
+                    {row.koreanBilling === null && <span className="shrink-0 text-[8px] px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-semibold whitespace-nowrap inline-flex items-center"><Search className="w-2 h-2" /></span>}
                   </div>
                   <div className="flex-1 relative h-7 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div className="h-full rounded-full transition-all duration-500"
@@ -478,7 +479,7 @@ export default function Pricing() {
                 {filteredPrices.length === 0 ? (
                   <tr>
                     <td colSpan={showCacheCols ? 8 : 6} className="text-center py-12 text-gray-400 dark:text-gray-500">
-                      <div className="text-2xl mb-2">🔍</div>
+                      <div className="text-2xl mb-2"><Search className="w-8 h-8 mx-auto text-gray-400" /></div>
                       <p className="text-sm font-medium">'<span className="font-mono text-brand-500">{searchQuery}</span>'에 대한 검색 결과가 없습니다.</p>
                       <p className="text-xs mt-1">모델명이나 제공사 이름을 확인해주세요.</p>
                     </td>
@@ -495,7 +496,7 @@ export default function Pricing() {
           <div className="md:hidden grid gap-3 p-4">
             {filteredPrices.length === 0 ? (
               <div className="text-center py-12 text-gray-400 dark:text-gray-500">
-                <div className="text-2xl mb-2">🔍</div>
+                <div className="text-2xl mb-2"><Search className="w-8 h-8 mx-auto text-gray-400" /></div>
                 <p className="text-sm font-medium">'{searchQuery}'에 대한 검색 결과가 없습니다.</p>
               </div>
             ) : (mobileCards)}
@@ -506,7 +507,7 @@ export default function Pricing() {
       {/* Cache price comparison */}
       {tab === 'cache' && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
-          <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">💰 캐시 가격 비교</h2>
+          <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 inline-flex items-center gap-1"><DollarSign className="w-4 h-4" /> 캐시 가격 비교</h2>
           <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">프롬프트 캐싱을 활용하면 입력 가격을 최대 90% 절약할 수 있어요.</p>
           <div className="overflow-x-auto">
             <table className="w-full text-xs">
@@ -535,7 +536,7 @@ export default function Pricing() {
             </table>
           </div>
           <div className="mt-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900 rounded-xl px-4 py-3">
-            <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 mb-1">💡 캐싱 활용 팁</p>
+            <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 mb-1 inline-flex items-center gap-1"><Lightbulb className="w-3.5 h-3.5" /> 캐싱 활용 팁</p>
             <p className="text-xs text-emerald-600 dark:text-emerald-500">동일한 시스템 프롬프트를 반복 사용할 때 캐시 읽기를 활용하면 비용을 크게 줄일 수 있습니다. Claude는 캐시 읽기가 90% 할인되며, Gemini도 비슷한 수준의 할인을 제공합니다.</p>
           </div>
           {/* Mobile cache cards */}
@@ -568,7 +569,7 @@ export default function Pricing() {
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">{provider.description}</p>
               <div className="p-2.5 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 rounded-xl text-xs text-emerald-700 dark:text-emerald-300 mb-3">
-                🎁 {provider.freetier}
+                <Gift className="w-3.5 h-3.5 inline-block mr-1 text-emerald-600 dark:text-emerald-300" /> {provider.freetier}
               </div>
               <div className="space-y-1.5">
                 {provider.pros.map((p) => <div key={p} className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300"><span className="text-emerald-500 mt-0.5 shrink-0">✓</span>{p}</div>)}
@@ -611,7 +612,7 @@ function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; sho
     <div className="space-y-5">
       {/* Input */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
-        <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">🔢 월간 토큰 사용량 입력</h2>
+        <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-3 inline-flex items-center gap-1.5"><Hash className="w-4 h-4" /> 월간 토큰 사용량 입력</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1.5">입력 토큰 수</label>
@@ -659,7 +660,7 @@ function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; sho
       {calculations.length > 0 ? (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
           <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">💰 월간 예상 비용 (저렴한 순)</h2>
+            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 inline-flex items-center gap-1"><DollarSign className="w-4 h-4" /> 월간 예상 비용 (저렴한 순)</h2>
             <p className="text-[10px] text-gray-400 mt-0.5">* 가격은 $/1M 토큰 기준</p>
           </div>
           <div className="hidden md:block overflow-x-auto">
@@ -729,7 +730,7 @@ function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; sho
           {calculations.length > 0 && (
             <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                💡 가장 저렴한 모델: <strong className="text-emerald-600 dark:text-emerald-400">{calculations[0].model}</strong> (${calculations[0].monthlyCost < 0.01 ? '<0.01' : calculations[0].monthlyCost.toFixed(2)}/월){showKRW && <span className="text-gray-400"> ({formatKRW(calculations[0].monthlyCost, krwRate)}/월)</span>}
+                <Lightbulb className="w-3 h-3 inline-block mr-0.5" /> 가장 저렴한 모델: <strong className="text-emerald-600 dark:text-emerald-400">{calculations[0].model}</strong> (${calculations[0].monthlyCost < 0.01 ? '<0.01' : calculations[0].monthlyCost.toFixed(2)}/월){showKRW && <span className="text-gray-400"> ({formatKRW(calculations[0].monthlyCost, krwRate)}/월)</span>}
                 {calculations.length > 1 && (
                   <> · 가장 비싼 모델: <strong className="text-red-500">{calculations[calculations.length - 1].model}</strong> (${calculations[calculations.length - 1].monthlyCost.toFixed(2)}/월){showKRW && <span className="text-gray-400"> ({formatKRW(calculations[calculations.length - 1].monthlyCost, krwRate)}/월)</span>}</>
                 )}
@@ -739,7 +740,7 @@ function PriceCalculator({ prices, showKRW, krwRate }: { prices: PriceRow[]; sho
         </div>
       ) : (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-10 text-center">
-          <div className="text-4xl mb-3">🧮</div>
+          <div className="text-4xl mb-3"><Calculator className="w-12 h-12 mx-auto text-gray-300 dark:text-gray-600" /></div>
           <p className="text-sm text-gray-400">위에 월간 토큰 사용량을 입력하면 모델별 비용이 계산됩니다.</p>
           <div className="mt-4 flex flex-wrap gap-2 justify-center">
             {[

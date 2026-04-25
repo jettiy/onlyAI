@@ -1,54 +1,85 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { models, companies } from "../../data/models";
+import type { LucideIcon } from "lucide-react";
+import {
+  Target, Languages, DollarSign, BarChart3,
+  Laptop, PenLine, Microscope, MessageSquare, Image,
+  Globe, Flag, HeartHandshake, CreditCard, Rocket, Sprout, Star, Wrench,
+  RotateCcw, List, PartyPopper,
+} from "lucide-react";
+
+function IconFromName({ name, className }: { name: string; className?: string }) {
+  const iconMap: Record<string, LucideIcon> = {
+    Target, Languages, DollarSign, BarChart3,
+    Laptop, PenLine, Microscope, MessageSquare, Image,
+    Globe, Flag, HeartHandshake, CreditCard, Rocket, Sprout, Star, Wrench,
+  };
+  const IconComponent = iconMap[name];
+  if (!IconComponent) return null;
+  return <IconComponent className={className || "w-6 h-6"} />;
+}
 
 type Answer = {
   step: number;
   value: string;
 };
 
-const STEPS = [
+type StepOption = {
+  value: string;
+  label: string;
+  iconName: string;
+};
+
+type StepData = {
+  id: string;
+  question: string;
+  iconName: string;
+  options: StepOption[];
+};
+
+const STEPS: StepData[] = [
   {
     id: "usecase",
     question: "주로 어떤 용도로 AI를 쓰실 건가요?",
-    emoji: "🎯",
+    iconName: "Target",
     options: [
-      { value: "coding", label: "코딩 / 개발", icon: "💻" },
-      { value: "writing", label: "글쓰기 / 번역", icon: "✍️" },
-      { value: "analysis", label: "분석 / 연구", icon: "🔬" },
-      { value: "chat", label: "대화 / 질문", icon: "💬" },
-      { value: "image", label: "이미지 / 멀티모달", icon: "🖼️" },
+      { value: "coding", label: "코딩 / 개발", iconName: "Laptop" },
+      { value: "writing", label: "글쓰기 / 번역", iconName: "PenLine" },
+      { value: "analysis", label: "분석 / 연구", iconName: "Microscope" },
+      { value: "chat", label: "대화 / 질문", iconName: "MessageSquare" },
+      { value: "image", label: "이미지 / 멀티모달", iconName: "Image" },
     ],
   },
   {
     id: "korean",
     question: "한국어로 자주 사용하실 건가요?",
-    emoji: "🇰🇷",
+    iconName: "Languages",
     options: [
-      { value: "always", label: "항상 한국어로 사용해요", icon: "🇰🇷" },
-      { value: "sometimes", label: "한국어·영어 반반", icon: "🌏" },
-      { value: "rarely", label: "주로 영어로 사용해요", icon: "🇺🇸" },
+      { value: "always", label: "항상 한국어로 사용해요", iconName: "Languages" },
+      { value: "sometimes", label: "한국어·영어 반반", iconName: "Globe" },
+      { value: "rarely", label: "주로 영어로 사용해요", iconName: "Flag" },
     ],
   },
   {
     id: "budget",
     question: "예산은 어느 정도인가요?",
-    emoji: "💰",
+    iconName: "DollarSign",
     options: [
-      { value: "free", label: "완전 무료로만 쓰고 싶어요", icon: "🆓" },
-      { value: "low", label: "월 1~2만원 정도는 괜찮아요", icon: "💵" },
-      { value: "medium", label: "월 5~10만원까지 투자할 수 있어요", icon: "💳" },
-      { value: "high", label: "성능이 좋으면 비용은 상관없어요", icon: "🚀" },
+      { value: "free", label: "완전 무료로만 쓰고 싶어요", iconName: "HeartHandshake" },
+      { value: "low", label: "월 1~2만원 정도는 괜찮아요", iconName: "DollarSign" },
+      { value: "medium", label: "월 5~10만원까지 투자할 수 있어요", iconName: "CreditCard" },
+      { value: "high", label: "성능이 좋으면 비용은 상관없어요", iconName: "Rocket" },
     ],
   },
   {
     id: "skill",
     question: "AI 사용 경험이 어느 정도인가요?",
-    emoji: "📊",
+    iconName: "BarChart3",
     options: [
-      { value: "beginner", label: "처음 써봐요", icon: "🌱" },
-      { value: "intermediate", label: "ChatGPT 등 써봤어요", icon: "⭐" },
-      { value: "advanced", label: "API나 코드로도 써봤어요", icon: "🔧" },
+      { value: "beginner", label: "처음 써봐요", iconName: "Sprout" },
+      { value: "intermediate", label: "ChatGPT 등 써봤어요", iconName: "Star" },
+      { value: "advanced", label: "API나 코드로도 써봤어요", iconName: "Wrench" },
     ],
   },
 ];
@@ -212,7 +243,10 @@ export default function ExploreGuide() {
     <div className="max-w-2xl mx-auto space-y-6">
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">🎯 나에게 맞는 AI 찾기</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 flex items-center justify-center gap-2">
+          <Target className="w-8 h-8 text-brand-600" />
+          나에게 맞는 AI 찾기
+        </h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           4가지 질문으로 최적의 AI 모델을 추천해드려요.
         </p>
@@ -237,7 +271,9 @@ export default function ExploreGuide() {
           {/* Question card */}
           <div className="bg-white dark:bg-gray-900 rounded-2xl border-2 border-gray-200 dark:border-gray-800 p-6 shadow-sm">
             <div className="text-center mb-6">
-              <span className="text-4xl mb-3 block">{currentStep.emoji}</span>
+              <div className="mb-3 flex justify-center">
+                <IconFromName name={currentStep.iconName} className="w-10 h-10 text-brand-600" />
+              </div>
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">{currentStep.question}</h2>
             </div>
 
@@ -255,7 +291,9 @@ export default function ExploreGuide() {
                         : "border-gray-200 dark:border-gray-700 hover:border-brand-300 dark:hover:border-brand-600 bg-white dark:bg-gray-800")
                     }
                   >
-                    <span className="text-2xl">{opt.icon}</span>
+                    <span className="text-2xl">
+                      <IconFromName name={opt.iconName} className="w-6 h-6 text-brand-600" />
+                    </span>
                     <span className={"font-semibold text-sm " + (isSelected ? "text-brand-700 dark:text-brand-300" : "text-gray-700 dark:text-gray-300")}>
                       {opt.label}
                     </span>
@@ -292,9 +330,12 @@ export default function ExploreGuide() {
                 const opt = s.options.find((o) => o.value === ans.value);
                 return (
                   <div key={ans.step} className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-                    <span>{s.emoji}</span>
+                    <IconFromName name={s.iconName} className="w-4 h-4 text-brand-500" />
                     <span className="text-gray-400">{s.question.replace('?', '')}:</span>
-                    <span className="font-semibold text-gray-700 dark:text-gray-300">{opt?.icon} {opt?.label}</span>
+                    <span className="font-semibold text-gray-700 dark:text-gray-300">
+                      <IconFromName name={opt?.iconName || ""} className="w-4 h-4 inline-block mr-1 text-brand-500" />
+                      {opt?.label}
+                    </span>
                   </div>
                 );
               })}
@@ -305,21 +346,29 @@ export default function ExploreGuide() {
         /* Results */
         <div className="space-y-4">
           <div className="bg-gradient-to-r from-brand-50 to-brand-50 dark:from-brand-950/40 dark:to-brand-950/40 rounded-2xl border border-brand-100 dark:border-brand-900 p-5 text-center">
-            <div className="text-3xl mb-2">🎉</div>
+            <div className="mb-2 flex justify-center">
+              <PartyPopper className="w-10 h-10 text-brand-600" />
+            </div>
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">추천 결과</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">내 답변 기준으로 가장 잘 맞는 모델 TOP 5예요.</p>
           </div>
 
           {/* Answer summary */}
           <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 space-y-1">
-            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">📋 내 선택</p>
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 flex items-center gap-1">
+              <List className="w-4 h-4" />
+              내 선택
+            </p>
             {answers.sort((a,b) => a.step - b.step).map((ans) => {
               const s = STEPS[ans.step];
               const opt = s.options.find((o) => o.value === ans.value);
               return (
                 <div key={ans.step} className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
-                  <span>{s.emoji}</span>
-                  <span className="font-medium">{opt?.icon} {opt?.label}</span>
+                  <IconFromName name={s.iconName} className="w-4 h-4 text-brand-500" />
+                  <span className="font-medium">
+                    <IconFromName name={opt?.iconName || ""} className="w-4 h-4 inline-block mr-1 text-brand-500" />
+                    {opt?.label}
+                  </span>
                 </div>
               );
             })}
@@ -328,7 +377,9 @@ export default function ExploreGuide() {
           {/* Result cards */}
           {results.length === 0 ? (
             <div className="text-center py-12 text-gray-400">
-              <p className="text-4xl mb-3">🤔</p>
+              <div className="mb-3 flex justify-center">
+                <span className="text-4xl">🤔</span>
+              </div>
               <p className="font-medium">조건에 맞는 모델을 찾기 어려워요.</p>
               <p className="text-sm mt-1">예산이나 조건을 조금 조정해보세요.</p>
             </div>
@@ -376,7 +427,8 @@ export default function ExploreGuide() {
                                 ? "bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 border-yellow-200 dark:border-yellow-800"
                                 : "bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700")
                             }>
-                              🇰🇷 한국어 {m.koreanSupport}등급
+                              <Languages className="w-3 h-3 inline-block mr-0.5" />
+                              한국어 {m.koreanSupport}등급
                             </span>
                           )}
                         </div>
@@ -391,7 +443,7 @@ export default function ExploreGuide() {
                         <div className="flex items-center justify-between gap-2 flex-wrap">
                           <div className="text-xs text-gray-500 dark:text-gray-400">
                             {m.inputPrice === 0
-                              ? <span className="text-green-600 font-bold">🆓 무료</span>
+                              ? <span className="text-green-600 font-bold flex items-center gap-1"><HeartHandshake className="w-4 h-4" /> 무료</span>
                               : m.inputPrice !== null
                               ? <span>입력 <strong className="text-gray-700 dark:text-gray-300">${m.inputPrice}</strong> / 출력 <strong className="text-gray-700 dark:text-gray-300">${m.outputPrice}</strong> (1M 토큰)</span>
                               : <span>가격 미공개</span>
@@ -426,15 +478,17 @@ export default function ExploreGuide() {
           <div className="flex gap-3">
             <button
               onClick={reset}
-              className="flex-1 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 font-semibold text-sm text-gray-700 dark:text-gray-300 hover:border-brand-400 hover:text-brand-600 transition-colors"
+              className="flex-1 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 font-semibold text-sm text-gray-700 dark:text-gray-300 hover:border-brand-400 hover:text-brand-600 transition-colors flex items-center justify-center gap-2"
             >
-              🔄 다시 하기
+              <RotateCcw className="w-4 h-4" />
+              다시 하기
             </button>
             <Link
               to="/models"
-              className="flex-1 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 font-semibold text-sm text-white text-center transition-colors"
+              className="flex-1 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 font-semibold text-sm text-white text-center transition-colors flex items-center justify-center gap-2"
             >
-              📋 전체 모델 보기
+              <List className="w-4 h-4" />
+              전체 모델 보기
             </Link>
           </div>
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { logoIdToPath } from "../../lib/logoUtils";
+import { BarChart3 } from "lucide-react";
 
 interface BenchModel {
   name: string;
@@ -113,7 +114,8 @@ export default function ExploreKoreanBench() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">📊 모델 성능 비교</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">
+          <BarChart3 className="inline w-6 h-6 mr-1.5 -mt-0.5 text-brand-500" /> 모델 성능 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           주요 AI 모델의 벤치마크 성능 비교. MMLU-Pro, GPQA, MATH, HumanEval 등 기반.
         </p>

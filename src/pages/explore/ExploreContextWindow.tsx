@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { logoIdToPath } from "../../lib/logoUtils";
+import { ClipboardList, Lightbulb } from "lucide-react";
 
 interface ContextModel {
   name: string;
@@ -28,13 +29,13 @@ const MODELS: ContextModel[] = [
   { name: "Nemotron 3 Super", company: "NVIDIA", logoId: "nvidia", tokens: 128000, color: "#06b6d4", isNew: true, sourceUrl: "https://build.nvidia.com/" },
 ];
 
-const REAL_WORLD = [
+const REAL_WORLD: { label: string; iconName?: string; tokens: number }[] = [
   { label: "📱 카톡 메시지 1개", tokens: 50 },
   { label: "📄 A4 페이지 1장", tokens: 2000 },
   { label: "📰 뉴스 기사 1편", tokens: 5000 },
   { label: "📖 소설 1장", tokens: 20000 },
   { label: "📚 대학 전공책 1권", tokens: 100000 },
-  { label: "📋 소설책 1권 (해리포터)", tokens: 270000 },
+  { label: "소설책 1권 (해리포터)", iconName: "clipboard", tokens: 270000 },
   { label: "📚 소설 3권 세트", tokens: 800000 },
 ];
 
@@ -153,7 +154,7 @@ export default function ExploreContextWindow() {
           {fits.map(item => (
             <div key={item.label} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-700 dark:text-gray-300">{item.label}</span>
+                <span className="text-sm text-gray-700 dark:text-gray-300">{item.iconName === "clipboard" ? <><ClipboardList size={14} className="inline mr-0.5" />{item.label}</> : item.label}</span>
                 <span className="text-xs font-bold text-gray-900 dark:text-white">
                   {item.count >= 1000 ? `${(item.count / 1000).toFixed(0)}K` : item.count}개
                 </span>
@@ -206,7 +207,7 @@ export default function ExploreContextWindow() {
 
       {/* Fun facts */}
       <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3 space-y-1.5">
-        <p className="text-xs font-semibold text-brand-800 dark:text-brand-300">💡 재미있는 사실</p>
+        <p className="text-xs font-semibold text-brand-800 dark:text-brand-300"><Lightbulb size={14} className="inline mr-1" /> 재미있는 사실</p>
         <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">
           • Gemini 3.1 Pro의 1M 컨텍스트는 소설 약 4권 분량이에요. 영화 시나리오 10편도 충분히 담을 수 있어요.
         </p>
@@ -220,7 +221,7 @@ export default function ExploreContextWindow() {
 
       {/* Sources */}
       <div className="bg-gray-50 dark:bg-gray-900 rounded-xl px-4 py-3 border border-gray-200 dark:border-gray-800 space-y-2">
-        <p className="text-xs font-semibold text-gray-700 dark:text-gray-300">📋 데이터 출처</p>
+        <p className="text-xs font-semibold text-gray-700 dark:text-gray-300"><ClipboardList size={14} className="inline mr-1" /> 데이터 출처</p>
         <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-relaxed">
           컨텍스트 윈도우 데이터는 각 AI 회사의 공식 문서를 기준으로 합니다.
         </p>

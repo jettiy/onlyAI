@@ -1,0 +1,6 @@
+{
+  "rootDirectory": "onlyAI",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

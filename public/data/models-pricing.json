@@ -3636,18 +3636,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "meta-llama/llama-3.1-8b-instruct",
-    "name": "Meta: Llama 3.1 8B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.02,
-    "output": 0.049999999999999996,
-    "context": "16K",
-    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
-    "createdAt": 1721692800,
-    "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
     "id": "meta-llama/llama-3.1-70b-instruct",
     "name": "Meta: Llama 3.1 70B Instruct",
     "provider": "META-LLAMA",
@@ -3655,6 +3643,18 @@
     "output": 0.39999999999999997,
     "context": "131K",
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
+    "createdAt": 1721692800,
+    "modalities": "text->text",
+    "maxTokens": 16384
+  },
+  {
+    "id": "meta-llama/llama-3.1-8b-instruct",
+    "name": "Meta: Llama 3.1 8B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.02,
+    "output": 0.049999999999999996,
+    "context": "16K",
+    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
     "createdAt": 1721692800,
     "modalities": "text->text",
     "maxTokens": 16384
@@ -3900,18 +3900,6 @@
     "maxTokens": 4096
   },
   {
-    "id": "openai/gpt-3.5-turbo-instruct",
-    "name": "OpenAI: GPT-3.5 Turbo Instruct",
-    "provider": "OPENAI",
-    "input": 1.5,
-    "output": 2,
-    "context": "4K",
-    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
-    "createdAt": 1695859200,
-    "modalities": "text->text",
-    "maxTokens": 4096
-  },
-  {
     "id": "mistralai/mistral-7b-instruct-v0.1",
     "name": "Mistral: Mistral 7B Instruct v0.1",
     "provider": "MISTRALAI",
@@ -3922,6 +3910,18 @@
     "createdAt": 1695859200,
     "modalities": "text->text",
     "maxTokens": null
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-instruct",
+    "name": "OpenAI: GPT-3.5 Turbo Instruct",
+    "provider": "OPENAI",
+    "input": 1.5,
+    "output": 2,
+    "context": "4K",
+    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
+    "createdAt": 1695859200,
+    "modalities": "text->text",
+    "maxTokens": 4096
   },
   {
     "id": "openai/gpt-3.5-turbo-16k",
@@ -3972,18 +3972,6 @@
     "maxTokens": 4096
   },
   {
-    "id": "openai/gpt-4-0314",
-    "name": "OpenAI: GPT-4 (older v0314)",
-    "provider": "OPENAI",
-    "input": 30,
-    "output": 60,
-    "context": "8K",
-    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
-    "createdAt": 1685232000,
-    "modalities": "text->text",
-    "maxTokens": 4096
-  },
-  {
     "id": "openai/gpt-4",
     "name": "OpenAI: GPT-4",
     "provider": "OPENAI",
@@ -3991,6 +3979,18 @@
     "output": 60,
     "context": "8K",
     "description": "OpenAI's flagship model, GPT-4 is a large-scale multimodal language model capable of solving difficult problems with greater accuracy than previous models due to its broader general knowledge and adva",
+    "createdAt": 1685232000,
+    "modalities": "text->text",
+    "maxTokens": 4096
+  },
+  {
+    "id": "openai/gpt-4-0314",
+    "name": "OpenAI: GPT-4 (older v0314)",
+    "provider": "OPENAI",
+    "input": 30,
+    "output": 60,
+    "context": "8K",
+    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
     "createdAt": 1685232000,
     "modalities": "text->text",
     "maxTokens": 4096

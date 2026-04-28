@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-28T14:29:32.122Z",
-  "updatedAtKST": "2026. 4. 28. PM 11:29:32",
+  "updatedAt": "2026-04-28T19:49:40.410Z",
+  "updatedAtKST": "2026. 4. 29. AM 4:49:40",
   "stats": {
     "aitimes": 20,
     "36kr": 12,
     "hf": 20,
-    "tc": 17,
-    "github": 10,
-    "total": 67
+    "tc": 18,
+    "github": 8,
+    "total": 66
   },
   "news": [
     {
@@ -251,19 +251,55 @@
       "lang": "ko"
     },
     {
-      "id": "hf-0-https://huggingface.co/blog/nvidia/raw2insights-adaptive-ultrasound-imaging",
-      "title": "Adaptive Ultrasound Imaging with Physics-Informed NV-Raw2Insights-US AI",
+      "id": "hf-0-https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+      "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
       "summary": "",
       "date": "2026-04-28",
       "source": "Hugging Face",
       "sourceLang": "en",
       "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/nvidia/raw2insights-adaptive-ultrasound-imaging",
-      "category": "연구·논문",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+      "category": "에이전트",
       "lang": "en"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/04/28/youtube-is-testing-an-ai-powered-search-feature-that-shows-guided-answers/",
+      "id": "tc-0-https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
+      "title": "Amazon is already offering new OpenAI products on AWS",
+      "summary": "A day after OpenAI got Microsoft to agree to end exclusive rights, AWS announced a slate of OpenAI model offerings, including a new agent service.",
+      "date": "2026-04-28",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/",
+      "title": "Amazon launches an AI-powered audio Q&#038;A experience on product pages",
+      "summary": "Amazon's new \"Join the chat\" feature lets you ask questions about products and receive AI-powered audio responses.",
+      "date": "2026-04-28",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/",
+      "title": "Google expands Pentagon&#8217;s access to its AI after Anthropic&#8217;s refusal",
+      "summary": "After Anthropic refused to allow the DoD to use its AI for domestic mass surveillance and autonomous weapons, Google has signed a new contract with the department.",
+      "date": "2026-04-28",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/04/28/youtube-is-testing-an-ai-powered-search-feature-that-shows-guided-answers/",
       "title": "YouTube is testing an AI-powered search feature that shows guided answers",
       "summary": "YouTube is rolling out the new AI search feature to Premium subscribers in the U.S. on an opt-in basis.",
       "date": "2026-04-28",
@@ -275,9 +311,9 @@
       "lang": "en"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/04/28/bci-startup-neurable-looks-to-license-its-mind-reading-tech-for-consumer-wearables/",
+      "id": "tc-5-https://techcrunch.com/2026/04/28/bci-startup-neurable-looks-to-license-its-mind-reading-tech-for-consumer-wearables/",
       "title": "BCI startup Neurable looks to license its &#8216;mind-reading&#8217; tech for consumer wearables",
-      "summary": "The startup specializes in \"non-invasive\" \"mind-reading\" tech—a kind of neural data collection that, its CEO hopes, will have all sorts of consumer applications.",
+      "summary": "The startup specializes in \"non-invasive\" \"mind-reading\" tech — a kind of neural data collection that, its CEO hopes, will have all sorts of consumer applications.",
       "date": "2026-04-28",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -287,15 +323,27 @@
       "lang": "en"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/04/28/red-hats-openclaw-maintainer-just-made-enterprise-claw-deployments-a-lot-safer/",
+      "id": "tc-6-https://techcrunch.com/2026/04/28/red-hats-openclaw-maintainer-just-made-enterprise-claw-deployments-a-lot-safer/",
       "title": "Red Hat&#8217;s OpenClaw maintainer just made enterprise Claw deployments a lot safer",
-      "summary": "Tank OS puts OpenClaw AI agents into a container that let's it run reliably and more safely, especially for those running fleets of them.",
+      "summary": "Tank OS puts OpenClaw AI agents into a container that lets it run reliably and more safely, especially for those running fleets of them.",
       "date": "2026-04-28",
       "source": "TechCrunch",
       "sourceLang": "en",
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/04/28/red-hats-openclaw-maintainer-just-made-enterprise-claw-deployments-a-lot-safer/",
       "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-7-https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/",
+      "title": "Otter&#8217;s new feature lets users search across their enterprise tools",
+      "summary": "With this launch, users can connect their Gmail, Google Drive, Notion, Jira, and Salesforce accounts and query that data along with existing meeting data. The company said that it will soon allow conn",
+      "date": "2026-04-28",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/",
+      "category": "모델 출시",
       "lang": "en"
     },
     {
@@ -311,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/",
+      "id": "tc-8-https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/",
       "title": "OpenAI ends Microsoft legal peril over its $50B Amazon deal",
       "summary": "OpenAI has won major concessions from its largest shareholder, Microsoft, that will allow it to sell products on AWS, while Microsoft gets more cash in a revenue-share agreement.",
       "date": "2026-04-27",
@@ -323,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/04/27/deepminds-david-silver-just-raised-1-1b-to-build-an-ai-that-learns-without-human-data/",
+      "id": "tc-9-https://techcrunch.com/2026/04/27/deepminds-david-silver-just-raised-1-1b-to-build-an-ai-that-learns-without-human-data/",
       "title": "DeepMind&#8217;s David Silver just raised $1.1B to build an AI that learns without human data",
       "summary": "Ineffable Intelligence, a British AI lab founded a mere few months ago by former DeepMind researcher David Silver, has raised $1.1 billion in funding at a valuation of $5.1 billion.",
       "date": "2026-04-27",
@@ -335,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/04/27/investors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch/",
+      "id": "tc-10-https://techcrunch.com/2026/04/27/investors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch/",
       "title": "Investors back Skye’s AI home screen app for iPhone ahead of launch",
       "summary": "Skye's new AI app attracted investors before it even launched — a sign of interest in a more AI-aware iPhone.",
       "date": "2026-04-27",
@@ -347,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/04/27/china-vetoes-metas-2b-manus-deal-after-months-long-probe/",
+      "id": "tc-11-https://techcrunch.com/2026/04/27/china-vetoes-metas-2b-manus-deal-after-months-long-probe/",
       "title": "China blocks Meta’s $2B Manus deal after months-long probe",
       "summary": "China has ordered Meta to unwind its multibillion-dollar Manus acquisition, dealing a potential setback to Zuckerberg’s push into AI agents.",
       "date": "2026-04-27",
@@ -359,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/",
+      "id": "tc-12-https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/",
       "title": "OpenAI could be making a phone with AI agents replacing apps",
       "summary": "There have been plenty of rumors about OpenAI's hardware plans, which involve launching a pair of earbuds. A new note from industry analyst Ming-Chi Kuo suggests that the AI company might be working o",
       "date": "2026-04-27",
@@ -371,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/",
+      "id": "tc-14-https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/",
       "title": "To buy this Bay Area home, you’ll need Anthropic equity",
       "summary": "Someone’s offering an unusual deal for a 13-acre property in Mill Valley, just north of San Francisco.",
       "date": "2026-04-26",
@@ -383,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+      "id": "tc-15-https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
       "title": "Anthropic created a test marketplace for agent-on-agent commerce",
       "summary": "In a recent experiment, Anthropic created a classified marketplace where AI agents represented both buyers and sellers, striking real deals for real goods and real money.",
       "date": "2026-04-25",
@@ -395,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/04/25/maines-governor-vetoes-data-center-moratorium/",
+      "id": "tc-16-https://techcrunch.com/2026/04/25/maines-governor-vetoes-data-center-moratorium/",
       "title": "Maine&#8217;s governor vetoes data center moratorium",
       "summary": "L.D. 307 would have imposed the country’s first statewide moratorium on new data centers — lasting, in this case, until November 1, 2027.",
       "date": "2026-04-25",
@@ -407,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/",
+      "id": "tc-17-https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/",
       "title": "OpenAI CEO apologizes to Tumbler Ridge community",
       "summary": "In a letter to the residents of Tumbler Ridge, Canada, OpenAI CEO Sam Altman said he is “deeply sorry” that his company failed to alert law enforcement about the suspect in a recent mass shooting.",
       "date": "2026-04-25",
@@ -419,7 +467,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/04/25/why-cohere-is-merging-with-aleph-alpha/",
+      "id": "tc-18-https://techcrunch.com/2026/04/25/why-cohere-is-merging-with-aleph-alpha/",
       "title": "Why Cohere is merging with Aleph Alpha",
       "summary": "Canadian AI startup Cohere is taking over Germany-based Aleph Alpha with support from Schwarz Group. With the blessing of their governments, the companies intend to offer a sovereign alternative to en",
       "date": "2026-04-25",
@@ -431,7 +479,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-15-https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/",
+      "id": "tc-19-https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/",
       "title": "Why Tokyo is the most important tech destination of 2026",
       "summary": "SusHi Tech Tokyo 2026 has four tightly defined technology domains, each backed by live demonstrations, dedicated exhibit floors, and sessions featuring the people actually building and funding these t",
       "date": "2026-04-25",
@@ -452,42 +500,6 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/deepseekv4",
       "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/04/24/metas-loss-is-thinking-machines-gain/",
-      "title": "Meta&#8217;s loss is Thinking Machines&#8217; gain",
-      "summary": "Meta has been poaching talent from Thinking Machines Lab. But it's a two-way street.",
-      "date": "2026-04-24",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/24/metas-loss-is-thinking-machines-gain/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/",
-      "title": "ComfyUI hits $500M valuation as creators seek more control over AI-generated media",
-      "summary": "ComfyUI, whose tools give creators more control over AI image, video, and audio generation, just raised $30 million.",
-      "date": "2026-04-24",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/",
-      "category": "개발 도구",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
-      "title": "Google to invest up to $40B in Anthropic in cash and compute",
-      "summary": "Google plans up to $40B investment in Anthropic as AI rivals race to secure massive compute capacity, following the limited release of its powerful, cybersecurity-focused Mythos model.",
-      "date": "2026-04-24",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
-      "category": "모델 출시",
       "lang": "en"
     },
     {
@@ -697,28 +709,6 @@
   ],
   "github": [
     {
-      "id": "gh-552661142",
-      "title": "langchain-ai/langchain — The agent engineering platform",
-      "summary": "The agent engineering platform",
-      "date": "2026-04-28",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langchain-ai/langchain",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 135230,
-      "language": "Python",
-      "tags": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ]
-    },
-    {
       "id": "gh-1024554267",
       "title": "NousResearch/hermes-agent — The agent that grows with you",
       "summary": "The agent that grows with you",
@@ -730,7 +720,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 122183,
+      "stars": 122655,
       "language": "Python",
       "tags": [
         "ai",
@@ -738,6 +728,72 @@
         "ai-agents",
         "anthropic",
         "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-810861466",
+      "title": "0xPlaygrounds/rig — ⚙️🦀 Build modular and scalable LLM Applications in Rust",
+      "summary": "⚙️🦀 Build modular and scalable LLM Applications in Rust",
+      "date": "2026-04-28",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/0xPlaygrounds/rig",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 7084,
+      "language": "Rust",
+      "tags": [
+        "agent",
+        "ai",
+        "artificial-intelligence",
+        "automation",
+        "generative-ai"
+      ]
+    },
+    {
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "date": "2026-04-28",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 30486,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-764723738",
+      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
+      "summary": "Automate browser based workflows with AI",
+      "date": "2026-04-28",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/Skyvern-AI/skyvern",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 21413,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "api",
+        "automation",
+        "browser",
+        "browser-automation"
       ]
     },
     {
@@ -752,7 +808,7 @@
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 32153,
+      "stars": 32188,
       "language": "Python",
       "tags": [
         "agent",
@@ -763,157 +819,69 @@
       ]
     },
     {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "id": "gh-817326197",
+      "title": "screenpipe/screenpipe — Run agents that work based on what you do. 24/7 local screen & mic recording for the superintelligence era",
+      "summary": "Run agents that work based on what you do. 24/7 local screen & mic recording for the superintelligence era",
       "date": "2026-04-28",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
+      "url": "https://github.com/screenpipe/screenpipe",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 23386,
-      "language": "TypeScript",
+      "stars": 18439,
+      "language": "Rust",
       "tags": [
         "agents",
+        "agi",
         "ai",
-        "chatbots",
-        "evals",
-        "javascript"
+        "computer-vision",
+        "llm"
       ]
     },
     {
-      "id": "gh-596516907",
-      "title": "arc53/DocsGPT — Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents.",
-      "summary": "Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents.",
+      "id": "gh-1182212878",
+      "title": "iOfficeAI/OfficeCLI — OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "summary": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
       "date": "2026-04-28",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/arc53/DocsGPT",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 2414,
+      "language": "C#",
+      "tags": [
+        "agent",
+        "ai",
+        "cli",
+        "office",
+        "openclaw"
+      ]
+    },
+    {
+      "id": "gh-575865240",
+      "title": "AstrBotDevs/AstrBot — AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "summary": "AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "date": "2026-04-28",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 17861,
+      "stars": 30907,
       "language": "Python",
       "tags": [
-        "agent-builder",
-        "agents",
+        "agent",
         "ai",
+        "chatbot",
         "chatgpt",
-        "docsgpt"
-      ]
-    },
-    {
-      "id": "gh-676672661",
-      "title": "langchain-ai/langgraph — Build resilient language agents as graphs.",
-      "summary": "Build resilient language agents as graphs.",
-      "date": "2026-04-28",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langchain-ai/langgraph",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 30659,
-      "language": "Python",
-      "tags": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "chatgpt",
-        "deepagents"
-      ]
-    },
-    {
-      "id": "gh-812975380",
-      "title": "agent0ai/agent-zero — Agent Zero AI framework",
-      "summary": "Agent Zero AI framework",
-      "date": "2026-04-28",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/agent0ai/agent-zero",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 17364,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "assistant",
-        "autonomous",
-        "linux"
-      ]
-    },
-    {
-      "id": "gh-997390194",
-      "title": "PurpleAILAB/Decepticon — Autonomous Hacking Agent for Red Team",
-      "summary": "Autonomous Hacking Agent for Red Team",
-      "date": "2026-04-28",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/PurpleAILAB/Decepticon",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3057,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "cybersecurity",
-        "generative-ai",
-        "hacking"
-      ]
-    },
-    {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "summary": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "date": "2026-04-28",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 75793,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-collaboration",
-        "agent-harness",
-        "ai",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-997136302",
-      "title": "UnicomAI/wanwu — China Unicom's Yuanjing Wanwu Agent Platform is an enterprise-grade, multi-tenant AI agent development platform. It helps users build applications such as intelligent agents, workflows, and rag, and also supports model management. The platform features a developer-friendly license, and we welcome all developers to build upon the platform.",
-      "summary": "China Unicom's Yuanjing Wanwu Agent Platform is an enterprise-grade, multi-tenant AI agent development platform. It helps users build applications such as intelligent agents, workflows, and rag, and also supports model management. The platform features a developer-friendly license, and we welcome all developers to build upon the platform.",
-      "date": "2026-04-28",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/UnicomAI/wanwu",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 2897,
-      "language": "Go",
-      "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "ai",
-        "ai-agent"
+        "discord"
       ]
     }
   ]

@@ -3900,18 +3900,6 @@
     "maxTokens": 4096
   },
   {
-    "id": "openai/gpt-3.5-turbo-instruct",
-    "name": "OpenAI: GPT-3.5 Turbo Instruct",
-    "provider": "OPENAI",
-    "input": 1.5,
-    "output": 2,
-    "context": "4K",
-    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
-    "createdAt": 1695859200,
-    "modalities": "text->text",
-    "maxTokens": 4096
-  },
-  {
     "id": "mistralai/mistral-7b-instruct-v0.1",
     "name": "Mistral: Mistral 7B Instruct v0.1",
     "provider": "MISTRALAI",
@@ -3922,6 +3910,18 @@
     "createdAt": 1695859200,
     "modalities": "text->text",
     "maxTokens": null
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-instruct",
+    "name": "OpenAI: GPT-3.5 Turbo Instruct",
+    "provider": "OPENAI",
+    "input": 1.5,
+    "output": 2,
+    "context": "4K",
+    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
+    "createdAt": 1695859200,
+    "modalities": "text->text",
+    "maxTokens": 4096
   },
   {
     "id": "openai/gpt-3.5-turbo-16k",

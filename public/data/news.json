@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-30T14:12:29.682Z",
-  "updatedAtKST": "2026. 4. 30. PM 11:12:29",
+  "updatedAt": "2026-04-30T19:42:10.200Z",
+  "updatedAtKST": "2026. 5. 1. AM 4:42:10",
   "stats": {
     "aitimes": 20,
     "36kr": 9,
     "hf": 20,
-    "tc": 20,
-    "github": 10,
-    "total": 70
+    "tc": 18,
+    "github": 9,
+    "total": 67
   },
   "news": [
     {
@@ -251,9 +251,105 @@
       "lang": "ko"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/",
+      "id": "tc-0-https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/",
+      "title": "After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber, too",
+      "summary": "OpenAI will begin rolling out it cybersecurity testing tool, GPT-5.5 Cyber only \"to critical cyber defenders\" at first.",
+      "date": "2026-04-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/",
+      "title": "OpenAI announces new advanced security for ChatGPT accounts, including a partnership with Yubico",
+      "summary": "OpenAI is launching additional opt-in protections for ChatGPT accounts. The new security initiative includes a new partnership with security key provider Yubico.",
+      "date": "2026-04-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/",
+      "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+      "summary": "\"Distillation\" is a hot topic as frontier labs try to prevent smaller competitors from copying their models.",
+      "date": "2026-04-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/04/30/fda-approval-fundraising-and-the-reality-of-building-in-healthcare-according-to-bioticsai-founder/",
+      "title": "FDA approval, fundraising, and the reality of building in healthcare according to BioticsAI founder",
+      "summary": "BioticsAI CEO Robhy Bustami joined Isabelle Johannessen on Build Mode to discuss how the company has navigated a highly regulated space and kept the team motivated while cutting through all the red ta",
+      "date": "2026-04-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/30/fda-approval-fundraising-and-the-reality-of-building-in-healthcare-according-to-bioticsai-founder/",
+      "category": "투자·기업",
+      "lang": "en"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/",
+      "title": "Google’s Gemini AI assistant is hitting the road in millions of vehicles",
+      "summary": "The move signals Google’s push to bring more advanced, conversational AI into the driving experience.",
+      "date": "2026-04-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-5-https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/",
+      "title": "Stripe introduces Link, a digital wallet that autonomous AI agents can use, too",
+      "summary": "Link lets users connect cards, banks, and subscriptions, then authorize AI agents to spend securely via approval flows.",
+      "date": "2026-04-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-6-https://techcrunch.com/2026/04/30/salesforce-is-crowdsourcing-its-ai-roadmap-with-customers/",
+      "title": "Salesforce is crowdsourcing its AI roadmap — with customers",
+      "summary": "Salesforce lets its customers lead its product roadmap with the thinking that if one enterprise customer has a problem, the others likely do too.",
+      "date": "2026-04-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/30/salesforce-is-crowdsourcing-its-ai-roadmap-with-customers/",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "tc-7-https://techcrunch.com/2026/04/30/x-announces-a-rebuilt-ad-platform-powered-by-ai/",
+      "title": "X announces a rebuilt ad platform powered by AI",
+      "summary": "X is rolling out a rebuilt ads platform powered by AI as it works to grow revenue again.",
+      "date": "2026-04-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/04/30/x-announces-a-rebuilt-ad-platform-powered-by-ai/",
+      "category": "투자·기업",
+      "lang": "en"
+    },
+    {
+      "id": "tc-8-https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/",
       "title": "Meta says its business AI now facilitates 10 million conversations a week",
-      "summary": "Meta said over 8 billion advertisers have used at least one of its gen AI tools",
+      "summary": "Meta said over 8 billion advertisers have used at least one of its GenAI tools",
       "date": "2026-04-30",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -263,9 +359,9 @@
       "lang": "en"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/",
+      "id": "tc-9-https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/",
       "title": "SoftBank is creating a robotics company that builds data centers — and already eyeing a $100B IPO",
-      "summary": "You need infrastructure to build AI a and robots, but apparently you also need AI and robots to build infrastructure.",
+      "summary": "You need infrastructure to build AI and robots, but apparently you also need AI and robots to build infrastructure.",
       "date": "2026-04-30",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -275,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/",
+      "id": "tc-10-https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/",
       "title": "Amazon&#8217;s cloud business is surging — and so is its capital spending",
       "summary": "The e-commerce giant is making more money than expected from AWS but it's also spending a lot, and will continue to do so in the near term, its chief executive said.",
       "date": "2026-04-30",
@@ -287,9 +383,9 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
+      "id": "tc-11-https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
       "title": "Sources: Anthropic could raise a new $50B round at a valuation of $900B",
-      "summary": "The maker of Claude has received multiple pre-emptive offers at valuations in the $850 billion to $900 billion range, according to sources familiar with the matter.",
+      "summary": "The maker of Claude has received multiple preemptive offers at valuations in the $850 billion to $900 billion range, according to sources familiar with the matter.",
       "date": "2026-04-30",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -335,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/04/29/on-the-stand-elon-musk-cant-escape-his-own-tweets/",
+      "id": "tc-12-https://techcrunch.com/2026/04/29/on-the-stand-elon-musk-cant-escape-his-own-tweets/",
       "title": "On the stand, Elon Musk can&#8217;t escape his own tweets",
       "summary": "Elon Musk took the stand for the second day for his attempt to legally dismantle OpenAI.",
       "date": "2026-04-29",
@@ -347,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/04/29/meta-is-still-burning-money-on-ar-vr/",
+      "id": "tc-13-https://techcrunch.com/2026/04/29/meta-is-still-burning-money-on-ar-vr/",
       "title": "Meta is still burning money on AR/VR",
       "summary": "Meta is losing billions on Reality Labs each quarter, and its AI expenditures are only going to increase its spending.",
       "date": "2026-04-29",
@@ -359,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/",
+      "id": "tc-14-https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/",
       "title": "Satya Nadella says he&#8217;s ready to &#8216;exploit&#8217; the new OpenAI deal",
       "summary": "Microsoft gets to offer OpenAI's tech to its cloud customers and doesn't have to pay for it. \"We fully plan to exploit it,\" Nadella said.",
       "date": "2026-04-29",
@@ -371,7 +467,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/",
+      "id": "tc-15-https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/",
       "title": "Microsoft says it has over 20M paid Copilot users, and they really are using it",
       "summary": "Despite the lingering perception that no one really uses Copilot, Microsoft said on Wednesday that the number of users and engagement is growing.",
       "date": "2026-04-29",
@@ -383,7 +479,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/04/29/google-cloud-surpasses-20b-but-says-growth-was-capacity-constrained/",
+      "id": "tc-16-https://techcrunch.com/2026/04/29/google-cloud-surpasses-20b-but-says-growth-was-capacity-constrained/",
       "title": "Google Cloud surpasses $20B, but says growth was capacity-constrained",
       "summary": "Google Cloud topped $20B in quarterly revenue for the first time, fueled by surging demand for AI. But capacity constraints mean it could have grown even faster.",
       "date": "2026-04-29",
@@ -395,7 +491,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/04/29/google-gains-25m-subscriptions-in-q1-driven-by-youtube-and-google-one/",
+      "id": "tc-17-https://techcrunch.com/2026/04/29/google-gains-25m-subscriptions-in-q1-driven-by-youtube-and-google-one/",
       "title": "Google gains 25M subscriptions in Q1, driven by YouTube and Google One",
       "summary": "Google added 25M paid subscriptions in Q1, reaching 350M total, as YouTube and Google One grow.",
       "date": "2026-04-29",
@@ -403,102 +499,6 @@
       "sourceLang": "en",
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/04/29/google-gains-25m-subscriptions-in-q1-driven-by-youtube-and-google-one/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-10-https://techcrunch.com/podcast/equity-podcast-runway-ceo-cristobal-valenzuela-ai-video-world-models/",
-      "title": "Is AI video just a prequel? Runway&#8217;s CEO thinks world models are next",
-      "summary": "AI-generated video has gone from novelty to creative tool almost overnight, and Runway has a front row seat to the shift. The New York-based company has raised close to $860 million at a $5.3 billion ",
-      "date": "2026-04-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/podcast/equity-podcast-runway-ceo-cristobal-valenzuela-ai-video-world-models/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-11-https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/",
-      "title": "Parallel Web Systems hits $2B valuation five months after its last big raise",
-      "summary": "The AI agent-tool startup founded by former Twitter CEO Parag Agrawal has raised $100 million, led by Sequoia, months after raising a previous $100 million.",
-      "date": "2026-04-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/",
-      "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "tc-12-https://techcrunch.com/2026/04/29/google-photos-uses-ai-to-make-the-iconic-closet-from-clueless-a-reality/",
-      "title": "Google Photos uses AI to make the iconic closet from &#8216;Clueless&#8217; a reality",
-      "summary": "Google says the new feature will leverage AI technology to automatically create a copy of your wardrobe that's based on the pieces of clothing appearing in your Google Photos library.",
-      "date": "2026-04-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/29/google-photos-uses-ai-to-make-the-iconic-closet-from-clueless-a-reality/",
-      "category": "로봇·자율주행",
-      "lang": "en"
-    },
-    {
-      "id": "tc-13-https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/",
-      "title": "More Gemini features are coming to Google TV",
-      "summary": "Google TV just got more Gemini features, including the ability to transform photos and videos with tools Nano Banana and Veo.",
-      "date": "2026-04-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-14-https://techcrunch.com/2026/04/29/firestorm-labs-raises-82m-to-take-drone-factories-into-the-field/",
-      "title": "Firestorm Labs raises $82M to take drone factories into the field",
-      "summary": "A defense startup just raised $82 million to put drone factories inside shipping containers and bring manufacturing to the front lines.",
-      "date": "2026-04-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/29/firestorm-labs-raises-82m-to-take-drone-factories-into-the-field/",
-      "category": "개발 도구",
-      "lang": "en"
-    },
-    {
-      "id": "tc-15-https://techcrunch.com/2026/04/29/meet-shapes-the-app-bringing-humans-and-ai-into-the-same-group-chats/",
-      "title": "Meet Shapes, the app bringing humans and AI into the same group chats",
-      "summary": "Think Discord chats, but with AI characters in addition to humans.",
-      "date": "2026-04-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/29/meet-shapes-the-app-bringing-humans-and-ai-into-the-same-group-chats/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-16-https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/",
-      "title": "Colby Adcock&#8217;s Scout AI raises $100M to train its models for war: We visited its bootcamp",
-      "summary": "We visited Scout AI's training ground where it's working on AI agents that can help individual soldiers control fleets of autonomous vehicles.",
-      "date": "2026-04-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/04/28/at-his-openai-trial-musk-relitigates-an-old-friendship/",
-      "title": "At his OpenAI trial, Musk relitigates an old friendship",
-      "summary": "It's a story Musk has told before -- in interviews and to author Walter Isaacson for his bestselling biography of Musk -- but Tuesday was the first time he said it under oath.",
-      "date": "2026-04-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/28/at-his-openai-trial-musk-relitigates-an-old-friendship/",
       "category": "연구·논문",
       "lang": "en"
     },
@@ -512,30 +512,6 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
       "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
-      "title": "Amazon is already offering new OpenAI products on AWS",
-      "summary": "A day after OpenAI got Microsoft to agree to end exclusive rights, AWS announced a slate of OpenAI model offerings, including a new agent service.",
-      "date": "2026-04-28",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/",
-      "title": "Amazon launches an AI-powered audio Q&#038;A experience on product pages",
-      "summary": "Amazon's new \"Join the chat\" feature lets you ask questions about products and receive AI-powered audio responses.",
-      "date": "2026-04-28",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/",
-      "category": "모델 출시",
       "lang": "en"
     },
     {
@@ -733,6 +709,94 @@
   ],
   "github": [
     {
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "date": "2026-04-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 30531,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-958830659",
+      "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "date": "2026-04-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/google/adk-python",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19369,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "agents-sdk"
+      ]
+    },
+    {
+      "id": "gh-1024554267",
+      "title": "NousResearch/hermes-agent — The agent that grows with you",
+      "summary": "The agent that grows with you",
+      "date": "2026-04-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 126556,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-787076358",
+      "title": "firecrawl/firecrawl — 🔥 The API to search, scrape, and interact with the web for AI",
+      "summary": "🔥 The API to search, scrape, and interact with the web for AI",
+      "date": "2026-04-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "category": "개발 도구",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 113363,
+      "language": "TypeScript",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "ai-crawler",
+        "ai-scraping",
+        "ai-search"
+      ]
+    },
+    {
       "id": "gh-839037098",
       "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
       "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
@@ -744,7 +808,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 23443,
+      "stars": 23448,
       "language": "TypeScript",
       "tags": [
         "agents",
@@ -755,179 +819,25 @@
       ]
     },
     {
-      "id": "gh-1135605666",
-      "title": "BIT-DataLab/Edit-Banana — Edit Banana: A framework for converting statistical formats into editable.",
-      "summary": "Edit Banana: A framework for converting statistical formats into editable.",
+      "id": "gh-633262635",
+      "title": "onyx-dot-app/onyx — Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
       "date": "2026-04-30",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/BIT-DataLab/Edit-Banana",
-      "category": "개발 도구",
+      "url": "https://github.com/onyx-dot-app/onyx",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 5120,
+      "stars": 28801,
       "language": "Python",
       "tags": [
         "ai",
-        "data",
-        "figure",
-        "llm",
-        "nanobanana"
-      ]
-    },
-    {
-      "id": "gh-817326197",
-      "title": "screenpipe/screenpipe — Run agents that work based on what you do. 24/7 local screen & mic recording for the superintelligence era",
-      "summary": "Run agents that work based on what you do. 24/7 local screen & mic recording for the superintelligence era",
-      "date": "2026-04-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/screenpipe/screenpipe",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 18460,
-      "language": "Rust",
-      "tags": [
-        "agents",
-        "agi",
-        "ai",
-        "computer-vision",
-        "llm"
-      ]
-    },
-    {
-      "id": "gh-1025381911",
-      "title": "MemoriLabs/Memori — Memori is agent-native memory infrastructure. A LLM-agnostic layer that turns agent execution and conversation into structured, persistent state for production systems.",
-      "summary": "Memori is agent-native memory infrastructure. A LLM-agnostic layer that turns agent execution and conversation into structured, persistent state for production systems.",
-      "date": "2026-04-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/MemoriLabs/Memori",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 13983,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "agent-memory",
-        "ai",
-        "ai-memory",
-        "aiagent"
-      ]
-    },
-    {
-      "id": "gh-1131513930",
-      "title": "ZhuLinsen/daily_stock_analysis — LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
-      "summary": "LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
-      "date": "2026-04-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 33428,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "aigc",
-        "gemini",
-        "llm"
-      ]
-    },
-    {
-      "id": "gh-971243074",
-      "title": "DearVa/Everywhere — Context-aware AI assistant for your desktop. Ready to respond intelligently, seamlessly integrating multiple LLMs and MCP tools.",
-      "summary": "Context-aware AI assistant for your desktop. Ready to respond intelligently, seamlessly integrating multiple LLMs and MCP tools.",
-      "date": "2026-04-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/DearVa/Everywhere",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 5862,
-      "language": "C#",
-      "tags": [
-        "agent",
-        "ai",
-        "avalonia",
-        "chat",
-        "claude"
-      ]
-    },
-    {
-      "id": "gh-99919302",
-      "title": "apache/doris — Apache Doris is an easy-to-use, high performance and unified analytics database.",
-      "summary": "Apache Doris is an easy-to-use, high performance and unified analytics database.",
-      "date": "2026-04-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/apache/doris",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 15276,
-      "language": "Java",
-      "tags": [
-        "agent",
-        "ai",
-        "bigquery",
-        "database",
-        "dbt"
-      ]
-    },
-    {
-      "id": "gh-1053598893",
-      "title": "looplj/axonhub — ⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
-      "summary": "⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
-      "date": "2026-04-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/looplj/axonhub",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3496,
-      "language": "Go",
-      "tags": [
-        "agent",
-        "agents",
-        "ai",
-        "anthropic",
-        "anthropic-api"
-      ]
-    },
-    {
-      "id": "gh-1156956890",
-      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
-      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
-      "date": "2026-04-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/zeroclaw-labs/zeroclaw",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 30843,
-      "language": "Rust",
-      "tags": [
-        "agent",
-        "agentic",
-        "ai",
-        "infra",
-        "ml"
+        "ai-chat",
+        "chatgpt",
+        "chatui",
+        "enterprise-search"
       ]
     },
     {
@@ -942,7 +852,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 2613,
+      "stars": 2629,
       "language": "C#",
       "tags": [
         "agent",
@@ -950,6 +860,50 @@
         "cli",
         "office",
         "openclaw"
+      ]
+    },
+    {
+      "id": "gh-953683578",
+      "title": "oraios/serena — A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
+      "summary": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
+      "date": "2026-04-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/oraios/serena",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 23642,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "ai",
+        "ai-coding",
+        "claude",
+        "claude-code"
+      ]
+    },
+    {
+      "id": "gh-1188521544",
+      "title": "holaboss-ai/holaOS — An Open Agent Computer for ANY digital work.",
+      "summary": "An Open Agent Computer for ANY digital work.",
+      "date": "2026-04-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/holaboss-ai/holaOS",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3483,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-harness",
+        "agent-os",
+        "agentic",
+        "ai"
       ]
     }
   ]

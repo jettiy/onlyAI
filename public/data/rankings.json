@@ -1,6 +1,17 @@
 [
   {
     "rank": 1,
+    "model": "IBM: Granite 4.1 8B",
+    "provider": "IBM-GRANITE",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "NEW",
+    "category": "flagship",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 2,
     "model": "Owl Alpha",
     "provider": "OPENROUTER",
     "tokens": "LIVE",
@@ -11,7 +22,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 2,
+    "rank": 3,
     "model": "NVIDIA: Nemotron 3 Nano Omni (free)",
     "provider": "NVIDIA",
     "tokens": "LIVE",
@@ -22,7 +33,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 3,
+    "rank": 4,
     "model": "Poolside: Laguna XS.2 (free)",
     "provider": "POOLSIDE",
     "tokens": "LIVE",
@@ -33,7 +44,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 4,
+    "rank": 5,
     "model": "Poolside: Laguna M.1 (free)",
     "provider": "POOLSIDE",
     "tokens": "LIVE",
@@ -44,18 +55,18 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 5,
+    "rank": 6,
     "model": "Anthropic Claude Haiku Latest",
     "provider": "~ANTHROPIC",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,
-    "change": "NEW",
-    "category": "flagship",
+    "change": "",
+    "category": "value",
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 6,
+    "rank": 7,
     "model": "OpenAI GPT Mini Latest",
     "provider": "~OPENAI",
     "tokens": "LIVE",
@@ -66,7 +77,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 7,
+    "rank": 8,
     "model": "Google Gemini Pro Latest",
     "provider": "~GOOGLE",
     "tokens": "LIVE",
@@ -77,7 +88,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 8,
+    "rank": 9,
     "model": "MoonshotAI Kimi Latest",
     "provider": "~MOONSHOTAI",
     "tokens": "LIVE",
@@ -88,7 +99,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 9,
+    "rank": 10,
     "model": "Google Gemini Flash Latest",
     "provider": "~GOOGLE",
     "tokens": "LIVE",
@@ -99,7 +110,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 10,
+    "rank": 11,
     "model": "Anthropic Claude Sonnet Latest",
     "provider": "~ANTHROPIC",
     "tokens": "LIVE",
@@ -110,7 +121,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 11,
+    "rank": 12,
     "model": "OpenAI GPT Latest",
     "provider": "~OPENAI",
     "tokens": "LIVE",
@@ -121,19 +132,8 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 12,
-    "model": "Qwen: Qwen3.5 Plus 2026-04-20",
-    "provider": "QWEN",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
     "rank": 13,
-    "model": "Qwen: Qwen3.6 Flash",
+    "model": "Qwen: Qwen3.5 Plus 2026-04-20",
     "provider": "QWEN",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -144,7 +144,7 @@
   },
   {
     "rank": 14,
-    "model": "Qwen: Qwen3.6 35B A3B",
+    "model": "Qwen: Qwen3.6 Flash",
     "provider": "QWEN",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -155,7 +155,7 @@
   },
   {
     "rank": 15,
-    "model": "Qwen: Qwen3.6 Max Preview",
+    "model": "Qwen: Qwen3.6 35B A3B",
     "provider": "QWEN",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -166,7 +166,7 @@
   },
   {
     "rank": 16,
-    "model": "Qwen: Qwen3.6 27B",
+    "model": "Qwen: Qwen3.6 Max Preview",
     "provider": "QWEN",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -177,6 +177,17 @@
   },
   {
     "rank": 17,
+    "model": "Qwen: Qwen3.6 27B",
+    "provider": "QWEN",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 18,
     "model": "OpenAI: GPT-5.5 Pro",
     "provider": "OPENAI",
     "tokens": "LIVE",
@@ -187,7 +198,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 18,
+    "rank": 19,
     "model": "OpenAI: GPT-5.5",
     "provider": "OPENAI",
     "tokens": "LIVE",
@@ -198,19 +209,8 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 19,
-    "model": "DeepSeek: DeepSeek V4 Pro",
-    "provider": "DEEPSEEK",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
     "rank": 20,
-    "model": "DeepSeek: DeepSeek V4 Flash",
+    "model": "DeepSeek: DeepSeek V4 Pro",
     "provider": "DEEPSEEK",
     "tokens": "LIVE",
     "tokensNum": 0,

@@ -2056,12 +2056,12 @@
     "name": "OpenAI: gpt-oss-120b",
     "provider": "OPENAI",
     "input": 0.039,
-    "output": 0.19,
+    "output": 0.18,
     "context": "131K",
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B par",
     "createdAt": 1754414231,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": null
   },
   {
     "id": "openai/gpt-oss-20b",

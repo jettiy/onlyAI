@@ -1008,18 +1008,6 @@
     "maxTokens": 65536
   },
   {
-    "id": "mistralai/mistral-small-creative",
-    "name": "Mistral: Mistral Small Creative",
-    "provider": "MISTRALAI",
-    "input": 0.09999999999999999,
-    "output": 0.3,
-    "context": "33K",
-    "description": "Mistral Small Creative is an experimental small model designed for creative writing, narrative generation, roleplay and character-driven dialogue, general-purpose instruction following, and conversati",
-    "createdAt": 1765908653,
-    "modalities": "text->text",
-    "maxTokens": null
-  },
-  {
     "id": "xiaomi/mimo-v2-flash",
     "name": "Xiaomi: MiMo-V2-Flash",
     "provider": "XIAOMI",

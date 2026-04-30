@@ -39,13 +39,13 @@
     "id": "~moonshotai/kimi-latest",
     "name": "MoonshotAI Kimi Latest",
     "provider": "~MOONSHOTAI",
-    "input": 0.75,
-    "output": 3.5,
+    "input": 0.74,
+    "output": 3.49,
     "context": "262K",
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "createdAt": 1777318428,
     "modalities": "text+image->text",
-    "maxTokens": 16384
+    "maxTokens": 262142
   },
   {
     "id": "~google/gemini-flash-latest",
@@ -255,13 +255,13 @@
     "id": "moonshotai/kimi-k2.6",
     "name": "MoonshotAI: Kimi K2.6",
     "provider": "MOONSHOTAI",
-    "input": 0.75,
-    "output": 3.5,
+    "input": 0.74,
+    "output": 3.49,
     "context": "262K",
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks",
     "createdAt": 1776699402,
     "modalities": "text+image->text",
-    "maxTokens": 16384
+    "maxTokens": 262142
   },
   {
     "id": "anthropic/claude-opus-4.7",

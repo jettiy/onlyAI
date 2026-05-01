@@ -1,17 +1,77 @@
 {
-  "updatedAt": "2026-05-01T03:58:12.301Z",
-  "updatedAtKST": "2026. 5. 1. PM 12:58:12",
+  "updatedAt": "2026-05-01T08:21:09.158Z",
+  "updatedAtKST": "2026. 5. 1. PM 5:21:09",
   "stats": {
     "aitimes": 20,
-    "36kr": 12,
+    "36kr": 10,
     "hf": 20,
     "tc": 18,
-    "github": 11,
-    "total": 69
+    "github": 9,
+    "total": 67
   },
   "news": [
     {
-      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=209971",
+      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=210004",
+      "title": "구글, 22년 만에 '최고의 4월'...AI 수익 입증으로 주가 34% 급등",
+      "summary": "구글이 기대를 뛰어넘는 분기 실적에 힘입어 사상 최대의 월간 주가 상승폭을 기록했다.구글은 29일(현지시간) 1분기 실적 발표 이후 하루 만에 주가가 10% 급등, 4월 한달 동안 34% 상승했다. 이는 구글이 상장했던 2004년 이후 가장 큰 폭의 상승세다.순다르 피차이 구글 CEO는 기업용 AI 솔루션 수요를 이유로 들었다. “AI가 회사의 모든 사업 ",
+      "date": "2026-05-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210004",
+      "category": "투자·기업",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=210003",
+      "title": "오픈AI, 컴퓨팅 용량 10GW 돌파...예정보다 3년 앞서 목표 도달",
+      "summary": "오픈AI가 AI 컴퓨팅 인프라 확보 목표를 당초 계획보다 조기 달성했다고 밝혔다. 이를 통해 인프라 병목 현상을 제거한 것은 물론, AI 경쟁에서 유리한 위치를 차지했다는 점을 강조했다.오픈AI는 29일(현지시간) 현재 총 10기가와트(GW) 규모의 AI 컴퓨팅 용량 확보 계약을 체결했다고 밝혔다.이는 원래 2029년까지의 목표였으나, 3년 앞서 조기 달성",
+      "date": "2026-05-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210003",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=210002",
+      "title": "백악관, 앤트로픽의 '미소스' 접근 70여곳 확대 계획에 반대",
+      "summary": "백악관이 앤트로픽의 ‘미소스’ 접근 확대 계획에 제동을 건 것으로 알려졌다.30일(현지시간) 월스트리트 저널에 따르면, 앤트로픽은 최근 70여 기업과 기관에 추가로 미소스 접근 권한을 부여하는 방안을 정부와 논의했다. 이를 통해 기존 50여곳에서 총 120여곳으로 확대할 계획이었다.그러나 미국 정부는 보안 우려를 이유로 반대 입장을 전달한 것으로 알려졌다.",
+      "date": "2026-05-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210002",
+      "category": "투자·기업",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=210005",
+      "title": "중국서 엔비디아 'B300' 서버 가격 2배 급등…규제·수요 폭증이 촉발",
+      "summary": "중국에서 AI 컴퓨팅 수요가 급증하는 가운데, 엔비디아의 최신 AI 서버 ‘B300’ 가격이 두배 가까이 치솟은 것으로 나타났다. 미국의 수출 규제 강화와 암시장 단속이 겹치며 공급이 급격히 줄어든 데 따른 결과다.로이터는 30일(현지시간) 소식통을 인용, 중국에서 B300 서버 가격이 지난해 말 58만달러(약 8억5000만원) 수준에서 102만달러(약 1",
+      "date": "2026-05-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210005",
+      "category": "산업·정책",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=210007",
+      "title": "제미나이 '파일 생성' 기능 확대…채팅 만으로 문서·엑셀·PDF 제작",
+      "summary": "구글이 '제미나이'에 새로운 파일 생성 기능을 도입하며 업무 생산성 도구로서의 역할을 강화했다.구글은 29일(현지시간) 별도의 프로그램을 실행하거나 복사·붙여넣기 작업을 거치지 않고도 제미나이와의 채팅에서 프롬프트 입력으로 다양한 형식의 파일을 직접 생성하는 기능을 추가했다.생성 가능한 파일에는 PDF를 비롯해 마이크로소프트의 워드와 엑셀, 구글 독스·시트",
+      "date": "2026-05-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210007",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-8-https://www.aitimes.com/news/articleView.html?idxno=209971",
       "title": "여수, 시민 안심 위해 '도복 위험' 가로수 선제 대응",
       "summary": "여수시가 도복 위험이 있는 느티나무 가로수 9주를 제거해 시민 안전 확보에 나선다고 30일 밝혔다.여는 2026년 도시숲 등 조성·관리 위원회 심의를 거쳐 위험성 수목정밀진단 용역 결과를 바탕으로 부후가 심한 위험 가로수를 정비하기로 했다.주영효 기자 society@aitimes.comPowered by AItimes AI Solution",
       "date": "2026-05-01",
@@ -23,7 +83,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=209968",
+      "id": "aitimes-9-https://www.aitimes.com/news/articleView.html?idxno=209968",
       "title": "\"공룡도 보고 바다도 체험하고”…목포, 어린이날 맞아 대규모 축제",
       "summary": "목포자연사박물관이 5월5일 어린이날을 맞아 국립해양유산연구소와 함께 ‘2026 하하호호 어린이날 통합축제’를 연다고 30일 밝혔다.행사는 국립해양유산연구소 야외광장에서 진행되며, 두 기관이 협력해 어린이와 가족 관람객을 위한 체험과 볼거리를 마련했다.주영효 기자 society@aitimes.comPowered by AItimes AI Solution",
       "date": "2026-05-01",
@@ -35,7 +95,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=209975",
+      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=209975",
       "title": "[4월30일] GPT-5.5의 ‘고블린’ 논란…AI는 왜 엉뚱한 말을 하게 됐나",
       "summary": "최근 오픈AI에서는 '고블린'이라는 단어가 화제가 됐습니다.arb8020이라는 X 사용자가 28일(현지시간) 밝힌 바에 따르면, 'GPT-5.5'의 시스템 프롬프트에는 \"고블린, 그렘린, 너구리, 트롤, 오우거, 비둘기 또는 기타 동물이나 생물에 대한 이야기는 사용자의 질문과 절대적으로 명확하게 관련이 있는 경우가 아니면 절대 하지 말라\"라는 지침이 포함돼",
       "date": "2026-05-01",
@@ -59,7 +119,7 @@
       "lang": "en"
     },
     {
-      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=210000",
+      "id": "aitimes-11-https://www.aitimes.com/news/articleView.html?idxno=210000",
       "title": "구글도 ‘제미나이’ 앱 광고 검토…AI 챗봇 수익, 광고 중심으로 전환하나",
       "summary": "구글이 '제미나이' 앱에 직접 광고를 게재하는 것에 대해 긍정적인 입장을 보였다. 필립 쉰들러 구글 최고 사업책임자(CBO)는 29일(현지시간) 분기 실적 컨퍼런스콜을 통해 \"제대로만 한다면 광고는 정말 가치 있는 것이 될 수 있다\"라고 말했다.그는 \"현재 우리는 AI 모드의 광고에 집중하고 있지만, AI 모드에서 효과적인 형식은 제미나이 앱에도 성공적으로",
       "date": "2026-04-30",
@@ -71,7 +131,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=209989",
+      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=209989",
       "title": "소프트뱅크, 신설 AI 기업 미국 상장 추진 중...\"데이터센터가 핵심\"",
       "summary": "소프트뱅크가 AI와 로보틱스 사업을 중심으로 한 신설 기업 로즈(Roze)의 미국 시장 상장을 추진 중인 것으로 알려졌다. 손정의 회장의 주도로 진행되는 이번 프로젝트는 데이터센터 구축을 핵심 축으로 삼고 있으며, 기업 가치는 최대 1000억달러(약 148조원)에 이를 것으로 전망된다.파이낸셜 타임스는 29일(현지시간) 복수의 소식통을 인용, 소프트뱅크가 ",
       "date": "2026-04-30",
@@ -83,7 +143,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=209986",
+      "id": "aitimes-13-https://www.aitimes.com/news/articleView.html?idxno=209986",
       "title": "미국 하원, 커서·에어비앤비의 중국 AI 모델 활용 조사 착수",
       "summary": "미국 하원 공화당이 기술 기업들의 중국 AI 모델 활용 실태에 대한 조사에 착수했다. 이번 조치는 국가안보 우려를 낮추는 동시에 글로벌 AI 경쟁에서 중국을 견제하려는 흐름에 따른 것으로, 향후 중국 모델 사용 금지까지 이어질지 주목된다.블룸버그는 29일(현지시간) 미 하원 국토안보위원회와 중국특별위원회가 에어비앤비와 '커서'의 운영사인 애니스피어 CEO에",
       "date": "2026-04-30",
@@ -95,7 +155,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-8-https://www.aitimes.com/news/articleView.html?idxno=209991",
+      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=209991",
       "title": "\"AI 비용이 인건비 추월\"…기업 최우선 순위 '채용'서 '비용 관리'로",
       "summary": "일부 실리콘 밸리 기업들이 지불하는 AI 관련 비용이 인건비를 앞지르기 시작했다. 이에 따라 기업들은 직원 채용보다 AI 비용 관리를 최우선 과제로 삼기 시작한 것으로 알려졌다.브라이언 카탄자로 엔비디아 딥러닝 응용 부문 부사장은 26일(현지시간) 악시오스와의 인터뷰에서 \"우리 팀은 컴퓨팅 비용이 직원 인건비를 훨씬 초과한다\"라고 말했다.이는 AI 비용이 ",
       "date": "2026-04-30",
@@ -107,7 +167,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-9-https://www.aitimes.com/news/articleView.html?idxno=209952",
+      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=209952",
       "title": "[게시판] 스노우플레이크 AI 해커톤 결선서 6개 팀 경쟁 등 단신",
       "summary": "■ 스노우플레이크는 실제 데이터를 활용해 아이디어를 구현하는 ‘AI & 데이터 해커톤 2026' 결선에서 6개 팀이 경쟁을 펼쳤다고 밝혔다. 특히 올해는 비즈니스 트랙을 신설해 데이터 사이언티스트, 개발자를 포함해 비개발자인 비즈니스 담당자, 기획자까지 500명 이상이 참여했다. 비즈니스 트랙 1위로 선정된 팀 케이오스는 유동인구와 카드매출 등 분산된 상권",
       "date": "2026-04-30",
@@ -119,7 +179,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=209994",
+      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=209994",
       "title": "LG-KETI, ‘엑사원 4.5’로 ‘AI 안전신문고’ 시범 서비스 연내 시작",
       "summary": "LG AI연구원(원장 이홍락, 임우형)은 한국전자기술연구원(KETI)과 AI 모델 ‘엑사원(EXAONE)’을 중심으로 행정안전부의 ‘AI 안전신문고’ 1단계 연구 개발을 완료, 연내 시범 서비스를 준비 중이라고 30일 밝혔다. 행정안전부는 ‘국민 안전 보장을 위한 재난 안전 관리 체계 확립’의 핵심 사업인 AI 안전신문고의 두뇌로 엑사원을 낙점했다. AI ",
       "date": "2026-04-30",
@@ -131,7 +191,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-11-https://www.aitimes.com/news/articleView.html?idxno=209998",
+      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=209998",
       "title": "네이버클라우드·삼성SDS, 행안부 '온AI' 모바일 서비스 지원",
       "summary": "네이버클라우드의 AI 업무 협업툴 '네이버웍스'와 삼성SDS의 '브리티웍스'가 행정안전부의 지능형 업무관리 플랫폼 '온AI'의 공식 협업 솔루션으로 30일 선정됐다.그간 공공기관 업무망은 망분리 정책에 따라 내부망과 외부 인터넷망이 분리 운영됐다. 이번 온AI 서비스를 통해 출장·외근 중에도 스마트폰·태블릿 등을 사용해 실시간 보고·결재, 화상회의 참여, ",
       "date": "2026-04-30",
@@ -143,7 +203,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=209999",
+      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=209999",
       "title": "EU, 'AI 법' 완화 두고 회원국-의회 이견으로 합의에 실패",
       "summary": "유럽연합(EU) 회원국들과 유럽의회 의원들이 AI 법(AI Act) 완화를 두고 장시간 협상을 벌였으나 합의에 도달하지 못한 것으로 알려졌다. 29일(현지시간) 로이터에 따르면, 이날 회의는 12시간에 걸쳐 열렸지만 합의에 도달하지 못했다. 다음 달 협상을 재개할 예정이다.이번 협상은 규제 완화 패키지(Digital Omnibus)의 일부로, 기존 규제를 ",
       "date": "2026-04-30",
@@ -155,7 +215,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-13-https://www.aitimes.com/news/articleView.html?idxno=209996",
+      "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=209996",
       "title": "병의원 AI 전문 메디팔, 분기 흑자 달성... 전년 동기 대비 매출 5배 성장",
       "summary": "메디팔(대표 강종일)은 올해 1분기 매출이 전년 동기 대비 5배 가량 성장하며 흑자를 기록했다고 30일 밝혔다.지난해 11월 창사 이후 최근 6개월간 월평균 20% 이상의 매출 성장세를 보이며 사업 안정성을 높였다는 설명이다.메디팔은 AI 환자 관리 솔루션인 ‘애프터닥’과 병의원 특화 AI 에이전트 플랫폼 ‘메디팔 AI’를 운영 중이다. 치료 유형별 환자 ",
       "date": "2026-04-30",
@@ -167,7 +227,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-14-https://www.aitimes.com/news/articleView.html?idxno=209993",
+      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=209993",
       "title": "네이버 “하반기부터 AI브리핑·AI 탭 수익화에 나서”",
       "summary": "네이버가 올해 3분기 이후부터 AI브리핑, AI탭 등 AI 서비스의 수익화를 본격적으로 추진하겠다고 밝혔다.네이버(대표 최수연)는 30일 분기 실적 발표 컨퍼런스 콜을 통해 검색 결과 중 핵심 내용을 요약해 주는 ‘AI 브리핑’에서 생성 AI 광고를 시범 운영, 3분기부터 수익화에 나서겠다고 발표했다.이를 통해 검색 결과가 구매나 예약으로 전환될 수 있는 ",
       "date": "2026-04-30",
@@ -179,7 +239,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=209995",
+      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=209995",
       "title": "크래프톤 “멀티모달 AI 모델, 게임 적용해 나갈 것”",
       "summary": "크래프톤은 분기 실적 발표를 통해 ‘AI 포 게임(AI for Game)’ 전략을 강화, 자체 개발 멀티모달 모델 4종을 실제 게임에 적용해 나가겠다고 30일 밝혔다. 4월에 공개한 멀티모달 AI 모델 ‘라온(Raon)’ 4종을 게임에 맞춤 적용할 계획이다. 게임별 특성에 맞게 모델을 미세조정해 새로운 플레이 경험을 구현하는 데 활용할 예정이다.또, CPC",
       "date": "2026-04-30",
@@ -191,7 +251,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=209984",
+      "id": "aitimes-24-https://www.aitimes.com/news/articleView.html?idxno=209984",
       "title": "한컴, PDF 접근성 태그 자동 생성 AI 도구 오픈소스 공개",
       "summary": "한글과컴퓨터(대표 김연수)는 '오픈데이터로더 PDF'에 접근성 태그 자동생성 기능을 탑재했다고 30일 밝혔다.AI가 제목과 표, 목록, 이미지 등 문서 구조를 분석해 태그 형태로 PDF 내부에 자동 반영하는 방식이다. PDF는 전 세계에서 가장 널리 쓰이는 디지털 문서지만, 상당수가 접근성 태그 없이 유통되며 기존 도구도 내용 추출에 그치는 한계를 해결했다",
       "date": "2026-04-30",
@@ -200,66 +260,6 @@
       "sourceFlag": "🇰🇷",
       "url": "https://www.aitimes.com/news/articleView.html?idxno=209984",
       "category": "오픈소스",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=209981",
-      "title": "앤트로픽, 오픈AI 몸값 제치나...1337조 가치로 투자 유치 검토",
-      "summary": "기업공개(IPO)를 앞둔 앤트로픽이 기업 가치 9000억달러(약 1337조원)를 넘어서는 신규 투자 유치를 검토 중인 것으로 알려졌다. 성사될 경우, 경쟁사인 오픈AI를 제치고 세계에서 가장 가치 있는 AI 스타트업으로 올라설 수 있는 수준이다.블룸버그는 29일(현지시간) 익명의 소식통을 인용, 앤트로픽이 현재 기업 가치를 두배 이상 끌어 올리는 조건의 투",
-      "date": "2026-04-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209981",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=209978",
-      "title": "백악관, 앤트로픽 '공급망 위험' 지정 해제 행정명령 준비 중",
-      "summary": "백악관이 앤트로픽에 대한 기존 제재를 완화하고, 최신 AI 모델 도입을 허용하는 방안을 검토 중인 것으로 알려졌다. 29일(현지시간) 악시오스에 따르면, 백악관은 현재 연방기관들이 앤트로픽에 적용된 ‘공급망 위험’ 지정을 해제할 수 있도록 하는 가이드라인과 행정명령 초안을 마련 중이다.이 조치가 시행되면, 앤트로픽의 ‘미소스(Mythos)’를 포함한 신규 ",
-      "date": "2026-04-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209978",
-      "category": "산업·정책",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=209977",
-      "title": "캐나다 총기 사건 유족, 오픈AI 상대로 미국 법원에 소송 제기",
-      "summary": "캐나다에서 발생한 대형 총기 난사 사건의 피해자 유가족들이 오픈AI와 샘 알트먼 CEO를 상대로 미국 법원에 소송을 제기했다. 이들은 사건 발생 수개월 전 가해자의 위험 징후가 '챗GPT' 대화에서 포착됐음에도 이를 경찰에 알리지 않았다고 주장하고 있다.29일(현지시간) 로이터에 따르면, 미국 캘리포니아 북부 연방지방법원에 제출된 7건의 소송에서 원고들은 ",
-      "date": "2026-04-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209977",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=209963",
-      "title": "빅테크 AI 투자액 사상 최고치 경신...지난 분기에만 194조 돌파",
-      "summary": "아마존, 구글, 마이크로소프트(MS), 메타 등 글로벌 빅테크 4사가 AI 패권 경쟁을 위해 지난 분기 사상 최대 규모의 투자에 나선 것으로 밝혀졌다. 또 이들은 올해에만 약 7000억달러(약 1040조원)에 달하는 자금을 AI 인프라 구축에 쏟아부을 계획이다.29일(현지시간) 분기 실적 발표에 따르면, 올해 1~3월 아마존과 구글, MS, 메타 4개 기업",
-      "date": "2026-04-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209963",
-      "category": "인프라·하드웨어",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-26-https://www.aitimes.com/news/articleView.html?idxno=209974",
-      "title": "머스크, 법정서 “오픈AI 초기 투자는 결국 바보 같았던 선택”",
-      "summary": "일론 머스크 CEO가 오픈AI를 상대로 한 소송에서 이틀째 직접 증언에 나서며, AI 업계를 대표하는 인물 간 갈등이 정점으로 치닫고 있다. 그는 초기 투자 결정에 대해 “바보 같았던 선택이었다”고 표현하며 오픈AI의 영리 전환을 강하게 비판했다.월스트리트 저널 등에 따르면, 머스크 CEO는 29일(현지시간) 미국 캘리포니아 연방법원에서 진행된 재판에서 “",
-      "date": "2026-04-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=209974",
-      "category": "산업·정책",
       "lang": "ko"
     },
     {
@@ -709,223 +709,25 @@
   ],
   "github": [
     {
-      "id": "gh-1024554267",
-      "title": "NousResearch/hermes-agent — The agent that grows with you",
-      "summary": "The agent that grows with you",
+      "id": "gh-971243074",
+      "title": "DearVa/Everywhere — Context-aware AI assistant for your desktop. Ready to respond intelligently, seamlessly integrating multiple LLMs and MCP tools.",
+      "summary": "Context-aware AI assistant for your desktop. Ready to respond intelligently, seamlessly integrating multiple LLMs and MCP tools.",
       "date": "2026-05-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 126944,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-614765452",
-      "title": "Significant-Gravitas/AutoGPT — AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "url": "https://github.com/DearVa/Everywhere",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 183914,
-      "language": "Python",
-      "tags": [
-        "agentic-ai",
-        "agents",
-        "ai",
-        "artificial-intelligence",
-        "autonomous-agents"
-      ]
-    },
-    {
-      "id": "gh-764723738",
-      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
-      "summary": "Automate browser based workflows with AI",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Skyvern-AI/skyvern",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 21438,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "api",
-        "automation",
-        "browser",
-        "browser-automation"
-      ]
-    },
-    {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 23455,
-      "language": "TypeScript",
-      "tags": [
-        "agents",
-        "ai",
-        "chatbots",
-        "evals",
-        "javascript"
-      ]
-    },
-    {
-      "id": "gh-633262635",
-      "title": "onyx-dot-app/onyx — Open Source AI Platform - AI Chat with advanced features that works with every LLM",
-      "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/onyx-dot-app/onyx",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 28816,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-chat",
-        "chatgpt",
-        "chatui",
-        "enterprise-search"
-      ]
-    },
-    {
-      "id": "gh-660489378",
-      "title": "microsoft/promptflow — Build high-quality LLM apps - from prototyping, testing to production deployment and monitoring.",
-      "summary": "Build high-quality LLM apps - from prototyping, testing to production deployment and monitoring.",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/microsoft/promptflow",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 11116,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-application-development",
-        "ai-applications",
-        "chatgpt",
-        "gpt"
-      ]
-    },
-    {
-      "id": "gh-835975784",
-      "title": "MODSetter/SurfSense — An open source, privacy focused alternative to NotebookLM for teams with no data limits. Join our Discord: https://discord.gg/ejRNvftDp9",
-      "summary": "An open source, privacy focused alternative to NotebookLM for teams with no data limits. Join our Discord: https://discord.gg/ejRNvftDp9",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/MODSetter/SurfSense",
-      "category": "오픈소스",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 14036,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "agents",
-        "ai",
-        "chrome-extension",
-        "extension"
-      ]
-    },
-    {
-      "id": "gh-1182212878",
-      "title": "iOfficeAI/OfficeCLI — OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-      "summary": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/iOfficeAI/OfficeCLI",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 2645,
+      "stars": 5862,
       "language": "C#",
       "tags": [
         "agent",
         "ai",
-        "cli",
-        "office",
-        "openclaw"
-      ]
-    },
-    {
-      "id": "gh-826170402",
-      "title": "elizaOS/eliza — Autonomous agents for everyone",
-      "summary": "Autonomous agents for everyone",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/elizaOS/eliza",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 18283,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agentic",
-        "ai",
-        "autonomous",
-        "chatbot"
-      ]
-    },
-    {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "summary": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "date": "2026-05-01",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 75899,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-collaboration",
-        "agent-harness",
-        "ai",
-        "chatgpt"
+        "avalonia",
+        "chat",
+        "claude"
       ]
     },
     {
@@ -940,7 +742,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 30543,
+      "stars": 30548,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -948,6 +750,160 @@
         "agentic-ai",
         "agents",
         "ai"
+      ]
+    },
+    {
+      "id": "gh-979115477",
+      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "date": "2026-05-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/bytedance/deer-flow",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 64396,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-1033778670",
+      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
+      "summary": "Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
+      "date": "2026-05-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 23241,
+      "language": "TypeScript",
+      "tags": [
+        "acp",
+        "ai",
+        "ai-agent",
+        "chat",
+        "chatbot"
+      ]
+    },
+    {
+      "id": "gh-614765452",
+      "title": "Significant-Gravitas/AutoGPT — AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "date": "2026-05-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 183920,
+      "language": "Python",
+      "tags": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "autonomous-agents"
+      ]
+    },
+    {
+      "id": "gh-575865240",
+      "title": "AstrBotDevs/AstrBot — AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "summary": "AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "date": "2026-05-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 31089,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "ai",
+        "chatbot",
+        "chatgpt",
+        "discord"
+      ]
+    },
+    {
+      "id": "gh-944080744",
+      "title": "pipeshub-ai/pipeshub-ai — PipesHub is a fully extensible and explainable workplace AI platform for enterprise search and workflow automation",
+      "summary": "PipesHub is a fully extensible and explainable workplace AI platform for enterprise search and workflow automation",
+      "date": "2026-05-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/pipeshub-ai/pipeshub-ai",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 2856,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agents",
+        "ai",
+        "drive",
+        "glean"
+      ]
+    },
+    {
+      "id": "gh-643445235",
+      "title": "lobehub/lobehub — The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+      "summary": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+      "date": "2026-05-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/lobehub/lobehub",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 75907,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-collaboration",
+        "agent-harness",
+        "ai",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-1182212878",
+      "title": "iOfficeAI/OfficeCLI — OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "summary": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "date": "2026-05-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 2652,
+      "language": "C#",
+      "tags": [
+        "agent",
+        "ai",
+        "cli",
+        "office",
+        "openclaw"
       ]
     }
   ]

@@ -3480,18 +3480,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "inflection/inflection-3-pi",
-    "name": "Inflection: Inflection 3 Pi",
-    "provider": "INFLECTION",
-    "input": 2.5,
-    "output": 10,
-    "context": "8K",
-    "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like custo",
-    "createdAt": 1728604800,
-    "modalities": "text->text",
-    "maxTokens": 1024
-  },
-  {
     "id": "inflection/inflection-3-productivity",
     "name": "Inflection: Inflection 3 Productivity",
     "provider": "INFLECTION",
@@ -3499,6 +3487,18 @@
     "output": 10,
     "context": "8K",
     "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional",
+    "createdAt": 1728604800,
+    "modalities": "text->text",
+    "maxTokens": 1024
+  },
+  {
+    "id": "inflection/inflection-3-pi",
+    "name": "Inflection: Inflection 3 Pi",
+    "provider": "INFLECTION",
+    "input": 2.5,
+    "output": 10,
+    "context": "8K",
+    "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like custo",
     "createdAt": 1728604800,
     "modalities": "text->text",
     "maxTokens": 1024
@@ -3514,6 +3514,18 @@
     "createdAt": 1727654400,
     "modalities": "text->text",
     "maxTokens": 32768
+  },
+  {
+    "id": "meta-llama/llama-3.2-3b-instruct",
+    "name": "Meta: Llama 3.2 3B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.051,
+    "output": 0.33999999999999997,
+    "context": "80K",
+    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with ",
+    "createdAt": 1727222400,
+    "modalities": "text->text",
+    "maxTokens": null
   },
   {
     "id": "meta-llama/llama-3.2-1b-instruct",
@@ -3540,18 +3552,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "meta-llama/llama-3.2-3b-instruct",
-    "name": "Meta: Llama 3.2 3B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.051,
-    "output": 0.33999999999999997,
-    "context": "80K",
-    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with ",
-    "createdAt": 1727222400,
-    "modalities": "text->text",
-    "maxTokens": null
-  },
-  {
     "id": "qwen/qwen-2.5-72b-instruct",
     "name": "Qwen2.5 72B Instruct",
     "provider": "QWEN",
@@ -3564,18 +3564,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "cohere/command-r-08-2024",
-    "name": "Cohere: Command R (08-2024)",
-    "provider": "COHERE",
-    "input": 0.15,
-    "output": 0.6,
-    "context": "128K",
-    "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at ",
-    "createdAt": 1724976000,
-    "modalities": "text->text",
-    "maxTokens": 4000
-  },
-  {
     "id": "cohere/command-r-plus-08-2024",
     "name": "Cohere: Command R+ (08-2024)",
     "provider": "COHERE",
@@ -3583,6 +3571,18 @@
     "output": 10,
     "context": "128K",
     "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while ",
+    "createdAt": 1724976000,
+    "modalities": "text->text",
+    "maxTokens": 4000
+  },
+  {
+    "id": "cohere/command-r-08-2024",
+    "name": "Cohere: Command R (08-2024)",
+    "provider": "COHERE",
+    "input": 0.15,
+    "output": 0.6,
+    "context": "128K",
+    "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at ",
     "createdAt": 1724976000,
     "modalities": "text->text",
     "maxTokens": 4000
@@ -3744,18 +3744,6 @@
     "maxTokens": 8192
   },
   {
-    "id": "openai/gpt-4o",
-    "name": "OpenAI: GPT-4o",
-    "provider": "OPENAI",
-    "input": 2.5,
-    "output": 10,
-    "context": "128K",
-    "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while bei",
-    "createdAt": 1715558400,
-    "modalities": "text+image+file->text",
-    "maxTokens": 16384
-  },
-  {
     "id": "openai/gpt-4o-2024-05-13",
     "name": "OpenAI: GPT-4o (2024-05-13)",
     "provider": "OPENAI",
@@ -3768,16 +3756,16 @@
     "maxTokens": 4096
   },
   {
-    "id": "meta-llama/llama-3-70b-instruct",
-    "name": "Meta: Llama 3 70B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.51,
-    "output": 0.74,
-    "context": "8K",
-    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
-    "createdAt": 1713398400,
-    "modalities": "text->text",
-    "maxTokens": 8000
+    "id": "openai/gpt-4o",
+    "name": "OpenAI: GPT-4o",
+    "provider": "OPENAI",
+    "input": 2.5,
+    "output": 10,
+    "context": "128K",
+    "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while bei",
+    "createdAt": 1715558400,
+    "modalities": "text+image+file->text",
+    "maxTokens": 16384
   },
   {
     "id": "meta-llama/llama-3-8b-instruct",
@@ -3790,6 +3778,18 @@
     "createdAt": 1713398400,
     "modalities": "text->text",
     "maxTokens": 16384
+  },
+  {
+    "id": "meta-llama/llama-3-70b-instruct",
+    "name": "Meta: Llama 3 70B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.51,
+    "output": 0.74,
+    "context": "8K",
+    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
+    "createdAt": 1713398400,
+    "modalities": "text->text",
+    "maxTokens": 8000
   },
   {
     "id": "mistralai/mixtral-8x22b-instruct",
@@ -3984,6 +3984,18 @@
     "maxTokens": 4096
   },
   {
+    "id": "openai/gpt-4-0314",
+    "name": "OpenAI: GPT-4 (older v0314)",
+    "provider": "OPENAI",
+    "input": 30,
+    "output": 60,
+    "context": "8K",
+    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
+    "createdAt": 1685232000,
+    "modalities": "text->text",
+    "maxTokens": 4096
+  },
+  {
     "id": "openai/gpt-4",
     "name": "OpenAI: GPT-4",
     "provider": "OPENAI",
@@ -4003,18 +4015,6 @@
     "output": 1.5,
     "context": "16K",
     "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
-    "createdAt": 1685232000,
-    "modalities": "text->text",
-    "maxTokens": 4096
-  },
-  {
-    "id": "openai/gpt-4-0314",
-    "name": "OpenAI: GPT-4 (older v0314)",
-    "provider": "OPENAI",
-    "input": 30,
-    "output": 60,
-    "context": "8K",
-    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
     "createdAt": 1685232000,
     "modalities": "text->text",
     "maxTokens": 4096

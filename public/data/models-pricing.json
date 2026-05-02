@@ -159,13 +159,13 @@
     "id": "qwen/qwen3.6-27b",
     "name": "Qwen: Qwen3.6 27B",
     "provider": "QWEN",
-    "input": 0.325,
-    "output": 3.25,
-    "context": "256K",
+    "input": 0.32,
+    "output": 3.1999999999999997,
+    "context": "262K",
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs..",
     "createdAt": 1777255064,
     "modalities": "text+image+video->text",
-    "maxTokens": 65536
+    "maxTokens": 81920
   },
   {
     "id": "openai/gpt-5.5-pro",

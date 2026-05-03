@@ -1779,8 +1779,8 @@
     "id": "deepseek/deepseek-v3.1-terminus",
     "name": "DeepSeek: DeepSeek V3.1 Terminus",
     "provider": "DEEPSEEK",
-    "input": 0.21,
-    "output": 0.7899999999999999,
+    "input": 0.27,
+    "output": 0.95,
     "context": "164K",
     "description": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language cons",
     "createdAt": 1758548275,
@@ -2607,13 +2607,13 @@
     "id": "qwen/qwen3-30b-a3b",
     "name": "Qwen: Qwen3 30B A3B",
     "provider": "QWEN",
-    "input": 0.08,
-    "output": 0.28,
+    "input": 0.09,
+    "output": 0.44999999999999996,
     "context": "41K",
     "description": "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tas",
     "createdAt": 1745878604,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 20000
   },
   {
     "id": "qwen/qwen3-8b",

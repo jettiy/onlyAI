@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-04T03:50:45.610Z",
-  "updatedAtKST": "2026. 5. 4. PM 12:50:45",
+  "updatedAt": "2026-05-04T08:38:06.859Z",
+  "updatedAtKST": "2026. 5. 4. PM 5:38:06",
   "stats": {
     "aitimes": 20,
     "36kr": 13,
@@ -11,7 +11,175 @@
   },
   "news": [
     {
-      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=210056",
+      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=210050",
+      "title": "오픈AI, GPT-5.5 프롬프트 가이드 공개...\"길게 지시하지 않아도 충분\"",
+      "summary": "오픈AI가 최신 모델 GPT-5.5를 위한 프롬프트 가이드를 공개하며, AI 활용 방식의 근본적인 변화가 필요하다고 밝혔다. 핵심은 복잡한 지시 대신 ‘결과 중심’의 간결한 요청이다. 오픈AI는 1일(현지시간) ‘GPT-5.5 프롬프트 가이드’를 통해 프롬프트를 일종의 ‘운영 계약(contract)’으로 설계할 것을 권장했다.즉, 모델의 수행 과정을 세세하",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210050",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=209983",
+      "title": "알리바바, 호퍼 GPU에서 모델 속도 3배 향상하는 ‘플래시QLA’ 공개",
+      "summary": "대형언어모델(LLM)의 성능 경쟁이 모델 구조나 하드웨어를 넘어 실제 연산을 수행하는 ‘GPU 커널’ 영역으로까지 확장되고 있다. 알리바바가 이를 통해 모델 추론 속도를 최대 3배까지 가속하는 기술을 공개했다.알리바바는 29일(현지시간) 저수준 연산 최적화를 통해 엔비디아의 '호퍼(Hopper)' GPU에서 최대 3배의 속도 향상을 구현할 수 있는 고성능 ",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=209983",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=210047",
+      "title": "미국 1000조 투자에  압박 커진 중국… \"컴퓨팅 파워 확보에 총력\"",
+      "summary": "미국 주요 빅테크 기업들의 AI 투자액이 올해 7000억달러(약 1029조원)를 넘어설 것으로 전망되면서, 중국도 AI 투자 확대 압박이 커지고 있다는 분석이 제기됐다. 사우스차이나모닝포스트는 30일(현지시간) 모건 스탠리 보고서를 인용, 올해 중국 클라우드 기업들의 AI 투자 규모는 1050억달러(약 154조원)로 추정된다고 보도했다.미국에서는 사상 최대",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210047",
+      "category": "투자·기업",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=210048",
+      "title": "애플, '비전 프로' 후속 개발 중단...'M5' 부진에 스마트 안경으로 선회",
+      "summary": "애플이 혼합현실(MR) 헤드셋 ‘비전 프로(Vision Pro)’ 사업에서 사실상 철수한 것으로 전해졌다. 최신 칩을 탑재한 후속 모델에도 불구하고 시장 반응이 되살아나지 않자, 애플의 공간 컴퓨팅 전략이 스마트 안경 중심으로 재편되고 있다는 분석이다.맥루머스에 따르면, 애플은 2025년 10월 비전 프로에 'M5' 칩을 탑재하고 착용감을 개선한 신형 모델",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210048",
+      "category": "인프라·하드웨어",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=210063",
+      "title": "애플 '바이브 코딩' 앱 규제에 스타트업 반발...“심사 기준 구시대적\"",
+      "summary": "애플이 ‘바이브 코딩’ 앱에 대한 앱스토어 심사 과정에서 일관성 없는 규정을 적용하고 있다는 지적이 제기되며 논란이 커지고 있다. 스타트업과 투자자들은 AI로 누구나 앱을 만들 수 있는 시대에, 애플이 현실을 따라가지 못하고 있다고 비판했다.3일(현지시간) 파이낸셜 타임스에 따르면, AI 코딩 플랫폼 레플릿(Replit)은 아이폰 앱 업데이트가 차단됐다고 ",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210063",
+      "category": "산업·정책",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=210059",
+      "title": "국카스텐이 여는 목포의 밤…9일 ‘목포해상W쇼’ 개막",
+      "summary": "목포시의 대표 야간관광 콘텐츠인 ‘2026 목포해상W쇼’가 9일 오후 8시 개막공연을 시작으로 새 시즌에 들어간다.목포는 가정의 달을 맞아 세대가 함께 즐길 수 있는 공연과 해상 불꽃쇼를 결합해 목포 밤바다를 무대로 한 야간관광 콘텐츠를 선보인다고 4일 밝혔다.목포해상W쇼는 2021년부터 문화체육관광부 ‘관광거점도시 육성사업’의 대표 야간관광 콘텐츠로 추진",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210059",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=210065",
+      "title": "AI 생성 '팟캐스트 슬롭' 폭증에 콘텐츠 업계 고심...\"이틀 만에 방송 800개 생성\"",
+      "summary": "AI로 생성된 팟캐스트가 급증하며 오디오 콘텐츠 시장 전반에 영향을 미치는 것으로 알려졌다. 일명 ‘팟슬롭(podslop)’은 품질 저하뿐만 아니라, 플랫폼과 광고 시장에까지 영향을 미치고 있다.1일(현지시간) 블룸버그에 따르면, 스포티파이는 지난주 실적 발표 이후 주가가 4년 만에 최대 폭으로 하락하며 투자자들의 우려를 드러냈다.피트니스 기업 '펠로톤(P",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210065",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-13-https://www.aitimes.com/news/articleView.html?idxno=210074",
+      "title": "잇플루언서, ‘잇플 AI’ 출시… “AI가 인플루언서를 추천”",
+      "summary": "인플루언서 마케팅 시장이 AI 중심 구조로 빠르게 재편되는 가운데, 잇플루언서(대표 강수빈)가 AI 기반 인플루언서 매칭 서비스 ‘잇플 AI(itFL AI)’를 공식 출시했다.그동안 인플루언서 마케팅은 키워드 검색, 팔로워 수, 참여율 등 단편적인 지표에 의존해 매칭이 이뤄져 왔다. 그러나 동일한 조건에서도 캠페인 성과가 크게 달라지는 사례가 반복되며, 보",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210074",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-14-https://www.aitimes.com/news/articleView.html?idxno=210071",
+      "title": "국민성장펀드, 업스테이지에 5600억 투자...\"소버린 AI 개발 지원\"",
+      "summary": "국민성장펀드가 AI 업스테이지에 직접 투자를 진행했다.국민성장펀드 기금운용심의회는 지난달 30일 AI 파운데이션 모델 개발(업스테이지)를 포함한 총 5건의 직접 투자 및 인프라 투융자, 대출 건 등을 승인했다고 밝혔다.특히, ‘소버린 AI 확보를 위한 차세대 AI 모델 개발’ 사업을 위해 업스테이지에 총 5600억원을 직접 투자하는 안건을 승인했다고 밝혔다",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210071",
+      "category": "인프라·하드웨어",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=210067",
+      "title": "우버 \"모빌리티 넘어 AI·데이터·여행 플랫폼으로 대폭 확장\"",
+      "summary": "우버가 차량 호출 서비스를 넘어, 데이터와 여행, AI까지 아우르는 ‘슈퍼 앱’ 전략을 추진한다. 우버는 지난주 뉴욕에서 열린 ‘고겟(Go-Get)’ 행사를 통해 자율주행 데이터 플랫폼 구축부터 호텔 예약, AI 기반 기능까지 사업 영역을 빠르게 확장하고 있다고 발표했다.우선 주목되는 것은 자율주행 생태계를 겨냥한 데이터 전략이다. 우버는 장기적으로 일반 ",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210067",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=210060",
+      "title": "\"코딩 에이전트의 치명적 삭제 사고 복구\"…재발 방지 대책 발표",
+      "summary": "'클로드 코드' 기반 AI 코딩 에이전트의 오작동으로 핵심 데이터베이스가 삭제됐던 사고가 데이터 전면 복구로 일단락됐다. 문제의 원인이었던 클라우드 서비스 제공업체는 사고 재발을 막기 위한 대대적인 시스템 개편에 나섰다.톰스하드웨어에 따르면, 클라우드 플랫폼 레일웨이(Railway)는 29일(현지시간) AI 코딩 에이전트가 오작동으로 삭제한 핵심 업무 데이",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210060",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=210066",
+      "title": "모레, 텐스토렌트 시스템의 LLM 추론 성능 입증…\"GPU 중심 인프라 대체\"",
+      "summary": "AI 인프라 전문 모레(대표 조강원)는 텐스토렌트의 '갤럭시 웜홀(Galaxy Wormhole)' 시스템에 ‘모아이(MoAI) 추론 프레임워크’를 적용, 대형언어모델(LLM) 추론 성능을 입증했다고 4일 밝혔다.모레는 'GPT-OSS' '큐원' 'GLM' '딥시크' 등 최신 전문가 혼합(MoE) 모델을 테스트한 결과, 텐스토렌트 갤럭시 웜홀 시스템에서 엔비",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210066",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=210057",
+      "title": "카카오, 찾아가는 'AI 시니어 디지털 스쿨' 운영 확대",
+      "summary": "카카오의 기업재단인 카카오 임팩트재단(이사장 류석영)은 '2026 찾아가는 시니어 디지털 스쿨'을 통해 전국 시니어를 대상으로 디지털 교육을 본격화한다고 4일 밝혔다.찾아가는 시니어 디지털 스쿨은 카카오 그룹의 ESG 프로그램이다. 2024년부터 한국노인종합복지관협회·시니어금융교육협의회와 연계해 현장 출강과 맞춤형 교재·키트 무상 지원을 이어오고 있다. 현",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210057",
+      "category": "투자·기업",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=210064",
+      "title": "네이버, 플러스스토어 앱 ‘선물 에이전트’ 탑재…”가정의 달 선물 손쉽게 탐색”",
+      "summary": "네이버(대표 최수연)는 가정의 달을 맞이해 네이버플러스 스토어 앱 'AI 쇼핑 에이전트'에 선물 추천 특화 기능 '선물 에이전트'를 탑재했다고 4일 밝혔다. 선물 에이전트는 사용자가 AI 쇼핑 에이전트와 자연스러운 일상 대화를 하면서 최적의 선물을 발견할 수 있도록 돕는다.사용자들은 네이버플러스 스토어 홈에서 검색어를 입력하지 않아도 선물 에이전트가 먼저 ",
+      "date": "2026-05-04",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=210064",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=210056",
       "title": "농업과 태양광의 공존…미국서 소 방목 병행 ‘농업형 태양광’ 상용화",
       "summary": "미국 테네시주에서 소가 태양광 패널 아래를 자유롭게 이동하며 방목되는 상업용 태양광발전소가 가동에 들어갔다.일렉트렉은 1일(현지시간) 미국 내슈빌 기반 개발사 실리콘 랜치(Silicon Ranch)가 테네시주 크리스티아나 솔라 랜치에 '캐틀트래커(CattleTracker)' 시스템을 상업적으로 처음 적용했다고 보도했다.태양광이 농지를 대체하는 대신, 전력 ",
       "date": "2026-05-04",
@@ -23,7 +191,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=210049",
+      "id": "aitimes-23-https://www.aitimes.com/news/articleView.html?idxno=210049",
       "title": "AI로 정책 소외 계층 해소… GIST, 형평성 높이는 ‘맞춤형 보건 정책’ 설계",
       "summary": "광주과학기술원(GIST) 연구진이 AI 시뮬레이션을 활용해 고령층 건강 캠페인의 효과를 높이는 정책 설계 방안을 제시했다. 같은 예산을 쓰더라도, 여러 매체에 분산하기보다 대상 집단에 맞춰 집중 배분하는 전략이 참여율과 형평성을 함께 높인다는 분석이다.GIST(총장 임기철)는 AI정책전략대학원 공득조 교수 연구팀이 고령층 예방 보건 캠페인의 매체 배분 전략",
       "date": "2026-05-04",
@@ -35,7 +203,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=210044",
+      "id": "aitimes-24-https://www.aitimes.com/news/articleView.html?idxno=210044",
       "title": "구글, AI 음성 비서 겨냥한 '제미나이 플래시'·'옴니' 모델 테스트 중",
       "summary": "구글이 2주 뒤에 열릴 'I/O' 개발자 컨퍼런스를 앞두고 새로운 모델과 앱 디자인 공개를 준비 중이라는 정황이 포착됐다. 차세대 플래그십 모델은 발견되지 않았으나, 'AI 음성 비서' 시장에서 주도권을 잡기 위한 라인업이 대거 포함됐다.3일(현지시간) 테스팅 카탈로그 등에 따르면, 구글은 새로운 '제미나이 플래시' 모델을 LM아레나에서 테스트 중이다.이름",
       "date": "2026-05-04",
@@ -47,7 +215,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=210040",
+      "id": "aitimes-25-https://www.aitimes.com/news/articleView.html?idxno=210040",
       "title": "뉴럴링크, '디지털' 넘어 '물리적 제어' 성공...마비 환자 드론 조종까지",
       "summary": "뉴럴링크의 뇌-컴퓨터 인터페이스(BCI) 기술이 디지털 공간을 넘어 현실 세계로 확장됐다. 칩을 이식받은 환자가 생각만으로 로봇 팔을 움직이고 드론을 조종할 수 있게 됐다. 뉴럴링크 임플란트의 두번째 시술자인 알렉스 콘리는 최근 케이티 파블리치 투나잇과의 단독 인터뷰에서 뇌에 칩을 이식한 후 로봇 손으로 물건을 만들고 생각만으로 드론을 조종할 수 있게 된 ",
       "date": "2026-05-03",
@@ -59,7 +227,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=210039",
+      "id": "aitimes-26-https://www.aitimes.com/news/articleView.html?idxno=210039",
       "title": "JAL, 하네다 공항에 유니트리 휴머노이드 투입...인력난 정면 돌파",
       "summary": "일본항공(JAL)이 만성적인 인력 부족에 대응하기 위해 도쿄 하네다 공항에서 지상 업무에 휴머노이드 로봇을 시험 투입하기 시작했다.JAL은 5월부터 수하물 적재와 객실 청소와 같은 작업에 로봇을 시범 운영하기 위해 GMO AI & 로보틱스와 협력한다고 발표했다.이번 계획은 일본 항공 업계가 증가하는 관광 수요와 고령화로 인한 인력 감소로 어려움을 겪고 있는",
       "date": "2026-05-03",
@@ -71,7 +239,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=210028",
+      "id": "aitimes-27-https://www.aitimes.com/news/articleView.html?idxno=210028",
       "title": "'AI 교육' 프리윌린이 우간다로 간 이유는...\"진정성에 기술을 더하다\"",
       "summary": "“프리윌린은 ‘모든 선생님이 더 나은 교육을 제공하고, 모든 학생이 더 나은 교육을 누리는 세상’을 만들겠다는 비전으로 시작했습니다. 이후 수년간 국내에서 빠르게 성장해 왔지만, 시간이 흐를수록 더 큰 질문이 생겼습니다. ‘우리가 세상에 기여할 수 있는 것은 과연 여기까지일까’라고 말이죠.”AI 교육 솔루션 전문 프리윌린(대표 권기성)은 우간다 굴루(Gul",
       "date": "2026-05-03",
@@ -80,102 +248,6 @@
       "sourceFlag": "🇰🇷",
       "url": "https://www.aitimes.com/news/articleView.html?idxno=210028",
       "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=210038",
-      "title": "\"딱딱한 담당자 같던 말투 벗어나\"... GPT-5.5, '4o'의 매력 되찾나",
-      "summary": "오픈AI의 최신 모델 'GPT-5.5'가 'GPT-4o'의 매력을 되찾았다는 반응이 등장했다. 일부 사용자는 이전에 출시됐던 모델들의 사무적인 말투에서 벗어나기 시작했다고 평가했다.1일(현지시간) 비즈니스 인사이더에 따르면, 레딧의 챗GPT 관련 커뮤니티에서는 최근 GPT-5.5를 칭찬하는 사용자 글이 잇달아 올라오고 있다.한 사용자는 \"GPT-5.5를 제",
-      "date": "2026-05-03",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210038",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=210037",
-      "title": "1X, 미국 공장 가동...\"연내 가정용 휴머노이드 1만대 생산\"",
-      "summary": "노르웨이 로봇 스타트업 1X 테크놀로지가 미국 캘리포니아에 신규 공장을 열고 가정용 휴머노이드 로봇 대량생산에 나섰다. 특히 올해 1만대 생산이 목표로, 중국 기업에 맞서는 서구의 대표 주자로 자리매김할 예정이다. 1X는 30일(현지시간) 최근 미국 캘리포니아 헤이워드에 5만8000제곱피트(약 1만7700㎡) 규모의 생산 시설을 구축했으며, 올해 최대 1만",
-      "date": "2026-05-03",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210037",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-8-https://www.aitimes.com/news/articleView.html?idxno=210036",
-      "title": "중국 전기차 시장, 가격 경쟁 넘어 ‘AI 경쟁’으로 확대",
-      "summary": "세계 최대 전기차 시장인 중국에서 완성차 업체들이 치열한 가격 경쟁을 넘어 차량 내 AI 기능 경쟁으로 무게 중심을 옮기고 있다. CNBC에 따르면, 1일 열린 베이징 모터쇼에서는 이러한 변화가 뚜렷하게 드러났다.바이트댄스의 AI 비서 ‘더우바오(Doubao)’는 이미 50개 이상의 자동차 브랜드, 145개 차종, 700만대 이상의 차량에 탑재된 것으로 나",
-      "date": "2026-05-03",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210036",
-      "category": "로봇·자율주행",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-9-https://www.aitimes.com/news/articleView.html?idxno=210034",
-      "title": "오픈AI, 코덱스에 ‘AI 펫’ 깜짝 도입...“코딩에 감성 UX 입힌다”",
-      "summary": "오픈AI가 코딩 AI 도구인 코덱스(Codex)에 ‘펫(Pets)’ 기능을 도입하며 개발자 인터페이스에 색다른 변화를 시도했다. 작은 애니메이션 캐릭터를 통해 작업 상태를 직관적으로 전달하는 이번 기능은 생산성과 감성적 요소를 결합한 새로운 UX 실험으로 주목받고 있다. 오픈AI는 1일(현지시간) 코덱스에 ‘펫’ 기능을 추가했다. 이번에 도입된 펫 기능은 ",
-      "date": "2026-05-03",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210034",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=210033",
-      "title": "컴퓨팅 확보 비상 걸린 앤트로픽, 영국 칩 신예와 파트너십 검토",
-      "summary": "AI 수요 급증으로 서버 부담이 커지는 앤트로픽이 기존 공급망을 넘어 새로운 AI 칩 확보에 나섰다. 추론(inference) 비용 절감과 공급망 다변화를 위해 영국 칩 스타트업과의 협력을 적극 검토하고 있다.1일(현지시간) 디 인포메이션에 따르면, 앤트로픽은 최근 영국 스타트업 프랙타일(Fractile)과 차세대 추론용 칩 도입을 논의 중인 것으로 전해졌",
-      "date": "2026-05-03",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210033",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-11-https://www.aitimes.com/news/articleView.html?idxno=210035",
-      "title": "\"비전은 알트먼, 질서는 프라이어\"...IPO 앞둔 오픈AI CFO가 부각되는 이유",
-      "summary": "사라 프라이어 최고 재무책임자(CFO)가 오픈AI 기업공개(IPO)의 열쇠를 쥔 핵심 인물로 주목받고 있다. 샘 알트먼 CEO의 속도전을 억제하고 내실을 다지는 데 성공할지가 회사의 미래를 결정지을 것이라는 평이다.월스트리트 저널(WSJ)은 1일(현지시간) '오픈AI가 IPO를 원한다면 먼저 CFO를 설득해야 한다'라며, 프라이어가 직면한 도전과 알트먼과의",
-      "date": "2026-05-03",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210035",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=210032",
-      "title": "중국 법원, AI 도입 이유로 직원 해고한 기업에 '위법' 판결",
-      "summary": "중국 법원이 AI 도입을 이유로 직원을 해고하는 것은 위법이라는 판단을 내리며, 급속한 기술 경쟁 속에서도 고용 안정을 우선시하려는 정책 기조를 분명히 했다.블룸버그에 따르면, 지난 4월28일 중국 저장성 항저우 중급인민법원은 동부 지역의 한 기술 기업이 직원 저우를 부당하게 해고했다는 판결을 확정했다.해고된 저우는 대형언어모델(LLM)의 출력 정확성을 검",
-      "date": "2026-05-03",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210032",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=210011",
-      "title": "[양현상 칼럼]  석유에서 반도체로, ‘융합혁명’이 바꾸는 패권의 질서",
-      "summary": "과거 세계 질서를 규정했던 것은 언제나 '안보 자산'의 소유 여부였다. 생존과 직결된 소금과 철에서 시작해 지난 세기를 지배한 석유에 이르기까지, 핵심 자원의 공급망을 장악한 집단이 패권을 쥐어왔다. 그러나 2015년 셰일 혁명 이후 미국의 전략적 우선순위가 석유에서 반도체로 급격히 이동하며, 우리는 '페트로 달러(Petro-Dollar)'가 저물고 '세미",
-      "date": "2026-05-03",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210011",
-      "category": "인프라·하드웨어",
       "lang": "ko"
     },
     {
@@ -201,78 +273,6 @@
       "url": "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/",
       "category": "모델 출시",
       "lang": "en"
-    },
-    {
-      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=210031",
-      "title": "\"챗GPT 이미지 2.0 글로벌 초기 반응 미미\"...국내에서는 \"폭발적\"",
-      "summary": "오픈AI의 새로운 이미지 모델에 대한 반응이 지난해에는 못 미치는 것으로 나타났다. 국내와 인도 및 일부 신흥 시장에서는 챗GPT 다운로드에 크게 기여했지만, 세계적인 반응은 완만하다는 분석이다.테크크런치는 30일(현지시간) 센서 타워와 시밀러웹 데이터를 인용, 지난 21일 출시된 '챗GPT 이미지 2.0'의 반응이 세계적으로 엇갈렸다고 보도했다.오픈AI는",
-      "date": "2026-05-02",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210031",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=210030",
-      "title": "메타 \"AI 투자로 인건비 줄여야 해\"...추가 해고·업무량 폭증 예고",
-      "summary": "전 직원의 20% 해고설이 확산하는 가운데, 메타가 직원들에게 추가 해고 가능성을 시인했다. 나아가 AI 도입으로 업무량이 늘어날 것을 예고했다. 월스트리트 저널과 비즈니스 인사이더 등에 따르면, 자넬 게일 메타 최고 인사책임자는 30일(현지시간) 열린 내부 회의에서 직원들에게 \"더 이상 해고는 없다고 말하고 싶지만, 실현 불가능한 것은 말할 수 없다\"라고",
-      "date": "2026-05-02",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210030",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=210029",
-      "title": "달파 “에이전트로 마케팅 효율 극대화… 커머스 운영 패러다임 바꾼다”",
-      "summary": "AI 전문 달파(대표 김도균)는 소비재 브랜드 기업을 중심으로 에이전트가 핵심 운영 주체인 ‘에이전트 네이티브 브랜드’ 체제를 지원하겠다고 2일 밝혔다.달파는 30일 포스코타워 역삼 이벤트홀에서 ‘2026 소비자 브랜드 AX 서밋’을 개최하고 AI 에이전트를 활용한 초격차 전략을 소개했다. 김도균 달파 대표는 우선 “우리는 창업 이후 누적 300개 이상 기",
-      "date": "2026-05-02",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210029",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=210020",
-      "title": "오픈AI 버전 '랄프 루프' 등장...코덱스 CLI에 ‘자율 목표’ 기능 추가",
-      "summary": "오픈AI가 목표가 달성될 때까지 '코덱스(Codex)'가 스스로 코딩 작업을 이어가는 기능을 추가했다. 이른바 ‘랄프 루프(Ralph loop)’로 불리는 방식으로, 사람이 중간에 지속적으로 지시하지 않아도 AI가 며칠에 걸쳐 작업을 이어갈 수 있다.오픈AI는 1일(현지시간) 개발자용 코딩 도구 코덱스 CLI에 장기 목표를 자율적으로 수행하는 ‘목표(/go",
-      "date": "2026-05-02",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210020",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=210027",
-      "title": "[기고] 한국딥러닝 \" 금융 AI 실체는 데이터 저장(DX)이 아니라 인지적 자동화(AX)의 완성도에 있다\"",
-      "summary": "■ 전산화의 허상과 데이터 사막: 금융권이 직면한 운영의 임계점오늘날 금융권이 추진해온 디지털 전환(DX)은 일종의 기술적 착시를 일으키고 있습니다. 종이 문서를 단순히 PDF나 이미지 파일로 바꾸는 전산화 과정은 ‘기록 보존’ 측면에서는 유효했으나, 실제 업무 현장에서는 비정형 데이터라는 거대한 '디지털 쓰레기'를 쌓아두는 결과를 초래하기도 했습니다. 데",
-      "date": "2026-05-02",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210027",
-      "category": "멀티모달",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-23-https://www.aitimes.com/news/articleView.html?idxno=210019",
-      "title": "화웨이, 엔비디아 중국 공백 틈타 AI 칩 판매 60% 증가 예상",
-      "summary": "화웨이가 중국 AI 칩 시장에서 급부상하며 올해 최대 점유율을 확보할 것으로 전망됐다. 중국 기업들의 ‘탈엔비디아’ 움직임이 본격화하면서, 화웨이의 AI 칩 매출은 지난해에 비해 최소 60% 증가할 것으로 예상됐다.1일(현지시간) 파이낸셜 타임스에 따르면, 화웨이는 올해 AI 칩 매출이 약 120억달러(약 17조원)에 이를 것으로 보고 있다. 이는 2025",
-      "date": "2026-05-02",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=210019",
-      "category": "인프라·하드웨어",
-      "lang": "ko"
     },
     {
       "id": "tc-2-https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/",
@@ -709,18 +709,18 @@
   ],
   "github": [
     {
-      "id": "gh-1147094660",
-      "title": "HKUDS/nanobot — \"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\"",
-      "summary": "\"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "id": "gh-1024554267",
+      "title": "NousResearch/hermes-agent — The agent that grows with you",
+      "summary": "The agent that grows with you",
       "date": "2026-05-04",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/HKUDS/nanobot",
+      "url": "https://github.com/NousResearch/hermes-agent",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 41580,
+      "stars": 131740,
       "language": "Python",
       "tags": [
         "ai",
@@ -728,50 +728,6 @@
         "ai-agents",
         "anthropic",
         "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-614765452",
-      "title": "Significant-Gravitas/AutoGPT — AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "date": "2026-05-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 183965,
-      "language": "Python",
-      "tags": [
-        "agentic-ai",
-        "agents",
-        "ai",
-        "artificial-intelligence",
-        "autonomous-agents"
-      ]
-    },
-    {
-      "id": "gh-979115477",
-      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "date": "2026-05-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/bytedance/deer-flow",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 64627,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "agentic",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
       ]
     },
     {
@@ -786,7 +742,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 23531,
+      "stars": 23541,
       "language": "TypeScript",
       "tags": [
         "agents",
@@ -797,69 +753,134 @@
       ]
     },
     {
-      "id": "gh-575865240",
-      "title": "AstrBotDevs/AstrBot — AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "summary": "AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "id": "gh-817326197",
+      "title": "screenpipe/screenpipe — Run agents that work based on what you do. 24/7 local screen & mic recording for the superintelligence era",
+      "summary": "Run agents that work based on what you do. 24/7 local screen & mic recording for the superintelligence era",
       "date": "2026-05-04",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/AstrBotDevs/AstrBot",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 31253,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "chatbot",
-        "chatgpt",
-        "discord"
-      ]
-    },
-    {
-      "id": "gh-828119367",
-      "title": "yamadashy/repomix — 📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
-      "summary": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
-      "date": "2026-05-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/yamadashy/repomix",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 24299,
-      "language": "TypeScript",
-      "tags": [
-        "ai",
-        "anthropic",
-        "artificial-intelligence",
-        "chatbot",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "summary": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "date": "2026-05-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
+      "url": "https://github.com/screenpipe/screenpipe",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 75992,
+      "stars": 18506,
+      "language": "Rust",
+      "tags": [
+        "agents",
+        "agi",
+        "ai",
+        "computer-vision",
+        "llm"
+      ]
+    },
+    {
+      "id": "gh-979115477",
+      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "date": "2026-05-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/bytedance/deer-flow",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 64666,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-615869301",
+      "title": "mudler/LocalAI — LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "summary": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "date": "2026-05-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/mudler/LocalAI",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 46037,
+      "language": "Go",
+      "tags": [
+        "agents",
+        "ai",
+        "api",
+        "audio-generation",
+        "decentralized"
+      ]
+    },
+    {
+      "id": "gh-614765452",
+      "title": "Significant-Gravitas/AutoGPT — AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "date": "2026-05-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 183972,
+      "language": "Python",
+      "tags": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "autonomous-agents"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Autonomous agents for everyone",
+      "summary": "Autonomous agents for everyone",
+      "date": "2026-05-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 18291,
       "language": "TypeScript",
       "tags": [
         "agent",
-        "agent-collaboration",
-        "agent-harness",
+        "agentic",
         "ai",
-        "chatgpt"
+        "autonomous",
+        "chatbot"
+      ]
+    },
+    {
+      "id": "gh-1123338559",
+      "title": "vercel-labs/open-agents — An open source template for building cloud agents.",
+      "summary": "An open source template for building cloud agents.",
+      "date": "2026-05-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/vercel-labs/open-agents",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 4365,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agents",
+        "ai",
+        "background-agents"
       ]
     },
     {
@@ -874,7 +895,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 4582,
+      "stars": 4633,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -896,7 +917,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 4689,
+      "stars": 4690,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -904,28 +925,6 @@
         "autonomous-agents",
         "cli",
         "coding-assistant"
-      ]
-    },
-    {
-      "id": "gh-1053598893",
-      "title": "looplj/axonhub — ⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
-      "summary": "⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
-      "date": "2026-05-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/looplj/axonhub",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3542,
-      "language": "Go",
-      "tags": [
-        "agent",
-        "agents",
-        "ai",
-        "anthropic",
-        "anthropic-api"
       ]
     }
   ]

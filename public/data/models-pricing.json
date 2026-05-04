@@ -24,6 +24,18 @@
     "maxTokens": 131072
   },
   {
+    "id": "mistralai/mistral-medium-3-5",
+    "name": "Mistral: Mistral Medium 3.5",
+    "provider": "MISTRALAI",
+    "input": 1.5,
+    "output": 7.5,
+    "context": "262K",
+    "description": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex...",
+    "createdAt": 1777570439,
+    "modalities": "text+image->text",
+    "maxTokens": null
+  },
+  {
     "id": "~anthropic/claude-haiku-latest",
     "name": "Anthropic Claude Haiku Latest",
     "provider": "~ANTHROPIC",

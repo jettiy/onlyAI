@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-05-05T14:12:05.288Z",
-  "updatedAtKST": "2026. 5. 5. PM 11:12:05",
+  "updatedAt": "2026-05-05T19:43:38.077Z",
+  "updatedAtKST": "2026. 5. 6. AM 4:43:38",
   "stats": {
     "aitimes": 20,
     "36kr": 11,
     "hf": 20,
-    "tc": 17,
-    "github": 8,
-    "total": 65
+    "tc": 18,
+    "github": 10,
+    "total": 68
   },
   "news": [
     {
@@ -191,9 +191,81 @@
       "lang": "ko"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/05/05/copilotkit-raises-27m-to-help-devs-deploy-app-native-ai-agents/",
+      "id": "tc-0-https://techcrunch.com/2026/05/05/pennsylvania-sues-character-ai-after-a-chatbot-allegedly-posed-as-a-doctor/",
+      "title": "Pennsylvania sues Character.AI after a chatbot allegedly posed as a doctor",
+      "summary": "According to Pennsylvania's filing, a Character.AI chatbot presented itself as a licensed psychiatrist during a state investigation, and also fabricated a serial number for its state medical license.",
+      "date": "2026-05-05",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/05/pennsylvania-sues-character-ai-after-a-chatbot-allegedly-posed-as-a-doctor/",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
+      "title": "OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT",
+      "summary": "The company said the model reduces hallucination in sensitive areas such as law, medicine, and finance, while maintaining the low latency of its predecessor.",
+      "date": "2026-05-05",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
+      "title": "PayPal says it&#8217;s &#8216;becoming a technology company again&#8217; — that means AI",
+      "summary": "PayPal is pitching an AI-led turnaround, tying automation and restructuring to $1.5 billion in savings as it cuts jobs and works to modernize its tech stack.",
+      "date": "2026-05-05",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
+      "category": "투자·기업",
+      "lang": "en"
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/05/05/etsy-launches-its-app-within-chatgpt-as-it-continues-its-ai-push/",
+      "title": "Etsy launches its app within ChatGPT as it continues its AI push",
+      "summary": "Etsy's new native app within ChatGPT aims to be a conversational  shopping experience for users.",
+      "date": "2026-05-05",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/05/etsy-launches-its-app-within-chatgpt-as-it-continues-its-ai-push/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/05/05/meta-will-use-ai-to-analyze-height-and-bone-structure-to-identify-if-users-are-underage/",
+      "title": "Meta will use AI to analyze height and bone structure to identify if users are underage",
+      "summary": "The visual analysis system is now operating in select countries, but Meta says it's working toward a broader rollout.",
+      "date": "2026-05-05",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/05/meta-will-use-ai-to-analyze-height-and-bone-structure-to-identify-if-users-are-underage/",
+      "category": "개발 도구",
+      "lang": "en"
+    },
+    {
+      "id": "tc-5-https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/",
+      "title": "ElevenLabs lists BlackRock, Jamie Foxx, and Eva Longoria as new investors",
+      "summary": "ElevenLabs reveals new investors, hits $500M ARR, and expands enterprise footprint as voice AI becomes a critical interface.",
+      "date": "2026-05-05",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/",
+      "category": "로봇·자율주행",
+      "lang": "en"
+    },
+    {
+      "id": "tc-6-https://techcrunch.com/2026/05/05/copilotkit-raises-27m-to-help-devs-deploy-app-native-ai-agents/",
       "title": "CopilotKit raises $27M to help devs deploy app-native AI agents",
-      "summary": "The Seattle-based startup's Series A round was led by Glilot Capital, NFX and SignalFire, TechCrunch has exclusively learned.",
+      "summary": "The Seattle-based startup's Series A round was led by Glilot Capital, NFX, and SignalFire, TechCrunch has exclusively learned.",
       "date": "2026-05-05",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -203,7 +275,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/05/05/indias-first-genai-unicorn-shifts-to-cloud-services-as-ai-model-ambitions-face-reality/",
+      "id": "tc-8-https://techcrunch.com/2026/05/05/indias-first-genai-unicorn-shifts-to-cloud-services-as-ai-model-ambitions-face-reality/",
       "title": "India&#8217;s first GenAI unicorn shifts to cloud services as AI model ambitions face reality",
       "summary": "Krutrim's pivot to cloud after layoffs and limited product updates reflects the economic challenges of building AI models in India.",
       "date": "2026-05-05",
@@ -215,7 +287,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/05/04/as-workers-worry-about-ai-nvidias-jensen-huang-says-ai-is-creating-an-enormous-number-of-jobs/",
+      "id": "tc-9-https://techcrunch.com/2026/05/04/as-workers-worry-about-ai-nvidias-jensen-huang-says-ai-is-creating-an-enormous-number-of-jobs/",
       "title": "As workers worry about AI, Nvidia&#8217;s Jensen Huang says AI is &#8216;creating an enormous number of jobs&#8217;",
       "summary": "The Nvidia CEO seems to feel that claims of AI's job-killing potential have been greatly exaggerated.",
       "date": "2026-05-05",
@@ -287,7 +359,7 @@
       "lang": "ko"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/05/04/openais-cozy-partner-cerebras-is-on-track-for-a-blockbuster-ipo/",
+      "id": "tc-10-https://techcrunch.com/2026/05/04/openais-cozy-partner-cerebras-is-on-track-for-a-blockbuster-ipo/",
       "title": "OpenAI&#8217;s cozy partner Cerebras is on track for a blockbuster IPO",
       "summary": "AI chip maker Cerebras is heading for a blockbuster IPO that could value it at $26.6 billion or more. Its relationship with OpenAI is deep and rich.",
       "date": "2026-05-04",
@@ -299,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/",
+      "id": "tc-11-https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/",
       "title": "Image AI models now drive app growth, beating chatbot upgrades",
       "summary": "Appfigures finds visual model launches generate 6.5x more downloads — but most don’t convert that spike into revenue.",
       "date": "2026-05-04",
@@ -311,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/05/04/elon-musks-only-expert-witness-at-the-openai-trial-fears-an-agi-arms-race/",
+      "id": "tc-12-https://techcrunch.com/2026/05/04/elon-musks-only-expert-witness-at-the-openai-trial-fears-an-agi-arms-race/",
       "title": "Elon Musk&#8217;s only AI expert witness at the OpenAI trial fears an AGI arms race",
       "summary": "Stuart Russell is a long-time AI researcher who thinks governments need to restrain frontier labs.",
       "date": "2026-05-04",
@@ -323,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+      "id": "tc-13-https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
       "title": "Sierra raises $950M as the race to own enterprise AI gets serious",
       "summary": "The raise gives Sierra more than $1 billion to work with — capital the company says it will use to become the \"global standard\" for AI-powered customer experiences.",
       "date": "2026-05-04",
@@ -335,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/05/04/elon-musk-sent-ominous-texts-to-greg-brockman-sam-altman-after-asking-for-a-settlement-openai-claims/",
+      "id": "tc-14-https://techcrunch.com/2026/05/04/elon-musk-sent-ominous-texts-to-greg-brockman-sam-altman-after-asking-for-a-settlement-openai-claims/",
       "title": "Elon Musk sent ominous texts to Greg Brockman, Sam Altman after asking for a settlement, OpenAI claims",
       "summary": "Musk texted OpenAI's president and co-founder saying that he and CEO Sam Altman \"will be the most hated men in America\" if OpenAI doesn't settle the suit.",
       "date": "2026-05-04",
@@ -347,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/",
+      "id": "tc-15-https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/",
       "title": "Anthropic and OpenAI are both launching joint ventures for enterprise AI services",
       "summary": "Both Anthropic and OpenAI have partnered with asset managers to more aggressively market their enterprise AI products.",
       "date": "2026-05-04",
@@ -359,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/05/04/doordash-adds-ai-tools-to-speed-up-merchant-onboarding-edit-photos-of-dishes/",
+      "id": "tc-17-https://techcrunch.com/2026/05/04/doordash-adds-ai-tools-to-speed-up-merchant-onboarding-edit-photos-of-dishes/",
       "title": "DoorDash adds AI tools to speed up merchant onboarding, edit photos of dishes",
       "summary": "DoorDash on Monday added new AI-powered tools that let merchants speed up onboarding, edit photos to make dishes look better, and create new websites from existing content.",
       "date": "2026-05-04",
@@ -371,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/05/03/this-is-fine-creator-says-ai-startup-stole-his-art/",
+      "id": "tc-18-https://techcrunch.com/2026/05/03/this-is-fine-creator-says-ai-startup-stole-his-art/",
       "title": "‘This is fine’ creator says AI startup stole his art",
       "summary": "The ad comes from Artisan, the AI startup behind billboards urging businesses to \"stop hiring humans.\"",
       "date": "2026-05-03",
@@ -383,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/",
+      "id": "tc-19-https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/",
       "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
       "summary": "A new study examines how large language models perform in a variety of medical contexts, including real emergency room cases — where at least one model seemed to be more accurate than human doctors.",
       "date": "2026-05-03",
@@ -391,66 +463,6 @@
       "sourceLang": "en",
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-14-https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/",
-      "title": "AI-generated actors and scripts are now ineligible for Oscars",
-      "summary": "The Academy of Motion Picture Arts and Sciences said that only performances “credited in the film’s legal billing and demonstrably performed by humans with their consent” will be eligible for Academy ",
-      "date": "2026-05-02",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/",
-      "category": "로봇·자율주행",
-      "lang": "en"
-    },
-    {
-      "id": "tc-15-https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/",
-      "title": "The best AI dictation apps, tested and ranked",
-      "summary": "AI-powered dictation apps are useful for replying to emails, taking notes, and even coding through your voice",
-      "date": "2026-05-02",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/",
-      "category": "벤치마크",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/",
-      "title": "Meta buys robotics startup to bolster its humanoid AI ambitions",
-      "summary": "Meta bought humanoid startup Assured Robot Intelligence to beef up its AI models for robots, the company said.",
-      "date": "2026-05-01",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/podcast/did-you-know-you-cant-steal-a-charity-dont-worry-elon-musk-will-remind-you/",
-      "title": "Did you know you can&#8217;t steal a charity? Don&#8217;t worry. Elon Musk will remind you.",
-      "summary": "Elon Musk spent the better part of three days on the witness stand this week in his lawsuit against OpenAI, and it&#8217;s already getting messy. Emails, texts, and his own tweets are surfacing in cou",
-      "date": "2026-05-01",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/podcast/did-you-know-you-cant-steal-a-charity-dont-worry-elon-musk-will-remind-you/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
-      "title": "Pentagon inks deals with Nvidia, Microsoft, and AWS to deploy AI on classified networks",
-      "summary": "The deals come as the DOD has doubled down on diversifying its exposure to AI vendors in the wake of its controversial dispute with Anthropic over usage terms of its AI models.",
-      "date": "2026-05-01",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
       "category": "모델 출시",
       "lang": "en"
     },
@@ -697,179 +709,223 @@
   ],
   "github": [
     {
-      "id": "gh-1131513930",
-      "title": "ZhuLinsen/daily_stock_analysis — LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
-      "summary": "LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
+      "id": "gh-764723738",
+      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
+      "summary": "Automate browser based workflows with AI",
       "date": "2026-05-05",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 34058,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "aigc",
-        "gemini",
-        "llm"
-      ]
-    },
-    {
-      "id": "gh-828119367",
-      "title": "yamadashy/repomix — 📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
-      "summary": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
-      "date": "2026-05-05",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/yamadashy/repomix",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 24359,
-      "language": "TypeScript",
-      "tags": [
-        "ai",
-        "anthropic",
-        "artificial-intelligence",
-        "chatbot",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
-      "date": "2026-05-05",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
+      "url": "https://github.com/Skyvern-AI/skyvern",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 140149,
-      "language": "TypeScript",
+      "stars": 21504,
+      "language": "Python",
       "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
+        "ai",
+        "api",
+        "automation",
+        "browser",
+        "browser-automation"
       ]
     },
     {
-      "id": "gh-829640443",
-      "title": "tensorzero/tensorzero — TensorZero is an open-source LLMOps platform that unifies an LLM gateway, observability, evaluation, optimization, and experimentation.",
-      "summary": "TensorZero is an open-source LLMOps platform that unifies an LLM gateway, observability, evaluation, optimization, and experimentation.",
+      "id": "gh-1024554267",
+      "title": "NousResearch/hermes-agent — The agent that grows with you",
+      "summary": "The agent that grows with you",
       "date": "2026-05-05",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/tensorzero/tensorzero",
-      "category": "모델 출시",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 11313,
-      "language": "Rust",
+      "stars": 133968,
+      "language": "Python",
       "tags": [
         "ai",
-        "ai-engineering",
+        "ai-agent",
+        "ai-agents",
         "anthropic",
-        "artificial-intelligence",
-        "deep-learning"
-      ]
-    },
-    {
-      "id": "gh-73964895",
-      "title": "botpress/botpress — The open-source hub to build & deploy GPT/LLM Agents ⚡️",
-      "summary": "The open-source hub to build & deploy GPT/LLM Agents ⚡️",
-      "date": "2026-05-05",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/botpress/botpress",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 14670,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "ai",
-        "botpress",
-        "chatbot",
         "chatgpt"
       ]
     },
     {
-      "id": "gh-286301447",
-      "title": "neuml/txtai — 💡 All-in-one AI framework for semantic search, LLM orchestration and language model workflows",
-      "summary": "💡 All-in-one AI framework for semantic search, LLM orchestration and language model workflows",
+      "id": "gh-1025381911",
+      "title": "MemoriLabs/Memori — Memori is agent-native memory infrastructure. A LLM-agnostic layer that turns agent execution and conversation into structured, persistent state for production systems.",
+      "summary": "Memori is agent-native memory infrastructure. A LLM-agnostic layer that turns agent execution and conversation into structured, persistent state for production systems.",
       "date": "2026-05-05",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/neuml/txtai",
+      "url": "https://github.com/MemoriLabs/Memori",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 12464,
+      "stars": 14068,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agent-memory",
+        "ai",
+        "ai-memory",
+        "aiagent"
+      ]
+    },
+    {
+      "id": "gh-676672661",
+      "title": "langchain-ai/langgraph — Build resilient language agents as graphs. Available in TypeScript!",
+      "summary": "Build resilient language agents as graphs. Available in TypeScript!",
+      "date": "2026-05-05",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 31244,
       "language": "Python",
       "tags": [
         "agents",
         "ai",
         "ai-agents",
-        "embeddings",
-        "information-retrieval"
+        "chatgpt",
+        "deepagents"
       ]
     },
     {
-      "id": "gh-944080744",
-      "title": "pipeshub-ai/pipeshub-ai — PipesHub is a fully extensible and explainable workplace AI platform for enterprise search and workflow automation",
-      "summary": "PipesHub is a fully extensible and explainable workplace AI platform for enterprise search and workflow automation",
+      "id": "gh-839037098",
+      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
       "date": "2026-05-05",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/pipeshub-ai/pipeshub-ai",
+      "url": "https://github.com/mastra-ai/mastra",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 2863,
+      "stars": 23593,
+      "language": "TypeScript",
+      "tags": [
+        "agents",
+        "ai",
+        "chatbots",
+        "evals",
+        "javascript"
+      ]
+    },
+    {
+      "id": "gh-633262635",
+      "title": "onyx-dot-app/onyx — Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "date": "2026-05-05",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/onyx-dot-app/onyx",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 28976,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-chat",
+        "chatgpt",
+        "chatui",
+        "enterprise-search"
+      ]
+    },
+    {
+      "id": "gh-622569125",
+      "title": "taishi-i/awesome-ChatGPT-repositories — A curated list of resources dedicated to open source GitHub repositories related to ChatGPT, OpenAI API, and Codex",
+      "summary": "A curated list of resources dedicated to open source GitHub repositories related to ChatGPT, OpenAI API, and Codex",
+      "date": "2026-05-05",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/taishi-i/awesome-ChatGPT-repositories",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 2991,
       "language": "Python",
       "tags": [
         "agent",
-        "agents",
         "ai",
-        "drive",
-        "glean"
+        "awesome",
+        "awesome-list",
+        "chatgpt"
       ]
     },
     {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "summary": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Autonomous agents for everyone",
+      "summary": "Autonomous agents for everyone",
       "date": "2026-05-05",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
+      "url": "https://github.com/elizaOS/eliza",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 76052,
+      "stars": 18304,
       "language": "TypeScript",
       "tags": [
         "agent",
-        "agent-collaboration",
-        "agent-harness",
+        "agentic",
         "ai",
-        "chatgpt"
+        "autonomous",
+        "chatbot"
+      ]
+    },
+    {
+      "id": "gh-958830659",
+      "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "date": "2026-05-05",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/google/adk-python",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19443,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "agents-sdk"
+      ]
+    },
+    {
+      "id": "gh-1156956890",
+      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
+      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
+      "date": "2026-05-05",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 31036,
+      "language": "Rust",
+      "tags": [
+        "agent",
+        "agentic",
+        "ai",
+        "infra",
+        "ml"
       ]
     }
   ]

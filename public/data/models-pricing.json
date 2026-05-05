@@ -2997,7 +2997,7 @@
     "description": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rap",
     "createdAt": 1740422110,
     "modalities": "text+image+file->text",
-    "maxTokens": 128000
+    "maxTokens": 64000
   },
   {
     "id": "anthropic/claude-3.7-sonnet:thinking",

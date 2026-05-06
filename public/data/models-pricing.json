@@ -820,12 +820,12 @@
     "name": "Z.ai: GLM 5",
     "provider": "Z-AI",
     "input": 0.6,
-    "output": 2.08,
+    "output": 1.92,
     "context": "203K",
     "description": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on l",
     "createdAt": 1770829182,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": null
   },
   {
     "id": "qwen/qwen3-max-thinking",

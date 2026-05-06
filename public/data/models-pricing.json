@@ -87,13 +87,13 @@
     "id": "~moonshotai/kimi-latest",
     "name": "MoonshotAI Kimi Latest",
     "provider": "~MOONSHOTAI",
-    "input": 0.74,
-    "output": 3.49,
+    "input": 0.75,
+    "output": 3.5,
     "context": "262K",
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "createdAt": 1777318428,
     "modalities": "text+image->text",
-    "maxTokens": 262142
+    "maxTokens": 16384
   },
   {
     "id": "~google/gemini-flash-latest",
@@ -303,13 +303,13 @@
     "id": "moonshotai/kimi-k2.6",
     "name": "MoonshotAI: Kimi K2.6",
     "provider": "MOONSHOTAI",
-    "input": 0.74,
-    "output": 3.49,
+    "input": 0.75,
+    "output": 3.5,
     "context": "262K",
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks",
     "createdAt": 1776699402,
     "modalities": "text+image->text",
-    "maxTokens": 262142
+    "maxTokens": 16384
   },
   {
     "id": "anthropic/claude-opus-4.7",
@@ -855,7 +855,7 @@
     "id": "qwen/qwen3-coder-next",
     "name": "Qwen: Qwen3 Coder Next",
     "provider": "QWEN",
-    "input": 0.12,
+    "input": 0.11,
     "output": 0.7999999999999999,
     "context": "262K",
     "description": "Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per...",
@@ -3552,16 +3552,16 @@
     "maxTokens": 32768
   },
   {
-    "id": "meta-llama/llama-3.2-3b-instruct",
-    "name": "Meta: Llama 3.2 3B Instruct",
+    "id": "meta-llama/llama-3.2-11b-vision-instruct",
+    "name": "Meta: Llama 3.2 11B Vision Instruct",
     "provider": "META-LLAMA",
-    "input": 0.051,
-    "output": 0.33999999999999997,
-    "context": "80K",
-    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with ",
+    "input": 0.245,
+    "output": 0.245,
+    "context": "131K",
+    "description": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and...",
     "createdAt": 1727222400,
-    "modalities": "text->text",
-    "maxTokens": null
+    "modalities": "text+image->text",
+    "maxTokens": 16384
   },
   {
     "id": "meta-llama/llama-3.2-1b-instruct",
@@ -3576,16 +3576,16 @@
     "maxTokens": null
   },
   {
-    "id": "meta-llama/llama-3.2-11b-vision-instruct",
-    "name": "Meta: Llama 3.2 11B Vision Instruct",
+    "id": "meta-llama/llama-3.2-3b-instruct",
+    "name": "Meta: Llama 3.2 3B Instruct",
     "provider": "META-LLAMA",
-    "input": 0.245,
-    "output": 0.245,
-    "context": "131K",
-    "description": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and...",
+    "input": 0.051,
+    "output": 0.33999999999999997,
+    "context": "80K",
+    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with ",
     "createdAt": 1727222400,
-    "modalities": "text+image->text",
-    "maxTokens": 16384
+    "modalities": "text->text",
+    "maxTokens": null
   },
   {
     "id": "qwen/qwen-2.5-72b-instruct",
@@ -3600,18 +3600,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "cohere/command-r-plus-08-2024",
-    "name": "Cohere: Command R+ (08-2024)",
-    "provider": "COHERE",
-    "input": 2.5,
-    "output": 10,
-    "context": "128K",
-    "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while ",
-    "createdAt": 1724976000,
-    "modalities": "text->text",
-    "maxTokens": 4000
-  },
-  {
     "id": "cohere/command-r-08-2024",
     "name": "Cohere: Command R (08-2024)",
     "provider": "COHERE",
@@ -3619,6 +3607,18 @@
     "output": 0.6,
     "context": "128K",
     "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at ",
+    "createdAt": 1724976000,
+    "modalities": "text->text",
+    "maxTokens": 4000
+  },
+  {
+    "id": "cohere/command-r-plus-08-2024",
+    "name": "Cohere: Command R+ (08-2024)",
+    "provider": "COHERE",
+    "input": 2.5,
+    "output": 10,
+    "context": "128K",
+    "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while ",
     "createdAt": 1724976000,
     "modalities": "text->text",
     "maxTokens": 4000
@@ -3684,18 +3684,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "meta-llama/llama-3.1-8b-instruct",
-    "name": "Meta: Llama 3.1 8B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.02,
-    "output": 0.049999999999999996,
-    "context": "16K",
-    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
-    "createdAt": 1721692800,
-    "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
     "id": "meta-llama/llama-3.1-70b-instruct",
     "name": "Meta: Llama 3.1 70B Instruct",
     "provider": "META-LLAMA",
@@ -3703,6 +3691,18 @@
     "output": 0.39999999999999997,
     "context": "131K",
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
+    "createdAt": 1721692800,
+    "modalities": "text->text",
+    "maxTokens": 16384
+  },
+  {
+    "id": "meta-llama/llama-3.1-8b-instruct",
+    "name": "Meta: Llama 3.1 8B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.02,
+    "output": 0.049999999999999996,
+    "context": "16K",
+    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
     "createdAt": 1721692800,
     "modalities": "text->text",
     "maxTokens": 16384
@@ -3720,8 +3720,8 @@
     "maxTokens": null
   },
   {
-    "id": "openai/gpt-4o-mini-2024-07-18",
-    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+    "id": "openai/gpt-4o-mini",
+    "name": "OpenAI: GPT-4o-mini",
     "provider": "OPENAI",
     "input": 0.15,
     "output": 0.6,
@@ -3732,8 +3732,8 @@
     "maxTokens": 16384
   },
   {
-    "id": "openai/gpt-4o-mini",
-    "name": "OpenAI: GPT-4o-mini",
+    "id": "openai/gpt-4o-mini-2024-07-18",
+    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
     "provider": "OPENAI",
     "input": 0.15,
     "output": 0.6,
@@ -3804,18 +3804,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "meta-llama/llama-3-8b-instruct",
-    "name": "Meta: Llama 3 8B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.03,
-    "output": 0.04,
-    "context": "8K",
-    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
-    "createdAt": 1713398400,
-    "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
     "id": "meta-llama/llama-3-70b-instruct",
     "name": "Meta: Llama 3 70B Instruct",
     "provider": "META-LLAMA",
@@ -3826,6 +3814,18 @@
     "createdAt": 1713398400,
     "modalities": "text->text",
     "maxTokens": 8000
+  },
+  {
+    "id": "meta-llama/llama-3-8b-instruct",
+    "name": "Meta: Llama 3 8B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.03,
+    "output": 0.04,
+    "context": "8K",
+    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
+    "createdAt": 1713398400,
+    "modalities": "text->text",
+    "maxTokens": 16384
   },
   {
     "id": "mistralai/mixtral-8x22b-instruct",
@@ -4020,13 +4020,13 @@
     "maxTokens": 4096
   },
   {
-    "id": "openai/gpt-4-0314",
-    "name": "OpenAI: GPT-4 (older v0314)",
+    "id": "openai/gpt-3.5-turbo",
+    "name": "OpenAI: GPT-3.5 Turbo",
     "provider": "OPENAI",
-    "input": 30,
-    "output": 60,
-    "context": "8K",
-    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
+    "input": 0.5,
+    "output": 1.5,
+    "context": "16K",
+    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
     "createdAt": 1685232000,
     "modalities": "text->text",
     "maxTokens": 4096
@@ -4044,13 +4044,13 @@
     "maxTokens": 4096
   },
   {
-    "id": "openai/gpt-3.5-turbo",
-    "name": "OpenAI: GPT-3.5 Turbo",
+    "id": "openai/gpt-4-0314",
+    "name": "OpenAI: GPT-4 (older v0314)",
     "provider": "OPENAI",
-    "input": 0.5,
-    "output": 1.5,
-    "context": "16K",
-    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "input": 30,
+    "output": 60,
+    "context": "8K",
+    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
     "createdAt": 1685232000,
     "modalities": "text->text",
     "maxTokens": 4096

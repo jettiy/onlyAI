@@ -240,6 +240,18 @@
     "maxTokens": 384000
   },
   {
+    "id": "inclusionai/ling-2.6-1t",
+    "name": "inclusionAI: Ling-2.6-1T",
+    "provider": "INCLUSIONAI",
+    "input": 0.3,
+    "output": 2.5,
+    "context": "262K",
+    "description": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company’s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale. It u",
+    "createdAt": 1776948238,
+    "modalities": "text->text",
+    "maxTokens": 32768
+  },
+  {
     "id": "xiaomi/mimo-v2.5-pro",
     "name": "Xiaomi: MiMo-V2.5-Pro",
     "provider": "XIAOMI",

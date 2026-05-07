@@ -663,13 +663,13 @@
     "id": "qwen/qwen3.5-35b-a3b",
     "name": "Qwen: Qwen3.5-35B-A3B",
     "provider": "QWEN",
-    "input": 0.15,
+    "input": 0.14,
     "output": 1,
     "context": "262K",
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inf",
     "createdAt": 1772053822,
     "modalities": "text+image+video->text",
-    "maxTokens": 262144
+    "maxTokens": 81920
   },
   {
     "id": "qwen/qwen3.5-27b",

@@ -1047,13 +1047,13 @@
     "id": "z-ai/glm-4.7",
     "name": "Z.ai: GLM 4.7",
     "provider": "Z-AI",
-    "input": 0.38,
-    "output": 1.74,
+    "input": 0.39999999999999997,
+    "output": 1.75,
     "context": "203K",
     "description": "GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements",
     "createdAt": 1766378014,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 131072
   },
   {
     "id": "google/gemini-3-flash-preview",

@@ -1071,8 +1071,8 @@
     "id": "xiaomi/mimo-v2-flash",
     "name": "Xiaomi: MiMo-V2-Flash",
     "provider": "XIAOMI",
-    "input": 0.09,
-    "output": 0.29,
+    "input": 0.09999999999999999,
+    "output": 0.3,
     "context": "262K",
     "description": "MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi. It is a Mixture-of-Experts model with 309B total parameters and 15B active parameters, adopting hybrid attention architec",
     "createdAt": 1765731308,
@@ -2352,18 +2352,6 @@
     "maxTokens": 131072
   },
   {
-    "id": "tngtech/deepseek-r1t2-chimera",
-    "name": "TNG: DeepSeek R1T2 Chimera",
-    "provider": "TNGTECH",
-    "input": 0.3,
-    "output": 1.1,
-    "context": "164K",
-    "description": "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tech. It is a 671 B-parameter mixture-of-experts text-generation model assembled from DeepSeek-AI’s R1-0528, R1, and V3-0324 c",
-    "createdAt": 1751986985,
-    "modalities": "text->text",
-    "maxTokens": 163840
-  },
-  {
     "id": "morph/morph-v3-large",
     "name": "Morph: Morph V3 Large",
     "provider": "MORPH",
@@ -2680,12 +2668,12 @@
     "name": "Qwen: Qwen3 32B",
     "provider": "QWEN",
     "input": 0.08,
-    "output": 0.24,
+    "output": 0.28,
     "context": "41K",
     "description": "Qwen3-32B is a dense 32.8B parameter causal language model from the Qwen3 series, optimized for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode ",
     "createdAt": 1745875945,
     "modalities": "text->text",
-    "maxTokens": 40960
+    "maxTokens": 16384
   },
   {
     "id": "qwen/qwen3-235b-a22b",

@@ -507,13 +507,13 @@
     "id": "minimax/minimax-m2.7",
     "name": "MiniMax: MiniMax M2.7",
     "provider": "MINIMAX",
-    "input": 0.3,
+    "input": 0.29900000000000004,
     "output": 1.2,
     "context": "197K",
     "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates ",
     "createdAt": 1773836697,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 131072
   },
   {
     "id": "openai/gpt-5.4-nano",
@@ -3504,18 +3504,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "nvidia/llama-3.1-nemotron-70b-instruct",
-    "name": "NVIDIA: Llama 3.1 Nemotron 70B Instruct",
-    "provider": "NVIDIA",
-    "input": 1.2,
-    "output": 1.2,
-    "context": "131K",
-    "description": "NVIDIA's Llama 3.1 Nemotron 70B is a language model designed for generating precise and useful responses. Leveraging [Llama 3.1 70B](/models/meta-llama/llama-3.1-70b-instruct) architecture and Reinfor",
-    "createdAt": 1728950400,
-    "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
     "id": "inflection/inflection-3-productivity",
     "name": "Inflection: Inflection 3 Productivity",
     "provider": "INFLECTION",
@@ -3910,18 +3898,6 @@
     "createdAt": 1706140800,
     "modalities": "text->text",
     "maxTokens": 4096
-  },
-  {
-    "id": "mistralai/mixtral-8x7b-instruct",
-    "name": "Mistral: Mixtral 8x7B Instruct",
-    "provider": "MISTRALAI",
-    "input": 0.54,
-    "output": 0.54,
-    "context": "33K",
-    "description": "Mixtral 8x7B Instruct is a pretrained generative Sparse Mixture of Experts, by Mistral AI, for chat and instruction use. Incorporates 8 experts (feed-forward networks) for a total of 47 billion...",
-    "createdAt": 1702166400,
-    "modalities": "text->text",
-    "maxTokens": 16384
   },
   {
     "id": "alpindale/goliath-120b",

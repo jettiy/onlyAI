@@ -264,6 +264,18 @@
     "maxTokens": 32768
   },
   {
+    "id": "tencent/hy3-preview",
+    "name": "Tencent: Hy3 preview",
+    "provider": "TENCENT",
+    "input": 0.06599999999999999,
+    "output": 0.26,
+    "context": "262K",
+    "description": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes",
+    "createdAt": 1776878150,
+    "modalities": "text->text",
+    "maxTokens": 262144
+  },
+  {
     "id": "xiaomi/mimo-v2.5-pro",
     "name": "Xiaomi: MiMo-V2.5-Pro",
     "provider": "XIAOMI",
@@ -273,7 +285,7 @@
     "description": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as C",
     "createdAt": 1776874273,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": 16384
   },
   {
     "id": "xiaomi/mimo-v2.5",

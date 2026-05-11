@@ -927,13 +927,13 @@
     "id": "moonshotai/kimi-k2.5",
     "name": "MoonshotAI: Kimi K2.5",
     "provider": "MOONSHOTAI",
-    "input": 0.44,
-    "output": 2,
+    "input": 0.39999999999999997,
+    "output": 1.9800000000000002,
     "context": "262K",
     "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over appr",
     "createdAt": 1769487076,
     "modalities": "text+image->text",
-    "maxTokens": 65535
+    "maxTokens": 262144
   },
   {
     "id": "upstage/solar-pro-3",
@@ -3010,30 +3010,6 @@
     "createdAt": 1740506212,
     "modalities": "text+image+file+audio+video->text",
     "maxTokens": 8192
-  },
-  {
-    "id": "anthropic/claude-3.7-sonnet",
-    "name": "Anthropic: Claude 3.7 Sonnet",
-    "provider": "ANTHROPIC",
-    "input": 3,
-    "output": 15,
-    "context": "200K",
-    "description": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rap",
-    "createdAt": 1740422110,
-    "modalities": "text+image+file->text",
-    "maxTokens": 64000
-  },
-  {
-    "id": "anthropic/claude-3.7-sonnet:thinking",
-    "name": "Anthropic: Claude 3.7 Sonnet (thinking)",
-    "provider": "ANTHROPIC",
-    "input": 3,
-    "output": 15,
-    "context": "200K",
-    "description": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rap",
-    "createdAt": 1740422110,
-    "modalities": "text+image+file->text",
-    "maxTokens": 64000
   },
   {
     "id": "mistralai/mistral-saba",

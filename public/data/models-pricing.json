@@ -1995,13 +1995,13 @@
     "id": "deepseek/deepseek-chat-v3.1",
     "name": "DeepSeek: DeepSeek V3.1",
     "provider": "DEEPSEEK",
-    "input": 0.15,
-    "output": 0.75,
-    "context": "33K",
+    "input": 0.21,
+    "output": 0.7899999999999999,
+    "context": "164K",
     "description": "DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes via prompt templates. It extends the DeepSeek-V3 base with a two-phase ",
     "createdAt": 1755779628,
     "modalities": "text->text",
-    "maxTokens": 7168
+    "maxTokens": 32768
   },
   {
     "id": "openai/gpt-4o-audio-preview",
@@ -3874,18 +3874,6 @@
     "createdAt": 1706140800,
     "modalities": "text->text",
     "maxTokens": 4096
-  },
-  {
-    "id": "alpindale/goliath-120b",
-    "name": "Goliath 120B",
-    "provider": "ALPINDALE",
-    "input": 3.75,
-    "output": 7.5,
-    "context": "6K",
-    "description": "A large LLM created by combining two fine-tuned Llama 70B models into one 120B model. Combines Xwin and Euryale. Credits to - [@chargoddard](https://huggingface.co/chargoddard) for developing the fram",
-    "createdAt": 1699574400,
-    "modalities": "text->text",
-    "maxTokens": 1024
   },
   {
     "id": "openai/gpt-4-1106-preview",

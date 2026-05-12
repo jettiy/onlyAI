@@ -68,7 +68,7 @@
     "context": "200K",
     "description": "This model always redirects to the latest model in the Anthropic Claude Haiku family.",
     "createdAt": 1777318492,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": 64000
   },
   {
@@ -128,7 +128,7 @@
     "context": "1M",
     "description": "This model always redirects to the latest model in the Anthropic Claude Sonnet family.",
     "createdAt": 1777318368,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": 128000
   },
   {
@@ -332,7 +332,7 @@
     "context": "1M",
     "description": "This model always redirects to the latest model in the Claude Opus family.",
     "createdAt": 1776795361,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": 128000
   },
   {
@@ -356,7 +356,7 @@
     "context": "1M",
     "description": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on..",
     "createdAt": 1776351100,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": 128000
   },
   {
@@ -368,7 +368,7 @@
     "context": "1M",
     "description": "Fast-mode variant of [Opus 4.6](/anthropic/claude-opus-4.6) - identical capabilities with higher output speed at premium 6x pricing.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/e",
     "createdAt": 1775592472,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": 128000
   },
   {
@@ -812,7 +812,7 @@
     "context": "1M",
     "description": "Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, ",
     "createdAt": 1771342990,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": 128000
   },
   {
@@ -884,7 +884,7 @@
     "context": "1M",
     "description": "Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially eff",
     "createdAt": 1770219050,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": 128000
   },
   {
@@ -1556,7 +1556,7 @@
     "context": "200K",
     "description": "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s perfor",
     "createdAt": 1760547638,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": 64000
   },
   {

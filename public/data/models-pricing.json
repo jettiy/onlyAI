@@ -399,13 +399,13 @@
     "id": "z-ai/glm-5.1",
     "name": "Z.ai: GLM 5.1",
     "provider": "Z-AI",
-    "input": 0.98,
-    "output": 3.08,
+    "input": 1.0499999999999998,
+    "output": 3.5,
     "context": "203K",
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work ",
     "createdAt": 1775578025,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 65535
   },
   {
     "id": "google/gemma-4-26b-a4b-it",

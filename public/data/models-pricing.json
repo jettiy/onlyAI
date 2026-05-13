@@ -267,13 +267,13 @@
     "id": "deepseek/deepseek-v4-flash",
     "name": "DeepSeek: DeepSeek V4 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.14,
-    "output": 0.28,
+    "input": 0.126,
+    "output": 0.252,
     "context": "1M",
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa",
     "createdAt": 1777000666,
     "modalities": "text->text",
-    "maxTokens": 384000
+    "maxTokens": 131072
   },
   {
     "id": "inclusionai/ling-2.6-1t",

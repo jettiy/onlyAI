@@ -1719,13 +1719,13 @@
     "id": "z-ai/glm-4.6",
     "name": "Z.ai: GLM 4.6",
     "provider": "Z-AI",
-    "input": 0.39,
-    "output": 1.9,
-    "context": "205K",
+    "input": 0.43,
+    "output": 1.74,
+    "context": "203K",
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex.",
     "createdAt": 1759235576,
     "modalities": "text->text",
-    "maxTokens": 204800
+    "maxTokens": 131072
   },
   {
     "id": "anthropic/claude-sonnet-4.5",
@@ -1959,8 +1959,8 @@
     "id": "moonshotai/kimi-k2-0905",
     "name": "MoonshotAI: Kimi K2 0905",
     "provider": "MOONSHOTAI",
-    "input": 0.39999999999999997,
-    "output": 2,
+    "input": 0.6,
+    "output": 2.5,
     "context": "262K",
     "description": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters ",
     "createdAt": 1757021147,

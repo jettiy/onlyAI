@@ -279,13 +279,13 @@
     "id": "deepseek/deepseek-v4-flash",
     "name": "DeepSeek: DeepSeek V4 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.126,
-    "output": 0.252,
+    "input": 0.112,
+    "output": 0.224,
     "context": "1M",
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa",
     "createdAt": 1777000666,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": null
   },
   {
     "id": "inclusionai/ling-2.6-1t",
@@ -1404,18 +1404,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "x-ai/grok-4.1-fast",
-    "name": "xAI: Grok 4.1 Fast",
-    "provider": "X-AI",
-    "input": 0.19999999999999998,
-    "output": 0.5,
-    "context": "2M",
-    "description": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window. Reasoning can be enabled/disabled using...",
-    "createdAt": 1763587502,
-    "modalities": "text+image+file->text",
-    "maxTokens": 30000
-  },
-  {
     "id": "deepcogito/cogito-v2.1-671b",
     "name": "Deep Cogito: Cogito v2.1 671B",
     "provider": "DEEPCOGITO",
@@ -1884,18 +1872,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "x-ai/grok-4-fast",
-    "name": "xAI: Grok 4 Fast",
-    "provider": "X-AI",
-    "input": 0.19999999999999998,
-    "output": 0.5,
-    "context": "2M",
-    "description": "Grok 4 Fast is xAI's latest multimodal model with SOTA cost-efficiency and a 2M token context window. It comes in two flavors: non-reasoning and reasoning. Read more about the model...",
-    "createdAt": 1758240090,
-    "modalities": "text+image+file->text",
-    "maxTokens": 30000
-  },
-  {
     "id": "alibaba/tongyi-deepresearch-30b-a3b",
     "name": "Tongyi DeepResearch 30B A3B",
     "provider": "ALIBABA",
@@ -2002,18 +1978,6 @@
     "createdAt": 1756399192,
     "modalities": "text->text",
     "maxTokens": 131072
-  },
-  {
-    "id": "x-ai/grok-code-fast-1",
-    "name": "xAI: Grok Code Fast 1",
-    "provider": "X-AI",
-    "input": 0.19999999999999998,
-    "output": 1.5,
-    "context": "256K",
-    "description": "Grok Code Fast 1 is a speedy and economical reasoning model that excels at agentic coding. With reasoning traces visible in the response, developers can steer Grok Code for high-quality...",
-    "createdAt": 1756238927,
-    "modalities": "text->text",
-    "maxTokens": 10000
   },
   {
     "id": "nousresearch/hermes-4-70b",
@@ -2388,18 +2352,6 @@
     "maxTokens": null
   },
   {
-    "id": "x-ai/grok-4",
-    "name": "xAI: Grok 4",
-    "provider": "X-AI",
-    "input": 3,
-    "output": 15,
-    "context": "256K",
-    "description": "Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not...",
-    "createdAt": 1752087689,
-    "modalities": "text+image+file->text",
-    "maxTokens": null
-  },
-  {
     "id": "tencent/hunyuan-a13b-instruct",
     "name": "Tencent: Hunyuan A13B Instruct",
     "provider": "TENCENT",
@@ -2518,30 +2470,6 @@
     "createdAt": 1749598352,
     "modalities": "text+image+file->text",
     "maxTokens": 100000
-  },
-  {
-    "id": "x-ai/grok-3-mini",
-    "name": "xAI: Grok 3 Mini",
-    "provider": "X-AI",
-    "input": 0.3,
-    "output": 0.5,
-    "context": "131K",
-    "description": "A lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.",
-    "createdAt": 1749583245,
-    "modalities": "text->text",
-    "maxTokens": null
-  },
-  {
-    "id": "x-ai/grok-3",
-    "name": "xAI: Grok 3",
-    "provider": "X-AI",
-    "input": 3,
-    "output": 15,
-    "context": "131K",
-    "description": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in...",
-    "createdAt": 1749582908,
-    "modalities": "text->text",
-    "maxTokens": null
   },
   {
     "id": "google/gemini-2.5-pro-preview",

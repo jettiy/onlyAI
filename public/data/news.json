@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-16T03:42:18.587Z",
-  "updatedAtKST": "2026. 5. 16. PM 12:42:18",
+  "updatedAt": "2026-05-16T08:11:34.394Z",
+  "updatedAtKST": "2026. 5. 16. PM 5:11:34",
   "stats": {
     "aitimes": 20,
-    "36kr": 11,
+    "36kr": 15,
     "hf": 20,
     "tc": 19,
     "github": 10,
@@ -732,13 +732,35 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 152200,
+      "stars": 152476,
       "language": "Python",
       "tags": [
         "ai",
         "ai-agent",
         "ai-agents",
         "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-828119367",
+      "title": "yamadashy/repomix — 📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "summary": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "date": "2026-05-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/yamadashy/repomix",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 24912,
+      "language": "TypeScript",
+      "tags": [
+        "ai",
+        "anthropic",
+        "artificial-intelligence",
+        "chatbot",
         "chatgpt"
       ]
     },
@@ -754,7 +776,7 @@
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 7292,
+      "stars": 7294,
       "language": "Rust",
       "tags": [
         "agent",
@@ -765,156 +787,68 @@
       ]
     },
     {
-      "id": "gh-793795224",
-      "title": "genkit-ai/genkit — Open-source framework for building AI-powered apps in JavaScript, Go, and Python, built and used in production by Google",
-      "summary": "Open-source framework for building AI-powered apps in JavaScript, Go, and Python, built and used in production by Google",
+      "id": "gh-1033778670",
+      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
+      "summary": "Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
       "date": "2026-05-16",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/genkit-ai/genkit",
-      "category": "오픈소스",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 5944,
+      "stars": 25269,
       "language": "TypeScript",
       "tags": [
-        "agents",
+        "acp",
+        "agent-team",
         "ai",
-        "embedders",
-        "genkit",
-        "llm"
+        "ai-agent",
+        "chat"
       ]
     },
     {
-      "id": "gh-946380199",
-      "title": "openai/openai-agents-python — A lightweight, powerful framework for multi-agent workflows",
-      "summary": "A lightweight, powerful framework for multi-agent workflows",
+      "id": "gh-656099147",
+      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
+      "summary": "Universal memory layer for AI Agents",
       "date": "2026-05-16",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/openai/openai-agents-python",
+      "url": "https://github.com/mem0ai/mem0",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 26339,
-      "language": "Python",
-      "tags": [
-        "agents",
-        "ai",
-        "framework",
-        "llm",
-        "openai"
-      ]
-    },
-    {
-      "id": "gh-552661142",
-      "title": "langchain-ai/langchain — The agent engineering platform.",
-      "summary": "The agent engineering platform.",
-      "date": "2026-05-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langchain-ai/langchain",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 136835,
+      "stars": 55825,
       "language": "Python",
       "tags": [
         "agents",
         "ai",
         "ai-agents",
+        "application",
+        "chatbots"
+      ]
+    },
+    {
+      "id": "gh-1147094660",
+      "title": "HKUDS/nanobot — \"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "summary": "\"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "date": "2026-05-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/HKUDS/nanobot",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 42558,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
         "anthropic",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
-      "date": "2026-05-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 141525,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-826170402",
-      "title": "elizaOS/eliza — Autonomous agents for everyone",
-      "summary": "Autonomous agents for everyone",
-      "date": "2026-05-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/elizaOS/eliza",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 18377,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agentic",
-        "ai",
-        "autonomous",
-        "chatbot"
-      ]
-    },
-    {
-      "id": "gh-1156956890",
-      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
-      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
-      "date": "2026-05-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/zeroclaw-labs/zeroclaw",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 31369,
-      "language": "Rust",
-      "tags": [
-        "agent",
-        "agentic",
-        "ai",
-        "infra",
-        "ml"
-      ]
-    },
-    {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "summary": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
-      "date": "2026-05-16",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 77140,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-collaboration",
-        "agent-harness",
-        "ai",
         "chatgpt"
       ]
     },
@@ -930,7 +864,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 3092,
+      "stars": 3097,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -938,6 +872,72 @@
         "ai",
         "claude",
         "claude-code"
+      ]
+    },
+    {
+      "id": "gh-948839453",
+      "title": "AAswordman/Operit — The most powerful AI agent and AI chat software on Android/Operit是一款Android上能力最为强大、发展最久的AI Agent",
+      "summary": "The most powerful AI agent and AI chat software on Android/Operit是一款Android上能力最为强大、发展最久的AI Agent",
+      "date": "2026-05-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/AAswordman/Operit",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 4630,
+      "language": "Kotlin",
+      "tags": [
+        "agent",
+        "ai",
+        "android",
+        "compose",
+        "kotlin"
+      ]
+    },
+    {
+      "id": "gh-643445235",
+      "title": "lobehub/lobehub — The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+      "summary": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+      "date": "2026-05-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/lobehub/lobehub",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 77145,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-collaboration",
+        "agent-harness",
+        "ai",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Autonomous agents for everyone",
+      "summary": "Autonomous agents for everyone",
+      "date": "2026-05-16",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 18378,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agentic",
+        "ai",
+        "autonomous",
+        "chatbot"
       ]
     }
   ]

@@ -435,13 +435,13 @@
     "id": "google/gemma-4-26b-a4b-it",
     "name": "Google: Gemma 4 26B A4B ",
     "provider": "GOOGLE",
-    "input": 0.07,
-    "output": 0.33999999999999997,
+    "input": 0.06,
+    "output": 0.33,
     "context": "262K",
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual",
     "createdAt": 1775227989,
     "modalities": "text+image+video->text",
-    "maxTokens": 16384
+    "maxTokens": null
   },
   {
     "id": "google/gemma-4-31b-it",
@@ -627,13 +627,13 @@
     "id": "nvidia/nemotron-3-super-120b-a12b",
     "name": "NVIDIA: Nemotron 3 Super",
     "provider": "NVIDIA",
-    "input": 0.09999999999999999,
-    "output": 0.5,
+    "input": 0.09,
+    "output": 0.44999999999999996,
     "context": "1M",
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mam",
     "createdAt": 1773245239,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": null
   },
   {
     "id": "bytedance-seed/seed-2.0-lite",
@@ -2140,12 +2140,12 @@
     "name": "OpenAI: gpt-oss-120b",
     "provider": "OPENAI",
     "input": 0.039,
-    "output": 0.19,
+    "output": 0.18,
     "context": "131K",
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B par",
     "createdAt": 1754414231,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": null
   },
   {
     "id": "openai/gpt-oss-20b",
@@ -3580,12 +3580,12 @@
     "name": "Mistral: Mistral Nemo",
     "provider": "MISTRALAI",
     "input": 0.02,
-    "output": 0.04,
+    "output": 0.03,
     "context": "131K",
     "description": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chine",
     "createdAt": 1721347200,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": null
   },
   {
     "id": "openai/gpt-4o-mini-2024-07-18",

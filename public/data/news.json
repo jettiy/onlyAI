@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-05-19T09:57:39.126Z",
-  "updatedAtKST": "2026. 5. 19. PM 6:57:39",
+  "updatedAt": "2026-05-19T15:38:33.593Z",
+  "updatedAtKST": "2026. 5. 20. AM 12:38:33",
   "stats": {
     "aitimes": 20,
-    "36kr": 15,
+    "36kr": 10,
     "hf": 20,
     "tc": 18,
-    "github": 10,
-    "total": 68
+    "github": 11,
+    "total": 69
   },
   "news": [
     {
@@ -251,7 +251,7 @@
       "lang": "ko"
     },
     {
-      "id": "hf-0-https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
+      "id": "hf-1-https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
       "title": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation",
       "summary": "",
       "date": "2026-05-18",
@@ -263,7 +263,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-1-https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
+      "id": "hf-2-https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
       "title": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
       "summary": "",
       "date": "2026-05-18",
@@ -275,7 +275,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-2-https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
+      "id": "hf-3-https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
       "title": "The Open Agent Leaderboard",
       "summary": "",
       "date": "2026-05-18",
@@ -479,7 +479,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-3-https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
+      "id": "hf-4-https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
       "title": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality",
       "summary": "",
       "date": "2026-05-14",
@@ -515,7 +515,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-5-https://huggingface.co/blog/amazon/foundation-model-building-blocks",
+      "id": "hf-6-https://huggingface.co/blog/amazon/foundation-model-building-blocks",
       "title": "Building Blocks for Foundation Model Training and Inference on AWS",
       "summary": "",
       "date": "2026-05-11",
@@ -527,7 +527,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-6-https://huggingface.co/blog/allenai/emo",
+      "id": "hf-7-https://huggingface.co/blog/allenai/emo",
       "title": "EMO: Pretraining mixture of experts for emergent modularity",
       "summary": "",
       "date": "2026-05-08",
@@ -539,7 +539,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-7-https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
+      "id": "hf-8-https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
       "title": "vLLM V0 to V1: Correctness Before Corrections in RL",
       "summary": "",
       "date": "2026-05-06",
@@ -551,7 +551,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-9-https://huggingface.co/blog/ibm-granite/granite-4-1",
+      "id": "hf-10-https://huggingface.co/blog/ibm-granite/granite-4-1",
       "title": "Granite 4.1 LLMs: How They’re Built",
       "summary": "",
       "date": "2026-04-29",
@@ -563,7 +563,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-10-https://huggingface.co/blog/inference-providers-deepinfra",
+      "id": "hf-11-https://huggingface.co/blog/inference-providers-deepinfra",
       "title": "DeepInfra on Hugging Face Inference Providers 🔥",
       "summary": "",
       "date": "2026-04-29",
@@ -575,7 +575,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-11-https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+      "id": "hf-12-https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
       "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
       "summary": "",
       "date": "2026-04-28",
@@ -587,7 +587,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-12-https://huggingface.co/blog/openai-privacy-filter-web-apps",
+      "id": "hf-13-https://huggingface.co/blog/openai-privacy-filter-web-apps",
       "title": "How to build scalable web apps with OpenAI's Privacy Filter",
       "summary": "",
       "date": "2026-04-27",
@@ -599,7 +599,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-13-https://huggingface.co/blog/deepseekv4",
+      "id": "hf-14-https://huggingface.co/blog/deepseekv4",
       "title": "DeepSeek-V4: a million-token context that agents can actually use",
       "summary": "",
       "date": "2026-04-24",
@@ -611,7 +611,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-14-https://huggingface.co/blog/transformersjs-chrome-extension",
+      "id": "hf-15-https://huggingface.co/blog/transformersjs-chrome-extension",
       "title": "How to Use Transformers.js in a Chrome Extension",
       "summary": "",
       "date": "2026-04-23",
@@ -623,7 +623,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-15-https://huggingface.co/blog/tiiuae/qimma-arabic-leaderboard",
+      "id": "hf-16-https://huggingface.co/blog/tiiuae/qimma-arabic-leaderboard",
       "title": "QIMMA قِمّة ⛰: A Quality-First Arabic LLM Leaderboard",
       "summary": "",
       "date": "2026-04-21",
@@ -635,7 +635,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-16-https://huggingface.co/blog/cybersecurity-openness",
+      "id": "hf-17-https://huggingface.co/blog/cybersecurity-openness",
       "title": "AI and the Future of Cybersecurity: Why Openness Matters",
       "summary": "",
       "date": "2026-04-21",
@@ -647,7 +647,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-17-https://huggingface.co/blog/ecom-rlve",
+      "id": "hf-18-https://huggingface.co/blog/ecom-rlve",
       "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
       "summary": "",
       "date": "2026-04-16",
@@ -659,7 +659,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-19-https://huggingface.co/blog/train-multimodal-sentence-transformers",
+      "id": "hf-20-https://huggingface.co/blog/train-multimodal-sentence-transformers",
       "title": "Training and Finetuning Multimodal Embedding & Reranker Models with Sentence Transformers",
       "summary": "",
       "date": "2026-04-16",
@@ -671,7 +671,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-20-https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+      "id": "hf-21-https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
       "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
       "summary": "",
       "date": "2026-04-15",
@@ -683,7 +683,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-21-https://huggingface.co/blog/Hcompany/holotab",
+      "id": "hf-22-https://huggingface.co/blog/Hcompany/holotab",
       "title": "Meet HoloTab by HCompany. Your AI browser companion.",
       "summary": "",
       "date": "2026-04-15",
@@ -695,7 +695,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-23-https://huggingface.co/blog/multimodal-sentence-transformers",
+      "id": "hf-24-https://huggingface.co/blog/multimodal-sentence-transformers",
       "title": "Multimodal Embedding & Reranker Models with Sentence Transformers",
       "summary": "",
       "date": "2026-04-09",
@@ -709,25 +709,113 @@
   ],
   "github": [
     {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
+      "id": "gh-823429665",
+      "title": "FunAudioLLM/SenseVoice — Multilingual Voice Understanding Model",
+      "summary": "Multilingual Voice Understanding Model",
       "date": "2026-05-19",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
+      "url": "https://github.com/FunAudioLLM/SenseVoice",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 8172,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "aigc",
+        "asr",
+        "audio-event-classification",
+        "cross-lingual"
+      ]
+    },
+    {
+      "id": "gh-828119367",
+      "title": "yamadashy/repomix — 📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "summary": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "date": "2026-05-19",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/yamadashy/repomix",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 25104,
+      "language": "TypeScript",
+      "tags": [
+        "ai",
+        "anthropic",
+        "artificial-intelligence",
+        "chatbot",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-676672661",
+      "title": "langchain-ai/langgraph — Build resilient agents.",
+      "summary": "Build resilient agents.",
+      "date": "2026-05-19",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/langchain-ai/langgraph",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 141875,
-      "language": "TypeScript",
+      "stars": 32415,
+      "language": "Python",
       "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
+        "agents",
+        "ai",
+        "ai-agents",
+        "chatgpt",
+        "deepagents"
+      ]
+    },
+    {
+      "id": "gh-1147094660",
+      "title": "HKUDS/nanobot — Lightweight, open-source AI agent for your tools, chats, and workflows.",
+      "summary": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
+      "date": "2026-05-19",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/HKUDS/nanobot",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 42778,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-764723738",
+      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
+      "summary": "Automate browser based workflows with AI",
+      "date": "2026-05-19",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/Skyvern-AI/skyvern",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 21655,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "api",
+        "automation",
+        "browser",
+        "browser-automation"
       ]
     },
     {
@@ -742,7 +830,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 24025,
+      "stars": 24035,
       "language": "TypeScript",
       "tags": [
         "agents",
@@ -753,157 +841,69 @@
       ]
     },
     {
-      "id": "gh-916009087",
-      "title": "rowboatlabs/rowboat — Open-source AI coworker, with memory",
-      "summary": "Open-source AI coworker, with memory",
+      "id": "gh-643445235",
+      "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
       "date": "2026-05-19",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/rowboatlabs/rowboat",
-      "category": "오픈소스",
+      "url": "https://github.com/lobehub/lobehub",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 14222,
-      "language": "TypeScript",
-      "tags": [
-        "agents",
-        "agents-sdk",
-        "ai",
-        "ai-agents",
-        "ai-agents-automation"
-      ]
-    },
-    {
-      "id": "gh-1188521544",
-      "title": "holaboss-ai/holaOS — Turn repeat work into running AI work-streams.",
-      "summary": "Turn repeat work into running AI work-streams.",
-      "date": "2026-05-19",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/holaboss-ai/holaOS",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 5650,
+      "stars": 77342,
       "language": "TypeScript",
       "tags": [
         "agent",
+        "agent-collaboration",
         "agent-harness",
-        "agent-os",
-        "agentic",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-614765452",
-      "title": "Significant-Gravitas/AutoGPT — AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "date": "2026-05-19",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 184420,
-      "language": "Python",
-      "tags": [
-        "agentic-ai",
-        "agents",
         "ai",
-        "artificial-intelligence",
-        "autonomous-agents"
+        "chatgpt"
       ]
     },
     {
-      "id": "gh-762304524",
-      "title": "ComposioHQ/composio — Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.",
-      "summary": "Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.",
+      "id": "gh-963645750",
+      "title": "zgsm-ai/costrict — Costrict - strict AI coder for enterprises, quality first, including AI Agent, AI CodeReview, AI Completion. ",
+      "summary": "Costrict - strict AI coder for enterprises, quality first, including AI Agent, AI CodeReview, AI Completion. ",
       "date": "2026-05-19",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/ComposioHQ/composio",
+      "url": "https://github.com/zgsm-ai/costrict",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 28337,
+      "stars": 4030,
       "language": "TypeScript",
       "tags": [
-        "agentic-ai",
-        "agents",
+        "agent",
         "ai",
-        "ai-agents",
-        "aiagents"
+        "aicoding",
+        "claude",
+        "cline"
       ]
     },
     {
-      "id": "gh-826170402",
-      "title": "elizaOS/eliza — Open source agentic operating system",
-      "summary": "Open source agentic operating system",
+      "id": "gh-1156956890",
+      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
+      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
       "date": "2026-05-19",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/elizaOS/eliza",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 18394,
-      "language": "TypeScript",
+      "stars": 31453,
+      "language": "Rust",
       "tags": [
         "agent",
         "agentic",
         "ai",
-        "autonomous",
-        "chatbot"
-      ]
-    },
-    {
-      "id": "gh-932490533",
-      "title": "ThinkInAIXYZ/deepchat — 🐬DeepChat - A smart assistant that connects powerful AI to your personal world",
-      "summary": "🐬DeepChat - A smart assistant that connects powerful AI to your personal world",
-      "date": "2026-05-19",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/ThinkInAIXYZ/deepchat",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 5807,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-skills",
-        "ai",
-        "ai-assistant",
-        "ai-sdk"
-      ]
-    },
-    {
-      "id": "gh-1150626239",
-      "title": "ValueCell-ai/ClawX — ClawX is a desktop app that provides a graphical interface for OpenClaw AI agents. It turns CLI-based AI orchestration into a desktop experience without using the terminal. China website is https://clawx.com.cn.",
-      "summary": "ClawX is a desktop app that provides a graphical interface for OpenClaw AI agents. It turns CLI-based AI orchestration into a desktop experience without using the terminal. China website is https://clawx.com.cn.",
-      "date": "2026-05-19",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/ValueCell-ai/ClawX",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 7238,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agentic-ai",
-        "agents",
-        "ai",
-        "clawdbot"
+        "infra",
+        "ml"
       ]
     },
     {
@@ -918,7 +918,7 @@
       "category": "연구·논문",
       "lang": "en",
       "isGithub": true,
-      "stars": 3702,
+      "stars": 3705,
       "language": "TypeScript",
       "tags": [
         "a2a",
@@ -926,6 +926,28 @@
         "acp",
         "agent",
         "ai"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Open source agentic operating system",
+      "summary": "Open source agentic operating system",
+      "date": "2026-05-19",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 18395,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agentic",
+        "ai",
+        "autonomous",
+        "chatbot"
       ]
     }
   ]

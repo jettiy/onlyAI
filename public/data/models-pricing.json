@@ -420,18 +420,6 @@
     "maxTokens": 128000
   },
   {
-    "id": "z-ai/glm-5.1",
-    "name": "Z.ai: GLM 5.1",
-    "provider": "Z-AI",
-    "input": 0.98,
-    "output": 3.08,
-    "context": "203K",
-    "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work ",
-    "createdAt": 1775578025,
-    "modalities": "text->text",
-    "maxTokens": null
-  },
-  {
     "id": "google/gemma-4-26b-a4b-it",
     "name": "Google: Gemma 4 26B A4B ",
     "provider": "GOOGLE",
@@ -747,13 +735,13 @@
     "id": "qwen/qwen3.5-35b-a3b",
     "name": "Qwen: Qwen3.5-35B-A3B",
     "provider": "QWEN",
-    "input": 0.14,
+    "input": 0.13899999999999998,
     "output": 1,
     "context": "262K",
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inf",
     "createdAt": 1772053822,
     "modalities": "text+image+video->text",
-    "maxTokens": 81920
+    "maxTokens": null
   },
   {
     "id": "qwen/qwen3.5-27b",

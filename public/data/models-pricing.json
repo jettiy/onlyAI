@@ -1,5 +1,17 @@
 [
   {
+    "id": "google/gemini-3.5-flash",
+    "name": "Google: Gemini 3.5 Flash",
+    "provider": "GOOGLE",
+    "input": 1.5,
+    "output": 9,
+    "context": "1M",
+    "description": "Gemini 3.5 Flash is Google's high-efficiency multimodal model, bringing near-Pro level coding and reasoning at Flash-tier cost and speed. It is highly optimized for coding proficiency and parallel age",
+    "createdAt": 1779193800,
+    "modalities": "text+image+file+audio+video->text",
+    "maxTokens": 65536
+  },
+  {
     "id": "anthropic/claude-opus-4.7-fast",
     "name": "Anthropic: Claude Opus 4.7 (Fast)",
     "provider": "ANTHROPIC",
@@ -147,8 +159,8 @@
     "id": "~google/gemini-flash-latest",
     "name": "Google Gemini Flash Latest",
     "provider": "~GOOGLE",
-    "input": 0.5,
-    "output": 3,
+    "input": 1.5,
+    "output": 9,
     "context": "1M",
     "description": "This model always redirects to the latest model in the Google Gemini Flash family.",
     "createdAt": 1777318398,
@@ -3372,18 +3384,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "inflection/inflection-3-pi",
-    "name": "Inflection: Inflection 3 Pi",
-    "provider": "INFLECTION",
-    "input": 2.5,
-    "output": 10,
-    "context": "8K",
-    "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like custo",
-    "createdAt": 1728604800,
-    "modalities": "text->text",
-    "maxTokens": 1024
-  },
-  {
     "id": "inflection/inflection-3-productivity",
     "name": "Inflection: Inflection 3 Productivity",
     "provider": "INFLECTION",
@@ -3391,6 +3391,18 @@
     "output": 10,
     "context": "8K",
     "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional",
+    "createdAt": 1728604800,
+    "modalities": "text->text",
+    "maxTokens": 1024
+  },
+  {
+    "id": "inflection/inflection-3-pi",
+    "name": "Inflection: Inflection 3 Pi",
+    "provider": "INFLECTION",
+    "input": 2.5,
+    "output": 10,
+    "context": "8K",
+    "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like custo",
     "createdAt": 1728604800,
     "modalities": "text->text",
     "maxTokens": 1024
@@ -3408,18 +3420,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "meta-llama/llama-3.2-1b-instruct",
-    "name": "Meta: Llama 3.2 1B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.027,
-    "output": 0.201,
-    "context": "131K",
-    "description": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows ",
-    "createdAt": 1727222400,
-    "modalities": "text->text",
-    "maxTokens": 60000
-  },
-  {
     "id": "meta-llama/llama-3.2-11b-vision-instruct",
     "name": "Meta: Llama 3.2 11B Vision Instruct",
     "provider": "META-LLAMA",
@@ -3430,6 +3430,18 @@
     "createdAt": 1727222400,
     "modalities": "text+image->text",
     "maxTokens": 16384
+  },
+  {
+    "id": "meta-llama/llama-3.2-1b-instruct",
+    "name": "Meta: Llama 3.2 1B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.027,
+    "output": 0.201,
+    "context": "131K",
+    "description": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows ",
+    "createdAt": 1727222400,
+    "modalities": "text->text",
+    "maxTokens": 60000
   },
   {
     "id": "meta-llama/llama-3.2-3b-instruct",
@@ -3540,18 +3552,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "meta-llama/llama-3.1-8b-instruct",
-    "name": "Meta: Llama 3.1 8B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.02,
-    "output": 0.049999999999999996,
-    "context": "131K",
-    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
-    "createdAt": 1721692800,
-    "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
     "id": "meta-llama/llama-3.1-70b-instruct",
     "name": "Meta: Llama 3.1 70B Instruct",
     "provider": "META-LLAMA",
@@ -3559,6 +3559,18 @@
     "output": 0.39999999999999997,
     "context": "131K",
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
+    "createdAt": 1721692800,
+    "modalities": "text->text",
+    "maxTokens": 16384
+  },
+  {
+    "id": "meta-llama/llama-3.1-8b-instruct",
+    "name": "Meta: Llama 3.1 8B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.02,
+    "output": 0.049999999999999996,
+    "context": "131K",
+    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
     "createdAt": 1721692800,
     "modalities": "text->text",
     "maxTokens": 16384
@@ -3576,8 +3588,8 @@
     "maxTokens": null
   },
   {
-    "id": "openai/gpt-4o-mini",
-    "name": "OpenAI: GPT-4o-mini",
+    "id": "openai/gpt-4o-mini-2024-07-18",
+    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
     "provider": "OPENAI",
     "input": 0.15,
     "output": 0.6,
@@ -3588,8 +3600,8 @@
     "maxTokens": 16384
   },
   {
-    "id": "openai/gpt-4o-mini-2024-07-18",
-    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+    "id": "openai/gpt-4o-mini",
+    "name": "OpenAI: GPT-4o-mini",
     "provider": "OPENAI",
     "input": 0.15,
     "output": 0.6,
@@ -3636,18 +3648,6 @@
     "maxTokens": 8192
   },
   {
-    "id": "openai/gpt-4o-2024-05-13",
-    "name": "OpenAI: GPT-4o (2024-05-13)",
-    "provider": "OPENAI",
-    "input": 5,
-    "output": 15,
-    "context": "128K",
-    "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while bei",
-    "createdAt": 1715558400,
-    "modalities": "text+image+file->text",
-    "maxTokens": 4096
-  },
-  {
     "id": "openai/gpt-4o",
     "name": "OpenAI: GPT-4o",
     "provider": "OPENAI",
@@ -3658,6 +3658,18 @@
     "createdAt": 1715558400,
     "modalities": "text+image+file->text",
     "maxTokens": 16384
+  },
+  {
+    "id": "openai/gpt-4o-2024-05-13",
+    "name": "OpenAI: GPT-4o (2024-05-13)",
+    "provider": "OPENAI",
+    "input": 5,
+    "output": 15,
+    "context": "128K",
+    "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while bei",
+    "createdAt": 1715558400,
+    "modalities": "text+image+file->text",
+    "maxTokens": 4096
   },
   {
     "id": "meta-llama/llama-3-70b-instruct",
@@ -3744,18 +3756,6 @@
     "maxTokens": null
   },
   {
-    "id": "openai/gpt-4-turbo-preview",
-    "name": "OpenAI: GPT-4 Turbo Preview",
-    "provider": "OPENAI",
-    "input": 10,
-    "output": 30,
-    "context": "128K",
-    "description": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023. **Note:** heavily rate limited by Open",
-    "createdAt": 1706140800,
-    "modalities": "text->text",
-    "maxTokens": 4096
-  },
-  {
     "id": "openai/gpt-3.5-turbo-0613",
     "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
     "provider": "OPENAI",
@@ -3763,6 +3763,18 @@
     "output": 2,
     "context": "4K",
     "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "createdAt": 1706140800,
+    "modalities": "text->text",
+    "maxTokens": 4096
+  },
+  {
+    "id": "openai/gpt-4-turbo-preview",
+    "name": "OpenAI: GPT-4 Turbo Preview",
+    "provider": "OPENAI",
+    "input": 10,
+    "output": 30,
+    "context": "128K",
+    "description": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023. **Note:** heavily rate limited by Open",
     "createdAt": 1706140800,
     "modalities": "text->text",
     "maxTokens": 4096
@@ -3780,18 +3792,6 @@
     "maxTokens": 4096
   },
   {
-    "id": "openai/gpt-3.5-turbo-instruct",
-    "name": "OpenAI: GPT-3.5 Turbo Instruct",
-    "provider": "OPENAI",
-    "input": 1.5,
-    "output": 2,
-    "context": "4K",
-    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
-    "createdAt": 1695859200,
-    "modalities": "text->text",
-    "maxTokens": 4096
-  },
-  {
     "id": "mistralai/mistral-7b-instruct-v0.1",
     "name": "Mistral: Mistral 7B Instruct v0.1",
     "provider": "MISTRALAI",
@@ -3802,6 +3802,18 @@
     "createdAt": 1695859200,
     "modalities": "text->text",
     "maxTokens": 2824
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-instruct",
+    "name": "OpenAI: GPT-3.5 Turbo Instruct",
+    "provider": "OPENAI",
+    "input": 1.5,
+    "output": 2,
+    "context": "4K",
+    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
+    "createdAt": 1695859200,
+    "modalities": "text->text",
+    "maxTokens": 4096
   },
   {
     "id": "openai/gpt-3.5-turbo-16k",

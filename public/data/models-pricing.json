@@ -963,13 +963,13 @@
     "id": "stepfun/step-3.5-flash",
     "name": "StepFun: Step 3.5 Flash",
     "provider": "STEPFUN",
-    "input": 0.09999999999999999,
+    "input": 0.09,
     "output": 0.3,
     "context": "262K",
     "description": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token....",
     "createdAt": 1769728337,
     "modalities": "text->text",
-    "maxTokens": 65536
+    "maxTokens": 16384
   },
   {
     "id": "arcee-ai/trinity-large-preview",

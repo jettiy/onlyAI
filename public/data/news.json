@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-05-21T09:54:55.425Z",
-  "updatedAtKST": "2026. 5. 21. PM 6:54:55",
+  "updatedAt": "2026-05-21T15:42:04.691Z",
+  "updatedAtKST": "2026. 5. 22. AM 12:42:04",
   "stats": {
     "aitimes": 20,
-    "36kr": 13,
+    "36kr": 12,
     "hf": 20,
-    "tc": 18,
+    "tc": 16,
     "github": 9,
-    "total": 67
+    "total": 65
   },
   "news": [
     {
@@ -60,7 +60,7 @@
     },
     {
       "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=210807",
-      "title": "950억 투자 이끈 위로보틱스, 차별점은 '인간 데이터'로 휴머노이드 고도화",
+      "title": "950억 투자 위로보틱스, 차별점은 '인간 데이터'로 휴머노이드 고도화",
       "summary": "최근 시리즈 B 라운드에서 무려 950억원 규모 투자 유치를 이끌어낸 위로보틱스(대표 이연백, 김용재)가 그 비결을 밝혔다. 무엇보다, 기업 투자가 위축된 분위기 속에서 이 정도 규모의 투자 유치는 이례적이다. 앞서 국내 로봇 스타트업인 홀리데이로보틱스는 2025년 1500억원 규모 시리즈A 투자 유치를 이끌어냈는데, 그만큼 로보틱스는 유망 분야로 꼽힌다.",
       "date": "2026-05-21",
       "source": "AI타임스",
@@ -239,7 +239,67 @@
       "lang": "ko"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/",
+      "id": "tc-1-https://techcrunch.com/2026/05/21/spotify-adds-ai-powered-qa-and-briefing-generation-features-to-podcasts/",
+      "title": "Spotify adds AI-powered Q&#038;A and briefing generation features to podcasts",
+      "summary": "Spotify will let you generate daily or weekly briefs based on your prompts",
+      "date": "2026-05-21",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/21/spotify-adds-ai-powered-qa-and-briefing-generation-features-to-podcasts/",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/",
+      "title": "Hark raises $700M Series A for its secretive &#8220;universal&#8221; AI interface",
+      "summary": "Brett Adcock's new AI startup is now valued at $6 billion by its investors.",
+      "date": "2026-05-21",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/",
+      "category": "투자·기업",
+      "lang": "en"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/05/21/the-path-founded-by-tony-robbins-and-calm-alums-wants-to-offer-safer-ai-therapy/",
+      "title": "The Path, founded by Tony Robbins and Calm alums, hopes to offer safer AI therapy",
+      "summary": "The Path says its AI model has scored 95 on the mental health safety AI benchmark, Vera-MH. This compares to a top score of 65 for the consumer bots.",
+      "date": "2026-05-21",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/21/the-path-founded-by-tony-robbins-and-calm-alums-wants-to-offer-safer-ai-therapy/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-5-https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/",
+      "title": "Google is pitching an AI agent ecosystem to consumers who may not buy it",
+      "summary": "The AI agents are coming. A lot of them.",
+      "date": "2026-05-21",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-6-https://techcrunch.com/2026/05/21/with-aluminum-prices-up-20-recycling-startups-bet-on-ai-to-cash-in/",
+      "title": "With aluminum prices up 20%, recycling startups bet on AI to cash in",
+      "summary": "Recycling startups are using AI to improve the recovery of critical minerals like aluminum, aiming to build a massive source of the metal.",
+      "date": "2026-05-21",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/21/with-aluminum-prices-up-20-recycling-startups-bet-on-ai-to-cash-in/",
+      "category": "투자·기업",
+      "lang": "en"
+    },
+    {
+      "id": "tc-7-https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/",
       "title": "Jensen Huang says he&#8217;s found a &#8216;brand new&#8217; $200B market for Nvidia",
       "summary": "The next big thing for Nvidia will be CPUs for AI agents, $200 billion worth, CEO Jensen Huang predicts.",
       "date": "2026-05-21",
@@ -251,7 +311,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/05/20/anthropic-says-its-about-to-have-its-first-profitable-quarter/",
+      "id": "tc-8-https://techcrunch.com/2026/05/20/anthropic-says-its-about-to-have-its-first-profitable-quarter/",
       "title": "Anthropic says it&#8217;s about to have its first profitable quarter",
       "summary": "Anthropic has told its investors that it will more than double revenue to around $10.9 billion in its second quarter.",
       "date": "2026-05-21",
@@ -275,7 +335,7 @@
       "lang": "ko"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/05/20/clouted-wants-to-take-the-guesswork-out-of-making-short-videos-go-viral/",
+      "id": "tc-9-https://techcrunch.com/2026/05/20/clouted-wants-to-take-the-guesswork-out-of-making-short-videos-go-viral/",
       "title": "Clouted wants to take the guesswork out of making short videos go viral",
       "summary": "The video clipping startup raised a $7 million seed round led by Slow Ventures.",
       "date": "2026-05-20",
@@ -287,7 +347,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/",
+      "id": "tc-10-https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/",
       "title": "xAI burned $6.4B last year — SpaceX’s IPO filing shows why the spending is far from over",
       "summary": "SpaceX's IPO filing reveals xAI lost $6.4 billion in 2025 while planning a massive Grok expansion — offering the first public look at Elon Musk's AI financials and more details about his ambitions.",
       "date": "2026-05-20",
@@ -299,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/05/20/musks-xai-is-being-sued-over-its-data-center-generators-now-its-buying-2-8b-more/",
+      "id": "tc-12-https://techcrunch.com/2026/05/20/musks-xai-is-being-sued-over-its-data-center-generators-now-its-buying-2-8b-more/",
       "title": "Musk’s xAI is being sued over its data center generators — now it’s buying $2.8B more",
       "summary": "Elon Musk's xAI said it will buy $2.8 billion worth of natural gas turbines over the next three years, according to SpaceX's IPO filing.",
       "date": "2026-05-20",
@@ -311,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+      "id": "tc-13-https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
       "title": "Anthropic will pay xAI $1.25B per month for compute",
       "summary": "Elon Musk's xAI surprised the AI world when it made a deal to sell compute to Anthropic. Now we know how much it's worth.",
       "date": "2026-05-20",
@@ -323,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/",
+      "id": "tc-14-https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/",
       "title": "OpenAI claims it solved an 80-year-old math problem — for real this time",
       "summary": "OpenAI claims its reasoning model disproved a geometry conjecture unsolved since 1946 — and this time, the mathematicians who exposed its last embarrassing claim are backing it up.",
       "date": "2026-05-20",
@@ -335,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/05/20/irisgo-a-startup-backed-by-andrew-ng-looks-to-become-the-ai-desktop-buddy-you-never-knew-you-needed/",
+      "id": "tc-15-https://techcrunch.com/2026/05/20/irisgo-a-startup-backed-by-andrew-ng-looks-to-become-the-ai-desktop-buddy-you-never-knew-you-needed/",
       "title": "IrisGo, a startup backed by Andrew Ng, looks to become the AI desktop buddy you never knew you needed",
       "summary": "Initially billed as an \"AI butler,\" Iris watches what happens on a user's desktop and automatically learns how to do tasks for them, its co-founder says.",
       "date": "2026-05-20",
@@ -347,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/05/20/openai-barrels-toward-ipo-that-may-happen-in-september/",
+      "id": "tc-16-https://techcrunch.com/2026/05/20/openai-barrels-toward-ipo-that-may-happen-in-september/",
       "title": "OpenAI barrels toward IPO that may happen in September",
       "summary": "A day after Elon Musk lost his lawsuit that threatened OpenAI's structure, leadership, and finances, OpenAI is reportedly back to prepping for its IPO.",
       "date": "2026-05-20",
@@ -359,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/05/20/ai-search-startups-are-blowing-up/",
+      "id": "tc-17-https://techcrunch.com/2026/05/20/ai-search-startups-are-blowing-up/",
       "title": "AI search startups are blowing up",
       "summary": "AI search has quietly become one of the most attractive targets in consumer AI.",
       "date": "2026-05-20",
@@ -371,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/",
+      "id": "tc-18-https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/",
       "title": "Stability AI releases a new audio model that can create 6-minute songs",
       "summary": "Stability Audio 3.0 small model can run on-device and generate two-minute long tracks.",
       "date": "2026-05-20",
@@ -380,30 +440,6 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/",
       "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-13-https://techcrunch.com/2026/05/20/nanoclaw-creator-turns-down-20m-buyout-offer-raises-12m-seed-instead/",
-      "title": "NanoClaw creator turns down $20M buyout offer, raises $12M seed instead",
-      "summary": "NanoClaw was created as a secure alternative to OpenClaw to assist the Cohen brothers with their AI marketing firm that used agents to do much of the work. But instead of running directly on a compute",
-      "date": "2026-05-20",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/20/nanoclaw-creator-turns-down-20m-buyout-offer-raises-12m-seed-instead/",
-      "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "tc-14-https://techcrunch.com/2026/05/20/figma-adds-an-ai-assistant-to-its-collaborative-canvas/",
-      "title": "Figma adds an AI assistant to its collaborative canvas",
-      "summary": "Figma says users can employ natural language text prompts to direct its new AI agent to generate new designs, edit existing ones, or automate tasks such as generating iterations of existing designs.",
-      "date": "2026-05-20",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/20/figma-adds-an-ai-assistant-to-its-collaborative-canvas/",
-      "category": "에이전트",
       "lang": "en"
     },
     {
@@ -416,66 +452,6 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/allenai/olmoearth-v1-1",
       "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-15-https://techcrunch.com/2026/05/19/ai-design-tools-are-the-next-big-battleground-and-google-is-going-all-in-at-io-2026/",
-      "title": "Google just declared itself a contender in AI design at IO 2026",
-      "summary": "Google says it's designed the app to be accessible to everyone, from teachers to small business owners.",
-      "date": "2026-05-19",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/19/ai-design-tools-are-the-next-big-battleground-and-google-is-going-all-in-at-io-2026/",
-      "category": "로봇·자율주행",
-      "lang": "en"
-    },
-    {
-      "id": "tc-16-https://techcrunch.com/2026/05/19/you-can-now-talk-to-your-gmail-inbox-as-seen-at-google-io-2026/",
-      "title": "You can now talk to your Gmail inbox, as seen at Google IO 2026",
-      "summary": "Google expands Gmail’s AI Inbox with conversational voice search, letting users ask Gemini to find buried email details.",
-      "date": "2026-05-19",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/19/you-can-now-talk-to-your-gmail-inbox-as-seen-at-google-io-2026/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/05/19/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard-searches/",
-      "title": "How to use Google’s new AI agents to go beyond your standard searches",
-      "summary": "Google is launching AI-powered “information agents” that can monitor topics in the background and proactively alert users to updates and changes.",
-      "date": "2026-05-19",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/19/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard-searches/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/05/19/from-teen-hacker-to-iron-dome-researcher-this-founder-raised-28m-to-fight-ai-phishing/",
-      "title": "From teen hacker to Iron Dome researcher, this founder raised $28M to fight AI phishing",
-      "summary": "Ocean, an agentic email security platform, claims its AI can thoroughly analyze the context of every incoming email to detect fraud and impersonation attempts.",
-      "date": "2026-05-19",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/19/from-teen-hacker-to-iron-dome-researcher-this-founder-raised-28m-to-fight-ai-phishing/",
-      "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/05/19/elon-musk-said-sam-altman-stole-a-non-profit-but-the-trial-showed-he-had-similar-aims/",
-      "title": "Elon Musk said Sam Altman &#8216;stole&#8217; a non-profit — but the trial showed he had similar aims",
-      "summary": "The jury's speedy decision to reject Elon Musk's lawsuit against the other founders of OpenAI and Microsoft confirmed what we saw in the courtroom: Musk's case was a weak one, in part because he waite",
-      "date": "2026-05-19",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/19/elon-musk-said-sam-altman-stole-a-non-profit-but-the-trial-showed-he-had-similar-aims/",
-      "category": "연구·논문",
       "lang": "en"
     },
     {
@@ -709,28 +685,6 @@
   ],
   "github": [
     {
-      "id": "gh-979115477",
-      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "date": "2026-05-21",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/bytedance/deer-flow",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 68898,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "agentic",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ]
-    },
-    {
       "id": "gh-839037098",
       "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
       "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
@@ -742,7 +696,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 24143,
+      "stars": 24155,
       "language": "TypeScript",
       "tags": [
         "agents",
@@ -753,157 +707,179 @@
       ]
     },
     {
-      "id": "gh-701547123",
-      "title": "open-webui/open-webui — User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-      "summary": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "id": "gh-1024554267",
+      "title": "NousResearch/hermes-agent — The agent that grows with you",
+      "summary": "The agent that grows with you",
       "date": "2026-05-21",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/open-webui/open-webui",
-      "category": "개발 도구",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 138048,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "llm",
-        "llm-ui",
-        "llm-webui",
-        "llms"
-      ]
-    },
-    {
-      "id": "gh-656099147",
-      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
-      "summary": "Universal memory layer for AI Agents",
-      "date": "2026-05-21",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mem0ai/mem0",
+      "url": "https://github.com/NousResearch/hermes-agent",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 56320,
+      "stars": 161056,
       "language": "Python",
       "tags": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-958830659",
+      "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "date": "2026-05-21",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/google/adk-python",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19779,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "agents-sdk"
+      ]
+    },
+    {
+      "id": "gh-983715534",
+      "title": "strands-agents/sdk-python — A model-driven approach to building AI agents in just a few lines of code.",
+      "summary": "A model-driven approach to building AI agents in just a few lines of code.",
+      "date": "2026-05-21",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/strands-agents/sdk-python",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 5911,
+      "language": "Python",
+      "tags": [
+        "agentic",
+        "agentic-ai",
         "agents",
         "ai",
-        "ai-agents",
-        "application",
-        "chatbots"
+        "anthropic"
       ]
     },
     {
-      "id": "gh-1062234789",
-      "title": "JerryZLiu/Dayflow — The automatic work journal. Privately turns your screen into a timeline of what you actually accomplished. Open-source and local-first.",
-      "summary": "The automatic work journal. Privately turns your screen into a timeline of what you actually accomplished. Open-source and local-first.",
+      "id": "gh-828119367",
+      "title": "yamadashy/repomix — 📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "summary": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
       "date": "2026-05-21",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/JerryZLiu/Dayflow",
-      "category": "오픈소스",
+      "url": "https://github.com/yamadashy/repomix",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 6027,
-      "language": "Swift",
-      "tags": [
-        "ai",
-        "chatgpt",
-        "claude",
-        "gemini",
-        "llm"
-      ]
-    },
-    {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
-      "date": "2026-05-21",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 142129,
+      "stars": 25286,
       "language": "TypeScript",
       "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-99919302",
-      "title": "apache/doris — Apache Doris is an easy-to-use, high performance and unified analytics database.",
-      "summary": "Apache Doris is an easy-to-use, high performance and unified analytics database.",
-      "date": "2026-05-21",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/apache/doris",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 15376,
-      "language": "Java",
-      "tags": [
-        "agent",
         "ai",
-        "bigquery",
-        "database",
-        "dbt"
+        "anthropic",
+        "artificial-intelligence",
+        "chatbot",
+        "chatgpt"
       ]
     },
     {
-      "id": "gh-826170402",
-      "title": "elizaOS/eliza — Open source agentic operating system",
-      "summary": "Open source agentic operating system",
+      "id": "gh-1024118326",
+      "title": "Tencent/WeKnora — Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "summary": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
       "date": "2026-05-21",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/elizaOS/eliza",
-      "category": "에이전트",
+      "url": "https://github.com/Tencent/WeKnora",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 18417,
-      "language": "TypeScript",
+      "stars": 15321,
+      "language": "Go",
       "tags": [
         "agent",
         "agentic",
         "ai",
-        "autonomous",
-        "chatbot"
+        "chatbot",
+        "embeddings"
       ]
     },
     {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "id": "gh-201403923",
+      "title": "activeloopai/deeplake — Deeplake is AI Data Runtime for Agents. It provides serverless postgres with a multimodal datalake, enabling scalable retrieval and training.",
+      "summary": "Deeplake is AI Data Runtime for Agents. It provides serverless postgres with a multimodal datalake, enabling scalable retrieval and training.",
       "date": "2026-05-21",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
+      "url": "https://github.com/activeloopai/deeplake",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 77471,
+      "stars": 9131,
+      "language": "C++",
+      "tags": [
+        "agent",
+        "agentic-rag",
+        "ai",
+        "clawbot",
+        "computer-vision"
+      ]
+    },
+    {
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "date": "2026-05-21",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 31608,
       "language": "TypeScript",
       "tags": [
         "agent",
-        "agent-collaboration",
-        "agent-harness",
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-1025381911",
+      "title": "MemoriLabs/Memori — Memori is agent-native memory infrastructure. A LLM-agnostic layer that turns agent execution and conversation into structured, persistent state for production systems.",
+      "summary": "Memori is agent-native memory infrastructure. A LLM-agnostic layer that turns agent execution and conversation into structured, persistent state for production systems.",
+      "date": "2026-05-21",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/MemoriLabs/Memori",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 14710,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agent-memory",
         "ai",
-        "cao"
+        "ai-memory",
+        "aiagent"
       ]
     }
   ]

@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-22T09:39:52.853Z",
-  "updatedAtKST": "2026. 5. 22. PM 6:39:52",
+  "updatedAt": "2026-05-22T14:55:02.315Z",
+  "updatedAtKST": "2026. 5. 22. PM 11:55:02",
   "stats": {
     "aitimes": 20,
-    "36kr": 16,
+    "36kr": 13,
     "hf": 20,
     "tc": 18,
     "github": 8,
@@ -709,28 +709,6 @@
   ],
   "github": [
     {
-      "id": "gh-882026761",
-      "title": "steel-dev/steel-browser — 🔥 Open Source Browser API for AI Agents & Apps. Steel Browser is a batteries-included browser sandbox that lets you automate the web without worrying about infrastructure.",
-      "summary": "🔥 Open Source Browser API for AI Agents & Apps. Steel Browser is a batteries-included browser sandbox that lets you automate the web without worrying about infrastructure.",
-      "date": "2026-05-22",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/steel-dev/steel-browser",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 7062,
-      "language": "TypeScript",
-      "tags": [
-        "ai",
-        "ai-agents",
-        "ai-tools",
-        "browser-automation",
-        "llm"
-      ]
-    },
-    {
       "id": "gh-626805178",
       "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
       "summary": "Production-ready platform for agentic workflow development.",
@@ -742,7 +720,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 142247,
+      "stars": 142256,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -753,47 +731,23 @@
       ]
     },
     {
-      "id": "gh-609539715",
-      "title": "e2b-dev/E2B — Open-source, secure environment with real-world tools for enterprise-grade agents.",
-      "summary": "Open-source, secure environment with real-world tools for enterprise-grade agents.",
+      "id": "gh-868173144",
+      "title": "kortix-ai/suna — The Autonomous Company Operating System",
+      "summary": "The Autonomous Company Operating System",
       "date": "2026-05-22",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/e2b-dev/E2B",
+      "url": "https://github.com/kortix-ai/suna",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 12319,
-      "language": "Python",
+      "stars": 19774,
+      "language": "TypeScript",
       "tags": [
-        "agent",
         "ai",
-        "ai-agent",
         "ai-agents",
-        "code-interpreter"
-      ]
-    },
-    {
-      "id": "gh-1024118326",
-      "title": "Tencent/WeKnora — Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
-      "summary": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
-      "date": "2026-05-22",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Tencent/WeKnora",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 15360,
-      "language": "Go",
-      "tags": [
-        "agent",
-        "agentic",
-        "ai",
-        "chatbot",
-        "embeddings"
+        "llm"
       ]
     },
     {
@@ -808,7 +762,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 42979,
+      "stars": 42992,
       "language": "Python",
       "tags": [
         "ai",
@@ -819,25 +773,91 @@
       ]
     },
     {
-      "id": "gh-575865240",
-      "title": "AstrBotDevs/AstrBot — AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "summary": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "id": "gh-609539715",
+      "title": "e2b-dev/E2B — Open-source, secure environment with real-world tools for enterprise-grade agents.",
+      "summary": "Open-source, secure environment with real-world tools for enterprise-grade agents.",
       "date": "2026-05-22",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/AstrBotDevs/AstrBot",
-      "category": "모델 출시",
+      "url": "https://github.com/e2b-dev/E2B",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 32812,
+      "stars": 12322,
       "language": "Python",
       "tags": [
         "agent",
         "ai",
-        "chatbot",
-        "chatgpt",
-        "discord"
+        "ai-agent",
+        "ai-agents",
+        "code-interpreter"
+      ]
+    },
+    {
+      "id": "gh-221654678",
+      "title": "deepset-ai/haystack — Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+      "summary": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+      "date": "2026-05-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/deepset-ai/haystack",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 25342,
+      "language": "MDX",
+      "tags": [
+        "agent",
+        "agents",
+        "ai",
+        "gemini",
+        "generative-ai"
+      ]
+    },
+    {
+      "id": "gh-979115477",
+      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "date": "2026-05-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/bytedance/deer-flow",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 69118,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-1156956890",
+      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
+      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
+      "date": "2026-05-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 31526,
+      "language": "Rust",
+      "tags": [
+        "agent",
+        "agentic",
+        "ai",
+        "infra",
+        "ml"
       ]
     },
     {
@@ -852,7 +872,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 77514,
+      "stars": 77525,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -860,28 +880,6 @@
         "agent-harness",
         "ai",
         "cao"
-      ]
-    },
-    {
-      "id": "gh-1020144870",
-      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "date": "2026-05-22",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/archestra-ai/archestra",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3726,
-      "language": "TypeScript",
-      "tags": [
-        "a2a",
-        "a2a-mcp",
-        "acp",
-        "agent",
-        "ai"
       ]
     }
   ]

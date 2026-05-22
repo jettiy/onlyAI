@@ -231,8 +231,8 @@
     "id": "qwen/qwen3.6-flash",
     "name": "Qwen: Qwen3.6 Flash",
     "provider": "QWEN",
-    "input": 0.1875,
-    "output": 1.125,
+    "input": 0.12375000000000001,
+    "output": 0.7424999999999999,
     "context": "1M",
     "description": "Qwen3.6 Flash is a fast, efficient language model from Alibaba's Qwen 3.6 series. It supports text, image, and video input with a 1M token context window. Tiered pricing kicks in...",
     "createdAt": 1777261362,
@@ -267,13 +267,13 @@
     "id": "qwen/qwen3.6-27b",
     "name": "Qwen: Qwen3.6 27B",
     "provider": "QWEN",
-    "input": 0.317,
+    "input": 0.3,
     "output": 3.1999999999999997,
     "context": "262K",
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs..",
     "createdAt": 1777255064,
     "modalities": "text+image+video->text",
-    "maxTokens": 262140
+    "maxTokens": 262144
   },
   {
     "id": "openai/gpt-5.5-pro",
@@ -495,8 +495,8 @@
     "id": "qwen/qwen3.6-plus",
     "name": "Qwen: Qwen3.6 Plus",
     "provider": "QWEN",
-    "input": 0.325,
-    "output": 1.95,
+    "input": 0.1794,
+    "output": 1.07315,
     "context": "1M",
     "description": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to t",
     "createdAt": 1775133557,
@@ -813,7 +813,7 @@
     "description": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference eff",
     "createdAt": 1772053789,
     "modalities": "text+image+video->text",
-    "maxTokens": 65536
+    "maxTokens": 262144
   },
   {
     "id": "qwen/qwen3.5-flash-02-23",

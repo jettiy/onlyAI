@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-24T04:12:22.269Z",
-  "updatedAtKST": "2026. 5. 24. PM 1:12:22",
+  "updatedAt": "2026-05-24T08:38:35.976Z",
+  "updatedAtKST": "2026. 5. 24. PM 5:38:35",
   "stats": {
     "aitimes": 20,
-    "36kr": 12,
+    "36kr": 14,
     "hf": 20,
     "tc": 18,
     "github": 9,
@@ -709,28 +709,6 @@
   ],
   "github": [
     {
-      "id": "gh-1128204614",
-      "title": "1jehuang/jcode — Coding Agent Harness",
-      "summary": "Coding Agent Harness",
-      "date": "2026-05-24",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/1jehuang/jcode",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 6498,
-      "language": "Rust",
-      "tags": [
-        "ai",
-        "claude",
-        "cli",
-        "coding-agent",
-        "llm"
-      ]
-    },
-    {
       "id": "gh-1024554267",
       "title": "NousResearch/hermes-agent — The agent that grows with you",
       "summary": "The agent that grows with you",
@@ -742,7 +720,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 164600,
+      "stars": 164849,
       "language": "Python",
       "tags": [
         "ai",
@@ -750,6 +728,28 @@
         "ai-agents",
         "anthropic",
         "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-1124249918",
+      "title": "datawhalechina/easy-vibe — 💻 vibe coding 2026 | Your first modern Coding course for beginners to master step by step.",
+      "summary": "💻 vibe coding 2026 | Your first modern Coding course for beginners to master step by step.",
+      "date": "2026-05-24",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/datawhalechina/easy-vibe",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 14356,
+      "language": "JavaScript",
+      "tags": [
+        "agent",
+        "ai",
+        "coding",
+        "course",
+        "deepseek"
       ]
     },
     {
@@ -764,7 +764,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 142388,
+      "stars": 142414,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -775,69 +775,69 @@
       ]
     },
     {
-      "id": "gh-1025381911",
-      "title": "MemoriLabs/Memori — Memori is agent-native memory infrastructure. A LLM-agnostic layer that turns agent execution and conversation into structured, persistent state for production systems.",
-      "summary": "Memori is agent-native memory infrastructure. A LLM-agnostic layer that turns agent execution and conversation into structured, persistent state for production systems.",
+      "id": "gh-615869301",
+      "title": "mudler/LocalAI — LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "summary": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
       "date": "2026-05-24",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/MemoriLabs/Memori",
+      "url": "https://github.com/mudler/LocalAI",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 14823,
-      "language": "Python",
+      "stars": 46442,
+      "language": "Go",
       "tags": [
-        "agent",
-        "agent-memory",
-        "ai",
-        "ai-memory",
-        "aiagent"
-      ]
-    },
-    {
-      "id": "gh-614765452",
-      "title": "Significant-Gravitas/AutoGPT — AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "date": "2026-05-24",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 184483,
-      "language": "Python",
-      "tags": [
-        "agentic-ai",
         "agents",
         "ai",
-        "artificial-intelligence",
-        "autonomous-agents"
+        "api",
+        "audio-generation",
+        "decentralized"
       ]
     },
     {
-      "id": "gh-950564038",
-      "title": "CoplayDev/unity-mcp — Unity MCP acts as a bridge, allowing AI assistants (like Claude, Cursor) to interact directly with your Unity Editor via a local MCP (Model Context Protocol) Client. Give your LLM tools to manage assets, control scenes, edit scripts, and automate tasks within Unity.",
-      "summary": "Unity MCP acts as a bridge, allowing AI assistants (like Claude, Cursor) to interact directly with your Unity Editor via a local MCP (Model Context Protocol) Client. Give your LLM tools to manage assets, control scenes, edit scripts, and automate tasks within Unity.",
+      "id": "gh-828119367",
+      "title": "yamadashy/repomix — 📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "summary": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
       "date": "2026-05-24",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/CoplayDev/unity-mcp",
+      "url": "https://github.com/yamadashy/repomix",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 9927,
-      "language": "C#",
+      "stars": 25459,
+      "language": "TypeScript",
       "tags": [
         "ai",
-        "ai-integration",
         "anthropic",
-        "claude",
-        "copilot"
+        "artificial-intelligence",
+        "chatbot",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-684031003",
+      "title": "dataelement/bisheng — BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent, Unified model management, Evaluation, SFT, Dataset Management, Enterprise-level System Management, Observability and more.",
+      "summary": "BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent, Unified model management, Evaluation, SFT, Dataset Management, Enterprise-level System Management, Observability and more.",
+      "date": "2026-05-24",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/dataelement/bisheng",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 11381,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "ai",
+        "chatbot",
+        "enterprise",
+        "finetune"
       ]
     },
     {
@@ -852,7 +852,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 18442,
+      "stars": 18445,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -860,28 +860,6 @@
         "ai",
         "autonomous",
         "chatbot"
-      ]
-    },
-    {
-      "id": "gh-997390194",
-      "title": "PurpleAILAB/Decepticon — Autonomous Hacking Agent for Red Team",
-      "summary": "Autonomous Hacking Agent for Red Team",
-      "date": "2026-05-24",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/PurpleAILAB/Decepticon",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 4018,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "cybersecurity",
-        "generative-ai",
-        "hacking"
       ]
     },
     {
@@ -896,7 +874,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 77608,
+      "stars": 77614,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -904,6 +882,28 @@
         "agent-harness",
         "ai",
         "cao"
+      ]
+    },
+    {
+      "id": "gh-1159938129",
+      "title": "ZSeven-W/openpencil — The world's first open-source AI-native vector design tool and the first to feature concurrent Agent Teams. Design-as-Code. Turn prompts into UI directly on the live canvas. A modern alternative to Pencil.",
+      "summary": "The world's first open-source AI-native vector design tool and the first to feature concurrent Agent Teams. Design-as-Code. Turn prompts into UI directly on the live canvas. A modern alternative to Pencil.",
+      "date": "2026-05-24",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/ZSeven-W/openpencil",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3202,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-team",
+        "ai",
+        "claude",
+        "claude-code"
       ]
     }
   ]

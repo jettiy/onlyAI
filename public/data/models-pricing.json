@@ -1896,18 +1896,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "alibaba/tongyi-deepresearch-30b-a3b",
-    "name": "Tongyi DeepResearch 30B A3B",
-    "provider": "ALIBABA",
-    "input": 0.09,
-    "output": 0.44999999999999996,
-    "context": "131K",
-    "description": "Tongyi DeepResearch is an agentic large language model developed by Tongyi Lab, with 30 billion total parameters activating only 3 billion per token. It's optimized for long-horizon, deep information-",
-    "createdAt": 1758210804,
-    "modalities": "text->text",
-    "maxTokens": 131072
-  },
-  {
     "id": "qwen/qwen3-coder-flash",
     "name": "Qwen: Qwen3 Coder Flash",
     "provider": "QWEN",

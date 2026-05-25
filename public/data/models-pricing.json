@@ -3195,13 +3195,13 @@
     "id": "deepseek/deepseek-chat",
     "name": "DeepSeek: DeepSeek V3",
     "provider": "DEEPSEEK",
-    "input": 0.32,
-    "output": 0.8899999999999999,
-    "context": "164K",
+    "input": 0.2288,
+    "output": 0.9144,
+    "context": "131K",
     "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported ev",
     "createdAt": 1735241320,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 16000
   },
   {
     "id": "sao10k/l3.3-euryale-70b",

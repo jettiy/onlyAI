@@ -1185,7 +1185,7 @@
     "description": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively “thi",
     "createdAt": 1765389783,
     "modalities": "text+image+file->text",
-    "maxTokens": 32000
+    "maxTokens": 16384
   },
   {
     "id": "openai/gpt-5.2-pro",
@@ -1461,7 +1461,7 @@
     "description": "GPT-5.1 Chat (AKA Instant is the fast, lightweight member of the 5.1 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively “thin",
     "createdAt": 1763060302,
     "modalities": "text+image+file->text",
-    "maxTokens": 16384
+    "maxTokens": 32000
   },
   {
     "id": "openai/gpt-5.1-codex",
@@ -1485,7 +1485,7 @@
     "description": "GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex",
     "createdAt": 1763057820,
     "modalities": "text+image->text",
-    "maxTokens": 128000
+    "maxTokens": 100000
   },
   {
     "id": "moonshotai/kimi-k2-thinking",

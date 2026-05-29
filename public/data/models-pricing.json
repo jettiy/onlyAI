@@ -1380,18 +1380,6 @@
     "maxTokens": 131072
   },
   {
-    "id": "deepseek/deepseek-v3.2-speciale",
-    "name": "DeepSeek: DeepSeek V3.2 Speciale",
-    "provider": "DEEPSEEK",
-    "input": 0.28700000000000003,
-    "output": 0.431,
-    "context": "164K",
-    "description": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance. It builds on DeepSeek Sparse Attention (DSA) for efficient long-context proce",
-    "createdAt": 1764594837,
-    "modalities": "text->text",
-    "maxTokens": 163840
-  },
-  {
     "id": "deepseek/deepseek-v3.2",
     "name": "DeepSeek: DeepSeek V3.2",
     "provider": "DEEPSEEK",

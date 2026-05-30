@@ -807,13 +807,13 @@
     "id": "qwen/qwen3.5-35b-a3b",
     "name": "Qwen: Qwen3.5-35B-A3B",
     "provider": "QWEN",
-    "input": 0.13899999999999998,
+    "input": 0.14,
     "output": 1,
     "context": "262K",
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inf",
     "createdAt": 1772053822,
     "modalities": "text+image+video->text",
-    "maxTokens": null
+    "maxTokens": 262144
   },
   {
     "id": "qwen/qwen3.5-27b",
@@ -2163,13 +2163,13 @@
     "id": "openai/gpt-oss-20b",
     "name": "OpenAI: gpt-oss-20b",
     "provider": "OPENAI",
-    "input": 0.03,
+    "input": 0.029,
     "output": 0.14,
     "context": "131K",
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimiz",
     "createdAt": 1754414229,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": null
   },
   {
     "id": "anthropic/claude-opus-4.1",

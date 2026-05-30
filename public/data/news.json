@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-05-30T03:59:52.886Z",
-  "updatedAtKST": "2026. 5. 30. PM 12:59:52",
+  "updatedAt": "2026-05-30T08:34:50.709Z",
+  "updatedAtKST": "2026. 5. 30. PM 5:34:50",
   "stats": {
     "aitimes": 20,
-    "36kr": 14,
+    "36kr": 17,
     "hf": 20,
     "tc": 17,
-    "github": 11,
-    "total": 68
+    "github": 10,
+    "total": 67
   },
   "news": [
     {
@@ -697,6 +697,28 @@
   ],
   "github": [
     {
+      "id": "gh-1188521544",
+      "title": "holaboss-ai/holaOS — Your super agent for work: local-first, learn your working context in mins and never forget it.",
+      "summary": "Your super agent for work: local-first, learn your working context in mins and never forget it.",
+      "date": "2026-05-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/holaboss-ai/holaOS",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 5431,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-harness",
+        "agent-os",
+        "agentic",
+        "ai"
+      ]
+    },
+    {
       "id": "gh-1024554267",
       "title": "NousResearch/hermes-agent — The agent that grows with you",
       "summary": "The agent that grows with you",
@@ -708,7 +730,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 172960,
+      "stars": 173146,
       "language": "Python",
       "tags": [
         "ai",
@@ -716,6 +738,28 @@
         "ai-agents",
         "anthropic",
         "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-1145022970",
+      "title": "HBAI-Ltd/Toonflow-app — Toonflow 是开源一站式 AI 短剧创作工具，将小说、剧本快速转化为动画短剧。集成 AI 编剧、智能分镜、角色与视频生成，跨平台桌面端轻量部署，助力创作者低成本批量产出视觉内容。Toonflow is an open-source AI tool that turns stories and scripts into animated short dramas. Features AI scriptwriting, storyboarding, character and video generation. A cross-platform desktop app for efficient content creation.",
+      "summary": "Toonflow 是开源一站式 AI 短剧创作工具，将小说、剧本快速转化为动画短剧。集成 AI 编剧、智能分镜、角色与视频生成，跨平台桌面端轻量部署，助力创作者低成本批量产出视觉内容。Toonflow is an open-source AI tool that turns stories and scripts into animated short dramas. Features AI scriptwriting, storyboarding, character and video generation. A cross-platform desktop app for efficient content creation.",
+      "date": "2026-05-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/HBAI-Ltd/Toonflow-app",
+      "category": "오픈소스",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 9147,
+      "language": "HTML",
+      "tags": [
+        "ai",
+        "ai-content-creation",
+        "ai-tool",
+        "ai-video-generation",
+        "automation"
       ]
     },
     {
@@ -730,7 +774,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 24535,
+      "stars": 24545,
       "language": "TypeScript",
       "tags": [
         "agents",
@@ -741,135 +785,91 @@
       ]
     },
     {
-      "id": "gh-1201656210",
-      "title": "MemPalace/mempalace — The best-benchmarked open-source AI memory system. And it's free.",
-      "summary": "The best-benchmarked open-source AI memory system. And it's free.",
+      "id": "gh-615869301",
+      "title": "mudler/LocalAI — LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "summary": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
       "date": "2026-05-30",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/MemPalace/mempalace",
-      "category": "오픈소스",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 53054,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "chromadb",
-        "llm",
-        "mcp",
-        "memory"
-      ]
-    },
-    {
-      "id": "gh-633262635",
-      "title": "onyx-dot-app/onyx — Open Source AI Platform - AI Chat with advanced features that works with every LLM",
-      "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
-      "date": "2026-05-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/onyx-dot-app/onyx",
+      "url": "https://github.com/mudler/LocalAI",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 29897,
-      "language": "Python",
+      "stars": 46539,
+      "language": "Go",
       "tags": [
+        "agents",
         "ai",
-        "ai-chat",
-        "chatgpt",
-        "chatui",
-        "enterprise-search"
+        "api",
+        "audio-generation",
+        "decentralized"
       ]
     },
     {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
+      "id": "gh-1147094660",
+      "title": "HKUDS/nanobot — Lightweight, open-source AI agent for your tools, chats, and workflows.",
+      "summary": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
       "date": "2026-05-30",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
+      "url": "https://github.com/HKUDS/nanobot",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 143130,
+      "stars": 43384,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Open source agentic operating system",
+      "summary": "Open source agentic operating system",
+      "date": "2026-05-30",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 18479,
       "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-810861466",
-      "title": "0xPlaygrounds/rig — ⚙️🦀 Build modular and scalable LLM Applications in Rust",
-      "summary": "⚙️🦀 Build modular and scalable LLM Applications in Rust",
-      "date": "2026-05-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/0xPlaygrounds/rig",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 7460,
-      "language": "Rust",
-      "tags": [
-        "agent",
-        "ai",
-        "artificial-intelligence",
-        "automation",
-        "generative-ai"
-      ]
-    },
-    {
-      "id": "gh-1156956890",
-      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
-      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
-      "date": "2026-05-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/zeroclaw-labs/zeroclaw",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 31638,
-      "language": "Rust",
       "tags": [
         "agent",
         "agentic",
         "ai",
-        "infra",
-        "ml"
+        "autonomous",
+        "chatbot"
       ]
     },
     {
-      "id": "gh-835975784",
-      "title": "MODSetter/SurfSense — An open source, privacy focused alternative to NotebookLM for teams with no data limits. Join our Discord: https://discord.gg/ejRNvftDp9",
-      "summary": "An open source, privacy focused alternative to NotebookLM for teams with no data limits. Join our Discord: https://discord.gg/ejRNvftDp9",
+      "id": "gh-944080744",
+      "title": "pipeshub-ai/pipeshub-ai — PipesHub is a fully extensible and explainable workplace AI platform for enterprise search and workflow automation",
+      "summary": "PipesHub is a fully extensible and explainable workplace AI platform for enterprise search and workflow automation",
       "date": "2026-05-30",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/MODSetter/SurfSense",
-      "category": "오픈소스",
+      "url": "https://github.com/pipeshub-ai/pipeshub-ai",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 14345,
+      "stars": 2918,
       "language": "Python",
       "tags": [
         "agent",
         "agents",
         "ai",
-        "chrome-extension",
-        "extension"
+        "drive",
+        "glean"
       ]
     },
     {
@@ -884,7 +884,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 77959,
+      "stars": 77969,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -895,47 +895,25 @@
       ]
     },
     {
-      "id": "gh-1053598893",
-      "title": "looplj/axonhub — ⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
-      "summary": "⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
+      "id": "gh-1020144870",
+      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
       "date": "2026-05-30",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/looplj/axonhub",
-      "category": "모델 출시",
+      "url": "https://github.com/archestra-ai/archestra",
+      "category": "연구·논문",
       "lang": "en",
       "isGithub": true,
-      "stars": 4051,
-      "language": "Go",
+      "stars": 3757,
+      "language": "TypeScript",
       "tags": [
+        "a2a",
+        "a2a-mcp",
+        "acp",
         "agent",
-        "agents",
-        "ai",
-        "anthropic",
-        "anthropic-api"
-      ]
-    },
-    {
-      "id": "gh-974157595",
-      "title": "ModelEngine-Group/nexent — Nexent is a zero-code platform for auto-generating production-grade AI agents using Harness Engineering principles — unified tools, skills, memory, and orchestration with built-in constraints, feedback loops, and control planes.",
-      "summary": "Nexent is a zero-code platform for auto-generating production-grade AI agents using Harness Engineering principles — unified tools, skills, memory, and orchestration with built-in constraints, feedback loops, and control planes.",
-      "date": "2026-05-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/ModelEngine-Group/nexent",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 4771,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-rag",
-        "agentic-workflow"
+        "ai"
       ]
     }
   ]

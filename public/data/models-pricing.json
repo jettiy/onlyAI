@@ -3804,18 +3804,6 @@
     "maxTokens": 4096
   },
   {
-    "id": "mistralai/mistral-7b-instruct-v0.1",
-    "name": "Mistral: Mistral 7B Instruct v0.1",
-    "provider": "MISTRALAI",
-    "input": 0.11,
-    "output": 0.19,
-    "context": "4K",
-    "description": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length.",
-    "createdAt": 1695859200,
-    "modalities": "text->text",
-    "maxTokens": 2824
-  },
-  {
     "id": "openai/gpt-3.5-turbo-instruct",
     "name": "OpenAI: GPT-3.5 Turbo Instruct",
     "provider": "OPENAI",

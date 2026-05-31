@@ -600,30 +600,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "xiaomi/mimo-v2-omni",
-    "name": "Xiaomi: MiMo-V2-Omni",
-    "provider": "XIAOMI",
-    "input": 0.39999999999999997,
-    "output": 2,
-    "context": "262K",
-    "description": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture. It combines strong multimodal perception with agentic capability - vis",
-    "createdAt": 1773863703,
-    "modalities": "text+image+audio+video->text",
-    "maxTokens": 65536
-  },
-  {
-    "id": "xiaomi/mimo-v2-pro",
-    "name": "Xiaomi: MiMo-V2-Pro",
-    "provider": "XIAOMI",
-    "input": 1,
-    "output": 3,
-    "context": "1M",
-    "description": "MiMo-V2-Pro is Xiaomi's flagship foundation model, featuring over 1T total parameters and a 1M context length, deeply optimized for agentic scenarios. It is highly adaptable to general agent framework",
-    "createdAt": 1773863643,
-    "modalities": "text->text",
-    "maxTokens": 131072
-  },
-  {
     "id": "minimax/minimax-m2.7",
     "name": "MiniMax: MiniMax M2.7",
     "provider": "MINIMAX",
@@ -2304,30 +2280,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "mistralai/devstral-medium",
-    "name": "Mistral: Devstral Medium",
-    "provider": "MISTRALAI",
-    "input": 0.39999999999999997,
-    "output": 2,
-    "context": "131K",
-    "description": "Devstral Medium is a high-performance code generation and agentic reasoning model developed jointly by Mistral AI and All Hands AI. Positioned as a step up from Devstral Small, it achieves...",
-    "createdAt": 1752161321,
-    "modalities": "text+file->text",
-    "maxTokens": null
-  },
-  {
-    "id": "mistralai/devstral-small",
-    "name": "Mistral: Devstral Small 1.1",
-    "provider": "MISTRALAI",
-    "input": 0.09999999999999999,
-    "output": 0.3,
-    "context": "131K",
-    "description": "Devstral Small 1.1 is a 24B parameter open-weight language model for software engineering agents, developed by Mistral AI in collaboration with All Hands AI. Finetuned from Mistral Small 3.1 and...",
-    "createdAt": 1752160751,
-    "modalities": "text+file->text",
-    "maxTokens": null
-  },
-  {
     "id": "tencent/hunyuan-a13b-instruct",
     "name": "Tencent: Hunyuan A13B Instruct",
     "provider": "TENCENT",
@@ -3252,18 +3204,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "mistralai/mistral-large-2411",
-    "name": "Mistral Large 2411",
-    "provider": "MISTRALAI",
-    "input": 2,
-    "output": 6,
-    "context": "131K",
-    "description": "Mistral Large 2 2411 is an update of [Mistral Large 2](/mistralai/mistral-large) released together with [Pixtral Large 2411](/mistralai/pixtral-large-2411) It provides a significant upgrade on the pre",
-    "createdAt": 1731978685,
-    "modalities": "text+file->text",
-    "maxTokens": null
-  },
-  {
     "id": "mistralai/mistral-large-2407",
     "name": "Mistral Large 2407",
     "provider": "MISTRALAI",
@@ -3273,18 +3213,6 @@
     "description": "This is Mistral AI's flagship model, Mistral Large 2 (version mistral-large-2407). It's a proprietary weights-available model and excels at reasoning, code, JSON, chat, and more. Read the launch annou",
     "createdAt": 1731978415,
     "modalities": "text+file->text",
-    "maxTokens": null
-  },
-  {
-    "id": "mistralai/pixtral-large-2411",
-    "name": "Mistral: Pixtral Large 2411",
-    "provider": "MISTRALAI",
-    "input": 2,
-    "output": 6,
-    "context": "131K",
-    "description": "Pixtral Large is a 124B parameter, open-weight, multimodal model built on top of [Mistral Large 2](/mistralai/mistral-large-2411). The model is able to understand documents, charts and natural images.",
-    "createdAt": 1731977388,
-    "modalities": "text+image+file->text",
     "maxTokens": null
   },
   {

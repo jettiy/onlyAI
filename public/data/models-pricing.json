@@ -1692,18 +1692,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "baidu/ernie-4.5-21b-a3b-thinking",
-    "name": "Baidu: ERNIE 4.5 21B A3B Thinking",
-    "provider": "BAIDU",
-    "input": 0.07,
-    "output": 0.28,
-    "context": "131K",
-    "description": "ERNIE-4.5-21B-A3B-Thinking is Baidu's upgraded lightweight MoE model, refined to boost reasoning depth and quality for top-tier performance in logical puzzles, math, science, coding, text generation, ",
-    "createdAt": 1760048887,
-    "modalities": "text->text",
-    "maxTokens": 65536
-  },
-  {
     "id": "google/gemini-2.5-flash-image",
     "name": "Google: Nano Banana (Gemini 2.5 Flash Image)",
     "provider": "GOOGLE",
@@ -2038,18 +2026,6 @@
     "createdAt": 1755095639,
     "modalities": "text+image+file->text",
     "maxTokens": null
-  },
-  {
-    "id": "baidu/ernie-4.5-21b-a3b",
-    "name": "Baidu: ERNIE 4.5 21B A3B",
-    "provider": "BAIDU",
-    "input": 0.07,
-    "output": 0.28,
-    "context": "131K",
-    "description": "A sophisticated text-based Mixture-of-Experts (MoE) model featuring 21B total parameters with 3B activated per token, delivering exceptional multimodal understanding and generation through heterogeneo",
-    "createdAt": 1755034167,
-    "modalities": "text->text",
-    "maxTokens": 8000
   },
   {
     "id": "baidu/ernie-4.5-vl-28b-a3b",
@@ -2746,18 +2722,6 @@
     "createdAt": 1744651369,
     "modalities": "text+image+file->text",
     "maxTokens": 32768
-  },
-  {
-    "id": "alfredpros/codellama-7b-instruct-solidity",
-    "name": "AlfredPros: CodeLLaMa 7B Instruct Solidity",
-    "provider": "ALFREDPROS",
-    "input": 0.7999999999999999,
-    "output": 1.2,
-    "context": "4K",
-    "description": "A finetuned 7 billion parameters Code LLaMA - Instruct model to generate Solidity smart contract using 4-bit QLoRA finetuning provided by PEFT library.",
-    "createdAt": 1744641874,
-    "modalities": "text->text",
-    "maxTokens": 4096
   },
   {
     "id": "meta-llama/llama-4-maverick",

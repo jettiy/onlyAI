@@ -1008,6 +1008,18 @@
     "maxTokens": 262144
   },
   {
+    "id": "upstage/solar-pro-3",
+    "name": "Upstage: Solar Pro 3",
+    "provider": "UPSTAGE",
+    "input": 0.15,
+    "output": 0.6,
+    "context": "128K",
+    "description": "Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 102B total parameters and 12B active parameters per forward pass, it delivers exceptional performance while maintaining ",
+    "createdAt": 1769481200,
+    "modalities": "text->text",
+    "maxTokens": null
+  },
+  {
     "id": "minimax/minimax-m2-her",
     "name": "MiniMax: MiniMax M2-her",
     "provider": "MINIMAX",

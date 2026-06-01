@@ -1371,13 +1371,13 @@
     "id": "deepseek/deepseek-v3.2",
     "name": "DeepSeek: DeepSeek V3.2",
     "provider": "DEEPSEEK",
-    "input": 0.252,
-    "output": 0.378,
+    "input": 0.2288,
+    "output": 0.3432,
     "context": "131K",
     "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fin",
     "createdAt": 1764594642,
     "modalities": "text->text",
-    "maxTokens": 65536
+    "maxTokens": 64000
   },
   {
     "id": "prime-intellect/intellect-3",
@@ -2175,13 +2175,13 @@
     "id": "qwen/qwen3-30b-a3b-instruct-2507",
     "name": "Qwen: Qwen3 30B A3B Instruct 2507",
     "provider": "QWEN",
-    "input": 0.09,
-    "output": 0.3,
-    "context": "262K",
+    "input": 0.0428,
+    "output": 0.1716,
+    "context": "131K",
     "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quali",
     "createdAt": 1753806965,
     "modalities": "text->text",
-    "maxTokens": 262144
+    "maxTokens": 32000
   },
   {
     "id": "z-ai/glm-4.5",
@@ -2892,18 +2892,6 @@
     "maxTokens": null
   },
   {
-    "id": "google/gemini-2.0-flash-lite-001",
-    "name": "Google: Gemini 2.0 Flash Lite",
-    "provider": "GOOGLE",
-    "input": 0.075,
-    "output": 0.3,
-    "context": "1M",
-    "description": "Gemini 2.0 Flash Lite offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemin",
-    "createdAt": 1740506212,
-    "modalities": "text+image+file+audio+video->text",
-    "maxTokens": 8192
-  },
-  {
     "id": "mistralai/mistral-saba",
     "name": "Mistral: Saba",
     "provider": "MISTRALAI",
@@ -2938,18 +2926,6 @@
     "createdAt": 1739372611,
     "modalities": "text+file->text",
     "maxTokens": 100000
-  },
-  {
-    "id": "google/gemini-2.0-flash-001",
-    "name": "Google: Gemini 2.0 Flash",
-    "provider": "GOOGLE",
-    "input": 0.09999999999999999,
-    "output": 0.39999999999999997,
-    "context": "1M",
-    "description": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro",
-    "createdAt": 1738769413,
-    "modalities": "text+image+file+audio+video->text",
-    "maxTokens": 8192
   },
   {
     "id": "aion-labs/aion-1.0",
@@ -3123,8 +3099,8 @@
     "id": "deepseek/deepseek-chat",
     "name": "DeepSeek: DeepSeek V3",
     "provider": "DEEPSEEK",
-    "input": 0.2288,
-    "output": 0.9144,
+    "input": 0.20020000000000002,
+    "output": 0.8000999999999999,
     "context": "131K",
     "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported ev",
     "createdAt": 1735241320,

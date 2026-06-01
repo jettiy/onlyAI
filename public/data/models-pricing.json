@@ -9,7 +9,7 @@
     "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
     "createdAt": 1780245374,
     "modalities": "text+image+video->text",
-    "maxTokens": 131072
+    "maxTokens": 512000
   },
   {
     "id": "stepfun/step-3.7-flash",
@@ -387,13 +387,13 @@
     "id": "tencent/hy3-preview",
     "name": "Tencent: Hy3 preview",
     "provider": "TENCENT",
-    "input": 0.063,
-    "output": 0.21,
+    "input": 0.06599999999999999,
+    "output": 0.26,
     "context": "262K",
     "description": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes",
     "createdAt": 1776878150,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 262144
   },
   {
     "id": "xiaomi/mimo-v2.5-pro",
@@ -501,7 +501,7 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work ",
     "createdAt": 1775578025,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 131072
   },
   {
     "id": "google/gemma-4-26b-a4b-it",
@@ -952,12 +952,12 @@
     "name": "Z.ai: GLM 5",
     "provider": "Z-AI",
     "input": 0.6,
-    "output": 1.92,
+    "output": 2.08,
     "context": "203K",
     "description": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on l",
     "createdAt": 1770829182,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 16384
   },
   {
     "id": "qwen/qwen3-max-thinking",

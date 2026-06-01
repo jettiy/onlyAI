@@ -1,17 +1,101 @@
 {
-  "updatedAt": "2026-05-31T19:26:07.078Z",
-  "updatedAtKST": "2026. 6. 1. AM 4:26:07",
+  "updatedAt": "2026-06-01T04:56:19.796Z",
+  "updatedAtKST": "2026. 6. 1. PM 1:56:19",
   "stats": {
     "aitimes": 20,
-    "36kr": 15,
+    "36kr": 16,
     "hf": 20,
     "tc": 18,
-    "github": 11,
-    "total": 69
+    "github": 9,
+    "total": 67
   },
   "news": [
     {
-      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=211155",
+      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=211175",
+      "title": "MS, 코딩·에이전트 기능 통합한 '코파일럿 슈퍼 앱' 개발 중",
+      "summary": "마이크로소프트(MS)가 분산된 다양한 코파일럿(Copilot) 서비스를 하나로 통합하는 '코파일럿 슈퍼 앱(Super App)' 개발에 나선 것으로 알려졌다. 코딩 지원부터 업무 협업, AI 에이전트 기능까지 하나의 인터페이스에서 제공하는 것이 목표다.29일(현지시간) 포춘에 따르면, MS는 내부적으로 '딜리버링 원 코파일럿(Delivering One Co",
+      "date": "2026-06-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211175",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=211174",
+      "title": "네이버, 드론 플랫폼 유비파이에 투자...\"피지컬 AI 생태계 확장\"",
+      "summary": "유비파이(대표 임현)는 네이버로부터 투자를 유치하고 전략적 파트너십을 체결했다고 1일 밝혔다. 투자 액수는 공개하지 않았다.유비파이의 드론 군집비행 기술 및 자율비행 플랫폼에 네이버의 AI·클라우드·디지털 트윈 기술을 접목해 공공 드론 시장 공략을 본격화할 계획이다.드론이 현실 세계의 데이터를 실시간으로 인지하고 스스로 판단하는 피지컬 AI 인프라를 구축해",
+      "date": "2026-06-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211174",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=211165",
+      "title": "오픈AI, 바이오 안보 프로젝트 시동…'GPT-로절린드' 제한적 공개",
+      "summary": "오픈AI가 바이오 안보와 생명과학 위한 새로운 AI 이니셔티브를 공개하며 첨단 AI를 활용한 공중보건 및 생물방어 역량 강화에 본격적으로 나섰다. 특히, 사이버보안 분야의 '미소스'나 'GPT-5.5-사이버'와 유사한 개념의 생명과학 특화 AI 모델 ‘GPT-로절린드(GPT-Rosalind)’를 공개했다.오픈AI는 29일(현지시간) 새로운 생물 방어 프로그",
+      "date": "2026-06-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211165",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=211150",
+      "title": "KAIST, AI대학 비전 선포식 개최…”AI 대학 자문단 출범”",
+      "summary": "한국과학기술원(KAIST, 총장 이광형)은 학술문화관(E9) 5층 정근모컨퍼런스홀에서 ‘KAIST AI대학 비전선포식’을 개최했다고 1일 밝혔다.비전선포식은 이광형 KAIST 총장의 환영사로 시작됐다.이어 배경훈 부총리 겸 과학기술정보통신부 장관이 기조강연을 통해 AI 시대 핵심 인재 양성과 교육 혁신 방향을 제시했다. 배경훈 부총리는 “AI가 생성의 단계",
+      "date": "2026-06-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211150",
+      "category": "투자·기업",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=211121",
+      "title": "AI 콘텐츠 OS ‘크리어스’, 오픈AI 협업 트랙 ‘열림’ 프로그램 선정",
+      "summary": "AI 콘텐츠 OS ‘크리어스(CREUS)’를 운영하는 프롬랩스(대표 강동훈)가 중소벤처기업부·창업진흥원이 주관하는 ‘2026 어라운드X(AroundX) 글로벌 기업 협업 프로그램’의 오픈AI 협업 트랙 참여 기업으로 선정됐다고 1일 밝혔다. 이에 지난 15일 오리엔테이션을 시작으로 본격적인 프로그램 활동에 돌입했다.어라운드X는 정부와 글로벌 기업이 손잡고 ",
+      "date": "2026-06-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211121",
+      "category": "투자·기업",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-11-https://www.aitimes.com/news/articleView.html?idxno=211156",
+      "title": "업스테이지, 독파모 '중간 모델'로 국내 첫 AA 40점대 돌파",
+      "summary": "업스테이지(대표 김성훈)는 독자 파운데이션 모델 프로젝트 2차 평가를 앞두고 개발 중인 ‘솔라(Solar-Preview)’가 글로벌 AI 모델 성능 평가 지표인 ‘아티피셜 애널리시스(AA) 인덱스’ 40점을 돌파했다.김성훈 업스테이지 대표는 31일 개인 페이스북 계정을 통해 업스테이지 컨소시엄의 독자 AI 모델 성능 지표를 공개했다.이는 6월 말에 공개 예",
+      "date": "2026-06-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211156",
+      "category": "로봇·자율주행",
+      "lang": "ko"
+    },
+    {
+      "id": "hf-0-https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
+      "title": "Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action",
+      "summary": "",
+      "date": "2026-06-01",
+      "source": "Hugging Face",
+      "sourceLang": "en",
+      "sourceFlag": "🤗",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=211155",
       "title": "“춤추는 젠슨 황, CEO 같지 않아”…직원 행사 영상 또 화제",
       "summary": "Jensen Huang is out there living his best life, dancing at the NVIDIA all-employee celebration event in Taipei, TaiwanYou'd never guess he's the CEO pic.twitter.com/LsLTsMfPqd— Mario Nawfal (@MarioNaw",
       "date": "2026-05-31",
@@ -23,7 +107,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=211152",
+      "id": "aitimes-13-https://www.aitimes.com/news/articleView.html?idxno=211152",
       "title": "“단순 감지 넘어 맥락까지 본다”…그렙, 시험감독 기술에 ‘에이전트’ 도입",
       "summary": "AI 테스팅 전문 그렙(대표 임성수)은 온라인 시험 감독 솔루션 '모니토'에 에이전트 시스템을 도입, 정확도를 향상했다고 31일 밝혔다.AI 시험감독 모니토는 ▲시선 추적 ▲얼굴 인증 ▲화면 복제 및 듀얼 모니터 사용 방지 등 AI 기반 부정행위 방지 기술과 ▲웹캠과 모바일, 화면 공유를 통한 3채널 실시간 모니터링 기능을 갖춘 온라인 시험 감독 솔루션이다",
       "date": "2026-05-31",
@@ -35,7 +119,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=211153",
+      "id": "aitimes-14-https://www.aitimes.com/news/articleView.html?idxno=211153",
       "title": "오픈 모델, 폐쇄형에 4개월 뒤져…에포크 \"격차 다시 확대\"",
       "summary": "개방형 AI 모델과 폐쇄형 모델 간 성능 격차가 올해 들어 다시 소폭 벌어진 것으로 나타났다. 다만 격차는 여전히 수개월 수준에 그쳤다.비영리 연구 기관인 에포크 AI(Epoch AI)는 29일(현지시간) 보고서를 통해 최고 수준의 오픈웨이트 모델이 최고 수준의 폐쇄형 모델보다 평균 4개월 정도 뒤처져 있다고 밝혔다.이번 분석은 자체 개발한 '에포크 역량 ",
       "date": "2026-05-31",
@@ -47,7 +131,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=211151",
+      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=211151",
       "title": "“AI 서버 구축 전 미리 성능 검증”…KAIST, LLM 인프라 시뮬레이터 개발",
       "summary": "AI 인프라의 성능과 효율을 미리 테스트하고 검증해 볼 수 있는 ‘AI 가상 실험장’ 개발에 성공했다. 한국과학기술원(KAIST, 총장 이광형)은 박종세 전산학부 교수 연구팀이 개발한 대형언어모델(LLM) 서비스 인프라 시뮬레이터 연구가 국제적인 컴퓨터 시스템 학회 ‘ISPASS 2026’에서 최우수 논문상을 받았다고 31일 밝혔다.연구팀이 개발한 인프라 ",
       "date": "2026-05-31",
@@ -59,7 +143,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=211149",
+      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=211149",
       "title": "가우디오랩, 'AI 오디오'로 모빌리티 시장 조준...\"차량용 사운드 고도화\"",
       "summary": "가우디오랩(대표 오현오)은 최근 자동차 전장 전문 모트렉스와 AI 오디오 기술 탑재 ‘차량용 인포테인먼트 사운드 솔루션 고도화’ MOU를 체결, 모빌리티 산업 진출을 확장한다고 31일 밝혔다.모트렉스는 가우디오랩의 AI 오디오 원천기술을 차량용 IVI(In-Vehicle Infortainment) 양산 제품에 적용하기 위한 기술 협력을 추진한다. 완성차 고",
       "date": "2026-05-31",
@@ -71,7 +155,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=211144",
+      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=211144",
       "title": "소프트뱅크, 프랑스에 최대 131조 투자…유럽 최대 AI 인프라 구축",
       "summary": "일본 소프트뱅크가 프랑스에 최대 750억유로(약 131조원)의 AI 데이터센터 인프라를 구축하는 초대형 투자 계획을 발표했다. 계획이 현실화하면 유럽 최대 규모의 AI 데이터센터 프로젝트가 탄생하게 된다.30일(현지시간) 라트리뷴 에 따르면, 소프트뱅크는 프랑스 북부 오드프랑스 지역을 중심으로 2031년까지 450억유로(약 79조원)를 우선 투자해 총 3.",
       "date": "2026-05-31",
@@ -83,7 +167,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=211148",
+      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=211148",
       "title": "[기고] 한국딥러닝 “제조 AI 보안의 핵심: 원문은 이해하되, 활용은 통제하라”",
       "summary": "■ 제조 문서를 AI가 읽는 순간, 보안은 생산 경쟁력의 문제가 된다기업 AI 도입 논의에서 가장 먼저 등장하는 질문은 대부분 ‘성능’입니다. 문서를 얼마나 정확하게 읽는가, 업무를 얼마나 빠르게 처리하는가, 사람이 검토하던 과정을 얼마나 줄일 수 있는가가 주요 평가 기준이 됩니다. 그러나, 실제 제조 현장에 들어가면 질문은 곧 달라집니다. 이 문서를 AI",
       "date": "2026-05-31",
@@ -95,7 +179,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=211142",
+      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=211142",
       "title": "엔비디아, PC CPU 시장 본격 진출…MS와 첫 ‘윈도우 AI PC’ 선보인다",
       "summary": "AI 칩 시장을 주도하고 있는 엔비디아가 본격적으로 PC 프로세서 시장에 진출한다. 마이크로소프트(MS)와 손잡고 자사 칩을 메인 프로세서로 탑재한 첫 윈도우 PC를 공개할 예정이다.30일(현지시간) 악시오스에 따르면, 엔비디아와 MS는 다음 주 대만에서 열리는 '컴퓨텍스 2026'과 미국 샌프란시스코에서 개최되는 'MS 빌드 2026'에서 공동 개발한 차",
       "date": "2026-05-31",
@@ -107,7 +191,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-9-https://www.aitimes.com/news/articleView.html?idxno=211146",
+      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=211146",
       "title": "아마존, 베드록 플랫폼에 ‘그록’ 추가 협상 중...\"주요 모델 다 모은다\"",
       "summary": "아마존웹서비스(AWS)가 AI 모델 ‘그록(Grok)’을 자체 생성 AI 플랫폼에 추가하는 방안을 추진하는 것으로 알려졌다. AWS는 AI 모델 선택지를 더 확대하게 되고, 머스크의 AI 사업은 수백만명의 기업 고객에게 접근할 수 있는 새로운 유통망을 확보하게 될 기회다.29일(현지시간) 비즈니스 인사이더에 따르면, AWS는 스페이스X의 그록을 자체 AI ",
       "date": "2026-05-31",
@@ -119,7 +203,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=211147",
+      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=211147",
       "title": "CNN, 퍼플렉시티에 저작권 소송…“수천 건 콘텐츠 무단 복제”",
       "summary": "미국의 뉴스 채널 CNN이 퍼플렉시티를 상대로 저작권 침해 소송을 제기했다. 로이터에 따르면, CNN은 28일(현지시간) 뉴욕 연방지방법원에 제출한 소장에서 퍼플렉시티가 자사의 기사, 영상, 이미지 등 수천 건의 콘텐츠를 무단으로 복제해 AI 서비스 운영에 활용하고 있다고 주장했다.또 퍼플렉시티가 CNN의 보도 내용을 기반으로 원본과 동일하거나 실질적으로 ",
       "date": "2026-05-31",
@@ -131,7 +215,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=211145",
+      "id": "aitimes-24-https://www.aitimes.com/news/articleView.html?idxno=211145",
       "title": "\"미국 제재에 오히려 감사\"…화웨이의 역설, 반도체 자립 가속화 자신감",
       "summary": "화웨이가 미국의 반도체 제재가 오히려 중국 반도체 산업 성장의 촉매제가 됐다며 \"감사하다\"는 입장을 밝혔다. 수년간 이어진 기술 봉쇄가 오히려 중국 기업들의 연구개발 투자와 독자 기술 확보를 자극했다는 주장이다.쉬즈쥔 화웨이 순환 회장 겸 부회장인 지난주 차세대 반도체 기술과 관련한 인터뷰에서 \"미국이 중국 기업과 산업을 압박하지 않았다면 지금과 같은 변화",
       "date": "2026-05-31",
@@ -143,7 +227,19 @@
       "lang": "ko"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/05/31/making-sense-of-the-debate-over-ai-psychosis/",
+      "id": "tc-0-https://techcrunch.com/2026/05/31/erin-brockovich-takes-aim-at-data-center-secrecy/",
+      "title": "Erin Brockovich takes aim at data center secrecy",
+      "summary": "Environmental activist Erin Brockovich has a new mission.",
+      "date": "2026-05-31",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/05/31/erin-brockovich-takes-aim-at-data-center-secrecy/",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/05/31/making-sense-of-the-debate-over-ai-psychosis/",
       "title": "Making sense of the debate over AI psychosis",
       "summary": "On the latest episode of Equity, we debate whether tech CEOs are \"uniquely prone to AI psychosis.\"",
       "date": "2026-05-31",
@@ -155,7 +251,7 @@
       "lang": "en"
     },
     {
-      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=211141",
+      "id": "aitimes-31-https://www.aitimes.com/news/articleView.html?idxno=211141",
       "title": "메타, ‘AI 펜던트’ 개발 착수…AI 안경 라인업도 대폭 추가",
       "summary": "메타가 내년에 새로운 AI 펜던트를 추가하고 AI 안경 제품군을 대폭 확장할 것으로 밝혀졌다. 하드웨어 사업 강화로 수익을 확대하고 자체 AI 모델 활용도를 극대화하려는 의도다.디 인포메이션은 29일(현지시간) 알렉스 히멜 메타 웨어러블 부문 부사장이 작성한 내부 메모를 입수, 웨어러블 기기 로드맵을 공개했다.이에 따르면, 히멜 부사장은 메타의 AI 모델과",
       "date": "2026-05-30",
@@ -167,7 +263,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=211139",
+      "id": "aitimes-32-https://www.aitimes.com/news/articleView.html?idxno=211139",
       "title": "구글, AI 검색에 ‘사용자 선호 소스’ 기능 도입...\"맞춤형 콘텐츠 강화\"",
       "summary": "구글이 AI 검색에서도 사용자가 신뢰하는 출처와 고품질 콘텐츠를 쉽게 발견할 수 있도록 돕는 새로운 업데이트를 발표했다.구글은 27일(현지시간) AI 개요와 AI 모드에서 사용자가 즐겨 찾는 웹사이트를 지정할 수 있는 '선호 소스(Preferred Sources)’ 기능을 추가했다.사용자가 검색 개인 설정에서 소스 기본 설정을 찾아 자주 방문하거나 신뢰하는",
       "date": "2026-05-30",
@@ -179,7 +275,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=211138",
+      "id": "aitimes-33-https://www.aitimes.com/news/articleView.html?idxno=211138",
       "title": "\"페인트 모션 후 라보나 킥\"…현대차, RL로 구현한 휴머노이드 제어 기술 공개",
       "summary": "현대자동차가 월드컵을 앞두고 자회사 보스턴 다이내믹스의 휴머노이드 로봇 아틀라스의 축구 동작 학습 과정을 담은 '스쿨 오브 풋볼(School of Football)' 캠페인 영상을 29일 공개했다.이 중 프롤로그와 첫 번째 시리즈에 해당하는 '기초 동작'은 지난 25일 선보여 화제가 됐다. 여기에 두 번째 훈련인 '킥'과 세 번째인 '라보나 킥'를 추가했다",
       "date": "2026-05-30",
@@ -191,79 +287,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=211137",
-      "title": "[AI 이슈트렌드] 서소문 고가 붕괴·삼전닉스 ETF 여풀 속 '종전 기대감'에 출렁인 환율",
-      "summary": "AI타임스와 이스트에이드의 5월 넷째 주(5월 22일~28일) 이슈 분석 결과, 인명 사고와 주식 시장 변동성, 국제 정세 등이 키워드 상위권을 차지했다.이번 주 가장 높은 검색량을 기록한 1위는 ‘서소문 고가 붕괴(8.76%)’다.서울 서소문 고가차도 철거 현장에서 발생한 붕괴 사고로 3명이 숨졌다. 사고 직후 열차 운행에 차질이 빚어졌으며, 사고 나흘 ",
-      "date": "2026-05-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211137",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-23-https://www.aitimes.com/news/articleView.html?idxno=211132",
-      "title": "리퀴드 AI, 온디바이스용 모델 ‘LFM2.5’ 공개…환각 줄고 추론 강화",
-      "summary": "리퀴드 AI가 소비자용 하드웨어에서 실행할 수 있는 차세대 온디바이스 AI 모델을 공개했다. 리퀴드 AI는 28일(현지시간) 도구 호출과 에이전트 작업 수행에 최적화된 전문가 혼합(MoE) 모델 ‘LFM2.5-8B-A1B’를 공개했다. 새 모델은 최대 12만8000토큰의 장문 컨텍스트와 추론(reasoning) 기능을 새롭게 지원한다.LFM2.5-8B-A1",
-      "date": "2026-05-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211132",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-24-https://www.aitimes.com/news/articleView.html?idxno=211130",
-      "title": "스텝펀, ‘스텝 3.7 플래시’ 공개...\"클로드 97% 성능인데 비용은 1/9\"",
-      "summary": "스텝펀이 멀티모달 기능과 에이전트 실행 능력을 대폭 강화한 차세대 모델을 공개했다. 이 모델은 이미지 이해 기능이 처음으로 탑재됐으며, 코딩과 도구 활용, 장기 작업 수행 능력에서 전작을 크게 뛰어넘는 성능을 기록했다. 스텝펀은 29일(현지시간) 총 1980억개(198B)의 매개변수를 갖춘 희소 전문가 혼합(MoE) 기반 비전-언어 모델 ‘스텝 3.7 플래",
-      "date": "2026-05-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211130",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-26-https://www.aitimes.com/news/articleView.html?idxno=211135",
-      "title": "오픈AI, 윈도우용 코덱스에 ‘컴퓨터 유즈’ 도입…모바일 원격 제어 지원",
-      "summary": "오픈AI가 코딩 에이전트 ‘코덱스(Codex)’의 기능을 대폭 확장하며 윈도우 11 환경에서도 AI가 직접 컴퓨터를 조작할 수 있는 ‘컴퓨터 유즈(Computer Use)’ 기능을 지원하기 시작했다. 또 아이폰과 안드로이드용 챗GPT 앱을 통해 윈도우 PC에서 실행 중인 코덱스 작업을 원격으로 제어할 수 있게 되면서, 장소에 구애받지 않는 AI 개발 환경 ",
-      "date": "2026-05-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211135",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-27-https://www.aitimes.com/news/articleView.html?idxno=211129",
-      "title": "메타의 AI 학습용 '마우스 추적', 유럽 개인정보 규정 위반 논란",
-      "summary": "메타가 AI 에이전트 개발을 위해 미국 직원들의 컴퓨터 사용 기록을 광범위하게 수집하는 가운데, 해외 직원들의 이메일과 채팅 내용까지 수집 대상에 포함될 수 있다는 사실이 알려졌다. 이 때문에 유럽의 개인정보보호 규정(GDPR) 위반 논란으로 확대될 가능성이 제기됐다.로이터는 29일(현지시간) 내부 문건을 인용, 메타가 ‘모델 역량 이니셔티브(MCI·Mod",
-      "date": "2026-05-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211129",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-28-https://www.aitimes.com/news/articleView.html?idxno=211134",
-      "title": "구글, ‘나노 바나나 2·프로’ 정식 출시…\"동영상 보고 이미지 만든다\"",
-      "summary": "구글이 기업용 미디어 시장 공략을 강화하기 위해 차세대 이미지 생성 모델 ‘나노 바나나 2(Nano Banana 2)’와 ‘나노 바나나 프로(Nano Banana Pro)’를 정식 출시했다. 특히 나노 바나나 2는 텍스트와 이미지를 넘어 동영상까지 입력으로 활용하는 기능을 추가하며 멀티모달 AI 경쟁력을 강화했다.구글은 29일(현지시간) 기업용 AI 플랫폼",
-      "date": "2026-05-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211134",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "tc-1-https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/",
+      "id": "tc-2-https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/",
       "title": "SoftBank says it will invest up to €75 billion to build French data centers",
       "summary": "The goal, the firm said, is to develop and operate up to 5 gigawatts of additional data center capacity.",
       "date": "2026-05-30",
@@ -275,7 +299,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/",
+      "id": "tc-3-https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/",
       "title": "&#8216;What a joke&#8217;: Github Copilot&#8217;s new token-based billing spurs consternation among devs",
       "summary": "The golden age of Microsoft's Github Copilot appears to be at an end.",
       "date": "2026-05-30",
@@ -287,7 +311,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/05/30/meta-is-reportedly-developing-an-ai-pendant/",
+      "id": "tc-4-https://techcrunch.com/2026/05/30/meta-is-reportedly-developing-an-ai-pendant/",
       "title": "Meta is reportedly developing an AI pendant",
       "summary": "Meta seems to be making big bets on AI-powered hardware.",
       "date": "2026-05-30",
@@ -299,7 +323,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/05/30/i-put-googles-24-7-ai-assistant-gemini-spark-to-work-and-its-actually-pretty-useful/",
+      "id": "tc-5-https://techcrunch.com/2026/05/30/i-put-googles-24-7-ai-assistant-gemini-spark-to-work-and-its-actually-pretty-useful/",
       "title": "I put Google&#8217;s 24/7 AI assistant Gemini Spark to work, and it&#8217;s actually pretty useful",
       "summary": "Gemini Spark helps automate everyday tasks, from inbox summaries to local event planning, but it’s unclear why Google made it a separate product.",
       "date": "2026-05-30",
@@ -311,7 +335,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/05/30/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/",
+      "id": "tc-6-https://techcrunch.com/2026/05/30/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/",
       "title": "As the browser wars heat up, here are the hottest alternatives to Chrome and Safari in 2026",
       "summary": "We’ve compiled an overview of some of the top alternative browsers available today aiming to challenge Chrome and Safari.",
       "date": "2026-05-30",
@@ -323,7 +347,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-0-https://huggingface.co/blog/torch-profiler",
+      "id": "hf-1-https://huggingface.co/blog/torch-profiler",
       "title": "Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler",
       "summary": "",
       "date": "2026-05-29",
@@ -335,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/05/29/coders-are-refusing-to-work-without-ai-and-that-could-come-back-to-bite-them/",
+      "id": "tc-7-https://techcrunch.com/2026/05/29/coders-are-refusing-to-work-without-ai-and-that-could-come-back-to-bite-them/",
       "title": "Coders are refusing to work without AI — and that could come back to bite them",
       "summary": "While AI is helping coders produce code faster, it may not be producing better code, researchers warn. And that could cause problems down the road for them.",
       "date": "2026-05-29",
@@ -347,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/05/29/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+      "id": "tc-8-https://techcrunch.com/2026/05/29/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
       "title": "So you&#8217;ve heard these AI terms and nodded along; let&#8217;s fix that",
       "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
       "date": "2026-05-29",
@@ -359,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled/",
+      "id": "tc-9-https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled/",
       "title": "What happens when companies become too AI-pilled?",
       "summary": "The people deciding that AI can replace your job are also the ones least likely to understand what your job truly involves, according to Box founder Aaron Levie, who pointed to this as an example of &",
       "date": "2026-05-29",
@@ -371,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+      "id": "tc-10-https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
       "title": "After Nvidia&#8217;s $20B not-acqui-hire, AI chip startup Groq reportedly raising $650M",
       "summary": "Chipmaker Groq is looking to raise $650 million in internal funding as it pivots from hardware to focus more on AI inference, the process of refining the way AI models respond to prompted requests, pe",
       "date": "2026-05-29",
@@ -383,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+      "id": "tc-11-https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
       "title": "Cognition&#8217;s Scott Wu says AI coding agents shouldn&#8217;t replace humans",
       "summary": "Cognition makes Devin, the first and arguably most successful AI coding agent. But famed coder Wu says it isn't designed to supplant human programmers.",
       "date": "2026-05-29",
@@ -395,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/podcast/does-your-ceo-have-ai-psychosis-aaron-levie-thinks-most-of-them-do/",
+      "id": "tc-14-https://techcrunch.com/podcast/does-your-ceo-have-ai-psychosis-aaron-levie-thinks-most-of-them-do/",
       "title": "Does your CEO have AI psychosis? Aaron Levie thinks most of them do.",
       "summary": "The people deciding that AI can replace your job are also the ones least likely to understand what your job truly involves, according to Box founder Aaron Levie, who pointed to this as an example of &",
       "date": "2026-05-29",
@@ -407,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/05/29/kiwibits-ai-powered-bird-feeder-is-my-new-backyard-buddy/",
+      "id": "tc-15-https://techcrunch.com/2026/05/29/kiwibits-ai-powered-bird-feeder-is-my-new-backyard-buddy/",
       "title": "Kiwibit’s AI-powered bird feeder is my new backyard buddy",
       "summary": "If you're looking for a fun way to connect with nature while collecting bird species on an app like Pokémon, give this smart feeder a try.",
       "date": "2026-05-29",
@@ -419,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-15-https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+      "id": "tc-16-https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
       "title": "This chip startup just raised $135M on a bet that AI&#8217;s biggest bottleneck isn&#8217;t compute &#8212; it&#8217;s memory",
       "summary": "South Korean chip startup XCENA is betting that AI's real bottleneck is not compute, but memory.",
       "date": "2026-05-29",
@@ -431,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-16-https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+      "id": "tc-17-https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
       "title": "Glean&#8217;s top line crosses $300M as AI budget cutting becomes its major selling point",
       "summary": "The enterprise AI search startup tripled its annual revenue even as tech giants entered the category.",
       "date": "2026-05-29",
@@ -443,7 +467,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-17-https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/",
+      "id": "tc-18-https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/",
       "title": "The internet is being rebuilt for machines",
       "summary": "As AI agents move from experiments to production, AWS, Cloudflare, and others are redesigning cloud infrastructure for a future dominated by machine-generated internet traffic instead of human users.",
       "date": "2026-05-28",
@@ -455,7 +479,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-18-https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stack-ai/",
+      "id": "tc-19-https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stack-ai/",
       "title": "Asana acquires no-code agent-builder StackAI",
       "summary": "Asana will incorporate StackAI into its growing suite of AI workflow tools.",
       "date": "2026-05-28",
@@ -467,19 +491,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-19-https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/",
-      "title": "Anthropic raises $65 billion, nears $1T valuation ahead of IPO",
-      "summary": "Anthropic has closed a $65 billion Series H round at a $965 billion post-money valuation, marking what could be the AI startup's final private fundraise before a highly anticipated IPO.",
-      "date": "2026-05-28",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/",
-      "category": "투자·기업",
-      "lang": "en"
-    },
-    {
-      "id": "hf-1-https://huggingface.co/blog/ibm-research/itbench-aa",
+      "id": "hf-2-https://huggingface.co/blog/ibm-research/itbench-aa",
       "title": "ITBench-AA: Frontier Models Score Below 50% on the First Benchmark for Agentic Enterprise IT Tasks — by Artificial Analysis and IBM",
       "summary": "",
       "date": "2026-05-27",
@@ -491,7 +503,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-3-https://huggingface.co/blog/delta-weight-sync",
+      "id": "hf-4-https://huggingface.co/blog/delta-weight-sync",
       "title": "Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL",
       "summary": "",
       "date": "2026-05-27",
@@ -503,7 +515,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-4-https://huggingface.co/blog/agent-glossary",
+      "id": "hf-5-https://huggingface.co/blog/agent-glossary",
       "title": "Harness, Scaffold, and the AI Agent Terms Worth Getting Right",
       "summary": "",
       "date": "2026-05-25",
@@ -512,18 +524,6 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/agent-glossary",
       "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "hf-5-https://huggingface.co/blog/nvidia/nemotron-labs-diffusion",
-      "title": "Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models",
-      "summary": "",
-      "date": "2026-05-23",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/nvidia/nemotron-labs-diffusion",
-      "category": "모델 출시",
       "lang": "en"
     },
     {
@@ -709,32 +709,10 @@
   ],
   "github": [
     {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "date": "2026-05-31",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 24602,
-      "language": "TypeScript",
-      "tags": [
-        "agents",
-        "ai",
-        "chatbots",
-        "evals",
-        "javascript"
-      ]
-    },
-    {
       "id": "gh-1024554267",
       "title": "NousResearch/hermes-agent — The agent that grows with you",
       "summary": "The agent that grows with you",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
@@ -742,7 +720,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 174550,
+      "stars": 174949,
       "language": "Python",
       "tags": [
         "ai",
@@ -753,96 +731,10 @@
       ]
     },
     {
-      "id": "gh-656099147",
-      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
-      "summary": "Universal memory layer for AI Agents",
-      "date": "2026-05-31",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mem0ai/mem0",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 57201,
-      "language": "Python",
-      "tags": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "application",
-        "chatbots"
-      ]
-    },
-    {
-      "id": "gh-574523116",
-      "title": "f/prompts.chat — f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
-      "summary": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
-      "date": "2026-05-31",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/f/prompts.chat",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 163113,
-      "language": "HTML",
-      "tags": [
-        "ai",
-        "artificial-intelligence",
-        "awesome-list",
-        "chatgpt",
-        "chatgpt-prompts"
-      ]
-    },
-    {
-      "id": "gh-764723738",
-      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
-      "summary": "Automate browser based workflows with AI",
-      "date": "2026-05-31",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Skyvern-AI/skyvern",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 21781,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "api",
-        "automation",
-        "browser",
-        "browser-automation"
-      ]
-    },
-    {
-      "id": "gh-868173144",
-      "title": "kortix-ai/suna — The Company AI Command Center",
-      "summary": "The Company AI Command Center",
-      "date": "2026-05-31",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/kortix-ai/suna",
-      "category": "투자·기업",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 19809,
-      "language": "TypeScript",
-      "tags": [
-        "ai",
-        "ai-agents",
-        "llm"
-      ]
-    },
-    {
       "id": "gh-655515393",
       "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
       "summary": "The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
@@ -850,7 +742,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 31866,
+      "stars": 31879,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -861,54 +753,98 @@
       ]
     },
     {
-      "id": "gh-1193909050",
-      "title": "ogulcancelik/herdr — agent multiplexer that lives in your terminal.",
-      "summary": "agent multiplexer that lives in your terminal.",
-      "date": "2026-05-31",
+      "id": "gh-574523116",
+      "title": "f/prompts.chat — f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "summary": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "date": "2026-06-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/ogulcancelik/herdr",
-      "category": "에이전트",
+      "url": "https://github.com/f/prompts.chat",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 3364,
-      "language": "Rust",
+      "stars": 163130,
+      "language": "HTML",
       "tags": [
-        "agent",
-        "agent-orchestration",
         "ai",
-        "ai-agents",
-        "claude-code"
+        "artificial-intelligence",
+        "awesome-list",
+        "chatgpt",
+        "chatgpt-prompts"
       ]
     },
     {
-      "id": "gh-944080744",
-      "title": "pipeshub-ai/pipeshub-ai — PipesHub is a fully extensible and explainable workplace AI platform for enterprise search and workflow automation",
-      "summary": "PipesHub is a fully extensible and explainable workplace AI platform for enterprise search and workflow automation",
-      "date": "2026-05-31",
+      "id": "gh-626805178",
+      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
+      "summary": "Production-ready platform for agentic workflow development.",
+      "date": "2026-06-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/pipeshub-ai/pipeshub-ai",
+      "url": "https://github.com/langgenius/dify",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 2919,
-      "language": "Python",
+      "stars": 143333,
+      "language": "TypeScript",
       "tags": [
         "agent",
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-1033778670",
+      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
+      "summary": "Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
+      "date": "2026-06-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 27327,
+      "language": "TypeScript",
+      "tags": [
+        "acp",
+        "agent-team",
+        "ai",
+        "ai-agent",
+        "chat"
+      ]
+    },
+    {
+      "id": "gh-614765452",
+      "title": "Significant-Gravitas/AutoGPT — AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "date": "2026-06-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 184681,
+      "language": "Python",
+      "tags": [
+        "agentic-ai",
         "agents",
         "ai",
-        "drive",
-        "glean"
+        "artificial-intelligence",
+        "autonomous-agents"
       ]
     },
     {
       "id": "gh-643445235",
       "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
       "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
@@ -916,7 +852,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 78021,
+      "stars": 78038,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -927,25 +863,47 @@
       ]
     },
     {
-      "id": "gh-1156956890",
-      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
-      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
-      "date": "2026-05-31",
+      "id": "gh-932490533",
+      "title": "ThinkInAIXYZ/deepchat — 🐬DeepChat - A smart assistant that connects powerful AI to your personal world",
+      "summary": "🐬DeepChat - A smart assistant that connects powerful AI to your personal world",
+      "date": "2026-06-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/zeroclaw-labs/zeroclaw",
+      "url": "https://github.com/ThinkInAIXYZ/deepchat",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 5857,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-skills",
+        "ai",
+        "ai-assistant",
+        "ai-sdk"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Open source agentic operating system",
+      "summary": "Open source agentic operating system",
+      "date": "2026-06-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 31662,
-      "language": "Rust",
+      "stars": 18491,
+      "language": "TypeScript",
       "tags": [
         "agent",
         "agentic",
         "ai",
-        "infra",
-        "ml"
+        "autonomous",
+        "chatbot"
       ]
     }
   ]

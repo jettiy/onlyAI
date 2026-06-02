@@ -2352,18 +2352,6 @@
     "maxTokens": 16000
   },
   {
-    "id": "baidu/ernie-4.5-300b-a47b",
-    "name": "Baidu: ERNIE 4.5 300B A47B ",
-    "provider": "BAIDU",
-    "input": 0.28,
-    "output": 1.1,
-    "context": "131K",
-    "description": "ERNIE-4.5-300B-A47B is a 300B parameter Mixture-of-Experts (MoE) language model developed by Baidu as part of the ERNIE 4.5 series. It activates 47B parameters per token and supports text generation i",
-    "createdAt": 1751300139,
-    "modalities": "text->text",
-    "maxTokens": 12000
-  },
-  {
     "id": "mistralai/mistral-small-3.2-24b-instruct",
     "name": "Mistral: Mistral Small 3.2 24B",
     "provider": "MISTRALAI",

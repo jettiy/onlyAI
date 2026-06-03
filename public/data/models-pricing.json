@@ -1,5 +1,17 @@
 [
   {
+    "id": "qwen/qwen3.7-plus",
+    "name": "Qwen: Qwen3.7 Plus",
+    "provider": "QWEN",
+    "input": 0.39999999999999997,
+    "output": 1.5999999999999999,
+    "context": "1M",
+    "description": "Qwen3.7-Plus is a cost-effective model in Alibaba's Qwen3.7 series. It supports text and image input with text output, building on the series' text capabilities with a comprehensive upgrade to its...",
+    "createdAt": 1780491783,
+    "modalities": "text+image->text",
+    "maxTokens": 65536
+  },
+  {
     "id": "minimax/minimax-m3",
     "name": "MiniMax: MiniMax M3",
     "provider": "MINIMAX",
@@ -3348,18 +3360,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "cohere/command-r-plus-08-2024",
-    "name": "Cohere: Command R+ (08-2024)",
-    "provider": "COHERE",
-    "input": 2.5,
-    "output": 10,
-    "context": "128K",
-    "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while ",
-    "createdAt": 1724976000,
-    "modalities": "text->text",
-    "maxTokens": 4000
-  },
-  {
     "id": "cohere/command-r-08-2024",
     "name": "Cohere: Command R (08-2024)",
     "provider": "COHERE",
@@ -3367,6 +3367,18 @@
     "output": 0.6,
     "context": "128K",
     "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at ",
+    "createdAt": 1724976000,
+    "modalities": "text->text",
+    "maxTokens": 4000
+  },
+  {
+    "id": "cohere/command-r-plus-08-2024",
+    "name": "Cohere: Command R+ (08-2024)",
+    "provider": "COHERE",
+    "input": 2.5,
+    "output": 10,
+    "context": "128K",
+    "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while ",
     "createdAt": 1724976000,
     "modalities": "text->text",
     "maxTokens": 4000
@@ -3432,18 +3444,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "meta-llama/llama-3.1-70b-instruct",
-    "name": "Meta: Llama 3.1 70B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.39999999999999997,
-    "output": 0.39999999999999997,
-    "context": "131K",
-    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
-    "createdAt": 1721692800,
-    "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
     "id": "meta-llama/llama-3.1-8b-instruct",
     "name": "Meta: Llama 3.1 8B Instruct",
     "provider": "META-LLAMA",
@@ -3451,6 +3451,18 @@
     "output": 0.049999999999999996,
     "context": "131K",
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
+    "createdAt": 1721692800,
+    "modalities": "text->text",
+    "maxTokens": 16384
+  },
+  {
+    "id": "meta-llama/llama-3.1-70b-instruct",
+    "name": "Meta: Llama 3.1 70B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.39999999999999997,
+    "output": 0.39999999999999997,
+    "context": "131K",
+    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
     "createdAt": 1721692800,
     "modalities": "text->text",
     "maxTokens": 16384
@@ -3552,18 +3564,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "meta-llama/llama-3-70b-instruct",
-    "name": "Meta: Llama 3 70B Instruct",
-    "provider": "META-LLAMA",
-    "input": 0.51,
-    "output": 0.74,
-    "context": "8K",
-    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
-    "createdAt": 1713398400,
-    "modalities": "text->text",
-    "maxTokens": 8000
-  },
-  {
     "id": "meta-llama/llama-3-8b-instruct",
     "name": "Meta: Llama 3 8B Instruct",
     "provider": "META-LLAMA",
@@ -3574,6 +3574,18 @@
     "createdAt": 1713398400,
     "modalities": "text->text",
     "maxTokens": 8192
+  },
+  {
+    "id": "meta-llama/llama-3-70b-instruct",
+    "name": "Meta: Llama 3 70B Instruct",
+    "provider": "META-LLAMA",
+    "input": 0.51,
+    "output": 0.74,
+    "context": "8K",
+    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
+    "createdAt": 1713398400,
+    "modalities": "text->text",
+    "maxTokens": 8000
   },
   {
     "id": "mistralai/mixtral-8x22b-instruct",
@@ -3744,18 +3756,6 @@
     "maxTokens": 4096
   },
   {
-    "id": "openai/gpt-4",
-    "name": "OpenAI: GPT-4",
-    "provider": "OPENAI",
-    "input": 30,
-    "output": 60,
-    "context": "8K",
-    "description": "OpenAI's flagship model, GPT-4 is a large-scale multimodal language model capable of solving difficult problems with greater accuracy than previous models due to its broader general knowledge and adva",
-    "createdAt": 1685232000,
-    "modalities": "text->text",
-    "maxTokens": 4096
-  },
-  {
     "id": "openai/gpt-3.5-turbo",
     "name": "OpenAI: GPT-3.5 Turbo",
     "provider": "OPENAI",
@@ -3763,6 +3763,18 @@
     "output": 1.5,
     "context": "16K",
     "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "createdAt": 1685232000,
+    "modalities": "text->text",
+    "maxTokens": 4096
+  },
+  {
+    "id": "openai/gpt-4",
+    "name": "OpenAI: GPT-4",
+    "provider": "OPENAI",
+    "input": 30,
+    "output": 60,
+    "context": "8K",
+    "description": "OpenAI's flagship model, GPT-4 is a large-scale multimodal language model capable of solving difficult problems with greater accuracy than previous models due to its broader general knowledge and adva",
     "createdAt": 1685232000,
     "modalities": "text->text",
     "maxTokens": 4096

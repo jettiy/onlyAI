@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-04T10:05:48.168Z",
-  "updatedAtKST": "2026. 6. 4. PM 7:05:48",
+  "updatedAt": "2026-06-04T15:30:51.358Z",
+  "updatedAtKST": "2026. 6. 5. AM 12:30:51",
   "stats": {
     "aitimes": 20,
-    "36kr": 15,
+    "36kr": 14,
     "hf": 20,
-    "tc": 20,
-    "github": 8,
-    "total": 68
+    "tc": 19,
+    "github": 10,
+    "total": 69
   },
   "news": [
     {
@@ -251,7 +251,43 @@
       "lang": "ko"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/06/03/lovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says/",
+      "id": "hf-0-https://huggingface.co/blog/nvidia/fine-tuning-nemotron-35-asr",
+      "title": "How to Fine-Tune Nemotron 3.5 ASR for Your Language, Domain, or Accent",
+      "summary": "",
+      "date": "2026-06-04",
+      "source": "Hugging Face",
+      "sourceLang": "en",
+      "sourceFlag": "🤗",
+      "url": "https://huggingface.co/blog/nvidia/fine-tuning-nemotron-35-asr",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "hf-1-https://huggingface.co/blog/ServiceNow-AI/eva-bench-data",
+      "title": "EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios",
+      "summary": "",
+      "date": "2026-06-04",
+      "source": "Hugging Face",
+      "sourceLang": "en",
+      "sourceFlag": "🤗",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/eva-bench-data",
+      "category": "개발 도구",
+      "lang": "en"
+    },
+    {
+      "id": "hf-2-https://huggingface.co/blog/hf-cli-for-agents",
+      "title": "Designing the hf CLI as an agent-optimized way to work with the Hub",
+      "summary": "",
+      "date": "2026-06-04",
+      "source": "Hugging Face",
+      "sourceLang": "en",
+      "sourceFlag": "🤗",
+      "url": "https://huggingface.co/blog/hf-cli-for-agents",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/06/03/lovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says/",
       "title": "Lovable signs multiyear deal with Google Cloud to up usage 5x, source says",
       "summary": "Lovable and Google signed an expanded multiyear deal that involves a 5x expansion of Lovable's footprint on Google Cloud, and expanded access to Anthropic Claude.",
       "date": "2026-06-03",
@@ -263,7 +299,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/",
+      "id": "tc-2-https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/",
       "title": "Alphabet&#8217;s record-breaking $85B raise for Google&#8217;s AI business is a helluva good signal",
       "summary": "If Alphabet's record-breaking $85 billion stock sale signals investor appetite for AI-related offerings, we can see that investors are ready to chow.",
       "date": "2026-06-03",
@@ -275,7 +311,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/06/03/googles-dreambeans-its-weirdest-named-ai-tool-to-date-will-turn-your-life-into-a-cartoon/",
+      "id": "tc-3-https://techcrunch.com/2026/06/03/googles-dreambeans-its-weirdest-named-ai-tool-to-date-will-turn-your-life-into-a-cartoon/",
       "title": "Google&#8217;s Dreambeans, its weirdest-named AI tool to date, will turn your life into a cartoon",
       "summary": "Dreambeans is a curated list of AI-illustrated \"stories\" culled from the personal data in your Google account.",
       "date": "2026-06-03",
@@ -287,7 +323,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/06/03/amazon-will-show-ai-product-images-when-you-search-for-some-reason/",
+      "id": "tc-4-https://techcrunch.com/2026/06/03/amazon-will-show-ai-product-images-when-you-search-for-some-reason/",
       "title": "Amazon will show AI product images when you search for some reason",
       "summary": "Amazon will use visual search and AI to show AI-generated product images that match your search queries. The retailer says it will help guide users to products.",
       "date": "2026-06-03",
@@ -299,7 +335,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/06/03/these-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked/",
+      "id": "tc-5-https://techcrunch.com/2026/06/03/these-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked/",
       "title": "These two founders left Goldman and Meta to build voice AI for markets everyone else overlooked",
       "summary": "The startup's own stack for Africa and Middle East is now handling more than 17,000 calls per day.",
       "date": "2026-06-03",
@@ -311,7 +347,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/06/03/publishers-will-be-able-to-opt-out-of-ai-search-thanks-to-new-regulation/",
+      "id": "tc-6-https://techcrunch.com/2026/06/03/publishers-will-be-able-to-opt-out-of-ai-search-thanks-to-new-regulation/",
       "title": "Publishers will be able to opt out of AI Search, thanks to new regulation",
       "summary": "U.K. regulators are requiring Google offer a tool allowing website publishers to opt-out of generative AI search features. The option will be tested in the U.K. then rolled out globally.",
       "date": "2026-06-03",
@@ -323,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+      "id": "tc-7-https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
       "title": "Meta&#8217;s AI agent for WhatsApp Business is now available globally",
       "summary": "WhatsApp will charge businesses for using its AI agent based on token usage.",
       "date": "2026-06-03",
@@ -335,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+      "id": "tc-8-https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
       "title": "Coralogix raises $200M on bet that someone needs to watch the AI agents",
       "summary": "Coralogix is among a growing number of infrastructure firms betting that as AI systems move into production, demand will rise for tools that can monitor their behavior, troubleshoot failures, and prov",
       "date": "2026-06-03",
@@ -347,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-2-https://huggingface.co/blog/Hcompany/holo31",
+      "id": "hf-5-https://huggingface.co/blog/Hcompany/holo31",
       "title": "Holo3.1: Fast & Local Computer Use Agents",
       "summary": "",
       "date": "2026-06-02",
@@ -359,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
+      "id": "tc-9-https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
       "title": "Cyera eyes $12B valuation at 80x ARR multiple despite operating losses",
       "summary": "The cybersecurity company is nearing a $300 million round led by Evolution Equity Partners.",
       "date": "2026-06-02",
@@ -371,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/06/02/uber-caps-employee-ai-spending-after-blowing-through-budget-in-four-months/",
+      "id": "tc-10-https://techcrunch.com/2026/06/02/uber-caps-employee-ai-spending-after-blowing-through-budget-in-four-months/",
       "title": "Uber caps employee AI spending after blowing through budget in 4 months",
       "summary": "Uber's cutback has occurred after the company had reportedly encouraged staff to use AI as much as possible.",
       "date": "2026-06-02",
@@ -383,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/06/02/new-microsoft-tool-lets-devs-spin-up-ai-behavior-tests-using-text-descriptions/",
+      "id": "tc-11-https://techcrunch.com/2026/06/02/new-microsoft-tool-lets-devs-spin-up-ai-behavior-tests-using-text-descriptions/",
       "title": "New Microsoft tool lets devs spin up AI behavior tests using text descriptions",
       "summary": "Microsoft on Tuesday took the wraps off Adaptive Spec-driven Scoring for Evaluation and Regression Testing, an open source framework for spinning up AI evaluations.",
       "date": "2026-06-02",
@@ -395,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/06/02/martin-scorsese-becomes-the-latest-and-most-unlikely-hollywood-voice-for-ai/",
+      "id": "tc-12-https://techcrunch.com/2026/06/02/martin-scorsese-becomes-the-latest-and-most-unlikely-hollywood-voice-for-ai/",
       "title": "Martin Scorsese becomes the latest — and most unlikely — Hollywood voice for AI",
       "summary": "The caveat is that one of the world's most famous living directors is using the tech solely for storyboarding.",
       "date": "2026-06-02",
@@ -407,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/06/02/microsoft-launches-scout-an-openclaw-inspired-personal-assistant/",
+      "id": "tc-13-https://techcrunch.com/2026/06/02/microsoft-launches-scout-an-openclaw-inspired-personal-assistant/",
       "title": "Microsoft launches Scout, an OpenClaw-inspired personal assistant",
       "summary": "Launched at Build, Microsoft Scout is a new AI assistant meant to bring the power and flexibility of OpenClaw into the Microsoft 365 system.",
       "date": "2026-06-02",
@@ -419,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/06/02/google-rolls-out-fake-call-detection-to-protect-against-ai-deepfake-impersonation-scams/",
+      "id": "tc-14-https://techcrunch.com/2026/06/02/google-rolls-out-fake-call-detection-to-protect-against-ai-deepfake-impersonation-scams/",
       "title": "Google rolls out fake call detection to protect against AI deepfake impersonation scams",
       "summary": "As people increasingly refuse to answer calls from unknown numbers, scammers are shifting their tactics by spoofing trusted phone numbers and using AI deepfake technology to sound like authority figur",
       "date": "2026-06-02",
@@ -431,7 +467,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior/",
+      "id": "tc-15-https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior/",
       "title": "Microsoft offers devs a better way to control AI agent behavior",
       "summary": "The specification lets developer, compliance, and security teams define their own policies for agents to follow in portable policy files.",
       "date": "2026-06-02",
@@ -443,7 +479,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-15-https://techcrunch.com/2026/06/02/amazon-faces-class-action-lawsuit-over-ring-facial-recognition-feature/",
+      "id": "tc-16-https://techcrunch.com/2026/06/02/amazon-faces-class-action-lawsuit-over-ring-facial-recognition-feature/",
       "title": "Amazon faces class action lawsuit over Ring facial-recognition feature",
       "summary": "The class action lawsuit, filed in Seattle by Virginia resident Charles Sigwalt, claims that Ring's Familiar Faces feature stores images of passersby without consent.",
       "date": "2026-06-02",
@@ -455,7 +491,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-16-https://techcrunch.com/2026/06/02/trump-signs-narrower-executive-order-on-ai-oversight-after-industry-objections/",
+      "id": "tc-17-https://techcrunch.com/2026/06/02/trump-signs-narrower-executive-order-on-ai-oversight-after-industry-objections/",
       "title": "Trump signs narrower executive order on AI oversight after industry objections",
       "summary": "After industry objections, President Trump signed a revised AI executive order requiring only voluntary prerelease government reviews of advanced models.",
       "date": "2026-06-02",
@@ -467,7 +503,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-17-https://techcrunch.com/2026/06/02/openai-launches-new-codex-tools-for-white-collar-work/",
+      "id": "tc-18-https://techcrunch.com/2026/06/02/openai-launches-new-codex-tools-for-white-collar-work/",
       "title": "OpenAI launches new Codex tools for white-collar work",
       "summary": "OpenAI released a set of six plug-ins aimed at specific jobs: data analytics, creative production, sales, product design, equity investing, and investment banking. Available from within the Codex app,",
       "date": "2026-06-02",
@@ -479,7 +515,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-18-https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/",
+      "id": "tc-19-https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/",
       "title": "Anthropic scales Claude Mythos  to critical infrastructure in 15+ countries",
       "summary": "Anthropic is expanding Project Glasswing, its security vulnerability program, and access to Mythos to 150 organizations across 15 countries — targeting critical infrastructure in power, water, healthc",
       "date": "2026-06-02",
@@ -491,19 +527,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-19-https://techcrunch.com/2026/06/02/zerodrift-raises-10-million-to-protect-ai-models-from-themselves/",
-      "title": "ZeroDrift raises $10M to protect AI models from themselves",
-      "summary": "A new AI compliance service sits between AI models and end users to flag and replace any messages that might present a compliance problem.",
-      "date": "2026-06-02",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/02/zerodrift-raises-10-million-to-protect-ai-models-from-themselves/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-3-https://huggingface.co/blog/JetBrains/mellum2-launch",
+      "id": "hf-6-https://huggingface.co/blog/JetBrains/mellum2-launch",
       "title": "Introducing Mellum2: A 12B Mixture-of-Experts Model by JetBrains",
       "summary": "",
       "date": "2026-06-01",
@@ -515,7 +539,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-4-https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
+      "id": "hf-7-https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
       "title": "Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic",
       "summary": "",
       "date": "2026-06-01",
@@ -527,19 +551,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-5-https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
-      "title": "Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action",
-      "summary": "",
-      "date": "2026-06-01",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-6-https://huggingface.co/blog/torch-profiler",
+      "id": "hf-8-https://huggingface.co/blog/torch-profiler",
       "title": "Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler",
       "summary": "",
       "date": "2026-05-29",
@@ -551,7 +563,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-8-https://huggingface.co/blog/delta-weight-sync",
+      "id": "hf-10-https://huggingface.co/blog/delta-weight-sync",
       "title": "Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL",
       "summary": "",
       "date": "2026-05-27",
@@ -563,7 +575,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-9-https://huggingface.co/blog/agent-glossary",
+      "id": "hf-11-https://huggingface.co/blog/agent-glossary",
       "title": "Harness, Scaffold, and the AI Agent Terms Worth Getting Right",
       "summary": "",
       "date": "2026-05-25",
@@ -575,7 +587,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-10-https://huggingface.co/blog/allenai/olmoearth-v1-1",
+      "id": "hf-12-https://huggingface.co/blog/allenai/olmoearth-v1-1",
       "title": "OlmoEarth v1.1: A more efficient family of Earth observation models",
       "summary": "",
       "date": "2026-05-19",
@@ -587,7 +599,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-12-https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
+      "id": "hf-14-https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
       "title": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
       "summary": "",
       "date": "2026-05-18",
@@ -599,7 +611,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-13-https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
+      "id": "hf-15-https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
       "title": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality",
       "summary": "",
       "date": "2026-05-14",
@@ -611,7 +623,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-15-https://huggingface.co/blog/amazon/foundation-model-building-blocks",
+      "id": "hf-17-https://huggingface.co/blog/amazon/foundation-model-building-blocks",
       "title": "Building Blocks for Foundation Model Training and Inference on AWS",
       "summary": "",
       "date": "2026-05-11",
@@ -623,7 +635,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-16-https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
+      "id": "hf-18-https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
       "title": "vLLM V0 to V1: Correctness Before Corrections in RL",
       "summary": "",
       "date": "2026-05-06",
@@ -635,7 +647,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-18-https://huggingface.co/blog/ibm-granite/granite-4-1",
+      "id": "hf-20-https://huggingface.co/blog/ibm-granite/granite-4-1",
       "title": "Granite 4.1 LLMs: How They’re Built",
       "summary": "",
       "date": "2026-04-29",
@@ -647,7 +659,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-19-https://huggingface.co/blog/inference-providers-deepinfra",
+      "id": "hf-21-https://huggingface.co/blog/inference-providers-deepinfra",
       "title": "DeepInfra on Hugging Face Inference Providers 🔥",
       "summary": "",
       "date": "2026-04-29",
@@ -659,7 +671,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-20-https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+      "id": "hf-22-https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
       "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
       "summary": "",
       "date": "2026-04-28",
@@ -671,7 +683,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-21-https://huggingface.co/blog/openai-privacy-filter-web-apps",
+      "id": "hf-23-https://huggingface.co/blog/openai-privacy-filter-web-apps",
       "title": "How to build scalable web apps with OpenAI's Privacy Filter",
       "summary": "",
       "date": "2026-04-27",
@@ -683,7 +695,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-22-https://huggingface.co/blog/deepseekv4",
+      "id": "hf-24-https://huggingface.co/blog/deepseekv4",
       "title": "DeepSeek-V4: a million-token context that agents can actually use",
       "summary": "",
       "date": "2026-04-24",
@@ -695,7 +707,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-23-https://huggingface.co/blog/transformersjs-chrome-extension",
+      "id": "hf-25-https://huggingface.co/blog/transformersjs-chrome-extension",
       "title": "How to Use Transformers.js in a Chrome Extension",
       "summary": "",
       "date": "2026-04-23",
@@ -705,99 +717,9 @@
       "url": "https://huggingface.co/blog/transformersjs-chrome-extension",
       "category": "연구·논문",
       "lang": "en"
-    },
-    {
-      "id": "hf-24-https://huggingface.co/blog/tiiuae/qimma-arabic-leaderboard",
-      "title": "QIMMA قِمّة ⛰: A Quality-First Arabic LLM Leaderboard",
-      "summary": "",
-      "date": "2026-04-21",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/tiiuae/qimma-arabic-leaderboard",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-25-https://huggingface.co/blog/cybersecurity-openness",
-      "title": "AI and the Future of Cybersecurity: Why Openness Matters",
-      "summary": "",
-      "date": "2026-04-21",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/cybersecurity-openness",
-      "category": "연구·논문",
-      "lang": "en"
     }
   ],
   "github": [
-    {
-      "id": "gh-1024554267",
-      "title": "NousResearch/hermes-agent — The agent that grows with you",
-      "summary": "The agent that grows with you",
-      "date": "2026-06-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 179983,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-1033778670",
-      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
-      "summary": "Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
-      "date": "2026-06-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/iOfficeAI/AionUi",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 27556,
-      "language": "TypeScript",
-      "tags": [
-        "acp",
-        "agent-team",
-        "ai",
-        "ai-agent",
-        "chat"
-      ]
-    },
-    {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "date": "2026-06-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 24744,
-      "language": "TypeScript",
-      "tags": [
-        "agents",
-        "ai",
-        "chatbots",
-        "evals",
-        "javascript"
-      ]
-    },
     {
       "id": "gh-655515393",
       "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
@@ -810,7 +732,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 31954,
+      "stars": 32065,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -821,91 +743,201 @@
       ]
     },
     {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
+      "id": "gh-615869301",
+      "title": "mudler/LocalAI — LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "summary": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
       "date": "2026-06-04",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
-      "category": "에이전트",
+      "url": "https://github.com/mudler/LocalAI",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 143825,
-      "language": "TypeScript",
+      "stars": 46668,
+      "language": "Go",
       "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
+        "agents",
+        "ai",
+        "api",
+        "audio-generation",
+        "decentralized"
       ]
     },
     {
-      "id": "gh-897268988",
-      "title": "thesysdev/openui — The Open Standard for Generative UI",
-      "summary": "The Open Standard for Generative UI",
+      "id": "gh-1024554267",
+      "title": "NousResearch/hermes-agent — The agent that grows with you",
+      "summary": "The agent that grows with you",
       "date": "2026-06-04",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/thesysdev/openui",
-      "category": "연구·논문",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 6588,
-      "language": "TypeScript",
+      "stars": 180440,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-812044182",
+      "title": "googleapis/mcp-toolbox — MCP Toolbox for Databases is an open source MCP server for databases.",
+      "summary": "MCP Toolbox for Databases is an open source MCP server for databases.",
+      "date": "2026-06-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/googleapis/mcp-toolbox",
+      "category": "오픈소스",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 15475,
+      "language": "Go",
       "tags": [
         "agent",
         "agents",
         "ai",
-        "generative-ui",
-        "help-wanted"
+        "bigquery",
+        "clickhouse"
       ]
     },
     {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "id": "gh-522158088",
+      "title": "zhayujie/CowAgent — Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, autonomously grows with memory and knowledge. Multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
+      "summary": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, autonomously grows with memory and knowledge. Multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
       "date": "2026-06-04",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
-      "category": "에이전트",
+      "url": "https://github.com/zhayujie/CowAgent",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 78173,
-      "language": "TypeScript",
+      "stars": 45054,
+      "language": "Python",
       "tags": [
-        "agent",
-        "agent-collaboration",
-        "agent-harness",
         "ai",
-        "cao"
-      ]
-    },
-    {
-      "id": "gh-1062458369",
-      "title": "alibaba/page-agent — JavaScript in-page GUI agent. Control web interfaces with natural language.",
-      "summary": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
-      "date": "2026-06-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/alibaba/page-agent",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 18247,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "ai",
+        "ai-agent",
         "ai-agents",
-        "browser-automation",
-        "javascript"
+        "chatgpt-on-wechat",
+        "claude"
+      ]
+    },
+    {
+      "id": "gh-829640443",
+      "title": "tensorzero/tensorzero — TensorZero is an open-source LLMOps platform that unifies an LLM gateway, observability, evaluation, optimization, and experimentation.",
+      "summary": "TensorZero is an open-source LLMOps platform that unifies an LLM gateway, observability, evaluation, optimization, and experimentation.",
+      "date": "2026-06-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/tensorzero/tensorzero",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 11434,
+      "language": "Rust",
+      "tags": [
+        "ai",
+        "ai-engineering",
+        "anthropic",
+        "artificial-intelligence",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "gh-1020144870",
+      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "date": "2026-06-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/archestra-ai/archestra",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3797,
+      "language": "TypeScript",
+      "tags": [
+        "a2a",
+        "a2a-mcp",
+        "acp",
+        "agent",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Open source agentic operating system",
+      "summary": "Open source agentic operating system",
+      "date": "2026-06-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 18510,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agentic",
+        "ai",
+        "autonomous",
+        "chatbot"
+      ]
+    },
+    {
+      "id": "gh-1053598893",
+      "title": "looplj/axonhub — ⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
+      "summary": "⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.",
+      "date": "2026-06-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/looplj/axonhub",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 4136,
+      "language": "Go",
+      "tags": [
+        "agent",
+        "agents",
+        "ai",
+        "anthropic",
+        "anthropic-api"
+      ]
+    },
+    {
+      "id": "gh-622569125",
+      "title": "taishi-i/awesome-ChatGPT-repositories — A curated list of resources dedicated to open source GitHub repositories related to ChatGPT, OpenAI API, and Codex. Searchable via Claude Code skills.",
+      "summary": "A curated list of resources dedicated to open source GitHub repositories related to ChatGPT, OpenAI API, and Codex. Searchable via Claude Code skills.",
+      "date": "2026-06-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/taishi-i/awesome-ChatGPT-repositories",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3067,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agent-skills",
+        "ai",
+        "awesome",
+        "awesome-list"
       ]
     }
   ]

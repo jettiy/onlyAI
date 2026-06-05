@@ -3528,30 +3528,6 @@
     "maxTokens": 2048
   },
   {
-    "id": "sao10k/l3-euryale-70b",
-    "name": "Sao10k: Llama 3 Euryale 70B v2.1",
-    "provider": "SAO10K",
-    "input": 1.48,
-    "output": 1.48,
-    "context": "8K",
-    "description": "Euryale 70B v2.1 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). - Better prompt adherence. - Better anatomy / spatial awareness. - Adapts much better to unique and cu",
-    "createdAt": 1718668800,
-    "modalities": "text->text",
-    "maxTokens": 8192
-  },
-  {
-    "id": "nousresearch/hermes-2-pro-llama-3-8b",
-    "name": "NousResearch: Hermes 2 Pro - Llama-3 8B",
-    "provider": "NOUSRESEARCH",
-    "input": 0.14,
-    "output": 0.14,
-    "context": "8K",
-    "description": "Hermes 2 Pro is an upgraded, retrained version of Nous Hermes 2, consisting of an updated and cleaned version of the OpenHermes 2.5 Dataset, as well as a newly introduced...",
-    "createdAt": 1716768000,
-    "modalities": "text->text",
-    "maxTokens": 8192
-  },
-  {
     "id": "openai/gpt-4o-2024-05-13",
     "name": "OpenAI: GPT-4o (2024-05-13)",
     "provider": "OPENAI",

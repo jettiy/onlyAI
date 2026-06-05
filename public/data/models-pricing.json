@@ -2589,7 +2589,7 @@
     "description": "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tas",
     "createdAt": 1745878604,
     "modalities": "text->text",
-    "maxTokens": 20000
+    "maxTokens": 16384
   },
   {
     "id": "qwen/qwen3-8b",

@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-06T04:03:33.944Z",
-  "updatedAtKST": "2026. 6. 6. PM 1:03:33",
+  "updatedAt": "2026-06-06T08:41:40.752Z",
+  "updatedAtKST": "2026. 6. 6. PM 5:41:40",
   "stats": {
     "aitimes": 20,
-    "36kr": 12,
-    "hf": 20,
+    "36kr": 16,
+    "hf": 0,
     "tc": 17,
-    "github": 9,
-    "total": 66
+    "github": 10,
+    "total": 47
   },
   "news": [
     {
@@ -36,7 +36,7 @@
     },
     {
       "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=211408",
-      "title": "트럼프 행정부·오픈AI, ‘정부 지분 확보’ 초기 논의…\"다음 주 백악관 회동\"",
+      "title": "트럼프·오픈AI, ‘정부 지분 확보’ 논의…\"다음 주 백악관 회동\"",
       "summary": "트럼프 행정부가 오픈AI를 비롯한 주요 AI 기업들의 정부 지분 획득 가능성을 두고 초기 논의를 진행 중인 것이 확인됐다.미국 매체인 노터스(NOTUS)는 4일(현지시간) 미국 고위 관리들이 주요 AI 기업들과 연방 정부의 지분 일부 인수 가능성에 대해 예비 논의를 진행했다고 보도했다.소식통들에 따르면, 샘 알트먼 오픈AI CEO는 트럼프 대통령의 두 번째",
       "date": "2026-06-06",
       "source": "AI타임스",
@@ -251,18 +251,6 @@
       "lang": "ko"
     },
     {
-      "id": "hf-0-https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
-      "title": "Thousand Token Wood: shipping a multi-agent economy on a 3B model",
-      "summary": "",
-      "date": "2026-06-05",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
       "id": "tc-0-https://techcrunch.com/2026/06/05/startup-battlefield-200-applications-officially-close-in-3-days/",
       "title": "Startup Battlefield 200 applications officially close in 3 days",
       "summary": "Applications for Startup Battlefield 200 officially close on June 8, 11:59 p.m. PT. Don't wait any longer. Secure your shot at competing on the Disrupt Stage at TechCrunch Disrupt 2026 this October at",
@@ -344,42 +332,6 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/04/mira-murati-steps-back-into-the-spotlight-carefully/",
       "category": "로봇·자율주행",
-      "lang": "en"
-    },
-    {
-      "id": "hf-1-https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
-      "title": "Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI",
-      "summary": "",
-      "date": "2026-06-04",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
-      "category": "멀티모달",
-      "lang": "en"
-    },
-    {
-      "id": "hf-2-https://huggingface.co/blog/ServiceNow-AI/eva-bench-data",
-      "title": "EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios",
-      "summary": "",
-      "date": "2026-06-04",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/ServiceNow-AI/eva-bench-data",
-      "category": "개발 도구",
-      "lang": "en"
-    },
-    {
-      "id": "hf-3-https://huggingface.co/blog/hf-cli-for-agents",
-      "title": "Designing the hf CLI as an agent-optimized way to work with the Hub",
-      "summary": "",
-      "date": "2026-06-04",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/hf-cli-for-agents",
-      "category": "에이전트",
       "lang": "en"
     },
     {
@@ -501,201 +453,53 @@
       "url": "https://techcrunch.com/2026/06/03/amazon-will-show-ai-product-images-when-you-search-for-some-reason/",
       "category": "개발 도구",
       "lang": "en"
-    },
-    {
-      "id": "hf-6-https://huggingface.co/blog/Hcompany/holo31",
-      "title": "Holo3.1: Fast & Local Computer Use Agents",
-      "summary": "",
-      "date": "2026-06-02",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/Hcompany/holo31",
-      "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "hf-7-https://huggingface.co/blog/JetBrains/mellum2-launch",
-      "title": "Introducing Mellum2: A 12B Mixture-of-Experts Model by JetBrains",
-      "summary": "",
-      "date": "2026-06-01",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/JetBrains/mellum2-launch",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-8-https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
-      "title": "Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic",
-      "summary": "",
-      "date": "2026-06-01",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-9-https://huggingface.co/blog/torch-profiler",
-      "title": "Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler",
-      "summary": "",
-      "date": "2026-05-29",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/torch-profiler",
-      "category": "개발 도구",
-      "lang": "en"
-    },
-    {
-      "id": "hf-11-https://huggingface.co/blog/delta-weight-sync",
-      "title": "Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL",
-      "summary": "",
-      "date": "2026-05-27",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/delta-weight-sync",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "hf-12-https://huggingface.co/blog/agent-glossary",
-      "title": "Harness, Scaffold, and the AI Agent Terms Worth Getting Right",
-      "summary": "",
-      "date": "2026-05-25",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/agent-glossary",
-      "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "hf-13-https://huggingface.co/blog/allenai/olmoearth-v1-1",
-      "title": "OlmoEarth v1.1: A more efficient family of Earth observation models",
-      "summary": "",
-      "date": "2026-05-19",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/allenai/olmoearth-v1-1",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-15-https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
-      "title": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
-      "summary": "",
-      "date": "2026-05-18",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "hf-16-https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
-      "title": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality",
-      "summary": "",
-      "date": "2026-05-14",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
-      "category": "로봇·자율주행",
-      "lang": "en"
-    },
-    {
-      "id": "hf-18-https://huggingface.co/blog/amazon/foundation-model-building-blocks",
-      "title": "Building Blocks for Foundation Model Training and Inference on AWS",
-      "summary": "",
-      "date": "2026-05-11",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/amazon/foundation-model-building-blocks",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-19-https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
-      "title": "vLLM V0 to V1: Correctness Before Corrections in RL",
-      "summary": "",
-      "date": "2026-05-06",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-21-https://huggingface.co/blog/ibm-granite/granite-4-1",
-      "title": "Granite 4.1 LLMs: How They’re Built",
-      "summary": "",
-      "date": "2026-04-29",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-4-1",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "hf-22-https://huggingface.co/blog/inference-providers-deepinfra",
-      "title": "DeepInfra on Hugging Face Inference Providers 🔥",
-      "summary": "",
-      "date": "2026-04-29",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/inference-providers-deepinfra",
-      "category": "오픈소스",
-      "lang": "en"
-    },
-    {
-      "id": "hf-23-https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
-      "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
-      "summary": "",
-      "date": "2026-04-28",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
-      "category": "에이전트",
-      "lang": "en"
-    },
-    {
-      "id": "hf-24-https://huggingface.co/blog/openai-privacy-filter-web-apps",
-      "title": "How to build scalable web apps with OpenAI's Privacy Filter",
-      "summary": "",
-      "date": "2026-04-27",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/openai-privacy-filter-web-apps",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "hf-25-https://huggingface.co/blog/deepseekv4",
-      "title": "DeepSeek-V4: a million-token context that agents can actually use",
-      "summary": "",
-      "date": "2026-04-24",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/deepseekv4",
-      "category": "에이전트",
-      "lang": "en"
     }
   ],
   "github": [
+    {
+      "id": "gh-839037098",
+      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "date": "2026-06-06",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/mastra-ai/mastra",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 24815,
+      "language": "TypeScript",
+      "tags": [
+        "agents",
+        "ai",
+        "chatbots",
+        "evals",
+        "javascript"
+      ]
+    },
+    {
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React + Angular.  Makers of the AG-UI Protocol",
+      "date": "2026-06-06",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 32873,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai"
+      ]
+    },
     {
       "id": "gh-1024554267",
       "title": "NousResearch/hermes-agent — The agent that grows with you",
@@ -708,7 +512,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 183408,
+      "stars": 183899,
       "language": "Python",
       "tags": [
         "ai",
@@ -730,7 +534,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 6985,
+      "stars": 7000,
       "language": "Python",
       "tags": [
         "agent-memory",
@@ -752,7 +556,7 @@
       "category": "오픈소스",
       "lang": "en",
       "isGithub": true,
-      "stars": 53938,
+      "stars": 54002,
       "language": "Python",
       "tags": [
         "ai",
@@ -763,113 +567,25 @@
       ]
     },
     {
-      "id": "gh-810861466",
-      "title": "0xPlaygrounds/rig — ⚙️🦀 Build modular and scalable LLM Applications in Rust",
-      "summary": "⚙️🦀 Build modular and scalable LLM Applications in Rust",
+      "id": "gh-1147094660",
+      "title": "HKUDS/nanobot — Lightweight, open-source AI agent for your tools, chats, and workflows.",
+      "summary": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
       "date": "2026-06-06",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/0xPlaygrounds/rig",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 7539,
-      "language": "Rust",
-      "tags": [
-        "agent",
-        "ai",
-        "artificial-intelligence",
-        "automation",
-        "generative-ai"
-      ]
-    },
-    {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
-      "date": "2026-06-06",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
+      "url": "https://github.com/HKUDS/nanobot",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 144074,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "date": "2026-06-06",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 24812,
-      "language": "TypeScript",
-      "tags": [
-        "agents",
-        "ai",
-        "chatbots",
-        "evals",
-        "javascript"
-      ]
-    },
-    {
-      "id": "gh-826170402",
-      "title": "elizaOS/eliza — Open source agentic operating system",
-      "summary": "Open source agentic operating system",
-      "date": "2026-06-06",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/elizaOS/eliza",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 18514,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agentic",
-        "ai",
-        "autonomous",
-        "chatbot"
-      ]
-    },
-    {
-      "id": "gh-997390194",
-      "title": "PurpleAILAB/Decepticon — Autonomous Hacking Agent for Red Team",
-      "summary": "Autonomous Hacking Agent for Red Team",
-      "date": "2026-06-06",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/PurpleAILAB/Decepticon",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 4287,
+      "stars": 43763,
       "language": "Python",
       "tags": [
-        "agent",
         "ai",
-        "cybersecurity",
-        "generative-ai",
-        "hacking"
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
       ]
     },
     {
@@ -884,7 +600,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 78251,
+      "stars": 78256,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -892,6 +608,72 @@
         "agent-harness",
         "ai",
         "cao"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Open source agentic operating system",
+      "summary": "Open source agentic operating system",
+      "date": "2026-06-06",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 18515,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agentic",
+        "ai",
+        "autonomous",
+        "chatbot"
+      ]
+    },
+    {
+      "id": "gh-1020144870",
+      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "date": "2026-06-06",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/archestra-ai/archestra",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3805,
+      "language": "TypeScript",
+      "tags": [
+        "a2a",
+        "a2a-mcp",
+        "acp",
+        "agent",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-1182212878",
+      "title": "iOfficeAI/OfficeCLI — OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "summary": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "date": "2026-06-06",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 6234,
+      "language": "C#",
+      "tags": [
+        "agent",
+        "ai",
+        "cli",
+        "office",
+        "openclaw"
       ]
     }
   ]

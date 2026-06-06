@@ -2052,18 +2052,6 @@
     "maxTokens": null
   },
   {
-    "id": "baidu/ernie-4.5-vl-28b-a3b",
-    "name": "Baidu: ERNIE 4.5 VL 28B A3B",
-    "provider": "BAIDU",
-    "input": 0.14,
-    "output": 0.56,
-    "context": "131K",
-    "description": "A powerful multimodal Mixture-of-Experts chat model featuring 28B total parameters with 3B activated per token, delivering exceptional text and vision understanding through its innovative heterogeneou",
-    "createdAt": 1755032836,
-    "modalities": "text+image->text",
-    "maxTokens": 8000
-  },
-  {
     "id": "z-ai/glm-4.5v",
     "name": "Z.ai: GLM 4.5V",
     "provider": "Z-AI",
@@ -2518,18 +2506,6 @@
     "createdAt": 1746578513,
     "modalities": "text+image+file+audio+video->text",
     "maxTokens": 65535
-  },
-  {
-    "id": "arcee-ai/spotlight",
-    "name": "Arcee AI: Spotlight",
-    "provider": "ARCEE-AI",
-    "input": 0.18,
-    "output": 0.18,
-    "context": "131K",
-    "description": "Spotlight is a 7‑billion‑parameter vision‑language model derived from Qwen 2.5‑VL and fine‑tuned by Arcee AI for tight image‑text grounding tasks. It offers a 32 k‑token context window, enabling rich ",
-    "createdAt": 1746481552,
-    "modalities": "text+image->text",
-    "maxTokens": 65537
   },
   {
     "id": "arcee-ai/maestro-reasoning",
@@ -3555,13 +3531,13 @@
     "id": "meta-llama/llama-3-8b-instruct",
     "name": "Meta: Llama 3 8B Instruct",
     "provider": "META-LLAMA",
-    "input": 0.04,
-    "output": 0.04,
+    "input": 0.14,
+    "output": 0.14,
     "context": "8K",
     "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
     "createdAt": 1713398400,
     "modalities": "text->text",
-    "maxTokens": 8192
+    "maxTokens": null
   },
   {
     "id": "meta-llama/llama-3-70b-instruct",
@@ -3656,18 +3632,6 @@
     "context": "4K",
     "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
     "createdAt": 1706140800,
-    "modalities": "text->text",
-    "maxTokens": 4096
-  },
-  {
-    "id": "openai/gpt-4-1106-preview",
-    "name": "OpenAI: GPT-4 Turbo (older v1106)",
-    "provider": "OPENAI",
-    "input": 10,
-    "output": 30,
-    "context": "128K",
-    "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to April 2023.",
-    "createdAt": 1699228800,
     "modalities": "text->text",
     "maxTokens": 4096
   },

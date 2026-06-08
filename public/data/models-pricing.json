@@ -1284,18 +1284,6 @@
     "maxTokens": 24000
   },
   {
-    "id": "nex-agi/deepseek-v3.1-nex-n1",
-    "name": "Nex AGI: DeepSeek V3.1 Nex N1",
-    "provider": "NEX-AGI",
-    "input": 0.135,
-    "output": 0.5,
-    "context": "131K",
-    "description": "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series — a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity. Nex-N1 demonstrates competitive pe",
-    "createdAt": 1765204393,
-    "modalities": "text->text",
-    "maxTokens": 163840
-  },
-  {
     "id": "essentialai/rnj-1-instruct",
     "name": "EssentialAI: Rnj 1 Instruct",
     "provider": "ESSENTIALAI",

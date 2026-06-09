@@ -588,18 +588,6 @@
     "maxTokens": 65536
   },
   {
-    "id": "z-ai/glm-5v-turbo",
-    "name": "Z.ai: GLM 5V Turbo",
-    "provider": "Z-AI",
-    "input": 1.2,
-    "output": 4,
-    "context": "203K",
-    "description": "GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon p",
-    "createdAt": 1775061458,
-    "modalities": "text+image+video->text",
-    "maxTokens": 131072
-  },
-  {
     "id": "arcee-ai/trinity-large-thinking",
     "name": "Arcee AI: Trinity Large Thinking",
     "provider": "ARCEE-AI",
@@ -713,7 +701,7 @@
     "provider": "Z-AI",
     "input": 1.2,
     "output": 4,
-    "context": "203K",
+    "context": "262K",
     "description": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows..",
     "createdAt": 1773583573,
     "modalities": "text->text",
@@ -1305,7 +1293,7 @@
     "description": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media. It supports up to 128K tokens, processes comp",
     "createdAt": 1765207462,
     "modalities": "text+image+video->text",
-    "maxTokens": 24000
+    "maxTokens": 32768
   },
   {
     "id": "essentialai/rnj-1-instruct",
@@ -2242,18 +2230,6 @@
     "createdAt": 1753449557,
     "modalities": "text->text",
     "maxTokens": 262144
-  },
-  {
-    "id": "z-ai/glm-4-32b",
-    "name": "Z.ai: GLM 4 32B ",
-    "provider": "Z-AI",
-    "input": 0.09999999999999999,
-    "output": 0.09999999999999999,
-    "context": "128K",
-    "description": "GLM 4 32B is a cost-effective foundation language model. It can efficiently perform complex tasks and has significantly enhanced capabilities in tool use, online search, and code-related intelligent t",
-    "createdAt": 1753376617,
-    "modalities": "text->text",
-    "maxTokens": null
   },
   {
     "id": "qwen/qwen3-coder",

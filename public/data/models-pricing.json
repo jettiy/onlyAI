@@ -639,13 +639,13 @@
     "id": "minimax/minimax-m2.7",
     "name": "MiniMax: MiniMax M2.7",
     "provider": "MINIMAX",
-    "input": 0.27899999999999997,
-    "output": 1.2,
+    "input": 0.27,
+    "output": 1.08,
     "context": "205K",
     "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates ",
     "createdAt": 1773836697,
     "modalities": "text->text",
-    "maxTokens": 196608
+    "maxTokens": 131072
   },
   {
     "id": "openai/gpt-5.4-nano",
@@ -2494,18 +2494,6 @@
     "createdAt": 1746578513,
     "modalities": "text+image+file+audio+video->text",
     "maxTokens": 65535
-  },
-  {
-    "id": "arcee-ai/maestro-reasoning",
-    "name": "Arcee AI: Maestro Reasoning",
-    "provider": "ARCEE-AI",
-    "input": 0.8999999999999999,
-    "output": 3.3000000000000003,
-    "context": "131K",
-    "description": "Maestro Reasoning is Arcee's flagship analysis model: a 32 B‑parameter derivative of Qwen 2.5‑32 B tuned with DPO and chain‑of‑thought RL for step‑by‑step logic. Compared to the earlier 7 B...",
-    "createdAt": 1746481269,
-    "modalities": "text->text",
-    "maxTokens": 32000
   },
   {
     "id": "arcee-ai/virtuoso-large",

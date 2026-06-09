@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-09T15:18:30.655Z",
-  "updatedAtKST": "2026. 6. 10. AM 12:18:30",
+  "updatedAt": "2026-06-09T20:13:46.075Z",
+  "updatedAtKST": "2026. 6. 10. AM 5:13:46",
   "stats": {
     "aitimes": 20,
     "36kr": 11,
     "hf": 20,
     "tc": 18,
-    "github": 8,
-    "total": 66
+    "github": 9,
+    "total": 67
   },
   "news": [
     {
@@ -251,7 +251,19 @@
       "lang": "ko"
     },
     {
-      "id": "hf-0-https://huggingface.co/blog/mishig/spaces-agents-md",
+      "id": "hf-0-https://huggingface.co/blog/ServiceNow-AI/code-switching",
+      "title": "Can Voice Agents Handle Bilingual Customers? Benchmarking Frontier ASR on Code-Switched Speech",
+      "summary": "",
+      "date": "2026-06-09",
+      "source": "Hugging Face",
+      "sourceLang": "en",
+      "sourceFlag": "🤗",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/code-switching",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "hf-1-https://huggingface.co/blog/mishig/spaces-agents-md",
       "title": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
       "summary": "",
       "date": "2026-06-09",
@@ -263,9 +275,57 @@
       "lang": "en"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/06/09/sandstone-raises-30m-to-bring-ai-to-in-house-legal-teams/",
+      "id": "tc-0-https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/",
+      "title": "Can tech companies learn to love cheaper AI models?",
+      "summary": "If those same AI workloads can be handled by cheaper models without affecting quality, it would mean a massive shift in the economics of AI.",
+      "date": "2026-06-09",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/",
+      "title": "WWDC 2026: Everything announced on Siri AI, iOS 27, Apple Intelligence, and more",
+      "summary": "Apple primarily made the case for an improved experience with its long-standing Siri assistant, which like most other announcements had a hefty helping of AI.",
+      "date": "2026-06-09",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/",
+      "category": "로봇·자율주행",
+      "lang": "en"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
+      "title": "Anthropic&#8217;s Claude Fable 5 is a version of Mythos the public can access today",
+      "summary": "Anthropic is releasing Claude Fable 5, its first Mythos-class model available to the public. The model comes with guardrails that block responses in high-risk areas like cybersecurity and biology.",
+      "date": "2026-06-09",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/",
+      "title": "It&#8217;s not FAANG anymore. It&#8217;s MANGOS.",
+      "summary": "With SpaceX, Anthropic, and OpenAI all eyeing massive public debuts, the tech industry may soon have a new class of corporate overlords — and a new acronym to match. Say goodbye to FAANG and hello to ",
+      "date": "2026-06-09",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/06/09/sandstone-raises-30m-to-bring-ai-to-in-house-legal-teams/",
       "title": "Sandstone raises $30M to bring AI to in-house legal teams",
-      "summary": "Sandstone's Series A was led by Lightspeed Partners, with participation from Sequoia.",
+      "summary": "Sandstone's Series A comes just six months after a Sequoia-led seed round.",
       "date": "2026-06-09",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -275,7 +335,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/06/09/how-an-e-scooter-founder-raised-5-million-to-build-space-data-centers/",
+      "id": "tc-6-https://techcrunch.com/2026/06/09/how-an-e-scooter-founder-raised-5-million-to-build-space-data-centers/",
       "title": "How an e-scooter founder raised $5 million to build space data centers",
       "summary": "Orbital founder Euwyn Poon built 250,000 scooters at Spin. Now he wants to launch 10,000 space data centers.",
       "date": "2026-06-09",
@@ -287,9 +347,9 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/06/08/why-apples-slow-and-steady-ai-bet-is-starting-to-look-pretty-smart/",
+      "id": "tc-7-https://techcrunch.com/2026/06/08/why-apples-slow-and-steady-ai-bet-is-starting-to-look-pretty-smart/",
       "title": "Why Apple&#8217;s slow-and-steady AI bet is starting to look pretty smart",
-      "summary": "Can Apple's new AI glow up put to bed accusations that it's losing an all-important industry race?",
+      "summary": "Can Apple's new AI glow-up put to bed accusations that it's losing an all-important industry race?",
       "date": "2026-06-09",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -299,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/06/08/mercors-brendan-foody-calls-out-sequoia-over-dual-pricing-valuation-tricks/",
+      "id": "tc-8-https://techcrunch.com/2026/06/08/mercors-brendan-foody-calls-out-sequoia-over-dual-pricing-valuation-tricks/",
       "title": "Mercor’s Brendan Foody calls out Sequoia, accusing it of &#8216;dual-pricing&#8217; valuation tricks",
       "summary": "Sequoia is just one of the top firms that sells same equity at two different prices.",
       "date": "2026-06-09",
@@ -311,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "hf-1-https://huggingface.co/blog/openenv-agentic-rl",
+      "id": "hf-2-https://huggingface.co/blog/openenv-agentic-rl",
       "title": "The Open Source Community is backing OpenEnv for Agentic RL",
       "summary": "",
       "date": "2026-06-08",
@@ -323,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/06/08/as-openai-files-for-ipo-sam-altmans-eye-scanning-company-is-doing-layoffs-report-says/",
+      "id": "tc-9-https://techcrunch.com/2026/06/08/as-openai-files-for-ipo-sam-altmans-eye-scanning-company-is-doing-layoffs-report-says/",
       "title": "As OpenAI files for IPO, Sam Altman&#8217;s eye-scanning company is doing layoffs, report says",
       "summary": "Tools for Humanity, Sam Altman's identity verification company, is reportedly struggling to generate revenue and will downsize its staff.",
       "date": "2026-06-08",
@@ -335,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/06/08/apples-wwdc-ai-demos-looked-more-real-after-250m-false-ad-settlement/",
+      "id": "tc-10-https://techcrunch.com/2026/06/08/apples-wwdc-ai-demos-looked-more-real-after-250m-false-ad-settlement/",
       "title": "Apple&#8217;s WWDC AI demos looked more real after $250M false ad settlement",
       "summary": "The vibe of Apple's 2026 WWDC keynote felt like a spouse proudly listing all the honey-do-list items tackled. One subtle example: the many AI demos of someone standing, phone in hand.",
       "date": "2026-06-08",
@@ -347,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/",
+      "id": "tc-11-https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/",
       "title": "OpenAI files confidentially for IPO, following Anthropic",
       "summary": "The filing comes a little more than a week after its main rival, Anthropic, also filed to go public, ramping up the race between the two AI firms.",
       "date": "2026-06-08",
@@ -359,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/06/08/apple-plays-catch-up-at-wwdc/",
+      "id": "tc-12-https://techcrunch.com/2026/06/08/apple-plays-catch-up-at-wwdc/",
       "title": "Apple plays catch-up at WWDC",
       "summary": "Apple spent much of its WWDC keynote highlighting fixes, performance improvements, and long-requested features before unveiling its upgraded AI-powered Siri, signaling that the company wants users to ",
       "date": "2026-06-08",
@@ -371,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/06/08/apple-bets-cheaper-ai-will-woo-small-developers/",
+      "id": "tc-13-https://techcrunch.com/2026/06/08/apple-bets-cheaper-ai-will-woo-small-developers/",
       "title": "Apple bets cheaper AI will woo small developers",
       "summary": "As AI experimentation grows more expensive, Apple is waiving cloud API costs for developers with fewer than 2 million first-time App Store downloads.",
       "date": "2026-06-08",
@@ -383,19 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/",
-      "title": "WWDC 2026: Everything announced on Siri AI, iOS 27, Apple Intelligence and more",
-      "summary": "Apple primarily made the case for an improved experience with its longstanding Siri assistant, which like most other announcements had a hefty helping of AI.",
-      "date": "2026-06-08",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/",
-      "category": "로봇·자율주행",
-      "lang": "en"
-    },
-    {
-      "id": "tc-11-https://techcrunch.com/2026/06/08/apple-just-taught-your-iphone-to-finish-your-sentences-your-photos-and-your-workflows/",
+      "id": "tc-14-https://techcrunch.com/2026/06/08/apple-just-taught-your-iphone-to-finish-your-sentences-your-photos-and-your-workflows/",
       "title": "Apple just taught your iPhone to finish your sentences, your photos, and your workflows",
       "summary": "Apple is adding new AI-powered features to Safari, Shortcuts, and Password apps.",
       "date": "2026-06-08",
@@ -407,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/06/08/apple-will-let-you-build-workflows-using-ai-in-its-new-shortcuts-app/",
+      "id": "tc-15-https://techcrunch.com/2026/06/08/apple-will-let-you-build-workflows-using-ai-in-its-new-shortcuts-app/",
       "title": "Apple will let you build workflows using AI in its new Shortcuts app",
       "summary": "Shortcuts gets an AI upgrade, letting you describe the workflow you want in a prompt.",
       "date": "2026-06-08",
@@ -419,7 +467,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/06/08/apples-image-playground-doesnt-suck-anymore/",
+      "id": "tc-16-https://techcrunch.com/2026/06/08/apples-image-playground-doesnt-suck-anymore/",
       "title": "Apple&#8217;s Image Playground doesn&#8217;t suck anymore",
       "summary": "Apple's AI image generator is getting a makeover that could make it more competitive.",
       "date": "2026-06-08",
@@ -431,7 +479,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/06/08/apples-photos-app-is-getting-new-ai-editing-features/",
+      "id": "tc-17-https://techcrunch.com/2026/06/08/apples-photos-app-is-getting-new-ai-editing-features/",
       "title": "Apple&#8217;s Photos app is getting new AI editing features",
       "summary": "A new spatial \"Reframe\" feature will let users use AI to adjust perspectives.",
       "date": "2026-06-08",
@@ -443,7 +491,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-16-https://techcrunch.com/2026/06/08/apple-is-fixing-the-headache-of-splitting-the-bill-with-its-new-siri-in-camera-feature/",
+      "id": "tc-19-https://techcrunch.com/2026/06/08/apple-is-fixing-the-headache-of-splitting-the-bill-with-its-new-siri-in-camera-feature/",
       "title": "Apple is fixing the headache of splitting the bill with its new Siri in Camera feature",
       "summary": "\"If you're grabbing a bite with friends and point your iPhone at the bill, then [you can] select what you ordered to split the tab with Apple Cash,\" said Apple VP of Software Sebastien Marineau-Mes.",
       "date": "2026-06-08",
@@ -455,43 +503,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-17-https://techcrunch.com/2026/06/08/apples-long-awaited-ai-siri-overhaul-is-finally-here/",
-      "title": "Apple&#8217;s long-awaited AI Siri overhaul is finally here",
-      "summary": "The idea behind the new \"Siri AI\" is to turn the assistant from a voice controlled assistant into an AI companion that can do a lot more.",
-      "date": "2026-06-08",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/08/apples-long-awaited-ai-siri-overhaul-is-finally-here/",
-      "category": "개발 도구",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/",
-      "title": "Amazon now lets you design custom merch using AI",
-      "summary": "A new feature in the Amazon Shopping app allows users to generate designs with Alexa, then print them on products like T-shirts, hoodies, and tumblers.",
-      "date": "2026-06-08",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/06/08/wwdc-2026-what-to-expect-from-siris-highly-anticipated-revamp-to-apple-intelligence-and-ios-27/",
-      "title": "WWDC 2026: What to expect, from Siri&#8217;s highly anticipated revamp to Apple Intelligence and iOS 27",
-      "summary": "Apple's WWDC nears: Here's what you can look forward to.",
-      "date": "2026-06-08",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/08/wwdc-2026-what-to-expect-from-siris-highly-anticipated-revamp-to-apple-intelligence-and-ios-27/",
-      "category": "로봇·자율주행",
-      "lang": "en"
-    },
-    {
-      "id": "hf-2-https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
+      "id": "hf-3-https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
       "title": "Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI",
       "summary": "",
       "date": "2026-06-04",
@@ -500,18 +512,6 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
       "category": "멀티모달",
-      "lang": "en"
-    },
-    {
-      "id": "hf-3-https://huggingface.co/blog/ServiceNow-AI/eva-bench-data",
-      "title": "EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios",
-      "summary": "",
-      "date": "2026-06-04",
-      "source": "Hugging Face",
-      "sourceLang": "en",
-      "sourceFlag": "🤗",
-      "url": "https://huggingface.co/blog/ServiceNow-AI/eva-bench-data",
-      "category": "개발 도구",
       "lang": "en"
     },
     {
@@ -709,44 +709,22 @@
   ],
   "github": [
     {
-      "id": "gh-1024554267",
-      "title": "NousResearch/hermes-agent — The agent that grows with you",
-      "summary": "The agent that grows with you",
+      "id": "gh-626805178",
+      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
+      "summary": "Production-ready platform for agentic workflow development.",
       "date": "2026-06-09",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/NousResearch/hermes-agent",
+      "url": "https://github.com/langgenius/dify",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 188433,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-979115477",
-      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "date": "2026-06-09",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/bytedance/deer-flow",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 70818,
-      "language": "Python",
+      "stars": 144578,
+      "language": "TypeScript",
       "tags": [
         "agent",
-        "agentic",
+        "agentic-ai",
         "agentic-framework",
         "agentic-workflow",
         "ai"
@@ -764,7 +742,7 @@
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 6071,
+      "stars": 6073,
       "language": "Python",
       "tags": [
         "agentic",
@@ -775,91 +753,113 @@
       ]
     },
     {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
+      "id": "gh-633262635",
+      "title": "onyx-dot-app/onyx — Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
       "date": "2026-06-09",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
-      "category": "에이전트",
+      "url": "https://github.com/onyx-dot-app/onyx",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 144566,
-      "language": "TypeScript",
+      "stars": 30178,
+      "language": "Python",
       "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
+        "ai",
+        "ai-chat",
+        "chatgpt",
+        "chatui",
+        "enterprise-search"
       ]
     },
     {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "id": "gh-1129940957",
+      "title": "chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+      "summary": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
       "date": "2026-06-09",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
+      "url": "https://github.com/chopratejas/headroom",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 20345,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "ai",
+        "anthropic",
+        "claude-code",
+        "compression"
+      ]
+    },
+    {
+      "id": "gh-987975584",
+      "title": "langchain-ai/open-swe — An Open-Source Asynchronous Coding Agent",
+      "summary": "An Open-Source Asynchronous Coding Agent",
+      "date": "2026-06-09",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/langchain-ai/open-swe",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 24899,
-      "language": "TypeScript",
+      "stars": 9939,
+      "language": "Python",
       "tags": [
+        "agent",
         "agents",
         "ai",
-        "chatbots",
-        "evals",
-        "javascript"
+        "anthropic",
+        "claudecode"
       ]
     },
     {
-      "id": "gh-655515393",
-      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
-      "summary": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
+      "id": "gh-764723738",
+      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
+      "summary": "Automate browser based workflows with AI",
       "date": "2026-06-09",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/CopilotKit/CopilotKit",
+      "url": "https://github.com/Skyvern-AI/skyvern",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 34418,
-      "language": "TypeScript",
+      "stars": 21865,
+      "language": "Python",
       "tags": [
-        "agent",
-        "agent-native",
-        "agentic-ai",
-        "agents",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-1156956890",
-      "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
-      "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
-      "date": "2026-06-09",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/zeroclaw-labs/zeroclaw",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 31842,
-      "language": "Rust",
-      "tags": [
-        "agent",
-        "agentic",
         "ai",
-        "infra",
-        "ml"
+        "api",
+        "automation",
+        "browser",
+        "browser-automation"
+      ]
+    },
+    {
+      "id": "gh-1182212878",
+      "title": "iOfficeAI/OfficeCLI — OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "summary": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "date": "2026-06-09",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 6598,
+      "language": "C#",
+      "tags": [
+        "agent",
+        "ai",
+        "cli",
+        "office",
+        "openclaw"
       ]
     },
     {
@@ -874,7 +874,7 @@
       "category": "연구·논문",
       "lang": "en",
       "isGithub": true,
-      "stars": 3818,
+      "stars": 3820,
       "language": "TypeScript",
       "tags": [
         "a2a",
@@ -882,6 +882,28 @@
         "acp",
         "agent",
         "ai"
+      ]
+    },
+    {
+      "id": "gh-643445235",
+      "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "date": "2026-06-09",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/lobehub/lobehub",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 78421,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-collaboration",
+        "agent-harness",
+        "ai",
+        "cao"
       ]
     }
   ]

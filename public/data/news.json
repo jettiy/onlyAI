@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-10T15:52:57.054Z",
-  "updatedAtKST": "2026. 6. 11. AM 12:52:57",
+  "updatedAt": "2026-06-10T20:39:20.862Z",
+  "updatedAtKST": "2026. 6. 11. AM 5:39:20",
   "stats": {
     "aitimes": 20,
     "36kr": 10,
     "hf": 20,
     "tc": 18,
-    "github": 10,
-    "total": 68
+    "github": 9,
+    "total": 67
   },
   "news": [
     {
@@ -251,7 +251,43 @@
       "lang": "ko"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/",
+      "id": "tc-0-https://techcrunch.com/2026/06/10/fresh-off-bond-sale-amazon-borrows-17-5-billion-from-banks-as-ai-spending-continues/",
+      "title": "Fresh off bond sale, Amazon borrows $17.5B from banks as AI spending continues",
+      "summary": "Companies are burning through exorbitant sums of money to keep pace in the AI arms race. Debt is climbing.",
+      "date": "2026-06-10",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/10/fresh-off-bond-sale-amazon-borrows-17-5-billion-from-banks-as-ai-spending-continues/",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/06/10/ai-pilled-firms-spend-7500-per-employee-each-month-on-ai/",
+      "title": "‘AI-pilled’ firms spend $7,500 per employee each month on AI",
+      "summary": "The most AI-obsessed firms are spending roughly $7,500 monthly per employee on AI, per Ramp AI Index. That's not more than an engineer's salary — yet.",
+      "date": "2026-06-10",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/10/ai-pilled-firms-spend-7500-per-employee-each-month-on-ai/",
+      "category": "연구·논문",
+      "lang": "en"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/06/10/how-memory-tools-can-make-ai-models-worse/",
+      "title": "How memory tools can make AI models worse",
+      "summary": "New research suggests that AI memory systems can degrade model performance and encourage sycophantic tendencies.",
+      "date": "2026-06-10",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/10/how-memory-tools-can-make-ai-models-worse/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/",
       "title": "Cybersecurity researchers aren&#8217;t happy about the guardrails on Anthropic&#8217;s Fable",
       "summary": "Cybersecurity researchers are complaining that Anthropic's new model Fable has guardrails that are too strict for any cybersecurity work.",
       "date": "2026-06-10",
@@ -263,7 +299,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/06/10/datadog-veterans-launch-ai-coding-startup-niteshift-on-a-bet-against-big-ai-lock-in/",
+      "id": "tc-4-https://techcrunch.com/2026/06/10/datadog-veterans-launch-ai-coding-startup-niteshift-on-a-bet-against-big-ai-lock-in/",
       "title": "Datadog veterans launch AI coding startup Niteshift on a bet against Big AI lock-in",
       "summary": "AI coding agent startup Niteshift has raised a $7 million seed round from a who's who of angels. It's betting companies will want power over, not lock-in with model makers.",
       "date": "2026-06-10",
@@ -275,7 +311,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/",
+      "id": "tc-6-https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/",
       "title": "Warner Music acquires AI attribution startup Sureel AI",
       "summary": "Through the acquisition, WMG aims to better track when its artists' work is used in AI-generated content or for training AI models.",
       "date": "2026-06-10",
@@ -287,9 +323,9 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/06/10/jedify-raises-24m-to-help-companies-arm-ai-agents-with-context-on-their-business/",
+      "id": "tc-7-https://techcrunch.com/2026/06/10/jedify-raises-24m-to-help-companies-arm-ai-agents-with-context-on-their-business/",
       "title": "Jedify raises $24M to help companies arm AI agents with context on their business",
-      "summary": "The funding round was led by Norwest, with participation S Capital VC, Cerca Partners, and Oceans Ventures. Snowflake Ventures also participated as a strategic investor.",
+      "summary": "The funding round was led by Norwest, with participation from S Capital VC, Cerca Partners, and Oceans Ventures. Snowflake Ventures also participated as a strategic investor.",
       "date": "2026-06-10",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -299,7 +335,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/06/10/decarts-new-world-model-can-simulate-hours-of-photorealistic-driving-with-some-caveats/",
+      "id": "tc-8-https://techcrunch.com/2026/06/10/decarts-new-world-model-can-simulate-hours-of-photorealistic-driving-with-some-caveats/",
       "title": "Decart&#8217;s new world model can simulate hours of photorealistic driving — with some caveats",
       "summary": "Decart is launching Oasis 3, a real-time world model that generates photorealistic driving environments for autonomous vehicle testing, now available via API for developers to build on.",
       "date": "2026-06-10",
@@ -311,7 +347,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/",
+      "id": "tc-9-https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/",
       "title": "Meta signs first AI data center deal in India with Reliance",
       "summary": "The 168-megawatt facility will support Meta's global AI computing needs and can be expanded over time.",
       "date": "2026-06-10",
@@ -323,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/06/09/google-just-fired-a-warning-shot-in-the-ai-subscription-price-wars/",
+      "id": "tc-10-https://techcrunch.com/2026/06/09/google-just-fired-a-warning-shot-in-the-ai-subscription-price-wars/",
       "title": "Google just fired a warning shot in the AI subscription price wars",
       "summary": "Google just made it significantly cheaper to enjoy its budget AI subscription tier.",
       "date": "2026-06-10",
@@ -371,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-500m-into-hot-startups-without-a-traditional-vc-fund/",
+      "id": "tc-11-https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-500m-into-hot-startups-without-a-traditional-vc-fund/",
       "title": "How Justin Ernest invested nearly $500M into hot startups without a traditional VC fund",
       "summary": "Instead of spending a year raising a formal venture fund, the Sabertooth VC founder used a captive network of LPs to invest in startups like Anthropic, Anduril, and SpaceX.",
       "date": "2026-06-09",
@@ -383,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/06/09/hey-siri-heres-what-i-actually-want-from-ai/",
+      "id": "tc-12-https://techcrunch.com/2026/06/09/hey-siri-heres-what-i-actually-want-from-ai/",
       "title": "Hey, Siri, here&#8217;s what I actually want from AI",
       "summary": "I'm desperate for a personal AI assistant, but do I really want to become the kind of person who can't function without the friendly robot voice in my phone?",
       "date": "2026-06-09",
@@ -395,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/06/09/anthropics-fable-5-can-make-weirdly-fun-video-games-with-the-click-of-a-button/",
+      "id": "tc-13-https://techcrunch.com/2026/06/09/anthropics-fable-5-can-make-weirdly-fun-video-games-with-the-click-of-a-button/",
       "title": "Anthropic&#8217;s Fable 5 can make weirdly fun video games with the click of a button",
       "summary": "Anthropic's Claude Fable 5 is going to be a big hit with the web's vibe coders.",
       "date": "2026-06-09",
@@ -407,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/",
+      "id": "tc-14-https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/",
       "title": "Can tech companies learn to love cheaper AI models?",
       "summary": "If those same AI workloads can be handled by cheaper models without affecting quality, it would mean a massive shift in the economics of AI.",
       "date": "2026-06-09",
@@ -419,7 +455,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/",
+      "id": "tc-15-https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/",
       "title": "WWDC 2026: Everything announced on Siri AI, iOS 27, Apple Intelligence, and more",
       "summary": "Apple primarily made the case for an improved experience with its long-standing Siri assistant, which like most other announcements had a hefty helping of AI.",
       "date": "2026-06-09",
@@ -431,7 +467,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
+      "id": "tc-16-https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
       "title": "Anthropic&#8217;s Claude Fable 5 is a version of Mythos the public can access today",
       "summary": "Anthropic is releasing Claude Fable 5, its first Mythos-class model available to the public. The model comes with guardrails that block responses in high-risk areas like cybersecurity and biology.",
       "date": "2026-06-09",
@@ -443,7 +479,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/",
+      "id": "tc-17-https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/",
       "title": "It&#8217;s not FAANG anymore. It&#8217;s MANGOS.",
       "summary": "With SpaceX, Anthropic, and OpenAI all eyeing massive public debuts, the tech industry may soon have a new class of corporate overlords — and a new acronym to match. Say goodbye to FAANG and hello to ",
       "date": "2026-06-09",
@@ -455,7 +491,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-15-https://techcrunch.com/2026/06/09/sandstone-raises-30m-to-bring-ai-to-in-house-legal-teams/",
+      "id": "tc-18-https://techcrunch.com/2026/06/09/sandstone-raises-30m-to-bring-ai-to-in-house-legal-teams/",
       "title": "Sandstone raises $30M to bring AI to in-house legal teams",
       "summary": "Sandstone's Series A comes just six months after a Sequoia-led seed round.",
       "date": "2026-06-09",
@@ -463,42 +499,6 @@
       "sourceLang": "en",
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/09/sandstone-raises-30m-to-bring-ai-to-in-house-legal-teams/",
-      "category": "투자·기업",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/06/09/how-an-e-scooter-founder-raised-5-million-to-build-space-data-centers/",
-      "title": "How an e-scooter founder raised $5 million to build space data centers",
-      "summary": "Orbital founder Euwyn Poon built 250,000 scooters at Spin. Now he wants to launch 10,000 space data centers.",
-      "date": "2026-06-09",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/09/how-an-e-scooter-founder-raised-5-million-to-build-space-data-centers/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/06/08/why-apples-slow-and-steady-ai-bet-is-starting-to-look-pretty-smart/",
-      "title": "Why Apple&#8217;s slow-and-steady AI bet is starting to look pretty smart",
-      "summary": "Can Apple's new AI glow-up put to bed accusations that it's losing an all-important industry race?",
-      "date": "2026-06-09",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/08/why-apples-slow-and-steady-ai-bet-is-starting-to-look-pretty-smart/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/06/08/mercors-brendan-foody-calls-out-sequoia-over-dual-pricing-valuation-tricks/",
-      "title": "Mercor’s Brendan Foody calls out Sequoia, accusing it of &#8216;dual-pricing&#8217; valuation tricks",
-      "summary": "Sequoia is just one of the top firms that sells same equity at two different prices.",
-      "date": "2026-06-09",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/08/mercors-brendan-foody-calls-out-sequoia-over-dual-pricing-valuation-tricks/",
       "category": "투자·기업",
       "lang": "en"
     },
@@ -709,47 +709,113 @@
   ],
   "github": [
     {
-      "id": "gh-656099147",
-      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
-      "summary": "Universal memory layer for AI Agents",
+      "id": "gh-793795224",
+      "title": "genkit-ai/genkit — Open-source framework for building AI-powered apps in JavaScript, Go, and Python, built and used in production by Google",
+      "summary": "Open-source framework for building AI-powered apps in JavaScript, Go, and Python, built and used in production by Google",
       "date": "2026-06-10",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/mem0ai/mem0",
-      "category": "에이전트",
+      "url": "https://github.com/genkit-ai/genkit",
+      "category": "오픈소스",
       "lang": "en",
       "isGithub": true,
-      "stars": 58259,
-      "language": "Python",
+      "stars": 6103,
+      "language": "TypeScript",
       "tags": [
         "agents",
         "ai",
-        "ai-agents",
-        "application",
-        "chatbots"
+        "embedders",
+        "genkit",
+        "llm"
       ]
     },
     {
-      "id": "gh-552661142",
-      "title": "langchain-ai/langchain — The agent engineering platform.",
-      "summary": "The agent engineering platform.",
+      "id": "gh-633262635",
+      "title": "onyx-dot-app/onyx — Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
       "date": "2026-06-10",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/langchain-ai/langchain",
+      "url": "https://github.com/onyx-dot-app/onyx",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 30227,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-chat",
+        "chatgpt",
+        "chatui",
+        "enterprise-search"
+      ]
+    },
+    {
+      "id": "gh-958830659",
+      "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "date": "2026-06-10",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/google/adk-python",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 138971,
+      "stars": 20062,
       "language": "Python",
       "tags": [
+        "agent",
+        "agentic",
+        "agentic-ai",
         "agents",
+        "agents-sdk"
+      ]
+    },
+    {
+      "id": "gh-787076358",
+      "title": "firecrawl/firecrawl — The API to search, scrape, and interact with the web at scale. 🔥",
+      "summary": "The API to search, scrape, and interact with the web at scale. 🔥",
+      "date": "2026-06-10",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "category": "개발 도구",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 131108,
+      "language": "TypeScript",
+      "tags": [
         "ai",
         "ai-agents",
+        "ai-crawler",
+        "ai-scraping",
+        "ai-search"
+      ]
+    },
+    {
+      "id": "gh-987975584",
+      "title": "langchain-ai/open-swe — An Open-Source Asynchronous Coding Agent",
+      "summary": "An Open-Source Asynchronous Coding Agent",
+      "date": "2026-06-10",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/langchain-ai/open-swe",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 9944,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agents",
+        "ai",
         "anthropic",
-        "chatgpt"
+        "claudecode"
       ]
     },
     {
@@ -764,7 +830,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 189663,
+      "stars": 189838,
       "language": "Python",
       "tags": [
         "ai",
@@ -772,94 +838,6 @@
         "ai-agents",
         "anthropic",
         "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-983715534",
-      "title": "strands-agents/harness-sdk — A model-driven approach to building AI agents in just a few lines of code.",
-      "summary": "A model-driven approach to building AI agents in just a few lines of code.",
-      "date": "2026-06-10",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/strands-agents/harness-sdk",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 6089,
-      "language": "Python",
-      "tags": [
-        "agentic",
-        "agentic-ai",
-        "agents",
-        "ai",
-        "anthropic"
-      ]
-    },
-    {
-      "id": "gh-689777286",
-      "title": "plastic-labs/honcho —  Memory library for building stateful agents",
-      "summary": " Memory library for building stateful agents",
-      "date": "2026-06-10",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/plastic-labs/honcho",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 5027,
-      "language": "Python",
-      "tags": [
-        "agent-memory",
-        "ai",
-        "ai-agents",
-        "ai-memory",
-        "anthropic"
-      ]
-    },
-    {
-      "id": "gh-979115477",
-      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "date": "2026-06-10",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/bytedance/deer-flow",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 70886,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "agentic",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-1020144870",
-      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "date": "2026-06-10",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/archestra-ai/archestra",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3820,
-      "language": "TypeScript",
-      "tags": [
-        "a2a",
-        "a2a-mcp",
-        "acp",
-        "agent",
-        "ai"
       ]
     },
     {
@@ -874,7 +852,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 18551,
+      "stars": 18552,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -885,47 +863,47 @@
       ]
     },
     {
-      "id": "gh-962024783",
-      "title": "snyk/agent-scan — Security scanner for AI agents, MCP servers and agent skills.",
-      "summary": "Security scanner for AI agents, MCP servers and agent skills.",
+      "id": "gh-1020144870",
+      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
       "date": "2026-06-10",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/snyk/agent-scan",
-      "category": "에이전트",
+      "url": "https://github.com/archestra-ai/archestra",
+      "category": "연구·논문",
       "lang": "en",
       "isGithub": true,
-      "stars": 2548,
-      "language": "Python",
+      "stars": 3819,
+      "language": "TypeScript",
       "tags": [
+        "a2a",
+        "a2a-mcp",
+        "acp",
         "agent",
-        "ai",
-        "mcp",
-        "modelcontextprotocol",
-        "security"
+        "ai"
       ]
     },
     {
-      "id": "gh-1182212878",
-      "title": "iOfficeAI/OfficeCLI — OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-      "summary": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
       "date": "2026-06-10",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "url": "https://github.com/CopilotKit/CopilotKit",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 6705,
-      "language": "C#",
+      "stars": 34590,
+      "language": "TypeScript",
       "tags": [
         "agent",
-        "ai",
-        "cli",
-        "office",
-        "openclaw"
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai"
       ]
     }
   ]

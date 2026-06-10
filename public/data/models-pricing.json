@@ -1047,13 +1047,13 @@
     "id": "moonshotai/kimi-k2.5",
     "name": "MoonshotAI: Kimi K2.5",
     "provider": "MOONSHOTAI",
-    "input": 0.39999999999999997,
-    "output": 1.9,
+    "input": 0.35,
+    "output": 1.89,
     "context": "262K",
     "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over appr",
     "createdAt": 1769487076,
     "modalities": "text+image->text",
-    "maxTokens": 262144
+    "maxTokens": null
   },
   {
     "id": "upstage/solar-pro-3",

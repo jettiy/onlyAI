@@ -39,8 +39,8 @@
     "id": "qwen/qwen3.7-plus",
     "name": "Qwen: Qwen3.7 Plus",
     "provider": "QWEN",
-    "input": 0.39999999999999997,
-    "output": 1.5999999999999999,
+    "input": 0.32,
+    "output": 1.28,
     "context": "1M",
     "description": "Qwen3.7-Plus is a cost-effective model in Alibaba's Qwen3.7 series. It supports text and image input with text output, building on the series' text capabilities with a comprehensive upgrade to its...",
     "createdAt": 1780491783,
@@ -568,12 +568,12 @@
     "name": "Google: Gemma 4 31B",
     "provider": "GOOGLE",
     "input": 0.12,
-    "output": 0.36,
+    "output": 0.35,
     "context": "262K",
     "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat",
     "createdAt": 1775148486,
     "modalities": "text+image+video->text",
-    "maxTokens": 8192
+    "maxTokens": 262144
   },
   {
     "id": "qwen/qwen3.6-plus",

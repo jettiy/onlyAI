@@ -1047,13 +1047,13 @@
     "id": "moonshotai/kimi-k2.5",
     "name": "MoonshotAI: Kimi K2.5",
     "provider": "MOONSHOTAI",
-    "input": 0.35,
-    "output": 1.89,
+    "input": 0.39999999999999997,
+    "output": 1.9,
     "context": "262K",
     "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over appr",
     "createdAt": 1769487076,
     "modalities": "text+image->text",
-    "maxTokens": null
+    "maxTokens": 262144
   },
   {
     "id": "upstage/solar-pro-3",
@@ -1966,18 +1966,6 @@
     "createdAt": 1757347599,
     "modalities": "text->text",
     "maxTokens": 32768
-  },
-  {
-    "id": "nvidia/nemotron-nano-9b-v2",
-    "name": "NVIDIA: Nemotron Nano 9B V2",
-    "provider": "NVIDIA",
-    "input": 0.04,
-    "output": 0.16,
-    "context": "131K",
-    "description": "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and..",
-    "createdAt": 1757106807,
-    "modalities": "text->text",
-    "maxTokens": 16384
   },
   {
     "id": "moonshotai/kimi-k2-0905",
@@ -3003,13 +2991,13 @@
     "id": "deepseek/deepseek-r1-distill-llama-70b",
     "name": "DeepSeek: R1 Distill Llama 70B",
     "provider": "DEEPSEEK",
-    "input": 0.7,
+    "input": 0.7999999999999999,
     "output": 0.7999999999999999,
-    "context": "131K",
+    "context": "128K",
     "description": "DeepSeek R1 Distill Llama 70B is a distilled large language model based on [Llama-3.3-70B-Instruct](/meta-llama/llama-3.3-70b-instruct), using outputs from [DeepSeek R1](/deepseek/deepseek-r1). The mo",
     "createdAt": 1737663169,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 8192
   },
   {
     "id": "deepseek/deepseek-r1",

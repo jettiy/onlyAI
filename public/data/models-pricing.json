@@ -399,13 +399,13 @@
     "id": "deepseek/deepseek-v4-pro",
     "name": "DeepSeek: DeepSeek V4 Pro",
     "provider": "DEEPSEEK",
-    "input": 0.435,
-    "output": 0.87,
+    "input": 0.09999999999999999,
+    "output": 0.19999999999999998,
     "context": "1M",
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso",
     "createdAt": 1777000679,
     "modalities": "text->text",
-    "maxTokens": 384000
+    "maxTokens": 16384
   },
   {
     "id": "deepseek/deepseek-v4-flash",
@@ -651,8 +651,8 @@
     "id": "minimax/minimax-m2.7",
     "name": "MiniMax: MiniMax M2.7",
     "provider": "MINIMAX",
-    "input": 0.27,
-    "output": 1.08,
+    "input": 0.25,
+    "output": 1,
     "context": "205K",
     "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates ",
     "createdAt": 1773836697,

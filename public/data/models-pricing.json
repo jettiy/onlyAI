@@ -399,25 +399,25 @@
     "id": "deepseek/deepseek-v4-pro",
     "name": "DeepSeek: DeepSeek V4 Pro",
     "provider": "DEEPSEEK",
-    "input": 0.09999999999999999,
-    "output": 0.19999999999999998,
+    "input": 0.435,
+    "output": 0.87,
     "context": "1M",
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso",
     "createdAt": 1777000679,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 384000
   },
   {
     "id": "deepseek/deepseek-v4-flash",
     "name": "DeepSeek: DeepSeek V4 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.0983,
-    "output": 0.1966,
+    "input": 0.098,
+    "output": 0.196,
     "context": "1M",
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa",
     "createdAt": 1777000666,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": null
   },
   {
     "id": "inclusionai/ling-2.6-1t",
@@ -2681,7 +2681,7 @@
     "provider": "DEEPSEEK",
     "input": 0.19999999999999998,
     "output": 0.77,
-    "context": "131K",
+    "context": "164K",
     "description": "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team. It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) mod",
     "createdAt": 1742824755,
     "modalities": "text->text",

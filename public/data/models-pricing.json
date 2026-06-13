@@ -3,13 +3,13 @@
     "id": "moonshotai/kimi-k2.7-code",
     "name": "MoonshotAI: Kimi K2.7 Code",
     "provider": "MOONSHOTAI",
-    "input": 0.95,
-    "output": 4,
+    "input": 0.75,
+    "output": 3.5,
     "context": "262K",
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of",
     "createdAt": 1781266361,
-    "modalities": "text+image+video->text",
-    "maxTokens": null
+    "modalities": "text+image->text",
+    "maxTokens": 262144
   },
   {
     "id": "~anthropic/claude-fable-latest",

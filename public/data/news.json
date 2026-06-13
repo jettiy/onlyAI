@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-13T09:25:39.388Z",
-  "updatedAtKST": "2026. 6. 13. PM 6:25:39",
+  "updatedAt": "2026-06-13T14:13:36.733Z",
+  "updatedAtKST": "2026. 6. 13. PM 11:13:36",
   "stats": {
     "aitimes": 20,
-    "36kr": 15,
+    "36kr": 16,
     "hf": 20,
     "tc": 16,
-    "github": 11,
-    "total": 67
+    "github": 10,
+    "total": 66
   },
   "news": [
     {
@@ -685,6 +685,28 @@
   ],
   "github": [
     {
+      "id": "gh-1195243030",
+      "title": "walkinglabs/learn-harness-engineering — Harness engineering beginner tutorial, from 0 to 1",
+      "summary": "Harness engineering beginner tutorial, from 0 to 1",
+      "date": "2026-06-13",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/walkinglabs/learn-harness-engineering",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 8356,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-ai",
+        "ai",
+        "ai-agent"
+      ]
+    },
+    {
       "id": "gh-868173144",
       "title": "kortix-ai/suna — The Company AI Command Center",
       "summary": "The Company AI Command Center",
@@ -696,34 +718,12 @@
       "category": "투자·기업",
       "lang": "en",
       "isGithub": true,
-      "stars": 19838,
+      "stars": 19839,
       "language": "TypeScript",
       "tags": [
         "ai",
         "ai-agents",
         "llm"
-      ]
-    },
-    {
-      "id": "gh-1147094660",
-      "title": "HKUDS/nanobot — Lightweight, open-source AI agent for your tools, chats, and workflows.",
-      "summary": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
-      "date": "2026-06-13",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/HKUDS/nanobot",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 44139,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
       ]
     },
     {
@@ -738,7 +738,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 192273,
+      "stars": 192455,
       "language": "Python",
       "tags": [
         "ai",
@@ -749,69 +749,69 @@
       ]
     },
     {
-      "id": "gh-656099147",
-      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
-      "summary": "Universal memory layer for AI Agents",
+      "id": "gh-1147094660",
+      "title": "HKUDS/nanobot — Lightweight, open-source AI agent for your tools, chats, and workflows.",
+      "summary": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
       "date": "2026-06-13",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/mem0ai/mem0",
+      "url": "https://github.com/HKUDS/nanobot",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 58468,
+      "stars": 44152,
       "language": "Python",
       "tags": [
-        "agents",
         "ai",
-        "ai-agents",
-        "application",
-        "chatbots"
-      ]
-    },
-    {
-      "id": "gh-615869301",
-      "title": "mudler/LocalAI — LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
-      "summary": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
-      "date": "2026-06-13",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mudler/LocalAI",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 46820,
-      "language": "Go",
-      "tags": [
-        "agents",
-        "ai",
-        "api",
-        "audio-generation",
-        "decentralized"
-      ]
-    },
-    {
-      "id": "gh-552661142",
-      "title": "langchain-ai/langchain — The agent engineering platform.",
-      "summary": "The agent engineering platform.",
-      "date": "2026-06-13",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langchain-ai/langchain",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 139167,
-      "language": "Python",
-      "tags": [
-        "agents",
-        "ai",
+        "ai-agent",
         "ai-agents",
         "anthropic",
         "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-1033778670",
+      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
+      "summary": "Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
+      "date": "2026-06-13",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 28173,
+      "language": "TypeScript",
+      "tags": [
+        "acp",
+        "agent-team",
+        "ai",
+        "ai-agent",
+        "chat"
+      ]
+    },
+    {
+      "id": "gh-817326197",
+      "title": "screenpipe/screenpipe — YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure",
+      "summary": "YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure",
+      "date": "2026-06-13",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/screenpipe/screenpipe",
+      "category": "로봇·자율주행",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19277,
+      "language": "Rust",
+      "tags": [
+        "agents",
+        "agi",
+        "ai",
+        "audio-recording",
+        "computer-vision"
       ]
     },
     {
@@ -826,7 +826,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 78590,
+      "stars": 78604,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -848,7 +848,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 6961,
+      "stars": 6983,
       "language": "C#",
       "tags": [
         "agent",
@@ -859,68 +859,46 @@
       ]
     },
     {
-      "id": "gh-826170402",
-      "title": "elizaOS/eliza — Open source agentic operating system",
-      "summary": "Open source agentic operating system",
+      "id": "gh-1089925776",
+      "title": "Agent-Field/agentfield — Build, run and scale AI agents like API and microservices - observable,auditable and identity-aware from day one.",
+      "summary": "Build, run and scale AI agents like API and microservices - observable,auditable and identity-aware from day one.",
       "date": "2026-06-13",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/elizaOS/eliza",
+      "url": "https://github.com/Agent-Field/agentfield",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 18571,
-      "language": "TypeScript",
+      "stars": 2156,
+      "language": "Go",
       "tags": [
         "agent",
-        "agentic",
-        "ai",
-        "autonomous",
-        "chatbot"
+        "agent-auth",
+        "agent-authentication",
+        "agent-indentity",
+        "agent-scaling"
       ]
     },
     {
-      "id": "gh-575865240",
-      "title": "AstrBotDevs/AstrBot — AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "summary": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "id": "gh-626805178",
+      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
+      "summary": "Production-ready platform for agentic workflow development.",
       "date": "2026-06-13",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/AstrBotDevs/AstrBot",
-      "category": "모델 출시",
+      "url": "https://github.com/langgenius/dify",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 34572,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "chatbot",
-        "chatgpt",
-        "discord"
-      ]
-    },
-    {
-      "id": "gh-1020144870",
-      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "date": "2026-06-13",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/archestra-ai/archestra",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3828,
+      "stars": 145058,
       "language": "TypeScript",
       "tags": [
-        "a2a",
-        "a2a-mcp",
-        "acp",
         "agent",
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
         "ai"
       ]
     }

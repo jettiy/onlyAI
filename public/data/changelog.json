@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-15",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.098,
+        "oldOutput": 0.18,
+        "newOutput": 0.196
+      }
+    ]
+  },
+  {
     "date": "2026-06-01",
     "items": [
       {
@@ -8,8 +24,8 @@
         "modelName": "Claude Opus 4.8",
         "provider": "Anthropic",
         "description": "Intelligence Index 61점 — 세계 1위. 시각 분석·코딩·글쓰기 최강.",
-        "input": 15.00,
-        "output": 75.00,
+        "input": 15,
+        "output": 75,
         "context": "200K"
       },
       {
@@ -18,8 +34,8 @@
         "modelName": "GPT-5.5",
         "provider": "OpenAI",
         "description": "Intelligence Index 60점 — 2위. 극한 추론·코딩 성능.",
-        "input": 10.00,
-        "output": 40.00,
+        "input": 10,
+        "output": 40,
         "context": "256K"
       },
       {
@@ -29,7 +45,7 @@
         "provider": "Google",
         "description": "Intelligence Index 55점. 164 tok/s 최고 속도. 성능/가격 리더.",
         "input": 1.25,
-        "output": 5.00,
+        "output": 5,
         "context": "1M"
       },
       {
@@ -38,8 +54,8 @@
         "modelName": "Qwen 3.7 Max",
         "provider": "Alibaba",
         "description": "186 tok/s 최고 속도. Intelligence Index 54점. 1M 컨텍스트.",
-        "input": 5.00,
-        "output": 20.00,
+        "input": 5,
+        "output": 20,
         "context": "1M"
       },
       {
@@ -48,8 +64,8 @@
         "modelName": "GLM-5.1",
         "provider": "Zhipu",
         "description": "8시간 에이전트. Coding Plan 무제한. 한국어 강화.",
-        "input": 2.00,
-        "output": 8.00,
+        "input": 2,
+        "output": 8,
         "context": "128K"
       },
       {
@@ -58,8 +74,8 @@
         "modelName": "Kimi K2.6",
         "provider": "Moonshot",
         "description": "오픈웨이트 #1. 네이티브 멀티모달. 1조+ 파라미터.",
-        "input": 3.00,
-        "output": 12.00,
+        "input": 3,
+        "output": 12,
         "context": "128K"
       },
       {
@@ -68,8 +84,8 @@
         "modelName": "DeepSeek V4 Pro",
         "provider": "DeepSeek",
         "description": "1M 컨텍스트·오픈웨이트. 가성비 최강 플래그십.",
-        "input": 2.50,
-        "output": 10.00,
+        "input": 2.5,
+        "output": 10,
         "context": "1M"
       },
       {
@@ -78,8 +94,8 @@
         "modelName": "MiMo-V2.5-Pro",
         "provider": "Xiaomi",
         "description": "오픈웨이트 #2. 1M 컨텍스트. MIT 라이선스.",
-        "input": 1.50,
-        "output": 6.00,
+        "input": 1.5,
+        "output": 6,
         "context": "1M"
       },
       {
@@ -88,8 +104,8 @@
         "modelName": "Grok 4.3",
         "provider": "xAI",
         "description": "Top-15 가성비 최강. 실시간 X 검색 연동.",
-        "input": 3.00,
-        "output": 15.00,
+        "input": 3,
+        "output": 15,
         "context": "256K"
       }
     ]

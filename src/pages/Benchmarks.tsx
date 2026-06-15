@@ -35,16 +35,16 @@ const BENCHMARKS: { key: BenchmarkKey; label: string; desc: string; tip: string;
 ];
 
 const popularityData: PopularityEntry[] = [
-  { rank: 1, name: 'MiMo V2 Pro', company: 'Xiaomi', companyId: 'xiaomi', requests: '4.65T', score: 98 },
-  { rank: 2, name: 'Claude Sonnet 4.6', company: 'Anthropic', companyId: 'anthropic', requests: '2.18T', score: 95 },
-  { rank: 3, name: 'MiniMax M2.7', company: 'MiniMax', companyId: 'minimax', requests: '1.92T', score: 92 },
-  { rank: 4, name: 'DeepSeek V3.2', company: 'DeepSeek', companyId: 'deepseek', requests: '1.22T', score: 88 },
-  { rank: 5, name: 'Qwen 3.6 Plus', company: 'Qwen', companyId: 'alibaba', requests: '1.10T', score: 86 },
-  { rank: 6, name: 'GPT-5.4', company: 'OpenAI', companyId: 'openai', requests: '0.95T', score: 84 },
-  { rank: 7, name: 'GLM-5', company: 'Zhipu', companyId: 'zhipu', requests: '0.72T', score: 80 },
-  { rank: 8, name: 'Gemini 2.5 Pro', company: 'Google', companyId: 'google', requests: '0.68T', score: 78 },
-  { rank: 9, name: 'Llama 4 Maverick', company: 'Meta', companyId: 'meta', requests: '0.55T', score: 75 },
-  { rank: 10, name: 'Mistral Large 2', company: 'Mistral', companyId: 'mistral', requests: '0.42T', score: 72 },
+  { rank: 1, name: 'MiMo V2.5 Pro', company: 'Xiaomi', companyId: 'xiaomi', requests: '5.20T', score: 99 },
+  { rank: 2, name: 'Claude Opus 4.8', company: 'Anthropic', companyId: 'anthropic', requests: '4.80T', score: 97 },
+  { rank: 3, name: 'Claude Sonnet 4.6', company: 'Anthropic', companyId: 'anthropic', requests: '2.18T', score: 95 },
+  { rank: 4, name: 'MiniMax M2.7', company: 'MiniMax', companyId: 'minimax', requests: '1.92T', score: 92 },
+  { rank: 5, name: 'DeepSeek V4 Pro', company: 'DeepSeek', companyId: 'deepseek', requests: '1.50T', score: 90 },
+  { rank: 6, name: 'Qwen 3.7 Max', company: 'Qwen', companyId: 'alibaba', requests: '1.30T', score: 88 },
+  { rank: 7, name: 'GPT-5.5', company: 'OpenAI', companyId: 'openai', requests: '1.10T', score: 86 },
+  { rank: 8, name: 'GLM-5.1', company: 'Zhipu', companyId: 'zhipu', requests: '0.95T', score: 84 },
+  { rank: 9, name: 'Gemini 3.5 Flash', company: 'Google', companyId: 'google', requests: '0.80T', score: 82 },
+  { rank: 10, name: 'Kimi K2.6', company: 'Moonshot', companyId: 'moonshot', requests: '0.65T', score: 79 },
 ];
 
 const DATA: ModelBench[] = [
@@ -147,6 +147,43 @@ const DATA: ModelBench[] = [
   {
     name: "Command A", company: "Cohere", logoId: "cohere", color: "#64748b",
     scores: { mmlu: 69.0, gpqa: 38.0, math: 62.0, ifeval: 76.0, humaneval: 75.0, coding: 15.0, swe: 20.0, musr: 44.0 },
+  },
+  // ── 2026.06 신규 ──
+  {
+    name: "Claude Opus 4.8", company: "Anthropic", logoId: "anthropic", color: "#f59e0b", isNew: true,
+    scores: { mmlu: 91.0, gpqa: 76.2, math: 94.5, ifeval: 94.0, humaneval: 98.5, coding: 82.0, swe: 82.5, musr: 84.0 },
+  },
+  {
+    name: "GPT-5.5", company: "OpenAI", logoId: "openai", color: "#10b981", isNew: true,
+    scores: { mmlu: 90.2, gpqa: 74.5, math: 95.8, ifeval: 93.5, humaneval: 98.0, coding: 68.0, swe: 78.0, musr: 83.5 },
+  },
+  {
+    name: "Gemini 3.5 Flash", company: "Google", logoId: "google", color: "#3b82f6", isNew: true,
+    scores: { mmlu: 83.0, gpqa: 62.0, math: 88.5, ifeval: 90.0, humaneval: 92.0, coding: 55.0, swe: 58.0, musr: 72.5 },
+  },
+  {
+    name: "Qwen 3.7 Max", company: "Alibaba", logoId: "alibaba", color: "#f97316", isNew: true,
+    scores: { mmlu: 85.5, gpqa: 60.0, math: 92.0, ifeval: 86.5, humaneval: 93.5, coding: 50.0, swe: 55.0, musr: 70.0 },
+  },
+  {
+    name: "GLM-5.1", company: "Zhipu AI", logoId: "zhipu", color: "#8b5cf6", isNew: true,
+    scores: { mmlu: 80.0, gpqa: 52.0, math: 89.0, ifeval: 82.5, humaneval: 92.5, coding: 58.0, swe: 58.4, musr: 65.0 },
+  },
+  {
+    name: "Kimi K2.6", company: "Moonshot", logoId: "moonshot", color: "#14b8a6", isNew: true,
+    scores: { mmlu: 82.5, gpqa: 55.5, math: 90.0, ifeval: 84.0, humaneval: 91.0, coding: 48.0, swe: 52.0, musr: 68.0 },
+  },
+  {
+    name: "DeepSeek V4 Pro", company: "DeepSeek", logoId: "deepseek", color: "#6366f1", isNew: true,
+    scores: { mmlu: 81.0, gpqa: 54.0, math: 93.0, ifeval: 83.5, humaneval: 90.5, coding: 52.0, swe: 55.5, musr: 70.5 },
+  },
+  {
+    name: "MiMo V2.5 Pro", company: "Xiaomi", logoId: "xiaomi", color: "#a855f7", isNew: true,
+    scores: { mmlu: 79.5, gpqa: 50.0, math: 85.5, ifeval: 80.0, humaneval: 88.5, coding: 42.0, swe: 48.0, musr: 62.5 },
+  },
+  {
+    name: "Grok 4.3", company: "xAI", logoId: "xai", color: "#ec4899", isNew: true,
+    scores: { mmlu: 84.0, gpqa: 58.0, math: 91.0, ifeval: 86.0, humaneval: 92.0, coding: 45.0, swe: 50.0, musr: 71.0 },
   },
 ];
 

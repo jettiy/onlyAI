@@ -34,7 +34,65 @@ const CAT_COLORS: Record<string, { bar: string; label: string }> = {
 };
 
 const EVENTS: TimelineEvent[] = [
-  // ═══ 2026년 4월 (최신) ═══
+  // ═══ 2026년 6월 (최신) ═══
+  {
+    id: "claude-opus-4-8", date: "2026-06-01", displayDate: "2026년 6월 1일",
+    model: "Claude Opus 4.8", company: "Anthropic", companyId: "anthropic",
+    status: "released", category: "flagship", isKoreanFriendly: true,
+    description: "Intelligence Index 61점 — 세계 최고 지능. 시각 분석·코딩·글쓰기 종합 1위.",
+    highlights: ["Intelligence Index 1위 (61점)", "시각 분석 98.5%", "코딩·글쓰기 최강", "1M 컨텍스트"],
+  },
+  {
+    id: "gpt-5-5", date: "2026-06-01", displayDate: "2026년 6월 1일",
+    model: "GPT-5.5", company: "OpenAI", companyId: "openai",
+    status: "released", category: "flagship", isKoreanFriendly: true,
+    description: "Intelligence Index 60점 — 2위. 극한 추론·코딩 성능.",
+    highlights: ["Intelligence Index 2위 (60점)", "극한 추론", "256K 컨텍스트", "GPT 시리즈 최강"],
+  },
+  {
+    id: "gemini-3-5-flash", date: "2026-05-25", displayDate: "2026년 5월 25일",
+    model: "Gemini 3.5 Flash", company: "Google", companyId: "google",
+    status: "released", category: "efficient", isKoreanFriendly: true,
+    description: "164 tok/s 최고 속도. Intelligence Index 55점. 성능/가격 리더.",
+    highlights: ["164 tok/s 최고 속도", "Intelligence Index 55", "1M 컨텍스트", "성능/가격 리더"],
+  },
+  {
+    id: "qwen-3-7-max", date: "2026-05-20", displayDate: "2026년 5월 20일",
+    model: "Qwen 3.7 Max", company: "Alibaba", companyId: "alibaba",
+    status: "released", category: "flagship", isKoreanFriendly: true,
+    description: "186 tok/s 전체 최고 속도. Intelligence Index 54점. 1M 컨텍스트.",
+    highlights: ["186 tok/s 최고 속도", "Intelligence Index 54", "1M 컨텍스트", "에이전트 강화"],
+  },
+  {
+    id: "kimi-k2-6", date: "2026-05-15", displayDate: "2026년 5월 15일",
+    model: "Kimi K2.6", company: "Moonshot", companyId: "moonshot",
+    status: "released", category: "flagship", isKoreanFriendly: false,
+    description: "오픈웨이트 #1. 네이티브 멀티모달. 1조+ 파라미터.",
+    highlights: ["오픈웨이트 #1", "네이티브 멀티모달", "1조+ 파라미터", "에이전트 강화"],
+  },
+  {
+    id: "deepseek-v4-pro", date: "2026-05-12", displayDate: "2026년 5월 12일",
+    model: "DeepSeek V4 Pro", company: "DeepSeek", companyId: "deepseek",
+    status: "released", category: "flagship", isKoreanFriendly: true,
+    description: "1M 컨텍스트·오픈웨이트. 가성비 최강 플래그십.",
+    highlights: ["1M 컨텍스트", "오픈웨이트", "가성비 최강", "MoE 아키텍처"],
+  },
+  {
+    id: "mimo-v2-5-pro", date: "2026-05-10", displayDate: "2026년 5월 10일",
+    model: "MiMo-V2.5-Pro", company: "Xiaomi", companyId: "xiaomi",
+    status: "released", category: "flagship", isKoreanFriendly: false,
+    description: "오픈웨이트 #2. 1M 컨텍스트. MIT 라이선스.",
+    highlights: ["오픈웨이트 #2", "1M 컨텍스트", "MIT 라이선스", "에이전트 최적"],
+  },
+  {
+    id: "grok-4-3", date: "2026-05-08", displayDate: "2026년 5월 8일",
+    model: "Grok 4.3", company: "xAI", companyId: "xai",
+    status: "released", category: "flagship", isKoreanFriendly: false,
+    description: "Top-15 가성비 최강. 실시간 X 검색 연동.",
+    highlights: ["Top-15 가성비", "실시간 X 검색", "256K 컨텍스트", "멀티모달"],
+  },
+
+  // ═══ 2026년 4월 ═══
   {
     id: "glm-5-1", date: "2026-03", displayDate: "2026년 3월 27일",
     model: "GLM-5.1 (추론/비추론)", company: "Zhipu AI", companyId: "zhipu",

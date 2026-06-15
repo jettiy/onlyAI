@@ -32,6 +32,15 @@ const BENCH_DATA: Record<string, Partial<Record<string, number>>> = {
   'mimo v2 pro': { mmlu: 76.5, gpqa: 48.0, math: 83.0, ifeval: 78.5, humaneval: 87.0, coding: 33.0, swe: 42.0, musr: 58.0 },
   'deepseek r1': { mmlu: 81.5, gpqa: 59.2, math: 97.8, ifeval: 85.0, humaneval: 91.0, coding: 49.2, swe: 58.5, musr: 82.3 },
   'claude haiku 4.5': { mmlu: 74.0, gpqa: 44.0, math: 72.5, ifeval: 87.0, humaneval: 84.0, coding: 22.0, swe: 30.0, musr: 52.0 },
+  'gpt-5.5': { mmlu: 90.2, gpqa: 74.5, math: 95.8, ifeval: 93.5, humaneval: 98.0, coding: 68.0, swe: 78.0, musr: 83.5 },
+  'claude opus 4.8': { mmlu: 91.0, gpqa: 76.2, math: 94.5, ifeval: 94.0, humaneval: 98.5, coding: 82.0, swe: 82.5, musr: 84.0 },
+  'gemini 3.5 flash': { mmlu: 83.0, gpqa: 62.0, math: 88.5, ifeval: 90.0, humaneval: 92.0, coding: 55.0, swe: 58.0, musr: 72.5 },
+  'qwen 3.7 max': { mmlu: 85.5, gpqa: 60.0, math: 92.0, ifeval: 86.5, humaneval: 93.5, coding: 50.0, swe: 55.0, musr: 70.0 },
+  'glm-5.1': { mmlu: 80.0, gpqa: 52.0, math: 89.0, ifeval: 82.5, humaneval: 92.5, coding: 58.0, swe: 58.4, musr: 65.0 },
+  'kimi k2.6': { mmlu: 82.5, gpqa: 55.5, math: 90.0, ifeval: 84.0, humaneval: 91.0, coding: 48.0, swe: 52.0, musr: 68.0 },
+  'deepseek v4 pro': { mmlu: 81.0, gpqa: 54.0, math: 93.0, ifeval: 83.5, humaneval: 90.5, coding: 52.0, swe: 55.5, musr: 70.5 },
+  'mimo-v2.5-pro': { mmlu: 79.5, gpqa: 50.0, math: 85.5, ifeval: 80.0, humaneval: 88.5, coding: 42.0, swe: 48.0, musr: 62.5 },
+  'grok 4.3': { mmlu: 84.0, gpqa: 58.0, math: 91.0, ifeval: 86.0, humaneval: 92.0, coding: 45.0, swe: 50.0, musr: 71.0 },
 };
 
 const BENCH_LABELS: Record<string, string> = {

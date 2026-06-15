@@ -8,6 +8,15 @@ export default function ExplorePromo() {
     { name: 'ChatGPT (OpenAI)', logo: '/logos/openai.png', status: 'none', benefit: '파트너사 프로모 코드만 존재 · 개인 생성 불가', url: null, code: null },
     { name: 'DeepSeek', logo: '/logos/deepseek.png', status: 'none', benefit: '가입 자동 $5 크레딧 지급', url: 'https://platform.deepseek.com', code: null },
     { name: 'xAI (Grok)', logo: '/logos/xai.png', status: 'none', benefit: 'X Premium 구독으로 Grok 접근 가능', url: null, code: null },
+    { name: 'GPT-5.5 (OpenAI)', logo: '/logos/openai.png', status: 'none', benefit: '최신 OpenAI 모델 · 파트너사 프로모 코드만 존재', url: null, code: null },
+    { name: 'Claude Opus 4.8 (Anthropic)', logo: '/logos/anthropic.jpg', status: 'user', benefit: 'Claude Code 게스트 패스로 Opus 4.8 체험 가능', url: 'https://claude.ai/settings', code: null },
+    { name: 'Gemini 3.5 Flash (Google)', logo: '/logos/google.png', status: 'user', benefit: 'Google AI Pro 구독으로 Gemini 3.5 Flash 사용 가능', url: 'https://one.google.com/ai/invite', code: null },
+    { name: 'Qwen 3.7 Max (Alibaba)', logo: '/logos/alibaba.png', status: 'user', benefit: 'Alibaba Cloud API 크레딧으로 Qwen 3.7 Max 접근', url: 'https://www.alibabacloud.com/en/referral', code: null },
+    { name: 'GLM-5.1 (Zhipu)', logo: '/logos/zhipu.png', status: 'active', benefit: 'GLM-5.1 코딩 플랜 특가 · 월 $10부터', url: 'https://z.ai/subscribe?ic=ODRIAQZZSF', code: 'ODRIAQZZSF' },
+    { name: 'Kimi K2.6 (Moonshot)', logo: '/logos/moonshot.png', status: 'none', benefit: 'Moonshot AI 최신 모델 · 프로모션 정보 없음', url: null, code: null },
+    { name: 'DeepSeek V4 Pro (DeepSeek)', logo: '/logos/deepseek.png', status: 'none', benefit: '가입 자동 $5 크레딧 지급 · V4 Pro 사용 가능', url: 'https://platform.deepseek.com', code: null },
+    { name: 'MiMo-V2.5-Pro (Xiaomi)', logo: '/logos/xiaomi.png', status: 'none', benefit: 'Xiaomi AI 최신 모델 · 프로모션 정보 없음', url: null, code: null },
+    { name: 'Grok 4.3 (xAI)', logo: '/logos/xai.png', status: 'none', benefit: 'X Premium+ 구독으로 Grok 4.3 접근 가능', url: null, code: null },
   ];
   const statusColors: Record<string, string> = {
     active: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400',

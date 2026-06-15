@@ -131,6 +131,12 @@ export const companies: AICompany[] = [
     website: 'https://www.arcee.ai/trinity',
     playgroundUrl: 'https://www.arcee.ai/',
   },
+  {
+    id: 'nvidia', name: 'NVIDIA', region: 'us', country: '미국', flag: '', logoId: 'nvidia',
+    description: 'GPU/AI 인프라 세계 1위. Nemotron 오픈웨이트 모델 제공.',
+    website: 'https://build.nvidia.com/',
+    playgroundUrl: 'https://build.nvidia.com/',
+  },
 ];
 
 // ── 모델 목록 ───────────────────────────────────────────────────
@@ -141,12 +147,28 @@ export const models: AIModel[] = [
 
   // OpenAI ─────────────────────
   {
+    id: 'gpt-5-5',
+    name: 'GPT-5.5',
+    company: 'OpenAI', companyId: 'openai', region: 'us',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 4월 출시. OpenAI 최신 플래그십. xhigh effort 지원. 922K 컨텍스트. Artificial Analysis Intelligence Index 60점(2위). 극한 추론에 특화.',
+    strengths: ['최고 추론', 'xhigh effort', '코딩', '에이전트'],
+    inputPrice: 5.0, outputPrice: 30.0, contextWindow: '922K',
+    isLocal: false, isNew: true, releaseDate: '2026-04',
+    koreanSupport: 'A',
+    useCases: ['극한 추론', '복잡한 코딩', '에이전트', '연구'],
+    sourceUrl: 'https://openai.com/api/pricing/',
+    url: 'https://chatgpt.com',
+    updatedAt: '2026-06-01',
+    koreanBilling: true,
+  },
+  {
     id: 'gpt-5-4',
     name: 'GPT-5.4',
     arenaScore: 1501, arenaCI: '±12', arenaVotes: 2567, arenaRankSpread: '13-21',
     company: 'OpenAI', companyId: 'openai', region: 'us',
     tier: 'flagship', isFeatured: true,
-    description: 'OpenAI 최신 플래그십. 네이티브 컴퓨터 사용 기능. 272K 표준(1M 시 2배 요금). 전문가용 업무 최강.',
+    description: 'OpenAI 플래그십(이전 세대). GPT-5.5 출시로 레거시. 네이티브 컴퓨터 사용 기능. 272K 표준(1M 시 2배 요금).',
     strengths: ['최신 플래그십', '컴퓨터 사용', '1M 컨텍스트', '에이전트'],
     inputPrice: 2.50, outputPrice: 15.0, contextWindow: '1M',
     isLocal: false, isNew: true, releaseDate: '2026-03',
@@ -313,11 +335,28 @@ export const models: AIModel[] = [
 
   // Anthropic ─────────────────────
   {
+    id: 'claude-opus-4-8',
+    name: 'Claude Opus 4.8',
+    company: 'Anthropic', companyId: 'anthropic', region: 'us',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 5월 28일 출시. 세계 최고 지능 모델. Artificial Analysis Intelligence Index 61점(1위). Adaptive Reasoning, Max Effort. 1M 컨텍스트.',
+    strengths: ['세계 최고 지능', 'Adaptive Reasoning', '코딩', '1M 컨텍스트'],
+    inputPrice: 5.0, outputPrice: 25.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-05',
+    koreanSupport: 'A',
+    useCases: ['복잡한 코딩', '에이전트', '시각 분석', '연구·법률'],
+    openRouterSlug: 'anthropic/claude-opus-4-8',
+    sourceUrl: 'https://www.anthropic.com/pricing',
+    url: 'https://claude.ai',
+    updatedAt: '2026-06-01',
+    koreanBilling: true,
+  },
+  {
     id: 'claude-opus-4-7',
     name: 'Claude Opus 4.7',
     company: 'Anthropic', companyId: 'anthropic', region: 'us',
     tier: 'flagship', isFeatured: true,
-    description: '2026년 4월 16일 출시. Anthropic 최강 모델. 새로운 토크나이저(텍스트당 최대 35% 더 많은 토큰). CursorBench 70%(+12%p), 시각 정확도 98.5%(+44%p). Opus 4.6 대비 3배 더 많은 프로덕션 태스크 해결. xhigh effort 레벨 지원.',
+    description: 'Anthropic 플래그십(이전 세대). Opus 4.8 출시로 레거시. CursorBench 70%, 시각 정확도 98.5%. 1M 컨텍스트. xhigh effort 지원.',
     strengths: ['Anthropic 최강', '시각 정확도 98.5%', '코딩·에이전트', '1M 컨텍스트', 'xhigh effort'],
     inputPrice: 5.0, outputPrice: 25.0, contextWindow: '1M',
     isLocal: false, isNew: true, releaseDate: '2026-04-16',
@@ -510,6 +549,22 @@ export const models: AIModel[] = [
     updatedAt: '2026-04-17',
     koreanBilling: true,
   },
+  {
+    id: 'gemini-3-5-flash',
+    name: 'Gemini 3.5 Flash',
+    company: 'Google', companyId: 'google', region: 'us',
+    tier: 'strong', isFeatured: true,
+    description: '2026년 5월 출시. 지능 대 속도 최고 리더. 1M 컨텍스트. Intelligence Index 55점. 164 tok/s. 가성비+속도 투탑.',
+    strengths: ['지능/속도 최고', '1M 컨텍스트', '멀티모달', '빠름'],
+    inputPrice: 1.50, outputPrice: 9.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-05',
+    koreanSupport: 'A',
+    useCases: ['빠른 분석', '멀티모달 앱', '에이전트', '대량 API'],
+    sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing',
+    url: 'https://gemini.google.com',
+    updatedAt: '2026-06-01',
+    koreanBilling: true,
+  },
 
   // Meta ─────────────────────
   {
@@ -567,19 +622,35 @@ export const models: AIModel[] = [
 
   // xAI ─────────────────────
   {
+    id: 'grok-4-3',
+    name: 'Grok 4.3',
+    company: 'xAI', companyId: 'xai', region: 'us',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 4월 출시. xAI 최신 플래그십. 1M 컨텍스트. Intelligence Index 53점. Top-15 중 압도적 가성비. 143 tok/s.',
+    strengths: ['가성비 최강', '1M 컨텍스트', '실시간 검색', '빠름'],
+    inputPrice: 1.25, outputPrice: 2.50, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-04',
+    koreanSupport: 'B',
+    useCases: ['실시간 뉴스', 'SNS 분석', '코딩', '트렌드 파악'],
+    sourceUrl: 'https://docs.x.ai/developers/models',
+    url: 'https://x.ai',
+    updatedAt: '2026-06-01',
+    koreanBilling: null,
+  },
+  {
     id: 'grok-4-20-beta',
     name: 'Grok 4.20 Beta',
     company: 'xAI', companyId: 'xai', region: 'us',
-    tier: 'flagship', isFeatured: true,
-    description: '일론 머스크 xAI 최신 플래그십. 2M(!) 컨텍스트. X(트위터) 실시간 데이터 접근.',
+    tier: 'flagship', isFeatured: false,
+    description: 'xAI 플래그십(이전 세대). Grok 4.3 출시로 레거시. 2M 컨텍스트. X(트위터) 실시간 데이터 접근.',
     strengths: ['실시간 검색', '2M 컨텍스트', 'X 데이터', '추론'],
     inputPrice: 2.0, outputPrice: 6.0, contextWindow: '2M',
-    isLocal: false, isNew: true, releaseDate: '2026-03',
+    isLocal: false, isNew: false, releaseDate: '2026-03',
     koreanSupport: 'B',
     useCases: ['실시간 뉴스', 'SNS 분석', '트렌드 파악'],
     sourceUrl: 'https://docs.x.ai/developers/models',
     url: 'https://x.ai',
-    updatedAt: '2026-04-16',
+    updatedAt: '2026-06-01',
     koreanBilling: null,
   },
   {
@@ -639,6 +710,24 @@ export const models: AIModel[] = [
 
   // DeepSeek ─────────────────────
   {
+    id: 'deepseek-v4-pro',
+    name: 'DeepSeek V4 Pro',
+    company: 'DeepSeek', companyId: 'deepseek', region: 'china',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 4월 출시. DeepSeek 최신 플래그십. 1600B MoE (49B 활성). 1M 컨텍스트. MIT 오픈웨이트. Intelligence Index 52점. 75% 프로모션 할인 중.',
+    strengths: ['오픈웨이트', '1M 컨텍스트', '코딩', '가성비'],
+    inputPrice: 0.435, outputPrice: 0.87, contextWindow: '1M',
+    params: '1600B MoE (49B active)',
+    isLocal: true, isNew: true, releaseDate: '2026-04',
+    koreanSupport: 'B',
+    useCases: ['코딩 에이전트', '복잡 추론', '대량 API', '로컬 배포'],
+    openRouterSlug: 'deepseek/deepseek-v4-pro',
+    sourceUrl: 'https://api-docs.deepseek.com/quick_start/pricing',
+    url: 'https://chat.deepseek.com',
+    updatedAt: '2026-06-01',
+    koreanBilling: true,
+  },
+  {
     id: 'deepseek-v3-2',
     name: 'DeepSeek-V3.2',
     company: 'DeepSeek', companyId: 'deepseek', region: 'china',
@@ -675,6 +764,22 @@ export const models: AIModel[] = [
   },
 
   // Alibaba ─────────────────────
+  {
+    id: 'qwen-3-7-max',
+    name: 'Qwen 3.7 Max',
+    company: 'Alibaba', companyId: 'alibaba', region: 'china',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 5월 출시. 알리바바 최신 플래그십. 1M 컨텍스트. Intelligence Index 57점. 186.6 tok/s 최고 속도. 무료 할당량(90일간 1M 토큰).',
+    strengths: ['최신 플래그십', '1M 컨텍스트', '최고 속도', '무료 할당량'],
+    inputPrice: 2.50, outputPrice: 7.50, cachedInputPrice: 0.25, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-05',
+    koreanSupport: 'A',
+    useCases: ['초대형 문서 분석', '에이전트', '빠른 코딩', '한·중 고급 작업'],
+    sourceUrl: 'https://www.alibabacloud.com/help/en/model-studio/model-pricing',
+    url: 'https://chat.qwen.ai',
+    updatedAt: '2026-06-01',
+    koreanBilling: true,
+  },
   {
     id: 'qwen-3.6-plus',
     name: 'Qwen 3.6 Plus',
@@ -744,6 +849,23 @@ export const models: AIModel[] = [
 
   // Moonshot ─────────────────────
   {
+    id: 'kimi-k2-6',
+    name: 'Kimi K2.6',
+    company: 'Moonshot', companyId: 'moonshot', region: 'china',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 4월 출시. Moonshot 최신 플래그십. 네이티브 멀티모달(텍스트/이미지/비디오). 1T MoE (32B 활성). 256K 컨텍스트. Intelligence Index 54점(오픈웨이트 #1).',
+    strengths: ['네이티브 멀티모달', '오픈웨이트 #1', '코딩', '에이전트'],
+    inputPrice: 0.95, outputPrice: 4.0, cachedInputPrice: 0.16, contextWindow: '256K',
+    params: '1T MoE (32B active)',
+    isLocal: false, isNew: true, releaseDate: '2026-04',
+    koreanSupport: 'B',
+    useCases: ['멀티모달 에이전트', '코딩', '영상 분석', '이미지 이해'],
+    sourceUrl: 'https://platform.kimi.ai/docs/pricing/chat',
+    url: 'https://kimi.moonshot.cn',
+    updatedAt: '2026-06-01',
+    koreanBilling: true,
+  },
+  {
     id: 'kimi-k2-5',
     name: 'Kimi K2.5',
     company: 'Moonshot', companyId: 'moonshot', region: 'china',
@@ -780,14 +902,30 @@ export const models: AIModel[] = [
 
   // Zhipu AI ─────────────────────
   {
+    id: 'glm-5.2',
+    name: 'GLM-5.2',
+    company: 'Zhipu AI', companyId: 'zhipu', region: 'china',
+    tier: 'flagship', isFeatured: true,
+    description: '즈푸AI 최신 코딩 특화 모델. 1M 컨텍스트. GLM-5.1 후속. Coding Plan 무제한 사용 가능. 코딩 성능 대폭 향상.',
+    strengths: ['코딩 특화', '1M 컨텍스트', 'Coding Plan 무제한', '추론 향상'],
+    inputPrice: 0, outputPrice: 0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-06',
+    koreanSupport: 'B',
+    useCases: ['코딩', '에이전트', '복잡 추론', '대량 문서 분석'],
+    sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
+    url: 'https://chat.z.ai/',
+    updatedAt: '2026-06-15',
+    koreanBilling: true,
+  },
+  {
     id: 'glm-5.1',
     arenaScore: 1483, arenaCI: '±26', arenaVotes: 489, arenaRankSpread: '18-24',
     name: 'GLM-5.1',
     company: 'Zhipu AI', companyId: 'zhipu', region: 'china',
     tier: 'flagship', isFeatured: true,
-    description: '즈푸AI 최신 코딩 특화 모델. 추론·코딩 강화. 입력 $1.4/출력 $4.4, 캐시 입력 $0.26. Coding Plan 구독 시 월 $10~$80로 사실상 무제한 사용 가능. Claude Code, Cline 등에서 코딩 전용으로도 사용.',
-    strengths: ['코딩 특화', '추론', '에이전트', '128K'],
-    inputPrice: 1.4, outputPrice: 4.4, cachedInputPrice: 0.26, contextWindow: '128K',
+    description: '즈푸AI 코딩 특화 모델. 744B MoE (40B 활성). 200K 컨텍스트. MIT 오픈웨이트. Intelligence Index 51점. 8시간 지속 에이전트 작업. SWE-Bench Pro 58.4점. Coding Plan 구독 시 월 $10~$80로 사실상 무제한.',
+    strengths: ['코딩 특화', '8시간 에이전트', '오픈웨이트', 'Coding Plan'],
+    inputPrice: 1.4, outputPrice: 4.4, cachedInputPrice: 0.26, contextWindow: '200K',
     isLocal: false, isNew: true, releaseDate: '2026-03',
     koreanSupport: 'B',
     useCases: ['코딩', '에이전트', '복잡 추론'],
@@ -878,6 +1016,23 @@ export const models: AIModel[] = [
 
   // Xiaomi ─────────────────────
   {
+    id: 'mimo-v2-5-pro',
+    name: 'MiMo-V2.5-Pro',
+    company: 'Xiaomi', companyId: 'xiaomi', region: 'china',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 4월 출시. Xiaomi 최신 플래그십. 1023B MoE (42B 활성). 1M 컨텍스트. MIT 오픈웨이트. Intelligence Index 54점(오픈웨이트 #2). V2-Pro→V2.5 자동 라우팅(6/1~).',
+    strengths: ['오픈웨이트 #2', '1M 컨텍스트', '코딩', '가성비'],
+    inputPrice: 0.435, outputPrice: 0.87, contextWindow: '1M',
+    params: '1023B MoE (42B active)',
+    isLocal: true, isNew: true, releaseDate: '2026-04',
+    koreanSupport: 'B',
+    useCases: ['에이전트', '코딩', '장문 컨텍스트', '로컬 배포'],
+    sourceUrl: 'https://platform.xiaomimimo.com/docs/en-US/price/pay-as-you-go',
+    url: 'https://aistudio.xiaomimimo.com',
+    updatedAt: '2026-06-01',
+    koreanBilling: true,
+  },
+  {
     id: 'mimo-v2-pro',
     arenaScore: 1499, arenaCI: '±22', arenaVotes: 1469, arenaRankSpread: '9',
     name: 'MiMo-V2-Pro (Hunter Alpha)',
@@ -930,6 +1085,42 @@ export const models: AIModel[] = [
   },
 
   // ===== 🌍 기타 국가 =====
+
+  // NVIDIA ─────────────────────
+  {
+    id: 'nvidia-nemotron-3-super',
+    name: 'NVIDIA Nemotron 3 Super',
+    company: 'NVIDIA', companyId: 'nvidia', region: 'us',
+    tier: 'strong', isFeatured: false,
+    description: 'NVIDIA 오픈웨이트 모델. 120.6B MoE (12.7B 활성). 1M 컨텍스트. 232 tok/s 초고속. Intelligence Index 36점.',
+    strengths: ['오픈웨이트', '초고속', '1M 컨텍스트', '저렴'],
+    inputPrice: 0.30, outputPrice: 0.75, contextWindow: '1M',
+    params: '120.6B MoE (12.7B active)',
+    isLocal: true, isNew: true, releaseDate: '2026-03',
+    koreanSupport: 'C',
+    useCases: ['초고속 추론', '엣지 배포', '저비용 API'],
+    sourceUrl: 'https://build.nvidia.com/',
+    updatedAt: '2026-06-01',
+    koreanBilling: true,
+  },
+
+  // Cohere ─────────────────────
+  {
+    id: 'command-a-plus',
+    name: 'Command A+',
+    company: 'Cohere', companyId: 'cohere', region: 'other',
+    tier: 'efficient', isFeatured: false,
+    description: '2026년 5월 출시. 세계 최저 latency(0.29초). 218B/25B MoE. Apache 2.0 오픈웨이트. 192K 컨텍스트.',
+    strengths: ['최저 latency', '오픈소스', '빠름', 'RAG'],
+    inputPrice: 0, outputPrice: 0, contextWindow: '192K',
+    params: '218B MoE (25B active)',
+    isLocal: true, isNew: true, releaseDate: '2026-05',
+    koreanSupport: 'C',
+    useCases: ['실시간 챗봇', 'RAG', '저지연 API', '엣지 배포'],
+    sourceUrl: 'https://cohere.com/pricing',
+    updatedAt: '2026-06-01',
+    koreanBilling: null,
+  },
 
   // Mistral ─────────────────────
   {

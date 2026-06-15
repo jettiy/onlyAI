@@ -94,25 +94,25 @@ function scoreModel(modelId: string, answers: Answer[]): number {
 
   // Coding usecase
   if (usecase === "coding") {
-    if (["gpt-5-5", "gpt-5-4", "gpt-4-1", "claude-opus-4-8", "claude-opus-4-6", "claude-sonnet-4-6", "gemini-3-1-pro"].includes(modelId)) score += 40;
-    if (["deepseek-v4-pro", "deepseek-v3-2", "deepseek-r1", "kimi-k2-6", "kimi-k2-5", "glm-5.1", "glm-5", "minimax-m2-7", "qwen-3-7-max", "grok-4-3"].includes(modelId)) score += 35;
+    if (["gpt-5-5", "gpt-5-4", "gpt-4-1", "claude-opus-4-8", "claude-opus-4-6", "claude-sonnet-4-6", "claude-fable-5", "gemini-3-1-pro", "mai-code-1-flash", "kimi-k2-7-code", "glm-5.2"].includes(modelId)) score += 40;
+    if (["deepseek-v4-pro", "deepseek-v3-2", "deepseek-r1", "kimi-k2-6", "kimi-k2-5", "glm-5.1", "glm-5", "minimax-m2-7", "minimax-m3", "qwen-3-7-max", "grok-4-3", "nvidia-nemotron-3-ultra"].includes(modelId)) score += 35;
     if (["qwen-3-235b", "mimo-v2-5-pro", "mimo-v2-pro", "gemini-3-5-flash"].includes(modelId)) score += 30;
   }
   // Writing usecase
   if (usecase === "writing") {
-    if (["claude-opus-4-8", "claude-opus-4-6", "claude-sonnet-4-6", "gpt-5-5", "gpt-5-4"].includes(modelId)) score += 40;
+    if (["claude-opus-4-8", "claude-opus-4-6", "claude-sonnet-4-6", "claude-fable-5", "gpt-5-5", "gpt-5-4"].includes(modelId)) score += 40;
     if (["gpt-5-4-mini", "claude-haiku-4-5", "qwen-3-235b", "gemini-3-5-flash", "qwen-3-7-max", "kimi-k2-6", "grok-4-3"].includes(modelId)) score += 25;
     if (["minimax-m2-7", "glm-5", "glm-5.1", "deepseek-v4-pro", "mimo-v2-5-pro"].includes(modelId)) score += 20;
   }
   // Analysis usecase
   if (usecase === "analysis") {
-    if (["claude-opus-4-8", "claude-opus-4-6", "gpt-5-5", "gpt-5-4", "gemini-3-1-pro"].includes(modelId)) score += 40;
+    if (["claude-opus-4-8", "claude-opus-4-6", "claude-fable-5", "gpt-5-5", "gpt-5-4", "gemini-3-1-pro"].includes(modelId)) score += 40;
     if (["gpt-5-2", "gemini-2-5-pro", "kimi-k2-5", "deepseek-r1", "gemini-3-5-flash", "qwen-3-7-max", "kimi-k2-6", "deepseek-v4-pro", "grok-4-3"].includes(modelId)) score += 30;
     if (["qwen-3-235b", "minimax-m2-7", "glm-5.1", "mimo-v2-5-pro"].includes(modelId)) score += 25;
   }
   // Chat usecase
   if (usecase === "chat") {
-    if (["gpt-5-4-mini", "claude-haiku-4-5", "gemini-2-5-flash", "gemini-3-5-flash", "gpt-5-5", "claude-opus-4-8"].includes(modelId)) score += 35;
+    if (["gpt-5-4-mini", "claude-haiku-4-5", "gemini-2-5-flash", "gemini-3-5-flash", "gpt-5-5", "claude-opus-4-8", "claude-fable-5", "minimax-m3"].includes(modelId)) score += 35;
     if (["gpt-4-1-mini", "glm-4-7-flash", "qwen-3-32b", "grok-4-3", "qwen-3-7-max", "kimi-k2-6"].includes(modelId)) score += 30;
     if (["minimax-m2-5", "deepseek-v3-2", "deepseek-v4-pro", "glm-5.1", "mimo-v2-5-pro"].includes(modelId)) score += 25;
   }

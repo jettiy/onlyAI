@@ -34,7 +34,50 @@ const CAT_COLORS: Record<string, { bar: string; label: string }> = {
 };
 
 const EVENTS: TimelineEvent[] = [
-  // ═══ 2026년 6월 (최신) ═══
+  // ═══ 2026년 6월 15일 (최신) ═══
+  {
+    id: "onlyai-refresh", date: "2026-06-15", displayDate: "2026년 6월 15일",
+    model: "onlyAI 6월 대갱신", company: "onlyAI", companyId: "openai",
+    status: "released", category: "efficient",
+    description: "Pricing, Timeline, 모델 추천 전면 갱신. 9개 신규 모델 추가.",
+    highlights: ["9개 신규 모델", "가격표 갱신", "Timeline 6월 이벤트"],
+  },
+  {
+    id: "glm-5.2", date: "2026-06-13", displayDate: "2026년 6월 13일",
+    model: "GLM-5.2", company: "Zhipu AI", companyId: "zhipu",
+    status: "released", category: "flagship", isKoreanFriendly: false,
+    description: "Zhipu AI 최신 코딩 특화 모델. 1M 컨텍스트. API·MIT 오픈웨이트 공개 예정.",
+    highlights: ["코딩 특화", "1M 컨텍스트", "API·MIT 오픈웨이트 예정", "GLM Coding Plan 무제한"],
+  },
+  {
+    id: "kimi-k2-7-code", date: "2026-06-12", displayDate: "2026년 6월 12일",
+    model: "Kimi K2.7 Code", company: "Moonshot", companyId: "moonshot",
+    status: "released", category: "flagship", isKoreanFriendly: false,
+    description: "코딩 특화, 항상 Thinking 모드. 384개 전문가 중 8개 선택. 256K 컨텍스트.",
+    highlights: ["코딩 특화", "항상 Thinking", "256K 컨텍스트", "384개 전문가 MoE"],
+  },
+  {
+    id: "claude-fable-5", date: "2026-06-09", displayDate: "2026년 6월 9일",
+    model: "Claude Fable 5 / Claude Mythos 5", company: "Anthropic", companyId: "anthropic",
+    status: "released", category: "flagship", isKoreanFriendly: true,
+    description: "Claude Fable 5: 최고 성능 모델. Claude Mythos 5: 초청전용 사이버보안 특화.",
+    highlights: ["Claude Fable 5 최고 성능", "Mythos 5 초청전용", "Agent Arena #1", "WebDev Arena 1665 Elo"],
+  },
+  {
+    id: "mai-code-1-flash", date: "2026-06-08", displayDate: "2026년 6월 8일",
+    model: "MAI-Code-1-Flash / MAI-Thinking-1", company: "Microsoft", companyId: "openai",
+    status: "released", category: "flagship", isKoreanFriendly: false,
+    description: "Build 2026 발표. MAI-Code-1-Flash: GPT-5.4급 코딩을 10배 저렴하게. MAI-Thinking-1: 추론 모델.",
+    highlights: ["Build 2026", "GitHub Copilot 탑재", "270K 컨텍스트", "MAI-Thinking-1 프라이빗 프리뷰"],
+  },
+  {
+    id: "nvidia-nemotron-3-ultra", date: "2026-06-02", displayDate: "2026년 6월 2일",
+    model: "NVIDIA Nemotron 3 Ultra", company: "NVIDIA", companyId: "nvidia",
+    status: "released", category: "flagship", isKoreanFriendly: false,
+    description: "Nemotron 라인업 최상위. 253B Dense. 128K 컨텍스트. 코딩·수학 특화.",
+    highlights: ["253B Dense", "128K 컨텍스트", "코딩·수학 특화", "Bedrock/Vertex/NIM"],
+  },
+  // ═══ 2026년 6월 초 ═══
   {
     id: "claude-opus-4-8", date: "2026-06-01", displayDate: "2026년 6월 1일",
     model: "Claude Opus 4.8", company: "Anthropic", companyId: "anthropic",
@@ -44,7 +87,7 @@ const EVENTS: TimelineEvent[] = [
   },
   {
     id: "gpt-5-5", date: "2026-06-01", displayDate: "2026년 6월 1일",
-    model: "GPT-5.5", company: "OpenAI", companyId: "openai",
+    model: "GPT-5.5 Pro", company: "OpenAI", companyId: "openai",
     status: "released", category: "flagship", isKoreanFriendly: true,
     description: "Intelligence Index 60점 — 2위. 극한 추론·코딩 성능.",
     highlights: ["Intelligence Index 2위 (60점)", "극한 추론", "256K 컨텍스트", "GPT 시리즈 최강"],
@@ -172,11 +215,11 @@ const EVENTS: TimelineEvent[] = [
   },
   // ═══ 2026년 4월 (최신) ═══
   {
-    id: "claude-mythos", date: "2026-04-07", displayDate: "2026년 4월 7일",
-    model: "Claude Mythos Preview", company: "Anthropic", companyId: "anthropic",
+    id: "claude-mythos-5", date: "2026-04-07", displayDate: "2026년 4월 7일",
+    model: "Claude Mythos 5 (구 Preview)", company: "Anthropic", companyId: "anthropic",
     status: "released", category: "flagship",
-    description: "Anthropic 최고 모델. 사이버보안에 압도적 성능. Private Preview로 제한적 공개.",
-    highlights: ["Anthropic 최강 모델", "사이버보안 특화", "1M 컨텍스트", "Gated Research Preview"],
+    description: "Anthropic 최고 모델. 사이버보안에 압도적 성능. 6/9 정식 출시 (Claude Mythos 5).",
+    highlights: ["Anthropic 최강 모델", "사이버보안 특화", "초청전용 (Project Glasswing)", "6/9 정식 출시"],
     sourceUrl: "https://red.anthropic.com/2026/mythos-preview/",
   },
   {
@@ -423,7 +466,7 @@ export default function Timeline() {
       )}
 
       <p className="text-xs text-gray-400 dark:text-gray-500 text-center pt-2">
-        출처: artificialanalysis.ai/changelog · 출시 예정·루머 정보는 변경될 수 있어요 · 마지막 업데이트: 2026-04-11
+        출처: artificialanalysis.ai/changelog · 출시 예정·루머 정보는 변경될 수 있어요 · 마지막 업데이트: 2026-06-15
       </p>
     </div>
   );

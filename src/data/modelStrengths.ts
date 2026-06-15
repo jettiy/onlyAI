@@ -1,5 +1,6 @@
 // ── AI 추천 엔진 데이터 ──────────────────────────────────────────
 // 모델별 용도 강점 점수 (1~10), 가격 등급, 한국어, 환경
+// 마지막 갱신: 2026-06-15
 
 export type UseCase = 'writing' | 'coding' | 'image' | 'video' | 'summary' | 'chat';
 export type BudgetTier = 'free' | 'cheap' | 'mid' | 'premium';
@@ -32,15 +33,15 @@ export interface ModelStrength {
 export const strengths: ModelStrength[] = [
   // ===== OpenAI =====
   {
-    id: 'gpt-5-5', name: 'GPT-5.5', companyId: 'openai',
-    scores: { writing: 10, coding: 10, image: 8, video: 7, summary: 10, chat: 9 },
+    id: 'gpt-5-5', name: 'GPT-5.5 Pro', companyId: 'openai',
+    scores: { writing: 10, coding: 9, image: 8, video: 7, summary: 10, chat: 9 },
     budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
     tagline: '극한 추론·코딩. Intelligence Index 60점(2위).',
     logoId: 'openai',
   },
   {
     id: 'gpt-5-4', name: 'GPT-5.4', companyId: 'openai',
-    scores: { writing: 9, coding: 10, image: 8, video: 7, summary: 9, chat: 9 },
+    scores: { writing: 9, coding: 8, image: 8, video: 7, summary: 9, chat: 8 },
     budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$50+',
     tagline: '종합 성능 최강. 전문가 업무용.',
     logoId: 'openai',
@@ -77,7 +78,7 @@ export const strengths: ModelStrength[] = [
   // ===== Anthropic =====
   {
     id: 'claude-opus-4-8', name: 'Claude Opus 4.8', companyId: 'anthropic',
-    scores: { writing: 10, coding: 10, image: 10, video: 9, summary: 10, chat: 10 },
+    scores: { writing: 10, coding: 9, image: 10, video: 9, summary: 9, chat: 9 },
     budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
     tagline: '세계 최고 지능. Intelligence Index 61점(1위).',
     logoId: 'anthropic',
@@ -98,7 +99,7 @@ export const strengths: ModelStrength[] = [
   },
   {
     id: 'claude-sonnet-4-6', name: 'Claude Sonnet 4.6', companyId: 'anthropic',
-    scores: { writing: 9, coding: 9, image: 7, video: 7, summary: 9, chat: 9 },
+    scores: { writing: 9, coding: 9, image: 7, video: 7, summary: 8, chat: 8 },
     budget: 'mid', korean: 8, env: 'cloud', monthlyEst: '$10~30',
     tagline: '성능/가격 밸런스 최고.',
     logoId: 'anthropic',
@@ -110,13 +111,34 @@ export const strengths: ModelStrength[] = [
     tagline: '빠르고 저렴한 초경량.',
     logoId: 'anthropic',
   },
+  {
+    id: 'claude-fable-5', name: 'Claude Fable 5', companyId: 'anthropic',
+    scores: { writing: 9, coding: 10, image: 9, video: 7, summary: 9, chat: 10 },
+    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
+    tagline: '에이전트·코딩 극강 모델.',
+    logoId: 'anthropic',
+  },
+  {
+    id: 'claude-mythos-5', name: 'Claude Mythos 5', companyId: 'anthropic',
+    scores: { writing: 8, coding: 8, image: 8, video: 7, summary: 9, chat: 9 },
+    budget: 'premium', korean: 8, env: 'cloud', monthlyEst: '$50+',
+    tagline: '보안 특화. 안전한 에이전트 실행.',
+    logoId: 'anthropic',
+  },
 
   // ===== Google =====
   {
     id: 'gemini-3-5-flash', name: 'Gemini 3.5 Flash', companyId: 'google',
-    scores: { writing: 9, coding: 9, image: 9, video: 9, summary: 9, chat: 9 },
+    scores: { writing: 9, coding: 9, image: 9, video: 9, summary: 8, chat: 9 },
     budget: 'mid', korean: 9, env: 'cloud', monthlyEst: '$10~30',
     tagline: '지능/속도 리더. Intelligence Index 55점. 164 tok/s.',
+    logoId: 'google',
+  },
+  {
+    id: 'gemini-3-5-pro', name: 'Gemini 3.5 Pro', companyId: 'google',
+    scores: { writing: 9, coding: 9, image: 9, video: 9, summary: 9, chat: 9 },
+    budget: 'mid', korean: 9, env: 'cloud', monthlyEst: '$10~30',
+    tagline: 'Pro급 다국어·멀티모달 최강.',
     logoId: 'google',
   },
   {
@@ -137,7 +159,7 @@ export const strengths: ModelStrength[] = [
   // ===== Zhipu (GLM) =====
   {
     id: 'glm-5.2', name: 'GLM-5.2', companyId: 'zhipu',
-    scores: { writing: 9, coding: 10, image: 1, video: 1, summary: 9, chat: 9 },
+    scores: { writing: 9, coding: 9, image: 1, video: 1, summary: 9, chat: 9 },
     budget: 'free', korean: 8, env: 'cloud', monthlyEst: '무료',
     tagline: '최신 코딩 최강. 1M 컨텍스트. Coding Plan 무제한.',
     logoId: 'zhipu',
@@ -167,7 +189,7 @@ export const strengths: ModelStrength[] = [
   // ===== DeepSeek =====
   {
     id: 'deepseek-v4-pro', name: 'DeepSeek V4 Pro', companyId: 'deepseek',
-    scores: { writing: 8, coding: 9, image: 1, video: 1, summary: 8, chat: 8 },
+    scores: { writing: 8, coding: 9, image: 1, video: 1, summary: 8, chat: 9 },
     budget: 'cheap', korean: 7, env: 'open', monthlyEst: '$3~10',
     tagline: '1M 컨텍스트·오픈웨이트. 가성비 최강.',
     logoId: 'deepseek',
@@ -178,6 +200,20 @@ export const strengths: ModelStrength[] = [
     budget: 'cheap', korean: 6, env: 'open', monthlyEst: '$2~5',
     tagline: '가격 파괴형 범용 모델.',
     logoId: 'deepseek',
+  },
+
+  // ===== MAI =====
+  {
+    id: 'mai-code-1-flash', name: 'MAI Code 1 Flash', companyId: 'mai',
+    scores: { writing: 8, coding: 9, image: 7, video: 9, summary: 8, chat: 8 },
+    budget: 'mid', korean: 7, env: 'cloud', monthlyEst: '$5~20',
+    tagline: '빠른 코딩 특화. 실용적 가성비.',
+  },
+  {
+    id: 'mai-thinking-1', name: 'MAI Thinking 1', companyId: 'mai',
+    scores: { writing: 8, coding: 9, image: 8, video: 6, summary: 10, chat: 8 },
+    budget: 'mid', korean: 7, env: 'cloud', monthlyEst: '$10~30',
+    tagline: '추론 최강. 깊은 사고·분석.',
   },
 
   // ===== Meta =====
@@ -218,6 +254,13 @@ export const strengths: ModelStrength[] = [
     scores: { writing: 7, coding: 8, image: 1, video: 1, summary: 7, chat: 7 },
     budget: 'cheap', korean: 5, env: 'cloud', monthlyEst: '$3~10',
     tagline: '자가진화 에이전트. 코딩 강점.',
+    logoId: 'minimax',
+  },
+  {
+    id: 'minimax-m3', name: 'MiniMax M3', companyId: 'minimax',
+    scores: { writing: 8, coding: 9, image: 8, video: 8, summary: 8, chat: 9 },
+    budget: 'mid', korean: 6, env: 'cloud', monthlyEst: '$5~15',
+    tagline: '에이전트·코딩 균형잡힌 플래그십.',
     logoId: 'minimax',
   },
 
@@ -268,6 +311,13 @@ export const strengths: ModelStrength[] = [
     tagline: '1조 파라미터 코딩 특화.',
     logoId: 'moonshot',
   },
+  {
+    id: 'kimi-k2-7-code', name: 'Kimi K2.7 Code', companyId: 'moonshot',
+    scores: { writing: 7, coding: 9, image: 7, video: 8, summary: 9, chat: 8 },
+    budget: 'mid', korean: 6, env: 'cloud', monthlyEst: '$10~25',
+    tagline: '코딩 특화 7B. 빠르고 정확한.',
+    logoId: 'moonshot',
+  },
 
   // ===== Xiaomi =====
   {
@@ -283,6 +333,15 @@ export const strengths: ModelStrength[] = [
     budget: 'mid', korean: 5, env: 'cloud', monthlyEst: '$10~25',
     tagline: '1M 컨텍스트. 에이전트 최적.',
     logoId: 'xiaomi',
+  },
+
+  // ===== NVIDIA =====
+  {
+    id: 'nvidia-nemotron-3-ultra', name: 'NVIDIA Nemotron 3 Ultra', companyId: 'nvidia',
+    scores: { writing: 8, coding: 9, image: 7, video: 8, summary: 9, chat: 8 },
+    budget: 'mid', korean: 6, env: 'cloud', monthlyEst: '$10~30',
+    tagline: '엔터프라이즈 코딩·추론 최강.',
+    logoId: 'nvidia',
   },
 
   // ===== 로컬 모델 =====

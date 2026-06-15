@@ -41,7 +41,7 @@ const popularityData: PopularityEntry[] = [
   { rank: 4, name: 'MiniMax M2.7', company: 'MiniMax', companyId: 'minimax', requests: '1.92T', score: 92 },
   { rank: 5, name: 'DeepSeek V4 Pro', company: 'DeepSeek', companyId: 'deepseek', requests: '1.50T', score: 90 },
   { rank: 6, name: 'Qwen 3.7 Max', company: 'Qwen', companyId: 'alibaba', requests: '1.30T', score: 88 },
-  { rank: 7, name: 'GPT-5.5', company: 'OpenAI', companyId: 'openai', requests: '1.10T', score: 86 },
+  { rank: 7, name: 'GPT-5.5 Pro', company: 'OpenAI', companyId: 'openai', requests: '1.10T', score: 86 },
   { rank: 8, name: 'GLM-5.1', company: 'Zhipu', companyId: 'zhipu', requests: '0.95T', score: 84 },
   { rank: 9, name: 'Gemini 3.5 Flash', company: 'Google', companyId: 'google', requests: '0.80T', score: 82 },
   { rank: 10, name: 'Kimi K2.6', company: 'Moonshot', companyId: 'moonshot', requests: '0.65T', score: 79 },
@@ -151,10 +151,10 @@ const DATA: ModelBench[] = [
   // ── 2026.06 신규 ──
   {
     name: "Claude Opus 4.8", company: "Anthropic", logoId: "anthropic", color: "#f59e0b", isNew: true,
-    scores: { mmlu: 91.0, gpqa: 76.2, math: 94.5, ifeval: 94.0, humaneval: 98.5, coding: 82.0, swe: 82.5, musr: 84.0 },
+    scores: { mmlu: 89.5, gpqa: 72.0, math: 93.0, ifeval: 93.0, humaneval: 97.5, coding: 78.5, swe: 80.0, musr: 81.5 },
   },
   {
-    name: "GPT-5.5", company: "OpenAI", logoId: "openai", color: "#10b981", isNew: true,
+    name: "GPT-5.5 Pro", company: "OpenAI", logoId: "openai", color: "#10b981", isNew: true,
     scores: { mmlu: 90.2, gpqa: 74.5, math: 95.8, ifeval: 93.5, humaneval: 98.0, coding: 68.0, swe: 78.0, musr: 83.5 },
   },
   {
@@ -174,8 +174,12 @@ const DATA: ModelBench[] = [
     scores: { mmlu: 82.5, gpqa: 55.5, math: 90.0, ifeval: 84.0, humaneval: 91.0, coding: 48.0, swe: 52.0, musr: 68.0 },
   },
   {
+    name: "Kimi K2.7 Code", company: "Moonshot", logoId: "moonshot", color: "#2dd4bf", isNew: true,
+    scores: { mmlu: 78.0, gpqa: 50.0, math: 85.0, ifeval: 82.0, humaneval: 95.5, coding: 72.0, swe: 68.0, musr: 62.0 },
+  },
+  {
     name: "DeepSeek V4 Pro", company: "DeepSeek", logoId: "deepseek", color: "#6366f1", isNew: true,
-    scores: { mmlu: 81.0, gpqa: 54.0, math: 93.0, ifeval: 83.5, humaneval: 90.5, coding: 52.0, swe: 55.5, musr: 70.5 },
+    scores: { mmlu: 84.0, gpqa: 58.0, math: 95.0, ifeval: 86.0, humaneval: 92.0, coding: 56.0, swe: 60.0, musr: 73.0 },
   },
   {
     name: "MiMo V2.5 Pro", company: "Xiaomi", logoId: "xiaomi", color: "#a855f7", isNew: true,
@@ -184,6 +188,22 @@ const DATA: ModelBench[] = [
   {
     name: "Grok 4.3", company: "xAI", logoId: "xai", color: "#ec4899", isNew: true,
     scores: { mmlu: 84.0, gpqa: 58.0, math: 91.0, ifeval: 86.0, humaneval: 92.0, coding: 45.0, swe: 50.0, musr: 71.0 },
+  },
+  {
+    name: "Claude Fable 5", company: "Anthropic", logoId: "anthropic", color: "#f97316", isNew: true,
+    scores: { mmlu: 87.0, gpqa: 68.0, math: 91.5, ifeval: 92.5, humaneval: 96.5, coding: 70.0, swe: 74.0, musr: 78.0 },
+  },
+  {
+    name: "MiniMax M3", company: "MiniMax", logoId: "minimax", color: "#a855f7", isNew: true,
+    scores: { mmlu: 80.5, gpqa: 56.0, math: 86.0, ifeval: 84.0, humaneval: 90.0, coding: 50.0, swe: 48.0, musr: 64.0 },
+  },
+  {
+    name: "MAI-Thinking-1", company: "MAI", logoId: "mai", color: "#06b6d4", isNew: true,
+    scores: { mmlu: 83.0, gpqa: 65.0, math: 96.5, ifeval: 85.0, humaneval: 89.0, coding: 45.0, swe: 50.0, musr: 75.0 },
+  },
+  {
+    name: "NVIDIA Nemotron 3 Ultra", company: "NVIDIA", logoId: "nvidia", color: "#76b900", isNew: true,
+    scores: { mmlu: 77.0, gpqa: 48.0, math: 82.0, ifeval: 80.0, humaneval: 86.0, coding: 38.0, swe: 42.0, musr: 58.0 },
   },
 ];
 
@@ -340,7 +360,7 @@ function PopularityRanking() {
           </tbody>
         </table>
         <div className="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-          <p className="text-[10px] text-gray-400 dark:text-gray-500">* 출처: OpenRouter API 실사용량 통계 · 2026년 4월 기준 · T = 트리llion (조)</p>
+          <p className="text-[10px] text-gray-400 dark:text-gray-500">* 출처: OpenRouter API 실사용량 통계 · 2026년 6월 기준 · T = 트리llion (조)</p>
         </div>
       </div>
     </div>
@@ -369,7 +389,8 @@ export default function Benchmarks() {
       <div>
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><BarChart3 className="w-6 h-6 inline-block mr-2 text-blue-500" />벤치마크 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          주요 AI 모델의 공개 벤치마크 점수 비교. artificialanalysis.ai / 공식 기술 보고서 참고. 2026년 4월 기준.
+                    주요 AI 모델의 공개 벤치마크 점수 비교. artificialanalysis.ai / 공식 기술 보고서 참고. 2026년 6월 기준.
+          <span className="text-[10px] text-brand-500 ml-1">⚡ Gemini 3.5 Flash: Frontier 4× 속도 | 🇨🇳 DeepSeek V4 Pro: BenchLM 중국 1위(87점)</span>
         </p>
       </div>
 
@@ -551,7 +572,7 @@ export default function Benchmarks() {
               </table>
             </div>
             <div className="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-              <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: artificialanalysis.ai · 각 모델 공식 기술 보고서 · 2026년 4월 기준</p>
+              <p className="text-[10px] text-gray-400 dark:text-gray-500">* 초록색 굵은 숫자 = 해당 벤치마크 1위. 출처: artificialanalysis.ai · 각 모델 공식 기술 보고서 · 2026년 6월 기준</p>
             </div>
             {/* 페이지네이션 — 요약표만 */}
             {Math.ceil(DATA.length / ITEMS_PER_PAGE) > 1 && (

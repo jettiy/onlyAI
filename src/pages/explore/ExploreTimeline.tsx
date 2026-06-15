@@ -55,11 +55,11 @@ const EVENTS: TimelineEvent[] = [
     highlights: ["Apache 2.0 오픈소스", "4개 변종 (2.3B~31B)", "AIME 2026 89.2%", "오디오 이해 (엣지)", "256K 컨텍스트"],
   },
   {
-    id: "claude-mythos", date: "2026-03-26", displayDate: "2026년 3월 26일 (유출)",
-    model: "Claude Mythos (Capybara)", company: "Anthropic", companyId: "anthropic",
+    id: "claude-mythos-5", date: "2026-03-26", displayDate: "2026년 3월 26일 (유출)",
+    model: "Claude Mythos 5 (Capybara)", company: "Anthropic", companyId: "anthropic",
     status: "expected", category: "flagship", isKoreanFriendly: true,
-    description: "Anthropic 역대 최강 모델 유출. Opus보다 한 단계 위 티어. 코딩·사이버보안에서 압도적 성능. 보안파트너 우선 접근.",
-    highlights: ["Opus보다 상위 티어", "코딩 압도적 성능", "사이버보안 최강", "단계적 출시 예정"],
+    description: "Anthropic 역대 최강 모델 유출. 6/9 정식 출시 확정 (Claude Mythos 5). 코딩·사이버보안에서 압도적 성능.",
+    highlights: ["6/9 정식 출시 확정", "코딩 압도적 성능", "사이버보안 최강", "초청전용 (Project Glasswing)"],
   },
   {
     id: "mistral-small-4", date: "2026-03-20", displayDate: "2026년 3월 20일",
@@ -181,11 +181,11 @@ const EVENTS: TimelineEvent[] = [
     highlights: ["사전학습 완료", "GPT-5.5 또는 GPT-6 브랜딩", "Q2 발표 예상", "슈퍼앱 통합 예정"],
   },
   {
-    id: "claude-mythos-public", date: "2026-Q3", displayDate: "2026년 Q2~Q3 (예상)",
-    model: "Claude Mythos 정식 출시", company: "Anthropic", companyId: "anthropic",
+    id: "claude-mythos-5-public", date: "2026-Q3", displayDate: "2026년 Q2~Q3 (예상)",
+    model: "Claude Mythos 5 정식 공개", company: "Anthropic", companyId: "anthropic",
     status: "expected", category: "flagship", isKoreanFriendly: true,
-    description: "IPO(10월 예상) 전 대규모 모델 출시 예상. Polymarket 6월 출시 확률 높음.",
-    highlights: ["IPO 전 출시 예상", "보안 파트너 우선", "안전 평가 기반 출시", "10월 IPO 계획"],
+    description: "6/9 Claude Mythos 5 초청전용 출시. 정식 공개 일정 미정. IPO(10월 예상) 전 대규모 모델 출시.",
+    highlights: ["6/9 초청전용 출시 완료", "정식 공개 일정 미정", "보안 파트너 우선", "10월 IPO 계획"],
   },
   {
     id: "gemini-3-2", date: "2026-Q2", displayDate: "2026년 Q2~Q3 (예상)",
@@ -307,7 +307,7 @@ export default function ExploreTimeline() {
       )}
 
       <p className="text-xs text-gray-400 dark:text-gray-500 text-center pt-2">
-        출시 예정·루머 정보는 공개된 자료 기반이며, 변경될 수 있어요 · 마지막 업데이트: 2026-04-07
+        출시 예정·루머 정보는 공개된 자료 기반이며, 변경될 수 있어요 · 마지막 업데이트: 2026-06-15
       </p>
     </div>
   );

@@ -1,11 +1,8 @@
 // scripts/build-news.mjs
 // Builds public/data/news.json from RSS feeds + GitHub Trending
 // Run: node scripts/build-news.mjs
-// Env: ZAI_API_KEY
-
 import { writeFileSync, mkdirSync, existsSync } from 'fs';
 
-const API_KEY = process.env.ZAI_API_KEY || '';
 const OUTPUT = 'public/data/news.json';
 
 // ─── RSS Sources ─────────────────────────────────────────

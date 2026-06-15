@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-06-15T19:58:59.202Z",
-  "updatedAtKST": "2026. 6. 16. AM 4:58:59",
+  "updatedAt": "2026-06-15T21:12:22.953Z",
+  "updatedAtKST": "2026. 6. 16. AM 6:12:22",
   "stats": {
     "aitimes": 20,
     "geeknews": 20,
     "36kr": 11,
     "hf": 20,
     "tc": 17,
-    "github": 8,
-    "total": 85
+    "github": 9,
+    "total": 86
   },
   "news": [
     {
@@ -472,7 +472,7 @@
     {
       "id": "tc-2-https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/",
       "title": "Cybersecurity vets protest &#8216;dangerous&#8217; US government ban on Anthropic&#8217;s most powerful models",
-      "summary": "A group made up of dozens of cybersecurity experts urged the White House to remove export control restrictions on Anthropic’s models Fable and Mythos, arguing that the order is going to limit the abil",
+      "summary": "A group made up of dozens of cybersecurity experts urged the White House to remove export-control restrictions on Anthropic’s Fable and Mythos models, arguing that the order is going to limit the abil",
       "date": "2026-06-15",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -484,7 +484,7 @@
     },
     {
       "id": "tc-3-https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
-      "title": "Salesforce acquires AI customer service platform Fin for $3.6 billion",
+      "title": "Salesforce acquires AI customer service platform Fin for $3.6B",
       "summary": "Salesforce says it wants to use Fin's team and technology to improve Agentforce, its existing enterprise platform that businesses can use to build custom AI agents that automate tasks.",
       "date": "2026-06-15",
       "source": "TechCrunch",
@@ -814,7 +814,7 @@
       "url": "https://huggingface.co/blog/Hcompany/holo31",
       "category": "에이전트",
       "lang": "en",
-      "titleKo": "Holo3.1: 빠른 로컬 컴퓨터 사용 에이전트"
+      "titleKo": "Holo3.1: 빠른 및 로컬 컴퓨터 사용 에이전트"
     },
     {
       "id": "hf-10-https://huggingface.co/blog/JetBrains/mellum2-launch",
@@ -840,7 +840,7 @@
       "url": "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
       "category": "모델 출시",
       "lang": "en",
-      "titleKo": "LLM을 넘어: 확장 가능한 엔터프라이즈 AI 채택이 에이전트 로직에 의존하는 이유"
+      "titleKo": "LLM을 넘어서: 확장 가능한 엔터프라이즈 AI 채택이 에이전트 로직에 의존하는 이유"
     },
     {
       "id": "hf-12-https://huggingface.co/blog/torch-profiler",
@@ -866,7 +866,7 @@
       "url": "https://huggingface.co/blog/delta-weight-sync",
       "category": "연구·논문",
       "lang": "en",
-      "titleKo": "허브 버킷을 사용하여 수조 개의 매개변수 배송: TRL의 델타 가중치 동기화"
+      "titleKo": "허브 버킷으로 수조 개의 매개변수 배송: TRL의 델타 가중치 동기화"
     },
     {
       "id": "hf-15-https://huggingface.co/blog/agent-glossary",
@@ -968,94 +968,6 @@
   ],
   "github": [
     {
-      "id": "gh-644686905",
-      "title": "continuedev/continue — ⏩ Source-controlled AI checks, enforceable in CI. Powered by the open-source Continue CLI",
-      "summary": "⏩ Source-controlled AI checks, enforceable in CI. Powered by the open-source Continue CLI",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/continuedev/continue",
-      "category": "오픈소스",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 33698,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "ai",
-        "cli",
-        "developer-tools",
-        "jetbrains-plugin"
-      ]
-    },
-    {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 25099,
-      "language": "TypeScript",
-      "tags": [
-        "agents",
-        "ai",
-        "chatbots",
-        "evals",
-        "javascript"
-      ]
-    },
-    {
-      "id": "gh-655515393",
-      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
-      "summary": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/CopilotKit/CopilotKit",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 35151,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-native",
-        "agentic-ai",
-        "agents",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-817326197",
-      "title": "screenpipe/screenpipe — YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure",
-      "summary": "YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/screenpipe/screenpipe",
-      "category": "로봇·자율주행",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 19309,
-      "language": "Rust",
-      "tags": [
-        "agents",
-        "agi",
-        "ai",
-        "audio-recording",
-        "computer-vision"
-      ]
-    },
-    {
       "id": "gh-958830659",
       "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
       "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
@@ -1089,7 +1001,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 194337,
+      "stars": 194372,
       "language": "Python",
       "tags": [
         "ai",
@@ -1100,47 +1012,155 @@
       ]
     },
     {
-      "id": "gh-963665823",
-      "title": "embabel/embabel-agent — Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
-      "summary": "Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
+      "id": "gh-868173144",
+      "title": "kortix-ai/suna — The Company AI Command Center",
+      "summary": "The Company AI Command Center",
       "date": "2026-06-15",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/embabel/embabel-agent",
-      "category": "에이전트",
+      "url": "https://github.com/kortix-ai/suna",
+      "category": "투자·기업",
       "lang": "en",
       "isGithub": true,
-      "stars": 3672,
-      "language": "Kotlin",
+      "stars": 19845,
+      "language": "TypeScript",
       "tags": [
-        "agent",
-        "agentic-ai",
-        "agents",
         "ai",
-        "ai-agents"
+        "ai-agents",
+        "llm"
       ]
     },
     {
-      "id": "gh-1182212878",
-      "title": "iOfficeAI/OfficeCLI — OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-      "summary": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "id": "gh-609539715",
+      "title": "e2b-dev/E2B — Open-source, secure environment with real-world tools for enterprise-grade agents.",
+      "summary": "Open-source, secure environment with real-world tools for enterprise-grade agents.",
       "date": "2026-06-15",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "url": "https://github.com/e2b-dev/E2B",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 7135,
-      "language": "C#",
+      "stars": 12597,
+      "language": "Python",
       "tags": [
         "agent",
         "ai",
-        "cli",
-        "office",
-        "openclaw"
+        "ai-agent",
+        "ai-agents",
+        "code-interpreter"
+      ]
+    },
+    {
+      "id": "gh-983715534",
+      "title": "strands-agents/harness-sdk — Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+      "summary": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/strands-agents/harness-sdk",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 6157,
+      "language": "Python",
+      "tags": [
+        "agent-framework",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-615869301",
+      "title": "mudler/LocalAI — LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "summary": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/mudler/LocalAI",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 46872,
+      "language": "Go",
+      "tags": [
+        "agents",
+        "ai",
+        "api",
+        "audio-generation",
+        "decentralized"
+      ]
+    },
+    {
+      "id": "gh-815634288",
+      "title": "tambo-ai/tambo — Generative UI SDK for React",
+      "summary": "Generative UI SDK for React",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/tambo-ai/tambo",
+      "category": "개발 도구",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 11157,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agents",
+        "ai",
+        "assistant",
+        "assistant-chat-bots"
+      ]
+    },
+    {
+      "id": "gh-987975584",
+      "title": "langchain-ai/open-swe — An Open-Source Asynchronous Coding Agent",
+      "summary": "An Open-Source Asynchronous Coding Agent",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/langchain-ai/open-swe",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 9983,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agents",
+        "ai",
+        "anthropic",
+        "claudecode"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Open source agentic operating system",
+      "summary": "Open source agentic operating system",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 18590,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agentic",
+        "ai",
+        "autonomous",
+        "chatbot"
       ]
     }
   ]

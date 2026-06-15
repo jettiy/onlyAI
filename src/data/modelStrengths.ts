@@ -54,6 +54,13 @@ export const strengths: ModelStrength[] = [
     logoId: 'openai',
   },
   {
+    id: 'gpt-5-4-pro', name: 'GPT-5.4 Pro', companyId: 'openai',
+    scores: { writing: 9, coding: 10, image: 8, video: 7, summary: 10, chat: 9 },
+    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$80+',
+    tagline: 'GPT-5 시리즈 최고 성능. 극한 추론·코딩 전문.',
+    logoId: 'openai',
+  },
+  {
     id: 'gpt-5-4-mini', name: 'GPT-5.4 Mini', companyId: 'openai',
     scores: { writing: 8, coding: 9, image: 7, video: 7, summary: 8, chat: 8 },
     budget: 'mid', korean: 8, env: 'cloud', monthlyEst: '$10~30',
@@ -123,6 +130,27 @@ export const strengths: ModelStrength[] = [
     scores: { writing: 9, coding: 10, image: 9, video: 7, summary: 9, chat: 10 },
     budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
     tagline: '에이전트·코딩 극강 모델.',
+    logoId: 'anthropic',
+  },
+  {
+    id: 'claude-opus-4-8-fast', name: 'Claude Opus 4.8 (Fast)', companyId: 'anthropic',
+    scores: { writing: 9, coding: 9, image: 8, video: 7, summary: 9, chat: 9 },
+    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
+    tagline: 'Opus 4.8 지능 + 낮은 지연. 실시간 코딩·에이전트.',
+    logoId: 'anthropic',
+  },
+  {
+    id: 'claude-opus-4-7-fast', name: 'Claude Opus 4.7 (Fast)', companyId: 'anthropic',
+    scores: { writing: 9, coding: 9, image: 8, video: 7, summary: 9, chat: 9 },
+    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$50+',
+    tagline: 'Opus 4.7 지능 + 낮은 지연. 실시간 애플리케이션용.',
+    logoId: 'anthropic',
+  },
+  {
+    id: 'claude-opus-4-6-fast', name: 'Claude Opus 4.6 (Fast)', companyId: 'anthropic',
+    scores: { writing: 9, coding: 9, image: 7, video: 6, summary: 9, chat: 8 },
+    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$50+',
+    tagline: 'Opus 4.6 지능 + 낮은 지연. 실시간 애플리케이션용.',
     logoId: 'anthropic',
   },
   {
@@ -283,6 +311,15 @@ export const strengths: ModelStrength[] = [
     budget: 'mid', korean: 6, env: 'cloud', monthlyEst: '$5~15',
     tagline: '에이전트·코딩 균형잡힌 플래그십.',
     logoId: 'minimax',
+  },
+
+  // ===== StepFun =====
+  {
+    id: 'step-3-7-flash', name: 'Step 3.7 Flash', companyId: 'stepfun',
+    scores: { writing: 6, coding: 7, image: 1, video: 1, summary: 7, chat: 7 },
+    budget: 'cheap', korean: 5, env: 'cloud', monthlyEst: '$2~5',
+    tagline: '초저가 경량 모델. 대량 API 최적.',
+    logoId: 'stepfun',
   },
 
   // ===== Mistral =====

@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-15T12:30:39.546Z",
-  "updatedAtKST": "2026. 6. 15. PM 9:30:39",
+  "updatedAt": "2026-06-15T19:56:03.388Z",
+  "updatedAtKST": "2026. 6. 16. AM 4:56:03",
   "stats": {
     "aitimes": 20,
-    "36kr": 12,
+    "36kr": 11,
     "hf": 20,
-    "tc": 16,
-    "github": 11,
-    "total": 67
+    "tc": 17,
+    "github": 8,
+    "total": 65
   },
   "news": [
     {
@@ -251,19 +251,98 @@
       "lang": "ko"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/",
+      "id": "tc-0-https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/",
+      "title": "Meta&#8217;s new ‘AI Mode’ on Facebook pulls from public info across its platforms",
+      "summary": "Meta announced Monday that it's rolling out a wave of new AI features on Facebook, the latest sign of the company's effort to catch up in the AI race and keep users more engaged on the platform.",
+      "date": "2026-06-15",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/",
+      "category": "투자·기업",
+      "lang": "en",
+      "titleKo": "Facebook의 Meta의 새로운 'AI 모드'는 플랫폼 전체의 공개 정보에서 가져옵니다."
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/06/15/spacex-is-public-everything-you-need-to-know-post-ipo/",
+      "title": "SpaceX is public: Everything you need to know post-IPO",
+      "summary": "TechCrunch has followed SpaceX's start, struggles, and successes from the early days. And we're here for what happens next too. This package of SpaceX IPO coverage includes who stands to win (and mayb",
+      "date": "2026-06-15",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/15/spacex-is-public-everything-you-need-to-know-post-ipo/",
+      "category": "개발 도구",
+      "lang": "en",
+      "titleKo": "SpaceX는 공개되어 있습니다. IPO 후 알아야 할 모든 것"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/",
+      "title": "Cybersecurity vets protest &#8216;dangerous&#8217; US government ban on Anthropic&#8217;s most powerful models",
+      "summary": "A group made up of dozens of cybersecurity experts urged the White House to remove export control restrictions on Anthropic’s models Fable and Mythos, arguing that the order is going to limit the abil",
+      "date": "2026-06-15",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/",
+      "category": "모델 출시",
+      "lang": "en",
+      "titleKo": "사이버 보안 수의사들은 Anthropic의 가장 강력한 모델에 대한 미국 정부의 '위험한' 금지에 항의합니다."
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
+      "title": "Salesforce acquires AI customer service platform Fin for $3.6 billion",
+      "summary": "Salesforce says it wants to use Fin's team and technology to improve Agentforce, its existing enterprise platform that businesses can use to build custom AI agents that automate tasks.",
+      "date": "2026-06-15",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
+      "category": "에이전트",
+      "lang": "en",
+      "titleKo": "Salesforce, AI 고객 서비스 플랫폼 Fin을 36억 달러에 인수"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/06/15/sarvam-becomes-indias-newest-ai-unicorn-with-234-million-funding-round-led-by-hcltech/",
+      "title": "Sarvam becomes India&#8217;s newest AI unicorn with $234 million funding round led by HCLTech",
+      "summary": "Indian IT services company HCLTech is investing $150 million in the Bengaluru startup.",
+      "date": "2026-06-15",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/15/sarvam-becomes-indias-newest-ai-unicorn-with-234-million-funding-round-led-by-hcltech/",
+      "category": "투자·기업",
+      "lang": "en",
+      "titleKo": "Sarvam은 HCLTech이 주도하는 2억 3,400만 달러의 자금 조달 라운드를 통해 인도의 최신 AI 유니콘이 되었습니다."
+    },
+    {
+      "id": "tc-5-https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/",
+      "title": "As AI agents become employees, NewCore emerges with $66M to give them identities",
+      "summary": "NewCore argues the next challenge in enterprise security will be managing AI agents, not people.",
+      "date": "2026-06-15",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/",
+      "category": "에이전트",
+      "lang": "en",
+      "titleKo": "AI 에이전트가 직원이 되면서 NewCore는 그들에게 신원을 제공하기 위해 6,600만 달러를 들고 등장합니다."
+    },
+    {
+      "id": "tc-7-https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/",
       "title": "The AI layoff wave is becoming a powder keg",
-      "summary": "What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small cohort of AI insiders is becoming wealthy on a scale that's hard to comprehend.",
+      "summary": "At the very moment that tens of thousands of workers are being shown the door, a small cohort of AI insiders is becoming wealthy on a scale that's hard to comprehend.",
       "date": "2026-06-15",
       "source": "TechCrunch",
       "sourceLang": "en",
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/",
       "category": "개발 도구",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "AI 해고 물결이 화약통이 되고 있다"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/",
+      "id": "tc-8-https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/",
       "title": "As AI companies race to go public, who else is along for the ride?",
       "summary": "Startups are trying to \"ride that SpaceX IPO wave.\"",
       "date": "2026-06-14",
@@ -272,10 +351,11 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/",
       "category": "개발 도구",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "AI 기업이 상장을 위해 경쟁하고 있는 가운데, 또 누가 그 편에 오를 것인가?"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
+      "id": "tc-9-https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
       "title": "As Anthropic suspends access to new models, India debates its AI future",
       "summary": "Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions.",
       "date": "2026-06-14",
@@ -284,10 +364,11 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
       "category": "모델 출시",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "Anthropic이 새로운 모델에 대한 액세스를 중단함에 따라 인도는 AI 미래에 대해 토론합니다."
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
+      "id": "tc-11-https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
       "title": "KPMG pulls report on AI usage due to apparent hallucinations",
       "summary": "Once again, AI proves to be an unreliable source of information about AI.",
       "date": "2026-06-13",
@@ -296,10 +377,11 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
       "category": "연구·논문",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "KPMG, 명백한 환각으로 인해 AI 사용 보고서 제출"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/06/13/amazon-ceo-reportedly-raised-anthropic-model-concerns-before-government-crackdown/",
+      "id": "tc-12-https://techcrunch.com/2026/06/13/amazon-ceo-reportedly-raised-anthropic-model-concerns-before-government-crackdown/",
       "title": "Amazon CEO reportedly raised Anthropic model concerns before government crackdown",
       "summary": "Amazon CEO Andy Jassy may have been the source of security concerns that led Anthropic to cut off worldwide access to two models on Friday.",
       "date": "2026-06-13",
@@ -308,10 +390,11 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/13/amazon-ceo-reportedly-raised-anthropic-model-concerns-before-government-crackdown/",
       "category": "모델 출시",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "Amazon CEO는 정부 단속 이전에 인류 모델에 대한 우려를 제기한 것으로 알려졌습니다."
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/",
+      "id": "tc-13-https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/",
       "title": "OpenAI faces investigation from state attorneys general",
       "summary": "It's not clear which states are involved, but they're asking about everything from OpenAI's ad policies to its handling of health data.",
       "date": "2026-06-13",
@@ -320,10 +403,11 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/",
       "category": "로봇·자율주행",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "OpenAI, 주 법무장관으로부터 조사를 받다"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
+      "id": "tc-15-https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
       "title": "Anthropic&#8217;s safety warnings may have just backfired — the government has pulled the plug on its most powerful AI",
       "summary": "Anthropic isn't hiding its frustration. \"We disagree that the finding of a narrow potential jailbreak should be cause for recalling a commercial model deployed to hundreds of millions of people,\" the ",
       "date": "2026-06-13",
@@ -332,7 +416,8 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
       "category": "모델 출시",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "Anthropic의 안전 경고는 역효과를 낳았을 수 있습니다. 정부는 가장 강력한 AI의 플러그를 뽑았습니다."
     },
     {
       "id": "hf-0-https://huggingface.co/blog/allenai/olmo-eval",
@@ -344,22 +429,11 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/allenai/olmo-eval",
       "category": "모델 출시",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "olmo-eval: 모델 개발 루프를 위한 평가 워크벤치"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/06/12/spacex-ipo-live-updates-on-everything-you-need-to-know/",
-      "title": "SpaceX IPO: Live updates on everything you need to know",
-      "summary": "TechCrunch has followed SpaceX's start, struggles, and successes from the early days. And we're here for what happens next too. This package of SpaceX IPO coverage includes who stands to win (and mayb",
-      "date": "2026-06-12",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/12/spacex-ipo-live-updates-on-everything-you-need-to-know/",
-      "category": "개발 도구",
-      "lang": "en"
-    },
-    {
-      "id": "tc-11-https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/",
+      "id": "tc-16-https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/",
       "title": "Meta&#8217;s months-old AI unit is a soul-crushing gulag, say the engineers stuck inside it",
       "summary": "A new report suggests the unit, which employs 6,500 people, is on the verge of revolt.",
       "date": "2026-06-12",
@@ -368,10 +442,11 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/",
       "category": "개발 도구",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "Meta의 몇 달 된 AI 유닛은 엔지니어들이 그 안에 갇혀 있다고 말하면서 영혼을 분쇄하는 수용소입니다."
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/06/12/chinese-cybercrime-operation-that-used-ai-to-scam-hundreds-of-thousands-of-victims-sued-by-google/",
+      "id": "tc-17-https://techcrunch.com/2026/06/12/chinese-cybercrime-operation-that-used-ai-to-scam-hundreds-of-thousands-of-victims-sued-by-google/",
       "title": "Chinese cybercrime operation that used AI to scam &#8216;hundreds of thousands of victims&#8217; sued by Google",
       "summary": "The tech giant said a group called \"Outsider Enterprise\" used AI to scam hundreds of thousands of victims, sending 2.5 million text messages over a span of two weeks.",
       "date": "2026-06-12",
@@ -380,10 +455,11 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/12/chinese-cybercrime-operation-that-used-ai-to-scam-hundreds-of-thousands-of-victims-sued-by-google/",
       "category": "개발 도구",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "AI를 활용해 '수십만 명의 피해자'를 사기로 몰아넣은 중국 사이버 범죄 조직, 구글에 고소"
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
+      "id": "tc-18-https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
       "title": "Mistral is rumored to be raising €3B at €20B valuation",
       "summary": "The funding round would value the company at around €20 billion (about $23.15 billion), nearly double its Series C valuation of €11.7 billion.",
       "date": "2026-06-12",
@@ -392,10 +468,11 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
       "category": "투자·기업",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "미스트랄은 €200억 가치로 €30억을 모금할 것이라는 소문이 돌았습니다."
     },
     {
-      "id": "tc-14-https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
+      "id": "tc-19-https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
       "title": "SpaceX, Anthropic, and OpenAI’s hot IPO summer",
       "summary": "The IPO market is back, and&#160;it&#8217;s&#160;not the same&#160;companies&#160;leading the charge. FAANG had a good run, but a&#160;new acronym is taking over: MANGOS&#160;— Meta (or Microsoft, dep",
       "date": "2026-06-12",
@@ -404,55 +481,8 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
       "category": "인프라·하드웨어",
-      "lang": "en"
-    },
-    {
-      "id": "tc-15-https://techcrunch.com/podcast/its-hot-ipo-summer-and-the-mangos-are-ripe/",
-      "title": "It’s hot IPO summer, and the MANGOS are ripe",
-      "summary": "The IPO market is back, and&#160;it&#8217;s&#160;not the same&#160;companies&#160;leading the charge. FAANG had a good run, but a&#160;new acronym is taking over: MANGOS&#160;— Meta (or Microsoft, dep",
-      "date": "2026-06-12",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/podcast/its-hot-ipo-summer-and-the-mangos-are-ripe/",
-      "category": "인프라·하드웨어",
-      "lang": "en"
-    },
-    {
-      "id": "tc-16-https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/",
-      "title": "Cheaper, faster, and culturally aware, Avataar&#8217;s video AI is built for India&#8217;s scale",
-      "summary": "Avataar AI's distilled video model is priced at $0.005 for every second of generation.",
-      "date": "2026-06-12",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/",
-      "title": "Theker just raised $85M to build the factory robot that doesn&#8217;t specialize in anything",
-      "summary": "Unlike humanoid robots designed around a fixed form — think Boston Dynamics — Theker's machines are built to be reconfigured.",
-      "date": "2026-06-12",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/",
-      "category": "로봇·자율주행",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/",
-      "title": "Jeff Bezos&#8217;s Prometheus raises $12B to build an &#8216;artificial general engineer&#8217; for the physical world",
-      "summary": "The new round values the physical AI startup that aims to automate heavy engineering and drug design at $41 billion.",
-      "date": "2026-06-12",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/",
-      "category": "투자·기업",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "SpaceX, Anthropic 및 OpenAI의 뜨거운 IPO 여름"
     },
     {
       "id": "hf-1-https://huggingface.co/blog/torch-mlp-fusion",
@@ -464,7 +494,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/torch-mlp-fusion",
       "category": "연구·논문",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "PyTorch 프로파일링(2부): nn.Linear에서 Fused MLP까지"
     },
     {
       "id": "hf-2-https://huggingface.co/blog/mishig/spaces-agents-md",
@@ -476,7 +507,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/mishig/spaces-agents-md",
       "category": "에이전트",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "에이전트가 포옹하는 두 얼굴 공간을 연결하여 3D 파리 갤러리를 구축한 방법"
     },
     {
       "id": "hf-3-https://huggingface.co/blog/github-ci-hf-jobs",
@@ -488,7 +520,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/github-ci-hf-jobs",
       "category": "오픈소스",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "GitHub CI를 Hugging Face 작업으로 마이그레이션"
     },
     {
       "id": "hf-4-https://huggingface.co/blog/openenv-agentic-rl",
@@ -500,7 +533,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/openenv-agentic-rl",
       "category": "에이전트",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "오픈 소스 커뮤니티는 Agentic RL용 OpenEnv를 지원합니다."
     },
     {
       "id": "hf-5-https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
@@ -512,7 +546,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
       "category": "멀티모달",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "Nemotron 3.5 콘텐츠 안전: 글로벌 기업 AI를 위한 맞춤형 다중 모드 안전"
     },
     {
       "id": "hf-6-https://huggingface.co/blog/hf-cli-for-agents",
@@ -524,7 +559,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/hf-cli-for-agents",
       "category": "에이전트",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "허브와 작업하기 위한 에이전트 최적화 방식으로 hf CLI 설계"
     },
     {
       "id": "hf-9-https://huggingface.co/blog/Hcompany/holo31",
@@ -536,7 +572,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/Hcompany/holo31",
       "category": "에이전트",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "Holo3.1: 빠른 로컬 컴퓨터 사용 에이전트"
     },
     {
       "id": "hf-10-https://huggingface.co/blog/JetBrains/mellum2-launch",
@@ -548,7 +585,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/JetBrains/mellum2-launch",
       "category": "모델 출시",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "Mellum2 소개: JetBrains의 12B 전문가 혼합 모델"
     },
     {
       "id": "hf-11-https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
@@ -560,7 +598,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
       "category": "모델 출시",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "LLM을 넘어: 확장 가능한 엔터프라이즈 AI 채택이 에이전트 로직에 의존하는 이유"
     },
     {
       "id": "hf-12-https://huggingface.co/blog/torch-profiler",
@@ -572,7 +611,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/torch-profiler",
       "category": "개발 도구",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "PyTorch에서 프로파일링(1부): torch.profiler 초보자 가이드"
     },
     {
       "id": "hf-14-https://huggingface.co/blog/delta-weight-sync",
@@ -584,7 +624,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/delta-weight-sync",
       "category": "연구·논문",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "허브 버킷을 사용하여 수조 개의 매개변수 배송: TRL의 델타 가중치 동기화"
     },
     {
       "id": "hf-15-https://huggingface.co/blog/agent-glossary",
@@ -596,7 +637,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/agent-glossary",
       "category": "에이전트",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "하네스, 비계 및 AI 에이전트 용어를 올바르게 이해해야 합니다."
     },
     {
       "id": "hf-16-https://huggingface.co/blog/allenai/olmoearth-v1-1",
@@ -685,6 +727,28 @@
   ],
   "github": [
     {
+      "id": "gh-644686905",
+      "title": "continuedev/continue — ⏩ Source-controlled AI checks, enforceable in CI. Powered by the open-source Continue CLI",
+      "summary": "⏩ Source-controlled AI checks, enforceable in CI. Powered by the open-source Continue CLI",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/continuedev/continue",
+      "category": "오픈소스",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 33698,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "ai",
+        "cli",
+        "developer-tools",
+        "jetbrains-plugin"
+      ]
+    },
+    {
       "id": "gh-839037098",
       "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
       "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
@@ -696,7 +760,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 25088,
+      "stars": 25099,
       "language": "TypeScript",
       "tags": [
         "agents",
@@ -704,6 +768,72 @@
         "chatbots",
         "evals",
         "javascript"
+      ]
+    },
+    {
+      "id": "gh-655515393",
+      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
+      "summary": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 35151,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-817326197",
+      "title": "screenpipe/screenpipe — YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure",
+      "summary": "YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/screenpipe/screenpipe",
+      "category": "로봇·자율주행",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19309,
+      "language": "Rust",
+      "tags": [
+        "agents",
+        "agi",
+        "ai",
+        "audio-recording",
+        "computer-vision"
+      ]
+    },
+    {
+      "id": "gh-958830659",
+      "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/google/adk-python",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 20124,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "agents-sdk"
       ]
     },
     {
@@ -718,7 +848,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 194067,
+      "stars": 194336,
       "language": "Python",
       "tags": [
         "ai",
@@ -729,111 +859,25 @@
       ]
     },
     {
-      "id": "gh-868173144",
-      "title": "kortix-ai/suna — The Company AI Command Center",
-      "summary": "The Company AI Command Center",
+      "id": "gh-963665823",
+      "title": "embabel/embabel-agent — Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
+      "summary": "Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
       "date": "2026-06-15",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/kortix-ai/suna",
-      "category": "투자·기업",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 19844,
-      "language": "TypeScript",
-      "tags": [
-        "ai",
-        "ai-agents",
-        "llm"
-      ]
-    },
-    {
-      "id": "gh-1033778670",
-      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
-      "summary": "Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/iOfficeAI/AionUi",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 28290,
-      "language": "TypeScript",
-      "tags": [
-        "acp",
-        "agent-team",
-        "ai",
-        "ai-agent",
-        "chat"
-      ]
-    },
-    {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
+      "url": "https://github.com/embabel/embabel-agent",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 145303,
-      "language": "TypeScript",
+      "stars": 3672,
+      "language": "Kotlin",
       "tags": [
         "agent",
         "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-656099147",
-      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
-      "summary": "Universal memory layer for AI Agents",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mem0ai/mem0",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 58607,
-      "language": "Python",
-      "tags": [
         "agents",
         "ai",
-        "ai-agents",
-        "application",
-        "chatbots"
-      ]
-    },
-    {
-      "id": "gh-99919302",
-      "title": "apache/doris — Apache Doris is an easy-to-use, high performance and unified analytics database.",
-      "summary": "Apache Doris is an easy-to-use, high performance and unified analytics database.",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/apache/doris",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 15474,
-      "language": "Java",
-      "tags": [
-        "agent",
-        "ai",
-        "bigquery",
-        "database",
-        "dbt"
+        "ai-agents"
       ]
     },
     {
@@ -848,7 +892,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 7117,
+      "stars": 7135,
       "language": "C#",
       "tags": [
         "agent",
@@ -856,72 +900,6 @@
         "cli",
         "office",
         "openclaw"
-      ]
-    },
-    {
-      "id": "gh-1020144870",
-      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/archestra-ai/archestra",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 3834,
-      "language": "TypeScript",
-      "tags": [
-        "a2a",
-        "a2a-mcp",
-        "acp",
-        "agent",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-997390194",
-      "title": "PurpleAILAB/Decepticon — Autonomous Hacking Agent for Red Team",
-      "summary": "Autonomous Hacking Agent for Red Team",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/PurpleAILAB/Decepticon",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 4372,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "cybersecurity",
-        "generative-ai",
-        "hacking"
-      ]
-    },
-    {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 78686,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-collaboration",
-        "agent-harness",
-        "ai",
-        "cao"
       ]
     }
   ]

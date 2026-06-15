@@ -210,61 +210,38 @@ async function fetchGithubTrending() {
   }
 }
 
-// ─── GLM-5 Turbo Translation ─────────────────────────────
+// ─── Google Translate (무료, API 키 불필요) ───────────────
 async function translateNewsItems(items) {
-  if (!API_KEY) {
-    console.log('ZAI_API_KEY not set, skipping translation');
-    return new Map();
-  }
-
-  const toTranslate = items.filter(i => i.lang === 'en' || i.lang === 'zh').slice(0, 15);
+  const toTranslate = items.filter(i => i.lang === 'en' || i.lang === 'zh').slice(0, 30);
   if (toTranslate.length === 0) return new Map();
 
-  const prompt = `다음 AI 뉴스 제목들을 한국어로 간결하게 번역해줘.
-JSON 배열만 출력 (코드블록, 마크다운 금지):
-[{"id":"원본id","title":"한국어 제목"}]
+  const results = new Map();
+  const BATCH = 5;
 
-제목:
-${toTranslate.map((item, i) => `[${i + 1}] ID:${item.id} ${item.title}`).join('\n')}`;
-
-  try {
-    const res = await fetch('https://api.z.ai/api/paas/v4/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${API_KEY}` },
-      body: JSON.stringify({
-        model: 'glm-5-turbo',
-        messages: [{ role: 'user', content: prompt }],
-        temperature: 0.3,
-        max_tokens: 500,
-      }),
-      signal: AbortSignal.timeout(20000),
-    });
-    if (!res.ok) throw new Error(`GLM API ${res.status}`);
-    const data = await res.json();
-    const content = data?.choices?.[0]?.message?.content ?? '';
-
-    let jsonStr = content
-      .replace(/^\s*```(?:json)?\s*/gi, '')
-      .replace(/\s*```\s*$/g, '')
-      .trim();
-    const arrMatch = jsonStr.match(/\[[\s\S]*\]/);
-    if (arrMatch) jsonStr = arrMatch[0];
-
-    const parsed = JSON.parse(jsonStr);
-    if (!Array.isArray(parsed)) throw new Error('Not an array');
-
-    const map = new Map();
-    for (const item of parsed) {
-      if (item.id && typeof item.title === 'string') {
-        map.set(item.id, { title: item.title });
+  for (let i = 0; i < toTranslate.length; i += BATCH) {
+    const batch = toTranslate.slice(i, i + BATCH);
+    const promises = batch.map(async (item) => {
+      try {
+        const res = await fetch(
+          `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=${encodeURIComponent(item.title)}`,
+          { signal: AbortSignal.timeout(10000) }
+        );
+        if (!res.ok) return;
+        const data = await res.json();
+        const translated = data[0]?.map?.(d => d[0])?.filter(Boolean)?.join('') || '';
+        if (translated && translated !== item.title) {
+          results.set(item.id, { title: translated });
+        }
+      } catch (e) {
+        console.error(`Translation failed for ${item.id}:`, e?.message || e);
       }
-    }
-    console.log(`Translated ${map.size} titles`);
-    return map;
-  } catch (e) {
-    console.error('Title translation failed:', e?.message || e);
-    return new Map();
+    });
+    await Promise.all(promises);
+    if (i + BATCH < toTranslate.length) await new Promise(r => setTimeout(r, 500));
   }
+
+  console.log(`Translated ${results.size}/${toTranslate.length} titles via Google Translate`);
+  return results;
 }
 
 // ─── Main ────────────────────────────────────────────────

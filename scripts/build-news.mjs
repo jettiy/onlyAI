@@ -8,6 +8,7 @@ const OUTPUT = 'public/data/news.json';
 // ─── RSS Sources ─────────────────────────────────────────
 const RSS_SOURCES = [
   { id: 'aitimes', name: 'AI타임스', url: 'https://www.aitimes.com/rss/allArticle.xml', lang: 'ko', flag: '🇰🇷' },
+  { id: 'geeknews', name: 'GeekNews', url: 'https://news.hada.io/rss/news', lang: 'ko', flag: '🇰🇷' },
   { id: '36kr', name: '36氪', url: 'https://36kr.com/feed', lang: 'zh', flag: '🇨🇳' },
   { id: 'hf', name: 'Hugging Face', url: 'https://huggingface.co/blog/feed.xml', lang: 'en', flag: '🤗' },
   { id: 'tc', name: 'TechCrunch', url: 'https://techcrunch.com/category/artificial-intelligence/feed/', lang: 'en', flag: '🇺🇸' },

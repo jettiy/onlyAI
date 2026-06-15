@@ -1,17 +1,209 @@
 {
-  "updatedAt": "2026-06-15T05:05:45.451Z",
-  "updatedAtKST": "2026. 6. 15. PM 2:05:45",
+  "updatedAt": "2026-06-15T12:30:39.546Z",
+  "updatedAtKST": "2026. 6. 15. PM 9:30:39",
   "stats": {
     "aitimes": 20,
-    "36kr": 13,
+    "36kr": 12,
     "hf": 20,
     "tc": 16,
-    "github": 10,
-    "total": 66
+    "github": 11,
+    "total": 67
   },
   "news": [
     {
-      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=211715",
+      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=211728",
+      "title": "\"월 200불로 1만4000불 토큰 제공\"…챗GPT·클로드 '구독료' 실체",
+      "summary": "오픈AI와 앤트로픽의 월정액 구독 서비스가 실제 사용량 기준으로는 수천~수만달러 상당의 AI 연산 비용을 제공하고 있는 것으로 나타났다. AI 모델 사용량이 폭증하면서 구독형 서비스의 수익성이 악화하고 있지만, 양사는 시장 점유율 확대를 위해 현재의 가격 정책을 유지하고 있다는 분석이다.반도체·AI 분석 전문 세미애널리시스(SemiAnalysis)는 10일",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211728",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=211745",
+      "title": "지프라, 맘바2·트랜스포머 결합 '잠바2-VL' 공개...\"정확도 유지하며 추론 10배 빨라\"",
+      "summary": "AI 스타트업 지프라가 하이브리드 맘바2-트랜스포머 구조를 적용한 오픈소스 비전-언어모델(VLM) 제품군 '잠바2-VL(Zamba2-VL)'을 공개했다. 동급의 트랜스포머 기반 VLM과 비슷한 정확도를 유지하면서도 추론 속도는 최대 10배 이상 빠르다고 강조했다.지프라는 최근 12억(1.2B), 27억(2.7B), 70억(7B) 매개변수 규모의 ‘잠바2-V",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211745",
+      "category": "오픈소스",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=211742",
+      "title": "\"클로드 코드·코덱스를 하나로\"…데이터브릭스, 에이전트 통합 플랫폼 공개",
+      "summary": "'클로드 코드'와 '코덱스' 등 서로 다른 도구를 하나의 상위 계층에서 조합하고 통제할 수 있는 AI 에이전트 통합 플랫폼이 등장했다.데이터브릭스는 12일(현지시간) 여러 AI 에이전트를 하나의 시스템으로 통합해 관리할 수 있는 오픈소스 플랫폼 '옴니전트(Omnigent)'를 공개했다. 데이터브릭스는 AI 에이전트 개발의 다음 단계가 개별 모델이나 에이전트",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211742",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=211743",
+      "title": "[게시판] 한컴, 폴란드 기업과 유럽 '에이전틱 OS 시장' 공략 등 단신",
+      "summary": "■ 한컴(대표 김연수)은 폴란드 연구개발(R&D) 센터 7불스와 폴란드 AI 기업 알고마인과 업무협약(MOU)을 체결, 폴란드 공공부문의 온프레미스 고객을 대상으로 에이전틱 OS 도입을 위한 개념검증(PoC)을 진행할 예정이다. 하반기 에이전틱 OS 베타 버전 출시를 앞두고 이번 PoC를 통해 유럽 현지의 규제 정합성과 기술 적합성을 검증하고 잠재 고객사를",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211743",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=211736",
+      "title": "오픈AI·앤트로픽, 상장 전 이미 직원 주식 ‘21조’ 현금화",
+      "summary": "기업공개(IPO)를 앞둔 오픈AI와 앤트로픽이 수년간 대규모 비상장 주식 매각 프로그램을 운영하며 직원과 초기 투자자들에게 막대한 현금화 기회를 제공한 것으로 나타났다. 이에 따라 일반적으로 스타트업의 상장을 압박하는 주요 요인인 직원들의 유동성 요구가 상당 부분 해소됐다는 분석이 나오고 있다.디 인포메이션은 14일(현지시간) 오픈AI와 앤트로픽이 지난 5",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211736",
+      "category": "투자·기업",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=211747",
+      "title": "유클릭스,김정인 사장 영입...\"기업 AX 컨설팅 속도 낸다\"",
+      "summary": "유클릭스(대표 김철)는 글로벌 컨설팅사 맥킨지앤드컴퍼니와 현대카드 출신의 김정인 사장을 영입, 기업 AX 컨설팅 사업 강화에 나선다고 15일 밝혔다.김정인 사장은 유클릭스의 기업 AX 컨설팅 브랜드 '에이파이(Aify)'를 중심으로 서비스 사업을 총괄한다.김 사장은 맥킨지앤드컴퍼니에서 파트너로 재직하며 기업 전략, 리스크 관리, 디지털 전환, 인수합병 및 ",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211747",
+      "category": "산업·정책",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=211741",
+      "title": "미소정보기술, 반도체 부품 생산라인에 AI-사람 협업 ‘제품 결함 검사’ 구축",
+      "summary": "데이터 전문 미소정보기술(대표 남상도)은 반도체 공정용 소재부품 전문 씨엠티엑스(CMTX) 제조 공정에 AI 비전 검사를 위한 차세대 지능형 제조 플랫폼 ‘닥시(DAXI)’를 구축했다고 15일 밝혔다.CMTX는 반도체 생산 품질을 좌우하는 핵심인 식각 공정에 사용되는 실리콘 부품을 글로벌 반도체 기업에 공급하고 있다.그동안은 생산 제품의 미세 이물과 결함 ",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211741",
+      "category": "인프라·하드웨어",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=211744",
+      "title": "FT \"삼성·SK하이닉스 AI 보너스에 동탄 부동산·소비 호황\"",
+      "summary": "AI 반도체 수요 폭발이 동탄 등 반도체 거점 도시의 경제 지형을 완전히 바꾸고 있다는 보도가 나왔다. 13일(현지시간) 파이낸셜타임스(FT) 보도에 따르면, 삼성전자와 SK하이닉스 등 글로벌 메모리 반도체 기업들이 AI 붐에 따른 역대급 수익을 임직원들과 공유하면서 경기도 화성시 동탄 등 주요 '반도체 벨트' 지역의 부동산과 소비 시장이 전례 없는 호황을",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211744",
+      "category": "인프라·하드웨어",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-8-https://www.aitimes.com/news/articleView.html?idxno=211738",
+      "title": "스페이스X, '콜로서스' 자체 사용 어려워지자 앤트로픽에 임대",
+      "summary": "스페이스X가 대형 AI 데이터센터 '콜로서스 1(Colossus 1)'의 전체 용량을 앤트로픽에 임대한 배경에는 자체 AI 모델 개발 과정에서 발생한 기술적 한계가 있었던 것으로 알려졌다.12일(현지시간) 블룸버그에 따르면, 스페이스X는 xAI의 차세대 AI 모델 '그록' 학습을 위해 멤피스의 콜로서스 1과 인근의 두 데이터센터를 하나의 초대형 컴퓨팅 클러",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211738",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-9-https://www.aitimes.com/news/articleView.html?idxno=211739",
+      "title": "클라썸, 대학교 AI 역량 강화 플랫폼 ‘클라썸 부스트’ 출시",
+      "summary": "AI 에듀테크 전문 클라썸은 구성원 AI 활용 역량 강화를 지원하는 AI 플랫폼 ‘클라썸 부스트(Boost)’를 출시했다고 15일 밝혔다.클라썸 부스트는 단순히 생성 AI를 제공하는 플랫폼이 아니라, 대학 구성원의 AI 활용 역량을 진단하고 성장까지 지원하는 ‘대학을 위한 AI 역량 강화 플랫폼’이다.이를 위해 챗GPT, 클로드, 제미나이 등 생성 AI를 ",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211739",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=211737",
+      "title": "네이버클라우드, 국방 최적화 옴니모달 '하이퍼클로바X 시드 4B' 공개",
+      "summary": "네이버클라우드(대표 김유원)는 '2026 한국군사과학기술학회 종합학술대회'에서 자체 개발한 경량 옴니모달 '하이퍼클로바X 시드 4B' 모델을 공개하고, 드론·전술차량 등 엣지 환경에서의 실시간 분석을 포함한 국방 AI 활용 사례를 선보였다고 15일 밝혔다.네이버클라우드가 이번에 공개한 모델은 국방 환경에 최적화된 경량 옴니모달 모델이다. 자체 개발 비전 인",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211737",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-11-https://www.aitimes.com/news/articleView.html?idxno=211734",
+      "title": "피차이, 스탠포드 졸업식서 'AI' 침묵했지만…중동 이슈에 빛바랜 축사",
+      "summary": "순다르 피차이 구글 CEO가 스탠포드대학교 졸업식 축사에서 AI를 언급하는 대신 '낙관주의(optimism)'를 강조했다. 그러나 이번에는 팔레스타인 문제를 이유로 일부 학생들이 항의하며 퇴장했다.비즈니스 인사이더에 따르면, 피차이 CEO는 13일(현지시간) 미국 스탠포드대 졸업식 연설자로 나서 졸업생들에게 미래를 바라보는 태도와 낙관적인 시각의 중요성을 ",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211734",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-14-https://www.aitimes.com/news/articleView.html?idxno=211721",
+      "title": "카카오, 삼성전자와 'AI 민생 프로젝트' 해커톤 개최",
+      "summary": "카카오(대표 정신아)는 13~14일 카카오 AI캠퍼스에서 삼성전자와 공동으로 '사피(SSAFY) X 카카오 테크 부트캠프 AI 해커톤'을 개최했다고 밝혔다.이번 행사는 양사가 운영해온 기술 인재 양성 프로그램인 '카카오테크 부트캠프'와 '삼성 청년 SW·AI 아카데미(SSAFY)'를 연계해 처음으로 마련한 공동 해커톤이다.고용노동부의 K-디지털 트레이닝(K",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211721",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=211722",
+      "title": "스페이스X 시총 2조달러 돌파하자 \"매그니피센트 7 대신 새 이름 필요\"",
+      "summary": "스페이스X가 기업 가치 2조달러(약 3000조원)를 넘어서는 초대형 기업공개(IPO)에 성공하자, 월가를 대표해 온 '매그니피센트 7(Magnificent Seven)'라는 명칭의 변경이 필요하다는 목소리가 힘을 얻고 있다. 특히 오픈AI와 앤트로픽 등 차세대 AI 기업들까지 상장을 앞두고 있어, 시장 변화를 반영한 새로운 그룹 명칭이 필요하다는 지적이다.",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211722",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=211725",
+      "title": "순천, 정원예술제 20일 개막",
+      "summary": "AI 생성 영상순천의 음식문화와 공연예술을 함께 즐길 수 있는 도심형 문화예술축제가 원도심 남문터광장에서 열린다고 15일 밝혔다.한국예술문화단체총연합회 순천지회는 오는 20일부터 21일까지 순천부 읍성 남문터광장에서 ‘남문열락’을 주제로 2026 정원예술제를 개최한다.올해 행사는 ‘2026 순천미식주간’과 연계해 ‘맛, 예술을 만나다’를 주제로 진행된다. ",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211725",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=211718",
+      "title": "페이블 5 금지시킨 '탈옥'의 실체 ...\"GPT-5.5도 똑같이 뚫린다\"",
+      "summary": "미국 정부가 앤트로픽의 '페이블 5'와 '미소스 5'에 대한 수출 통제를 발동하며 사실상 서비스 중단을 초래한 가운데, 이번 사태의 배경이 된 '탈옥(jailbreak)' 문제가 일 전부터 공개적으로 제기됐던 것으로 나타났다.이번 논란의 출발점은 지난 10일(현지시간) X에 공개된 유명 AI 탈옥 연구자 플리니 더 리버레이터(Pliny the Liberat",
+      "date": "2026-06-15",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=211718",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=211715",
       "title": "앤트로픽 서비스 중단 배경에 \"중국 연계 조직 접근 의혹\"",
       "summary": "미국 백악관이 앤트로픽의 '페이블 5'과 '미스스 5'에 대한 수출 통제를 단행한 배경에는 중국과 연계된 조직이 모델에 접근했다는 우려가 있었던 것으로 전해졌다.13일(현지시간) 세마포에 따르면, 트럼프 행정부는 중국과 연계된 단체가 앤트로픽의 미소스 모델에 접근했을 수 있다는 의혹을 제기하며 수출 통제를 발동했다.이 조치가 시행되면 외국 국적의 앤트로픽 ",
       "date": "2026-06-15",
@@ -23,7 +215,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=211713",
+      "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=211713",
       "title": "백악관 \"탈옥 경고 무시\" vs  앤트로픽 \"사실상 통보\"...또 정면 충돌",
       "summary": "앤트로픽이 최신 AI 모델 서비스 중단 사태를 수습하기 위해 고위 기술진을 워싱턴으로 급파하며 백악관과의 갈등 봉합에 나섰다. 그러나 미국 정부는 앤트로픽이 사전에 제기된 보안 우려를 심각하게 받아들이지 않았으며, 탈옥(jailbreak) 취약점 수정 요청도 거부했다고 주장하고 있어 책임 공방이 격화되고 있다.14일(현지시간) 악시오스와 비즈니스 인사이더 ",
       "date": "2026-06-15",
@@ -35,7 +227,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=211716",
+      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=211716",
       "title": "코난테크놀로지, 부산역에 AI 통역 솔루션 '링고엑스' 도입",
       "summary": "코난테크놀로지(대표 김영섬)는 부산교통공사와 손잡고 부산역에 AI 통역 안내 솔루션 '링고엑스(Lingo-X)'를 공급한다고 15일 밝혔다.링고엑스는 13개 언어 실시간 통역을 지원하는 AI 통역 안내 솔루션으로 자체 대형언어모델(LLM) 기반 생성형 AI 기술과 음성인식(STT) 엔진을 탑재했다. 외부 API에 의존하는 타사 솔루션과 달리 원천 기술을 기",
       "date": "2026-06-15",
@@ -47,7 +239,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=211719",
+      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=211719",
       "title": "앤드리슨 호로위츠, 서울 사무소 열었다...\"암호화폐 한국 진출 지원\"",
       "summary": "글로벌 벤처캐피털(VC) 앤드리슨 호로위츠(a16z)가 서울 사무소를 공식 개소했다고 15일 밝혔다.a16z는 1000억 달러(약 150조원) 규모의 자산을 운용하는 실리콘 밸리의 글로벌 벤처캐피털로 스페이스X, 오픈AI, 인스타그램, 페이스북 등을 초기 투자해 성장시킨 바 있다.지난해 12월 아시아 진출 계획을 발표한 데 이어, 포트폴리오 기업의 한국 및",
       "date": "2026-06-15",
@@ -59,199 +251,19 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=211714",
-      "title": "\"음향 AI로 불량품 검출\"...디플리, 25억 신규 투자 유치",
-      "summary": "디플리(대표 이수지)는 25억원 규모의 신규 투자 유치를 완료했다고 15일 밝혔다. 데브시스터즈벤처스가 리드 투자사로 나섰고, 수인베스트먼트캐피탈과 노틸러스인베스트먼트가 공동 투자자로 참여했다.디플리는 산업용 음향 AI 솔루션 '리슨 AI'를 개발했다. 사람의 발화 소리와 주변 잡음을 제거하고 타깃 음향만을 추출해 정상 범위 여부를 판별함으로써, 사람의 귀",
+      "id": "tc-1-https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/",
+      "title": "The AI layoff wave is becoming a powder keg",
+      "summary": "What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small cohort of AI insiders is becoming wealthy on a scale that's hard to comprehend.",
       "date": "2026-06-15",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211714",
-      "category": "투자·기업",
-      "lang": "ko"
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/",
+      "category": "개발 도구",
+      "lang": "en"
     },
     {
-      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=211724",
-      "title": "목포, 호국보훈의 달 맞아 국가보훈대상자에게 특별위로금 지급",
-      "summary": "AI 생성 영상목포시가 국가를 위해 희생하고 헌신한 국가보훈대상자에 대한 예우를 강화하기 위해 ‘호국보훈의 달 특별위로금’을 지급했다고 15일 밝혔다.이번 특별위로금은 국가유공자의 자긍심을 높이고 보훈가족의 생활 안정을 지원하기 위한 보훈복지사업의 하나로 마련됐다.지급 대상은 목포시에 거주하며 참전·보훈명예수당을 받고 있는 국가보훈대상자 1782명이다. 지",
-      "date": "2026-06-15",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211724",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=211723",
-      "title": "여수서 국내 최대 해상풍력 공급망 행사 열린다",
-      "summary": "AI 생성 영상여수시는 16일부터 17일까지 여수엑스포컨벤션센터에서 ‘2026 해상풍력 공급망 컨퍼런스 전시회’가 개최된다고 밝혔다.행사는 한국풍력산업협회와 전남이 공동 주최하며, 국내외 해상풍력 기업과 연구기관, 산업 관계자 등 2000여 명이 참가할 예정이고 이는 국내 최대 규모다.이번 행사에는 해상풍력 관련 기업 73개 사가 참여해 102개 부스를 운",
-      "date": "2026-06-15",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211723",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-8-https://www.aitimes.com/news/articleView.html?idxno=211712",
-      "title": "광주, 사회연대경제 청년 일경험 참여자 모집",
-      "summary": "AI 생성 영상광주시가 지역 청년의 실무 경험을 지원하고 사회연대경제 기업의 인력난 해소를 돕기 위해 ‘사회연대경제 청년 일경험 시범사업’ 참여자를 모집한다.모집 기간은 18일부터 24일까지다. 대상은 2026년 1월1일 기준 광주에 거주하는 19세 이상 39세 이하 미취업 청년이다.선발된 청년은 7월부터 11월까지 5개월간 사회연대경제 기업에서 근무하며 ",
-      "date": "2026-06-15",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211712",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-9-https://www.aitimes.com/news/articleView.html?idxno=211717",
-      "title": "전남, 찾아가는 무료법률상담실 확대",
-      "summary": "AI 생성 영상전라남도가 법률서비스 이용이 어려운 농어촌 주민과 고령층을 위해 시군을 직접 찾아가는 무료법률상담실 운영을 확대한다고 15일 밝혔다.상담은 전남이 무료법률상담관으로 위촉한 변호사 40명이 맡는다. 부동산, 가사, 형사, 민사 등 생활 속 법률문제를 무료로 상담하며, 대면 상담 외에도 전화와 온라인 상담이 가능하다. 본청과 동부지역본부에서는 주",
-      "date": "2026-06-15",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211717",
-      "category": "산업·정책",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=211535",
-      "title": "글로벌 기술력 입증한 라이드플럭스 \"레벨4 자율주행 판도 바꾼다\"",
-      "summary": "자율주행 기술은 가까워진 것 같으면서도 아직 멀게만 느껴진다. 막상 탑승하면 운전석엔 안전요원이 자리하고, 운행 구간도 극히 제한적이다.수조원을 넘나드는 글로벌 자율주행 시장에서 '레벨4' 수준의 기술을 갖춘 기업은 열 손가락에 꼽힌다. 이 치열한 경쟁에서 당당히 명함을 내민 국내 기업은 무인 자율주행 소프트웨어 전문 라이드플럭스(대표 박중희)다.여객 운송",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211535",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-13-https://www.aitimes.com/news/articleView.html?idxno=211709",
-      "title": "[AI 이슈트렌드] 선관위 사태 파장 속 한성숙 총리 지명·젠슨 황 방한 주목",
-      "summary": "AI타임스와 이스트에이드의 6월 둘째 주(6월 4일~10일) 이슈 분석 결과, 지방선거 후속 파장과 국무총리 등 인사 지명, 금융 시장 변동 등이 상위권을 차지했다.이번 주 검색량 1위 키워드는 ‘선관위 국조의결 합수본(10.18%)’이다.지난 6·3 지방선거 당시 선거관리위원회의 부실 운영 의혹을 규명하기 위해 여야가 국정조사특별위원회 구성 협상에 돌입했",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211709",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-14-https://www.aitimes.com/news/articleView.html?idxno=211703",
-      "title": "하드웨어 벤치마크 ‘AA-에이전트퍼프’ 등장...블랙웰, 전력 효율 1위",
-      "summary": "아티피셜 애널리시스가 AI 에이전트 워크로드에 특화된 '하드웨어 벤치마크'를 선보였다. 기존 벤치마크가 단순 질의 중심의 성능 측정에 초점을 맞췄다면, 새로운 평가는 실제 코딩 에이전트의 복잡한 작업 흐름을 재현해 AI 하드웨어의 처리 능력과 전력 효율을 측정하는 것이 특징이다. AI 성능 분석 기관인 아티피셜 애널리시스는 12일(현지시간) 실제 AI 에이",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211703",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=211706",
-      "title": "아티피셜 애널리시스, ‘딥SWE’ 벤치마크 도입...'페이블 5' 코딩 1위 등극",
-      "summary": "AI 성능 분석 기관 아티피셜 애널리시스(AA)가 ‘코딩 에이전트 지수(Coding Agent Index)’를 개편하면서 AI 코딩 에이전트 성능 순위에 큰 변화가 나타났다. 기존 평가 기준으로 사용되던 'SWE-벤치 프로'를 새로운 벤치마크인 ‘딥SWE(DeepSWE)’로 교체한 결과, 일부 모델의 순위가 뒤바뀌었으며 새롭게 출시된 클로드 페이블 5(Cl",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211706",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=211697",
-      "title": "[AI&빅데이터쇼] 산업AX부터 XR·자율주행까지 미래 혁신 기술 한자리에",
-      "summary": "지난 3일간 서울 코엑스에서 열린 'AI&빅데이터쇼'에는 산업 AX 솔루션부터 헬스케어, 자율주행, 확장현실(XR) 등 일상을 바꾸는 혁신 기술이 대거 참여했다.삼성SDS는 이번 행사에서 가상의 신입사원인 AI 에이전트 ‘송덕삼’을 통해 생성형 AI의 업무 활용 사례를 선보였다. 또 기업용 AI 플랫폼 ‘패브릭스’와 협업 솔루션 ‘브리티웍스’를 소개하며 공",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211697",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=211708",
-      "title": "베이조스의 AI 스타트업 프로메테우스, 몸값 62조 기록…\"인공 일반 엔지니어 개발 중\"",
-      "summary": "제프 베이조스 아마존 창립자의 AI 스타트업 프로메테우스가 대규모 투자 유치에 성공하며 기업 가치 410억달러(약 62조원)를 인정받았다. 이 회사는 항공기 엔진과 같은 복잡한 물리적 제품을 설계하고 제조할 수 있는 ‘인공 일반 엔지니어(Artificial General Engineer)’ 개발을 목표로 하고 있다.프로메테우스는 11일(현지시간) 120억달",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211708",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=211702",
-      "title": "\"인간 개입 없이 2명 살상\"…우크라이나, 2년 전 '자율 AI 드론' 투입 논란",
-      "summary": "2024년 우크라이나 전장에서 AI가 인간 개입 없이 살상 여부를 스스로 결정한 완전 자율 드론이 사용된 것으로 알려지며 국제사회에 충격을 주고 있다. 10일(현지시간) 과학 전문 매체 뉴사이언티스트에 따르면, 우크라이나 드론 개발업체 고위 관계자인 알렉산더 코하노우스키는 최근 우크라이나 대사관이 주최한 행사에서 2024년 전선에 10대의 완전 자율 쿼드콥",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211702",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=211705",
-      "title": "메타, 무리한 AI 인력 재편에 내부 반발 폭발…저커버그 \"실수 인정\"",
-      "summary": "AI 경쟁을 위해 대규모 조직 개편을 실시한 메타가 내부의 심각한 혼란과 직원 사기 저하에 몸살을 앓는 것으로 알려졌다. AI 업무에 강제 배치된 직원 사이에서 불만이 터져 나오자, 마크 저커버그 CEO가 이례적으로 \"AI 전환 과정에서 실수를 저질렀다\"라고 인정했다.12일(현지시간) 와이어드가 입수한 내부 자료와 녹음 파일에 따르면, 최근 수천명의 직원이",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211705",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=211704",
-      "title": "미국 주정부 연합, 오픈AI 전격 조사…취약계층 보호·기술 결함 검증",
-      "summary": "미국 주 법무장관들이 연합해 오픈AI를 상대로 광범위한 조사에 착수한 것으로 확인됐다. 단순한 부작용 점검을 넘어 사회적 영향과 기술적인 문제까지 조준하고 있어, AI 기업과 제품에 대한 전방위적 검증이 본격화했다는 분석이 나왔다.월스트리트저널(WSJ)에 따르면, 뉴욕주 법무부 장관은 12일(현지시간) 오픈AI에 광범위한 자료 제출을 요구하는 소환장을 발송",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211704",
-      "category": "산업·정책",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-23-https://www.aitimes.com/news/articleView.html?idxno=211663",
-      "title": "목포, 해수 위험일 앞두고 저지대 침수 대비",
-      "summary": "AI 생성 영상목포시는 오는 15일부터 19일까지 5일간 오전 0시부터 8시 사이 바닷물 수위가 높아질 것으로 예보됨에 따라 해안 저지대 침수 예방 활동을 강화한다고 밝혔다.국립해양조사원 조석예보에 따르면 이 기간 바닷물 수위는 17일 기준 최고 5.16m까지 상승할 것으로 예상된다. 목포시는 조석표상 바닷물 수위가 4.90m 이상일 경우를 ‘해수 위험일’",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211663",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-24-https://www.aitimes.com/news/articleView.html?idxno=211658",
-      "title": "순천시립극단, 고전 비극 ‘페드르’ 선보인다",
-      "summary": "AI 생성 영상순천시는 순천시립극단 제72회 정기공연 ‘페드르’를 오는 19일 오후 7시와 20일 오후 3시 순천문화예술회관 대극장에서 개최한다고 밝혔다.이번 공연은 프랑스 고전 비극의 대표작으로 꼽히는 ‘페드르’를 바탕으로 한다. 인간의 사랑과 욕망, 권력을 둘러싼 갈등이 비극적 운명으로 이어지는 과정을 통해 관객에게 깊은 울림을 전할 예정이다.순천시립극",
-      "date": "2026-06-14",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=211658",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "tc-0-https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/",
+      "id": "tc-2-https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/",
       "title": "As AI companies race to go public, who else is along for the ride?",
       "summary": "Startups are trying to \"ride that SpaceX IPO wave.\"",
       "date": "2026-06-14",
@@ -263,7 +275,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
+      "id": "tc-3-https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
       "title": "As Anthropic suspends access to new models, India debates its AI future",
       "summary": "Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions.",
       "date": "2026-06-14",
@@ -275,7 +287,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
+      "id": "tc-5-https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
       "title": "KPMG pulls report on AI usage due to apparent hallucinations",
       "summary": "Once again, AI proves to be an unreliable source of information about AI.",
       "date": "2026-06-13",
@@ -287,7 +299,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/06/13/amazon-ceo-reportedly-raised-anthropic-model-concerns-before-government-crackdown/",
+      "id": "tc-6-https://techcrunch.com/2026/06/13/amazon-ceo-reportedly-raised-anthropic-model-concerns-before-government-crackdown/",
       "title": "Amazon CEO reportedly raised Anthropic model concerns before government crackdown",
       "summary": "Amazon CEO Andy Jassy may have been the source of security concerns that led Anthropic to cut off worldwide access to two models on Friday.",
       "date": "2026-06-13",
@@ -299,7 +311,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/",
+      "id": "tc-7-https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/",
       "title": "OpenAI faces investigation from state attorneys general",
       "summary": "It's not clear which states are involved, but they're asking about everything from OpenAI's ad policies to its handling of health data.",
       "date": "2026-06-13",
@@ -311,7 +323,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
+      "id": "tc-9-https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
       "title": "Anthropic&#8217;s safety warnings may have just backfired — the government has pulled the plug on its most powerful AI",
       "summary": "Anthropic isn't hiding its frustration. \"We disagree that the finding of a narrow potential jailbreak should be cause for recalling a commercial model deployed to hundreds of millions of people,\" the ",
       "date": "2026-06-13",
@@ -335,7 +347,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/06/12/spacex-ipo-live-updates-on-everything-you-need-to-know/",
+      "id": "tc-10-https://techcrunch.com/2026/06/12/spacex-ipo-live-updates-on-everything-you-need-to-know/",
       "title": "SpaceX IPO: Live updates on everything you need to know",
       "summary": "TechCrunch has followed SpaceX's start, struggles, and successes from the early days. And we're here for what happens next too. This package of SpaceX IPO coverage includes who stands to win (and mayb",
       "date": "2026-06-12",
@@ -347,7 +359,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/",
+      "id": "tc-11-https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/",
       "title": "Meta&#8217;s months-old AI unit is a soul-crushing gulag, say the engineers stuck inside it",
       "summary": "A new report suggests the unit, which employs 6,500 people, is on the verge of revolt.",
       "date": "2026-06-12",
@@ -359,7 +371,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/06/12/chinese-cybercrime-operation-that-used-ai-to-scam-hundreds-of-thousands-of-victims-sued-by-google/",
+      "id": "tc-12-https://techcrunch.com/2026/06/12/chinese-cybercrime-operation-that-used-ai-to-scam-hundreds-of-thousands-of-victims-sued-by-google/",
       "title": "Chinese cybercrime operation that used AI to scam &#8216;hundreds of thousands of victims&#8217; sued by Google",
       "summary": "The tech giant said a group called \"Outsider Enterprise\" used AI to scam hundreds of thousands of victims, sending 2.5 million text messages over a span of two weeks.",
       "date": "2026-06-12",
@@ -371,7 +383,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
+      "id": "tc-13-https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
       "title": "Mistral is rumored to be raising €3B at €20B valuation",
       "summary": "The funding round would value the company at around €20 billion (about $23.15 billion), nearly double its Series C valuation of €11.7 billion.",
       "date": "2026-06-12",
@@ -383,7 +395,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-12-https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
+      "id": "tc-14-https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
       "title": "SpaceX, Anthropic, and OpenAI’s hot IPO summer",
       "summary": "The IPO market is back, and&#160;it&#8217;s&#160;not the same&#160;companies&#160;leading the charge. FAANG had a good run, but a&#160;new acronym is taking over: MANGOS&#160;— Meta (or Microsoft, dep",
       "date": "2026-06-12",
@@ -395,7 +407,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/podcast/its-hot-ipo-summer-and-the-mangos-are-ripe/",
+      "id": "tc-15-https://techcrunch.com/podcast/its-hot-ipo-summer-and-the-mangos-are-ripe/",
       "title": "It’s hot IPO summer, and the MANGOS are ripe",
       "summary": "The IPO market is back, and&#160;it&#8217;s&#160;not the same&#160;companies&#160;leading the charge. FAANG had a good run, but a&#160;new acronym is taking over: MANGOS&#160;— Meta (or Microsoft, dep",
       "date": "2026-06-12",
@@ -407,7 +419,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/",
+      "id": "tc-16-https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/",
       "title": "Cheaper, faster, and culturally aware, Avataar&#8217;s video AI is built for India&#8217;s scale",
       "summary": "Avataar AI's distilled video model is priced at $0.005 for every second of generation.",
       "date": "2026-06-12",
@@ -419,7 +431,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-15-https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/",
+      "id": "tc-17-https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/",
       "title": "Theker just raised $85M to build the factory robot that doesn&#8217;t specialize in anything",
       "summary": "Unlike humanoid robots designed around a fixed form — think Boston Dynamics — Theker's machines are built to be reconfigured.",
       "date": "2026-06-12",
@@ -431,7 +443,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-16-https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/",
+      "id": "tc-18-https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/",
       "title": "Jeff Bezos&#8217;s Prometheus raises $12B to build an &#8216;artificial general engineer&#8217; for the physical world",
       "summary": "The new round values the physical AI startup that aims to automate heavy engineering and drug design at $41 billion.",
       "date": "2026-06-12",
@@ -452,18 +464,6 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/torch-mlp-fusion",
       "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/06/11/deezers-new-tool-can-identify-ai-music-from-spotify-apple-music-and-others/",
-      "title": "Deezer&#8217;s new tool can identify AI music from Spotify, Apple Music, and others",
-      "summary": "Deezer introduced a tool that scans playlists from Spotify, Apple Music, and other platforms to identify AI music.",
-      "date": "2026-06-11",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/11/deezers-new-tool-can-identify-ai-music-from-spotify-apple-music-and-others/",
-      "category": "개발 도구",
       "lang": "en"
     },
     {
@@ -685,91 +685,25 @@
   ],
   "github": [
     {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
+      "id": "gh-839037098",
+      "title": "mastra-ai/mastra — From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+      "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
       "date": "2026-06-15",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
+      "url": "https://github.com/mastra-ai/mastra",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 145242,
+      "stars": 25088,
       "language": "TypeScript",
       "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ]
-    },
-    {
-      "id": "gh-764723738",
-      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
-      "summary": "Automate browser based workflows with AI",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/Skyvern-AI/skyvern",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 21910,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "api",
-        "automation",
-        "browser",
-        "browser-automation"
-      ]
-    },
-    {
-      "id": "gh-1128204614",
-      "title": "1jehuang/jcode — Coding Agent Harness",
-      "summary": "Coding Agent Harness",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/1jehuang/jcode",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 7058,
-      "language": "Rust",
-      "tags": [
-        "ai",
-        "claude",
-        "cli",
-        "coding-agent",
-        "llm"
-      ]
-    },
-    {
-      "id": "gh-655515393",
-      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
-      "summary": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
-      "date": "2026-06-15",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/CopilotKit/CopilotKit",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 35101,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-native",
-        "agentic-ai",
         "agents",
-        "ai"
+        "ai",
+        "chatbots",
+        "evals",
+        "javascript"
       ]
     },
     {
@@ -784,7 +718,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 193704,
+      "stars": 194067,
       "language": "Python",
       "tags": [
         "ai",
@@ -795,47 +729,111 @@
       ]
     },
     {
-      "id": "gh-574523116",
-      "title": "f/prompts.chat — f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
-      "summary": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "id": "gh-868173144",
+      "title": "kortix-ai/suna — The Company AI Command Center",
+      "summary": "The Company AI Command Center",
       "date": "2026-06-15",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/f/prompts.chat",
-      "category": "모델 출시",
+      "url": "https://github.com/kortix-ai/suna",
+      "category": "투자·기업",
       "lang": "en",
       "isGithub": true,
-      "stars": 163742,
-      "language": "HTML",
+      "stars": 19844,
+      "language": "TypeScript",
       "tags": [
         "ai",
-        "artificial-intelligence",
-        "awesome-list",
-        "chatgpt",
-        "chatgpt-prompts"
+        "ai-agents",
+        "llm"
       ]
     },
     {
-      "id": "gh-68968979",
-      "title": "nukeop/nuclear — Streaming music player that finds free music for you",
-      "summary": "Streaming music player that finds free music for you",
+      "id": "gh-1033778670",
+      "title": "iOfficeAI/AionUi — Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
+      "summary": "Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
       "date": "2026-06-15",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/nukeop/nuclear",
-      "category": "연구·논문",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 17802,
+      "stars": 28290,
+      "language": "TypeScript",
+      "tags": [
+        "acp",
+        "agent-team",
+        "ai",
+        "ai-agent",
+        "chat"
+      ]
+    },
+    {
+      "id": "gh-626805178",
+      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
+      "summary": "Production-ready platform for agentic workflow development.",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/langgenius/dify",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 145303,
       "language": "TypeScript",
       "tags": [
         "agent",
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-656099147",
+      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
+      "summary": "Universal memory layer for AI Agents",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/mem0ai/mem0",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 58607,
+      "language": "Python",
+      "tags": [
+        "agents",
         "ai",
-        "desktop-app",
-        "linux",
-        "mac"
+        "ai-agents",
+        "application",
+        "chatbots"
+      ]
+    },
+    {
+      "id": "gh-99919302",
+      "title": "apache/doris — Apache Doris is an easy-to-use, high performance and unified analytics database.",
+      "summary": "Apache Doris is an easy-to-use, high performance and unified analytics database.",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/apache/doris",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 15474,
+      "language": "Java",
+      "tags": [
+        "agent",
+        "ai",
+        "bigquery",
+        "database",
+        "dbt"
       ]
     },
     {
@@ -850,7 +848,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 7091,
+      "stars": 7117,
       "language": "C#",
       "tags": [
         "agent",
@@ -861,25 +859,47 @@
       ]
     },
     {
-      "id": "gh-1089925776",
-      "title": "Agent-Field/agentfield — Build, run and scale AI agents like API and microservices - observable,auditable and identity-aware from day one.",
-      "summary": "Build, run and scale AI agents like API and microservices - observable,auditable and identity-aware from day one.",
+      "id": "gh-1020144870",
+      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
       "date": "2026-06-15",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/Agent-Field/agentfield",
+      "url": "https://github.com/archestra-ai/archestra",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3834,
+      "language": "TypeScript",
+      "tags": [
+        "a2a",
+        "a2a-mcp",
+        "acp",
+        "agent",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-997390194",
+      "title": "PurpleAILAB/Decepticon — Autonomous Hacking Agent for Red Team",
+      "summary": "Autonomous Hacking Agent for Red Team",
+      "date": "2026-06-15",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/PurpleAILAB/Decepticon",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 2165,
-      "language": "Go",
+      "stars": 4372,
+      "language": "Python",
       "tags": [
         "agent",
-        "agent-auth",
-        "agent-authentication",
-        "agent-indentity",
-        "agent-scaling"
+        "ai",
+        "cybersecurity",
+        "generative-ai",
+        "hacking"
       ]
     },
     {
@@ -894,7 +914,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 78667,
+      "stars": 78686,
       "language": "TypeScript",
       "tags": [
         "agent",

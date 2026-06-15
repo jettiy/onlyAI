@@ -12,6 +12,17 @@
         "newInput": 0.098,
         "oldOutput": 0.18,
         "newOutput": 0.196
+      },
+      {
+        "type": "price_change",
+        "modelId": "x-ai/grok-4.20-multi-agent",
+        "modelName": "xAI: Grok 4.20 Multi-Agent",
+        "provider": "X-AI",
+        "description": "가격 변동",
+        "oldInput": 2,
+        "newInput": 1.25,
+        "oldOutput": 6,
+        "newOutput": 2.5
       }
     ]
   },

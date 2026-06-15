@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { recommend, type RecommendResult } from '../lib/recommendEngine';
+import { recommend, recommendAsync, type RecommendResult } from '../lib/recommendEngine';
 import { useCaseLabels, useCaseIcons, budgetLabels, envLabels, type UseCase, type BudgetTier, type EnvPreference } from '../data/modelStrengths';
 import { CompanyLogo } from '../components/CompanyLogo';
 import { models, companies, DATA_UPDATED_AT } from '../data/models';
@@ -96,12 +96,35 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
 
 export default function RecommendPage() {
   const [params] = useSearchParams();
-  const results = useMemo(() => {
+
+  // AA 벤치마크 기반 점수 비동기 로딩
+  const [aaResults, setAaResults] = useState<RecommendResult[] | null>(null);
+  const [aaLoading, setAaLoading] = useState(true);
+
+  // 기본 결과 (수동 점수 fallback — 즉시 표시)
+  const fallbackResults = useMemo(() => {
     const useCases = (params.get('useCases') || '').split(',').filter(Boolean) as UseCase[];
     const budget = (params.get('budget') || 'free') as BudgetTier;
     const env = (params.get('env') || 'both') as EnvPreference;
     return recommend({ useCases, budget, env });
   }, [params]);
+
+  // AA 점수 기반 결과 (비동기 — 로딩 후 교체)
+  useEffect(() => {
+    const useCases = (params.get('useCases') || '').split(',').filter(Boolean) as UseCase[];
+    const budget = (params.get('budget') || 'free') as BudgetTier;
+    const env = (params.get('env') || 'both') as EnvPreference;
+    setAaLoading(true);
+    recommendAsync({ useCases, budget, env }).then(results => {
+      setAaResults(results);
+      setAaLoading(false);
+    }).catch(() => {
+      setAaLoading(false);
+    });
+  }, [params]);
+
+  // AA 결과가 있으면 사용, 없으면 fallback
+  const results = aaResults ?? fallbackResults;
 
   const useCases = (params.get('useCases') || '').split(',').filter(Boolean);
   const budget = params.get('budget') || 'free';

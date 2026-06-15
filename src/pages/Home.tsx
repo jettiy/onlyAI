@@ -5,6 +5,7 @@ import { models } from '../data/models';
 import { strengths } from '../data/modelStrengths';
 import { WEEKLY_RANKING, RANKING_SOURCE, ARENA_EXPERT_TOP20 } from '../data/rankings';
 import { CompanyLogo } from '../components/CompanyLogo';
+import DataFreshnessWidget from '../components/DataFreshnessWidget';
 import {
   Sparkles,
   Search,
@@ -731,6 +732,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════
+          DATA FRESHNESS WIDGET — 데이터 신선도
+          ═══════════════════════════════════════ */}
+      <DataFreshnessWidget />
 
       {/* ═══════════════════════════════════════
           FOOTER — 데이터 기준일

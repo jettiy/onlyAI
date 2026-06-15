@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer,
   BarChart, Bar, Cell,
@@ -6,11 +6,12 @@ import {
 import {
   WEEKLY_RANKING, MONTHLY_RANKING, RANKING_TIMELINE, RANKING_SOURCE,
   ARENA_EXPERT_TOP20,
-  type RankingEntry,
+  type RankingEntry, type ArenaExpertEntry,
 } from "../../data/rankings";
+import { useArenaRanking } from "../../hooks/useArenaRanking";
 import { models } from "../../data/models";
 import { CompanyLogo } from "../../components/CompanyLogo";
-import { Rocket, HeartHandshake, BarChart3, TrendingUp } from "lucide-react";
+import { Rocket, HeartHandshake, BarChart3, TrendingUp, RefreshCw } from "lucide-react";
 
 type Period = "weekly" | "monthly";
 type View = "chart" | "list";
@@ -151,6 +152,9 @@ export default function ExploreRanking() {
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>('all');
   const [quickFilter, setQuickFilter] = useState<QuickFilter>('all');
 
+  // Arena Expert 실시간 랭킹 훅 (정적 ARENA_EXPERT_TOP20 대신)
+  const { ranking: arenaRanking, loading: arenaLoading, error: arenaError, updatedAt: arenaUpdatedAt, isLive: arenaIsLive, refetch: arenaRefetch } = useArenaRanking();
+
   // Filter ranking data by category
   const baseData: RankingEntry[] = period === "weekly" ? WEEKLY_RANKING : MONTHLY_RANKING;
   const data = useMemo(() => {
@@ -159,9 +163,9 @@ export default function ExploreRanking() {
     return baseData.filter(m => getModelCategoryByName(m.model) === targetCategory);
   }, [baseData, categoryFilter]);
 
-  // Filter arena data
+  // Filter arena data — 실시간 랭킹 사용 (API 실패 시 정적 fallback 포함)
   const filteredArena = useMemo(() => {
-    let result = ARENA_EXPERT_TOP20;
+    let result = arenaRanking;
 
     // Apply category filter
     const targetCategory = CATEGORY_TO_MODEL_CATEGORY[categoryFilter];
@@ -179,7 +183,7 @@ export default function ExploreRanking() {
     }
 
     return result;
-  }, [categoryFilter, quickFilter]);
+  }, [arenaRanking, categoryFilter, quickFilter]);
 
   const topModel = data[0];
   const maxTokens = data.length > 0 ? Math.max(...data.map((m) => m.tokensNum)) : 0;
@@ -446,7 +450,12 @@ export default function ExploreRanking() {
       {/* ═══ arena.ai Expert 랭킹 ═══ */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
         <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-1">⚔️ arena.ai Expert 랭킹</h2>
-        <p className="text-xs text-gray-400 mb-3">전문가 블라인드 평가 · 295,028표 · 290개 모델 · 2026년 4월 17일</p>
+        <p className="text-xs text-gray-400 mb-3">
+          전문가 블라인드 평가 · 295,028표 · 290개 모델
+          {arenaIsLive && arenaUpdatedAt && ` · 실시간 업데이트 (${arenaUpdatedAt})`}
+          {arenaLoading && ' · 불러오는 중...'}
+          {arenaError && ' · 실시간 데이터 실패 (정적 데이터 표시중)'}
+        </p>
 
         {/* ── Quick Filter Buttons ── */}
         <div className="flex flex-wrap gap-2 mb-4">

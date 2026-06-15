@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   models, companies, tierLabels, tierColors, priceExamples,
   type Region, type ModelTier, type AIModel
 } from "../data/models";
 import { LOGO_ID_TO_PATH } from "../lib/logoUtils";
+import { useLivePrices } from "../hooks/useLivePrices";
 
 
 type View = "featured" | "all" | string; // string = companyId
@@ -15,15 +16,24 @@ const regionGroups: { region: Region; flag: string; label: string; subFlags?: st
 ];
 
 // ── 모델 비교 패널 ──────────────────────────────────────
-function ComparePanel({ selectedIds, onClose, onRemove }: {
+function ComparePanel({ selectedIds, onClose, onRemove, getLivePrice }: {
   selectedIds: string[];
   onClose: () => void;
   onRemove: (id: string) => void;
+  getLivePrice: (id: string) => { input: number | null; output: number | null } | undefined;
 }) {
   const compareModels = selectedIds.map((id) => models.find((m) => m.id === id)!).filter(Boolean);
   if (compareModels.length < 2) return null;
 
-  const minInput = Math.min(...compareModels.filter((m) => m.inputPrice !== null).map((m) => m.inputPrice!));
+  const effectivePrice = (m: AIModel) => {
+    const live = getLivePrice(m.id);
+    return {
+      input: live?.input ?? m.inputPrice,
+      output: live?.output ?? m.outputPrice,
+    };
+  };
+
+  const minInput = Math.min(...compareModels.filter((m) => effectivePrice(m).input !== null).map((m) => effectivePrice(m).input!));
   const maxCtx   = Math.max(...compareModels.map((m) => parseInt(m.contextWindow) || 0));
 
   return (
@@ -68,22 +78,28 @@ function ComparePanel({ selectedIds, onClose, onRemove }: {
               </tr>
               <tr>
                 <td className="px-4 py-3 text-xs text-gray-500 dark:text-gray-400 font-medium">입력 가격<br /><span className="text-[10px]">($/1M 토큰)</span></td>
-                {compareModels.map((m) => (
-                  <td key={m.id} className={"px-4 py-3 text-xs font-bold " + (m.inputPrice === minInput ? "text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-300")}>
-                    {m.inputPrice === 0 ? "🆓 무료" : m.inputPrice !== null ? `$${m.inputPrice}` : "미공개"}
-                    {m.inputPrice === minInput && m.inputPrice !== null && (
+                {compareModels.map((m) => {
+                  const ep = effectivePrice(m);
+                  return (
+                  <td key={m.id} className={"px-4 py-3 text-xs font-bold " + (ep.input === minInput ? "text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-300")}>
+                    {ep.input === 0 ? "🆓 무료" : ep.input !== null ? `$${ep.input}` : "미공개"}
+                    {ep.input === minInput && ep.input !== null && (
                       <span className="ml-1 text-[10px] bg-green-100 dark:bg-green-900/30 text-green-600 px-1 rounded">최저</span>
                     )}
                   </td>
-                ))}
+                  );
+                })}
               </tr>
               <tr className="bg-gray-50/50 dark:bg-gray-800/30">
                 <td className="px-4 py-3 text-xs text-gray-500 dark:text-gray-400 font-medium">출력 가격<br /><span className="text-[10px]">($/1M 토큰)</span></td>
-                {compareModels.map((m) => (
+                {compareModels.map((m) => {
+                  const ep = effectivePrice(m);
+                  return (
                   <td key={m.id} className="px-4 py-3 text-xs font-bold text-gray-700 dark:text-gray-300">
-                    {m.outputPrice === 0 ? "🆓 무료" : m.outputPrice !== null ? `$${m.outputPrice}` : "미공개"}
+                    {ep.output === 0 ? "🆓 무료" : ep.output !== null ? `$${ep.output}` : "미공개"}
                   </td>
-                ))}
+                  );
+                })}
               </tr>
               <tr>
                 <td className="px-4 py-3 text-xs text-gray-500 dark:text-gray-400 font-medium">컨텍스트</td>
@@ -118,7 +134,7 @@ function ComparePanel({ selectedIds, onClose, onRemove }: {
           </table>
         </div>
         <div className="p-4 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-          <p className="text-xs text-gray-400">💡 초록색 = 해당 항목 최적값 · 가격은 2026-03-19 기준 공식 API 페이지</p>
+          <p className="text-xs text-gray-400">💡 초록색 = 해당 항목 최적값 · 가격은 실시간 OpenRouter + 정적 fallback 데이터</p>
         </div>
       </div>
     </div>
@@ -136,6 +152,9 @@ export default function Models() {
   const [showCompare, setShowCompare] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const tierOrder: Record<ModelTier, number> = { flagship: 0, strong: 1, efficient: 2, local: 3 };
+
+  // OpenRouter 실시간 가격
+  const { getLivePrice } = useLivePrices();
 
   const toggleCompare = (id: string) => {
     setCompareIds((prev) => {
@@ -166,11 +185,14 @@ export default function Models() {
         m.useCases.some((u) => u.toLowerCase().includes(q))
       );
     })
-    .sort((a, b) =>
-      sortBy === "price"
-        ? (a.inputPrice ?? 999) - (b.inputPrice ?? 999)
-        : tierOrder[a.tier] - tierOrder[b.tier]
-    );
+    .sort((a, b) => {
+      if (sortBy === "price") {
+        const priceA = getLivePrice(a.id)?.input ?? a.inputPrice ?? 999;
+        const priceB = getLivePrice(b.id)?.input ?? b.inputPrice ?? 999;
+        return priceA - priceB;
+      }
+      return tierOrder[a.tier] - tierOrder[b.tier];
+    });
 
   const ex = priceExamples[selectedExample];
 
@@ -182,6 +204,7 @@ export default function Models() {
           selectedIds={compareIds}
           onClose={() => setShowCompare(false)}
           onRemove={(id) => setCompareIds((prev) => prev.filter((x) => x !== id))}
+          getLivePrice={getLivePrice}
         />
       )}
 
@@ -290,15 +313,18 @@ export default function Models() {
               <p className="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">모델별 월 예상 비용 비교</p>
               <div className="space-y-1.5 max-h-52 overflow-y-auto pr-1">
                 {[...models]
-                  .filter((m) => m.inputPrice !== null)
+                  .filter((m) => m.inputPrice !== null || getLivePrice(m.id))
                   .sort((a, b) => {
-                    const costA = ((a.inputPrice! * ex.tokensInput + a.outputPrice! * ex.tokensOutput) / 1_000_000) * ex.timesPerMonth;
-                    const costB = ((b.inputPrice! * ex.tokensInput + b.outputPrice! * ex.tokensOutput) / 1_000_000) * ex.timesPerMonth;
+                    const lpA = getLivePrice(a.id);
+                    const lpB = getLivePrice(b.id);
+                    const costA = (((lpA?.input ?? a.inputPrice)! * ex.tokensInput + (lpA?.output ?? a.outputPrice)! * ex.tokensOutput) / 1_000_000) * ex.timesPerMonth;
+                    const costB = (((lpB?.input ?? b.inputPrice)! * ex.tokensInput + (lpB?.output ?? b.outputPrice)! * ex.tokensOutput) / 1_000_000) * ex.timesPerMonth;
                     return costA - costB;
                   })
                   .slice(0, 10)
                   .map((m) => {
-                    const monthlyCost = ((m.inputPrice! * ex.tokensInput + m.outputPrice! * ex.tokensOutput) / 1_000_000) * ex.timesPerMonth;
+                    const lp = getLivePrice(m.id);
+                    const monthlyCost = (((lp?.input ?? m.inputPrice)! * ex.tokensInput + (lp?.output ?? m.outputPrice)! * ex.tokensOutput) / 1_000_000) * ex.timesPerMonth;
                     return (
                       <div key={m.id} className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-1.5 min-w-0">
@@ -513,6 +539,7 @@ export default function Models() {
                   model={m}
                   compareIds={compareIds}
                   onToggleCompare={toggleCompare}
+                  getLivePrice={getLivePrice}
                   onCompanyClick={(id) => {
                     const c = companies.find((c) => c.id === id);
                     if (c) setOpenRegion(c.region);
@@ -570,10 +597,14 @@ export default function Models() {
 }
 
 
-function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { model: AIModel; onCompanyClick: (id: string) => void; compareIds: string[]; onToggleCompare: (id: string) => void }) {
+function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare, getLivePrice }: { model: AIModel; onCompanyClick: (id: string) => void; compareIds: string[]; onToggleCompare: (id: string) => void; getLivePrice: (id: string) => { input: number | null; output: number | null } | undefined }) {
   const companyData = companies.find((c) => c.id === model.companyId);
   const isSelected = compareIds.includes(model.id);
   const canAdd = compareIds.length < 3 || isSelected;
+  // 실시간 가격 우선, 없으면 정적 가격 fallback
+  const liveP = getLivePrice(model.id);
+  const effectiveInput = liveP?.input ?? model.inputPrice;
+  const effectiveOutput = liveP?.output ?? model.outputPrice;
   return (
     <div className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-colors " + (isSelected ? "border-brand-400 dark:border-brand-600" : "border-gray-200 dark:border-gray-800 hover:border-brand-200 dark:hover:border-brand-700")}>
       <div className="flex items-start justify-between gap-3 flex-wrap">
@@ -599,7 +630,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
             <span className={tierColors[model.tier] + " px-2 py-0.5 text-xs rounded-full font-medium"}>{tierLabels[model.tier]}</span>
             {model.isNew && <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-red-50 dark:bg-red-900/30 text-red-500">NEW</span>}
             {model.isLocal && <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-orange-50 dark:bg-orange-900/30 text-orange-500">로컬 가능</span>}
-            {model.inputPrice === 0 && <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-green-50 dark:bg-green-900/30 text-green-600">무료</span>}
+            {effectiveInput === 0 && <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-green-50 dark:bg-green-900/30 text-green-600">무료</span>}
           </div>
           <button
             onClick={() => onCompanyClick(model.companyId)}
@@ -633,12 +664,12 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare }: { mod
         <div className="shrink-0">
           <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-3 min-w-[120px] text-right">
             <p className="text-[10px] text-gray-400 mb-1">1M 토큰당</p>
-            {model.inputPrice === 0
+            {effectiveInput === 0
               ? <p className="text-sm font-bold text-green-600">무료</p>
-              : model.inputPrice !== null
+              : effectiveInput !== null
                 ? <>
-                    <p className="text-xs font-semibold text-gray-900 dark:text-white">입력 ${model.inputPrice}</p>
-                    <p className="text-xs font-semibold text-gray-900 dark:text-white">출력 ${model.outputPrice}</p>
+                    <p className="text-xs font-semibold text-gray-900 dark:text-white">입력 ${effectiveInput}</p>
+                    <p className="text-xs font-semibold text-gray-900 dark:text-white">출력 ${effectiveOutput}</p>
                   </>
                 : <p className="text-xs text-gray-400">미공개</p>
             }

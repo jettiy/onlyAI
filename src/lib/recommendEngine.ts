@@ -2,6 +2,29 @@
 // 추천 3대 축: 한국어 성능(30%) + 경제성(35%) + 활용도(35%)
 import { strengths, type UseCase, type BudgetTier, type EnvPreference, envLabels } from '../data/modelStrengths';
 import { models } from '../data/models';
+import { computeAllAABasedScores, mergeScores, type AABasedScores } from '../lib/aaBasedScores';
+
+// ── AA 기반 점수 캐시 ──
+let aaScoresCache: Map<string, AABasedScores> | null = null;
+let aaScoresLoading: Promise<Map<string, AABasedScores>> | null = null;
+
+/** 전체 모델에 대한 AA 점수 일괄 로딩 (캐시 6시간) */
+async function loadAAScoresOnce(): Promise<Map<string, AABasedScores>> {
+  if (aaScoresCache) return aaScoresCache;
+  if (aaScoresLoading) return aaScoresLoading;
+
+  aaScoresLoading = computeAllAABasedScores(strengths).then(map => {
+    aaScoresCache = map;
+    aaScoresLoading = null;
+    return map;
+  }).catch(err => {
+    console.warn('[recommendEngine] AA 점수 로딩 실패:', err);
+    aaScoresLoading = null;
+    return new Map<string, AABasedScores>();
+  });
+
+  return aaScoresLoading;
+}
 
 export interface RecommendInput {
   useCases: UseCase[];
@@ -49,6 +72,21 @@ const useCaseReasonMap: Record<UseCase, string> = {
 };
 
 export function recommend(input: RecommendInput): RecommendResult[] {
+  return recommendSync(input, null);
+}
+
+/** 비동기 버전: AA 벤치마크 점수를 우선 사용 */
+export async function recommendAsync(input: RecommendInput): Promise<RecommendResult[]> {
+  try {
+    const aaScoresMap = await loadAAScoresOnce();
+    return recommendSync(input, aaScoresMap);
+  } catch {
+    // AA 로딩 실패 시 수동 점수만으로 fallback
+    return recommendSync(input, null);
+  }
+}
+
+function recommendSync(input: RecommendInput, aaScoresMap: Map<string, AABasedScores> | null): RecommendResult[] {
   const compatibleBudgets = budgetCompatibility[input.budget];
 
   // 환경 필터링
@@ -61,14 +99,19 @@ export function recommend(input: RecommendInput): RecommendResult[] {
   // 'both' → 모든 모델 포함
 
   const results = candidates.map(model => {
+    // ── AA 기반 점수 병합: 실시간 데이터 우선, 수동 fallback ──
+    const effectiveScores = aaScoresMap
+      ? mergeScores(model.scores, aaScoresMap.get(model.id) ?? { coding: null, writing: null, summary: null, image: null, video: null, chat: null })
+      : model.scores;
+
     // 1. 활용도 (35점) — 사용자 용도와 모델 강점 매칭
     let useCaseScore: number;
     if (input.useCases.length === 0) {
-      const avg = Object.values(model.scores).reduce((a, b) => a + b, 0) / 6;
+      const avg = Object.values(effectiveScores).reduce((a, b) => a + b, 0) / 6;
       useCaseScore = (avg / 10) * 35;
     } else {
-      const maxScore = Math.max(...input.useCases.map(uc => model.scores[uc]));
-      const avgScore = input.useCases.reduce((sum, uc) => sum + model.scores[uc], 0) / input.useCases.length;
+      const maxScore = Math.max(...input.useCases.map(uc => effectiveScores[uc]));
+      const avgScore = input.useCases.reduce((sum, uc) => sum + effectiveScores[uc], 0) / input.useCases.length;
       useCaseScore = ((maxScore * 0.6 + avgScore * 0.4) / 10) * 35;
     }
 
@@ -96,7 +139,7 @@ export function recommend(input: RecommendInput): RecommendResult[] {
 
     const matchedUseCases = input.useCases.length === 0
       ? (['writing', 'coding', 'image', 'video', 'summary', 'chat'] as UseCase[])
-      : input.useCases.filter(uc => model.scores[uc] >= 7);
+      : input.useCases.filter(uc => effectiveScores[uc] >= 7);
 
     const selectedUseCases = input.useCases.length > 0 ? input.useCases : matchedUseCases;
     const reasonParts = selectedUseCases.map(uc => useCaseReasonMap[uc]).filter(Boolean);

@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect, type ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useDarkMode } from '../hooks/useDarkMode';
+import DataFreshnessWidget from './DataFreshnessWidget';
 import {
   Home,
   BarChart3,
@@ -519,6 +520,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           <div className="max-w-5xl mx-auto px-4">
             <Breadcrumb dark={dark} />
             <main className="pb-12">{children}</main>
+            <DataFreshnessWidget />
           </div>
         </div>
       </div>
@@ -573,6 +575,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         {/* Content */}
         <main className="flex-1 pb-20">
           <div className="px-4 py-4">{children}</div>
+          <div className="px-4 pb-4">
+            <DataFreshnessWidget />
+          </div>
         </main>
 
         {/* Fixed bottom tab bar */}

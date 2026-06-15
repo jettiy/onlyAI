@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { DollarSign, BarChart3, Crosshair } from 'lucide-react';
 import { models } from '../../data/models';
 import { logoIdToPath } from '../../lib/logoUtils';
+import { useLivePrices } from '../../hooks/useLivePrices';
 
 /* ── 타입 ── */
 interface CompareItem {
@@ -55,14 +56,14 @@ const TABS = [
 ];
 
 /* ── 헬퍼 ── */
-function buildCompareItem(m: typeof models[0]): CompareItem {
+function buildCompareItem(m: typeof models[0], liveInput?: number | null, liveOutput?: number | null): CompareItem {
   return {
     model: m.name,
     provider: m.company,
     companyId: m.companyId,
     logoId: m.companyId,
-    input: m.inputPrice,
-    output: m.outputPrice,
+    input: liveInput ?? m.inputPrice,
+    output: liveOutput ?? m.outputPrice,
     context: m.contextWindow,
     isNew: m.isNew,
     koreanBilling: ['Zhipu AI', 'Alibaba', 'MiniMax'].includes(m.company),
@@ -194,13 +195,19 @@ export default function ExploreCompare() {
   const [sortBy, setSortBy] = useState<'price' | 'lang' | 'popular'>('price');
   const [showKoreanOnly, setShowKoreanOnly] = useState(false);
 
+  // OpenRouter 실시간 가격
+  const { getLivePrice } = useLivePrices();
+
   const modelOptions = useMemo(() => {
-    return models.map(m => ({
-      value: m.id,
-      label: `${m.name} (${m.company})`,
-      item: buildCompareItem(m),
-    }));
-  }, []);
+    return models.map(m => {
+      const live = getLivePrice(m.openRouterSlug);
+      return {
+        value: m.id,
+        label: `${m.name} (${m.company})`,
+        item: buildCompareItem(m, live?.input ?? m.inputPrice, live?.output ?? m.outputPrice),
+      };
+    });
+  }, [getLivePrice]);
 
   const filteredModels = useMemo(() => {
     let filtered = modelOptions;
@@ -217,8 +224,16 @@ export default function ExploreCompare() {
     });
   }, [modelOptions, showKoreanOnly, sortBy, useCaseFilter]);
 
-  const itemA = selectA ? buildCompareItem(models.find(m => m.id === selectA)!) : null;
-  const itemB = selectB ? buildCompareItem(models.find(m => m.id === selectB)!) : null;
+  const itemA = selectA ? (() => {
+    const m = models.find(mm => mm.id === selectA)!;
+    const live = getLivePrice(m.openRouterSlug);
+    return buildCompareItem(m, live?.input ?? m.inputPrice, live?.output ?? m.outputPrice);
+  })() : null;
+  const itemB = selectB ? (() => {
+    const m = models.find(mm => mm.id === selectB)!;
+    const live = getLivePrice(m.openRouterSlug);
+    return buildCompareItem(m, live?.input ?? m.inputPrice, live?.output ?? m.outputPrice);
+  })() : null;
 
   return (
     <div className="space-y-5">

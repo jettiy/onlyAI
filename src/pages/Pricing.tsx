@@ -4,6 +4,7 @@ import { cloudProviders } from '../data/cloudProviders';
 import { models, DATA_UPDATED_AT } from '../data/models';
 import { getLogoUrl } from '../lib/logoUtils';
 import { estimateMonthlyCost, formatMonthlyCost } from '../lib/estimatedMonthlyCost';
+import { useLivePrices } from '../hooks/useLivePrices';
 
 interface PriceRow {
   model: string;
@@ -227,17 +228,43 @@ export default function Pricing() {
   const [searchQuery, setSearchQuery] = useState('');
   const ITEMS_PER_PAGE = 8;
 
+  // OpenRouter 실시간 가격 보완
+  const { getLivePrice, loading: liveLoading } = useLivePrices();
+
   const filteredPrices = useMemo(() => {
-    if (!searchQuery.trim()) return prices;
+    let base = prices;
+    if (!searchQuery.trim()) return base;
     const q = searchQuery.toLowerCase().trim();
-    return prices.filter(p =>
+    return base.filter(p =>
       p.model.toLowerCase().includes(q) ||
       p.provider.toLowerCase().includes(q)
     );
   }, [prices, searchQuery]);
 
-  const maxInput = Math.max(...filteredPrices.map(p => p.input));
-  const sorted = [...filteredPrices].sort((a, b) => a.input - b.input);
+  // 실시간 가격이 있으면 기본 prices에 병합
+  const effectivePrices = useMemo(() => {
+    if (!getLivePrice) return prices;
+    return prices.map(row => {
+      // 모델명으로 매칭하여 실시간 가격 보완
+      const modelData = models.find(m =>
+        m.name.toLowerCase() === row.model.toLowerCase() ||
+        row.model.toLowerCase().includes(m.name.toLowerCase())
+      );
+      if (!modelData) return row;
+      const live = getLivePrice(modelData.openRouterSlug);
+      if (!live) return row;
+      return {
+        ...row,
+        input: live.input ?? row.input,
+        output: live.output ?? row.output,
+        cacheRead: live.cacheReadPrice ?? row.cacheRead,
+        cacheWrite: live.cacheWritePrice ?? row.cacheWrite,
+      };
+    });
+  }, [prices, getLivePrice]);
+
+  const maxInput = Math.max(...effectivePrices.map(p => p.input));
+  const sorted = [...effectivePrices].sort((a, b) => a.input - b.input);
 
   useEffect(() => {
     async function fetchExchangeRate() {
@@ -292,7 +319,16 @@ export default function Pricing() {
     }
   });
 
-  const pageItems = filteredPrices.slice((tablePage - 1) * ITEMS_PER_PAGE, tablePage * ITEMS_PER_PAGE);
+  const pageItems = useMemo(() => {
+    const base = effectivePrices;
+    if (!searchQuery.trim()) return base.slice((tablePage - 1) * ITEMS_PER_PAGE, tablePage * ITEMS_PER_PAGE);
+    const q = searchQuery.toLowerCase().trim();
+    const filtered = base.filter(p =>
+      p.model.toLowerCase().includes(q) ||
+      p.provider.toLowerCase().includes(q)
+    );
+    return filtered.slice((tablePage - 1) * ITEMS_PER_PAGE, tablePage * ITEMS_PER_PAGE);
+  }, [effectivePrices, searchQuery, tablePage]);
 
   const desktopRows = pageItems.map((row) => {
     const logoSrc = providerLogoMap[row.provider];
@@ -371,6 +407,7 @@ export default function Pricing() {
           {showKRW && <span className="text-[10px] text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">1$ = {krwRate.toLocaleString()}₩</span>}
         </div>
         {loading && <div className="mt-2 flex items-center gap-2"><div className="w-4 h-4 border-2 border-brand-500 border-t-transparent rounded-full animate-spin" /><span className="text-xs text-gray-400">가격 불러오는 중...</span></div>}
+        {!loading && liveLoading && <div className="mt-2 flex items-center gap-2"><div className="w-4 h-4 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" /><span className="text-xs text-gray-400">실시간 가격 동기화 중...</span></div>}
       </div>
 
       {/* Tab switcher */}
@@ -496,7 +533,7 @@ export default function Pricing() {
                   className="w-3.5 h-3.5 rounded border-gray-300 text-brand-600 focus:ring-brand-500 cursor-pointer" />
                 <span className="text-[11px] text-gray-500 dark:text-gray-400">캐시 읽기/쓰기 표시</span>
               </label>
-              <p className="text-[10px] text-gray-400">{filteredPrices.length}개 모델 중 {(tablePage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(tablePage * ITEMS_PER_PAGE, filteredPrices.length)}개 표시</p>
+              <p className="text-[10px] text-gray-400">{effectivePrices.length}개 모델 중 {(tablePage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(tablePage * ITEMS_PER_PAGE, effectivePrices.length)}개 표시</p>
             </div>
           </div>
           <div className="hidden md:block overflow-x-auto">
@@ -529,7 +566,7 @@ export default function Pricing() {
           <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
             <p className="text-xs text-gray-400 dark:text-gray-500">* 가격은 $/1M 토큰{showKRW && ` (1$ = ${krwRate.toLocaleString()}₩)`}. 캐시 읽기 = 이전 대화 재사용 시 (최대 90% 할인). 캐시 쓰기 = 첫 프롬프트 저장 비용.</p>
           </div>
-          {Math.ceil(filteredPrices.length / ITEMS_PER_PAGE) > 1 && <Pagination current={tablePage} total={Math.ceil(filteredPrices.length / ITEMS_PER_PAGE)} onChange={setTablePage} />}
+          {Math.ceil(effectivePrices.length / ITEMS_PER_PAGE) > 1 && <Pagination current={tablePage} total={Math.ceil(effectivePrices.length / ITEMS_PER_PAGE)} onChange={setTablePage} />}
           {/* Mobile cards */}
           <div className="md:hidden grid gap-3 p-4">
             {filteredPrices.length === 0 ? (

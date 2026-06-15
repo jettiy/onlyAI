@@ -77,6 +77,14 @@ let cachedData: AAModel[] | null = null;
 let cacheExpiry = 0;
 const CACHE_TTL = 1000 * 60 * 60 * 6; // 6시간
 
+/** AA 캐시 상태 조회 (데이터 신선도 위젯용) */
+export function getAACacheStatus(): { hasData: boolean; fetchedAt: number | null } {
+  return {
+    hasData: cachedData !== null,
+    fetchedAt: cacheExpiry > 0 ? cacheExpiry - CACHE_TTL : null,
+  };
+}
+
 /** 전체 모델 데이터 fetch (캐시 6시간) */
 export async function fetchAAModels(): Promise<AAModel[]> {
   const now = Date.now();

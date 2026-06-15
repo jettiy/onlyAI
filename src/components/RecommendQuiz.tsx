@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { type UseCase, type BudgetTier } from '../data/modelStrengths';
+import { recommendAsync } from '../lib/recommendEngine';
 
 const STEPS = ['용도', '예산', '환경', '개인정보'] as const;
 
@@ -61,6 +62,9 @@ export default function RecommendQuiz() {
     params.set('budget', budget);
     params.set('privacy', privacy);
     params.set('env', environment);
+    // AA 벤치마크 점수 사전 로딩 — 결과 페이지 렌더링 가속화
+    const envPref = environment === 'local' ? 'local' as const : environment === 'cloud' ? 'cloud' as const : 'both' as const;
+    recommendAsync({ useCases: selectedUseCases, budget, env: envPref }).catch(() => {});
     navigate(`/recommend?${params.toString()}`);
   };
 

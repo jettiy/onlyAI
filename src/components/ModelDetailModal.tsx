@@ -3,6 +3,7 @@ import { CompanyLogo } from "./CompanyLogo";
 import { tierColors, tierLabels, type AIModel } from "../data/models";
 import { estimateMonthlyCost, formatMonthlyCost } from "../lib/estimatedMonthlyCost";
 import { getAABenchmarks, type AABenchmarks } from "../lib/artificialAnalysis";
+import { useLivePrices } from "../hooks/useLivePrices";
 
 /** 모델 용도 기반 추천 질문 */
 function getTryQuestions(model: AIModel): string[] {
@@ -56,12 +57,19 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
   const [isDark] = useState(() => document.documentElement.classList.contains('dark'));
   const [aaData, setAaData] = useState<AABenchmarks | null>(null);
 
+  // 실시간 가격 훅
+  const { getLivePrice } = useLivePrices();
+
   useEffect(() => {
     getAABenchmarks(model.name).then(setAaData);
   }, [model.name]);
 
-  const inputPriceValue = model.inputPrice ?? 0;
-  const outputPriceValue = model.outputPrice ?? 0;
+  // 실시간 가격 우선, 없으면 정적 fallback
+  const livePrice = getLivePrice(model.openRouterSlug);
+  const inputPrice = livePrice?.inputPrice ?? model.inputPrice ?? 0;
+  const outputPrice = livePrice?.outputPrice ?? model.outputPrice ?? 0;
+  const inputPriceValue = inputPrice;
+  const outputPriceValue = outputPrice;
   const averagePrice = (inputPriceValue + outputPriceValue) / 2;
   const baseline = averagePrice > 0 ? averagePrice : 1;
   const inputPct = Math.min(100, (inputPriceValue / baseline) * 100);
@@ -124,11 +132,11 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
               <div>
                 <p className={`text-xs ${mutedText}`}>입력 가격 (1M 토큰)</p>
-                <p className="text-base font-semibold">{formatPrice(model.inputPrice)}</p>
+                <p className="text-base font-semibold">{formatPrice(inputPrice)}</p>
               </div>
               <div>
                 <p className={`text-xs ${mutedText}`}>출력 가격 (1M 토큰)</p>
-                <p className="text-base font-semibold">{formatPrice(model.outputPrice)}</p>
+                <p className="text-base font-semibold">{formatPrice(outputPrice)}</p>
               </div>
               {model.cachedInputPrice !== null && model.cachedInputPrice !== undefined && (
                 <div>
@@ -156,7 +164,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
                   </div>
                   <div className="flex justify-between text-[11px] mt-1">
                     <span className={mutedText}>입력</span>
-                    <span className={mutedText}>{formatPrice(model.inputPrice)}</span>
+                    <span className={mutedText}>{formatPrice(inputPrice)}</span>
                   </div>
                 </div>
                 <div>
@@ -168,7 +176,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
                   </div>
                   <div className="flex justify-between text-[11px] mt-1">
                     <span className={mutedText}>출력</span>
-                    <span className={mutedText}>{formatPrice(model.outputPrice)}</span>
+                    <span className={mutedText}>{formatPrice(outputPrice)}</span>
                   </div>
                 </div>
               </div>
@@ -176,7 +184,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
               <div className={`mt-2 pt-2 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                 <div className="flex justify-between items-center">
                   <span className={`text-[11px] font-medium ${isDark ? 'text-violet-400' : 'text-violet-600'}`}>💡 하루 30분 대화 기준 월 예상 비용</span>
-                  <span className={`text-sm font-bold ${isDark ? 'text-violet-300' : 'text-violet-700'}`}>{formatMonthlyCost(estimateMonthlyCost(model.inputPrice, model.outputPrice).total)}</span>
+                  <span className={`text-sm font-bold ${isDark ? 'text-violet-300' : 'text-violet-700'}`}>{formatMonthlyCost(estimateMonthlyCost(inputPrice, outputPrice).total)}</span>
                 </div>
               </div>
             </div>

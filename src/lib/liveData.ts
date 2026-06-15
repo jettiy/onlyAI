@@ -11,7 +11,7 @@ interface LiveModelPricing {
   webSearch?: number;
 }
 
-interface LiveModel {
+export interface LiveModel {
   id: string;
   name: string;
   contextLength: number;

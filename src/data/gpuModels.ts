@@ -1,5 +1,5 @@
 // GPU 호환성 데이터베이스
-// 출처: Ollama 공식 라이브러리 + toolhalla.ai (2026년 4월 기준)
+// 출처: Ollama 공식 라이브러리 + toolhalla.ai (2026년 6월 기준)
 
 export interface GpuSpec {
   name: string;

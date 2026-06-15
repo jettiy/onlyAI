@@ -120,10 +120,10 @@ function getBarColor(monthlyCostKRW: number): string {
 }
 
 function getPriceBadge(monthlyCost: number): { label: string; color: string; bg: string } {
-  if (monthlyCost === 0) return { label: '무료', color: 'text-emerald-400', bg: 'bg-emerald-900/40' };
-  if (monthlyCost <= 5000) return { label: '저렴', color: 'text-lime-400', bg: 'bg-lime-900/40' };
-  if (monthlyCost <= 30000) return { label: '보통', color: 'text-amber-400', bg: 'bg-amber-900/40' };
-  return { label: '비쌈', color: 'text-red-400', bg: 'bg-red-900/40' };
+  if (monthlyCost === 0) return { label: '무료', color: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-900/40' };
+  if (monthlyCost <= 5000) return { label: '저렴', color: 'text-lime-600 dark:text-lime-400', bg: 'bg-lime-50 dark:bg-lime-900/40' };
+  if (monthlyCost <= 30000) return { label: '보통', color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-50 dark:bg-amber-900/40' };
+  return { label: '비쌈', color: 'text-red-600 dark:text-red-400', bg: 'bg-red-50 dark:bg-red-900/40' };
 }
 
 const allCostPerfData: CostPerfItem[] = strengths
@@ -240,12 +240,12 @@ export default function Home() {
           1. SEARCH BAR — 컴팩트 터미널 스타일
           ═══════════════════════════════════════ */}
       <section className="animate-fade-in">
-        <div className="rounded-xl bg-gray-900 dark:bg-gray-950 border border-gray-800 dark:border-gray-800 p-4">
+        <div className="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4">
           {/* 타이틀 바 */}
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-[#5B5FEF] animate-pulse" />
-              <span className="text-xs font-bold text-gray-300 tracking-wider uppercase">AI Terminal</span>
+              <span className="text-xs font-bold text-gray-700 dark:text-gray-300 tracking-wider uppercase">AI Terminal</span>
             </div>
             <div className="flex items-center gap-3 text-[10px] text-gray-500">
               <Link to="/explore/guide" className="hover:text-[#8B8FFF] transition-colors inline-flex items-center gap-1"><Sparkles className="w-3 h-3" />추천</Link>
@@ -262,7 +262,7 @@ export default function Home() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="모델 검색 또는 용도 입력…  예: 블로그 글쓰기"
-              className="w-full bg-gray-800 dark:bg-gray-900 border border-gray-700 dark:border-gray-700 rounded-lg pl-10 pr-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#5B5FEF]/50 focus:border-[#5B5FEF]/50 transition-all font-mono"
+              className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg pl-10 pr-4 py-2.5 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#5B5FEF]/50 focus:border-[#5B5FEF]/50 transition-all font-mono"
             />
           </form>
 
@@ -279,7 +279,7 @@ export default function Home() {
               <button
                 key={item.query}
                 onClick={() => { setSearchQuery(item.query); handleSearch(new Event('click') as any); }}
-                className="px-2.5 py-1 rounded text-[11px] font-medium text-gray-400 bg-gray-800 dark:bg-gray-800/60 hover:text-[#8B8FFF] hover:bg-[#5B5FEF]/10 hover:border-[#5B5FEF]/20 transition-all border border-transparent"
+                className="px-2.5 py-1 rounded text-[11px] font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800/60 hover:text-[#8B8FFF] hover:bg-[#5B5FEF]/10 hover:border-[#5B5FEF]/20 transition-all border border-transparent"
               >
                 {item.label}
               </button>
@@ -294,13 +294,13 @@ export default function Home() {
       <section className="animate-fade-in">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {/* ── Arena Top3 ── */}
-          <div className="rounded-xl bg-gray-900 dark:bg-gray-950 border border-gray-800 dark:border-gray-800 p-4 hover:border-[#5B5FEF]/40 transition-all">
+          <div className="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4 hover:border-[#5B5FEF]/40 transition-all">
             <div className="flex items-center gap-2 mb-3">
               <span className="w-7 h-7 rounded-lg bg-[#5B5FEF]/10 flex items-center justify-center text-[#5B5FEF]">
                 <Trophy className="w-4 h-4" />
               </span>
               <div className="flex-1 min-w-0">
-                <h3 className="text-xs font-bold text-gray-200">Arena Top 3</h3>
+                <h3 className="text-xs font-bold text-gray-800 dark:text-gray-200">Arena Top 3</h3>
                 <p className="text-[10px] text-gray-500">Expert 평가 순위</p>
               </div>
               <Link to="/explore/ranking" className="text-[10px] text-gray-500 hover:text-[#8B8FFF] transition-colors">
@@ -310,17 +310,17 @@ export default function Home() {
             <div className="space-y-2">
               {arenaTop3.map((m, i) => {
                 const IconComp = arenaMedals[i];
-                const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : 'text-orange-400';
+                const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-500 dark:text-gray-400' : 'text-orange-400';
                 return (
                   <div
                     key={m.id}
-                    className="flex items-center gap-2 cursor-pointer group rounded-lg px-2 py-1.5 hover:bg-gray-800/60 transition-colors"
+                    className="flex items-center gap-2 cursor-pointer group rounded-lg px-2 py-1.5 hover:bg-gray-100 dark:hover:bg-gray-800/60 transition-colors"
                     onClick={() => navigate(`/explore/compare?search=${encodeURIComponent(m.name)}`)}
                   >
-                    <span className="text-[10px] font-bold text-gray-600 w-3">{i + 1}</span>
+                    <span className="text-[10px] font-bold text-gray-400 dark:text-gray-600 w-3">{i + 1}</span>
                     <IconComp className={`w-3.5 h-3.5 shrink-0 ${iconColor}`} />
                     <CompanyLogo company={m.company} size={16} />
-                    <span className="text-xs font-semibold text-gray-300 group-hover:text-white truncate flex-1">{m.name}</span>
+                    <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white truncate flex-1">{m.name}</span>
                     <span className="text-[11px] font-bold text-[#8B8FFF] tabular-nums">{m.arenaScore}</span>
                   </div>
                 );
@@ -329,13 +329,13 @@ export default function Home() {
           </div>
 
           {/* ── 가성비 Top3 ── */}
-          <div className="rounded-xl bg-gray-900 dark:bg-gray-950 border border-gray-800 dark:border-gray-800 p-4 hover:border-[#5B5FEF]/40 transition-all">
+          <div className="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4 hover:border-[#5B5FEF]/40 transition-all">
             <div className="flex items-center gap-2 mb-3">
               <span className="w-7 h-7 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
                 <Target className="w-4 h-4" />
               </span>
               <div className="flex-1 min-w-0">
-                <h3 className="text-xs font-bold text-gray-200">가성비 Top 3</h3>
+                <h3 className="text-xs font-bold text-gray-800 dark:text-gray-200">가성비 Top 3</h3>
                 <p className="text-[10px] text-gray-500">가격 대비 성능 최고</p>
               </div>
               <Link to="/pricing" className="text-[10px] text-gray-500 hover:text-[#8B8FFF] transition-colors">
@@ -346,7 +346,7 @@ export default function Home() {
               {filteredCostPerfData.slice(0, 3).map((item, i) => {
                 const IconComp = TOP3_ICONS[i];
                 const badge = getPriceBadge(item.monthlyCost);
-                const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : 'text-orange-400';
+                const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-500 dark:text-gray-400' : 'text-orange-400';
                 return (
                   <div
                     key={item.id}
@@ -356,7 +356,7 @@ export default function Home() {
                     <div className="flex items-center gap-2">
                       <IconComp className={`w-3.5 h-3.5 shrink-0 ${iconColor}`} />
                       <CompanyLogo company={item.companyId} size={16} />
-                      <span className="text-xs font-semibold text-gray-300 group-hover:text-white truncate flex-1">{item.name}</span>
+                      <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white truncate flex-1">{item.name}</span>
                       <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${badge.bg} ${badge.color}`}>
                         {badge.label}
                       </span>
@@ -368,13 +368,13 @@ export default function Home() {
           </div>
 
           {/* ── 실사용량 Top3 ── */}
-          <div className="rounded-xl bg-gray-900 dark:bg-gray-950 border border-gray-800 dark:border-gray-800 p-4 hover:border-[#5B5FEF]/40 transition-all">
+          <div className="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4 hover:border-[#5B5FEF]/40 transition-all">
             <div className="flex items-center gap-2 mb-3">
               <span className="w-7 h-7 rounded-lg bg-violet-500/10 flex items-center justify-center text-violet-400">
                 <Flame className="w-4 h-4" />
               </span>
               <div className="flex-1 min-w-0">
-                <h3 className="text-xs font-bold text-gray-200">실사용량 Top 3</h3>
+                <h3 className="text-xs font-bold text-gray-800 dark:text-gray-200">실사용량 Top 3</h3>
                 <p className="text-[10px] text-gray-500">OpenRouter 주간 사용량</p>
               </div>
               <Link to="/explore/ranking" className="text-[10px] text-gray-500 hover:text-[#8B8FFF] transition-colors">
@@ -384,7 +384,7 @@ export default function Home() {
             <div className="space-y-2">
               {usageBarData.slice(0, 3).map((item, i) => {
                 const IconComp = TOP3_ICONS[i];
-                const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : 'text-orange-400';
+                const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-500 dark:text-gray-400' : 'text-orange-400';
                 return (
                   <div
                     key={item.name}
@@ -394,8 +394,8 @@ export default function Home() {
                     <div className="flex items-center gap-2">
                       <IconComp className={`w-3.5 h-3.5 shrink-0 ${iconColor}`} />
                       <CompanyLogo company={item.company} size={16} />
-                      <span className="text-xs font-semibold text-gray-300 group-hover:text-white truncate flex-1">{item.name}</span>
-                      <span className="text-[11px] font-bold text-gray-400 tabular-nums">{item.displayTokens}</span>
+                      <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white truncate flex-1">{item.name}</span>
+                      <span className="text-[11px] font-bold text-gray-500 dark:text-gray-400 tabular-nums">{item.displayTokens}</span>
                     </div>
                   </div>
                 );
@@ -408,12 +408,12 @@ export default function Home() {
       {/* ═══════════════════════════════════════
           3. COST-PERF TABLE — 가성비 전체 리스트
           ═══════════════════════════════════════ */}
-      <section className="rounded-xl bg-gray-900 dark:bg-gray-950 border border-gray-800 dark:border-gray-800 p-4 animate-fade-in">
+      <section className="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4 animate-fade-in">
         {/* 헤더 */}
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-2">
             <Zap className="w-4 h-4 text-[#5B5FEF]" />
-            <h2 className="text-sm font-bold text-gray-200">가성비 리더보드</h2>
+            <h2 className="text-sm font-bold text-gray-800 dark:text-gray-200">가성비 리더보드</h2>
           </div>
           <span className="text-[10px] text-gray-500 font-mono">월 10만 토큰 기준 · ₩1380/$</span>
         </div>
@@ -427,7 +427,7 @@ export default function Home() {
               className={`rounded px-2.5 py-1 text-[11px] font-semibold transition-all ${
                 costPerfFilter === btn.value
                   ? 'bg-[#5B5FEF] text-white'
-                  : 'text-gray-500 bg-gray-800 hover:bg-gray-700 hover:text-gray-300'
+                  : 'text-gray-500 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-600 dark:hover:text-gray-300'
               }`}
             >
               {btn.label}
@@ -440,7 +440,7 @@ export default function Home() {
           {filteredCostPerfData.slice(0, 3).map((item, i) => {
             const IconComp = TOP3_ICONS[i];
             const badge = getPriceBadge(item.monthlyCost);
-            const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : 'text-orange-400';
+            const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-500 dark:text-gray-400' : 'text-orange-400';
             return (
               <div
                 key={item.id}
@@ -454,10 +454,10 @@ export default function Home() {
                     {badge.label}
                   </span>
                 </div>
-                <p className="text-xs font-bold text-gray-200 truncate mb-1">{item.name}</p>
+                <p className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate mb-1">{item.name}</p>
                 <div className="flex items-center justify-between">
-                  <p className="text-[11px] text-gray-400">성능 <span className="font-bold text-[#8B8FFF]">{item.score}</span></p>
-                  <p className="text-[11px] font-semibold text-gray-300">
+                  <p className="text-[11px] text-gray-500 dark:text-gray-400">성능 <span className="font-bold text-[#8B8FFF]">{item.score}</span></p>
+                  <p className="text-[11px] font-semibold text-gray-700 dark:text-gray-300">
                     {item.monthlyCost === 0 ? '무료' : `₩${item.monthlyCost.toLocaleString()}/mo`}
                   </p>
                 </div>
@@ -473,13 +473,13 @@ export default function Home() {
             return (
               <div
                 key={item.id}
-                className="flex items-center gap-2 group cursor-pointer hover:bg-gray-800/60 rounded-lg px-2 py-1 transition-colors"
+                className="flex items-center gap-2 group cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800/60 rounded-lg px-2 py-1 transition-colors"
                 onClick={() => navigate(`/explore/compare?search=${encodeURIComponent(item.name)}`)}
               >
-                <span className="w-5 text-center text-[10px] text-gray-600 shrink-0 font-mono">{i + 4}</span>
+                <span className="w-5 text-center text-[10px] text-gray-400 dark:text-gray-600 shrink-0 font-mono">{i + 4}</span>
                 <CompanyLogo company={item.companyId} size={14} />
-                <span className="w-20 sm:w-28 text-xs font-medium text-gray-300 truncate">{item.name}</span>
-                <div className="flex-1 h-4 bg-gray-800 rounded-full overflow-hidden">
+                <span className="w-20 sm:w-28 text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{item.name}</span>
+                <div className="flex-1 h-4 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
                   <div
                     className="h-full rounded-full transition-all duration-500"
                     style={{ width: `${item.score * 10}%`, backgroundColor: getBarColor(item.monthlyCost) }}
@@ -506,12 +506,12 @@ export default function Home() {
       {/* ═══════════════════════════════════════
           4. RANKING TABLE — 실사용량 / Arena Expert
           ═══════════════════════════════════════ */}
-      <section className="rounded-xl bg-gray-900 dark:bg-gray-950 border border-gray-800 dark:border-gray-800 p-4 animate-fade-in">
+      <section className="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4 animate-fade-in">
         {/* 헤더 */}
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-[#5B5FEF]" />
-            <h2 className="text-sm font-bold text-gray-200">랭킹</h2>
+            <h2 className="text-sm font-bold text-gray-800 dark:text-gray-200">랭킹</h2>
           </div>
           <Link to="/explore/ranking" className="text-[10px] text-gray-500 hover:text-[#8B8FFF] transition-colors flex items-center gap-1">
             전체 <ArrowRight className="w-3 h-3" />
@@ -525,7 +525,7 @@ export default function Home() {
             className={`rounded px-3 py-1 text-[11px] font-semibold transition-all ${
               rankingTab === 'usage'
                 ? 'bg-[#5B5FEF] text-white'
-                : 'text-gray-500 bg-gray-800 hover:bg-gray-700 hover:text-gray-300'
+                : 'text-gray-500 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-600 dark:hover:text-gray-300'
             }`}
           >
             실사용량
@@ -535,7 +535,7 @@ export default function Home() {
             className={`rounded px-3 py-1 text-[11px] font-semibold transition-all ${
               rankingTab === 'arena'
                 ? 'bg-[#5B5FEF] text-white'
-                : 'text-gray-500 bg-gray-800 hover:bg-gray-700 hover:text-gray-300'
+                : 'text-gray-500 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-600 dark:hover:text-gray-300'
             }`}
           >
             Arena Expert
@@ -546,7 +546,7 @@ export default function Home() {
         {rankingTab === 'arena' && arenaTop3.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
             {arenaTop3.map((m, i) => {
-              const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : 'text-orange-400';
+              const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-500 dark:text-gray-400' : 'text-orange-400';
               return (
                 <div
                   key={m.id}
@@ -555,8 +555,8 @@ export default function Home() {
                 >
                   <span className="text-lg shrink-0">{i === 0 ? <Medal className={`w-5 h-5 ${iconColor}`} /> : i === 1 ? <Award className={`w-5 h-5 ${iconColor}`} /> : <Star className={`w-5 h-5 ${iconColor}`} />}</span>
                   <div className="min-w-0">
-                    <p className="text-xs font-bold text-gray-200 truncate">{m.name}</p>
-                    <p className="text-[11px] text-gray-400">
+                    <p className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate">{m.name}</p>
+                    <p className="text-[11px] text-gray-500 dark:text-gray-400">
                       <span className="font-bold text-[#8B8FFF]">{m.arenaScore}</span>
                       {m.arenaCI && <span className="ml-0.5">{m.arenaCI}</span>}
                     </p>
@@ -573,7 +573,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
             {usageBarData.slice(0, 3).map((item, i) => {
               const IconComp = TOP3_ICONS[i];
-              const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : 'text-orange-400';
+              const iconColor = i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-500 dark:text-gray-400' : 'text-orange-400';
               return (
                 <div
                   key={item.name}
@@ -582,8 +582,8 @@ export default function Home() {
                 >
                   <IconComp className={`w-5 h-5 shrink-0 ${iconColor}`} />
                   <div className="min-w-0">
-                    <p className="text-xs font-bold text-gray-200 truncate">{item.name}</p>
-                    <p className="text-[11px] text-gray-400">
+                    <p className="text-xs font-bold text-gray-800 dark:text-gray-200 truncate">{item.name}</p>
+                    <p className="text-[11px] text-gray-500 dark:text-gray-400">
                       <span className="font-bold text-[#8B8FFF]">{item.displayTokens}</span> 주간
                     </p>
                     <p className="text-[10px] text-gray-500 truncate">{item.company}</p>
@@ -599,12 +599,12 @@ export default function Home() {
           {rankingTab === 'usage' && usageBarData.slice(0, showAllRanking ? undefined : 8).map((item, i) => (
             <div
               key={item.name}
-              className="flex items-center gap-2 group cursor-pointer hover:bg-gray-800/60 rounded-lg px-2 py-1 transition-colors"
+              className="flex items-center gap-2 group cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800/60 rounded-lg px-2 py-1 transition-colors"
               onClick={() => navigate(`/explore/compare?search=${encodeURIComponent(item.name)}`)}
             >
-              <span className="w-5 text-center text-[10px] font-bold text-gray-600 shrink-0 font-mono">{i + 1}</span>
-              <span className="w-20 sm:w-28 text-xs font-medium text-gray-300 truncate">{item.name}</span>
-              <div className="flex-1 h-5 bg-gray-800 rounded overflow-hidden relative">
+              <span className="w-5 text-center text-[10px] font-bold text-gray-400 dark:text-gray-600 shrink-0 font-mono">{i + 1}</span>
+              <span className="w-20 sm:w-28 text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{item.name}</span>
+              <div className="flex-1 h-5 bg-gray-200 dark:bg-gray-800 rounded overflow-hidden relative">
                 <div
                   className="h-full rounded transition-all duration-700 ease-out"
                   style={{
@@ -612,7 +612,7 @@ export default function Home() {
                     backgroundColor: i < 3 ? '#5B5FEF' : i < 5 ? '#7C6AEF' : '#3A3D5C',
                   }}
                 />
-                <span className="absolute inset-0 flex items-center px-2 text-[10px] font-semibold text-gray-300">
+                <span className="absolute inset-0 flex items-center px-2 text-[10px] font-semibold text-gray-700 dark:text-gray-300">
                   {item.displayTokens}
                 </span>
               </div>
@@ -622,12 +622,12 @@ export default function Home() {
           {rankingTab === 'arena' && arenaBarData.map((item, i) => (
             <div
               key={item.name}
-              className="flex items-center gap-2 group cursor-pointer hover:bg-gray-800/60 rounded-lg px-2 py-1 transition-colors"
+              className="flex items-center gap-2 group cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800/60 rounded-lg px-2 py-1 transition-colors"
               onClick={() => navigate(`/explore/compare?search=${encodeURIComponent(item.name)}`)}
             >
-              <span className="w-5 text-center text-[10px] font-bold text-gray-600 shrink-0 font-mono">{i + 1}</span>
-              <span className="w-20 sm:w-28 text-xs font-medium text-gray-300 truncate">{item.name}</span>
-              <div className="flex-1 h-5 bg-gray-800 rounded overflow-hidden relative">
+              <span className="w-5 text-center text-[10px] font-bold text-gray-400 dark:text-gray-600 shrink-0 font-mono">{i + 1}</span>
+              <span className="w-20 sm:w-28 text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{item.name}</span>
+              <div className="flex-1 h-5 bg-gray-200 dark:bg-gray-800 rounded overflow-hidden relative">
                 <div
                   className="h-full rounded transition-all duration-700 ease-out"
                   style={{
@@ -635,7 +635,7 @@ export default function Home() {
                     backgroundColor: i < 3 ? '#5B5FEF' : i < 5 ? '#7C6AEF' : '#3A3D5C',
                   }}
                 />
-                <span className="absolute inset-0 flex items-center px-2 text-[10px] font-semibold text-gray-300">
+                <span className="absolute inset-0 flex items-center px-2 text-[10px] font-semibold text-gray-700 dark:text-gray-300">
                   {item.score}{item.ci} · {item.votes}표
                 </span>
               </div>
@@ -657,17 +657,17 @@ export default function Home() {
           </button>
         )}
 
-        <p className="text-[10px] text-gray-600 mt-2">업데이트: 2026년 4월 16일 · 출처: {RANKING_SOURCE}</p>
+        <p className="text-[10px] text-gray-400 dark:text-gray-600 mt-2">업데이트: 2026년 4월 16일 · 출처: {RANKING_SOURCE}</p>
       </section>
 
       {/* ═══════════════════════════════════════
           5. NEWS TICKER — 컴팩트 뉴스
           ═══════════════════════════════════════ */}
-      <section className="rounded-xl bg-gray-900 dark:bg-gray-950 border border-gray-800 dark:border-gray-800 p-4 animate-fade-in">
+      <section className="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4 animate-fade-in">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <Newspaper className="w-4 h-4 text-[#5B5FEF]" />
-            <h2 className="text-sm font-bold text-gray-200">뉴스 피드</h2>
+            <h2 className="text-sm font-bold text-gray-800 dark:text-gray-200">뉴스 피드</h2>
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           </div>
           <Link to="/news" className="text-[10px] text-gray-500 hover:text-[#8B8FFF] transition-colors flex items-center gap-1">
@@ -681,16 +681,16 @@ export default function Home() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 py-2 border-b border-gray-800/80 last:border-0"
+                className="group flex items-center gap-2 py-2 border-b border-gray-200 dark:border-gray-800 last:border-0"
               >
                 <span className={`text-[9px] font-bold tracking-wider uppercase shrink-0 w-12 pt-0.5 ${CAT_COLORS[item.category] ?? 'text-gray-500'}`}>
                   {item.category}
                 </span>
-                <span className="text-xs text-gray-400 group-hover:text-[#8B8FFF] transition-colors line-clamp-1 flex-1">
+                <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-[#8B8FFF] transition-colors line-clamp-1 flex-1">
                   {item.title}
                 </span>
                 {item.date && (
-                  <span className="text-[9px] text-gray-600 shrink-0 font-mono">{timeAgo(item.date)}</span>
+                  <span className="text-[9px] text-gray-400 dark:text-gray-600 shrink-0 font-mono">{timeAgo(item.date)}</span>
                 )}
               </a>
             </li>
@@ -736,7 +736,7 @@ export default function Home() {
           FOOTER — 데이터 기준일
           ═══════════════════════════════════════ */}
       <footer className="text-center py-2">
-        <p className="text-[10px] text-gray-600 dark:text-gray-500 font-mono">
+        <p className="text-[10px] text-gray-400 dark:text-gray-600 font-mono">
           DATA: 2026-04-16 · Updated weekly · onlyAI
         </p>
       </footer>

@@ -111,7 +111,7 @@ const AREA_COLORS = ["#f59e0b", "#fb923c", "#8b5cf6", "#6366f1", "#10b981"];
 function ChartTooltip({ active, payload, label }: any) {
   if (!active || !payload) return null;
   return (
-    <div className="bg-gray-900 text-white rounded-lg px-3 py-2 text-xs shadow-xl border border-gray-700">
+    <div className="bg-gray-800 dark:bg-gray-900 text-white rounded-lg px-3 py-2 text-xs shadow-xl border border-gray-600 dark:border-gray-700">
       <p className="font-bold mb-1">{label}</p>
       {payload.map((p: any, i: number) => (
         <p key={i} style={{ color: p.color }} className="flex justify-between gap-4">

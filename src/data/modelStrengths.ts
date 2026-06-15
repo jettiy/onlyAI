@@ -33,6 +33,13 @@ export interface ModelStrength {
 export const strengths: ModelStrength[] = [
   // ===== OpenAI =====
   {
+    id: 'gpt-5-5-instant', name: 'GPT-5.5 Instant', companyId: 'openai',
+    scores: { writing: 8, coding: 8, image: 6, video: 6, summary: 8, chat: 9 },
+    budget: 'mid', korean: 8, env: 'cloud', monthlyEst: '$10~25',
+    tagline: 'ChatGPT 기본 모델. 환각 52.5%↓. 일상·코딩 균형.',
+    logoId: 'openai',
+  },
+  {
     id: 'gpt-5-5', name: 'GPT-5.5 Pro', companyId: 'openai',
     scores: { writing: 10, coding: 9, image: 8, video: 7, summary: 10, chat: 9 },
     budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
@@ -241,6 +248,20 @@ export const strengths: ModelStrength[] = [
     logoId: 'xai',
   },
   {
+    id: 'grok-4-heavy', name: 'Grok 4 Heavy', companyId: 'xai',
+    scores: { writing: 10, coding: 10, image: 9, video: 8, summary: 9, chat: 9 },
+    budget: 'premium', korean: 6, env: 'cloud', monthlyEst: '$80+',
+    tagline: 'HLE ~50% 최초. 학술 벤치마크 포화.',
+    logoId: 'xai',
+  },
+  {
+    id: 'grok-build', name: 'Grok Build 0.1', companyId: 'xai',
+    scores: { writing: 6, coding: 9, image: 1, video: 1, summary: 7, chat: 6 },
+    budget: 'cheap', korean: 6, env: 'cloud', monthlyEst: '$3~8',
+    tagline: '코딩 에이전트 특화. $1/$2 초저가. 100+ tok/s.',
+    logoId: 'xai',
+  },
+  {
     id: 'grok-4-20-beta', name: 'Grok 4.20 Beta', companyId: 'xai',
     scores: { writing: 8, coding: 8, image: 8, video: 7, summary: 8, chat: 8 },
     budget: 'mid', korean: 6, env: 'cloud', monthlyEst: '$10~30',
@@ -272,6 +293,20 @@ export const strengths: ModelStrength[] = [
     tagline: '유럽 AI 대표. GDPR 준수.',
     logoId: 'mistral',
   },
+  {
+    id: 'mistral-small-4', name: 'Mistral Small 4', companyId: 'mistral',
+    scores: { writing: 8, coding: 9, image: 7, video: 1, summary: 8, chat: 8 },
+    budget: 'cheap', korean: 5, env: 'open', monthlyEst: '$3~10',
+    tagline: 'Instruct+Reasoning+Coding 통합. 오픈웨이트 경량 최강.',
+    logoId: 'mistral',
+  },
+  {
+    id: 'devstral-2', name: 'Devstral 2', companyId: 'mistral',
+    scores: { writing: 4, coding: 10, image: 1, video: 1, summary: 5, chat: 3 },
+    budget: 'cheap', korean: 4, env: 'open', monthlyEst: '$3~10',
+    tagline: '코딩 전용 123B. 에이전트 SE 특화. SWE-bench 강함.',
+    logoId: 'mistral',
+  },
 
   // ===== Alibaba =====
   {
@@ -279,6 +314,13 @@ export const strengths: ModelStrength[] = [
     scores: { writing: 9, coding: 9, image: 7, video: 7, summary: 9, chat: 9 },
     budget: 'mid', korean: 9, env: 'cloud', monthlyEst: '$15~40',
     tagline: '186 tok/s 최고 속도. 1M 컨텍스트.',
+    logoId: 'alibaba',
+  },
+  {
+    id: 'qwen-3-7-plus', name: 'Qwen 3.7 Plus', companyId: 'alibaba',
+    scores: { writing: 8, coding: 8, image: 9, video: 9, summary: 8, chat: 8 },
+    budget: 'cheap', korean: 8, env: 'cloud', monthlyEst: '$5~15',
+    tagline: '멀티모달 에이전트. 비전+비디오. Max 대비 6배 저렴.',
     logoId: 'alibaba',
   },
   {
@@ -372,6 +414,13 @@ export const strengths: ModelStrength[] = [
     budget: 'free', korean: 5, env: 'local', monthlyEst: '무료 (로컬)',
     tagline: '에이전트·함수호출 최적. 16GB VRAM.',
     logoId: 'google', isLocal: true, recVram: 16,
+  },
+  {
+    id: 'gemma-4-31b', name: 'Gemma 4 (31B)', companyId: 'google',
+    scores: { writing: 8, coding: 8, image: 7, video: 1, summary: 7, chat: 8 },
+    budget: 'free', korean: 7, env: 'local', monthlyEst: '무료 (로컬)',
+    tagline: 'Apache 2.0 오픈웨이트. 멀티모달. 256K 컨텍스트. 24GB VRAM.',
+    logoId: 'google', isLocal: true, recVram: 24,
   },
   {
     id: 'phi4-14b', name: 'Phi-4 14B', companyId: 'meta',

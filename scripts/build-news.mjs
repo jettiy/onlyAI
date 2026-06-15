@@ -29,6 +29,14 @@ const AI_KEYWORDS = [
   '智能','模型','训练','推理','多模态','语言模型',
 ];
 
+// ─── Spam Keywords (Blacklist) ─────────────────────────────
+const SPAM_KEYWORDS = [
+  '정원예술제', '순천', '매그니피센트', '부동산', '동탄',
+  '졸업식', '축사', '폴란드', '유엔', 'olympic', '올림픽',
+  'earth observation', '지구관측', '게시판',
+  'clamshell', // 클램쉘 모드 (AI랑 무관)
+];
+
 // ─── Categories ──────────────────────────────────────────
 const CATEGORIES = [
   { test: /model|출시|launch|gpt|claude|gemini|llm|릴리즈|release|새 버전|새로운|发布|上线/i, cat: '모델 출시' },
@@ -47,6 +55,7 @@ const CATEGORIES = [
 
 function isAIRelated(text) {
   const t = text.toLowerCase();
+  if (SPAM_KEYWORDS.some(kw => t.includes(kw.toLowerCase()))) return false;
   return AI_KEYWORDS.some(kw => t.includes(kw));
 }
 

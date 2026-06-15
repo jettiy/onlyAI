@@ -27,7 +27,7 @@ export const videoModels: VideoModel[] = [
     description: "Artificial Analysis 비디오 Arena #1 (ELO 1,374 T2V, 1,392 I2V). 전 쿠아이쇼우 VP 제작. 블라인드 평가 최고 품질.",
     strengths: ["Arena ELO #1", "블라인드 평가 최고", "오픈소스 예정"],
     weaknesses: ["신모델", "API 미정", "정보 제한적"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "seedance-2.0", name: "Seedance 2.0", company: "ByteDance", flag: "", logoId: "bytedance",
@@ -37,7 +37,7 @@ export const videoModels: VideoModel[] = [
     description: "블라인드 크리에이터 테스트 이미지→비디오 #1. 멀티샷 6컷 생성. 시네마틱 카메라 컨트롤. 12개 레퍼런스 입력. 2026 초반 핫 모델.",
     strengths: ["I2V 블라인드 테스트 #1", "멀티샷", "카메라 컨트롤", "12개 레퍼런스"],
     weaknesses: ["Fast 품질 낮음", "해외 접근 제한"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "kling-3.0", name: "Kling 3.0", company: "快手(Kuaishou)", flag: "", logoId: "klingai",
@@ -47,7 +47,7 @@ export const videoModels: VideoModel[] = [
     description: "네이티브 4K 출력. AI 디렉터 모드. 캐릭터/소품 일관성. 멀티샷 시퀀싱. Elements 3.0 레퍼런스. 3.0 Omni는 오디오 동시 생성.",
     strengths: ["네이티브 4K", "AI 디렉터", "멀티샷", "오디오(Omni)"],
     weaknesses: ["가격 중간~높음", "생성 시간"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "veo-3.1", name: "Veo 3.1", company: "Google", flag: "", logoId: "google",
@@ -57,7 +57,7 @@ export const videoModels: VideoModel[] = [
     description: "Google 최신. 최초 4K 메인스트림 비디오 AI. 네이티브 오디오. 클립 확장+전환. YouTube Shorts 통합. Sora 대비 30~40% 빠름.",
     strengths: ["4K", "네이티브 오디오", "YouTube 통합", "클립 확장", "Vertex AI GA"],
     weaknesses: ["Ultra 가격 높음", "8초 길이"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "runway-gen-4.5", name: "Runway Gen-4.5", company: "Runway", flag: "", logoId: "runway",
@@ -77,7 +77,7 @@ export const videoModels: VideoModel[] = [
     description: "추론 기반 생성. 업계 최초 HDR 파이프라인(EXR). Ray3 대비 4배 빠름, 3배 저렴. 캐릭터 레퍼런스/키프레임 제어.",
     strengths: ["업계 최초 HDR", "추론 기반", "4배 빠름", "EXR 출력"],
     weaknesses: ["해상도 1080p", "프로 요금 높음"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "skyreels-v4", name: "SkyReels V4", company: "Skywork AI(昆仑万维)", flag: "", logoId: "skywork",
@@ -87,7 +87,7 @@ export const videoModels: VideoModel[] = [
     description: "ELO 1,244 최상위권. 중국 기반 고품질 비디오.",
     strengths: ["높은 ELO", "가성비", "1080p"],
     weaknesses: ["생성 시간", "해외 접근 제한"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "pixverse-v5.6", name: "PixVerse V5.6", company: "PixVerse", flag: "", logoId: "pixverse",
@@ -97,7 +97,7 @@ export const videoModels: VideoModel[] = [
     description: "ELO 1,227. 창의적 스타일 강점. 텍스트+이미지 입력.",
     strengths: ["높은 ELO", "스타일 다양성", "이미지 입력"],
     weaknesses: ["5초 제한", "720p"],
-    isNew: true,
+    isNew: false,
   },
 
   // ===== CONSUMER 티어 =====
@@ -129,7 +129,7 @@ export const videoModels: VideoModel[] = [
     description: "Pikaframes 키프레임 제어. 1080p + 4K 렌더링. 크리에이티브 이펙트(스왑, 트위스트 등). 립싱크.",
     strengths: ["Pikaframes", "4K 렌더", "크리에이티브 이펙트", "초보자 친화"],
     weaknesses: ["품질 편차", "사실감 부족"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "vidu-q3-pro", name: "Vidu Q3 Pro", company: "生数科技", flag: "", logoId: "vidu",
@@ -161,7 +161,7 @@ export const videoModels: VideoModel[] = [
     description: "오픈소스. 30초 긴 영상. 4K 지원. 커뮤니티 활발.",
     strengths: ["30초 영상", "4K", "오픈소스"],
     weaknesses: ["24fps", "품질 한계"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "wan-2.6", name: "Wan 2.6", company: "Alibaba(阿里)", flag: "", logoId: "alibaba",
@@ -171,7 +171,7 @@ export const videoModels: VideoModel[] = [
     description: "멀티샷 스토리텔링. 오디오-비디오 싱크. 캐릭터 일관성. Wan 2.2은 MoE 오픈소스.",
     strengths: ["멀티샷", "오디오 싱크", "2.2 오픈소스", "캐릭터 일관성"],
     weaknesses: ["품질 경쟁 중", "24fps"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "wan-2.2-open", name: "Wan 2.2 (Open)", company: "Alibaba(阿里)", flag: "", logoId: "alibaba",

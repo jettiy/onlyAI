@@ -5,6 +5,8 @@ import { models, DATA_UPDATED_AT } from '../data/models';
 import { getLogoUrl } from '../lib/logoUtils';
 import { estimateMonthlyCost, formatMonthlyCost } from '../lib/estimatedMonthlyCost';
 import { useLivePrices } from '../hooks/useLivePrices';
+import { useCloudProviderStats } from '../hooks/useCloudProviderStats';
+import PriceHistoryChart from '../components/PriceHistoryChart';
 
 interface PriceRow {
   model: string;
@@ -217,7 +219,7 @@ function formatMonthlyCostKRW(usdCost: number | null, rate: number): string {
 }
 
 export default function Pricing() {
-  const [tab, setTab] = useState<'bar' | 'table' | 'cache' | 'api' | 'calc'>('bar');
+  const [tab, setTab] = useState<'bar' | 'table' | 'cache' | 'api' | 'calc' | 'history'>('bar');
   const [prices, setPrices] = useState<PriceRow[]>(FALLBACK_PRICES);
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<string>('');
@@ -230,6 +232,7 @@ export default function Pricing() {
 
   // OpenRouter 실시간 가격 보완
   const { getLivePrice, loading: liveLoading } = useLivePrices();
+  const { modelCounts } = useCloudProviderStats();
 
   const filteredPrices = useMemo(() => {
     let base = prices;
@@ -412,7 +415,7 @@ export default function Pricing() {
 
       {/* Tab switcher */}
       <div className="flex gap-2 overflow-x-auto pb-1">
-        {([['bar','입력가 시각화'],['table','전체 가격표'],['cache','캐시 가격 비교'],['api','API 서비스 비교'],['calc','가격 계산기']] as const).map(([key, label]) => (
+        {([['bar','입력가 시각화'],['table','전체 가격표'],['cache','캐시 가격 비교'],['api','API 서비스 비교'],['calc','가격 계산기'],['history','가격 이력']] as const).map(([key, label]) => (
           <button key={key} onClick={() => setTab(key)}
             className={`shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-colors ${tab === key ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200'}`}>
             {label}
@@ -638,9 +641,16 @@ export default function Pricing() {
         <div className="grid sm:grid-cols-2 gap-4">
           {cloudProviders.map((provider) => (
             <div key={provider.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
                 <h3 className="text-base font-bold text-gray-900 dark:text-white">{provider.name}</h3>
+                <div className="flex items-center gap-1.5">
                 {provider.badge && <span className="px-2 py-0.5 bg-brand-600 text-white text-[11px] rounded-full font-semibold">{provider.badge}</span>}
+                {modelCounts[provider.id] !== undefined && (
+                  <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-[11px] rounded-full font-semibold">
+                    OpenRouter에 {modelCounts[provider.id]}개 모델
+                  </span>
+                )}
+                </div>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">{provider.description}</p>
               <div className="p-2.5 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 rounded-xl text-xs text-emerald-700 dark:text-emerald-300 mb-3">
@@ -660,6 +670,9 @@ export default function Pricing() {
 
       {/* Token cost calculator */}
       {tab === 'calc' && <PriceCalculator prices={prices} showKRW={showKRW} krwRate={krwRate} />}
+
+      {/* Price history chart */}
+      {tab === 'history' && <PriceHistoryChart />}
     </div>
   );
 }

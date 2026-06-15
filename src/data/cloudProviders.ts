@@ -8,6 +8,8 @@ export interface CloudProvider {
   cons: string[];
   bestFor: string;
   badge?: string;
+  modelFilter?: string[];  // OpenRouter에서 이 제공자 모델을 찾을 키워드
+  modelCount?: number;     // 실시간 모델 수 (런타임에 채워짐)
 }
 
 export const cloudProviders: CloudProvider[] = [
@@ -21,6 +23,7 @@ export const cloudProviders: CloudProvider[] = [
     cons: ['중간자 서비스라 약 50~100ms 추가 지연', '최신 모델 반영 약간 느림'],
     bestFor: '다양한 모델을 비교·실험하고 싶은 개발자',
     badge: '추천',
+    modelFilter: ['openai/', 'anthropic/', 'google/', 'meta-llama/', 'x-ai/', 'qwen/', 'deepseek/'],
   },
   {
     id: 'groq',
@@ -31,6 +34,7 @@ export const cloudProviders: CloudProvider[] = [
     pros: ['업계 최고 추론 속도 (초당 800토큰+)', '무료 티어 넉넉함', 'Llama·Gemma·Mixtral 지원', '낮은 레이턴시'],
     cons: ['지원 모델 GPT/Claude 없음', '최신 모델 반영 느림', '고급 기능(파인튜닝 등) 없음'],
     bestFor: '빠른 응답 속도가 필요한 챗봇·실시간 애플리케이션',
+    modelFilter: [],
   },
   {
     id: 'deepseek-api',
@@ -42,6 +46,7 @@ export const cloudProviders: CloudProvider[] = [
     cons: ['중국 서버 (레이턴시 100~200ms)', 'DeepSeek 모델만 제공', '데이터 프라이버시 우려'],
     bestFor: 'DeepSeek를 가장 저렴하게, 최고 성능으로 쓰고 싶은 경우',
     badge: '가성비',
+    modelFilter: ['deepseek/'],
   },
   {
     id: 'google-aistudio',
@@ -52,6 +57,7 @@ export const cloudProviders: CloudProvider[] = [
     pros: ['1M 컨텍스트 윈도우', 'Google 공식 최신 모델 즉시 반영', '멀티모달 강력 (이미지·영상)', 'Gemma 오픈소스도 지원'],
     cons: ['한국어 이해 품질 약간 아쉬움', 'EU 데이터 규정 이슈', '가격 구간 복잡'],
     bestFor: '긴 문서 처리·멀티모달 작업이 많은 개발자',
+    modelFilter: ['google/gemini', 'google/gemma'],
   },
   {
     id: 'anthropic',
@@ -62,6 +68,7 @@ export const cloudProviders: CloudProvider[] = [
     pros: ['코딩·분석·글쓰기 최고 품질', '200K 컨텍스트', 'Vision 지원', 'Computer Use (화면 제어) 지원'],
     cons: ['무료 API 없음', 'Opus 4.6 입력 $5로 고가', '한국어 품질 GPT 대비 약간 아쉬움'],
     bestFor: '코딩 에이전트·긴 문서 분석·고품질 글쓰기',
+    modelFilter: ['anthropic/claude'],
   },
   {
     id: 'together',
@@ -72,6 +79,7 @@ export const cloudProviders: CloudProvider[] = [
     pros: ['오픈소스 모델 최다', '파인튜닝 지원 (LoRA)', '저렴한 오픈소스 가격', '배치 처리 지원'],
     cons: ['GPT·Claude 없음', '속도 보통', '프리미엄 기능은 유료'],
     bestFor: '오픈소스 모델 파인튜닝·커스텀 모델 배포가 필요한 팀',
+    modelFilter: [],
   },
   {
     id: 'minimax-api',
@@ -83,6 +91,7 @@ export const cloudProviders: CloudProvider[] = [
     cons: ['중국 서버', '한국어 공식 지원 미흡', '커뮤니티 작음'],
     bestFor: 'OpenClaw 연동·멀티모달·비용 효율적 고성능 작업',
     badge: 'NEW',
+    modelFilter: ['minimax/'],
   },
   {
     id: 'fireworks',
@@ -93,5 +102,6 @@ export const cloudProviders: CloudProvider[] = [
     pros: ['빠른 추론 속도', '이미지 생성 모델 지원', '저렴한 오픈소스 가격', 'Serverless·On-demand 선택'],
     cons: ['인지도 낮음', 'GPT·Claude 없음', '문서 영어 전용'],
     bestFor: '저렴하고 빠른 Llama/Flux 모델이 필요한 경우',
+    modelFilter: [],
   },
 ];

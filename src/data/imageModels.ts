@@ -25,7 +25,7 @@ export const imageModels: ImageModel[] = [
     description: "OpenAI 최신 플래그십. 최초 '에이전트' 이미지 모델 — 생성 전 추론. 텍스트 정확도 ~99%. 카메라 특화 포토리얼. 한국어 텍스트 렌더링.",
     strengths: ["에이전트 추론", "~99% 텍스트 정확도", "네이티브 2K", "한국어 텍스트"],
     weaknesses: ["토큰 기반 가격 복잡", "API 5월부터 공식"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "gpt-image-1.5", name: "GPT Image 1.5", company: "OpenAI", flag: "", logoId: "openai",
@@ -95,7 +95,7 @@ export const imageModels: ImageModel[] = [
     description: "최초 실시간 웹 검색 + 대화형 편집 이미지 모델. Chain of Thought 추론. 2~3초 생성.",
     strengths: ["웹 검색 연동", "대화형 편집", "빠른 생성"],
     weaknesses: ["해외 접근 제한", "한국어 검증 필요"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "qwen-image-2", name: "Qwen Image 2.0", company: "Alibaba", flag: "", logoId: "alibaba",
@@ -105,7 +105,7 @@ export const imageModels: ImageModel[] = [
     description: "AI Arena 텍스트→이미지 #1 + 편집 #1. 7B 파라미터 통합 생성+편집. 이중언어 텍스트(EN/CN).",
     strengths: ["Arena 텍스트→이미지 #1", "생성+편집 통합", "2K", "저렴"],
     weaknesses: ["CN 텍스트 특화", "API 가용성 제한"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "midjourney-v8", name: "Midjourney V8.1", company: "Midjourney", flag: "", logoId: "midjourney",
@@ -115,7 +115,7 @@ export const imageModels: ImageModel[] = [
     description: "예술·포토리얼 최강. V8에서 텍스트 렌더링 대폭 개선. Omni Reference로 일관된 객체. 웹 에디터 내장.",
     strengths: ["예술 품질 최강", "텍스트 렌더링 개선", "Omni Reference", "V7 대비 5배 빠름"],
     weaknesses: ["공식 API 없음", "구독제", "ToS 위반 래퍼만 API"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "recraft-v4", name: "Recraft V4.1", company: "Recraft", flag: "", logoId: "recraft",
@@ -207,7 +207,7 @@ export const imageModels: ImageModel[] = [
     description: "6B Apache 2.0. RTX 4090에서 2.3초 생성. 이중언어 텍스트. 최저가 사용 가능 모델.",
     strengths: ["최저가 $0.004", "Apache 2.0", "빠른 생성"],
     weaknesses: ["품질 한계", "1024 해상도"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "z-image", name: "Z-Image", company: "Zhipu AI(智谱AI)", flag: "", logoId: "zhipu",
@@ -249,7 +249,7 @@ export const imageModels: ImageModel[] = [
     description: "9B 경량 오픈웨이트. LoRA 지원. 소형 GPU 환경 적합.",
     strengths: ["9B 경량", "LoRA", "가성비"],
     weaknesses: ["품질 한계"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "ideogram-v4-open", name: "Ideogram 4.0 (Open)", company: "Ideogram", flag: "", logoId: "ideogram",
@@ -279,7 +279,7 @@ export const imageModels: ImageModel[] = [
     description: "7B 오픈웨이트. AI Arena 텍스트→이미지 #1 + 편집 #1. 이중언어(EN/CN).",
     strengths: ["Arena #1", "생성+편집 통합", "2K", "7B 경량"],
     weaknesses: ["CN 텍스트 특화"],
-    isNew: true,
+    isNew: false,
   },
   {
     id: "z-image-turbo-open", name: "Z-Image Turbo (Open)", company: "Alibaba", flag: "", logoId: "alibaba",
@@ -289,6 +289,6 @@ export const imageModels: ImageModel[] = [
     description: "6B Apache 2.0. 최저가 사용 가능 오픈 이미지 모델. RTX 4090에서 2.3초.",
     strengths: ["Apache 2.0", "최저가", "6B 경량"],
     weaknesses: ["품질 한계", "해상도 1024"],
-    isNew: true,
+    isNew: false,
   },
 ];

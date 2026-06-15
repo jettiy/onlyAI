@@ -4,12 +4,14 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { getAACacheStatus } from '../lib/artificialAnalysis';
-import { Activity, DollarSign, Trophy, BarChart3, Database } from 'lucide-react';
+import { Activity, DollarSign, Trophy, BarChart3, Database, ImageIcon, VideoIcon } from 'lucide-react';
 
 /* ── 상수 ── */
 const PRICE_CACHE_KEY = 'onlyai_live_models';
 const ARENA_CACHE_KEY = 'onlyai_arena_ranking';
 const MODEL_DB_DATE = '2026-06-15';
+const IMAGE_MODEL_DB_DATE = '2026-06-15';
+const VIDEO_MODEL_DB_DATE = '2026-06-15';
 
 type FreshnessLevel = 'fresh' | 'stale' | 'expired';
 
@@ -76,6 +78,12 @@ function useDataFreshness(): FreshnessInfo[] {
   const modelDbTs = new Date(MODEL_DB_DATE).getTime();
   const modelDbMinutes = (Date.now() - modelDbTs) / 60000;
 
+  // 이미지/비디오 모델 DB: 정적 날짜
+  const imgModelDbTs = new Date(IMAGE_MODEL_DB_DATE).getTime();
+  const imgModelDbMinutes = (Date.now() - imgModelDbTs) / 60000;
+  const vidModelDbTs = new Date(VIDEO_MODEL_DB_DATE).getTime();
+  const vidModelDbMinutes = (Date.now() - vidModelDbTs) / 60000;
+
   return [
     {
       name: '가격',
@@ -102,6 +110,26 @@ function useDataFreshness(): FreshnessInfo[] {
             : 'expired',
       timeAgo: MODEL_DB_DATE,
     },
+    {
+      name: '이미지 모델',
+      level:
+        imgModelDbMinutes < 1440
+          ? 'fresh'
+          : imgModelDbMinutes < 1440 * 7
+            ? 'stale'
+            : 'expired',
+      timeAgo: IMAGE_MODEL_DB_DATE,
+    },
+    {
+      name: '비디오 모델',
+      level:
+        vidModelDbMinutes < 1440
+          ? 'fresh'
+          : vidModelDbMinutes < 1440 * 7
+            ? 'stale'
+            : 'expired',
+      timeAgo: VIDEO_MODEL_DB_DATE,
+    },
   ];
 }
 
@@ -118,6 +146,8 @@ const ITEM_ICONS = [
   Trophy,
   BarChart3,
   Database,
+  ImageIcon,
+  VideoIcon,
 ] as const;
 
 /* ── 컴포넌트 ── */
@@ -138,7 +168,7 @@ export default function DataFreshnessWidget() {
       </div>
 
       {/* 데이터 소스 그리드 */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+      <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5">
         {items.map((item, i) => {
           const IconComp = ITEM_ICONS[i];
           return (

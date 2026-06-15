@@ -100,10 +100,10 @@ function NewsCard({ item }: { item: NewsItem }) {
         <span className="text-[10px] text-gray-400 dark:text-gray-500 ml-auto">{timeAgo(item.date)}</span>
       </div>
       <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug group-hover:text-brand-600 dark:group-hover:text-brand-400 line-clamp-2">
-        {item.title}
+        {item.titleKo || item.title}
       </h3>
       <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed">
-        {item.summary}
+        {item.summaryKo || item.summary}
       </p>
       {item.tags && item.tags.length > 0 && (
         <div className="flex flex-wrap gap-1">
@@ -136,9 +136,9 @@ function HeroCard({ item }: { item: NewsItem }) {
         <span className="text-[10px] text-gray-400 ml-auto">{timeAgo(item.date)}</span>
       </div>
       <h2 className="text-base font-black text-white mb-2 leading-snug group-hover:text-brand-300 transition-colors line-clamp-3">
-        {item.title}
+        {item.titleKo || item.title}
       </h2>
-      <p className="text-sm text-gray-300 mb-3 line-clamp-2 leading-relaxed">{item.summary}</p>
+      <p className="text-sm text-gray-300 mb-3 line-clamp-2 leading-relaxed">{item.summaryKo || item.summary}</p>
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex flex-wrap gap-1">
           {item.tags?.slice(0, 3).map((t) => (
@@ -183,8 +183,8 @@ export default function News() {
     if (catFilter !== "전체" && n.category !== catFilter) return false;
     if (query) {
       const q = query.toLowerCase();
-      const inTitle   = n.title.toLowerCase().includes(q);
-      const inSummary = n.summary.toLowerCase().includes(q);
+      const inTitle   = (n.titleKo || n.title).toLowerCase().includes(q) || n.title.toLowerCase().includes(q);
+      const inSummary = (n.summaryKo || n.summary).toLowerCase().includes(q) || n.summary.toLowerCase().includes(q);
       const inTags    = n.tags?.some((t) => t.toLowerCase().includes(q));
       if (!inTitle && !inSummary && !inTags) return false;
     }

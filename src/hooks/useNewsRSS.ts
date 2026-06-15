@@ -73,6 +73,8 @@ export function useNewsRSS() {
             id: `rss-${i}`,
             title: item.title || '(제목 없음)',
             summary: item.summary || '',
+            titleKo: item.titleKo || '',
+            summaryKo: item.summaryKo || '',
             date: item.date || '',
             source: item.source || '',
             url: item.url || '',

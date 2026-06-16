@@ -12,6 +12,24 @@
         "newInput": 0.385,
         "oldOutput": 2.34,
         "newOutput": 2.4499999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3-preview",
+        "modelName": "Tencent: Hy3 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.063,
+        "newInput": 0.06599999999999999,
+        "oldOutput": 0.21,
+        "newOutput": 0.26
+      },
+      {
+        "type": "model_removed",
+        "modelId": "deepseek/deepseek-r1-distill-qwen-32b",
+        "modelName": "DeepSeek: R1 Distill Qwen 32B",
+        "provider": "DEEPSEEK",
+        "description": "모델 제거"
       }
     ]
   },

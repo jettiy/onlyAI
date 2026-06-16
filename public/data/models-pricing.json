@@ -2211,13 +2211,13 @@
     "id": "z-ai/glm-4.5-air",
     "name": "Z.ai: GLM 4.5 Air",
     "provider": "Z-AI",
-    "input": 0.125,
+    "input": 0.13,
     "output": 0.85,
     "context": "131K",
     "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but wit",
     "createdAt": 1753471258,
     "modalities": "text->text",
-    "maxTokens": 131070
+    "maxTokens": 98304
   },
   {
     "id": "qwen/qwen3-235b-a22b-thinking-2507",

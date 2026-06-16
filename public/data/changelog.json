@@ -30,6 +30,17 @@
         "modelName": "DeepSeek: R1 Distill Qwen 32B",
         "provider": "DEEPSEEK",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-4.5-air",
+        "modelName": "Z.ai: GLM 4.5 Air",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.125,
+        "newInput": 0.13,
+        "oldOutput": 0.85,
+        "newOutput": 0.85
       }
     ]
   },

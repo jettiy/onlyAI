@@ -1,15 +1,27 @@
 [
   {
+    "id": "z-ai/glm-5.2",
+    "name": "Z.ai: GLM 5.2",
+    "provider": "Z-AI",
+    "input": 1.4,
+    "output": 4.4,
+    "context": "1M",
+    "description": "GLM-5.2 is Z.ai’s flagship model for the era of long-horizon tasks. With a truly usable 1M-token context window, it can handle project-level engineering context, execute long-running tasks more reliab",
+    "createdAt": 1781631930,
+    "modalities": "text->text",
+    "maxTokens": 131072
+  },
+  {
     "id": "moonshotai/kimi-k2.7-code",
     "name": "MoonshotAI: Kimi K2.7 Code",
     "provider": "MOONSHOTAI",
-    "input": 0.75,
+    "input": 0.74,
     "output": 3.5,
     "context": "262K",
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of",
     "createdAt": 1781266361,
     "modalities": "text+image->text",
-    "maxTokens": 262144
+    "maxTokens": 16384
   },
   {
     "id": "~anthropic/claude-fable-latest",

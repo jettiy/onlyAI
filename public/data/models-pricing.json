@@ -975,13 +975,13 @@
     "id": "qwen/qwen3.5-397b-a17b",
     "name": "Qwen: Qwen3.5 397B A17B",
     "provider": "QWEN",
-    "input": 0.39,
-    "output": 2.34,
-    "context": "262K",
+    "input": 0.385,
+    "output": 2.4499999999999997,
+    "context": "256K",
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher infere",
     "createdAt": 1771223018,
     "modalities": "text+image+video->text",
-    "maxTokens": 65536
+    "maxTokens": null
   },
   {
     "id": "minimax/minimax-m2.5",

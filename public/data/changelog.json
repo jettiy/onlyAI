@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-16",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-397b-a17b",
+        "modelName": "Qwen: Qwen3.5 397B A17B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.39,
+        "newInput": 0.385,
+        "oldOutput": 2.34,
+        "newOutput": 2.4499999999999997
+      }
+    ]
+  },
+  {
     "date": "2026-06-15",
     "items": [
       {

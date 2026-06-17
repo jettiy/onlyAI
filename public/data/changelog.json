@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-17",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3-ultra-550b-a55b",
+        "modelName": "NVIDIA: Nemotron 3 Ultra",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.5,
+        "newInput": 0.5,
+        "oldOutput": 2.5,
+        "newOutput": 2.2
+      }
+    ]
+  },
+  {
     "date": "2026-06-16",
     "items": [
       {

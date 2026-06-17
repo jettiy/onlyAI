@@ -1221,7 +1221,7 @@
     "description": "Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance. It delivers near Pro level reasoning and tool...",
     "createdAt": 1765987078,
     "modalities": "text+image+file+audio+video->text",
-    "maxTokens": 65536
+    "maxTokens": 65535
   },
   {
     "id": "nvidia/nemotron-3-nano-30b-a3b",
@@ -1737,7 +1737,7 @@
     "description": "Gemini 2.5 Flash Image, a.k.a. \"Nano Banana,\" is now generally available. It is a state of the art image generation model with contextual understanding. It is capable of image generation,...",
     "createdAt": 1759870431,
     "modalities": "text+image->text+image",
-    "maxTokens": 32768
+    "maxTokens": 8192
   },
   {
     "id": "qwen/qwen3-vl-30b-a3b-thinking",

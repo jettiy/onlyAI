@@ -12,6 +12,13 @@
         "newInput": 0.5,
         "oldOutput": 2.5,
         "newOutput": 2.2
+      },
+      {
+        "type": "model_removed",
+        "modelId": "xiaomi/mimo-v2-flash",
+        "modelName": "Xiaomi: MiMo-V2-Flash",
+        "provider": "XIAOMI",
+        "description": "모델 제거"
       }
     ]
   },

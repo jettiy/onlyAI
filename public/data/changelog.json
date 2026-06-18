@@ -63,6 +63,39 @@
         "newInput": 1.2,
         "oldOutput": 4.4,
         "newOutput": 4.199999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 1.2,
+        "newInput": 1.2,
+        "oldOutput": 4.199999999999999,
+        "newOutput": 3.1999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.6799999999999999,
+        "newInput": 0.67,
+        "oldOutput": 3.41,
+        "newOutput": 3.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.6",
+        "modelName": "MoonshotAI: Kimi K2.6",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.6799999999999999,
+        "newInput": 0.67,
+        "oldOutput": 3.41,
+        "newOutput": 3.5
       }
     ]
   },

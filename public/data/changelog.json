@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-06-18",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "google/gemini-3.1-flash-image",
+        "modelName": "Google: Nano Banana 2 (Gemini 3.1 Flash Image)",
+        "provider": "GOOGLE",
+        "description": "새 모델 추가",
+        "input": 0.5,
+        "output": 3,
+        "context": "131K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "google/gemini-3-pro-image",
+        "modelName": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
+        "provider": "GOOGLE",
+        "description": "새 모델 추가",
+        "input": 2,
+        "output": 12,
+        "context": "66K"
+      }
+    ]
+  },
+  {
     "date": "2026-06-17",
     "items": [
       {

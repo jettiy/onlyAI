@@ -1,5 +1,29 @@
 [
   {
+    "id": "google/gemini-3.1-flash-image",
+    "name": "Google: Nano Banana 2 (Gemini 3.1 Flash Image)",
+    "provider": "GOOGLE",
+    "input": 0.5,
+    "output": 3,
+    "context": "131K",
+    "description": "Gemini 3.1 Flash Image, a.k.a. \"Nano Banana 2,\" is Google’s latest state of the art image generation and editing model, delivering Pro-level visual quality at Flash speed. It combines advanced...",
+    "createdAt": 1781754065,
+    "modalities": "text+image->text+image",
+    "maxTokens": 65536
+  },
+  {
+    "id": "google/gemini-3-pro-image",
+    "name": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
+    "provider": "GOOGLE",
+    "input": 2,
+    "output": 12,
+    "context": "66K",
+    "description": "Nano Banana Pro is Google’s most advanced image-generation and editing model, built on Gemini 3 Pro. It extends the original Nano Banana with significantly improved multimodal reasoning, real-world gr",
+    "createdAt": 1781754054,
+    "modalities": "text+image->text+image",
+    "maxTokens": 32768
+  },
+  {
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",

@@ -12,6 +12,13 @@
         "newInput": 1.2,
         "oldOutput": 3.1999999999999997,
         "newOutput": 4.1
+      },
+      {
+        "type": "model_removed",
+        "modelId": "meta-llama/llama-3-70b-instruct",
+        "modelName": "Meta: Llama 3 70B Instruct",
+        "provider": "META-LLAMA",
+        "description": "모델 제거"
       }
     ]
   },

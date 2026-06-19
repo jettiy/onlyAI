@@ -19,6 +19,17 @@
         "modelName": "Meta: Llama 3 70B Instruct",
         "provider": "META-LLAMA",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.74,
+        "newInput": 0.6799999999999999,
+        "oldOutput": 3.5,
+        "newOutput": 3.41
       }
     ]
   },

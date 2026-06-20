@@ -12,6 +12,39 @@
         "newInput": 0.612,
         "oldOutput": 3.41,
         "newOutput": 3.0690000000000004
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.67,
+        "newInput": 0.66,
+        "oldOutput": 3.5,
+        "newOutput": 3.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3-preview",
+        "modelName": "Tencent: Hy3 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.06599999999999999,
+        "newInput": 0.063,
+        "oldOutput": 0.26,
+        "newOutput": 0.21
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.6",
+        "modelName": "MoonshotAI: Kimi K2.6",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.67,
+        "newInput": 0.66,
+        "oldOutput": 3.5,
+        "newOutput": 3.5
       }
     ]
   },

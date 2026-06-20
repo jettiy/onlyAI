@@ -45,6 +45,17 @@
         "newInput": 0.66,
         "oldOutput": 3.5,
         "newOutput": 3.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "arcee-ai/trinity-large-thinking",
+        "modelName": "Arcee AI: Trinity Large Thinking",
+        "provider": "ARCEE-AI",
+        "description": "가격 변동",
+        "oldInput": 0.22,
+        "newInput": 0.25,
+        "oldOutput": 0.85,
+        "newOutput": 0.7999999999999999
       }
     ]
   },

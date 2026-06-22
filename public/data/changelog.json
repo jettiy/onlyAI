@@ -40,6 +40,27 @@
         "newInput": 0.66,
         "oldOutput": 3.5,
         "newOutput": 3.41
+      },
+      {
+        "type": "new_model",
+        "modelId": "z-ai/glm-5v-turbo",
+        "modelName": "Z.ai: GLM 5V Turbo",
+        "provider": "Z-AI",
+        "description": "새 모델 추가",
+        "input": 1.2,
+        "output": 4,
+        "context": "203K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 1,
+        "newInput": 0.98,
+        "oldOutput": 4,
+        "newOutput": 3.08
       }
     ]
   },

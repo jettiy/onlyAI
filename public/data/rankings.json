@@ -89,17 +89,6 @@
   },
   {
     "rank": 9,
-    "model": "Nex AGI: Nex-N2-Pro (free)",
-    "provider": "NEX-AGI",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 10,
     "model": "Nex AGI: Nex-N2-Pro",
     "provider": "NEX-AGI",
     "tokens": "LIVE",
@@ -110,7 +99,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 11,
+    "rank": 10,
     "model": "NVIDIA: Nemotron 3.5 Content Safety (free)",
     "provider": "NVIDIA",
     "tokens": "LIVE",
@@ -121,7 +110,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 12,
+    "rank": 11,
     "model": "NVIDIA: Nemotron 3 Ultra (free)",
     "provider": "NVIDIA",
     "tokens": "LIVE",
@@ -132,18 +121,18 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 13,
+    "rank": 12,
     "model": "NVIDIA: Nemotron 3 Ultra",
     "provider": "NVIDIA",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,
     "change": "",
-    "category": "free",
+    "category": "value",
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 14,
+    "rank": 13,
     "model": "Qwen: Qwen3.7 Plus",
     "provider": "QWEN",
     "tokens": "LIVE",
@@ -154,7 +143,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 15,
+    "rank": 14,
     "model": "MiniMax: MiniMax M3",
     "provider": "MINIMAX",
     "tokens": "LIVE",
@@ -165,7 +154,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 16,
+    "rank": 15,
     "model": "StepFun: Step 3.7 Flash",
     "provider": "STEPFUN",
     "tokens": "LIVE",
@@ -176,7 +165,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 17,
+    "rank": 16,
     "model": "Anthropic: Claude Opus 4.8 (Fast)",
     "provider": "ANTHROPIC",
     "tokens": "LIVE",
@@ -187,7 +176,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 18,
+    "rank": 17,
     "model": "Anthropic: Claude Opus 4.8",
     "provider": "ANTHROPIC",
     "tokens": "LIVE",
@@ -198,7 +187,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 19,
+    "rank": 18,
     "model": "Qwen: Qwen3.7 Max",
     "provider": "QWEN",
     "tokens": "LIVE",
@@ -209,9 +198,20 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 20,
+    "rank": 19,
     "model": "xAI: Grok Build 0.1",
     "provider": "X-AI",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 20,
+    "model": "Google: Gemini 3.5 Flash",
+    "provider": "GOOGLE",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,

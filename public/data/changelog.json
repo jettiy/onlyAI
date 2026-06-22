@@ -18,6 +18,28 @@
         "modelName": "Anthropic: Claude 3.5 Haiku",
         "provider": "ANTHROPIC",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.66,
+        "newInput": 0.66,
+        "oldOutput": 3.5,
+        "newOutput": 3.41
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.6",
+        "modelName": "MoonshotAI: Kimi K2.6",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.66,
+        "newInput": 0.66,
+        "oldOutput": 3.5,
+        "newOutput": 3.41
       }
     ]
   },

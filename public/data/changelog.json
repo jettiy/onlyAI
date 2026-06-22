@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-06-22",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "nex-agi/nex-n2-pro",
+        "modelName": "Nex AGI: Nex-N2-Pro",
+        "provider": "NEX-AGI",
+        "description": "새 모델 추가",
+        "input": 0.5,
+        "output": 2.5,
+        "context": "262K"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "anthropic/claude-3.5-haiku",
+        "modelName": "Anthropic: Claude 3.5 Haiku",
+        "provider": "ANTHROPIC",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-06-21",
     "items": [
       {

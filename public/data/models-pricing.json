@@ -1380,18 +1380,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "essentialai/rnj-1-instruct",
-    "name": "EssentialAI: Rnj 1 Instruct",
-    "provider": "ESSENTIALAI",
-    "input": 0.15,
-    "output": 0.15,
-    "context": "33K",
-    "description": "Rnj-1 is an 8B-parameter, dense, open-weight model family developed by Essential AI and trained from scratch with a focus on programming, math, and scientific reasoning. The model demonstrates strong ",
-    "createdAt": 1765094847,
-    "modalities": "text->text",
-    "maxTokens": null
-  },
-  {
     "id": "openai/gpt-5.1-codex-max",
     "name": "OpenAI: GPT-5.1-Codex-Max",
     "provider": "OPENAI",
@@ -1486,18 +1474,6 @@
     "createdAt": 1764594642,
     "modalities": "text->text",
     "maxTokens": 64000
-  },
-  {
-    "id": "prime-intellect/intellect-3",
-    "name": "Prime Intellect: INTELLECT-3",
-    "provider": "PRIME-INTELLECT",
-    "input": 0.19999999999999998,
-    "output": 1.1,
-    "context": "131K",
-    "description": "INTELLECT-3 is a 106B-parameter Mixture-of-Experts model (12B active) post-trained from GLM-4.5-Air-Base using supervised fine-tuning (SFT) followed by large-scale reinforcement learning (RL). It offe",
-    "createdAt": 1764212534,
-    "modalities": "text->text",
-    "maxTokens": 131072
   },
   {
     "id": "anthropic/claude-opus-4.5",
@@ -3087,7 +3063,7 @@
     "id": "microsoft/phi-4",
     "name": "Microsoft: Phi 4",
     "provider": "MICROSOFT",
-    "input": 0.065,
+    "input": 0.07,
     "output": 0.14,
     "context": "16K",
     "description": "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. At 14 b",
@@ -3303,13 +3279,13 @@
     "id": "thedrummer/rocinante-12b",
     "name": "TheDrummer: Rocinante 12B",
     "provider": "THEDRUMMER",
-    "input": 0.16999999999999998,
-    "output": 0.43,
+    "input": 0.25,
+    "output": 0.5,
     "context": "33K",
     "description": "Rocinante 12B is designed for engaging storytelling and rich prose. Early testers have reported: - Expanded vocabulary with unique and expressive word choices - Enhanced creativity for vivid narrative",
     "createdAt": 1727654400,
     "modalities": "text->text",
-    "maxTokens": 32768
+    "maxTokens": null
   },
   {
     "id": "meta-llama/llama-3.2-3b-instruct",

@@ -23,6 +23,42 @@
         "newInput": 0.25,
         "oldOutput": 2.5,
         "newOutput": 1
+      },
+      {
+        "type": "price_change",
+        "modelId": "microsoft/phi-4",
+        "modelName": "Microsoft: Phi 4",
+        "provider": "MICROSOFT",
+        "description": "가격 변동",
+        "oldInput": 0.065,
+        "newInput": 0.07,
+        "oldOutput": 0.14,
+        "newOutput": 0.14
+      },
+      {
+        "type": "price_change",
+        "modelId": "thedrummer/rocinante-12b",
+        "modelName": "TheDrummer: Rocinante 12B",
+        "provider": "THEDRUMMER",
+        "description": "가격 변동",
+        "oldInput": 0.16999999999999998,
+        "newInput": 0.25,
+        "oldOutput": 0.43,
+        "newOutput": 0.5
+      },
+      {
+        "type": "model_removed",
+        "modelId": "essentialai/rnj-1-instruct",
+        "modelName": "EssentialAI: Rnj 1 Instruct",
+        "provider": "ESSENTIALAI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "prime-intellect/intellect-3",
+        "modelName": "Prime Intellect: INTELLECT-3",
+        "provider": "PRIME-INTELLECT",
+        "description": "모델 제거"
       }
     ]
   },

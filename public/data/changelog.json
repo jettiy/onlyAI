@@ -12,6 +12,17 @@
         "newInput": 0.6799999999999999,
         "oldOutput": 3.0690000000000004,
         "newOutput": 3.41
+      },
+      {
+        "type": "price_change",
+        "modelId": "nex-agi/nex-n2-pro",
+        "modelName": "Nex AGI: Nex-N2-Pro",
+        "provider": "NEX-AGI",
+        "description": "가격 변동",
+        "oldInput": 0.5,
+        "newInput": 0.25,
+        "oldOutput": 2.5,
+        "newOutput": 1
       }
     ]
   },

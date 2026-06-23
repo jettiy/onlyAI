@@ -59,6 +59,28 @@
         "modelName": "Prime Intellect: INTELLECT-3",
         "provider": "PRIME-INTELLECT",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.6799999999999999,
+        "newInput": 0.74,
+        "oldOutput": 3.41,
+        "newOutput": 3.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.7",
+        "modelName": "MiniMax: MiniMax M2.7",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.25,
+        "newInput": 0.24,
+        "oldOutput": 1,
+        "newOutput": 0.96
       }
     ]
   },

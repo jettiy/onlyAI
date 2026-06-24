@@ -543,13 +543,13 @@
     "id": "xiaomi/mimo-v2.5",
     "name": "Xiaomi: MiMo-V2.5",
     "provider": "XIAOMI",
-    "input": 0.14,
+    "input": 0.105,
     "output": 0.28,
     "context": "1M",
     "description": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and v",
     "createdAt": 1776874269,
     "modalities": "text+image+audio+video->text",
-    "maxTokens": 131072
+    "maxTokens": null
   },
   {
     "id": "openai/gpt-5.4-image-2",

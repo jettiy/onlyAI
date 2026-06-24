@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-24",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "xiaomi/mimo-v2.5",
+        "modelName": "Xiaomi: MiMo-V2.5",
+        "provider": "XIAOMI",
+        "description": "가격 변동",
+        "oldInput": 0.14,
+        "newInput": 0.105,
+        "oldOutput": 0.28,
+        "newOutput": 0.28
+      }
+    ]
+  },
+  {
     "date": "2026-06-23",
     "items": [
       {

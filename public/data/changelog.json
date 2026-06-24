@@ -12,6 +12,16 @@
         "newInput": 0.105,
         "oldOutput": 0.28,
         "newOutput": 0.28
+      },
+      {
+        "type": "new_model",
+        "modelId": "sakana/fugu-ultra",
+        "modelName": "Sakana: Fugu Ultra",
+        "provider": "SAKANA",
+        "description": "새 모델 추가",
+        "input": 5,
+        "output": 30,
+        "context": "1M"
       }
     ]
   },

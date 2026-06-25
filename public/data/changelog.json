@@ -23,6 +23,39 @@
         "newInput": 0.09,
         "oldOutput": 0.224,
         "newOutput": 0.18
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.7",
+        "modelName": "MiniMax: MiniMax M2.7",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.24,
+        "newInput": 0.18,
+        "oldOutput": 0.96,
+        "newOutput": 0.72
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.12,
+        "oldOutput": 0.8999999999999999,
+        "newOutput": 0.48
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.039,
+        "newInput": 0.03,
+        "oldOutput": 0.18,
+        "newOutput": 0.15
       }
     ]
   },

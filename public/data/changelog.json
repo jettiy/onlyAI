@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-25",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.08900000000000001,
+        "oldOutput": 0.18,
+        "newOutput": 0.224
+      }
+    ]
+  },
+  {
     "date": "2026-06-24",
     "items": [
       {

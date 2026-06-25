@@ -56,6 +56,17 @@
         "newInput": 0.03,
         "oldOutput": 0.18,
         "newOutput": 0.15
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3-super-120b-a12b",
+        "modelName": "NVIDIA: Nemotron 3 Super",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.08499999999999999,
+        "oldOutput": 0.44999999999999996,
+        "newOutput": 0.39999999999999997
       }
     ]
   },

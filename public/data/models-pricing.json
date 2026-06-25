@@ -819,13 +819,13 @@
     "id": "nvidia/nemotron-3-super-120b-a12b",
     "name": "NVIDIA: Nemotron 3 Super",
     "provider": "NVIDIA",
-    "input": 0.09,
-    "output": 0.44999999999999996,
+    "input": 0.08499999999999999,
+    "output": 0.39999999999999997,
     "context": "1M",
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mam",
     "createdAt": 1773245239,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 16384
   },
   {
     "id": "bytedance-seed/seed-2.0-lite",

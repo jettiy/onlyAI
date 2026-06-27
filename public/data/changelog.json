@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-27",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.6-27b",
+        "modelName": "Qwen: Qwen3.6 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.28850000000000003,
+        "newInput": 0.2596,
+        "oldOutput": 2.65,
+        "newOutput": 2.3850000000000002
+      }
+    ]
+  },
+  {
     "date": "2026-06-26",
     "items": [
       {

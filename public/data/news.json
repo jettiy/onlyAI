@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-27T13:56:06.915Z",
-  "updatedAtKST": "2026. 6. 27. PM 10:56:06",
+  "updatedAt": "2026-06-27T19:37:35.145Z",
+  "updatedAtKST": "2026. 6. 28. AM 4:37:35",
   "stats": {
     "aitimes": 20,
-    "geeknews": 20,
+    "geeknews": 19,
     "36kr": 18,
     "hf": 20,
     "tc": 17,
-    "github": 10,
+    "github": 11,
     "total": 87
   },
   "news": [
@@ -168,7 +168,19 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-2-https://news.hada.io/topic?id=30878",
+      "id": "geeknews-4-https://news.hada.io/topic?id=30881",
+      "title": "2천 명이 내 AI 어시스턴트를 해킹하려 한 뒤 벌어진 일",
+      "summary": "<ul>\n<li>hackmyclaw.com은 이메일로 AI 어시스턴트 <strong>Fiu</strong>를 속여 <code>secrets.env</code>를 유출시키는 공개 실험이었고, Hacker News 1위 이후 2,000명 이상이 6,000건 넘게 시도했지만 비밀은 새지 않음</li>\n<li>방어는 VPS에서 동작하는 어시스턴트에 몇 줄짜리 <s",
+      "date": "2026-06-27",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=30881",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-7-https://news.hada.io/topic?id=30878",
       "title": "미국, Anthropic의 Mythos AI를 ‘신뢰된’ 미국 조직에 공개 허용",
       "summary": "<ul>\n<li>미국 정부가 Anthropic의 강력한 <strong>Claude Mythos 5</strong> 차단을 풀면서, 100곳이 넘는 미국 기관·대기업·정부기관이 접근할 수 있게 됨</li>\n<li>2주 전 <strong>Mythos 수출통제</strong>와 Mythos·Fable 5 중단으로 커졌던 Trump 행정부와 Anthropic의 대",
       "date": "2026-06-27",
@@ -180,7 +192,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-4-https://news.hada.io/topic?id=30874",
+      "id": "geeknews-9-https://news.hada.io/topic?id=30874",
       "title": "이번 주말에 무엇을 할 예정인가요?",
       "summary": "<ul>\n<li>주말 계획을 자유롭게 나누는 <strong>커뮤니티 프롬프트</strong>임</li>\n<li>계획 공유뿐 아니라 필요한 <strong>도움이나 피드백</strong> 요청도 허용함</li>\n<li>특별한 일정이 없어도 참여할 수 있는 열린 질문임</li>\n<li>아무것도 하지 않는 선택도 <strong>괜찮다</strong>고 명시함</l",
       "date": "2026-06-27",
@@ -192,7 +204,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-8-https://news.hada.io/topic?id=30870",
+      "id": "geeknews-13-https://news.hada.io/topic?id=30870",
       "title": "&#039;기획 하네스(planning harness)&#039;로 완성하는 상세기획 워크플로우 자동화",
       "summary": "<p>기획자들이 AI를 활용할 때 상위기획은 잘 자동화하면서도 상세기획에서는 여전히 수작업으로 고생하는 문제를 다루고 있음.<br />\n주변 개발자의 조언으로 '기획 하네스(Planning Harness)' 개념을 도입해 이를 해결한 사례 중심의 내용.</p>\n<p>기획 하네스(planning harness)란?<br />\n. AI가 일관된 규칙과 컨텍스",
       "date": "2026-06-27",
@@ -204,7 +216,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-9-https://news.hada.io/topic?id=30869",
+      "id": "geeknews-14-https://news.hada.io/topic?id=30869",
       "title": "오픈소스 보안을 함께 지키기 위한 Akrites 공개서한",
       "summary": "<ul>\n<li><strong>AI 기반 취약점 발견</strong>이 유지관리자의 대응 속도를 앞지르면서, Akrites는 핵심 오픈소스 소프트웨어를 공동으로 보강하기 위한 산업계 협력으로 출범함</li>\n<li>심각한 취약점 발견은 과거 전문가에게 몇 주 걸리던 작업이었지만, 이제는 <strong>AI 모델</strong>이 몇 분 만에 여러 취약점..",
       "date": "2026-06-27",
@@ -216,7 +228,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-10-https://news.hada.io/topic?id=30868",
+      "id": "geeknews-15-https://news.hada.io/topic?id=30868",
       "title": "CVE-2026-LGTM 사고 보고서",
       "summary": "<ul>\n<li>자동화된 방어 체계가 서로의 판단을 믿고 넘어가면서, 악성 패키지 <code>foxhole-lz4</code>가 <strong>게시·탐지·대응·완화</strong> 전 과정을 통과한 96시간짜리 사고로 번짐</li>\n<li>숨은 프롬프트, base64 블롭, 대형 <code>vendor.min.js</code>, 빌드 스크립트의 <stron",
       "date": "2026-06-27",
@@ -228,7 +240,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-11-https://news.hada.io/topic?id=30867",
+      "id": "geeknews-16-https://news.hada.io/topic?id=30867",
       "title": "미국 정부가 GPT-5.6 사용자를 결정할 예정",
       "summary": "<ul>\n<li>트럼프 행정부가 최신 AI 기술에 접근하려는 기업을 <strong>정부가 직접 심사</strong>하는 정책을 확대하며, OpenAI와 Anthropic 양사 모두에 규제를 적용 중</li>\n<li>OpenAI는 최신 모델 <strong>Sol</strong> 출시와 함께 미국 정부 승인을 받은 기업만 접근할 수 있도록 했으며, 개인 사용자",
       "date": "2026-06-27",
@@ -240,7 +252,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-12-https://news.hada.io/topic?id=30866",
+      "id": "geeknews-17-https://news.hada.io/topic?id=30866",
       "title": "GPT‑5.6 Sol 프리뷰: 차세대 모델",
       "summary": "<ul>\n<li>OpenAI가 <strong>GPT‑5.6 시리즈</strong>를 제한 프리뷰로 열며, 플래그십 Sol과 일상 업무용 Terra, 저비용 Luna를 함께 내놓음</li>\n<li>Sol은 코딩·생물학·사이버보안에서 <strong>에이전트 능력</strong>을 강화했고, <code>max</code> reasoning effort와 <cod",
       "date": "2026-06-27",
@@ -252,7 +264,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-13-https://news.hada.io/topic?id=30865",
+      "id": "geeknews-18-https://news.hada.io/topic?id=30865",
       "title": "새로운 산업혁명의 잠금 해제",
       "summary": "<ul>\n<li>AI는 인간 수준 지능 도달과 그 이상을 목표로 하지만, <strong>산업 인프라와 물리적 한계</strong>가 그 잠재력을 가둬두고 있음</li>\n<li>의미 있는 생활수준 변화에는 <strong>전력 + 지능 + 조정된 행동(coordinated action)</strong> 세 가지 요소의 결합이 필수</li>\n<li>미국은 지능은",
       "date": "2026-06-27",
@@ -264,7 +276,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-15-https://news.hada.io/topic?id=30863",
+      "id": "geeknews-20-https://news.hada.io/topic?id=30863",
       "title": "훔치기도 기술이다",
       "summary": "<ul>\n<li>창작에서의 “훔치기”는 참고 수준을 넘어 <strong>타인의 작업을 직접 복제</strong>해 빠르게 기준점을 만들고, 자신이 바꿔야 할 부분을 배우는 방법임</li>\n<li>Virgil Abloh의 <strong>3% 접근법</strong>은 기존 Air Force 1 디자인을 거의 유지하려 한 사례에서 출발하며, 작은 차이를 만들려면",
       "date": "2026-06-27",
@@ -276,7 +288,33 @@
       "lang": "ko"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/",
+      "id": "tc-0-https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/",
+      "title": "Apple Vision Pro exec is reportedly leaving for OpenAI",
+      "summary": "Paul Meade, the Apple vice president in charge of the Vision Pro headset, is reportedly leaving the company to join OpenAI’s hardware team.",
+      "date": "2026-06-27",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/",
+      "category": "인프라·하드웨어",
+      "lang": "en",
+      "titleKo": "Apple Vision Pro 임원이 OpenAI로 떠난다고 합니다."
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
+      "title": "The fittest founder in the room got cancer. Here&#8217;s how he used AI to fight back.",
+      "summary": "When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, journal entries — into Claude.",
+      "date": "2026-06-27",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
+      "category": "모델 출시",
+      "lang": "en",
+      "titleKo": "이 방에서 가장 건강한 창업자가 암에 걸렸습니다. 그가 AI를 사용하여 반격한 방법은 다음과 같습니다."
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/",
       "title": "Asian AI startups launch Mythos-like  models as Anthropic&#8217;s export ban drags on",
       "summary": "New models are launching in Asia that promise Mythos-like capabilities without fear of an export ban. U.S. AI labs may never recover this enormous market.",
       "date": "2026-06-27",
@@ -289,7 +327,7 @@
       "titleKo": "Anthropic의 수출 금지가 지연되면서 아시아 AI 스타트업, Mythos와 유사한 모델 출시"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
+      "id": "tc-3-https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
       "title": "Trump Admin releases Anthropic  Mythos to be used by more than 100 US companies, agencies",
       "summary": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
       "date": "2026-06-27",
@@ -386,7 +424,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-16-https://news.hada.io/topic?id=30862",
+      "id": "geeknews-21-https://news.hada.io/topic?id=30862",
       "title": "Apple, 고급형 M6 Mac 칩 건너뛰고 AI 중심 M7 라인으로 전환 예정",
       "summary": "<ul>\n<li>Apple이 M1부터 M5까지 유지해온 칩 세대별 Pro/Max 변형 출시 관행을 처음으로 깨고, <strong>M6는 베이스 칩만</strong> 출시한 뒤 하이엔드 라인은 차세대 M7으로 건너뛰는 전략 변경 추진 중</li>\n<li>M6 베이스 칩은 올해 중 엔트리급 MacBook Pro에 탑재 예정이며, <strong>메모리 대역폭이 ",
       "date": "2026-06-26",
@@ -398,7 +436,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-18-https://news.hada.io/topic?id=30860",
+      "id": "geeknews-23-https://news.hada.io/topic?id=30860",
       "title": "Show HN: OpenKnowledge – Obsidian/Notion의 오픈소스 AI 우선 대안",
       "summary": "<ul>\n<li>개인 노트, 지식 베이스, 스펙, LLM 위키를 위한 로컬 우선 <strong>WYSIWYG Markdown 편집기</strong>이며 Claude, Codex 등 하네스와의 통합을 제공함</li>\n<li>Markdown 파일 편집을 Google Doc이나 Notion 페이지 편집처럼 느끼게 하는 <strong>true WYSIWYG</st",
       "date": "2026-06-26",
@@ -410,7 +448,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-19-https://news.hada.io/topic?id=30859",
+      "id": "geeknews-24-https://news.hada.io/topic?id=30859",
       "title": "IBM, 1nm 미만 0.7nm 칩 기술 공개",
       "summary": "<ul>\n<li>반도체 산업이 전통적 스케일링의 물리적 한계에 가까워진 가운데, IBM은 <strong>0.7nm·7옹스트롬 노드</strong> 기반의 세계 최초 1nm 미만 칩 기술을 공개함</li>\n<li>손톱 크기 칩에 <strong>약 1,000억 개 트랜지스터</strong>를 집적해, 2021년 IBM 2nm 칩 대비 거의 두 배의 밀도를 목표",
       "date": "2026-06-26",
@@ -422,7 +460,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-21-https://news.hada.io/topic?id=30856",
+      "id": "geeknews-26-https://news.hada.io/topic?id=30856",
       "title": "Vibecoding 공개로 Emacs 패치가 거절됨",
       "summary": "<ul>\n<li>macOS용 <strong>Emacs 성능 개선</strong>을 위해 만든 작은 패치가 <code>emacs-devel</code>에 제출됐지만, LLM 보조 작업을 받지 않는 GNU 정책 때문에 받아들여지지 않음</li>\n<li>작업자는 GLM 5.2가 이슈를 찾고 초안을 만들었다고 공개하면서도, 본인이 정확성·영향 분석, 수정, 수동 ",
       "date": "2026-06-26",
@@ -434,7 +472,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-22-https://news.hada.io/topic?id=30855",
+      "id": "geeknews-27-https://news.hada.io/topic?id=30855",
       "title": "AI에게 주도권을 빼앗기지 마세요 — 두 번의 자동화 실패에서 배운 것",
       "summary": "<p>Claude Code로 자동매매 시스템과 블로그 자동발행을 직접 운영하다 겪은 두 번의 실패에서 출발한 글입니다.</p>\n<ul>\n<li>자동매매: 매매 도메인 지식이 부족해 AI가 짠 코드를 검증하지 못했고, 결과는 0승 8패·자산 3% 손실</li>\n<li>블로그 자동발행: 검수 없이 내보낸 부정확한 글로 독자 피드백을 받음</li>\n...</p>",
       "date": "2026-06-26",
@@ -446,7 +484,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-23-https://news.hada.io/topic?id=30854",
+      "id": "geeknews-28-https://news.hada.io/topic?id=30854",
       "title": "Show GN: SongRyeon Core - LLM이 쓴 말과 코드가 검증한 정보를 분리하는 로컬 에이전트 런타임 실험",
       "summary": "<p>안녕하세요. 코딩을 배우면서 AI 에이전트 런타임을 직접 실험하고 있는 정후입니다.</p>\n<p>SongRyeon Core는 “LLM이 말한 판단”과 “코드가 실제로 확인한 사실”을 분리해서 다루는 작은 로컬 우선(agent runtime) 실험입니다.</p>\n<p>요즘 LLM 기반 에이전트를 만들다 보면 다음 문제가 자주 생긴다고 느꼈습니",
       "date": "2026-06-26",
@@ -458,7 +496,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-31-https://news.hada.io/topic?id=30843",
+      "id": "geeknews-36-https://news.hada.io/topic?id=30843",
       "title": "Ford, AI 품질검사 차질로 ‘gray beard’ 검사관 재고용",
       "summary": "<ul>\n<li>Ford Motor Co.는 고질적인 <strong>품질 문제</strong>를 줄이기 위해 “gray beard”로 불리는 베테랑 엔지니어들을 다시 불러 젊은 직원 교육과 AI 도구 보완에 투입함</li>\n<li>지난 <strong>3년간 350명</strong>의 베테랑 엔지니어를 채용했으며, 다수는 전직 Ford 직원이고 일부는 공급업",
       "date": "2026-06-26",
@@ -470,7 +508,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-33-https://news.hada.io/topic?id=30841",
+      "id": "geeknews-38-https://news.hada.io/topic?id=30841",
       "title": "도구와 대화하는 것의 피로감",
       "summary": "<ul>\n<li>LLM은 키보드나 자동차처럼 몸에 익는 <strong>좋은 도구</strong>가 아니라, 요청과 협상을 요구하는 상대처럼 작동해 사용자의 사회적 에너지를 소모함</li>\n<li>좋은 도구는 일관성과 속도 덕분에 뇌가 <strong>신체의 확장</strong>처럼 받아들이지만, Claude나 Cursor 같은 LLM은 아직 그 수준에 미치지",
       "date": "2026-06-26",
@@ -482,7 +520,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-36-https://news.hada.io/topic?id=30837",
+      "id": "geeknews-41-https://news.hada.io/topic?id=30837",
       "title": "auth.md — 에이전트가 사용자를 대신해 가입시키기 위한 오픈 프로토콜",
       "summary": "<ul>\n<li>각 서비스가 자기 도메인 루트에 호스팅하는 <code>auth.md</code> 파일 표준</li>\n<li>에이전트에게 사용자를 대신해 등록하는 방법을 알려줘서, 별도의 회원가입 폼 없이 에이전트가 사용자를 등록 가능</li>\n<li>파일에는 지원하는 <strong>flow</strong>, 존재하는 <strong>scope</strong>",
       "date": "2026-06-26",
@@ -507,7 +545,7 @@
       "titleKo": "하나의 명령으로 HF 작업에서 vLLM 서버 실행"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+      "id": "tc-4-https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
       "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm",
       "summary": "“We don’t believe this kind of government access process should become the long-term default,” says OpenAI. “It keeps the best tools from users, developers, enterprises, cyber defenders, and global pa",
       "date": "2026-06-26",
@@ -520,7 +558,7 @@
       "titleKo": "OpenAI는 정부 요청 후 GPT-5.6 출시를 제한하며 제한이 표준이 되어서는 안 된다고 말합니다."
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/",
+      "id": "tc-5-https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/",
       "title": "OpenAI poaches Uber India chief to lead its biggest market outside the US",
       "summary": "The hire marks OpenAI's latest push into India, expanding offices, partnerships and hiring.",
       "date": "2026-06-26",
@@ -533,7 +571,7 @@
       "titleKo": "OpenAI, 미국 외 최대 시장 주도하기 위해 Uber India 사장 영입"
     },
     {
-      "id": "tc-4-https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
+      "id": "tc-6-https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
       "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
       "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.&#160;&#160; OpenAI just shared its plans to spice things up with&#160;Jalapeño, its custom inference",
       "date": "2026-06-26",
@@ -546,7 +584,7 @@
       "titleKo": "OpenAI에서 SpaceX까지 모두가 자체 칩을 만들고 Nvidia에 열을 올리는 이유"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/",
+      "id": "tc-7-https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/",
       "title": "It&#8217;s not about Anthropic vs. OpenAI anymore",
       "summary": "AI models have progressed to the point where their capabilities have real political consequences. Dealing with those consequences will require collective action.",
       "date": "2026-06-26",
@@ -559,7 +597,7 @@
       "titleKo": "더 이상 Anthropic 대 OpenAI의 문제가 아닙니다."
     },
     {
-      "id": "tc-6-https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/",
+      "id": "tc-8-https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/",
       "title": "OpenAI&#8217;s Jalapeño chip is Big Tech&#8217;s spiciest move away from Nvidia",
       "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.&#160;&#160; OpenAI just shared its plans to spice things up with&#160;Jalapeño, its custom inference",
       "date": "2026-06-26",
@@ -572,31 +610,7 @@
       "titleKo": "OpenAI의 Jalapeño 칩은 Nvidia에서 벗어난 Big Tech의 가장 매운 움직임입니다."
     },
     {
-      "id": "geeknews-48-https://news.hada.io/topic?id=30825",
-      "title": "Krea 2: 오픈 가중치 12B 이미지 모델 기술 보고서",
-      "summary": "<ul>\n<li><strong>창의적 탐색(creative exploration)</strong> 을 목표로 설계된 파운데이션 이미지 모델 시리즈로, 넓은 미적 다양성과 사용자 제어를 동시에 추구</li>\n<li>데이터 큐레이션 원칙, 모델 아키텍처, 다단계 학습 파이프라인, 분산 인프라, 향후 과제를 다루며, <strong>데이터 인프라와 분산 학습 프레",
-      "date": "2026-06-25",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30825",
-      "category": "파인튜닝",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-49-https://news.hada.io/topic?id=30824",
-      "title": "45°C 냉각 설계로 데이터센터 물 사용량을 거의 0으로 줄임",
-      "summary": "<ul>\n<li>AI 서버의 전력 밀도가 커지면서 냉각이 데이터센터 비용과 물 사용의 핵심 병목이 됐고, NVIDIA는 Rubin 세대에서 냉각액을 최대 <strong>45°C</strong>로 운용하는 설계를 내세움</li>\n<li>Rubin 세대 AI 인프라는 칩과 네트워킹 구성요소까지 팬 없이 식히는 <strong>100% 액체 냉각</strong> ",
-      "date": "2026-06-25",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30824",
-      "category": "인프라·하드웨어",
-      "lang": "ko"
-    },
-    {
-      "id": "tc-8-https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/",
+      "id": "tc-10-https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/",
       "title": "The White House is asking OpenAI to slow roll the release of its new model over safety concerns",
       "summary": "OpenAI reportedly plans to share its newest model, GPT 5.6, with a select group of partners instead of with the broader public. The reason: the Trump administration told it to.",
       "date": "2026-06-25",
@@ -609,7 +623,7 @@
       "titleKo": "백악관은 OpenAI에게 안전 문제로 인해 새 모델 출시를 늦추도록 요청했습니다."
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/",
+      "id": "tc-11-https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/",
       "title": "Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents",
       "summary": "Agent-testing startup Patronus AI, founded by former Meta AI researchers, is experiencing nearly insatiable demand, its investor says.",
       "date": "2026-06-25",
@@ -622,7 +636,7 @@
       "titleKo": "Patronus AI는 AI 에이전트를 스트레스 테스트하는 '디지털 세계'를 구축하기 위해 5천만 달러를 투자했습니다."
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/",
+      "id": "tc-12-https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/",
       "title": "Anthropic&#8217;s Claude is winning over paid consumers, a market owned by ChatGPT",
       "summary": "Despite ChatGPT's commanding market lead, consumers who pay for AI have been increasingly choosing Anthropic's Claude, data shows.",
       "date": "2026-06-25",
@@ -635,7 +649,7 @@
       "titleKo": "Anthropic의 Claude는 ChatGPT가 소유한 시장인 유료 소비자를 사로잡고 있습니다."
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/",
+      "id": "tc-13-https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/",
       "title": "General Intuition&#8217;s $2.3B bet that video games can train AI agents for the real world",
       "summary": "General Intuition has raised $320 million to scale AI trained on millions of hours of gameplay, betting action data can help AI develop something closer to human intuition.",
       "date": "2026-06-25",
@@ -648,7 +662,7 @@
       "titleKo": "비디오 게임이 실제 세계에서 AI 에이전트를 훈련시킬 수 있다는 General Intuition의 23억 달러 베팅"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/06/25/databricks-former-ai-chief-thinks-he-can-cut-ais-power-bill-by-1000x/",
+      "id": "tc-14-https://techcrunch.com/2026/06/25/databricks-former-ai-chief-thinks-he-can-cut-ais-power-bill-by-1000x/",
       "title": "Databricks’ former AI chief thinks he can cut AI’s power bill by 1,000x",
       "summary": "Un-0 is an image-generation system tool that shows for the first time how the company's technology can replicate conventional AI systems.",
       "date": "2026-06-25",
@@ -661,7 +675,7 @@
       "titleKo": "Databricks의 전 AI 책임자는 AI의 전력 비용을 1,000배까지 줄일 수 있다고 생각합니다."
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/06/25/netris-raises-15m-series-a-from-a16z-to-help-ai-neoclouds-go-live-faster/",
+      "id": "tc-15-https://techcrunch.com/2026/06/25/netris-raises-15m-series-a-from-a16z-to-help-ai-neoclouds-go-live-faster/",
       "title": "Netris raises $15M Series A from a16z to help AI neoclouds go live faster",
       "summary": "Netris provides software that runs on network switches, and offers a platform that helps neocloud operators reduce the time it takes to go live.",
       "date": "2026-06-25",
@@ -674,7 +688,7 @@
       "titleKo": "Netris는 AI 네오클라우드의 더 빠른 실행을 돕기 위해 a16z에서 1,500만 달러 규모의 시리즈 A를 모금했습니다."
     },
     {
-      "id": "tc-15-https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/",
+      "id": "tc-17-https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/",
       "title": "Adobe acquires image and video enhancement tool maker Topaz Labs",
       "summary": "Adobe said that it will integrate Topaz Labs' tools across its apps.",
       "date": "2026-06-25",
@@ -687,7 +701,7 @@
       "titleKo": "Adobe, 이미지 및 비디오 향상 도구 제조업체인 Topaz Labs 인수"
     },
     {
-      "id": "tc-16-https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/",
+      "id": "tc-18-https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/",
       "title": "Amazon ups India bet with fresh $13B AI infrastructure investment",
       "summary": "Amazon’s latest India investment comes as global tech companies race to expand AI infrastructure in the country.",
       "date": "2026-06-25",
@@ -724,32 +738,6 @@
       "category": "벤치마크",
       "lang": "en",
       "titleKo": "FFASR 리더보드 소개: 실제 세계에서 ASR 벤치마킹"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/06/24/former-infosys-chief-has-a-new-startup-that-wants-to-challenge-the-it-services-world/",
-      "title": "Former Infosys chief has a new startup that wants to challenge the IT services world",
-      "summary": "Backed by Mayfield and Aramco Ventures, Vishal Sikka’s new venture brings together veterans from SAP, Infosys, and VianAI.",
-      "date": "2026-06-24",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/24/former-infosys-chief-has-a-new-startup-that-wants-to-challenge-the-it-services-world/",
-      "category": "투자·기업",
-      "lang": "en",
-      "titleKo": "전 인포시스(Infosys) 대표는 IT 서비스 세계에 도전하고 싶은 새로운 스타트업을 갖고 있다."
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/06/24/cerebras-stock-plunges-after-earnings-as-ceo-says-margin-outlook-was-misunderstood/",
-      "title": "Cerebras stock plunges after earnings as CEO says margin outlook was misunderstood",
-      "summary": "In its first earnings report since going public, the AI chipmaker forecast a narrower gross margin in its core business, scaring investors.",
-      "date": "2026-06-24",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/24/cerebras-stock-plunges-after-earnings-as-ceo-says-margin-outlook-was-misunderstood/",
-      "category": "인프라·하드웨어",
-      "lang": "en",
-      "titleKo": "CEO가 마진 전망을 오해했다고 말하면서 Cerebras 주가는 실적 후 급락"
     },
     {
       "id": "hf-4-https://huggingface.co/blog/ibm-research/cuga-apps",
@@ -968,25 +956,45 @@
   ],
   "github": [
     {
-      "id": "gh-817326197",
-      "title": "screenpipe/screenpipe — YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure. Connect to OpenClaw, Hermes agent and 100+ apps",
-      "summary": "YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure. Connect to OpenClaw, Hermes agent and 100+ apps",
+      "id": "gh-1024554267",
+      "title": "NousResearch/hermes-agent — The agent that grows with you",
+      "summary": "The agent that grows with you",
       "date": "2026-06-27",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/screenpipe/screenpipe",
+      "url": "https://github.com/NousResearch/hermes-agent",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 19510,
-      "language": "Rust",
+      "stars": 204267,
+      "language": "Python",
       "tags": [
-        "agents",
-        "agi",
         "ai",
-        "ai-memory",
-        "audio-recording"
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-868173144",
+      "title": "kortix-ai/suna — The Company AI Command Center",
+      "summary": "The Company AI Command Center",
+      "date": "2026-06-27",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/kortix-ai/suna",
+      "category": "투자·기업",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19890,
+      "language": "TypeScript",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "llm"
       ]
     },
     {
@@ -1001,7 +1009,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 146734,
+      "stars": 146763,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -1009,28 +1017,6 @@
         "agentic-framework",
         "agentic-workflow",
         "ai"
-      ]
-    },
-    {
-      "id": "gh-656099147",
-      "title": "mem0ai/mem0 — Universal memory layer for AI Agents",
-      "summary": "Universal memory layer for AI Agents",
-      "date": "2026-06-27",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mem0ai/mem0",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 59573,
-      "language": "Python",
-      "tags": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "application",
-        "chatbots"
       ]
     },
     {
@@ -1045,7 +1031,7 @@
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 5069,
+      "stars": 5106,
       "language": "Python",
       "tags": [
         "agent-framework",
@@ -1056,113 +1042,47 @@
       ]
     },
     {
-      "id": "gh-828119367",
-      "title": "yamadashy/repomix — 📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
-      "summary": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "id": "gh-839037098",
+      "title": "mastra-ai/mastra — Mastra is the modern TypeScript framework for AI-powered applications and agents.",
+      "summary": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
       "date": "2026-06-27",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/yamadashy/repomix",
-      "category": "모델 출시",
+      "url": "https://github.com/mastra-ai/mastra",
+      "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 26610,
+      "stars": 25504,
       "language": "TypeScript",
-      "tags": [
-        "ai",
-        "anthropic",
-        "artificial-intelligence",
-        "chatbot",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-615869301",
-      "title": "mudler/LocalAI — LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
-      "summary": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
-      "date": "2026-06-27",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/mudler/LocalAI",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 47185,
-      "language": "Go",
       "tags": [
         "agents",
         "ai",
-        "api",
-        "audio-generation",
-        "decentralized"
+        "chatbots",
+        "evals",
+        "javascript"
       ]
     },
     {
-      "id": "gh-1231170332",
-      "title": "opensquilla/opensquilla — OpenSquilla — Token-Efficient AI Agent with same budget, higher intelligence density",
-      "summary": "OpenSquilla — Token-Efficient AI Agent with same budget, higher intelligence density",
+      "id": "gh-817326197",
+      "title": "screenpipe/screenpipe — YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure. Connect to OpenClaw, Hermes agent and 100+ apps",
+      "summary": "YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure. Connect to OpenClaw, Hermes agent and 100+ apps",
       "date": "2026-06-27",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/opensquilla/opensquilla",
+      "url": "https://github.com/screenpipe/screenpipe",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 4851,
-      "language": "Python",
+      "stars": 19514,
+      "language": "Rust",
       "tags": [
-        "agent",
+        "agents",
+        "agi",
         "ai",
-        "ai-agents",
-        "deep-learning",
-        "foundation-models"
-      ]
-    },
-    {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "date": "2026-06-27",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/lobehub/lobehub",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 79153,
-      "language": "TypeScript",
-      "tags": [
-        "agent",
-        "agent-collaboration",
-        "agent-harness",
-        "ai",
-        "cao"
-      ]
-    },
-    {
-      "id": "gh-1253138201",
-      "title": "StarTrail-org/PixelRAG — The end of web parsing. The beginning of scalable pixel-native search.",
-      "summary": "The end of web parsing. The beginning of scalable pixel-native search.",
-      "date": "2026-06-27",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/StarTrail-org/PixelRAG",
-      "category": "연구·논문",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 5452,
-      "language": "Python",
-      "tags": [
-        "agent",
-        "ai",
-        "memory",
-        "multimodal",
-        "rag"
+        "ai-memory",
+        "audio-recording"
       ]
     },
     {
@@ -1177,7 +1097,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 3003,
+      "stars": 3004,
       "language": "Python",
       "tags": [
         "agent",
@@ -1185,6 +1105,94 @@
         "ai",
         "drive",
         "glean"
+      ]
+    },
+    {
+      "id": "gh-1231170332",
+      "title": "opensquilla/opensquilla — OpenSquilla — Token-Efficient AI Agent with same budget, higher intelligence density",
+      "summary": "OpenSquilla — Token-Efficient AI Agent with same budget, higher intelligence density",
+      "date": "2026-06-27",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/opensquilla/opensquilla",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 4868,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "ai",
+        "ai-agents",
+        "deep-learning",
+        "foundation-models"
+      ]
+    },
+    {
+      "id": "gh-753886289",
+      "title": "rivet-dev/agentos — A faster, lighter, cheaper alternative to sandboxes. Run any coding agent inside an isolated Linux VM, with agent orchestration built in.",
+      "summary": "A faster, lighter, cheaper alternative to sandboxes. Run any coding agent inside an isolated Linux VM, with agent orchestration built in.",
+      "date": "2026-06-27",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/rivet-dev/agentos",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3284,
+      "language": "Rust",
+      "tags": [
+        "agent",
+        "ai",
+        "javascript",
+        "llm",
+        "sandbox"
+      ]
+    },
+    {
+      "id": "gh-1020144870",
+      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "date": "2026-06-27",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/archestra-ai/archestra",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3888,
+      "language": "TypeScript",
+      "tags": [
+        "a2a",
+        "a2a-mcp",
+        "acp",
+        "agent",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-1195360525",
+      "title": "calesthio/OpenMontage — World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+      "summary": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+      "date": "2026-06-27",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 25054,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "agentic-ai",
+        "ai",
+        "claude",
+        "copilot"
       ]
     }
   ]

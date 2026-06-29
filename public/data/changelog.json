@@ -23,6 +23,24 @@
         "newInput": 0.55,
         "oldOutput": 3.41,
         "newOutput": 3.1999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "stepfun/step-3.5-flash",
+        "modelName": "StepFun: Step 3.5 Flash",
+        "provider": "STEPFUN",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "model_removed",
+        "modelId": "anthropic/claude-opus-4.6-fast",
+        "modelName": "Anthropic: Claude Opus 4.6 (Fast)",
+        "provider": "ANTHROPIC",
+        "description": "모델 제거"
       }
     ]
   },

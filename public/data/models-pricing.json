@@ -363,8 +363,8 @@
     "id": "~moonshotai/kimi-latest",
     "name": "MoonshotAI Kimi Latest",
     "provider": "~MOONSHOTAI",
-    "input": 0.66,
-    "output": 3.41,
+    "input": 0.55,
+    "output": 3.1999999999999997,
     "context": "262K",
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "createdAt": 1777318428,
@@ -603,8 +603,8 @@
     "id": "moonshotai/kimi-k2.6",
     "name": "MoonshotAI: Kimi K2.6",
     "provider": "MOONSHOTAI",
-    "input": 0.66,
-    "output": 3.41,
+    "input": 0.55,
+    "output": 3.1999999999999997,
     "context": "262K",
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks",
     "createdAt": 1776699402,
@@ -2049,7 +2049,7 @@
     "description": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters ",
     "createdAt": 1757021147,
     "modalities": "text->text",
-    "maxTokens": 262144
+    "maxTokens": 100352
   },
   {
     "id": "qwen/qwen3-30b-a3b-thinking-2507",
@@ -2361,7 +2361,7 @@
     "description": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for..",
     "createdAt": 1752263252,
     "modalities": "text->text",
-    "maxTokens": 32768
+    "maxTokens": 100352
   },
   {
     "id": "tencent/hunyuan-a13b-instruct",

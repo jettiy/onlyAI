@@ -1,5 +1,32 @@
 [
   {
+    "date": "2026-06-29",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.66,
+        "newInput": 0.55,
+        "oldOutput": 3.41,
+        "newOutput": 3.1999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.6",
+        "modelName": "MoonshotAI: Kimi K2.6",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.66,
+        "newInput": 0.55,
+        "oldOutput": 3.41,
+        "newOutput": 3.1999999999999997
+      }
+    ]
+  },
+  {
     "date": "2026-06-27",
     "items": [
       {

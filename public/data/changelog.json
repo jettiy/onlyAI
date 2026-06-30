@@ -23,6 +23,59 @@
         "newInput": 0.28500000000000003,
         "oldOutput": 2.3850000000000002,
         "newOutput": 2.4
+      },
+      {
+        "type": "new_model",
+        "modelId": "anthropic/claude-sonnet-5",
+        "modelName": "Anthropic: Claude Sonnet 5",
+        "provider": "ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 2,
+        "output": 10,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "google/gemini-3.1-flash-lite-image",
+        "modelName": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+        "provider": "GOOGLE",
+        "description": "새 모델 추가",
+        "input": 0.25,
+        "output": 1.5,
+        "context": "66K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.94,
+        "newInput": 0.9299999999999999,
+        "oldOutput": 3,
+        "newOutput": 3
+      },
+      {
+        "type": "price_change",
+        "modelId": "~anthropic/claude-sonnet-latest",
+        "modelName": "Anthropic Claude Sonnet Latest",
+        "provider": "~ANTHROPIC",
+        "description": "가격 변동",
+        "oldInput": 3,
+        "newInput": 2,
+        "oldOutput": 15,
+        "newOutput": 10
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.098,
+        "oldOutput": 0.18,
+        "newOutput": 0.196
       }
     ]
   },

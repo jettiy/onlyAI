@@ -12,6 +12,17 @@
         "newInput": 0.975,
         "oldOutput": 3.08,
         "newOutput": 4.300000000000001
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.6-27b",
+        "modelName": "Qwen: Qwen3.6 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.2596,
+        "newInput": 0.28500000000000003,
+        "oldOutput": 2.3850000000000002,
+        "newOutput": 2.4
       }
     ]
   },

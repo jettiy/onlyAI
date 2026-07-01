@@ -81,6 +81,26 @@
         "modelName": "Anthropic: Claude Fable 5",
         "provider": "ANTHROPIC",
         "description": "모델 제거"
+      },
+      {
+        "type": "new_model",
+        "modelId": "~anthropic/claude-fable-latest",
+        "modelName": "Anthropic: Claude Fable Latest",
+        "provider": "~ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 10,
+        "output": 50,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "anthropic/claude-fable-5",
+        "modelName": "Anthropic: Claude Fable 5",
+        "provider": "ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 10,
+        "output": 50,
+        "context": "1M"
       }
     ]
   },

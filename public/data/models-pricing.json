@@ -84,6 +84,30 @@
     "maxTokens": 16384
   },
   {
+    "id": "~anthropic/claude-fable-latest",
+    "name": "Anthropic: Claude Fable Latest",
+    "provider": "~ANTHROPIC",
+    "input": 10,
+    "output": 50,
+    "context": "1M",
+    "description": "This model always redirects to the latest model in the Claude Fable family.",
+    "createdAt": 1781029944,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "anthropic/claude-fable-5",
+    "name": "Anthropic: Claude Fable 5",
+    "provider": "ANTHROPIC",
+    "input": 10,
+    "output": 50,
+    "context": "1M",
+    "description": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and...",
+    "createdAt": 1781007515,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "nex-agi/nex-n2-pro",
     "name": "Nex AGI: Nex-N2-Pro",
     "provider": "NEX-AGI",

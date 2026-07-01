@@ -84,30 +84,6 @@
     "maxTokens": 16384
   },
   {
-    "id": "~anthropic/claude-fable-latest",
-    "name": "Anthropic: Claude Fable Latest",
-    "provider": "~ANTHROPIC",
-    "input": 10,
-    "output": 50,
-    "context": "1M",
-    "description": "This model always redirects to the latest model in the Claude Fable family.",
-    "createdAt": 1781029944,
-    "modalities": "text+image+file->text",
-    "maxTokens": 128000
-  },
-  {
-    "id": "anthropic/claude-fable-5",
-    "name": "Anthropic: Claude Fable 5",
-    "provider": "ANTHROPIC",
-    "input": 10,
-    "output": 50,
-    "context": "1M",
-    "description": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and...",
-    "createdAt": 1781007515,
-    "modalities": "text+image+file->text",
-    "maxTokens": 128000
-  },
-  {
     "id": "nex-agi/nex-n2-pro",
     "name": "Nex AGI: Nex-N2-Pro",
     "provider": "NEX-AGI",
@@ -531,13 +507,13 @@
     "id": "deepseek/deepseek-v4-flash",
     "name": "DeepSeek: DeepSeek V4 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.098,
-    "output": 0.196,
+    "input": 0.09,
+    "output": 0.18,
     "context": "1M",
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa",
     "createdAt": 1777000666,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 16384
   },
   {
     "id": "inclusionai/ling-2.6-1t",
@@ -2751,8 +2727,8 @@
     "id": "deepseek/deepseek-chat-v3-0324",
     "name": "DeepSeek: DeepSeek V3 0324",
     "provider": "DEEPSEEK",
-    "input": 0.19999999999999998,
-    "output": 0.77,
+    "input": 0.24,
+    "output": 0.8999999999999999,
     "context": "164K",
     "description": "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team. It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) mod",
     "createdAt": 1742824755,

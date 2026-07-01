@@ -45,6 +45,42 @@
         "newInput": 0.117,
         "oldOutput": 0.39999999999999997,
         "newOutput": 0.45499999999999996
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.098,
+        "newInput": 0.09,
+        "oldOutput": 0.196,
+        "newOutput": 0.18
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-chat-v3-0324",
+        "modelName": "DeepSeek: DeepSeek V3 0324",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.19999999999999998,
+        "newInput": 0.24,
+        "oldOutput": 0.77,
+        "newOutput": 0.8999999999999999
+      },
+      {
+        "type": "model_removed",
+        "modelId": "~anthropic/claude-fable-latest",
+        "modelName": "Anthropic: Claude Fable Latest",
+        "provider": "~ANTHROPIC",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "anthropic/claude-fable-5",
+        "modelName": "Anthropic: Claude Fable 5",
+        "provider": "ANTHROPIC",
+        "description": "모델 제거"
       }
     ]
   },

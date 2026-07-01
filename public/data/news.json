@@ -1,18 +1,236 @@
 {
-  "updatedAt": "2026-06-30T20:06:17.114Z",
-  "updatedAtKST": "2026. 7. 1. AM 5:06:17",
+  "updatedAt": "2026-07-01T04:25:58.114Z",
+  "updatedAtKST": "2026. 7. 1. PM 1:25:58",
   "stats": {
     "aitimes": 20,
     "geeknews": 20,
-    "36kr": 15,
+    "36kr": 14,
     "hf": 20,
-    "tc": 20,
-    "github": 9,
+    "tc": 19,
+    "github": 10,
     "total": 89
   },
   "news": [
     {
-      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=212262",
+      "id": "aitimes-0-https://www.aitimes.com/news/articleView.html?idxno=212304",
+      "title": "라이드플럭스, 한진과 국내 첫 자율주행 유상 화물운송 개시",
+      "summary": "라이드플럭스(대표 박중희)는 한진택배와 국내 첫 자율주행 유상 화물운송 서비스를 시작한다고 1일 밝혔다.운행 구간은 군산 특송화물 통관장에서 전주 한진택배센터를 거쳐 대전 메가허브센터에 도착하는 편도 116km 노선이다. 타타대우 맥쎈 25톤 대형 트럭이 투입되며, 최대 11톤 화물을 싣고 최고시속 90km로 주간 시간대에 주 2회 운행한다. 전문 안전요원",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212304",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=212306",
+      "title": "\"퇴사 징후 미리 파악\"...블라인드, 1400만 직장인 데이터 기반 AI 서비스 출시",
+      "summary": "직장인 소셜 플랫폼 블라인드(대표 문성욱)는 전 세계 직장인 데이터를 활용한 AI 서비스 '블라인드 AI'를 출시했다고 1일 밝혔다.블라인드 AI는 전 세계 45만개 기업, 1400만명의 직장인 커뮤니케이션 데이터를 토대로 구축한 대형언어모델(LLM) 기반 대화형 AI 서비스다. 한국과 미국, 인도에서 동시 출시됐다.공통으로 도출된 행동 패턴을 중심으로 기",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212306",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=212300",
+      "title": "S2W, 안보 AI 플랫폼으로 ‘인터폴·OSCE 국제 공조 작전’ 지원",
+      "summary": "빅데이터 AI 전문 에스투더블유(S2W, 대표 서상덕)는 온라인 플랫폼 내의 초국가적 인권 유린 범죄에 대응하기 위한 인터폴과 유럽안보협력기구(OSCE) 주도의 국제 공조 작전 '사이버프로텍트 III’를 지원했다고 1일 밝혔다. 이번 작전은 수익 창출을 미끼로 성인물 중심 구독형 플랫폼에 여성과 미성년자 등을 유인한 뒤, 성 착취물 제작에 동원하는 조직적 ",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212300",
+      "category": "산업·정책",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=212298",
+      "title": "크랙·이루다 출신 딥그로브, ‘AI 컴패니언’ 서비스로 15억 시드 투자 유치",
+      "summary": "AI 컴패니언 전문 딥그로브(DeepGrov, 대표 나봉민)는 15억원 규모 시드 투자를 유치했다고 1일 밝혔다. 이번 투자는 카카오벤처스가 주도했으며, 본엔젤스벤처파트너스가 공동 참여했다. 딥그로브는 AI와 사용자에 대한 깊은 이해를 바탕으로 새로운 AI 엔터테인먼트 경험을 만드는 ‘AI 컴패니언’ 기술을 높이 평가 받았다고 전했다. 이 회사는 AI 스토",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212298",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=212296",
+      "title": "앤트로픽, '클로드 소네트 5' 출시...성능은 오퍼스급·가격은 60%",
+      "summary": "앤트로픽이 새로운 주력 AI 모델 '클로드 소네트 5'를 공개했다. 앤트로픽은 30일(현지시간) 최고급 모델인 '클로드 오퍼스 4.8'에 근접한 성능을 제공하면서도 가격은 약 60% 수준으로 낮춰 비용 대비 성능을 크게 높인 클로드 오퍼스 3를 출시했다.특히 코딩과 에이전트형 업무 수행 능력을 대폭 강화했다. \"불과 몇달 전만 해도 더 크고 비싼 모델이 필",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212296",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=212299",
+      "title": "여수, 국동항 불법 어구작업대 정비 완료",
+      "summary": "AI 생성 영상여수시가 무단 작업대와 폐기물로 안전 우려가 제기된 국동항 주변을 정비하고, 2026여수세계섬박람회 항만환경 개선에 나섰다고 1일 밝혔다.국동항 파제제 주변은 그동안 무단 설치된 어구보관작업대와 조립식 시설물, 무단 투기 폐기물로 인해 어항 환경 저해와 사고 위험이 지속적으로 제기돼 왔다. 여수는 현장 정비를 통해 어민 작업 공간과 항만 이용",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212299",
+      "category": "산업·정책",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=212295",
+      "title": "앤트로픽, ‘페이블 5’ 2일부터 복구...미 정부 수출 통제 철회",
+      "summary": "앤트로픽이 미국 정부의 수출 통제로 중단됐던 차세대 AI 모델 '클로드 페이블 5(Claude Fable 5)' 서비스를 2일(현지시간)부터 차례로 복구한다.앤트로픽은 30일 X를 통해 \"미국 상무부가 클로드 페이블 5와 미소스 5에 대한 수출 통제를 해제했다는 통보를 받았다\"라며 \"내일부터 접근 권한 복구를 시작할 예정이며, 곧 추가 업데이트를 공유하겠다",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212295",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=212297",
+      "title": "업스테이지, ‘다음’에 AI 요약 베타 서비스 공개…'AI 모드'도 연내 출시",
+      "summary": "업스테이지 컴퍼니의 포털 ‘다음’이 자체 대형언어모델(LLM) ‘솔라’를 기반으로 검색 결과를 자동 요약해주는 ‘AI 요약’ 베타 서비스를 선보인다고 1일 밝혔다.지난 5월 업스테이지가 다음 포털 운영사인 AXZ를 인수한 이후로, 처음 AI를 적용한 사례다. AI 요약은 LLM이 웹 문서를 직접 분석해 검색 결과에 대한 종합적인 답변을 정리해주는 기능이다.",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212297",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-8-https://www.aitimes.com/news/articleView.html?idxno=212294",
+      "title": "태양광 발전소 건설 자동화... 인력 부족 해법으로 부상",
+      "summary": "대형 태양광 발전소 건설 현장에서 모듈 설치를 자동화하는 로봇 시공 기술이 상용화 단계로 다가서고 있다. 수십만장의 태양광 모듈을 반복 설치해야 하는 유틸리티급 발전소에서 인력 투입과 공사 기간을 줄이려는 시도가 본격화되고 있다.독일 태양광 기업 골드벡솔라는 6월22일(현지시간) 유틸리티급 태양광 발전소 건설 공정을 자동화하는 솔루션 ‘헬리오매틱스’로 '스",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212294",
+      "category": "산업·정책",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=212290",
+      "title": "캘리포니아 태양광 발전량, 천연가스 앞질렀다",
+      "summary": "미국 캘리포니아 전력망에서 2026년 1~5월 유틸리티급 태양광 발전량이 천연가스 발전량을 넘어섰다.미국 에너지정보청(EIA)은 캘리포니아 독립계통운영기관(CAISO) 관할 전력망에서 올해 5개월 동안 전체 날짜의 82%에서 태양광 발전이 천연가스보다 많은 전력을 생산했다고 밝혔다. 2024년 같은 기간보다 태양광 발전량은 21% 늘었고, 천연가스 발전량은",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212290",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-11-https://www.aitimes.com/news/articleView.html?idxno=212264",
+      "title": "[6월30일] 프로토타입 90개 만든 AI...이제 인간 경쟁력은 '선택'",
+      "summary": "AI가 코드를 작성하는 시대를 넘어, 최근에는 AI가 만든 코드를 AI가 검토하고 수정하는 'AI 루프'까지 등장하고 있습니다. 인간은 직접 구현보다 전체 과정을 감독하는 역할로 이동하고 있습니다.그리고 실제로 AI 루프를 가동하면 어떤 현상이 일어나는지에 대한 이야기가 등장했습니다. 오픈AI에서 '코덱스' 데스크톱 앱 개발을 이끄는 앤드류 암브로시노는 2",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212264",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=212284",
+      "title": "‘램마겟돈’? 흔들리는 메모리 시장의 진정한 피해자는….",
+      "summary": "AI타임스 조예주 기자 joyejuoffice@aitimes.com",
+      "date": "2026-07-01",
+      "source": "AI타임스",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://www.aitimes.com/news/articleView.html?idxno=212284",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-3-https://news.hada.io/topic?id=30994",
+      "title": "개정된 엔지니어링 리더십 규칙",
+      "summary": "<ul>\n<li><strong>AI 도구 전환</strong>과 빠른 성장(hypergrowth) 환경에서 지난 1년간 검증해 재정립한 엔지니어링 리더십 5대 규칙과 이를 뒷받침하는 <strong>실제 프로젝트 사례</strong> 정리</li>\n<li><strong>마이그레이션</strong>은 이제 팀이 아닌 개인이 95% 주도해 기존의 10% 시간에 ",
+      "date": "2026-07-01",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=30994",
+      "category": "개발 도구",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-5-https://news.hada.io/topic?id=30992",
+      "title": "Claude Sonnet 5 공개",
+      "summary": "<ul>\n<li>Anthropic은 2026년 6월 30일 Claude Sonnet 5를 출시하며, 더 비싼 Opus급 모델에 가까운 <strong>에이전트 실행 능력</strong>을 Sonnet급 비용대로 제공하려 함</li>\n<li>Sonnet 4.6보다 <strong>추론, 도구 사용, 코딩, 지식 작업</strong>이 개선됐고, effort 조절",
+      "date": "2026-07-01",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=30992",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-7-https://news.hada.io/topic?id=30990",
+      "title": "Atlassian의 DESIGN.md 공개 - 이식 가능한 디자인 컨텍스트를 실전 테스트하며 얻은 교훈",
+      "summary": "<ul>\n<li>AI가 생성하는 UI가 브랜드 정체성 없이 일반화되는 <strong>\"slop\"</strong> 문제를 해결하기 위한 <strong>이식 가능한 Markdown 포맷</strong>으로, 디자인 시스템의 핵심 요소를 한 파일에 담아 프롬프트에 포함하는 방식</li>\n<li>DESIGN.md는 기계 판독용 <strong>디자인 토큰</stro",
+      "date": "2026-07-01",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=30990",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-8-https://news.hada.io/topic?id=30989",
+      "title": "pi-subagents - Pi를 위한 서브에이전트",
+      "summary": "<ul>\n<li><strong>Pi 코딩 에이전트</strong>가 작업을 <strong>자식 Pi 세션</strong>에 위임하도록 해주는 확장 기능</li>\n<li>코드 리뷰/코드 정찰/구현/병렬 감사/백그라운드 작업 등 <strong>추가적인 시각</strong>이 필요한 작업에 활용</li>\n<li>설치 후 별도 설정/슬래시 명령 학습 없이 <str",
+      "date": "2026-07-01",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=30989",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/",
+      "title": "Trump drops restrictions on Anthropic&#8217;s Mythos and Fable models",
+      "summary": "Anthropic said it would begin restoring access to the Fable on July 1.",
+      "date": "2026-07-01",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/",
+      "category": "모델 출시",
+      "lang": "en",
+      "titleKo": "트럼프, Anthropic의 Mythos 및 Fable 모델에 대한 제한 철회"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/06/30/wayve-launches-85m-employee-tender-offer-at-8-5b-valuation/",
+      "title": "Wayve launches $85M employee tender offer at $8.5B valuation",
+      "summary": "Wayve’s offering is part of a growing trend of AI startups using employee tenders as a strategic tool to attract and retain talent.",
+      "date": "2026-07-01",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/30/wayve-launches-85m-employee-tender-offer-at-8-5b-valuation/",
+      "category": "모델 출시",
+      "lang": "en",
+      "titleKo": "Wayve는 85억 달러 평가액으로 8,500만 달러 규모의 직원 공개 제안을 시작했습니다."
+    },
+    {
+      "id": "aitimes-13-https://www.aitimes.com/news/articleView.html?idxno=212262",
       "title": "커서, iOS 모바일 앱 출시...스마트폰으로 AI 코딩 에이전트 실시간 제어",
       "summary": "스페이스X에 인수된 커서가 iOS용 모바일 앱을 공개 베타로 출시하며 AI 코딩 에이전트를 스마트폰에서 직접 제어하는 시대를 열었다. 데스크톱 중심이었던 AI 개발 환경이 모바일로 확장되면서, 개발자는 언제 어디서나 AI 에이전트에게 작업을 지시하고 진행 상황을 확인할 수 있게 됐다.커서는 29일(현지시간) iOS용 모바일 앱 '커서 포 iOS(Cursor",
       "date": "2026-06-30",
@@ -24,9 +242,9 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-1-https://www.aitimes.com/news/articleView.html?idxno=212261",
+      "id": "aitimes-14-https://www.aitimes.com/news/articleView.html?idxno=212261",
       "title": "오픈AI, 개발자 겨냥 ‘코덱스’ 전용 첫 하드웨어 티저 공개",
-      "summary": "오픈AI가 AI 코딩 에이전트 코덱스(Codex) 사용 경험을 개선하기 위한 첫 번째 전용 하드웨어를 공개했다. 오픈AI는 29일(현지시간) X를 통해 여러 개의 버튼이 배치된 정사각형 형태의 기기를 공개하며 \"당신이 가장 좋아하는 코덱스 단축키가 업그레이드된다\"라는 메시지를 남겼다.이번 제품은 소비자 기기가 아니라, 개발자의 생산성을 높이는 데 초점을 맞",
+      "summary": "오픈AI가 AI 코딩 에이전트 코덱스(Codex) 사용 경험을 개선하기 위한 첫 번째 전용 하드웨어를 공개했다. 오픈AI는 29일(현지시간) X를 통해 여러 개의 버튼이 배치된 정사각형 형태의 기기를 공개하며 \"당신이 가장 좋아하는 코덱스 단축키가 업그레이드된다\"라는 메시지를 남겼다. 또 이날 열린 AI 엔지니어 월드 페어에서는 실물을 공개했다.이번 제품은",
       "date": "2026-06-30",
       "source": "AI타임스",
       "sourceLang": "ko",
@@ -36,7 +254,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-2-https://www.aitimes.com/news/articleView.html?idxno=212263",
+      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=212263",
       "title": "메타, '클로드·코덱스' 사내 사용 제한…“AI 증류 우려 사전 차단”",
       "summary": "메타가 앤트로픽의 '클로드 코드'와 오픈AI의 '코덱스' 등 외부 AI 코딩 도구에 대한 사내 사용을 대폭 제한했다. 자체 AI 코딩 플랫폼 메타코드(MetaCode)에 무게를 싣는 동시에, 경쟁사로부터 제기될 수 있는 'AI 증류(distillation)' 논란을 사전에 차단하려는 조치다.디 인포메이션이 입수한 내부 지침에 따르면, 메타는 지난 5월부터 ",
       "date": "2026-06-30",
@@ -48,7 +266,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-3-https://www.aitimes.com/news/articleView.html?idxno=212282",
+      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=212282",
       "title": "메타, 뇌 신호 해독 ‘브레인투쿼티 v2’ 공개…\"비침습 BCI 성능 한계 넘어\"",
       "summary": "메타가 사람의 뇌 활동만으로 머릿속에서 떠올린 문장을 실시간으로 텍스트로 변환하는 비침습형 두뇌-컴퓨터 인터페이스(BCI) 기술을 공개했다. 이 기술은 뇌에 전극을 이식하는 수술 없이도 신경 신호를 해독할 수 있어, 뇌 손상 등으로 말하거나 몸을 움직이기 어려운 환자의 의사소통을 지원할 차세대 기술로 주목받고 있다. 메타는 29일(현지시간) 뇌에 전극을 삽",
       "date": "2026-06-30",
@@ -60,7 +278,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-4-https://www.aitimes.com/news/articleView.html?idxno=212287",
+      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=212287",
       "title": "바이브컴퍼니, ‘에이전트 플랫폼’ 출시…“업무별 맞춤형 AI 모델 조합”",
       "summary": "AI 전문 바이브컴퍼니(대표 김경서)는 단일 플랫폼에서 맞춤형 AI 에이전트를 초고속으로 구축, 운영할 수 있는 '바이브 에이전트 플랫폼(VAIV Agent Platform)'을 공식 출시했다고 30일 밝혔다.바이브 에이전트 플랫폼은 업무 복잡도와 성격에 따라 세 가지 맞춤형 빌더(단일 노드/워크플로우/딥 에이전트)를 제공한다. 비개발자부터 고급 개발자까지",
       "date": "2026-06-30",
@@ -72,7 +290,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-5-https://www.aitimes.com/news/articleView.html?idxno=212275",
+      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=212275",
       "title": "구글, 샌드박스AQ의 'LQM' 도입…\"과학 연구 AI 지원\"",
       "summary": "구글이 과학 연구에 특화된 AI 모델을 자체 클라우드 플랫폼을 통해 제공하며 기업과 연구 기관을 위한 AI 포트폴리오를 확대한다. 일반적인 대형언어모델(LLM)과 달리 화학·생물학·물리학 등 과학 계산에 최적화된 AI를 제공함으로써 신약 개발과 반도체 제조, 신소재 연구의 효율성을 높인다는 전략이다.구글은 29일(현지시간) 소프트웨어 기업 샌드박스AQ의 '",
       "date": "2026-06-30",
@@ -84,7 +302,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-6-https://www.aitimes.com/news/articleView.html?idxno=212279",
+      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=212279",
       "title": "구글, '제미나이' 개인화 이미지 생성 기능 무료 개방…미국부터 적용",
       "summary": "구글이 '제미나이'의 개인화 이미지 생성 기능을 무료 이용자에게도 확대 제공한다. 사용자의 취향과 생활 방식, 사진까지 AI가 이해해 별도의 상세한 설명 없이도 맞춤형 이미지를 생성할 수 있는 것이 특징이다.구글은 29일(현지시간) 미국의 모든 사용자에게 제미나이 앱의 '퍼스널 인텔리전스(Personal Intelligence)' 기반 이미지 생성 기능을 ",
       "date": "2026-06-30",
@@ -96,7 +314,7 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-7-https://www.aitimes.com/news/articleView.html?idxno=212285",
+      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=212285",
       "title": "애플, AI 사이버 위협에 선제 대응…iOS 보안 패치 '조기 배포'로 전환",
       "summary": "AI로 인해 사이버 공격 도구 개발 속도가 빨라지는 환경에 대응하기 위해 애플이 iOS 보안 업데이트 배포 방식을 대폭 변경한다. 그동안 새로운 운영체제 버전에 포함해 제공하던 보안 패치를 앞으로는 별도로 먼저 배포, 사용자들을 더 빠르게 보호한다는 방침이다.로이터에 따르면, 애플은 29일(현지시간) AI 기술의 발전으로 악성 해킹 도구 개발 속도가 크게 ",
       "date": "2026-06-30",
@@ -108,151 +326,55 @@
       "lang": "ko"
     },
     {
-      "id": "aitimes-10-https://www.aitimes.com/news/articleView.html?idxno=212277",
-      "title": "KQC, 전문 지식 없이 쓸 수 있는 양자 AI 플랫폼 ‘큐비티어’ 출시",
-      "summary": "양자컴퓨팅 전문 한국퀀텀컴퓨팅(KQC, 대표 김준영)은 차세대 양자 AI 하이브리드 플랫폼 '큐비티어(KQC Qubiteer)’를 정식 출시했다고 30일 밝혔다. 큐비티어는 사용자가 해결하려는 문제를 입력하면, AI 에이전트가 수학적 모델링과 최적의 솔버 선택, 계산 실행까지 원스톱으로 처리하는 하이브리드 양자컴퓨팅 플랫폼이다. 전문 지식이 필요한 복잡한 ",
+      "id": "geeknews-13-https://news.hada.io/topic?id=30983",
+      "title": "Nano Banana 2 Lite",
+      "summary": "<ul>\n<li>Google DeepMind의 Gemini Image 계열에 추가된 <strong>Nano Banana 2 Lite</strong>는 이미지 생성·편집을 더 빠르고 저렴하게 돌리려는 모델로, 반복이 많은 시각 작업의 비용 부담을 낮추는 데 초점을 둠</li>\n<li>핵심 축은 <strong>낮은 지연시간</strong>과 대규모 비용 효율이",
       "date": "2026-06-30",
-      "source": "AI타임스",
+      "source": "GeekNews",
       "sourceLang": "ko",
       "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212277",
+      "url": "https://news.hada.io/topic?id=30983",
       "category": "모델 출시",
       "lang": "ko"
     },
     {
-      "id": "aitimes-11-https://www.aitimes.com/news/articleView.html?idxno=212272",
-      "title": "캘리포니아주, 앤트로픽과 '클로드' 반값 계약...연방정부 제재와 대조",
-      "summary": "미국 캘리포니아주가 앤트로픽과 전략적 협약을 체결하고 '클로드'를 주정부 전 기관과 지방정부에서 활용할 수 있도록 했다. 이는 캘리포니아의 첫 번째 공식 AI 플랫폼 계약으로, 연방정부의 블랙리스트 조치와는 대조적인 행보다.개빈 뉴섬 캘리포니아 주지사는 29일(현지시간) 이번 계약을 통해 주정부 기관과 클로드 도입을 원하는 시·카운티는 기존보다 50% 할인",
+      "id": "geeknews-16-https://news.hada.io/topic?id=30980",
+      "title": "클로드 코드는 요청에 스테가노그래피 표시를 하고 있음",
+      "summary": "<ul>\n<li>Claude Code 2.1.196 바이너리에는 시스템 프롬프트의 현재 날짜 문장을 바꿔 <strong>요청 안에 분류 신호</strong>를 숨기는 함수가 들어 있음</li>\n<li>트리거는 <code>ANTHROPIC_BASE_URL</code>이며, 공식 <code>api.anthropic.com</code>이 아니거나 값이 설정된 경",
       "date": "2026-06-30",
-      "source": "AI타임스",
+      "source": "GeekNews",
       "sourceLang": "ko",
       "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212272",
-      "category": "연구·논문",
+      "url": "https://news.hada.io/topic?id=30980",
+      "category": "모델 출시",
       "lang": "ko"
     },
     {
-      "id": "aitimes-12-https://www.aitimes.com/news/articleView.html?idxno=212286",
-      "title": "나우로보틱스, 한양로보틱스 합병…”산업용 로봇 라인업 완성”",
-      "summary": "나우로보틱스가 한양로보틱스와의 흡수합병 절차를 완료하고 통합 운영 체계를 본격화한다고 30일 밝혔다.1997년 설립된 한양로보틱스는 국내 취출로봇 및 사출자동화 분야에서 30여년의 력과 기술력을 축적해 왔다. 국내외 3000여 고객사를 기반으로 사출 성형 공정에 특화된 취출자동화 솔루션을 공급해 왔으며, 이를 통해 생산·영업 네트워크를 보유하고 있다.이번 ",
+      "id": "geeknews-17-https://news.hada.io/topic?id=30979",
+      "title": "Ornith-1.0 - 에이전트형 코딩을 위한 자기 개선 오픈소스 모델",
+      "summary": "<ul>\n<li><strong>Ornith-1.0</strong>은 에이전트형 코딩용 자기 개선 오픈소스 모델로, 9B Dense, 31B Dense, 35B MoE, 397B MoE 구성을 제공하며 Gemma 4와 Qwen 3.5 위에서 후훈련됨</li>\n<li>훈련 프레임워크는 <strong>강화학습</strong>으로 솔루션 rollout뿐 아니라 r",
       "date": "2026-06-30",
-      "source": "AI타임스",
+      "source": "GeekNews",
       "sourceLang": "ko",
       "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212286",
+      "url": "https://news.hada.io/topic?id=30979",
       "category": "에이전트",
       "lang": "ko"
     },
     {
-      "id": "aitimes-14-https://www.aitimes.com/news/articleView.html?idxno=212276",
-      "title": "플랜아이, 투자자 응대 AI 서비스 '플래니 IR' 출시",
-      "summary": "플랜아이(대표 이명기)는 상장사의 투자자 응대를 돕는 특화 AI 서비스 '플래니 IR(Planee IR)'을 출시했다고 30일 밝혔다.공시자료, 사업보고서, 실적 발표 자료, 주주서한 등 기업이 보유한 공식 IR 자료를 바탕으로 투자자 질문에 답변하는 AI 서비스다. 자료에서 수치를 찾는 데 그치지 않고, 여러 재무 정보를 조합해 EV/EBITDA·PBR·",
+      "id": "geeknews-18-https://news.hada.io/topic?id=30978",
+      "title": "Tidal의 AI 정책",
+      "summary": "<ul>\n<li>Tidal에선 오늘부터 <strong>AI 생성 음악은 수익화 불가</strong>, 로열티는 사람이 직접 제작·작곡·연주한 원곡에 우선 배분</li>\n<li>이 정책은 AI 음악 생성 도구의 확산에 대응해 <strong>AI 생성 음악</strong>을 다루는 플랫폼 기준을 도입, 아티스트와 그 창작물 보호 및 청취자 정보 제공이 목적</",
       "date": "2026-06-30",
-      "source": "AI타임스",
+      "source": "GeekNews",
       "sourceLang": "ko",
       "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212276",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-15-https://www.aitimes.com/news/articleView.html?idxno=212273",
-      "title": "앤트로픽 “고임금 직종, AI와 더 길고 복잡하게 대화한다… 토큰 소모 2배 이상”",
-      "summary": "앤트로픽이 여섯 번째 경제 지수(Economic Index) 보고서인 ‘케이던스(Cadences)’를 30일 공개했다. '클로드'를 사용하는 수백만명의 글로벌 사용자의 익명화 데이터를 분석한 것으로, 사람들이 언제 AI를 찾고, 어떤 일을 맡기며, AI가 업무에 어떤 영향을 미칠지 실제 사용 데이터를 바탕으로 분석한 것이다.‘임금별 토큰 사용량’이 눈길을 ",
-      "date": "2026-06-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212273",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-16-https://www.aitimes.com/news/articleView.html?idxno=212274",
-      "title": "노타, 퓨리오사 NPU에 'K-엑사원' 탑재...\"크기 71% 압축하며 성능 유지\"",
-      "summary": "노타(대표 채명수)는 퓨리오사AI의 데이터센터용 신경망처리장치(NPU)에서 LG AI연구원의 국가대표 AI 모델 'K-엑사원' 최적화에 성공했다고 30일 밝혔다.K-엑사원은 2360억개 매개변수를 가진 AI 모델로, 여러 전문가 모델을 선택적으로 활용하는 혼합전문가(MoE) 구조를 적용했다.노타는 자체 'MoE 양자화' 기술을 적용해 K-엑사원을 퓨리오사A",
-      "date": "2026-06-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212274",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-17-https://www.aitimes.com/news/articleView.html?idxno=212280",
-      "title": "머스크, 연일 '그록 4.5' 홍보 총력전…\"스페이스X 엔지니어까지 투입\"",
-      "summary": "일론 머스크 CEO가 '그록 4.5'의 비공개 테스트 사실을 밝힌 데 이어, 자회사 엔지니어들을 대거 투입했다고 강조하는 등 연일 홍보에 나서고 있다. 스페이스X와의 합병과 인원 이탈 등으로 흔들렸던 프론티어 모델 경쟁에 다시 불을 붙이는 모양새다.머스크 CEO는 29일(현지시간) X를 통해 \"스페이스X의 스타링크 및 스타십 분야 최고 엔지니어 수십 명이 ",
-      "date": "2026-06-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212280",
-      "category": "투자·기업",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-18-https://www.aitimes.com/news/articleView.html?idxno=212271",
-      "title": "삼성·SK·마이크론, 미국서 'DRAM 가격 담합' 집단소송 당해",
-      "summary": "삼성전자와 SK하이닉스, 마이크론 테크놀로지가 미국에서 DRAM 공급을 인위적으로 제한해 가격을 끌어올렸다는 혐의로 집단소송에 휘말렸다. 원고 측은 세 회사가 AI용 고대역폭메모리(HBM) 생산 확대를 명분으로 범용 DRAM 공급을 축소해 가격을 급등시켰다고 주장하고 있다.톰스하드웨어에 따르면, 이번 소송은 지난 25일(현지시간) 미국 캘리포니아 북부연방지",
-      "date": "2026-06-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212271",
+      "url": "https://news.hada.io/topic?id=30978",
       "category": "산업·정책",
       "lang": "ko"
     },
     {
-      "id": "aitimes-19-https://www.aitimes.com/news/articleView.html?idxno=212269",
-      "title": "오픈AI, 코덱스 사용량 급증 오류에 '비상 상황실' 가동…한도 일괄 초기화",
-      "summary": "오픈AI가 AI 코딩 에이전트 '코덱스'의 사용 한도가 평소보다 훨씬 빠르게 소진된다는 이용자들의 신고가 잇따르자, 긴급 대응에 나섰다. 29일(현지시간) 비즈니스 인사이더에 따르면, 오픈AI는 엔지니어들로 구성된 '상황실(war room)'을 가동해 원인 조사에 착수했다. 문제가 발생한 계정의 사용 한도를 일괄 초기화하는 조치도 실시했다.오픈AI는 서비스",
-      "date": "2026-06-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212269",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=212268",
-      "title": "중국 CXMT, 텐센트와 4.6조 규모 메모리 공급 계약...반도체 자립 가속",
-      "summary": "중국 메모리 반도체 기업 창신 메모리 테크놀로지스(CXMT)가 텐센트와 200억위안(약 4조6000억원) 이상 규모의 서버용 DRAM 장기 공급 계약을 체결한 것으로 알려졌다. 이번 계약은 글로벌 AI 투자 확대에 따른 메모리 부족 현상이 심화하는 가운데 중국이 자체 메모리 공급망을 강화하려는 움직임을 상징하는 사례로 평가된다.29일(현지시간) 로이터에 따",
-      "date": "2026-06-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212268",
-      "category": "인프라·하드웨어",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-21-https://www.aitimes.com/news/articleView.html?idxno=212267",
-      "title": "인핸스, 국방 재정 자동화 AI 에이전트 개발...\"국방 AX 혁신 이끈다\"",
-      "summary": "인핸스(대표 이승현)는 국군재정관리단과 협력해 국방 환경에 특화된 '공사원가계산 AI 에이전트 모델'을 도입했다고 30일 밝혔다.앞서 인핸스는 지난해 10월 국군재정관리단과 생성형 AI 적용을 위한 업무협약(MOU)을 체결한 바 있다. 이후 공사원가 검토의 판단 기준과 업무 지식을 구조화하고, 다양한 원가 데이터를 정규화해 AI 기반 자동 검증 워크플로우로",
-      "date": "2026-06-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212267",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "aitimes-22-https://www.aitimes.com/news/articleView.html?idxno=212257",
-      "title": "'오픈클로' iOS·안드로이드 앱 출시...접근성 높였지만 진입장벽 여전",
-      "summary": "오픈클로(OpenClaw)가 iOS와 안드로이드용 공식 모바일 앱을 출시했다. 사용자는 스마트폰에서 AI 에이전트와 대화하는 것은 물론 카메라와 위치 정보, 일정, 연락처 등 다양한 기기 기능을 AI에 연결해 활용할 수 있게 됐다. 오픈클로 재단은 29일(현지시간) 오픈클로 공식 앱을 앱 스토어와 구글 플레이에 동시 출시했다고 발표했다.오픈클로는 원래 개발",
-      "date": "2026-06-30",
-      "source": "AI타임스",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://www.aitimes.com/news/articleView.html?idxno=212257",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-2-https://news.hada.io/topic?id=30974",
+      "id": "geeknews-21-https://news.hada.io/topic?id=30974",
       "title": "Rust의 std::pin::Pin은 무엇인가?",
       "summary": "<ul>\n<li><code>std::pin::Pin</code>은 포인터가 가리키는 값이 그 포인터를 통해 이동되지 않는다는 <strong>타입 수준 보장</strong>을 표현하며, 자기 자신 내부를 참조하는 타입처럼 주소가 안정적이어야 하는 값 때문에 필요함</li>\n<li><code>async</code>/<code>await</code>에서는 <co",
       "date": "2026-06-30",
@@ -264,7 +386,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-4-https://news.hada.io/topic?id=30972",
+      "id": "geeknews-23-https://news.hada.io/topic?id=30972",
       "title": "Show GN: AI한테 메일 맡기지 마라 — 인박스엔 비서가 아니라 &#039;방화벽&#039;이 필요하다 (오픈소스)",
       "summary": "<p>요즘 \"AI 이메일\" 도구는 전부 같은 방향입니다. 메일마다 초안 깔고, \"AI가 답장하래요\" 배지 붙이고, 자동 전송 버튼 답니다. 결과는? 인박스가 조용해지는 게 아니라 더 시끄러워집니다. 화면 위에 화면을 또 얹는 거예요.</p>\n<p>저는 정반대로 만들었습니다. AI한테 인박스를 맡기는 게 아니",
       "date": "2026-06-30",
@@ -276,7 +398,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-5-https://news.hada.io/topic?id=30971",
+      "id": "geeknews-24-https://news.hada.io/topic?id=30971",
       "title": "Show GN: 실제 사람처럼 테스트를 수행하는 SaaS",
       "summary": "<p>안녕하세요. 이전 논문작성 이후에 개발관련으로 Show GN에 글을 또 작성하게 되었습니다.</p>\n<p>우선 이 서비스를 개발하게 된 계기를 설명드리자면 저는 8년이상 게임업계에 종사하였고, 클라이언트 개발을 위주로 진행하다가 2024년 말부터 LLM tf팀에서 AI관련 업무를 진행하다 올해 1월에 퇴사하였습니다.</p>",
       "date": "2026-06-30",
@@ -288,7 +410,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-6-https://news.hada.io/topic?id=30968",
+      "id": "geeknews-25-https://news.hada.io/topic?id=30968",
       "title": "진 상자 운반에 30년형, 표현의 자유 위기",
       "summary": "<ul>\n<li>Daniel “Des” Sanchez Estrada는 자신이 쓰지 않은 <strong>진(zine) 상자</strong>를 옮긴 일로 연방 징역 30년을 선고받았고, Prairieland 사건 피고 8명에게 내려진 총 450년형의 일부가 됨</li>\n<li>검찰은 Sanchez가 아내 Maricela Rueda 사건의 <strong>증거를 ",
       "date": "2026-06-30",
@@ -300,7 +422,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-7-https://news.hada.io/topic?id=30967",
+      "id": "geeknews-26-https://news.hada.io/topic?id=30967",
       "title": "ArmSoM Sige7로 구축한 저전력 고성능 홈 NVR 시스템",
       "summary": "<p>호주 시드니의 대형 가정에 배포된 이 시스템은 24시간 연중무휴로 작동하는 저전력 고성능 NVR입니다. ArmSoM Sige7(RK3588) 보드를 기반으로 하며, 8대의 실외 카메라를 동시에 처리합니다.<br />\n주요 기능:<br />\nAI 객체 인식: 사람, 자동차, 오토바이, 고양이 실시간 감지<br />\n번호판 인식(LPR): 낮/밤/폭우 .",
       "date": "2026-06-30",
@@ -312,7 +434,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-8-https://news.hada.io/topic?id=30965",
+      "id": "geeknews-27-https://news.hada.io/topic?id=30965",
       "title": "클로드 코드 창시자가 말하는 AI 시대의 다섯 가지 일하는 사람의 원형(archetype)",
       "summary": "<p>보리스 체르니(클로드 코드 창시자)는 AI 시대의 다섯 가지 일하는 사람의 원형(패턴)에 대한 글을 올렸습니다.</p>\n<ul>\n<li>프로토타이퍼: 새 아이디어를 쏟아내는 사람</li>\n<li>빌더: 그걸 진짜 제품으로 만들어내는 사람</li>\n<li>스위퍼: 어질러진 것을 치우는 사람</li>\n<li>그로워: 만들어진 제품을 시장에 맞",
       "date": "2026-06-30",
@@ -324,7 +446,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-9-https://news.hada.io/topic?id=30963",
+      "id": "geeknews-28-https://news.hada.io/topic?id=30963",
       "title": "Instagram, Meta Glasses 광고에 사용자 사진 활용",
       "summary": "<ul>\n<li><strong>Instagram Reels</strong>에 노출된 <strong>Meta Glasses</strong> 광고가 사용자 본인의 프로필 사진을 끌어와 그 사람의 남자친구를 겨냥하면서, 초개인화 광고 논란이 본격화</li>\n<li>광고는 \"<strong>Hey Meta, call Alisa</strong>\"라는 음성 명령과 함께",
       "date": "2026-06-30",
@@ -336,7 +458,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-13-https://news.hada.io/topic?id=30959",
+      "id": "geeknews-32-https://news.hada.io/topic?id=30959",
       "title": "Compute-adjusted LTV(연산 비용 반영 LTV) 계산하는 방법",
       "summary": "<ul>\n<li>AI 제품이 동일 구독료를 받으면서도 고객마다 <strong>추론 비용</strong>을 크게 다르게 소비하면서, 전체 고객층의 매출총이익률이 안정적이라는 전통적 LTV의 전제가 무너지는 상황</li>\n<li>핵심은 <strong>Compute-Adjusted LTV</strong>로, 고정·반고정 구독 매출에 변동성 큰 연산 비용이 결합된",
       "date": "2026-06-30",
@@ -348,7 +470,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-14-https://news.hada.io/topic?id=30958",
+      "id": "geeknews-33-https://news.hada.io/topic?id=30958",
       "title": "Go Micro - Go를 위한 에이전트 하네스",
       "summary": "<ul>\n<li>에이전트/서비스/워크플로우를 <strong>하나의 런타임</strong> 위에서 구축하는 Go 프레임워크</li>\n<li>도구, 메모리, 가드레일, 트리거 워크플로우, 의존 서비스, 다른 에이전트가 접근하는 프로토콜까지 <strong>하나의 하네스</strong>로 묶음</li>\n<li>서비스의 모든 엔드포인트가 자동으로 <strong>AI",
       "date": "2026-06-30",
@@ -360,7 +482,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-16-https://news.hada.io/topic?id=30956",
+      "id": "geeknews-35-https://news.hada.io/topic?id=30956",
       "title": "Memora: 장기 작업을 위한 확장형 메모리 시스템",
       "summary": "<h3>요약 개요</h3>\n<ul>\n<li>\n<p><strong>목적</strong></p>\n<ul>\n<li>AI 에이전트가 대화·문서에서 필요한 정보를 자동으로 추출하고 장기적으로 저장·검색할 수 있도록 지원하는 메모리 프레임워크</li>\n</ul>\n</li>\n<li>\n<p><strong>핵심 설계</strong></p>\n<ul>\n<li>전체 원문인 <c",
       "date": "2026-06-30",
@@ -398,7 +520,33 @@
       "titleKo": "포옹 얼굴 모델 페이지에 모든 평가 결과 표시"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/06/30/google-introduces-a-faster-cheaper-image-generator-with-nano-banana-2-lite/",
+      "id": "tc-3-https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/",
+      "title": "OpenClaw is finally available on Android and iOS",
+      "summary": "The free open source agentic program is finally invading your phone.",
+      "date": "2026-06-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/",
+      "category": "에이전트",
+      "lang": "en",
+      "titleKo": "OpenClaw가 마침내 Android 및 iOS에서 사용 가능해졌습니다."
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/",
+      "title": "The DeepMind trio who built a poker AI are now making money for quant hedge funds",
+      "summary": "EquiLibre Technologies, a Prague-based AI lab founded by three ex-DeepMind researchers, is now valued at more than $500 million.",
+      "date": "2026-06-30",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/",
+      "category": "연구·논문",
+      "lang": "en",
+      "titleKo": "포커 AI를 구축한 DeepMind 3인조는 이제 퀀트 헤지 펀드로 돈을 벌고 있습니다"
+    },
+    {
+      "id": "tc-5-https://techcrunch.com/2026/06/30/google-introduces-a-faster-cheaper-image-generator-with-nano-banana-2-lite/",
       "title": "Google introduces a faster, cheaper image generator with Nano Banana 2 Lite",
       "summary": "Google is updating its image generator to make it faster and cheaper, making it a more useful tool for creators looking to make AI content.",
       "date": "2026-06-30",
@@ -411,7 +559,7 @@
       "titleKo": "Google, Nano Banana 2 Lite로 더 빠르고 저렴한 이미지 생성기 출시"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/",
+      "id": "tc-6-https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/",
       "title": "Nvidia competitor Etched hits $5B valuation, $1B in sales for AI chip",
       "summary": "Nvidia AI chip competitor Etched says it has already booked $1 billion under contract for the inference systems powered by its chip.",
       "date": "2026-06-30",
@@ -424,7 +572,7 @@
       "titleKo": "Nvidia 경쟁사인 Etched는 AI 칩 가치 50억 달러, 매출 10억 달러 달성"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/",
+      "id": "tc-7-https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/",
       "title": "Anthropic launches Claude Sonnet 5 as a cheaper way to run agents",
       "summary": "Anthropic’s Claude Sonnet 5 brings stronger agentic capabilities, lower pricing, and improved safety, positioning the model as a cheaper alternative to Opus, GPT-5.5, and Gemini Pro.",
       "date": "2026-06-30",
@@ -437,7 +585,7 @@
       "titleKo": "Anthropic은 에이전트를 운영하는 저렴한 방법으로 Claude Sonnet 5를 출시했습니다."
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/",
+      "id": "tc-8-https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/",
       "title": "Acti puts AI agents directly into your smartphone keyboard",
       "summary": "Acti is betting the smartphone keyboard is the next home for AI assistants. The startup's new keyboard for iOS and Android works across apps and lets users create custom AI-powered shortcuts using nat",
       "date": "2026-06-30",
@@ -450,7 +598,7 @@
       "titleKo": "Acti는 AI 에이전트를 스마트폰 키보드에 직접 배치합니다."
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/",
+      "id": "tc-9-https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/",
       "title": "Anthropic’s Claude Science bets on workflow, not a new model, to win over scientists",
       "summary": "Anthropic's Claude Science is a workbench that gives scientists one environment to do computational research, saving them from the need to bounce between databases, pipelines, and tools.",
       "date": "2026-06-30",
@@ -463,7 +611,7 @@
       "titleKo": "Anthropic의 Claude Science는 과학자들의 마음을 사로잡기 위해 새로운 모델이 아닌 워크플로우에 투자했습니다."
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/",
+      "id": "tc-10-https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/",
       "title": "X now offers an MCP server to make its platform easier for AI tools to use",
       "summary": "X has launched a hosted MCP server, making it easier for developers to connect AI applications with the company’s API.",
       "date": "2026-06-30",
@@ -476,7 +624,7 @@
       "titleKo": "X는 이제 AI 도구가 플랫폼을 더 쉽게 사용할 수 있도록 MCP 서버를 제공합니다."
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/06/30/podcasting-platform-riverside-enters-the-newsletter-publishing-game/",
+      "id": "tc-11-https://techcrunch.com/2026/06/30/podcasting-platform-riverside-enters-the-newsletter-publishing-game/",
       "title": "Podcasting platform Riverside enters the newsletter publishing game",
       "summary": "Users will be able use AI to create newsletters based on their recordings.",
       "date": "2026-06-30",
@@ -489,7 +637,7 @@
       "titleKo": "팟캐스트 플랫폼 리버사이드(Riverside)가 뉴스레터 출판 게임에 뛰어들었습니다."
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/",
+      "id": "tc-12-https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/",
       "title": "Amazon launches new $1 billion FDE org, following OpenAI and Anthropic",
       "summary": "Engineers on the new team will embed within companies to deploy purpose-built agents, focusing on fast deployments and customer self-sufficiency.",
       "date": "2026-06-30",
@@ -502,7 +650,7 @@
       "titleKo": "Amazon, OpenAI와 Anthropic에 이어 10억 달러 규모의 새로운 FDE 조직 출범"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/06/30/lumo-protons-privacy-focused-ai-chatbot-gets-an-upgrade/",
+      "id": "tc-13-https://techcrunch.com/2026/06/30/lumo-protons-privacy-focused-ai-chatbot-gets-an-upgrade/",
       "title": "Lumo, Proton&#8217;s privacy-focused AI chatbot, gets an upgrade",
       "summary": "Proton's Lumo 2.0 is dropping this week, giving users a broader variety of capabilities.",
       "date": "2026-06-30",
@@ -515,7 +663,7 @@
       "titleKo": "Proton의 개인정보 보호에 초점을 맞춘 AI 챗봇 Lumo가 업그레이드되었습니다."
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/",
+      "id": "tc-14-https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/",
       "title": "Crypto exchange OKX wants AI agents to hire and pay each other",
       "summary": "OKX is bringing together payments, identity, and reputation into a marketplace for AI agents.",
       "date": "2026-06-30",
@@ -528,7 +676,7 @@
       "titleKo": "암호화폐 거래소 OKX는 AI 에이전트가 서로 고용하고 비용을 지불하길 원합니다."
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/",
+      "id": "tc-15-https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/",
       "title": "The AI jobs debate just got messier",
       "summary": "A new report finds \"high-intensity AI adopters” saw headcount increase 10.2%. Among those companies, entry-level headcount rose by 12%, countering the rhetoric that AI kills junior jobs.",
       "date": "2026-06-30",
@@ -541,7 +689,7 @@
       "titleKo": "AI 일자리 논쟁이 더 복잡해졌습니다."
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/06/29/vibe-coding-platform-base44-launches-own-model-as-ai-startups-seek-defensibility/",
+      "id": "tc-16-https://techcrunch.com/2026/06/29/vibe-coding-platform-base44-launches-own-model-as-ai-startups-seek-defensibility/",
       "title": "Vibe-coding platform Base44 launches own model as AI startups seek defensibility",
       "summary": "Wix-owned vibe-coding platform Base44 has started rolling out its own AI model — with hopes that it will eventually outperform frontier models.",
       "date": "2026-06-30",
@@ -554,7 +702,7 @@
       "titleKo": "Vibe 코딩 플랫폼 Base44, AI 스타트업이 방어력을 추구함에 따라 자체 모델 출시"
     },
     {
-      "id": "geeknews-21-https://news.hada.io/topic?id=30951",
+      "id": "geeknews-40-https://news.hada.io/topic?id=30951",
       "title": "HackerRank 오픈소스 ATS, 같은 이력서 점수가 90점·74점·88점으로 흔들림",
       "summary": "<ul>\n<li>같은 이력서와 같은 명령으로 HackerRank의 <strong>오픈소스 ATS 채용 에이전트</strong>를 반복 실행하자 점수가 66~99점까지 흔들렸고, 85점 컷오프에서는 65%가 탈락하는 결과가 나옴</li>\n<li>이 도구는 PDF 이력서를 파싱하고 LLM을 6번 호출해 기본 정보, 경력, 학력, 기술, 프로젝트, 수상 내역을 ",
       "date": "2026-06-29",
@@ -566,7 +714,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-28-https://news.hada.io/topic?id=30942",
+      "id": "geeknews-47-https://news.hada.io/topic?id=30942",
       "title": "Qwen 3.6 27B는 로컬 개발의 최적 지점",
       "summary": "<ul>\n<li><strong>Qwen 3.6 27B</strong>는 로컬 모델에 회의적이던 사용자에게도 범용 작업에서 의미 있는 선택지로 보이며, 35B A3B보다 느리지만 더 강력한 dense 모델로 추천됨</li>\n<li>창작·코딩 테스트에서는 <strong>제약 조건 준수</strong>가 강점으로 드러났고, OpenCode에서 <code>pnpm",
       "date": "2026-06-29",
@@ -575,102 +723,6 @@
       "sourceFlag": "🇰🇷",
       "url": "https://news.hada.io/topic?id=30942",
       "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-30-https://news.hada.io/topic?id=30939",
-      "title": "1960~2026년 메모리 가격의 역사",
-      "summary": "<ul>\n<li>Stanford DAM은 <strong>DRAM, NAND flash, HBM</strong>의 장기 가격 흐름을 한 페이지에서 비교할 수 있게 정리해, 메모리 비용 하락과 AI용 고대역폭 메모리의 차이를 함께 볼 수 있게 함</li>\n<li>핵심 지표는 시간에 따른 <strong>GB당 최저 가격</strong>이며, DRAM은 Pre-D",
-      "date": "2026-06-29",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30939",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-31-https://news.hada.io/topic?id=30938",
-      "title": "이해 가능한 소프트웨어를 향하여",
-      "summary": "<ul>\n<li>프로그래밍은 읽기·테스트·유지보수가 어렵고 프로젝트 이해가 소수에게 집중되므로, <strong>LLM으로 코드 작성을 자동화</strong>하기보다 코드가 필요한 범위 자체를 줄이는 추상화가 필요함</li>\n<li>LLM은 개발자와 비개발자 모두에게 확산됐지만, <strong>환경 파괴성</strong>, 도난 코드 기반, 일관성 ...</",
-      "date": "2026-06-29",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30938",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-32-https://news.hada.io/topic?id=30937",
-      "title": "LibrePods: 해방된 AirPods",
-      "summary": "<ul>\n<li><strong>LibrePods</strong>는 AirPods와 Apple 기기 사이의 독점 프로토콜을 구현해, Apple 기기 전용 AirPods 기능을 Linux와 Android 같은 비 Apple 플랫폼에서 사용할 수 있게 하는 프로젝트임</li>\n<li>지원 기능은 플랫폼별로 다르며, 청취 모드 변경, 착용 감지, 배터리 상태, 대",
-      "date": "2026-06-29",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30937",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-34-https://news.hada.io/topic?id=30935",
-      "title": "Show GN: 캐치메시지 — 단톡방 무음으로 둬도 내 키워드와 발신자만 골라서 알림",
-      "summary": "<p>비개발자로 몇가지 도구를 만들어 보고 있습니다.</p>\n<p>여기서 AI가 글 다듬은걸 그냥 올렸다 참교육도 받았던터라,</p>\n<p>그래서 이번엔 짧게 어떤 앱인지만 소개해드리겠습니다.</p>\n<p>단톡방이 너무 많아서 다 무음으로 해두는데, 그러다 정작 나한테 중요한 한 줄을 놓치는 게 싫어서 만들었습니다.</p>\n<p>키",
-      "date": "2026-06-29",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30935",
-      "category": "개발 도구",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-35-https://news.hada.io/topic?id=30934",
-      "title": "Brown 시험서 대규모 AI 부정행위 고발한 교수",
-      "summary": "<ul>\n<li>Brown University의 고급 수리경제학 과목 <strong>ECON 1170</strong>에서 3월 중간고사 중 최소 50명이 AI로 부정행위를 했다는 의혹이 제기되며 학업 신뢰 문제가 커짐</li>\n<li>시험은 <strong>take-home 폐쇄형</strong> 방식이었고, 일부 답안에서 ChatGPT에 문제를 넣었을 때와",
-      "date": "2026-06-29",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30934",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-37-https://news.hada.io/topic?id=30932",
-      "title": "Show GN: AI 코딩 에이전트 여러 개를 한 창에서 조율하는 올인원 데스크톱 터미널 — Orch term",
-      "summary": "<p>터미널·코드 에디터·브라우저·Git을 한 창에 담고, 그 위에서 여러 AI 코딩 에이전트(Claude Code, Codex, Gemini CLI 등)를 동시에 돌려 조율하는 데스크톱 앱입니다. Windows와 macOS를 지원합니다.</p>\n<p>왜 만들었나</p>\n<p>AI 에이전트로 개발하다 보니, 터미널 하나에 에이전트 하나만 붙여 쓰는 게 답답",
-      "date": "2026-06-29",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30932",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-38-https://news.hada.io/topic?id=30931",
-      "title": "Tokenmaxxing은 죽었다, Tokenmaxxing 만세",
-      "summary": "<ul>\n<li>기업의 AI 도입 초기에 <strong>토큰 사용량</strong>을 성과 평가와 연결한 tokenmaxxing은 무의미한 비용을 만들었지만, AI 도구 사용을 조직에 강제로 퍼뜨리는 역할도 했음</li>\n<li>Meta에서는 개인별 토큰 사용량이 평가와 연결되자, 토큰 수치를 올리기 위해 두 에이전트를 하루 종일 대화시키는 식의 ...</",
-      "date": "2026-06-29",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30931",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-41-https://news.hada.io/topic?id=30928",
-      "title": "Claude Code로 내 MRI 2차 소견을 받아봄",
-      "summary": "<ul>\n<li>오른쪽 어깨 통증 MRI 이후 병원의 <strong>Grade III 부분층 파열</strong> 진단과 빠른 치료 계획에 의문이 생겨, Opus 4.8로 영상 판독을 다시 시도함</li>\n<li>병원은 견갑하근 힘줄의 “apical insertion” 부위에서 <strong>50% 초과 폭의 부분층 파열</strong>을 봤지만, Opus",
-      "date": "2026-06-29",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=30928",
-      "category": "모델 출시",
       "lang": "ko"
     },
     {
@@ -687,7 +739,7 @@
       "titleKo": "DiScoFormer: 분포 전반에 걸쳐 밀도 및 점수를 위한 단일 변환기"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/",
+      "id": "tc-17-https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/",
       "title": "Gemini&#8217;s personalized AI image generation is now free for US users",
       "summary": "Google is expanding Gemini’s personalized AI image generation to eligible free users in the U.S., allowing the chatbot to create images based on your interests and data from connected Google apps.",
       "date": "2026-06-29",
@@ -700,7 +752,7 @@
       "titleKo": "Gemini의 맞춤형 AI 이미지 생성이 이제 미국 사용자에게 무료로 제공됩니다."
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/",
+      "id": "tc-18-https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/",
       "title": "Anthropic and Gov. Newsom forge deal allowing California government to use Claude at half price",
       "summary": "As Anthropic forges a closer relationship with the state of California, the federal government has made an enemy out of the OpenAI rival.",
       "date": "2026-06-29",
@@ -713,7 +765,7 @@
       "titleKo": "Anthropic과 Gov. Newsom은 캘리포니아 정부가 Claude를 절반 가격으로 사용할 수 있도록 하는 거래를 체결했습니다."
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/",
+      "id": "tc-19-https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/",
       "title": "South Korean tech giants commit over $550B to ease &#8216;RAMageddon&#8217;",
       "summary": "The world's two largest memory chip companies vow to build more memory lab fabs as South Korea positions itself as an AI tech powerhouse country.",
       "date": "2026-06-29",
@@ -724,71 +776,6 @@
       "category": "인프라·하드웨어",
       "lang": "en",
       "titleKo": "한국 거대 기술기업, '램겟돈' 완화에 5500억 달러 이상 투입"
-    },
-    {
-      "id": "tc-15-https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/",
-      "title": "Arena, the AI leaderboard everyone uses, is now a $100M business",
-      "summary": "The startup, which runs a popular free AI leaderboard, launched its commercial service just last September.",
-      "date": "2026-06-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/",
-      "category": "모델 출시",
-      "lang": "en",
-      "titleKo": "모두가 사용하는 AI 리더보드 Arena는 이제 1억 달러 규모의 사업이 되었습니다."
-    },
-    {
-      "id": "tc-16-https://techcrunch.com/2026/06/29/cursor-now-has-a-mobile-app-for-guiding-your-coding-agent-on-the-go/",
-      "title": "Cursor now has a mobile app for guiding your coding agent on the go",
-      "summary": "Cursor has launched a new mobile app for remote oversight over coding agents.",
-      "date": "2026-06-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/29/cursor-now-has-a-mobile-app-for-guiding-your-coding-agent-on-the-go/",
-      "category": "모델 출시",
-      "lang": "en",
-      "titleKo": "Cursor에는 이제 이동 중에도 코딩 에이전트를 안내할 수 있는 모바일 앱이 있습니다."
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/06/29/tidal-cracks-down-on-ai-music-by-cutting-off-monetization/",
-      "title": "TIDAL cracks down on AI music by cutting off monetization",
-      "summary": "In addition, TIDAL will use automated tools to remove AI-generated music that attempts to impersonate an artist or a group, the company said.",
-      "date": "2026-06-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/29/tidal-cracks-down-on-ai-music-by-cutting-off-monetization/",
-      "category": "개발 도구",
-      "lang": "en",
-      "titleKo": "TIDAL, 수익 창출 차단으로 AI 음악 단속"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
-      "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
-      "summary": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
-      "date": "2026-06-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
-      "category": "투자·기업",
-      "lang": "en",
-      "titleKo": "로봇 손 회사, Tesla 영업 비밀 소송을 해결하고 1,100만 달러 인상 발표"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/06/29/omen-ais-plan-to-optimize-data-centers-is-all-wet/",
-      "title": "Omen AI&#8217;s plan to optimize data centers is all wet",
-      "summary": "Omen AI raised a $31 million Series A to monitor chip coolant and stop bacterial outbreaks in data centers.",
-      "date": "2026-06-29",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/29/omen-ais-plan-to-optimize-data-centers-is-all-wet/",
-      "category": "인프라·하드웨어",
-      "lang": "en",
-      "titleKo": "Omen AI의 데이터 센터 최적화 계획은 모두 젖어 있습니다."
     },
     {
       "id": "hf-4-https://huggingface.co/blog/vllm-jobs",
@@ -891,7 +878,8 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/peft-beyond-lora",
       "category": "파인튜닝",
-      "lang": "en"
+      "lang": "en",
+      "titleKo": "LoRA를 넘어서: 가장 인기 있는 미세 조정 기술을 이길 수 있습니까?"
     },
     {
       "id": "hf-13-https://huggingface.co/blog/is-it-agentic-enough",
@@ -1004,164 +992,142 @@
   ],
   "github": [
     {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra — Mastra is the modern TypeScript framework for AI-powered applications and agents.",
-      "summary": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
-      "date": "2026-06-30",
+      "id": "gh-1024118326",
+      "title": "Tencent/WeKnora — Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "summary": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "date": "2026-07-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/mastra-ai/mastra",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 25628,
-      "language": "TypeScript",
-      "tags": [
-        "agents",
-        "ai",
-        "chatbots",
-        "evals",
-        "javascript"
-      ]
-    },
-    {
-      "id": "gh-950564038",
-      "title": "CoplayDev/unity-mcp — Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, control scenes, edit scripts, and automate tasks within Unity.",
-      "summary": "Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, control scenes, edit scripts, and automate tasks within Unity.",
-      "date": "2026-06-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/CoplayDev/unity-mcp",
+      "url": "https://github.com/Tencent/WeKnora",
       "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 11194,
-      "language": "C#",
+      "stars": 17590,
+      "language": "Go",
       "tags": [
+        "agent",
+        "agentic",
         "ai",
-        "ai-integration",
-        "anthropic",
-        "claude",
-        "copilot"
+        "chatbot",
+        "embeddings"
       ]
     },
     {
-      "id": "gh-633262635",
-      "title": "onyx-dot-app/onyx — Open Source AI Platform - AI Chat with advanced features that works with every LLM",
-      "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
-      "date": "2026-06-30",
+      "id": "gh-626805178",
+      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
+      "summary": "Production-ready platform for agentic workflow development.",
+      "date": "2026-07-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/onyx-dot-app/onyx",
-      "category": "모델 출시",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 30625,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-chat",
-        "chatgpt",
-        "chatui",
-        "enterprise-search"
-      ]
-    },
-    {
-      "id": "gh-655515393",
-      "title": "CopilotKit/CopilotKit — The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
-      "summary": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
-      "date": "2026-06-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/CopilotKit/CopilotKit",
+      "url": "https://github.com/langgenius/dify",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 35656,
+      "stars": 147169,
       "language": "TypeScript",
       "tags": [
         "agent",
-        "agent-native",
         "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-764723738",
+      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
+      "summary": "Automate browser based workflows with AI",
+      "date": "2026-07-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/Skyvern-AI/skyvern",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 22060,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "api",
+        "automation",
+        "browser",
+        "browser-automation"
+      ]
+    },
+    {
+      "id": "gh-1266212515",
+      "title": "omnigent-ai/omnigent — Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+      "summary": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+      "date": "2026-07-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 5800,
+      "language": "Python",
+      "tags": [
+        "agent-framework",
+        "agent-governance",
+        "agent-orchestration",
         "agents",
         "ai"
       ]
     },
     {
-      "id": "gh-1046096502",
-      "title": "generalaction/emdash — Emdash is the Open-Source Agentic Development Environment (🧡 YC W26). Run multiple coding agents in parallel. Use any provider.",
-      "summary": "Emdash is the Open-Source Agentic Development Environment (🧡 YC W26). Run multiple coding agents in parallel. Use any provider.",
-      "date": "2026-06-30",
+      "id": "gh-1024554267",
+      "title": "NousResearch/hermes-agent — The agent that grows with you",
+      "summary": "The agent that grows with you",
+      "date": "2026-07-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/generalaction/emdash",
+      "url": "https://github.com/NousResearch/hermes-agent",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 5028,
-      "language": "TypeScript",
-      "tags": [
-        "agenticdevelopment",
-        "agenticdevelopmentenvironment",
-        "ai",
-        "claude-code",
-        "cli"
-      ]
-    },
-    {
-      "id": "gh-958830659",
-      "title": "google/adk-python — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
-      "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
-      "date": "2026-06-30",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/google/adk-python",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 20355,
+      "stars": 206619,
       "language": "Python",
       "tags": [
-        "agent",
-        "agentic",
-        "agentic-ai",
-        "agents",
-        "agents-sdk"
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
       ]
     },
     {
-      "id": "gh-963665823",
-      "title": "embabel/embabel-agent — Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
-      "summary": "Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
-      "date": "2026-06-30",
+      "id": "gh-1014729376",
+      "title": "MemTensor/MemOS — Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings",
+      "summary": "Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings",
+      "date": "2026-07-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/embabel/embabel-agent",
-      "category": "에이전트",
+      "url": "https://github.com/MemTensor/MemOS",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 3720,
-      "language": "Kotlin",
+      "stars": 10046,
+      "language": "TypeScript",
       "tags": [
         "agent",
         "agentic-ai",
-        "agents",
         "ai",
-        "ai-agents"
+        "ai-agents",
+        "chatgpt"
       ]
     },
     {
       "id": "gh-826170402",
       "title": "elizaOS/eliza — Open source agentic operating system",
       "summary": "Open source agentic operating system",
-      "date": "2026-06-30",
+      "date": "2026-07-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
@@ -1169,7 +1135,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 18657,
+      "stars": 18658,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -1180,10 +1146,32 @@
       ]
     },
     {
+      "id": "gh-932490533",
+      "title": "ThinkInAIXYZ/deepchat — 🐬DeepChat - A smart assistant that connects powerful AI to your personal world",
+      "summary": "🐬DeepChat - A smart assistant that connects powerful AI to your personal world",
+      "date": "2026-07-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/ThinkInAIXYZ/deepchat",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 6071,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-skills",
+        "ai",
+        "ai-assistant",
+        "ai-sdk"
+      ]
+    },
+    {
       "id": "gh-1156956890",
       "title": "zeroclaw-labs/zeroclaw — Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
       "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
-      "date": "2026-06-30",
+      "date": "2026-07-01",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
@@ -1191,7 +1179,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 32103,
+      "stars": 32108,
       "language": "Rust",
       "tags": [
         "agent",
@@ -1199,6 +1187,28 @@
         "ai",
         "infra",
         "ml"
+      ]
+    },
+    {
+      "id": "gh-643445235",
+      "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "date": "2026-07-01",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/lobehub/lobehub",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 79289,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agent-collaboration",
+        "agent-harness",
+        "ai",
+        "cao"
       ]
     }
   ]

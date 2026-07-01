@@ -1287,13 +1287,13 @@
     "id": "minimax/minimax-m2.1",
     "name": "MiniMax: MiniMax M2.1",
     "provider": "MINIMAX",
-    "input": 0.29,
-    "output": 0.95,
+    "input": 0.3,
+    "output": 1.2,
     "context": "205K",
     "description": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers",
     "createdAt": 1766454997,
     "modalities": "text->text",
-    "maxTokens": 196608
+    "maxTokens": 131072
   },
   {
     "id": "z-ai/glm-4.7",
@@ -1605,7 +1605,7 @@
     "description": "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) arc",
     "createdAt": 1762440622,
     "modalities": "text->text",
-    "maxTokens": 262144
+    "maxTokens": 100352
   },
   {
     "id": "amazon/nova-premier-v1",
@@ -1660,12 +1660,12 @@
     "name": "MiniMax: MiniMax M2",
     "provider": "MINIMAX",
     "input": 0.255,
-    "output": 1,
+    "output": 1.02,
     "context": "205K",
     "description": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows. With 10 billion activated parameters (230 billion total), it delivers near-frontier",
     "createdAt": 1761252093,
     "modalities": "text->text",
-    "maxTokens": 196608
+    "maxTokens": 131072
   },
   {
     "id": "qwen/qwen3-vl-32b-instruct",
@@ -2055,13 +2055,13 @@
     "id": "qwen/qwen3-30b-a3b-thinking-2507",
     "name": "Qwen: Qwen3 30B A3B Thinking 2507",
     "provider": "QWEN",
-    "input": 0.08,
-    "output": 0.39999999999999997,
+    "input": 0.13,
+    "output": 1.56,
     "context": "131K",
     "description": "Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning model optimized for complex tasks requiring extended multi-step thinking. The model is designed specifically for “thinking m",
     "createdAt": 1756399192,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": 32768
   },
   {
     "id": "nousresearch/hermes-4-70b",
@@ -2607,8 +2607,8 @@
     "id": "qwen/qwen3-8b",
     "name": "Qwen: Qwen3 8B",
     "provider": "QWEN",
-    "input": 0.049999999999999996,
-    "output": 0.39999999999999997,
+    "input": 0.117,
+    "output": 0.45499999999999996,
     "context": "131K",
     "description": "Qwen3-8B is a dense 8.2B parameter causal language model from the Qwen3 series, designed for both reasoning-heavy tasks and efficient dialogue. It supports seamless switching between \"thinking\" mode f",
     "createdAt": 1745876632,

@@ -1,5 +1,54 @@
 [
   {
+    "date": "2026-07-01",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.1",
+        "modelName": "MiniMax: MiniMax M2.1",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.29,
+        "newInput": 0.3,
+        "oldOutput": 0.95,
+        "newOutput": 1.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2",
+        "modelName": "MiniMax: MiniMax M2",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.255,
+        "newInput": 0.255,
+        "oldOutput": 1,
+        "newOutput": 1.02
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-30b-a3b-thinking-2507",
+        "modelName": "Qwen: Qwen3 30B A3B Thinking 2507",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.13,
+        "oldOutput": 0.39999999999999997,
+        "newOutput": 1.56
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-8b",
+        "modelName": "Qwen: Qwen3 8B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.049999999999999996,
+        "newInput": 0.117,
+        "oldOutput": 0.39999999999999997,
+        "newOutput": 0.45499999999999996
+      }
+    ]
+  },
+  {
     "date": "2026-06-30",
     "items": [
       {

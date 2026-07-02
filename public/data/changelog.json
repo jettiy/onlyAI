@@ -34,6 +34,16 @@
         "newInput": 0.66,
         "oldOutput": 3.1999999999999997,
         "newOutput": 3.41
+      },
+      {
+        "type": "new_model",
+        "modelId": "poolside/laguna-xs-2.1",
+        "modelName": "Poolside: Laguna XS 2.1",
+        "provider": "POOLSIDE",
+        "description": "새 모델 추가",
+        "input": 0.06,
+        "output": 0.12,
+        "context": "262K"
       }
     ]
   },

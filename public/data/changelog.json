@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-07-02",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-vl-8b-instruct",
+        "modelName": "Qwen: Qwen3 VL 8B Instruct",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.117,
+        "oldOutput": 0.5,
+        "newOutput": 0.45499999999999996
+      }
+    ]
+  },
+  {
     "date": "2026-07-01",
     "items": [
       {

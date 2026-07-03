@@ -543,13 +543,13 @@
     "id": "deepseek/deepseek-v4-flash",
     "name": "DeepSeek: DeepSeek V4 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.08900000000000001,
+    "input": 0.09,
     "output": 0.18,
     "context": "1M",
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa",
     "createdAt": 1777000666,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 16384
   },
   {
     "id": "inclusionai/ling-2.6-1t",
@@ -663,13 +663,13 @@
     "id": "z-ai/glm-5.1",
     "name": "Z.ai: GLM 5.1",
     "provider": "Z-AI",
-    "input": 0.975,
-    "output": 4.300000000000001,
+    "input": 0.966,
+    "output": 3.036,
     "context": "203K",
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work ",
     "createdAt": 1775578025,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 128000
   },
   {
     "id": "google/gemma-4-26b-a4b-it",

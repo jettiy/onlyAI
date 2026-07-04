@@ -75,13 +75,13 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.84,
-    "output": 2.64,
+    "input": 0.9086,
+    "output": 2.8556,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,
     "modalities": "text->text",
-    "maxTokens": 128000
+    "maxTokens": 131072
   },
   {
     "id": "moonshotai/kimi-k2.7-code",

@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-07-04T13:47:35.188Z",
-  "updatedAtKST": "2026. 7. 4. PM 10:47:35",
+  "updatedAt": "2026-07-04T19:23:07.784Z",
+  "updatedAtKST": "2026. 7. 5. AM 4:23:07",
   "stats": {
     "aitimes": 20,
-    "geeknews": 18,
+    "geeknews": 19,
     "36kr": 17,
     "hf": 20,
-    "tc": 18,
-    "github": 9,
-    "total": 85
+    "tc": 19,
+    "github": 10,
+    "total": 88
   },
   "news": [
     {
@@ -156,7 +156,31 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-1-https://news.hada.io/topic?id=31119",
+      "id": "geeknews-0-https://news.hada.io/topic?id=31124",
+      "title": "Leanstral 1.5: 모두를 위한 증명 풍요",
+      "summary": "<ul>\n<li>형식 검증을 실제 개발 작업에 더 가깝게 쓰려는 흐름 속에서, Mistral AI가 <strong>Lean 4</strong>용 Apache-2.0 모델 <strong>Leanstral 1.5</strong>를 공개함</li>\n<li>모델은 119B 총 파라미터 중 6B만 활성화하며, 중간 학습·지도 미세조정·CISPO 강화학습을 거쳐 증명",
+      "date": "2026-07-04",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=31124",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-3-https://news.hada.io/topic?id=31121",
+      "title": "Jamesob의 최신 수준 LLM 로컬 실행 가이드",
+      "summary": "<ul>\n<li>로컬에서 <strong>최신 수준 LLM</strong>과 음성-텍스트 변환을 돌리기 위한 하드웨어 구성, PCIe 스위치 설정, Docker 실행 구성을 한 저장소에 정리함</li>\n<li>약 <strong>$2k</strong> 예산은 2× RTX 3090으로 48GB VRAM을 확보해 Qwen3.6-27B와 <code>whisper-l",
+      "date": "2026-07-04",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=31121",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-5-https://news.hada.io/topic?id=31119",
       "title": "PM의 채용 공고가 바뀌었다 (이력서 대신 60초 데모를 내는 시대)",
       "summary": "<p>PM 채용 공고의 패러다임이 급변하고 있음.<br />\n기존의 PRD 작성과 요구사항 정의 중심에서 AI 네이티브 빌더로 진화하는 중</p>\n<p>주요 변화:</p>\n<p>• Amazon Ring: 'Builder PM' 포지션 신설. Cursor, Claude, Replit 같은 AI 코딩 툴을 사용해 직접 프로토타입을 빌드하고, GenAI 툴로 개",
       "date": "2026-07-04",
@@ -168,7 +192,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-4-https://news.hada.io/topic?id=31115",
+      "id": "geeknews-8-https://news.hada.io/topic?id=31115",
       "title": "에이전트 자율성 수준",
       "summary": "<ul>\n<li>에이전트형 엔지니어링은 프롬프트 작성보다 <strong>운영 설계</strong>에 가까워지고 있으며, 작업별로 허용할 자율성과 이를 뒷받침할 <strong>검증 방식</strong>을 함께 정해야 함</li>\n<li>단일 사다리형 모델은 한 에이전트에 대한 신뢰를 숫자로 표현하는 데는 유용하지만, 여러 에이전트를 동시에 다루...</p>",
       "date": "2026-07-04",
@@ -180,7 +204,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-6-https://news.hada.io/topic?id=31113",
+      "id": "geeknews-10-https://news.hada.io/topic?id=31113",
       "title": "Fable을 이기는 ‘짧은 목줄’ AI 코딩 방법",
       "summary": "<ul>\n<li>보안 중요 소프트웨어에서 AI 코딩 에이전트를 쓰려면 자율 실행을 맡기기보다, 개발자가 변경을 계속 통제하는 <strong>Short Leash 방식</strong>이 필요함</li>\n<li>여러 에이전트가 병렬로 코드를 만들고 검토하는 “vibe”식 접근은 코드베이스 이해를 약화시키고, AI가 <strong>off the rails</st",
       "date": "2026-07-04",
@@ -192,7 +216,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-7-https://news.hada.io/topic?id=31112",
+      "id": "geeknews-11-https://news.hada.io/topic?id=31112",
       "title": "세션 기록을 기억하는건 에이전트에 유용하지 않음",
       "summary": "<ul>\n<li>SWE 작업에서 에이전트가 문서·PR·커밋 같은 컨텍스트를 이미 볼 수 있다면, 과거 <strong>세션 기록 검색</strong>은 성능 이점을 만들지 못했음</li>\n<li>흔한 구현은 모든 transcript를 DB에 저장한 뒤 <strong>벡터 검색</strong>, Elasticsearch, SQL 검색, 그래프를 붙여 MCP나 ",
       "date": "2026-07-04",
@@ -204,7 +228,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-8-https://news.hada.io/topic?id=31111",
+      "id": "geeknews-12-https://news.hada.io/topic?id=31111",
       "title": "Show GN: Retry-now, 지금 바로 윤회 - 완전 자율 루프 에이전트",
       "summary": "<p>AI 코딩 에이전트를 반복 실행해서 코드베이스를 점진적으로 개선하는 에이전트 <code>retry-now</code>를 만들었습니다.</p>\n<p>핵심 아이디어는 \"매 이터레이션마다 완전히 새로운 컨텍스트 0 세션에서 코드를 다시 보게 하자\"입니다.<br />\n기존 장기 실행 에이전트는 이전 판단을 방어하거나, 이미 시도",
       "date": "2026-07-04",
@@ -216,7 +240,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-9-https://news.hada.io/topic?id=31107",
+      "id": "geeknews-13-https://news.hada.io/topic?id=31107",
       "title": "Fable 필드 가이드: 나의 미지(Unknowns) 찾기",
       "summary": "<ul>\n<li>Claude Fable 5 작업의 핵심은 사용자가 주는 <strong>지도(map, 프롬프트·스킬·컨텍스트)</strong> 와 작업이 실제 일어나는 <strong>영토(territory, 코드베이스·현실·제약)</strong> 의 간극, 즉 <strong>미지(unknowns)</strong> 를 찾아 좁히는 것</li>\n<li>Fable",
       "date": "2026-07-04",
@@ -228,7 +252,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-10-https://news.hada.io/topic?id=31106",
+      "id": "geeknews-14-https://news.hada.io/topic?id=31106",
       "title": "루프 엔지니어링의 미학 (The Art of Loop Engineering)",
       "summary": "<ul>\n<li>에이전트를 안정적으로 유용한 작업에 활용하려면 좋은 모델만으로는 부족하며, 작업 집합에 맞게 설계된 <strong>하네스(harness)</strong> 가 필요함</li>\n<li>가장 기본이 되는 <strong>에이전트 루프</strong>는 LLM에 컨텍스트를 주고 작업이 끝날 때까지 도구를 반복 호출하는 구조</li>\n<li>여기에 검",
       "date": "2026-07-04",
@@ -238,6 +262,45 @@
       "url": "https://news.hada.io/topic?id=31106",
       "category": "모델 출시",
       "lang": "ko"
+    },
+    {
+      "id": "tc-0-https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/",
+      "title": "Midjourney wants Hollywood studios to reveal the details of their AI usage",
+      "summary": "As part of an ongoing legal dispute with three Hollywood studios, Midjourney is seeking to compel those studios to reveal how they use AI themselves.",
+      "date": "2026-07-04",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/",
+      "category": "멀티모달",
+      "lang": "en",
+      "titleKo": "Midjourney는 할리우드 스튜디오가 AI 사용의 세부 사항을 공개하기를 원합니다."
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
+      "title": "Alibaba reportedly bans employees from using Claude Code",
+      "summary": "Alibaba has reportedly classified Claude Code as high-risk software.",
+      "date": "2026-07-04",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
+      "category": "모델 출시",
+      "lang": "en",
+      "titleKo": "알리바바, 직원 클로드 코드 사용 금지"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/",
+      "title": "What is Mistral AI? Everything to know about the OpenAI competitor",
+      "summary": "Mistral AI, which offers some open source AI models, has raised significant funding since its creation in 2023, with the ambition to “put frontier AI in the hands of everyone.”",
+      "date": "2026-07-04",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/",
+      "category": "모델 출시",
+      "lang": "en",
+      "titleKo": "미스트랄 AI란 무엇인가요? OpenAI 경쟁자에 대해 알아야 할 모든 것"
     },
     {
       "id": "aitimes-20-https://www.aitimes.com/news/articleView.html?idxno=212397",
@@ -336,7 +399,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-17-https://news.hada.io/topic?id=31099",
+      "id": "geeknews-21-https://news.hada.io/topic?id=31099",
       "title": "저커버그, Meta의 해고가 효과 없었음을 ‘인정’",
       "summary": "<ul>\n<li>Meta는 AI 에이전트 개발에 맞춰 조직을 크게 흔들었지만, Zuckerberg는 최근 4개월간 <strong>에이전트 개발 궤적</strong>이 기대만큼 가속하지 않았다고 말함</li>\n<li>1~2월 구조조정 논의는 회사가 변화에 뒤처질 수 있다는 <strong>상위 인력들의 우려</strong>와 Claude Code 같은 도구에 ",
       "date": "2026-07-03",
@@ -348,7 +411,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-19-https://news.hada.io/topic?id=31097",
+      "id": "geeknews-23-https://news.hada.io/topic?id=31097",
       "title": "Alibaba, 백도어 위험 우려해 사내에서 클로드 코드 사용 금지 조치 예정",
       "summary": "<ul>\n<li>중국 IT 대기업 Alibaba가 <strong>중국 연계 사용자 식별</strong> 기능으로 논란이 된 Anthropic의 <strong>Claude Code</strong>를 업무에서 사용하지 못하도록 직원들에게 금지 조치</li>\n<li>Anthropic이 Alibaba를 상대로 <strong>Claude AI 모델 능력의 불법 추출",
       "date": "2026-07-03",
@@ -360,7 +423,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-23-https://news.hada.io/topic?id=31093",
+      "id": "geeknews-27-https://news.hada.io/topic?id=31093",
       "title": "멘탈 모델을 전달하는 도구나 기법은?",
       "summary": "<ul>\n<li>시스템이나 제품을 이해하는 <strong>멘탈 모델</strong>을 다른 사람에게 전달하고 함께 키우는 데 효과적인 도구와 기법을 묻는 질문임</li>\n<li>멘탈 모델을 키우는 방법으로 <strong>시스템을 직접 만들고 유지보수</strong>하는 경험이 거론됨</li>\n<li>전달 방식은 냅킨 낙서, 옆에서 몸짓으로 설명하기,...<",
       "date": "2026-07-03",
@@ -372,7 +435,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-24-https://news.hada.io/topic?id=31092",
+      "id": "geeknews-28-https://news.hada.io/topic?id=31092",
       "title": "로컬 인텔리전스에 대한 권리",
       "summary": "<ul>\n<li>RTI는 플랫폼 계정이나 클라우드 API에 묶이지 않고 자기 기기에서 <strong>로컬 AI</strong>를 실행할 권리를 보호하려는 활동임</li>\n<li>공개 AI 모델의 <strong>다운로드·소유·실행·연구·수정·공유</strong>는 합법적 사용으로 보장하되, 실제 피해 행위는 계속 단속해야 한다는 입장임</li>\n<li>사기,",
       "date": "2026-07-03",
@@ -384,7 +447,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-32-https://news.hada.io/topic?id=31084",
+      "id": "geeknews-36-https://news.hada.io/topic?id=31084",
       "title": "의존성에 LLM 생성 코드 금지",
       "summary": "<ul>\n<li>git-annex는 <strong>LLM 생성 코드가 포함된 의존성</strong> 없이 빌드되도록 지난 한 달간 약 <strong>100시간</strong>을 들여 점검됨</li>\n<li>이 작업은 개별 코드보다 <strong>전체 의존성 트리</strong>를 계속 추적해야 하는 현실을 드러내며, 유지보수 부담을 크게 키움</li>\n<l",
       "date": "2026-07-03",
@@ -396,7 +459,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-35-https://news.hada.io/topic?id=31081",
+      "id": "geeknews-39-https://news.hada.io/topic?id=31081",
       "title": "탈(脫)fedify – 떠나보니 알게 된 fedify의 좋은 점들",
       "summary": "<p>(제가 운영하는 블로그의 글입니다. 본문은 저와 함께 일하는 AI 어시스턴트 시로의 도움으로 썼고, 오독이 있으면 알려주시면 고맙겠습니다)</p>\n<p>작은 페디버스(마스토돈처럼 서버끼리 서로 연결되는 SNS 네트워크) 서버 sukhi-fedi가, JSON-LD 조립(메시지를 서버끼리 알아들을 수 있는 형식으로 만드는 작업)과",
       "date": "2026-07-03",
@@ -408,7 +471,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-36-https://news.hada.io/topic?id=31080",
+      "id": "geeknews-40-https://news.hada.io/topic?id=31080",
       "title": "Show GN: VHK - 모델·에이전트를 갈아타도 안 무너지는 풀사이클 AI 코딩 하네스",
       "summary": "<p>바이브코딩하다 보면 도구를 자주 갈아탑니다. Claude Code 쓰다가 Cursor, 또 Codex... 그때마다 규칙 파일이랑 맥락이 흩어지고, 에이전트는 \"다 됐다\"는데 실제론 테스트도 안 돌아간 경우가 많더라고요. 매번 손으로<br />\n정리하기 싫어서 만든 CLI 하네스입니다.</p>\n<p>VHK는 코딩 에이전트가 아니에",
       "date": "2026-07-03",
@@ -420,7 +483,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-40-https://news.hada.io/topic?id=31075",
+      "id": "geeknews-44-https://news.hada.io/topic?id=31075",
       "title": "Senior SWE-Bench: 시니어 엔지니어급 에이전트 평가용 오픈소스 벤치마크",
       "summary": "<ul>\n<li><strong>Senior SWE-Bench</strong>는 코딩 에이전트를 과도하게 정리된 주니어 과제가 아니라, 실제 시니어 엔지니어가 맡는 기능 개발·버그 수정·성능 문제에 가깝게 평가하려는 벤치마크임</li>\n<li>기능 과제는 자연어 메시지처럼 읽히는 <strong>현실적인 지시사항</strong>을 쓰고, 제출된 해법에 맞춰 행",
       "date": "2026-07-03",
@@ -432,7 +495,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-41-https://news.hada.io/topic?id=31074",
+      "id": "geeknews-45-https://news.hada.io/topic?id=31074",
       "title": "CursorBench 3.1 모델 평가 결과",
       "summary": "<ul>\n<li>Cursor의 코딩 모델 평가표에서 <strong>Fable 5 Max</strong>가 72.9%로 1위를 기록해, 상위권 경쟁의 기준점이 됨</li>\n<li><strong>Fable 5 계열</strong>은 Max, Extra High, High, Medium이 1~4위를 모두 차지하며 다른 모델군과 뚜렷한 격차를 보임</li>\n<li",
       "date": "2026-07-03",
@@ -444,7 +507,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-44-https://news.hada.io/topic?id=31071",
+      "id": "geeknews-48-https://news.hada.io/topic?id=31071",
       "title": "Weave Robotics, $7,999 가정용 로봇 Isaac 1 출시 (2026년 가을 배송 예정)",
       "summary": "<ul>\n<li>가정 환경을 위해 처음부터 설계된 <strong>모바일 가정용 로봇</strong>으로, 빨래 수거·방 정돈 등 번거로운 집안일을 대신 수행하며 고정형 빨래 접기 기기에서 이동형 로봇으로 전환</li>\n<li><strong>Laundry Flow</strong> 기능으로 더러운 옷을 찾아 집어 들고 가득 찬 햄퍼를 처리하며 옷을 접어 정리.",
       "date": "2026-07-03",
@@ -456,19 +519,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-49-https://news.hada.io/topic?id=31066",
-      "title": "일본 최고재판소, AI는 특허 발명자로 기재될 수 없다고 판결",
-      "summary": "<ul>\n<li>일본 <strong>최고재판소</strong>가 AI를 특허 출원서의 발명자로 적을 수 없다는 하급심 판단을 확정하며, 현행 일본 특허법의 발명자는 자연인으로 제한됨</li>\n<li>사건은 미국 엔지니어가 자신이 만든 AI <strong>DABUS</strong>가 식품 용기 등을 발명했다고 주장하며 2020년 특허 출원을 낸 데서 시작됨.",
-      "date": "2026-07-03",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=31066",
-      "category": "산업·정책",
-      "lang": "ko"
-    },
-    {
-      "id": "tc-0-https://techcrunch.com/2026/07/03/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+      "id": "tc-3-https://techcrunch.com/2026/07/03/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
       "title": "The only AI glossary you&#8217;ll need this year",
       "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
       "date": "2026-07-03",
@@ -481,7 +532,7 @@
       "titleKo": "올해 필요한 유일한 AI 용어집"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/07/03/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/",
+      "id": "tc-4-https://techcrunch.com/2026/07/03/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/",
       "title": "The browser wars aren&#8217;t about search anymore — here are the best alternatives to Chrome and Safari",
       "summary": "We’ve compiled an overview of some of the top alternative browsers available today aiming to challenge Chrome and Safari.",
       "date": "2026-07-03",
@@ -494,7 +545,7 @@
       "titleKo": "브라우저 전쟁은 더 이상 검색에 관한 것이 아닙니다. Chrome과 Safari에 대한 최고의 대안은 다음과 같습니다."
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/",
+      "id": "tc-5-https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/",
       "title": "Mark Zuckerberg tells staff that AI agents haven&#8217;t progressed as quickly as he&#8217;d hoped",
       "summary": "At an internal meeting, the Meta CEO reportedly said that AI development efforts were not moving as quickly as anticipated.",
       "date": "2026-07-02",
@@ -507,7 +558,7 @@
       "titleKo": "Mark Zuckerberg는 AI 에이전트가 기대만큼 빠르게 발전하지 못했다고 직원들에게 말합니다."
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/07/02/jersey-mikes-ipo-illustrates-how-bad-the-ai-hype-has-become/",
+      "id": "tc-6-https://techcrunch.com/2026/07/02/jersey-mikes-ipo-illustrates-how-bad-the-ai-hype-has-become/",
       "title": "Jersey Mike&#8217;s IPO illustrates how bad the AI hype has become",
       "summary": "Just for kicks, I took a look at Jersey Mike's IPO documents. Surely a sandwich shop would have no need to mention AI. But lo and behold.",
       "date": "2026-07-02",
@@ -520,7 +571,7 @@
       "titleKo": "Jersey Mike의 IPO는 AI에 대한 과대광고가 얼마나 악화되었는지를 보여줍니다."
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/",
+      "id": "tc-7-https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/",
       "title": "Meta quietly launches vibe-coded gaming app Pocket",
       "summary": "Meta has quietly launched Pocket, an experimental AI app that lets users generate and share interactive mini games using text prompts.",
       "date": "2026-07-02",
@@ -533,7 +584,7 @@
       "titleKo": "Meta, 바이브 코딩 게임 앱 Pocket을 조용히 출시"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
+      "id": "tc-8-https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
       "title": "Anthropic is discussing a new custom chip with Samsung",
       "summary": "The news comes about a week after OpenAI announced its own custom AI chip in a partnership with Broadcom.",
       "date": "2026-07-02",
@@ -546,7 +597,7 @@
       "titleKo": "Anthropic은 삼성과 새로운 맞춤형 칩을 논의 중입니다."
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/",
+      "id": "tc-9-https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/",
       "title": "OpenAI proposed donating 5% of its equity to a US sovereign wealth fund",
       "summary": "OpenAI CEO Sam Altman has reportedly proposed giving 5% of the company’s equity to a U.S. sovereign wealth fund, reviving discussions about letting the public share in the financial gains from the AI ",
       "date": "2026-07-02",
@@ -559,7 +610,7 @@
       "titleKo": "OpenAI는 자사 지분의 5%를 미국 국부펀드에 기부할 것을 제안했습니다."
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
+      "id": "tc-10-https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
       "title": "Microsoft launches its own AI deployment company with $2.5 billion commitment",
       "summary": "Microsoft follows Amazon, OpenAI, and Anthropic with its new AI deployment group.",
       "date": "2026-07-02",
@@ -572,7 +623,7 @@
       "titleKo": "Microsoft는 25억 달러를 투자하여 자체 AI 배포 회사를 시작합니다."
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/07/02/yep-were-using-openclaw-to-date-now/",
+      "id": "tc-11-https://techcrunch.com/2026/07/02/yep-were-using-openclaw-to-date-now/",
       "title": "Yep, we&#8217;re using OpenClaw to date now",
       "summary": "Ben Guez has \"a bunch of potential international wives in [his] DMs,\" thanks to an automated script he set up using OpenClaw, Claude code, and Instagram trials.",
       "date": "2026-07-02",
@@ -585,7 +636,7 @@
       "titleKo": "네, 저희는 지금까지 OpenClaw를 사용하고 있습니다"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/07/01/indian-tech-tycoon-bets-30m-to-build-an-ai-alternative-to-microsoft-office/",
+      "id": "tc-12-https://techcrunch.com/2026/07/01/indian-tech-tycoon-bets-30m-to-build-an-ai-alternative-to-microsoft-office/",
       "title": "Indian tech tycoon bets $30M of his own money to build AI alternative to Microsoft Office",
       "summary": "Neo is Bhavin Turakhia’s fifth venture and his latest involving enterprise software. This time he's taking on Microsoft Office and Google Apps with AI.",
       "date": "2026-07-02",
@@ -595,7 +646,7 @@
       "url": "https://techcrunch.com/2026/07/01/indian-tech-tycoon-bets-30m-to-build-an-ai-alternative-to-microsoft-office/",
       "category": "연구·논문",
       "lang": "en",
-      "titleKo": "인도의 기술 거물은 Microsoft Office를 대체할 AI를 구축하기 위해 자신의 돈 3천만 달러를 투자했습니다."
+      "titleKo": "인도 기술 거물, 마이크로소프트 오피스 대체 AI 개발에 3천만 달러 투자"
     },
     {
       "id": "hf-0-https://huggingface.co/blog/cerebras-gemma4-voice-ai",
@@ -611,7 +662,7 @@
       "titleKo": "Hugging Face와 Cerebras는 Gemma 4를 실시간 음성 AI로 구현합니다."
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/07/01/spacex-has-an-ai-device-prototype-and-it-sure-sounds-phone-ish/",
+      "id": "tc-13-https://techcrunch.com/2026/07/01/spacex-has-an-ai-device-prototype-and-it-sure-sounds-phone-ish/",
       "title": "SpaceX has an AI device prototype, and it sure sounds phone-ish",
       "summary": "SpaceX reportedly showed investors a \"handset-like\" AI device before going public. It could be another signal SpaceX wants to expand into wireless.",
       "date": "2026-07-01",
@@ -624,7 +675,7 @@
       "titleKo": "SpaceX에는 AI 장치 프로토타입이 있으며 확실히 전화처럼 들립니다."
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/07/01/ashton-kutcher-leaving-sound-ventures-to-launch-new-vc-firm-with-morgan-beller/",
+      "id": "tc-14-https://techcrunch.com/2026/07/01/ashton-kutcher-leaving-sound-ventures-to-launch-new-vc-firm-with-morgan-beller/",
       "title": "Ashton Kutcher leaving Sound Ventures to launch new VC firm with Morgan Beller",
       "summary": "Sound built its reputation on concentrated, high-conviction bets in category-leading AI labs, while Kutcher's new fund appears to be chasing the layer underneath those companies — the infrastructure a",
       "date": "2026-07-01",
@@ -637,7 +688,7 @@
       "titleKo": "Ashton Kutcher는 Sound Ventures를 떠나 Morgan Beller와 함께 새로운 VC 회사를 설립했습니다."
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/",
+      "id": "tc-15-https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/",
       "title": "Cloudflare&#8217;s new policy pushes AI companies to pay for publishers&#8217; content",
       "summary": "Cloudflare is giving AI companies until September 15 to separate web crawlers used for search from those used for AI training and agents, or risk being blocked by default on many publisher sites.",
       "date": "2026-07-01",
@@ -650,7 +701,7 @@
       "titleKo": "Cloudflare의 새로운 정책으로 인해 AI 회사는 게시자의 콘텐츠에 대한 비용을 지불해야 합니다."
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/",
+      "id": "tc-16-https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/",
       "title": "Venice AI becomes a unicorn with $65M Series A as its privacy-first AI platform takes off",
       "summary": "Venice AI is already profitable, with annualized run-rate revenues of over $70 million, CEO Erik Voorhees said.",
       "date": "2026-07-01",
@@ -663,7 +714,7 @@
       "titleKo": "개인 정보 보호 우선 AI 플랫폼이 도약하면서 베니스 AI는 6,500만 달러 규모의 시리즈 A로 유니콘이 되었습니다."
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/",
+      "id": "tc-17-https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/",
       "title": "Gemini Spark, Google&#8217;s agentic assistant, is now available on Mac",
       "summary": "Google's 24/7 agentic assistant, Gemini Spark, comes to Mac alongside other improvements, like real-time tracking and support for more apps.",
       "date": "2026-07-01",
@@ -676,7 +727,7 @@
       "titleKo": "Google의 에이전트 비서인 Gemini Spark를 이제 Mac에서도 사용할 수 있습니다"
     },
     {
-      "id": "tc-16-https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/",
+      "id": "tc-19-https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/",
       "title": "Meta, like SpaceX, looks to turn excess AI compute into cash",
       "summary": "Meta is developing plans for a cloud infrastructure business, selling access to AI compute power and models. The move would pit it against the big cloud providers like Amazon Web Services, Google Clou",
       "date": "2026-07-01",
@@ -687,32 +738,6 @@
       "category": "모델 출시",
       "lang": "en",
       "titleKo": "SpaceX와 마찬가지로 Meta도 과도한 AI 컴퓨팅을 현금으로 전환할 것으로 보입니다."
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/",
-      "title": "Trump drops restrictions on Anthropic&#8217;s Mythos and Fable models",
-      "summary": "The Trump administration's erratic approach to AI policymaking has left companies across the industry with little clarity about what will govern future model releases.",
-      "date": "2026-07-01",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/",
-      "category": "모델 출시",
-      "lang": "en",
-      "titleKo": "트럼프, Anthropic의 Mythos 및 Fable 모델에 대한 제한 철회"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/06/30/wayve-launches-85m-employee-tender-offer-at-8-5b-valuation/",
-      "title": "Wayve launches $85M employee tender offer at $8.5B valuation",
-      "summary": "Wayve’s offering is part of a growing trend of AI startups using employee tenders as a strategic tool to attract and retain talent.",
-      "date": "2026-07-01",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/06/30/wayve-launches-85m-employee-tender-offer-at-8-5b-valuation/",
-      "category": "모델 출시",
-      "lang": "en",
-      "titleKo": "Wayve는 85억 달러 평가액으로 8,500만 달러 규모의 직원 공개 제안을 시작했습니다."
     },
     {
       "id": "hf-1-https://huggingface.co/blog/ibm-research/scarfbench",
@@ -803,7 +828,7 @@
       "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
       "category": "오픈소스",
       "lang": "en",
-      "titleKo": "AI, 개방형 도구, 인간이 루프에 참여하는 Huggingface_hub를 매주 배송합니다."
+      "titleKo": "AI, 개방형 도구 및 인간이 루프에 참여하는 Huggingface_hub를 매주 배송합니다."
     },
     {
       "id": "hf-9-https://huggingface.co/blog/cross-origin-storage",
@@ -829,7 +854,7 @@
       "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
       "category": "오픈소스",
       "lang": "en",
-      "titleKo": "포옹 얼굴의 PP-OCRv6: 1.5M에서 34.5M까지 50개 언어 OCR"
+      "titleKo": "포옹하는 얼굴의 PP-OCRv6: 1.5M에서 34.5M까지 50개 언어 OCR"
     },
     {
       "id": "hf-12-https://huggingface.co/blog/ServiceNow/mosaicleaks",
@@ -842,7 +867,7 @@
       "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
       "category": "에이전트",
       "lang": "en",
-      "titleKo": "mosaicLeaks: 연구 대리인이 비밀을 지킬 수 있나요?"
+      "titleKo": "모자이크리크스(MosaicLeaks): 연구 대리인이 비밀을 지킬 수 있나요?"
     },
     {
       "id": "hf-13-https://huggingface.co/blog/peft-beyond-lora",
@@ -854,8 +879,7 @@
       "sourceFlag": "🤗",
       "url": "https://huggingface.co/blog/peft-beyond-lora",
       "category": "파인튜닝",
-      "lang": "en",
-      "titleKo": "LoRA를 넘어서: 가장 인기 있는 미세 조정 기술을 이길 수 있습니까?"
+      "lang": "en"
     },
     {
       "id": "hf-14-https://huggingface.co/blog/is-it-agentic-enough",
@@ -956,47 +980,113 @@
   ],
   "github": [
     {
-      "id": "gh-979115477",
-      "title": "bytedance/deer-flow — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "id": "gh-810861466",
+      "title": "0xPlaygrounds/rig — ⚙️🦀 Build modular and scalable LLM Applications in Rust",
+      "summary": "⚙️🦀 Build modular and scalable LLM Applications in Rust",
       "date": "2026-07-04",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/bytedance/deer-flow",
-      "category": "에이전트",
+      "url": "https://github.com/0xPlaygrounds/rig",
+      "category": "모델 출시",
       "lang": "en",
       "isGithub": true,
-      "stars": 76066,
-      "language": "Python",
+      "stars": 7824,
+      "language": "Rust",
       "tags": [
         "agent",
-        "agentic",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
+        "ai",
+        "artificial-intelligence",
+        "automation",
+        "generative-ai"
       ]
     },
     {
-      "id": "gh-626805178",
-      "title": "langgenius/dify — Production-ready platform for agentic workflow development.",
-      "summary": "Production-ready platform for agentic workflow development.",
+      "id": "gh-1128204614",
+      "title": "1jehuang/jcode — Coding Agent Harness",
+      "summary": "Coding Agent Harness",
       "date": "2026-07-04",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/langgenius/dify",
+      "url": "https://github.com/1jehuang/jcode",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 147617,
+      "stars": 8131,
+      "language": "Rust",
+      "tags": [
+        "ai",
+        "ai-agent",
+        "ai-coding-agent",
+        "claude",
+        "cli"
+      ]
+    },
+    {
+      "id": "gh-942312530",
+      "title": "cocoindex-io/cocoindex — Incremental engine for long horizon agents 🌟 Star if you like it!",
+      "summary": "Incremental engine for long horizon agents 🌟 Star if you like it!",
+      "date": "2026-07-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/cocoindex-io/cocoindex",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 10601,
+      "language": "Rust",
+      "tags": [
+        "agentic-data-framework",
+        "ai",
+        "ai-agents",
+        "change-data-capture",
+        "codebase-intelligence"
+      ]
+    },
+    {
+      "id": "gh-839037098",
+      "title": "mastra-ai/mastra — Mastra is the modern TypeScript framework for AI-powered applications and agents.",
+      "summary": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
+      "date": "2026-07-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/mastra-ai/mastra",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 25811,
       "language": "TypeScript",
       "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
+        "agents",
+        "ai",
+        "chatbots",
+        "evals",
+        "javascript"
+      ]
+    },
+    {
+      "id": "gh-764723738",
+      "title": "Skyvern-AI/skyvern — Automate browser based workflows with AI",
+      "summary": "Automate browser based workflows with AI",
+      "date": "2026-07-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/Skyvern-AI/skyvern",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 22111,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "api",
+        "automation",
+        "browser",
+        "browser-automation"
       ]
     },
     {
@@ -1020,69 +1110,25 @@
       ]
     },
     {
-      "id": "gh-1128204614",
-      "title": "1jehuang/jcode — Coding Agent Harness",
-      "summary": "Coding Agent Harness",
+      "id": "gh-643445235",
+      "title": "lobehub/lobehub — 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "summary": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
       "date": "2026-07-04",
       "source": "GitHub",
       "sourceLang": "en",
       "sourceFlag": "🐙",
-      "url": "https://github.com/1jehuang/jcode",
+      "url": "https://github.com/lobehub/lobehub",
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 8127,
-      "language": "Rust",
+      "stars": 79448,
+      "language": "TypeScript",
       "tags": [
+        "agent",
+        "agent-collaboration",
+        "agent-harness",
         "ai",
-        "ai-agent",
-        "ai-coding-agent",
-        "claude",
-        "cli"
-      ]
-    },
-    {
-      "id": "gh-1147094660",
-      "title": "HKUDS/nanobot — Lightweight, open-source AI agent for your tools, chats, and workflows.",
-      "summary": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
-      "date": "2026-07-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/HKUDS/nanobot",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 45000,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "gh-1024554267",
-      "title": "NousResearch/hermes-agent — The agent that grows with you",
-      "summary": "The agent that grows with you",
-      "date": "2026-07-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 209005,
-      "language": "Python",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
+        "cao"
       ]
     },
     {
@@ -1097,7 +1143,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 18689,
+      "stars": 18692,
       "language": "TypeScript",
       "tags": [
         "agent",
@@ -1105,6 +1151,28 @@
         "ai",
         "autonomous",
         "chatbot"
+      ]
+    },
+    {
+      "id": "gh-1020144870",
+      "title": "archestra-ai/archestra — Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "summary": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+      "date": "2026-07-04",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/archestra-ai/archestra",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 3922,
+      "language": "TypeScript",
+      "tags": [
+        "a2a",
+        "a2a-mcp",
+        "acp",
+        "agent",
+        "ai"
       ]
     },
     {
@@ -1119,7 +1187,7 @@
       "category": "에이전트",
       "lang": "en",
       "isGithub": true,
-      "stars": 32146,
+      "stars": 32151,
       "language": "Rust",
       "tags": [
         "agent",
@@ -1127,28 +1195,6 @@
         "ai",
         "infra",
         "ml"
-      ]
-    },
-    {
-      "id": "gh-1193909050",
-      "title": "ogulcancelik/herdr — agent multiplexer that lives in your terminal.",
-      "summary": "agent multiplexer that lives in your terminal.",
-      "date": "2026-07-04",
-      "source": "GitHub",
-      "sourceLang": "en",
-      "sourceFlag": "🐙",
-      "url": "https://github.com/ogulcancelik/herdr",
-      "category": "에이전트",
-      "lang": "en",
-      "isGithub": true,
-      "stars": 11135,
-      "language": "Rust",
-      "tags": [
-        "agent",
-        "agent-orchestration",
-        "ai",
-        "ai-agents",
-        "claude-code"
       ]
     }
   ]

@@ -33,6 +33,13 @@
         "input": 0.14,
         "output": 0.58,
         "context": "262K"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "minimax/minimax-m2.7",
+        "modelName": "MiniMax: MiniMax M2.7",
+        "provider": "MINIMAX",
+        "description": "모델 제거"
       }
     ]
   },

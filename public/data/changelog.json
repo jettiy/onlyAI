@@ -23,6 +23,16 @@
         "newInput": 0.9086,
         "oldOutput": 2.156,
         "newOutput": 2.8556
+      },
+      {
+        "type": "new_model",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "새 모델 추가",
+        "input": 0.14,
+        "output": 0.58,
+        "context": "262K"
       }
     ]
   },

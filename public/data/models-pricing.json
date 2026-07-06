@@ -1,5 +1,17 @@
 [
   {
+    "id": "tencent/hy3",
+    "name": "Tencent: Hy3",
+    "provider": "TENCENT",
+    "input": 0.14,
+    "output": 0.58,
+    "context": "262K",
+    "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configur",
+    "createdAt": 1783344048,
+    "modalities": "text->text",
+    "maxTokens": 131072
+  },
+  {
     "id": "poolside/laguna-xs-2.1",
     "name": "Poolside: Laguna XS 2.1",
     "provider": "POOLSIDE",
@@ -3276,18 +3288,6 @@
     "maxTokens": 32768
   },
   {
-    "id": "inflection/inflection-3-productivity",
-    "name": "Inflection: Inflection 3 Productivity",
-    "provider": "INFLECTION",
-    "input": 2.5,
-    "output": 10,
-    "context": "8K",
-    "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional",
-    "createdAt": 1728604800,
-    "modalities": "text->text",
-    "maxTokens": 1024
-  },
-  {
     "id": "inflection/inflection-3-pi",
     "name": "Inflection: Inflection 3 Pi",
     "provider": "INFLECTION",
@@ -3295,6 +3295,18 @@
     "output": 10,
     "context": "8K",
     "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like custo",
+    "createdAt": 1728604800,
+    "modalities": "text->text",
+    "maxTokens": 1024
+  },
+  {
+    "id": "inflection/inflection-3-productivity",
+    "name": "Inflection: Inflection 3 Productivity",
+    "provider": "INFLECTION",
+    "input": 2.5,
+    "output": 10,
+    "context": "8K",
+    "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional",
     "createdAt": 1728604800,
     "modalities": "text->text",
     "maxTokens": 1024
@@ -3480,8 +3492,8 @@
     "maxTokens": null
   },
   {
-    "id": "openai/gpt-4o-mini",
-    "name": "OpenAI: GPT-4o-mini",
+    "id": "openai/gpt-4o-mini-2024-07-18",
+    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
     "provider": "OPENAI",
     "input": 0.15,
     "output": 0.6,
@@ -3492,8 +3504,8 @@
     "maxTokens": 16384
   },
   {
-    "id": "openai/gpt-4o-mini-2024-07-18",
-    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+    "id": "openai/gpt-4o-mini",
+    "name": "OpenAI: GPT-4o-mini",
     "provider": "OPENAI",
     "input": 0.15,
     "output": 0.6,

@@ -48,6 +48,26 @@
         "modelName": "AionLabs: Aion-1.0-Mini",
         "provider": "AION-LABS",
         "description": "모델 제거"
+      },
+      {
+        "type": "new_model",
+        "modelId": "aion-labs/aion-3.0-mini",
+        "modelName": "AionLabs: Aion-3.0-Mini",
+        "provider": "AION-LABS",
+        "description": "새 모델 추가",
+        "input": 0.7,
+        "output": 1.4,
+        "context": "131K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "aion-labs/aion-3.0",
+        "modelName": "AionLabs: Aion-3.0",
+        "provider": "AION-LABS",
+        "description": "새 모델 추가",
+        "input": 3,
+        "output": 6,
+        "context": "131K"
       }
     ]
   },

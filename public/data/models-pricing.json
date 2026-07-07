@@ -99,13 +99,13 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.8999999999999999,
-    "output": 2.8600000000000003,
+    "input": 0.9299999999999999,
+    "output": 3,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,
     "modalities": "text->text",
-    "maxTokens": 1048576
+    "maxTokens": 32768
   },
   {
     "id": "moonshotai/kimi-k2.7-code",
@@ -2974,30 +2974,6 @@
     "createdAt": 1739372611,
     "modalities": "text+file->text",
     "maxTokens": 100000
-  },
-  {
-    "id": "aion-labs/aion-1.0",
-    "name": "AionLabs: Aion-1.0",
-    "provider": "AION-LABS",
-    "input": 4,
-    "output": 8,
-    "context": "131K",
-    "description": "Aion-1.0 is a multi-model system designed for high performance across various tasks, including reasoning and coding. It is built on DeepSeek-R1, augmented with additional models and techniques such as",
-    "createdAt": 1738697557,
-    "modalities": "text->text",
-    "maxTokens": 32768
-  },
-  {
-    "id": "aion-labs/aion-1.0-mini",
-    "name": "AionLabs: Aion-1.0-Mini",
-    "provider": "AION-LABS",
-    "input": 0.7,
-    "output": 1.4,
-    "context": "131K",
-    "description": "Aion-1.0-Mini 32B parameter model is a distilled version of the DeepSeek-R1 model, designed for strong performance in reasoning domains such as mathematics, coding, and logic. It is a modified variant",
-    "createdAt": 1738697107,
-    "modalities": "text->text",
-    "maxTokens": 32768
   },
   {
     "id": "aion-labs/aion-rp-llama-3.1-8b",

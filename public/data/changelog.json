@@ -23,6 +23,31 @@
         "newInput": 0.8999999999999999,
         "oldOutput": 2.8556,
         "newOutput": 2.8600000000000003
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8999999999999999,
+        "newInput": 0.9299999999999999,
+        "oldOutput": 2.8600000000000003,
+        "newOutput": 3
+      },
+      {
+        "type": "model_removed",
+        "modelId": "aion-labs/aion-1.0",
+        "modelName": "AionLabs: Aion-1.0",
+        "provider": "AION-LABS",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "aion-labs/aion-1.0-mini",
+        "modelName": "AionLabs: Aion-1.0-Mini",
+        "provider": "AION-LABS",
+        "description": "모델 제거"
       }
     ]
   },

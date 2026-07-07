@@ -3329,11 +3329,11 @@
     "provider": "THEDRUMMER",
     "input": 0.25,
     "output": 0.5,
-    "context": "33K",
+    "context": "66K",
     "description": "Rocinante 12B is designed for engaging storytelling and rich prose. Early testers have reported: - Expanded vocabulary with unique and expressive word choices - Enhanced creativity for vivid narrative",
     "createdAt": 1727654400,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 65536
   },
   {
     "id": "meta-llama/llama-3.2-1b-instruct",

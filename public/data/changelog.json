@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-07-07",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.14,
+        "newInput": 0.19999999999999998,
+        "oldOutput": 0.58,
+        "newOutput": 0.7999999999999999
+      }
+    ]
+  },
+  {
     "date": "2026-07-06",
     "items": [
       {

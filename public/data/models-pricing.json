@@ -272,7 +272,7 @@
     "context": "256K",
     "description": "Grok Build 0.1 is xAI’s fast coding model trained specifically for agentic software engineering workflows. It supports text and image inputs with text output, and is optimized for interactive coding..",
     "createdAt": 1779298123,
-    "modalities": "text+image->text",
+    "modalities": "text+image+file->text",
     "maxTokens": null
   },
   {

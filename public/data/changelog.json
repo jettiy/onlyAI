@@ -44,6 +44,38 @@
         "newInput": 0.56,
         "oldOutput": 3,
         "newOutput": 1.76
+      },
+      {
+        "type": "new_model",
+        "modelId": "x-ai/grok-4.5",
+        "modelName": "xAI: Grok 4.5",
+        "provider": "X-AI",
+        "description": "새 모델 추가",
+        "input": 2,
+        "output": 6,
+        "context": "500K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~x-ai/grok-latest",
+        "modelName": "xAI: Grok Latest",
+        "provider": "~X-AI",
+        "description": "가격 변동",
+        "oldInput": 1.25,
+        "newInput": 2,
+        "oldOutput": 2.5,
+        "newOutput": 6
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.56,
+        "newInput": 0.42,
+        "oldOutput": 1.76,
+        "newOutput": 1.32
       }
     ]
   },

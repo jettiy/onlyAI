@@ -1,5 +1,42 @@
 [
   {
+    "date": "2026-07-08",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "~x-ai/grok-latest",
+        "modelName": "xAI: Grok Latest",
+        "provider": "~X-AI",
+        "description": "새 모델 추가",
+        "input": 1.25,
+        "output": 2.5,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.66,
+        "newInput": 0.65,
+        "oldOutput": 3.41,
+        "newOutput": 3.41
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.6",
+        "modelName": "MoonshotAI: Kimi K2.6",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.66,
+        "newInput": 0.65,
+        "oldOutput": 3.41,
+        "newOutput": 3.41
+      }
+    ]
+  },
+  {
     "date": "2026-07-07",
     "items": [
       {

@@ -1,6 +1,17 @@
 [
   {
     "rank": 1,
+    "model": "xAI: Grok Latest",
+    "provider": "~X-AI",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "NEW",
+    "category": "flagship",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 2,
     "model": "AionLabs: Aion-3.0-Mini",
     "provider": "AION-LABS",
     "tokens": "LIVE",
@@ -11,7 +22,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 2,
+    "rank": 3,
     "model": "AionLabs: Aion-3.0",
     "provider": "AION-LABS",
     "tokens": "LIVE",
@@ -22,7 +33,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 3,
+    "rank": 4,
     "model": "Tencent: Hy3 (free)",
     "provider": "TENCENT",
     "tokens": "LIVE",
@@ -33,7 +44,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 4,
+    "rank": 5,
     "model": "Tencent: Hy3",
     "provider": "TENCENT",
     "tokens": "LIVE",
@@ -44,19 +55,8 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 5,
-    "model": "Poolside: Laguna XS 2.1 (free)",
-    "provider": "POOLSIDE",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "NEW",
-    "category": "flagship",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
     "rank": 6,
-    "model": "Poolside: Laguna XS 2.1",
+    "model": "Poolside: Laguna XS 2.1 (free)",
     "provider": "POOLSIDE",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -67,6 +67,17 @@
   },
   {
     "rank": 7,
+    "model": "Poolside: Laguna XS 2.1",
+    "provider": "POOLSIDE",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "value",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 8,
     "model": "Anthropic: Claude Sonnet 5",
     "provider": "ANTHROPIC",
     "tokens": "LIVE",
@@ -77,7 +88,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 8,
+    "rank": 9,
     "model": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
     "provider": "GOOGLE",
     "tokens": "LIVE",
@@ -88,7 +99,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 9,
+    "rank": 10,
     "model": "Nex AGI: Nex-N2-Mini",
     "provider": "NEX-AGI",
     "tokens": "LIVE",
@@ -99,7 +110,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 10,
+    "rank": 11,
     "model": "Sakana: Fugu Ultra",
     "provider": "SAKANA",
     "tokens": "LIVE",
@@ -110,7 +121,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 11,
+    "rank": 12,
     "model": "Google: Nano Banana 2 (Gemini 3.1 Flash Image)",
     "provider": "GOOGLE",
     "tokens": "LIVE",
@@ -121,18 +132,18 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 12,
+    "rank": 13,
     "model": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
     "provider": "GOOGLE",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,
     "change": "",
-    "category": "value",
+    "category": "free",
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 13,
+    "rank": 14,
     "model": "Cohere: North Mini Code (free)",
     "provider": "COHERE",
     "tokens": "LIVE",
@@ -143,7 +154,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 14,
+    "rank": 15,
     "model": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
     "tokens": "LIVE",
@@ -154,7 +165,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 15,
+    "rank": 16,
     "model": "OpenRouter: Fusion",
     "provider": "OPENROUTER",
     "tokens": "LIVE",
@@ -165,7 +176,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 16,
+    "rank": 17,
     "model": "MoonshotAI: Kimi K2.7 Code",
     "provider": "MOONSHOTAI",
     "tokens": "LIVE",
@@ -176,7 +187,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 17,
+    "rank": 18,
     "model": "Anthropic: Claude Fable Latest",
     "provider": "~ANTHROPIC",
     "tokens": "LIVE",
@@ -187,7 +198,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 18,
+    "rank": 19,
     "model": "Anthropic: Claude Fable 5",
     "provider": "ANTHROPIC",
     "tokens": "LIVE",
@@ -198,20 +209,9 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 19,
+    "rank": 20,
     "model": "Nex AGI: Nex-N2-Pro",
     "provider": "NEX-AGI",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 20,
-    "model": "NVIDIA: Nemotron 3.5 Content Safety (free)",
-    "provider": "NVIDIA",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,

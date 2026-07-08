@@ -76,6 +76,17 @@
         "newInput": 0.42,
         "oldOutput": 1.76,
         "newOutput": 1.32
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.19999999999999998,
+        "newInput": 0.14,
+        "oldOutput": 0.7999999999999999,
+        "newOutput": 0.58
       }
     ]
   },

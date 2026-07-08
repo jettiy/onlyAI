@@ -51,13 +51,13 @@
     "id": "tencent/hy3",
     "name": "Tencent: Hy3",
     "provider": "TENCENT",
-    "input": 0.19999999999999998,
-    "output": 0.7999999999999999,
+    "input": 0.14,
+    "output": 0.58,
     "context": "262K",
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configur",
     "createdAt": 1783344048,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": null
   },
   {
     "id": "poolside/laguna-xs-2.1",

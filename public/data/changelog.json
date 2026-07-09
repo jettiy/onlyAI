@@ -12,6 +12,24 @@
         "newInput": 0.8999999999999999,
         "oldOutput": 1.32,
         "newOutput": 3.08
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8999999999999999,
+        "newInput": 0.84,
+        "oldOutput": 3.08,
+        "newOutput": 2.64
+      },
+      {
+        "type": "model_removed",
+        "modelId": "switchpoint/router",
+        "modelName": "Switchpoint Router",
+        "provider": "SWITCHPOINT",
+        "description": "모델 제거"
       }
     ]
   },

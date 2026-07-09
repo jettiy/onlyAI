@@ -309,7 +309,7 @@
     "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
     "createdAt": 1780245374,
     "modalities": "text+image+video->text",
-    "maxTokens": 512000
+    "maxTokens": 131072
   },
   {
     "id": "stepfun/step-3.7-flash",
@@ -531,7 +531,7 @@
     "id": "~moonshotai/kimi-latest",
     "name": "MoonshotAI Kimi Latest",
     "provider": "~MOONSHOTAI",
-    "input": 0.65,
+    "input": 0.66,
     "output": 3.41,
     "context": "262K",
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
@@ -771,7 +771,7 @@
     "id": "moonshotai/kimi-k2.6",
     "name": "MoonshotAI: Kimi K2.6",
     "provider": "MOONSHOTAI",
-    "input": 0.65,
+    "input": 0.66,
     "output": 3.41,
     "context": "262K",
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks",

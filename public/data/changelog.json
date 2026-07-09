@@ -59,6 +59,75 @@
         "newInput": 0.9299999999999999,
         "oldOutput": 3.08,
         "newOutput": 3
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9299999999999999,
+        "newInput": 0.546,
+        "oldOutput": 3,
+        "newOutput": 1.716
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.74,
+        "newInput": 0.72,
+        "oldOutput": 3.5,
+        "newOutput": 3.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.7",
+        "modelName": "MiniMax: MiniMax M2.7",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.18,
+        "newInput": 0.24,
+        "oldOutput": 0.72,
+        "newOutput": 0.96
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.15,
+        "oldOutput": 0.48,
+        "newOutput": 0.8999999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.03,
+        "newInput": 0.036,
+        "oldOutput": 0.15,
+        "newOutput": 0.18
+      },
+      {
+        "type": "model_removed",
+        "modelId": "poolside/laguna-xs.2",
+        "modelName": "Poolside: Laguna XS.2",
+        "provider": "POOLSIDE",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "google/gemini-2.5-flash-lite-preview-09-2025",
+        "modelName": "Google: Gemini 2.5 Flash Lite Preview 09-2025",
+        "provider": "GOOGLE",
+        "description": "모델 제거"
       }
     ]
   },

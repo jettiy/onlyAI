@@ -88,6 +88,13 @@
         "newInput": 0.08399999999999999,
         "oldOutput": 0.18,
         "newOutput": 0.16799999999999998
+      },
+      {
+        "type": "model_removed",
+        "modelId": "arcee-ai/trinity-mini",
+        "modelName": "Arcee AI: Trinity Mini",
+        "provider": "ARCEE-AI",
+        "description": "모델 제거"
       }
     ]
   },

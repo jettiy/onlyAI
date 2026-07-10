@@ -1608,18 +1608,6 @@
     "maxTokens": null
   },
   {
-    "id": "arcee-ai/trinity-mini",
-    "name": "Arcee AI: Trinity Mini",
-    "provider": "ARCEE-AI",
-    "input": 0.045,
-    "output": 0.15,
-    "context": "131K",
-    "description": "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with ro",
-    "createdAt": 1764601720,
-    "modalities": "text->text",
-    "maxTokens": 131072
-  },
-  {
     "id": "deepseek/deepseek-v3.2",
     "name": "DeepSeek: DeepSeek V3.2",
     "provider": "DEEPSEEK",

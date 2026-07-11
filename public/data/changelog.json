@@ -74,6 +74,17 @@
         "newInput": 0.35,
         "oldOutput": 1.232,
         "newOutput": 1.1
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.72,
+        "newInput": 0.72,
+        "oldOutput": 3.49,
+        "newOutput": 3.5
       }
     ]
   },

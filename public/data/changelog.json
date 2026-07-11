@@ -8,6 +8,39 @@
         "modelName": "Meta: Llama 3 8B Instruct",
         "provider": "META-LLAMA",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.42,
+        "newInput": 0.406,
+        "oldOutput": 1.32,
+        "newOutput": 1.276
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.72,
+        "newInput": 0.72,
+        "oldOutput": 3.49,
+        "newOutput": 3.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.08399999999999999,
+        "newInput": 0.077,
+        "oldOutput": 0.16799999999999998,
+        "newOutput": 0.154
       }
     ]
   },

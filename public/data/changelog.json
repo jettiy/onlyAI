@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-07-11",
+    "items": [
+      {
+        "type": "model_removed",
+        "modelId": "meta-llama/llama-3-8b-instruct",
+        "modelName": "Meta: Llama 3 8B Instruct",
+        "provider": "META-LLAMA",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-07-10",
     "items": [
       {

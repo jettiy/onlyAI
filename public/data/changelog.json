@@ -34,6 +34,39 @@
         "newInput": 0.25,
         "oldOutput": 1,
         "newOutput": 0.75
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-4.6",
+        "modelName": "Z.ai: GLM 4.6",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.43,
+        "newInput": 0.43,
+        "oldOutput": 1.74,
+        "newOutput": 1.75
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-235b-a22b-2507",
+        "modelName": "Qwen: Qwen3 235B A22B Instruct 2507",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.09,
+        "oldOutput": 0.09999999999999999,
+        "newOutput": 0.55
+      },
+      {
+        "type": "price_change",
+        "modelId": "meta-llama/llama-4-maverick",
+        "modelName": "Meta: Llama 4 Maverick",
+        "provider": "META-LLAMA",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.19999999999999998,
+        "oldOutput": 0.6,
+        "newOutput": 0.7999999999999999
       }
     ]
   },

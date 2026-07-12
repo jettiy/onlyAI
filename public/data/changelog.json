@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-07-12",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.35,
+        "newInput": 0.896,
+        "oldOutput": 1.1,
+        "newOutput": 2.816
+      }
+    ]
+  },
+  {
     "date": "2026-07-11",
     "items": [
       {

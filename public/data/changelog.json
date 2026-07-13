@@ -56,6 +56,17 @@
         "newInput": 0.09,
         "oldOutput": 0.154,
         "newOutput": 0.18
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.036,
+        "newInput": 0.03,
+        "oldOutput": 0.18,
+        "newOutput": 0.15
       }
     ]
   },

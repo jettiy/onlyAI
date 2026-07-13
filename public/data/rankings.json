@@ -111,17 +111,6 @@
   },
   {
     "rank": 11,
-    "model": "Tencent: Hy3 (free)",
-    "provider": "TENCENT",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 12,
     "model": "Tencent: Hy3",
     "provider": "TENCENT",
     "tokens": "LIVE",
@@ -132,8 +121,19 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
+    "rank": 12,
+    "model": "Tencent: Hy3 (free)",
+    "provider": "TENCENT",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "value",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
     "rank": 13,
-    "model": "Poolside: Laguna XS 2.1 (free)",
+    "model": "Poolside: Laguna XS 2.1",
     "provider": "POOLSIDE",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -144,7 +144,7 @@
   },
   {
     "rank": 14,
-    "model": "Poolside: Laguna XS 2.1",
+    "model": "Poolside: Laguna XS 2.1 (free)",
     "provider": "POOLSIDE",
     "tokens": "LIVE",
     "tokensNum": 0,

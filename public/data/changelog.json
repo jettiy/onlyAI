@@ -45,6 +45,17 @@
         "newInput": 0.25,
         "oldOutput": 0.7899999999999999,
         "newOutput": 0.95
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.077,
+        "newInput": 0.09,
+        "oldOutput": 0.154,
+        "newOutput": 0.18
       }
     ]
   },

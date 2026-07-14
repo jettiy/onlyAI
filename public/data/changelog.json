@@ -76,6 +76,24 @@
         "newInput": 0.9254,
         "oldOutput": 2.9172000000000002,
         "newOutput": 2.9084
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9254,
+        "newInput": 0.9239999999999999,
+        "oldOutput": 2.9084,
+        "newOutput": 2.904
+      },
+      {
+        "type": "model_removed",
+        "modelId": "sao10k/l3.1-70b-hanami-x1",
+        "modelName": "Sao10K: Llama 3.1 70B Hanami x1",
+        "provider": "SAO10K",
+        "description": "모델 제거"
       }
     ]
   },

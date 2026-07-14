@@ -12,6 +12,37 @@
         "newInput": 0.28900000000000003,
         "oldOutput": 2.4,
         "newOutput": 2.4
+      },
+      {
+        "type": "new_model",
+        "modelId": "kwaipilot/kat-coder-air-v2.5",
+        "modelName": "Kwaipilot: KAT-Coder-Air V2.5",
+        "provider": "KWAIPILOT",
+        "description": "새 모델 추가",
+        "input": 0.15,
+        "output": 0.6,
+        "context": "256K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "kwaipilot/kat-coder-pro-v2.5",
+        "modelName": "Kwaipilot: KAT-Coder-Pro V2.5",
+        "provider": "KWAIPILOT",
+        "description": "새 모델 추가",
+        "input": 0.74,
+        "output": 2.96,
+        "context": "256K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9299999999999999,
+        "newInput": 0.9296,
+        "oldOutput": 3,
+        "newOutput": 2.9216
       }
     ]
   },

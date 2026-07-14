@@ -94,6 +94,17 @@
         "modelName": "Sao10K: Llama 3.1 70B Hanami x1",
         "provider": "SAO10K",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9239999999999999,
+        "newInput": 0.9099999999999999,
+        "oldOutput": 2.904,
+        "newOutput": 2.8600000000000003
       }
     ]
   },

@@ -147,13 +147,13 @@
     "id": "tencent/hy3",
     "name": "Tencent: Hy3",
     "provider": "TENCENT",
-    "input": 0.14,
-    "output": 0.58,
+    "input": 0.19999999999999998,
+    "output": 0.7999999999999999,
     "context": "262K",
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configur",
     "createdAt": 1783344048,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 131072
   },
   {
     "id": "poolside/laguna-xs-2.1",
@@ -243,13 +243,13 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.896,
-    "output": 2.816,
+    "input": 0.8932,
+    "output": 2.8072,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,
     "modalities": "text->text",
-    "maxTokens": 128000
+    "maxTokens": 131072
   },
   {
     "id": "moonshotai/kimi-k2.7-code",
@@ -303,13 +303,13 @@
     "id": "nvidia/nemotron-3-ultra-550b-a55b",
     "name": "NVIDIA: Nemotron 3 Ultra",
     "provider": "NVIDIA",
-    "input": 0.5,
-    "output": 2.2,
+    "input": 0.6,
+    "output": 3.5999999999999996,
     "context": "1M",
     "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts ar",
     "createdAt": 1780551208,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": null
   },
   {
     "id": "qwen/qwen3.7-plus",
@@ -333,7 +333,7 @@
     "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
     "createdAt": 1780245374,
     "modalities": "text+image+video->text",
-    "maxTokens": 131072
+    "maxTokens": 512000
   },
   {
     "id": "stepfun/step-3.7-flash",
@@ -651,13 +651,13 @@
     "id": "qwen/qwen3.6-27b",
     "name": "Qwen: Qwen3.6 27B",
     "provider": "QWEN",
-    "input": 0.28900000000000003,
-    "output": 2.4,
+    "input": 0.44999999999999996,
+    "output": 2.7,
     "context": "262K",
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs..",
     "createdAt": 1777255064,
     "modalities": "text+image+video->text",
-    "maxTokens": 131072
+    "maxTokens": 65536
   },
   {
     "id": "openai/gpt-5.5-pro",
@@ -699,13 +699,13 @@
     "id": "deepseek/deepseek-v4-flash",
     "name": "DeepSeek: DeepSeek V4 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.09,
-    "output": 0.18,
+    "input": 0.098,
+    "output": 0.196,
     "context": "1M",
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa",
     "createdAt": 1777000666,
     "modalities": "text->text",
-    "maxTokens": 65536
+    "maxTokens": null
   },
   {
     "id": "inclusionai/ling-2.6-1t",
@@ -747,13 +747,13 @@
     "id": "xiaomi/mimo-v2.5",
     "name": "Xiaomi: MiMo-V2.5",
     "provider": "XIAOMI",
-    "input": 0.105,
+    "input": 0.14,
     "output": 0.28,
     "context": "1M",
     "description": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and v",
     "createdAt": 1776874269,
     "modalities": "text+image+audio+video->text",
-    "maxTokens": null
+    "maxTokens": 131072
   },
   {
     "id": "openai/gpt-5.4-image-2",
@@ -831,25 +831,25 @@
     "id": "google/gemma-4-26b-a4b-it",
     "name": "Google: Gemma 4 26B A4B ",
     "provider": "GOOGLE",
-    "input": 0.06,
-    "output": 0.33,
+    "input": 0.09999999999999999,
+    "output": 0.3,
     "context": "262K",
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual",
     "createdAt": 1775227989,
     "modalities": "text+image+video->text",
-    "maxTokens": null
+    "maxTokens": 256000
   },
   {
     "id": "google/gemma-4-31b-it",
     "name": "Google: Gemma 4 31B",
     "provider": "GOOGLE",
     "input": 0.12,
-    "output": 0.35,
+    "output": 0.37,
     "context": "262K",
     "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat",
     "createdAt": 1775148486,
     "modalities": "text+image+video->text",
-    "maxTokens": 262144
+    "maxTokens": 16384
   },
   {
     "id": "qwen/qwen3.6-plus",
@@ -939,13 +939,13 @@
     "id": "minimax/minimax-m2.7",
     "name": "MiniMax: MiniMax M2.7",
     "provider": "MINIMAX",
-    "input": 0.24,
-    "output": 0.96,
+    "input": 0.3,
+    "output": 1.2,
     "context": "205K",
     "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates ",
     "createdAt": 1773836697,
     "modalities": "text->text",
-    "maxTokens": 196608
+    "maxTokens": 131072
   },
   {
     "id": "openai/gpt-5.4-nano",
@@ -989,7 +989,7 @@
     "provider": "Z-AI",
     "input": 1.2,
     "output": 4,
-    "context": "262K",
+    "context": "203K",
     "description": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows..",
     "createdAt": 1773583573,
     "modalities": "text->text",
@@ -999,8 +999,8 @@
     "id": "nvidia/nemotron-3-super-120b-a12b",
     "name": "NVIDIA: Nemotron 3 Super",
     "provider": "NVIDIA",
-    "input": 0.08,
-    "output": 0.44999999999999996,
+    "input": 0.21,
+    "output": 0.45499999999999996,
     "context": "1M",
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mam",
     "createdAt": 1773245239,
@@ -1125,7 +1125,7 @@
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inf",
     "createdAt": 1772053822,
     "modalities": "text+image+video->text",
-    "maxTokens": 81920
+    "maxTokens": 262144
   },
   {
     "id": "qwen/qwen3.5-27b",
@@ -1149,7 +1149,7 @@
     "description": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference eff",
     "createdAt": 1772053789,
     "modalities": "text+image+video->text",
-    "maxTokens": 262144
+    "maxTokens": 65536
   },
   {
     "id": "qwen/qwen3.5-flash-02-23",
@@ -1239,13 +1239,13 @@
     "id": "qwen/qwen3.5-397b-a17b",
     "name": "Qwen: Qwen3.5 397B A17B",
     "provider": "QWEN",
-    "input": 0.385,
-    "output": 2.4499999999999997,
-    "context": "256K",
+    "input": 0.44999999999999996,
+    "output": 3,
+    "context": "262K",
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher infere",
     "createdAt": 1771223018,
     "modalities": "text+image+video->text",
-    "maxTokens": null
+    "maxTokens": 65536
   },
   {
     "id": "minimax/minimax-m2.5",
@@ -1263,13 +1263,13 @@
     "id": "z-ai/glm-5",
     "name": "Z.ai: GLM 5",
     "provider": "Z-AI",
-    "input": 0.6,
-    "output": 1.92,
+    "input": 0.95,
+    "output": 3.15,
     "context": "203K",
     "description": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on l",
     "createdAt": 1770829182,
     "modalities": "text->text",
-    "maxTokens": 128000
+    "maxTokens": 202752
   },
   {
     "id": "qwen/qwen3-max-thinking",
@@ -1299,7 +1299,7 @@
     "id": "qwen/qwen3-coder-next",
     "name": "Qwen: Qwen3 Coder Next",
     "provider": "QWEN",
-    "input": 0.11,
+    "input": 0.12,
     "output": 0.7999999999999999,
     "context": "262K",
     "description": "Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per...",
@@ -1323,13 +1323,13 @@
     "id": "moonshotai/kimi-k2.5",
     "name": "MoonshotAI: Kimi K2.5",
     "provider": "MOONSHOTAI",
-    "input": 0.375,
-    "output": 2.025,
+    "input": 0.5700000000000001,
+    "output": 2.8499999999999996,
     "context": "262K",
     "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over appr",
     "createdAt": 1769487076,
     "modalities": "text+image->text",
-    "maxTokens": null
+    "maxTokens": 262144
   },
   {
     "id": "upstage/solar-pro-3",
@@ -1395,13 +1395,13 @@
     "id": "z-ai/glm-4.7-flash",
     "name": "Z.ai: GLM 4.7 Flash",
     "provider": "Z-AI",
-    "input": 0.06,
+    "input": 0.060500000000000005,
     "output": 0.39999999999999997,
-    "context": "203K",
+    "context": "200K",
     "description": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency. It is further optimized for agentic coding use cases, strengthening coding capabilities, long-hor",
     "createdAt": 1768833913,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 131072
   },
   {
     "id": "openai/gpt-5.2-codex",
@@ -1635,13 +1635,13 @@
     "id": "deepseek/deepseek-v3.2",
     "name": "DeepSeek: DeepSeek V3.2",
     "provider": "DEEPSEEK",
-    "input": 0.2145,
-    "output": 0.32175,
-    "context": "131K",
+    "input": 0.26899999999999996,
+    "output": 0.39999999999999997,
+    "context": "164K",
     "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fin",
     "createdAt": 1764594642,
     "modalities": "text->text",
-    "maxTokens": 64000
+    "maxTokens": 65536
   },
   {
     "id": "anthropic/claude-opus-4.5",
@@ -1713,7 +1713,7 @@
     "description": "GPT-5.1 Chat (AKA Instant is the fast, lightweight member of the 5.1 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively “thin",
     "createdAt": 1763060302,
     "modalities": "text+image+file->text",
-    "maxTokens": 32000
+    "maxTokens": 16384
   },
   {
     "id": "openai/gpt-5.1-codex",
@@ -1749,7 +1749,7 @@
     "description": "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) arc",
     "createdAt": 1762440622,
     "modalities": "text->text",
-    "maxTokens": 100352
+    "maxTokens": 262144
   },
   {
     "id": "amazon/nova-premier-v1",
@@ -1941,7 +1941,7 @@
     "description": "Gemini 2.5 Flash Image, a.k.a. \"Nano Banana,\" is now generally available. It is a state of the art image generation model with contextual understanding. It is capable of image generation,...",
     "createdAt": 1759870431,
     "modalities": "text+image->text+image",
-    "maxTokens": 32768
+    "maxTokens": 8192
   },
   {
     "id": "qwen/qwen3-vl-30b-a3b-thinking",
@@ -1983,13 +1983,13 @@
     "id": "z-ai/glm-4.6",
     "name": "Z.ai: GLM 4.6",
     "provider": "Z-AI",
-    "input": 0.43,
-    "output": 1.75,
-    "context": "200K",
+    "input": 0.5,
+    "output": 2,
+    "context": "203K",
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex.",
     "createdAt": 1759235576,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 131072
   },
   {
     "id": "anthropic/claude-sonnet-4.5",
@@ -2055,13 +2055,13 @@
     "id": "qwen/qwen3-vl-235b-a22b-instruct",
     "name": "Qwen: Qwen3 VL 235B A22B Instruct",
     "provider": "QWEN",
-    "input": 0.19999999999999998,
-    "output": 0.88,
-    "context": "262K",
+    "input": 0.21,
+    "output": 1.9,
+    "context": "131K",
     "description": "Qwen3-VL-235B-A22B Instruct is an open-weight multimodal model that unifies strong text generation with visual understanding across images and video. The Instruct model targets general vision-language",
     "createdAt": 1758668687,
     "modalities": "text+image->text",
-    "maxTokens": 16384
+    "maxTokens": 32768
   },
   {
     "id": "qwen/qwen3-max",
@@ -2104,8 +2104,8 @@
     "name": "DeepSeek: DeepSeek V3.1 Terminus",
     "provider": "DEEPSEEK",
     "input": 0.27,
-    "output": 0.95,
-    "context": "164K",
+    "output": 1,
+    "context": "131K",
     "description": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language cons",
     "createdAt": 1758548275,
     "modalities": "text->text",
@@ -2139,13 +2139,13 @@
     "id": "qwen/qwen3-next-80b-a3b-instruct",
     "name": "Qwen: Qwen3 Next 80B A3B Instruct",
     "provider": "QWEN",
-    "input": 0.09,
+    "input": 0.09999999999999999,
     "output": 1.1,
     "context": "262K",
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code ",
     "createdAt": 1757612213,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 262144
   },
   {
     "id": "qwen/qwen-plus-2025-07-28",
@@ -2319,8 +2319,8 @@
     "id": "openai/gpt-oss-120b",
     "name": "OpenAI: gpt-oss-120b",
     "provider": "OPENAI",
-    "input": 0.03,
-    "output": 0.15,
+    "input": 0.037,
+    "output": 0.16999999999999998,
     "context": "131K",
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B par",
     "createdAt": 1754414231,
@@ -2331,13 +2331,13 @@
     "id": "openai/gpt-oss-20b",
     "name": "OpenAI: gpt-oss-20b",
     "provider": "OPENAI",
-    "input": 0.029,
-    "output": 0.14,
+    "input": 0.03,
+    "output": 0.13,
     "context": "131K",
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimiz",
     "createdAt": 1754414229,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 131072
   },
   {
     "id": "anthropic/claude-opus-4.1",
@@ -2379,13 +2379,13 @@
     "id": "qwen/qwen3-30b-a3b-instruct-2507",
     "name": "Qwen: Qwen3 30B A3B Instruct 2507",
     "provider": "QWEN",
-    "input": 0.04815,
-    "output": 0.19305,
-    "context": "131K",
+    "input": 0.09999999999999999,
+    "output": 0.3,
+    "context": "262K",
     "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quali",
     "createdAt": 1753806965,
     "modalities": "text->text",
-    "maxTokens": 32000
+    "maxTokens": null
   },
   {
     "id": "z-ai/glm-4.5",
@@ -2427,8 +2427,8 @@
     "id": "qwen/qwen3-coder",
     "name": "Qwen: Qwen3 Coder 480B A35B",
     "provider": "QWEN",
-    "input": 0.22,
-    "output": 1.7999999999999998,
+    "input": 0.3,
+    "output": 1,
     "context": "1M",
     "description": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-con",
     "createdAt": 1753230546,
@@ -2547,19 +2547,19 @@
     "id": "mistralai/mistral-small-3.2-24b-instruct",
     "name": "Mistral: Mistral Small 3.2 24B",
     "provider": "MISTRALAI",
-    "input": 0.075,
-    "output": 0.19999999999999998,
-    "context": "128K",
+    "input": 0.09999999999999999,
+    "output": 0.3,
+    "context": "131K",
     "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release",
     "createdAt": 1750443016,
     "modalities": "text+image->text",
-    "maxTokens": 16384
+    "maxTokens": null
   },
   {
     "id": "minimax/minimax-m1",
     "name": "MiniMax: MiniMax M1",
     "provider": "MINIMAX",
-    "input": 0.39999999999999997,
+    "input": 0.55,
     "output": 2.2,
     "context": "1M",
     "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"",
@@ -2829,7 +2829,7 @@
     "description": "GPT-4.1 is a flagship large language model optimized for advanced instruction following, real-world software engineering, and long-context reasoning. It supports a 1 million token context window and o",
     "createdAt": 1744651385,
     "modalities": "text+image+file->text",
-    "maxTokens": null
+    "maxTokens": 32768
   },
   {
     "id": "openai/gpt-4.1-mini",
@@ -2883,13 +2883,13 @@
     "id": "deepseek/deepseek-chat-v3-0324",
     "name": "DeepSeek: DeepSeek V3 0324",
     "provider": "DEEPSEEK",
-    "input": 0.24,
-    "output": 0.8999999999999999,
+    "input": 0.27,
+    "output": 1.12,
     "context": "164K",
     "description": "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team. It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) mod",
     "createdAt": 1742824755,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 65536
   },
   {
     "id": "openai/o1-pro",
@@ -2992,12 +2992,12 @@
     "name": "Google: Gemma 3 27B",
     "provider": "GOOGLE",
     "input": 0.08,
-    "output": 0.16,
+    "output": 0.44999999999999996,
     "context": "131K",
     "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, ",
     "createdAt": 1741756359,
     "modalities": "text+image->text",
-    "maxTokens": 16384
+    "maxTokens": 131072
   },
   {
     "id": "thedrummer/skyfall-36b-v2",
@@ -3087,13 +3087,13 @@
     "id": "qwen/qwen2.5-vl-72b-instruct",
     "name": "Qwen: Qwen2.5 VL 72B Instruct",
     "provider": "QWEN",
-    "input": 0.25,
-    "output": 0.75,
+    "input": 0.7999999999999999,
+    "output": 1,
     "context": "131K",
     "description": "Qwen2.5-VL is proficient in recognizing common objects such as flowers, birds, fish, and insects. It is also highly capable of analyzing texts, charts, icons, graphics, and layouts within images.",
     "createdAt": 1738410311,
     "modalities": "text+image->text",
-    "maxTokens": null
+    "maxTokens": 128000
   },
   {
     "id": "qwen/qwen-plus",
@@ -3243,13 +3243,13 @@
     "id": "meta-llama/llama-3.3-70b-instruct",
     "name": "Meta: Llama 3.3 70B Instruct",
     "provider": "META-LLAMA",
-    "input": 0.09999999999999999,
-    "output": 0.32,
+    "input": 0.13,
+    "output": 0.39999999999999997,
     "context": "131K",
     "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
     "createdAt": 1733506137,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 128000
   },
   {
     "id": "amazon/nova-lite-v1",
@@ -3423,13 +3423,13 @@
     "id": "meta-llama/llama-3.2-3b-instruct",
     "name": "Meta: Llama 3.2 3B Instruct",
     "provider": "META-LLAMA",
-    "input": 0.049999999999999996,
-    "output": 0.33,
+    "input": 0.0509,
+    "output": 0.335,
     "context": "131K",
     "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with ",
     "createdAt": 1727222400,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": 80000
   },
   {
     "id": "qwen/qwen-2.5-72b-instruct",
@@ -3543,25 +3543,25 @@
     "id": "meta-llama/llama-3.1-8b-instruct",
     "name": "Meta: Llama 3.1 8B Instruct",
     "provider": "META-LLAMA",
-    "input": 0.02,
-    "output": 0.03,
+    "input": 0.049999999999999996,
+    "output": 0.08,
     "context": "131K",
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
     "createdAt": 1721692800,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 131072
   },
   {
     "id": "mistralai/mistral-nemo",
     "name": "Mistral: Mistral Nemo",
     "provider": "MISTRALAI",
     "input": 0.02,
-    "output": 0.03,
+    "output": 0.04,
     "context": "131K",
     "description": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chine",
     "createdAt": 1721347200,
     "modalities": "text->text",
-    "maxTokens": null
+    "maxTokens": 16384
   },
   {
     "id": "openai/gpt-4o-mini",

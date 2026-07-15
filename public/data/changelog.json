@@ -470,6 +470,28 @@
         "newInput": 0.8568,
         "oldOutput": 2.7148,
         "newOutput": 2.6928
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8568,
+        "newInput": 0.8512,
+        "oldOutput": 2.6928,
+        "newOutput": 2.6752
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.7-max",
+        "modelName": "Qwen: Qwen3.7 Max",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 1.25,
+        "newInput": 1.475,
+        "oldOutput": 3.75,
+        "newOutput": 4.425
       }
     ]
   },

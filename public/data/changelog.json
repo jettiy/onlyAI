@@ -430,6 +430,35 @@
         "newInput": 0.22,
         "oldOutput": 0.37,
         "newOutput": 0.55
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8694,
+        "newInput": 0.8638,
+        "oldOutput": 2.7323999999999997,
+        "newOutput": 2.7148
+      },
+      {
+        "type": "price_change",
+        "modelId": "meta-llama/llama-3.2-3b-instruct",
+        "modelName": "Meta: Llama 3.2 3B Instruct",
+        "provider": "META-LLAMA",
+        "description": "가격 변동",
+        "oldInput": 0.0509,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.335,
+        "newOutput": 0.33
+      },
+      {
+        "type": "model_removed",
+        "modelId": "arcee-ai/coder-large",
+        "modelName": "Arcee AI: Coder Large",
+        "provider": "ARCEE-AI",
+        "description": "모델 제거"
       }
     ]
   },

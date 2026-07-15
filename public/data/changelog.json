@@ -459,6 +459,17 @@
         "modelName": "Arcee AI: Coder Large",
         "provider": "ARCEE-AI",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8638,
+        "newInput": 0.8568,
+        "oldOutput": 2.7148,
+        "newOutput": 2.6928
       }
     ]
   },

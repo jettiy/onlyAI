@@ -23,6 +23,17 @@
         "newInput": 0.11,
         "oldOutput": 0.7999999999999999,
         "newOutput": 0.7999999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9674,
+        "newInput": 0.9548,
+        "oldOutput": 3.0404,
+        "newOutput": 3.0008000000000004
       }
     ]
   },

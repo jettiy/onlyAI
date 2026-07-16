@@ -132,6 +132,38 @@
         "newInput": 0.75,
         "oldOutput": 3.49,
         "newOutput": 3.5
+      },
+      {
+        "type": "new_model",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "새 모델 추가",
+        "input": 3,
+        "output": 15,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9366,
+        "newInput": 0.9226,
+        "oldOutput": 2.9436,
+        "newOutput": 2.8996
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.66,
+        "newInput": 3,
+        "oldOutput": 3.41,
+        "newOutput": 15
       }
     ]
   },

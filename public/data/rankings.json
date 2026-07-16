@@ -1,6 +1,17 @@
 [
   {
     "rank": 1,
+    "model": "MoonshotAI: Kimi K3",
+    "provider": "MOONSHOTAI",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "NEW",
+    "category": "flagship",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 2,
     "model": "Meta: Muse Spark 1.1",
     "provider": "META",
     "tokens": "LIVE",
@@ -11,7 +22,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 2,
+    "rank": 3,
     "model": "Kwaipilot: KAT-Coder-Air V2.5",
     "provider": "KWAIPILOT",
     "tokens": "LIVE",
@@ -22,7 +33,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 3,
+    "rank": 4,
     "model": "Kwaipilot: KAT-Coder-Pro V2.5",
     "provider": "KWAIPILOT",
     "tokens": "LIVE",
@@ -33,7 +44,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 4,
+    "rank": 5,
     "model": "OpenAI: GPT-5.6 Luna Pro",
     "provider": "OPENAI",
     "tokens": "LIVE",
@@ -44,19 +55,8 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 5,
-    "model": "OpenAI: GPT-5.6 Luna",
-    "provider": "OPENAI",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "NEW",
-    "category": "flagship",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
     "rank": 6,
-    "model": "OpenAI: GPT-5.6 Terra Pro",
+    "model": "OpenAI: GPT-5.6 Luna",
     "provider": "OPENAI",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -67,7 +67,7 @@
   },
   {
     "rank": 7,
-    "model": "OpenAI: GPT-5.6 Terra",
+    "model": "OpenAI: GPT-5.6 Terra Pro",
     "provider": "OPENAI",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -78,7 +78,7 @@
   },
   {
     "rank": 8,
-    "model": "OpenAI: GPT-5.6 Sol Pro",
+    "model": "OpenAI: GPT-5.6 Terra",
     "provider": "OPENAI",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -89,7 +89,7 @@
   },
   {
     "rank": 9,
-    "model": "OpenAI: GPT-5.6 Sol",
+    "model": "OpenAI: GPT-5.6 Sol Pro",
     "provider": "OPENAI",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -100,6 +100,17 @@
   },
   {
     "rank": 10,
+    "model": "OpenAI: GPT-5.6 Sol",
+    "provider": "OPENAI",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "value",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 11,
     "model": "xAI: Grok 4.5",
     "provider": "X-AI",
     "tokens": "LIVE",
@@ -110,7 +121,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 11,
+    "rank": 12,
     "model": "xAI: Grok Latest",
     "provider": "~X-AI",
     "tokens": "LIVE",
@@ -121,19 +132,8 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 12,
-    "model": "AionLabs: Aion-3.0-Mini",
-    "provider": "AION-LABS",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
     "rank": 13,
-    "model": "AionLabs: Aion-3.0",
+    "model": "AionLabs: Aion-3.0-Mini",
     "provider": "AION-LABS",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -144,6 +144,17 @@
   },
   {
     "rank": 14,
+    "model": "AionLabs: Aion-3.0",
+    "provider": "AION-LABS",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 15,
     "model": "Tencent: Hy3",
     "provider": "TENCENT",
     "tokens": "LIVE",
@@ -154,7 +165,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 15,
+    "rank": 16,
     "model": "Tencent: Hy3 (free)",
     "provider": "TENCENT",
     "tokens": "LIVE",
@@ -165,7 +176,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 16,
+    "rank": 17,
     "model": "Poolside: Laguna XS 2.1",
     "provider": "POOLSIDE",
     "tokens": "LIVE",
@@ -176,7 +187,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 17,
+    "rank": 18,
     "model": "Poolside: Laguna XS 2.1 (free)",
     "provider": "POOLSIDE",
     "tokens": "LIVE",
@@ -187,7 +198,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 18,
+    "rank": 19,
     "model": "Anthropic: Claude Sonnet 5",
     "provider": "ANTHROPIC",
     "tokens": "LIVE",
@@ -198,20 +209,9 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 19,
+    "rank": 20,
     "model": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
     "provider": "GOOGLE",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 20,
-    "model": "Nex AGI: Nex-N2-Mini",
-    "provider": "NEX-AGI",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,

@@ -1,5 +1,17 @@
 [
   {
+    "id": "meta/muse-spark-1.1",
+    "name": "Meta: Muse Spark 1.1",
+    "provider": "META",
+    "input": 1.25,
+    "output": 4.25,
+    "context": "1M",
+    "description": "Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic tasks. It accepts text, images, video, audio, and PDF documents and returns text, with a 1M-token context...",
+    "createdAt": 1783733591,
+    "modalities": "text+image+file+audio+video->text",
+    "maxTokens": null
+  },
+  {
     "id": "kwaipilot/kat-coder-air-v2.5",
     "name": "Kwaipilot: KAT-Coder-Air V2.5",
     "provider": "KWAIPILOT",
@@ -243,8 +255,8 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.9478,
-    "output": 2.9788,
+    "input": 0.9366,
+    "output": 2.9436,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,
@@ -255,8 +267,8 @@
     "id": "moonshotai/kimi-k2.7-code",
     "name": "MoonshotAI: Kimi K2.7 Code",
     "provider": "MOONSHOTAI",
-    "input": 0.719,
-    "output": 3.49,
+    "input": 0.75,
+    "output": 3.5,
     "context": "262K",
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of",
     "createdAt": 1781266361,
@@ -1395,13 +1407,13 @@
     "id": "z-ai/glm-4.7-flash",
     "name": "Z.ai: GLM 4.7 Flash",
     "provider": "Z-AI",
-    "input": 0.06,
+    "input": 0.060500000000000005,
     "output": 0.39999999999999997,
-    "context": "203K",
+    "context": "200K",
     "description": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency. It is further optimized for agentic coding use cases, strengthening coding capabilities, long-hor",
     "createdAt": 1768833913,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 131072
   },
   {
     "id": "openai/gpt-5.2-codex",

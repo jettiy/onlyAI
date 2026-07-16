@@ -100,6 +100,38 @@
         "newInput": 0.9478,
         "oldOutput": 3.0008000000000004,
         "newOutput": 2.9788
+      },
+      {
+        "type": "new_model",
+        "modelId": "meta/muse-spark-1.1",
+        "modelName": "Meta: Muse Spark 1.1",
+        "provider": "META",
+        "description": "새 모델 추가",
+        "input": 1.25,
+        "output": 4.25,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9478,
+        "newInput": 0.9366,
+        "oldOutput": 2.9788,
+        "newOutput": 2.9436
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.719,
+        "newInput": 0.75,
+        "oldOutput": 3.49,
+        "newOutput": 3.5
       }
     ]
   },

@@ -1,5 +1,65 @@
 [
   {
+    "date": "2026-07-17",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9057999999999999,
+        "newInput": 0.8987999999999999,
+        "oldOutput": 2.8468,
+        "newOutput": 2.8248
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.7",
+        "modelName": "MiniMax: MiniMax M2.7",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.25,
+        "oldOutput": 1.2,
+        "newOutput": 1
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-397b-a17b",
+        "modelName": "Qwen: Qwen3.5 397B A17B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.44999999999999996,
+        "newInput": 0.39,
+        "oldOutput": 3,
+        "newOutput": 2.34
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-14b",
+        "modelName": "Qwen: Qwen3 14B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.24,
+        "newOutput": 0.24
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-3-27b-it",
+        "modelName": "Google: Gemma 3 27B",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.44999999999999996,
+        "newOutput": 0.3
+      }
+    ]
+  },
+  {
     "date": "2026-07-16",
     "items": [
       {

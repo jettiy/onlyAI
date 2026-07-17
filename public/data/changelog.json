@@ -78,6 +78,28 @@
         "newInput": 0.9646,
         "oldOutput": 3.0668,
         "newOutput": 3.0316
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9646,
+        "newInput": 0.9324,
+        "oldOutput": 3.0316,
+        "newOutput": 2.9304
+      },
+      {
+        "type": "price_change",
+        "modelId": "mistralai/mistral-nemo",
+        "modelName": "Mistral: Mistral Nemo",
+        "provider": "MISTRALAI",
+        "description": "가격 변동",
+        "oldInput": 0.019000000000000003,
+        "newInput": 0.02,
+        "oldOutput": 0.03,
+        "newOutput": 0.04
       }
     ]
   },

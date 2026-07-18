@@ -78,6 +78,39 @@
         "newInput": 0.3416,
         "oldOutput": 1.2936,
         "newOutput": 1.0735999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.3416,
+        "newInput": 0.3374,
+        "oldOutput": 1.0735999999999999,
+        "newOutput": 1.0604
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-31b-it",
+        "modelName": "Google: Gemma 4 31B",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.22,
+        "newInput": 0.12,
+        "oldOutput": 0.55,
+        "newOutput": 0.37
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-14b",
+        "modelName": "Qwen: Qwen3 14B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.22749999999999998,
+        "oldOutput": 0.24,
+        "newOutput": 0.9099999999999999
       }
     ]
   },

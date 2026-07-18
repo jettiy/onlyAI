@@ -177,6 +177,39 @@
         "newInput": 0.85,
         "oldOutput": 4.4,
         "newOutput": 3.79
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.27440000000000003,
+        "newInput": 0.2674,
+        "oldOutput": 0.8623999999999999,
+        "newOutput": 0.8404
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.85,
+        "newInput": 0.74,
+        "oldOutput": 3.79,
+        "newOutput": 3.49
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-14b",
+        "modelName": "Qwen: Qwen3 14B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.22749999999999998,
+        "newInput": 0.12,
+        "oldOutput": 0.9099999999999999,
+        "newOutput": 0.24
       }
     ]
   },

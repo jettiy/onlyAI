@@ -155,6 +155,28 @@
         "newInput": 0.2912,
         "oldOutput": 0.9239999999999999,
         "newOutput": 0.9152
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.2912,
+        "newInput": 0.27440000000000003,
+        "oldOutput": 0.9152,
+        "newOutput": 0.8623999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 1,
+        "newInput": 0.85,
+        "oldOutput": 4.4,
+        "newOutput": 3.79
       }
     ]
   },

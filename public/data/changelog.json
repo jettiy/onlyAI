@@ -1,5 +1,65 @@
 [
   {
+    "date": "2026-07-18",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9128,
+        "newInput": 0.9057999999999999,
+        "oldOutput": 2.8688,
+        "newOutput": 2.8468
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.75,
+        "newInput": 1,
+        "oldOutput": 3.5,
+        "newOutput": 4.4
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-31b-it",
+        "modelName": "Google: Gemma 4 31B",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.22,
+        "oldOutput": 0.37,
+        "newOutput": 0.55
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-27b",
+        "modelName": "Qwen: Qwen3.5-27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.195,
+        "newInput": 0.26,
+        "oldOutput": 1.56,
+        "newOutput": 2.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-30b-a3b",
+        "modelName": "Qwen: Qwen3 30B A3B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.13,
+        "oldOutput": 0.5,
+        "newOutput": 0.52
+      }
+    ]
+  },
+  {
     "date": "2026-07-17",
     "items": [
       {

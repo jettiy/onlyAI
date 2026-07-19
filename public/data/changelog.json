@@ -1,5 +1,87 @@
 [
   {
+    "date": "2026-07-19",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.2674,
+        "newInput": 0.26039999999999996,
+        "oldOutput": 0.8404,
+        "newOutput": 0.8184
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.74,
+        "newInput": 0.85,
+        "oldOutput": 3.49,
+        "newOutput": 3.8
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.6",
+        "modelName": "MoonshotAI: Kimi K2.6",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.95,
+        "newInput": 0.684,
+        "oldOutput": 4,
+        "newOutput": 3.42
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09999999999999999,
+        "newInput": 0.07,
+        "oldOutput": 0.3,
+        "newOutput": 0.33999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-31b-it",
+        "modelName": "Google: Gemma 4 31B",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.22,
+        "oldOutput": 0.37,
+        "newOutput": 0.55
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2",
+        "modelName": "MiniMax: MiniMax M2",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.255,
+        "newInput": 0.3,
+        "oldOutput": 1.02,
+        "newOutput": 1.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-14b",
+        "modelName": "Qwen: Qwen3 14B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.22749999999999998,
+        "oldOutput": 0.24,
+        "newOutput": 0.9099999999999999
+      }
+    ]
+  },
+  {
     "date": "2026-07-18",
     "items": [
       {

@@ -122,6 +122,28 @@
         "newInput": 0.26459999999999995,
         "oldOutput": 0.8448,
         "newOutput": 0.8316
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.26459999999999995,
+        "newInput": 0.25899999999999995,
+        "oldOutput": 0.8316,
+        "newOutput": 0.814
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3-super-120b-a12b",
+        "modelName": "NVIDIA: Nemotron 3 Super",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.21,
+        "newInput": 0.08499999999999999,
+        "oldOutput": 0.45499999999999996,
+        "newOutput": 0.39999999999999997
       }
     ]
   },

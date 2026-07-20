@@ -1,5 +1,54 @@
 [
   {
+    "date": "2026-07-20",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.2198,
+        "newInput": 0.2716,
+        "oldOutput": 0.6908,
+        "newOutput": 0.8535999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-31b-it",
+        "modelName": "Google: Gemma 4 31B",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.22,
+        "oldOutput": 0.37,
+        "newOutput": 0.55
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5",
+        "modelName": "Z.ai: GLM 5",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.95,
+        "newInput": 0.95,
+        "oldOutput": 3.15,
+        "newOutput": 2.5500000000000003
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-235b-a22b-thinking-2507",
+        "modelName": "Qwen: Qwen3 235B A22B Thinking 2507",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.14950000000000002,
+        "newInput": 0.3,
+        "oldOutput": 1.495,
+        "newOutput": 3
+      }
+    ]
+  },
+  {
     "date": "2026-07-19",
     "items": [
       {

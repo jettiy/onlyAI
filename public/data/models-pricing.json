@@ -1,5 +1,17 @@
 [
   {
+    "id": "meituan/longcat-2.0",
+    "name": "Meituan: LongCat 2.0",
+    "provider": "MEITUAN",
+    "input": 0.3,
+    "output": 1.2,
+    "context": "1M",
+    "description": "LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, a",
+    "createdAt": 1784554658,
+    "modalities": "text->text",
+    "maxTokens": 262144
+  },
+  {
     "id": "thinkingmachines/inkling",
     "name": "Thinking Machines: Inkling",
     "provider": "THINKINGMACHINES",
@@ -279,8 +291,8 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.9758,
-    "output": 3.0668,
+    "input": 0.9618000000000001,
+    "output": 3.0228,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,

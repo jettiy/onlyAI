@@ -78,6 +78,27 @@
         "newInput": 0.9758,
         "oldOutput": 3.0096,
         "newOutput": 3.0668
+      },
+      {
+        "type": "new_model",
+        "modelId": "meituan/longcat-2.0",
+        "modelName": "Meituan: LongCat 2.0",
+        "provider": "MEITUAN",
+        "description": "새 모델 추가",
+        "input": 0.3,
+        "output": 1.2,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9758,
+        "newInput": 0.9618000000000001,
+        "oldOutput": 3.0668,
+        "newOutput": 3.0228
       }
     ]
   },

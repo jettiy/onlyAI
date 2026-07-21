@@ -111,6 +111,58 @@
         "newInput": 0.8106,
         "oldOutput": 2.6224000000000003,
         "newOutput": 2.5476
+      },
+      {
+        "type": "new_model",
+        "modelId": "poolside/laguna-s-2.1",
+        "modelName": "Poolside: Laguna S 2.1",
+        "provider": "POOLSIDE",
+        "description": "새 모델 추가",
+        "input": 0.06,
+        "output": 0.12,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "google/gemini-3.6-flash",
+        "modelName": "Google: Gemini 3.6 Flash",
+        "provider": "GOOGLE",
+        "description": "새 모델 추가",
+        "input": 1.5,
+        "output": 7.5,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "google/gemini-3.5-flash-lite",
+        "modelName": "Google: Gemini 3.5 Flash-Lite",
+        "provider": "GOOGLE",
+        "description": "새 모델 추가",
+        "input": 0.3,
+        "output": 2.5,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8106,
+        "newInput": 0.8008000000000001,
+        "oldOutput": 2.5476,
+        "newOutput": 2.5168000000000004
+      },
+      {
+        "type": "price_change",
+        "modelId": "~google/gemini-flash-latest",
+        "modelName": "Google Gemini Flash Latest",
+        "provider": "~GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 1.5,
+        "newInput": 1.5,
+        "oldOutput": 9,
+        "newOutput": 7.5
       }
     ]
   },

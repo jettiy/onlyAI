@@ -163,6 +163,28 @@
         "newInput": 1.5,
         "oldOutput": 9,
         "newOutput": 7.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "poolside/laguna-s-2.1",
+        "modelName": "Poolside: Laguna S 2.1",
+        "provider": "POOLSIDE",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.12,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8008000000000001,
+        "newInput": 0.791,
+        "oldOutput": 2.5168000000000004,
+        "newOutput": 2.486
       }
     ]
   },

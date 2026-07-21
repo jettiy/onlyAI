@@ -34,6 +34,39 @@
         "newInput": 0.0975,
         "oldOutput": 1.1,
         "newOutput": 0.78
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.19999999999999998,
+        "newInput": 0.14,
+        "oldOutput": 0.7999999999999999,
+        "newOutput": 0.58
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.9730000000000001,
+        "newInput": 0.9646,
+        "oldOutput": 3.0580000000000003,
+        "newOutput": 3.0316
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3-super-120b-a12b",
+        "modelName": "NVIDIA: Nemotron 3 Super",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.08499999999999999,
+        "newInput": 0.08,
+        "oldOutput": 0.39999999999999997,
+        "newOutput": 0.44999999999999996
       }
     ]
   },

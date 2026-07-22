@@ -34,6 +34,28 @@
         "newInput": 0.8176,
         "oldOutput": 2.5915999999999997,
         "newOutput": 2.5696
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8176,
+        "newInput": 0.8036,
+        "oldOutput": 2.5696,
+        "newOutput": 2.5256
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.09380000000000001,
+        "newInput": 0.098,
+        "oldOutput": 0.18760000000000002,
+        "newOutput": 0.196
       }
     ]
   },

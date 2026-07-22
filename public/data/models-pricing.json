@@ -327,8 +327,8 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.7868,
-    "output": 2.4728,
+    "input": 0.777,
+    "output": 2.442,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,
@@ -365,6 +365,18 @@
     "provider": "ANTHROPIC",
     "input": 10,
     "output": 50,
+    "context": "1M",
+    "description": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and...",
+    "createdAt": 1781007515,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "anthropic/claude-fable-5:batch",
+    "name": "Anthropic: Claude Fable 5 (batch)",
+    "provider": "ANTHROPIC",
+    "input": 5,
+    "output": 25,
     "context": "1M",
     "description": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and...",
     "createdAt": 1781007515,
@@ -449,6 +461,18 @@
     "provider": "ANTHROPIC",
     "input": 5,
     "output": 25,
+    "context": "1M",
+    "description": "Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token...",
+    "createdAt": 1779905091,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "anthropic/claude-opus-4.8:batch",
+    "name": "Anthropic: Claude Opus 4.8 (batch)",
+    "provider": "ANTHROPIC",
+    "input": 2.5,
+    "output": 12.5,
     "context": "1M",
     "description": "Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token...",
     "createdAt": 1779905091,
@@ -756,11 +780,35 @@
     "maxTokens": 128000
   },
   {
+    "id": "openai/gpt-5.5-pro:batch",
+    "name": "OpenAI: GPT-5.5 Pro (batch)",
+    "provider": "OPENAI",
+    "input": 15,
+    "output": 90,
+    "context": "1M",
+    "description": "GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support",
+    "createdAt": 1777051896,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "openai/gpt-5.5",
     "name": "OpenAI: GPT-5.5",
     "provider": "OPENAI",
     "input": 5,
     "output": 30,
+    "context": "1M",
+    "description": "GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It feature",
+    "createdAt": 1777051893,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "openai/gpt-5.5:batch",
+    "name": "OpenAI: GPT-5.5 (batch)",
+    "provider": "OPENAI",
+    "input": 2.5,
+    "output": 15,
     "context": "1M",
     "description": "GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It feature",
     "createdAt": 1777051893,
@@ -893,6 +941,18 @@
     "provider": "ANTHROPIC",
     "input": 5,
     "output": 25,
+    "context": "1M",
+    "description": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on..",
+    "createdAt": 1776351100,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "anthropic/claude-opus-4.7:batch",
+    "name": "Anthropic: Claude Opus 4.7 (batch)",
+    "provider": "ANTHROPIC",
+    "input": 2.5,
+    "output": 12.5,
     "context": "1M",
     "description": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on..",
     "createdAt": 1776351100,
@@ -1044,11 +1104,35 @@
     "maxTokens": 128000
   },
   {
+    "id": "openai/gpt-5.4-nano:batch",
+    "name": "OpenAI: GPT-5.4 Nano (batch)",
+    "provider": "OPENAI",
+    "input": 0.09999999999999999,
+    "output": 0.625,
+    "context": "400K",
+    "description": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-lat",
+    "createdAt": 1773748187,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "openai/gpt-5.4-mini",
     "name": "OpenAI: GPT-5.4 Mini",
     "provider": "OPENAI",
     "input": 0.75,
     "output": 4.5,
+    "context": "400K",
+    "description": "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoni",
+    "createdAt": 1773748178,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "openai/gpt-5.4-mini:batch",
+    "name": "OpenAI: GPT-5.4 Mini (batch)",
+    "provider": "OPENAI",
+    "input": 0.375,
+    "output": 2.25,
     "context": "400K",
     "description": "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoni",
     "createdAt": 1773748178,
@@ -1128,11 +1212,35 @@
     "maxTokens": 128000
   },
   {
+    "id": "openai/gpt-5.4-pro:batch",
+    "name": "OpenAI: GPT-5.4 Pro (batch)",
+    "provider": "OPENAI",
+    "input": 15,
+    "output": 90,
+    "context": "1M",
+    "description": "GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922",
+    "createdAt": 1772734366,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "openai/gpt-5.4",
     "name": "OpenAI: GPT-5.4",
     "provider": "OPENAI",
     "input": 2.5,
     "output": 15,
+    "context": "1M",
+    "description": "GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for...",
+    "createdAt": 1772734352,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "openai/gpt-5.4:batch",
+    "name": "OpenAI: GPT-5.4 (batch)",
+    "provider": "OPENAI",
+    "input": 1.25,
+    "output": 7.5,
     "context": "1M",
     "description": "GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for...",
     "createdAt": 1772734352,
@@ -1380,6 +1488,18 @@
     "maxTokens": 128000
   },
   {
+    "id": "anthropic/claude-opus-4.6:batch",
+    "name": "Anthropic: Claude Opus 4.6 (batch)",
+    "provider": "ANTHROPIC",
+    "input": 2.5,
+    "output": 12.5,
+    "context": "1M",
+    "description": "Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially eff",
+    "createdAt": 1770219050,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "qwen/qwen3-coder-next",
     "name": "Qwen: Qwen3 Coder Next",
     "provider": "QWEN",
@@ -1596,11 +1716,35 @@
     "maxTokens": 128000
   },
   {
+    "id": "openai/gpt-5.2-pro:batch",
+    "name": "OpenAI: GPT-5.2 Pro (batch)",
+    "provider": "OPENAI",
+    "input": 10.5,
+    "output": 84,
+    "context": "400K",
+    "description": "GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in agentic coding and long context performance over GPT-5 Pro. It is optimized for complex tasks that require step-by-step reas",
+    "createdAt": 1765389780,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "openai/gpt-5.2",
     "name": "OpenAI: GPT-5.2",
     "provider": "OPENAI",
     "input": 1.75,
     "output": 14,
+    "context": "400K",
+    "description": "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamicall",
+    "createdAt": 1765389775,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "openai/gpt-5.2:batch",
+    "name": "OpenAI: GPT-5.2 (batch)",
+    "provider": "OPENAI",
+    "input": 0.875,
+    "output": 7,
     "context": "400K",
     "description": "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamicall",
     "createdAt": 1765389775,
@@ -1740,6 +1884,18 @@
     "maxTokens": 64000
   },
   {
+    "id": "anthropic/claude-opus-4.5:batch",
+    "name": "Anthropic: Claude Opus 4.5 (batch)",
+    "provider": "ANTHROPIC",
+    "input": 2.5,
+    "output": 12.5,
+    "context": "200K",
+    "description": "Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competit",
+    "createdAt": 1764010580,
+    "modalities": "text+image+file->text",
+    "maxTokens": 64000
+  },
+  {
     "id": "allenai/olmo-3-32b-think",
     "name": "AllenAI: Olmo 3 32B Think",
     "provider": "ALLENAI",
@@ -1781,6 +1937,18 @@
     "provider": "OPENAI",
     "input": 1.25,
     "output": 10,
+    "context": "400K",
+    "description": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. ",
+    "createdAt": 1763060305,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "openai/gpt-5.1:batch",
+    "name": "OpenAI: GPT-5.1 (batch)",
+    "provider": "OPENAI",
+    "input": 0.625,
+    "output": 5,
     "context": "400K",
     "description": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. ",
     "createdAt": 1763060305,
@@ -2364,6 +2532,18 @@
     "maxTokens": 128000
   },
   {
+    "id": "openai/gpt-5:batch",
+    "name": "OpenAI: GPT-5 (batch)",
+    "provider": "OPENAI",
+    "input": 0.625,
+    "output": 5,
+    "context": "400K",
+    "description": "GPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction f",
+    "createdAt": 1754587413,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "openai/gpt-5-mini",
     "name": "OpenAI: GPT-5 Mini",
     "provider": "OPENAI",
@@ -2376,11 +2556,35 @@
     "maxTokens": 128000
   },
   {
+    "id": "openai/gpt-5-mini:batch",
+    "name": "OpenAI: GPT-5 Mini (batch)",
+    "provider": "OPENAI",
+    "input": 0.125,
+    "output": 1,
+    "context": "400K",
+    "description": "GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reasoning tasks. It provides the same instruction-following and safety-tuning benefits as GPT-5, but with reduced latency an",
+    "createdAt": 1754587407,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "openai/gpt-5-nano",
     "name": "OpenAI: GPT-5 Nano",
     "provider": "OPENAI",
     "input": 0.049999999999999996,
     "output": 0.39999999999999997,
+    "context": "400K",
+    "description": "GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to ",
+    "createdAt": 1754587402,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "openai/gpt-5-nano:batch",
+    "name": "OpenAI: GPT-5 Nano (batch)",
+    "provider": "OPENAI",
+    "input": 0.024999999999999998,
+    "output": 0.19999999999999998,
     "context": "400K",
     "description": "GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to ",
     "createdAt": 1754587402,
@@ -2417,6 +2621,18 @@
     "provider": "ANTHROPIC",
     "input": 15,
     "output": 75,
+    "context": "200K",
+    "description": "Claude Opus 4.1 is an updated version of Anthropic’s flagship model, offering improved performance in coding, reasoning, and agentic tasks. It achieves 74.5% on SWE-bench Verified and shows notable ga",
+    "createdAt": 1754411591,
+    "modalities": "text+image+file->text",
+    "maxTokens": 32000
+  },
+  {
+    "id": "anthropic/claude-opus-4.1:batch",
+    "name": "Anthropic: Claude Opus 4.1 (batch)",
+    "provider": "ANTHROPIC",
+    "input": 7.5,
+    "output": 37.5,
     "context": "200K",
     "description": "Claude Opus 4.1 is an updated version of Anthropic’s flagship model, offering improved performance in coding, reasoning, and agentic tasks. It achieves 74.5% on SWE-bench Verified and shows notable ga",
     "createdAt": 1754411591,
@@ -2811,13 +3027,13 @@
     "id": "qwen/qwen3-14b",
     "name": "Qwen: Qwen3 14B",
     "provider": "QWEN",
-    "input": 0.12,
-    "output": 0.24,
+    "input": 0.22749999999999998,
+    "output": 0.9099999999999999,
     "context": "131K",
     "description": "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode f",
     "createdAt": 1745876478,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 8192
   },
   {
     "id": "qwen/qwen3-32b",
@@ -2892,6 +3108,18 @@
     "maxTokens": 32768
   },
   {
+    "id": "openai/gpt-4.1:batch",
+    "name": "OpenAI: GPT-4.1 (batch)",
+    "provider": "OPENAI",
+    "input": 1,
+    "output": 4,
+    "context": "1M",
+    "description": "GPT-4.1 is a flagship large language model optimized for advanced instruction following, real-world software engineering, and long-context reasoning. It supports a 1 million token context window and o",
+    "createdAt": 1744651385,
+    "modalities": "text+image+file->text",
+    "maxTokens": 32768
+  },
+  {
     "id": "openai/gpt-4.1-mini",
     "name": "OpenAI: GPT-4.1 Mini",
     "provider": "OPENAI",
@@ -2904,11 +3132,35 @@
     "maxTokens": 32768
   },
   {
+    "id": "openai/gpt-4.1-mini:batch",
+    "name": "OpenAI: GPT-4.1 Mini (batch)",
+    "provider": "OPENAI",
+    "input": 0.19999999999999998,
+    "output": 0.7999999999999999,
+    "context": "1M",
+    "description": "GPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT-4o at substantially lower latency and cost. It retains a 1 million token context window and scores 45.1% on hard...",
+    "createdAt": 1744651381,
+    "modalities": "text+image+file->text",
+    "maxTokens": 32768
+  },
+  {
     "id": "openai/gpt-4.1-nano",
     "name": "OpenAI: GPT-4.1 Nano",
     "provider": "OPENAI",
     "input": 0.09999999999999999,
     "output": 0.39999999999999997,
+    "context": "1M",
+    "description": "For tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest model in the GPT-4.1 series. It delivers exceptional performance at a small size with its 1 million...",
+    "createdAt": 1744651369,
+    "modalities": "text+image+file->text",
+    "maxTokens": 32768
+  },
+  {
+    "id": "openai/gpt-4.1-nano:batch",
+    "name": "OpenAI: GPT-4.1 Nano (batch)",
+    "provider": "OPENAI",
+    "input": 0.049999999999999996,
+    "output": 0.19999999999999998,
     "context": "1M",
     "description": "For tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest model in the GPT-4.1 series. It delivers exceptional performance at a small size with its 1 million...",
     "createdAt": 1744651369,
@@ -3636,6 +3888,18 @@
     "maxTokens": 16384
   },
   {
+    "id": "openai/gpt-4o-mini:batch",
+    "name": "OpenAI: GPT-4o-mini (batch)",
+    "provider": "OPENAI",
+    "input": 0.075,
+    "output": 0.3,
+    "context": "128K",
+    "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more a",
+    "createdAt": 1721260800,
+    "modalities": "text+image+file->text",
+    "maxTokens": 16384
+  },
+  {
     "id": "google/gemma-2-27b-it",
     "name": "Google: Gemma 2 27B",
     "provider": "GOOGLE",
@@ -3672,6 +3936,18 @@
     "maxTokens": 4096
   },
   {
+    "id": "openai/gpt-4o:batch",
+    "name": "OpenAI: GPT-4o (batch)",
+    "provider": "OPENAI",
+    "input": 1.25,
+    "output": 5,
+    "context": "128K",
+    "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while bei",
+    "createdAt": 1715558400,
+    "modalities": "text+image+file->text",
+    "maxTokens": 16384
+  },
+  {
     "id": "mistralai/mixtral-8x22b-instruct",
     "name": "Mistral: Mixtral 8x22B Instruct",
     "provider": "MISTRALAI",
@@ -3701,6 +3977,18 @@
     "provider": "OPENAI",
     "input": 10,
     "output": 30,
+    "context": "128K",
+    "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023.",
+    "createdAt": 1712620800,
+    "modalities": "text+image->text",
+    "maxTokens": 4096
+  },
+  {
+    "id": "openai/gpt-4-turbo:batch",
+    "name": "OpenAI: GPT-4 Turbo (batch)",
+    "provider": "OPENAI",
+    "input": 5,
+    "output": 15,
     "context": "128K",
     "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023.",
     "createdAt": 1712620800,
@@ -3821,6 +4109,18 @@
     "provider": "OPENAI",
     "input": 0.5,
     "output": 1.5,
+    "context": "16K",
+    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "createdAt": 1685232000,
+    "modalities": "text->text",
+    "maxTokens": 4096
+  },
+  {
+    "id": "openai/gpt-3.5-turbo:batch",
+    "name": "OpenAI: GPT-3.5 Turbo (batch)",
+    "provider": "OPENAI",
+    "input": 0.25,
+    "output": 0.75,
     "context": "16K",
     "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
     "createdAt": 1685232000,

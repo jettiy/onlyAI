@@ -133,6 +133,278 @@
         "newInput": 0.7868,
         "oldOutput": 2.5036,
         "newOutput": 2.4728
+      },
+      {
+        "type": "new_model",
+        "modelId": "anthropic/claude-fable-5:batch",
+        "modelName": "Anthropic: Claude Fable 5 (batch)",
+        "provider": "ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 5,
+        "output": 25,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "anthropic/claude-opus-4.8:batch",
+        "modelName": "Anthropic: Claude Opus 4.8 (batch)",
+        "provider": "ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 2.5,
+        "output": 12.5,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.5-pro:batch",
+        "modelName": "OpenAI: GPT-5.5 Pro (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 15,
+        "output": 90,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.5:batch",
+        "modelName": "OpenAI: GPT-5.5 (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 2.5,
+        "output": 15,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "anthropic/claude-opus-4.7:batch",
+        "modelName": "Anthropic: Claude Opus 4.7 (batch)",
+        "provider": "ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 2.5,
+        "output": 12.5,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.4-nano:batch",
+        "modelName": "OpenAI: GPT-5.4 Nano (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.09999999999999999,
+        "output": 0.625,
+        "context": "400K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.4-mini:batch",
+        "modelName": "OpenAI: GPT-5.4 Mini (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.375,
+        "output": 2.25,
+        "context": "400K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.4-pro:batch",
+        "modelName": "OpenAI: GPT-5.4 Pro (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 15,
+        "output": 90,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.4:batch",
+        "modelName": "OpenAI: GPT-5.4 (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 1.25,
+        "output": 7.5,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "anthropic/claude-opus-4.6:batch",
+        "modelName": "Anthropic: Claude Opus 4.6 (batch)",
+        "provider": "ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 2.5,
+        "output": 12.5,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.2-pro:batch",
+        "modelName": "OpenAI: GPT-5.2 Pro (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 10.5,
+        "output": 84,
+        "context": "400K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.2:batch",
+        "modelName": "OpenAI: GPT-5.2 (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.875,
+        "output": 7,
+        "context": "400K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "anthropic/claude-opus-4.5:batch",
+        "modelName": "Anthropic: Claude Opus 4.5 (batch)",
+        "provider": "ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 2.5,
+        "output": 12.5,
+        "context": "200K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5.1:batch",
+        "modelName": "OpenAI: GPT-5.1 (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.625,
+        "output": 5,
+        "context": "400K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5:batch",
+        "modelName": "OpenAI: GPT-5 (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.625,
+        "output": 5,
+        "context": "400K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5-mini:batch",
+        "modelName": "OpenAI: GPT-5 Mini (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.125,
+        "output": 1,
+        "context": "400K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-5-nano:batch",
+        "modelName": "OpenAI: GPT-5 Nano (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.024999999999999998,
+        "output": 0.19999999999999998,
+        "context": "400K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "anthropic/claude-opus-4.1:batch",
+        "modelName": "Anthropic: Claude Opus 4.1 (batch)",
+        "provider": "ANTHROPIC",
+        "description": "새 모델 추가",
+        "input": 7.5,
+        "output": 37.5,
+        "context": "200K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-4.1:batch",
+        "modelName": "OpenAI: GPT-4.1 (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 1,
+        "output": 4,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-4.1-mini:batch",
+        "modelName": "OpenAI: GPT-4.1 Mini (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.19999999999999998,
+        "output": 0.7999999999999999,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-4.1-nano:batch",
+        "modelName": "OpenAI: GPT-4.1 Nano (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.049999999999999996,
+        "output": 0.19999999999999998,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-4o-mini:batch",
+        "modelName": "OpenAI: GPT-4o-mini (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.075,
+        "output": 0.3,
+        "context": "128K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-4o:batch",
+        "modelName": "OpenAI: GPT-4o (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 1.25,
+        "output": 5,
+        "context": "128K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-4-turbo:batch",
+        "modelName": "OpenAI: GPT-4 Turbo (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 5,
+        "output": 15,
+        "context": "128K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-3.5-turbo:batch",
+        "modelName": "OpenAI: GPT-3.5 Turbo (batch)",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 0.25,
+        "output": 0.75,
+        "context": "16K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.7868,
+        "newInput": 0.777,
+        "oldOutput": 2.4728,
+        "newOutput": 2.442
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-14b",
+        "modelName": "Qwen: Qwen3 14B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.22749999999999998,
+        "oldOutput": 0.24,
+        "newOutput": 0.9099999999999999
       }
     ]
   },

@@ -327,8 +327,8 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.805,
-    "output": 2.53,
+    "input": 0.7966,
+    "output": 2.5036,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,
@@ -928,12 +928,12 @@
     "name": "Google: Gemma 4 31B",
     "provider": "GOOGLE",
     "input": 0.12,
-    "output": 0.37,
+    "output": 0.35,
     "context": "262K",
     "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat",
     "createdAt": 1775148486,
     "modalities": "text+image+video->text",
-    "maxTokens": 16384
+    "maxTokens": 262144
   },
   {
     "id": "qwen/qwen3.6-plus",

@@ -327,8 +327,8 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.7742,
-    "output": 2.4332,
+    "input": 0.8246,
+    "output": 2.5915999999999997,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,
@@ -2211,13 +2211,13 @@
     "id": "qwen/qwen3-next-80b-a3b-instruct",
     "name": "Qwen: Qwen3 Next 80B A3B Instruct",
     "provider": "QWEN",
-    "input": 0.0975,
-    "output": 0.78,
+    "input": 0.09999999999999999,
+    "output": 1.1,
     "context": "262K",
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code ",
     "createdAt": 1757612213,
     "modalities": "text->text",
-    "maxTokens": 32768
+    "maxTokens": 262144
   },
   {
     "id": "qwen/qwen-plus-2025-07-28",
@@ -3801,7 +3801,7 @@
     "description": "A recreation trial of the original MythoMax-L2-B13 but with updated models. #merge",
     "createdAt": 1689984000,
     "modalities": "text->text",
-    "maxTokens": 4096
+    "maxTokens": 2048
   },
   {
     "id": "gryphe/mythomax-l2-13b",

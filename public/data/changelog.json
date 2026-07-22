@@ -1,5 +1,32 @@
 [
   {
+    "date": "2026-07-22",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.7742,
+        "newInput": 0.8246,
+        "oldOutput": 2.4332,
+        "newOutput": 2.5915999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-next-80b-a3b-instruct",
+        "modelName": "Qwen: Qwen3 Next 80B A3B Instruct",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.0975,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.78,
+        "newOutput": 1.1
+      }
+    ]
+  },
+  {
     "date": "2026-07-21",
     "items": [
       {

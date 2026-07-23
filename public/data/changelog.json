@@ -352,6 +352,39 @@
         "newInput": 0.08,
         "oldOutput": 0.3,
         "newOutput": 0.44999999999999996
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.8218,
+        "newInput": 0.8176,
+        "oldOutput": 2.5828,
+        "newOutput": 2.5696
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-27b",
+        "modelName": "Qwen: Qwen3.5-27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.26,
+        "newInput": 0.195,
+        "oldOutput": 2.6,
+        "newOutput": 1.56
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2",
+        "modelName": "MiniMax: MiniMax M2",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.255,
+        "oldOutput": 1.2,
+        "newOutput": 1.02
       }
     ]
   },

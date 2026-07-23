@@ -1,17 +1,13 @@
-# ── 주기적 데이터 갱신 Workflow ────────────────────────────
-# Node.js로 OpenRouter 랭킹 + AI 뉴스 RSS를 주기적으로 수집하여
-# public/data/ 디렉토리에 JSON 파일로 저장하고,
-# 변경사항을 자동 commit → Vercel 재배포 트리거
+# ── 데이터 갱신 Workflow (수동 실행) ──────────────────────
+# Node.js로 OpenRouter 랭킹 + AI 뉴스 RSS를 수집하여
+# public/data 디렉토리에 JSON 파일로 저장하고 변경사항을 commit.
 #
-# 실행 주기: 매 2시간
-# workflow_dispatch로 수동 실행 가능
+# 실행: 수동 (Actions 탭에서 workflow_dispatch 실행)
+# 자동 배포 비활성화 — Vercel 배포는 별도 수동 진행 (deploy.yml)
 
 name: 데이터 갱신 (Data Refresh)
 
 on:
-  schedule:
-    # 2시간마다 실행 (UTC 기준)
-    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 env:
@@ -56,12 +52,6 @@ jobs:
           UPDATED_AT=$(node -e "try{const m=require('./public/data/meta.json');console.log(m.updatedAtKST||'unknown')}catch(e){console.log('unknown')}" 2>/dev/null || date '+%Y-%m-%d %H:%M')
           git commit -m "📊 데이터 갱신: ${UPDATED_AT} [skip ci]"
           git push
-      
-      - name: 🚀 Trigger Vercel Deploy
-        if: steps.check.outputs.changed == 'true'
-        run: |
-          curl -s -X POST "https://api.vercel.com/v1/integrations/deploy/prj_${{ secrets.VERCEL_PROJECT_ID }}/${{ secrets.VERCEL_DEPLOY_HOOK }}" > /dev/null
-          echo "Vercel 재배포 트리거 완료"
       
       - name: 📊 Summary
         run: |

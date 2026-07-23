@@ -1,0 +1,19 @@
+# ── 수동 배포 Workflow ─────────────────────────────────────
+# GitHub Actions 탭에서 수동 실행(Run workflow) 시 Vercel 배포를 트리거.
+# 데이터 갱신/뉴스 빌드 워크플로우는 자동 배포하지 않으므로
+# 데이터를 최신으로 갱신한 뒤 이 워크플로우로 배포합니다.
+
+name: 배포 (Deploy)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚀 Trigger Vercel Deploy
+        run: |
+          RESPONSE=$(curl -s -X POST "https://api.vercel.com/v1/integrations/deploy/prj_${{ secrets.VERCEL_PROJECT_ID }}/${{ secrets.VERCEL_DEPLOY_HOOK }}")
+          echo "$RESPONSE"
+          echo "✅ Vercel 배포 트리거 완료"

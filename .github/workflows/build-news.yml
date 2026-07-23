@@ -1,8 +1,6 @@
 name: Build News Data
 on:
-  schedule:
-    - cron: '0 */6 * * *'  # 6시간마다 (0,6,12,18시 UTC = 9,15,21,3시 KST)
-  workflow_dispatch:  # 수동 실행 가능
+  workflow_dispatch:
 
 jobs:
   build:

@@ -276,9 +276,8 @@ async function main() {
     { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml', name: 'NY Times' },
     { url: 'https://feeds.feedburner.com/TechCrunch/', name: 'TechCrunch' },
     { url: 'https://www.artificialintelligence-news.com/feed/', name: 'AI News' },
-    { url: 'https://rss.joins.com/joins_news_list.xml', name: 'Joins' },
-    { url: 'https://www.zdnet.co.kr/news/news_rss.asp', name: 'ZDNetKorea' },
-    { url: 'https://hankyung.com/feed.xml', name: 'Hankyung' },
+    { url: 'https://www.aitimes.com/rss/allArticle.xml', name: 'AITimes' },
+    { url: 'https://news.hada.io/rss/news', name: 'GeekNews' },
   ];
   
   let allNews = [];

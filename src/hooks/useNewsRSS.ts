@@ -22,6 +22,25 @@ export interface NewsItem {
   summaryKo?: string;
 }
 
+// news.json (build-news.mjs 출력) 봉투 구조
+interface NewsDataFile {
+  updatedAt?: string;
+  updatedAtKST?: string;
+  news?: NewsItem[];
+  github?: NewsItem[];
+}
+// rss-merged.json (fetch-data.mjs 출력) 원시 항목
+interface MergedNewsItem {
+  id?: string;
+  title?: string;
+  summary?: string;
+  titleKo?: string;
+  summaryKo?: string;
+  date?: string;
+  source?: string;
+  url?: string;
+  category?: string;
+}
 export type NewsCategory =
   | "모델 출시"
   | "연구·논문"
@@ -64,13 +83,30 @@ export function useNewsRSS() {
     setLoading(true);
     setError(false);
     try {
-      // 1차: 정적 JSON 데이터 (GitHub Actions로 갱신)
-      const staticRes = await fetch('/data/rss-merged.json');
-      if (staticRes.ok) {
-        const data = await staticRes.json();
-        if (Array.isArray(data) && data.length > 0) {
-          const mapped: NewsItem[] = data.map((item: any, i: number) => ({
-            id: `rss-${i}`,
+      // 1차: 큐레이션된 news.json (build-news.mjs가 6시간마다 생성)
+      // 한국 AI 뉴스(AI타임스·GeekNews) + 카테고리 분류 + GitHub 트렌딩 + 번역 포함
+      const newsRes = await fetch('/data/news.json');
+      if (newsRes.ok) {
+        const data: NewsDataFile = await newsRes.json();
+        const items: NewsItem[] = Array.isArray(data.news) ? data.news : [];
+        if (items.length > 0) {
+          setNews(items);
+          setGithub(Array.isArray(data?.github) ? data.github : []);
+          if (data?.updatedAtKST) {
+            const d = new Date(data.updatedAtKST);
+            if (!isNaN(d.getTime())) setLastUpdated(d);
+          }
+          return;
+        }
+      }
+
+      // 2차: rss-merged.json (fetch-data.mjs가 2시간마다 생성 — RSS 병합)
+      const mergedRes = await fetch('/data/rss-merged.json');
+      if (mergedRes.ok) {
+        const data: MergedNewsItem[] = await mergedRes.json();
+        if (data.length > 0) {
+          const mapped: NewsItem[] = data.map((item: MergedNewsItem, i: number) => ({
+            id: item.id || `rss-${i}`,
             title: item.title || '(제목 없음)',
             summary: item.summary || '',
             titleKo: item.titleKo || '',
@@ -78,21 +114,11 @@ export function useNewsRSS() {
             date: item.date || '',
             source: item.source || '',
             url: item.url || '',
-            category: '오픈소스',
-            lang: 'en',
+            category: item.category || '연구·논문',
+            lang: /[\uac00-\ud7af]/.test(item.title || '') ? 'ko' : 'en',
           }));
           setNews(mapped);
           setGithub([]);
-          return;
-        }
-      }
-
-      // 2차: 기존 정적 데이터 파일
-      const newsRes = await fetch('/data/news.json');
-      if (newsRes.ok) {
-        const data = await newsRes.json();
-        if (Array.isArray(data) && data.length > 0) {
-          setNews(data);
           return;
         }
       }

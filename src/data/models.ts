@@ -152,12 +152,63 @@ export const companies: AICompany[] = [
 ];
 
 // ── 모델 목록 ───────────────────────────────────────────────────
-// 가격 출처: 공식 API 가격 페이지 (2026-03-19 기준)
+// 가격 출처: 공식 API 가격 페이지 + OpenRouter (2026-07-24 갱신)
 export const models: AIModel[] = [
 
   // ===== 🇺🇸 미국 =====
 
   // OpenAI ─────────────────────
+  {
+    id: 'gpt-5-6-sol-pro',
+    name: 'GPT-5.6 Sol Pro',
+    company: 'OpenAI', companyId: 'openai', region: 'us',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 7월 9일 GA. GPT-5.6 최고 티어. xhigh effort·1M 컨텍스트. Terra·Luna보다 한 단계 높은 추론. BrowseComp·GDPval 강점.',
+    strengths: ['GPT-5.6 최고 성능', 'xhigh effort', '1M 컨텍스트', '복잡한 추론'],
+    inputPrice: 5.0, outputPrice: 30.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-07',
+    koreanSupport: 'A',
+    useCases: ['극한 추론', '에이전트', '전문가 코딩', '연구'],
+    openRouterSlug: 'openai/gpt-5.6-sol-pro',
+    sourceUrl: 'https://openai.com/api/pricing/',
+    url: 'https://chatgpt.com',
+    updatedAt: '2026-07-24',
+    koreanBilling: false,
+  },
+  {
+    id: 'gpt-5-6-terra-pro',
+    name: 'GPT-5.6 Terra Pro',
+    company: 'OpenAI', companyId: 'openai', region: 'us',
+    tier: 'strong', isFeatured: true,
+    description: '2026년 7월 9일 GA. GPT-5.5급 성능을 절반 비용으로. Sol 아래·Luna 위의 중간 티어. 1M 컨텍스트.',
+    strengths: ['GPT-5.5급 성능', '2배 저렴', '1M 컨텍스트', '가성비'],
+    inputPrice: 2.5, outputPrice: 15.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-07',
+    koreanSupport: 'A',
+    useCases: ['전문가 분석', '코딩', '에이전트'],
+    openRouterSlug: 'openai/gpt-5.6-terra-pro',
+    sourceUrl: 'https://openai.com/api/pricing/',
+    url: 'https://chatgpt.com',
+    updatedAt: '2026-07-24',
+    koreanBilling: false,
+  },
+  {
+    id: 'gpt-5-6-luna-pro',
+    name: 'GPT-5.6 Luna Pro',
+    company: 'OpenAI', companyId: 'openai', region: 'us',
+    tier: 'efficient', isFeatured: true,
+    description: '2026년 7월 9일 GA. GPT-5.6 최저가 티어. GPT-5.5 피크 성능을 절반 이하 비용으로 근접. 1M 컨텍스트.',
+    strengths: ['최저가', 'GPT-5.5 근접 성능', '1M 컨텍스트', '빠른 응답'],
+    inputPrice: 1.0, outputPrice: 6.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-07',
+    koreanSupport: 'A',
+    useCases: ['대량 API', '일상 챗봇', '코딩 보조'],
+    openRouterSlug: 'openai/gpt-5.6-luna-pro',
+    sourceUrl: 'https://openai.com/api/pricing/',
+    url: 'https://chatgpt.com',
+    updatedAt: '2026-07-24',
+    koreanBilling: false,
+  },
   {
     id: 'gpt-5-5-instant',
     name: 'GPT-5.5 Instant',
@@ -367,6 +418,23 @@ export const models: AIModel[] = [
 
   // Anthropic ─────────────────────
   {
+    id: 'claude-sonnet-5',
+    name: 'Claude Sonnet 5',
+    company: 'Anthropic', companyId: 'anthropic', region: 'us',
+    tier: 'strong', isFeatured: true,
+    description: '2026년 6월 30일 출시. Sonnet 4.6 대비 환각·아첨 감소. Opus 4.8급 성능의 약 40~60% 가격. Free·Pro 기본 모델. 1M 컨텍스트.',
+    strengths: ['Opus 4.8급 성능', '환각 감소', '에이전트 특화', '1M 컨텍스트'],
+    inputPrice: 2.0, outputPrice: 10.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-06',
+    koreanSupport: 'A',
+    useCases: ['에이전트', '코딩', '분석', '일반 작업'],
+    openRouterSlug: 'anthropic/claude-sonnet-5',
+    sourceUrl: 'https://www.anthropic.com/pricing',
+    url: 'https://claude.ai',
+    updatedAt: '2026-07-24',
+    koreanBilling: false,
+  },
+  {
     id: 'claude-fable-5',
     name: 'Claude Fable 5',
     arenaScore: 1510, arenaCI: '±8', arenaVotes: 4120, arenaRankSpread: '1-3',
@@ -559,6 +627,39 @@ export const models: AIModel[] = [
 
 
   // Google ─────────────────────
+  {
+    id: 'gemini-3-6-flash',
+    name: 'Gemini 3.6 Flash',
+    company: 'Google', companyId: 'google', region: 'us',
+    tier: 'strong', isFeatured: true,
+    description: '2026년 7월 21일 출시. 3.5 Flash 대비 12% 빠르고 출력 토큰 17% 감소. 컴퓨터 사용·에이전트 표준 지원. 1M 컨텍스트·64K 출력.',
+    strengths: ['3.5 Flash 대비 12% 빠름', '출력 17% 절감', '컴퓨터 사용', '에이전트'],
+    inputPrice: 1.5, outputPrice: 7.5, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-07',
+    koreanSupport: 'A',
+    useCases: ['에이전트', '멀티모달', '대량 처리', '코딩'],
+    openRouterSlug: 'google/gemini-3.6-flash',
+    sourceUrl: 'https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash',
+    url: 'https://gemini.google.com',
+    updatedAt: '2026-07-24',
+    koreanBilling: false,
+  },
+  {
+    id: 'gemini-3-5-flash-lite',
+    name: 'Gemini 3.5 Flash-Lite',
+    company: 'Google', companyId: 'google', region: 'us',
+    tier: 'efficient', isFeatured: false,
+    description: '2026년 7월 21일 출시. 초고속·초저가 모델. 3.6 Flash보다 더 저렴한 대량 처리용. 1M 컨텍스트.',
+    strengths: ['초저가', '초고속', '1M 컨텍스트', '대량 처리'],
+    inputPrice: 0.3, outputPrice: 2.5, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-07',
+    koreanSupport: 'A',
+    useCases: ['대량 분류', '저비용 API', '단순 요약'],
+    openRouterSlug: 'google/gemini-3.5-flash-lite',
+    sourceUrl: 'https://ai.google.dev/gemini-api/docs/models',
+    updatedAt: '2026-07-24',
+    koreanBilling: false,
+  },
   {
     id: 'gemini-3-5-pro',
     name: 'Gemini 3.5 Pro',
@@ -775,6 +876,23 @@ export const models: AIModel[] = [
   },
 
   // xAI ─────────────────────
+  {
+    id: 'grok-4-5',
+    name: 'Grok 4.5',
+    company: 'xAI', companyId: 'xai', region: 'us',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 7월 출시. SpaceXAI 최고 모델. 코딩·에이전트·지식 작업 강화. 500K 컨텍스트. V9 기반 1.5T 파라미터 추정.',
+    strengths: ['코딩 강화', '에이전트', '지식 작업', '500K 컨텍스트'],
+    inputPrice: 2.0, outputPrice: 6.0, contextWindow: '500K',
+    isLocal: false, isNew: true, releaseDate: '2026-07',
+    koreanSupport: 'B',
+    useCases: ['코딩', '에이전트', '실시간 정보', '분석'],
+    openRouterSlug: 'x-ai/grok-4.5',
+    sourceUrl: 'https://x.ai/news/grok-4-5',
+    url: 'https://grok.com',
+    updatedAt: '2026-07-24',
+    koreanBilling: false,
+  },
   {
     id: 'grok-4-3',
     name: 'Grok 4.3',
@@ -1096,6 +1214,23 @@ export const models: AIModel[] = [
 
   // Moonshot ─────────────────────
   {
+    id: 'kimi-k3',
+    name: 'Kimi K3',
+    company: 'Moonshot', companyId: 'moonshot', region: 'china',
+    tier: 'flagship', isFeatured: true,
+    description: '2026년 7월 16일 출시. 2.8T MoE·네이티브 비전·1M 컨텍스트. 중국 최대 오픈소스 모델(7/27 가중치 공개). Opus 4.8급 경쟁.',
+    strengths: ['2.8T MoE', '네이티브 비전', '1M 컨텍스트', '오픈소스 예정'],
+    inputPrice: 3.0, outputPrice: 15.0, contextWindow: '1M',
+    isLocal: false, isNew: true, releaseDate: '2026-07',
+    koreanSupport: 'C',
+    useCases: ['복잡한 추론', '비전', '코딩', '에이전트'],
+    openRouterSlug: 'moonshotai/kimi-k3',
+    sourceUrl: 'https://www.moonshot.ai/',
+    url: 'https://kimi.com',
+    updatedAt: '2026-07-24',
+    koreanBilling: false,
+  },
+  {
     id: 'kimi-k2-7-code',
     name: 'Kimi K2.7 Code',
     company: 'Moonshot', companyId: 'moonshot', region: 'china',
@@ -1171,13 +1306,14 @@ export const models: AIModel[] = [
     tier: 'flagship', isFeatured: true,
     description: '2026년 6월 13일 배포. Zhipu AI 최신 코딩 특화 모델. 1M 컨텍스트. API·MIT 오픈웨이트 다음 주 공개 예정. GLM Coding Plan 무제한 사용 가능.',
     strengths: ['최신 코딩 특화', '1M 컨텍스트', 'Coding Plan 무제한', 'API/웨이트 예정'],
-    inputPrice: null, outputPrice: null, contextWindow: '1M',
+    inputPrice: 0.822, outputPrice: 2.583, contextWindow: '1M',
     isLocal: false, isNew: true, releaseDate: '2026-06',
     koreanSupport: 'B',
     useCases: ['코딩', '에이전트', '복잡 추론', '대량 문서 분석'],
+    openRouterSlug: 'z-ai/glm-5.2',
     sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
     url: 'https://chat.z.ai/',
-    updatedAt: '2026-06-15',
+    updatedAt: '2026-07-24',
     koreanBilling: false,
   },
   {

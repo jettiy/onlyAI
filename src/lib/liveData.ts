@@ -24,12 +24,8 @@ export interface LiveModel {
   };
 }
 
-interface LiveModelsResponse {
-  data: LiveModel[];
-}
-
 // ── 캐싱 ──
-const CACHE_KEY = 'onlyai_live_models';
+const CACHE_KEY = 'onlyai_live_models_v2';
 const CACHE_DURATION = 10 * 60 * 1000; // 10분
 
 interface CacheEntry {
@@ -62,6 +58,46 @@ function saveToCache(data: LiveModel[]) {
 let lastFetchTime = 0;
 let lastFetchPromise: Promise<LiveModel[]> | null = null;
 
+// OpenRouter API 원시 응답 (가격은 문자열 per-token)
+interface OpenRouterPricing {
+  prompt?: string;
+  completion?: string;
+  input_cache_read?: string;
+  input_cache_write?: string;
+  web_search?: string;
+}
+interface OpenRouterModel {
+  id: string;
+  name: string;
+  context_length?: number;
+  pricing?: OpenRouterPricing;
+  architecture?: { modality?: string };
+  created?: number;
+  description?: string;
+  top_provider?: { max_completion_tokens?: number | null };
+}
+
+// 원시 응답 → LiveModel 정규화. OpenRouter 가격은 문자열 per-token이므로
+// 숫자 $/1M 토큰으로 변환하지 않으면 .toFixed() 호출 시 크래시 + 단위 불일치.
+function normalizeModel(raw: OpenRouterModel): LiveModel {
+  const p = raw.pricing ?? {};
+  return {
+    id: raw.id,
+    name: raw.name,
+    contextLength: raw.context_length ?? 0,
+    pricing: {
+      prompt: priceToPerMillion(p.prompt ?? '0'),
+      completion: priceToPerMillion(p.completion ?? '0'),
+      inputCacheRead: p.input_cache_read != null ? priceToPerMillion(p.input_cache_read) : undefined,
+      inputCacheWrite: p.input_cache_write != null ? priceToPerMillion(p.input_cache_write) : undefined,
+      webSearch: p.web_search != null ? priceToPerMillion(p.web_search) : undefined,
+    },
+    modalities: raw.architecture?.modality ?? 'TEXT',
+    createdAt: raw.created ?? 0,
+    description: raw.description ?? '',
+    topProvider: { maxCompletionTokens: raw.top_provider?.max_completion_tokens ?? null },
+  };
+}
 export async function fetchLiveModels(): Promise<LiveModel[]> {
   const cached = getFromCache();
   if (cached) return cached;
@@ -78,9 +114,10 @@ export async function fetchLiveModels(): Promise<LiveModel[]> {
         signal: AbortSignal.timeout(10000), // 10초 타임아웃
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const json: LiveModelsResponse = await res.json();
-      saveToCache(json.data);
-      return json.data;
+      const json: { data: OpenRouterModel[] } = await res.json();
+      const normalized = json.data.map(normalizeModel);
+      saveToCache(normalized);
+      return normalized;
     } catch (err) {
       console.warn('[liveData] OpenRouter API 실패, 캐시 사용:', err);
       // 캐시가 만료됐어도 있으면 fallback으로 사용

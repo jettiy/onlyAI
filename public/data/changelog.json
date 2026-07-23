@@ -253,6 +253,17 @@
         "modelName": "OpenAI: GPT-3.5 Turbo (batch)",
         "provider": "OPENAI",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.7644000000000001,
+        "newInput": 0.8218,
+        "oldOutput": 2.4024,
+        "newOutput": 2.5828
       }
     ]
   },

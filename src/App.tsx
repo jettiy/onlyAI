@@ -12,6 +12,11 @@ const ExploreCompare = lazy(() => import("./pages/explore/ExploreCompare").then(
 const ExploreGuide = lazy(() => import("./pages/explore/ExploreGuide").then(m => ({ default: m.default })));
 const ExploreRanking = lazy(() => import("./pages/explore/ExploreRanking").then(m => ({ default: m.default })));
 const ExploreCalculator = lazy(() => import("./pages/explore/ExploreCalculator").then(m => ({ default: m.default })));
+const ExploreKoreanBench = lazy(() => import("./pages/explore/ExploreKoreanBench").then(m => ({ default: m.default })));
+const ExploreContextWindow = lazy(() => import("./pages/explore/ExploreContextWindow").then(m => ({ default: m.default })));
+const ExploreTokenizer = lazy(() => import("./pages/explore/ExploreTokenizer").then(m => ({ default: m.default })));
+const ExplorePromptBench = lazy(() => import("./pages/explore/ExplorePromptBench").then(m => ({ default: m.default })));
+const ExploreSideBySide = lazy(() => import("./pages/explore/ExploreSideBySide").then(m => ({ default: m.default })));
 
 const LearnHub = lazy(() => import("./pages/learn/LearnHub").then(m => ({ default: m.default })));
 const LearnGlossary = lazy(() => import("./pages/learn/LearnGlossary").then(m => ({ default: m.default })));
@@ -56,6 +61,11 @@ export default function App() {
             <Route path="/explore/guide" element={<ExploreGuide />} />
             <Route path="/explore/ranking" element={<ExploreRanking />} />
             <Route path="/explore/calculator" element={<ExploreCalculator />} />
+            <Route path="/explore/korean-bench" element={<ExploreKoreanBench />} />
+            <Route path="/explore/context" element={<ExploreContextWindow />} />
+            <Route path="/explore/tokenizer" element={<ExploreTokenizer />} />
+            <Route path="/explore/prompt-bench" element={<ExplorePromptBench />} />
+            <Route path="/explore/side-by-side" element={<ExploreSideBySide />} />
 
             <Route path="/video" element={<Navigate to="/video/compare" replace />} />
             <Route path="/video/timeline" element={<VideoTimeline />} />

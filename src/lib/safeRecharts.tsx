@@ -1,59 +1,31 @@
 // Recharts 타입 안전 래퍼
 // 문제: recharts 2.15.x의 class 컴포넌트가 @types/react 18.3.20의 JSX 타입 검사와 충돌
 //   → TS2607/TS2786: 'XAxis' cannot be used as a JSX component
-// 해결: any 단언 + createElement로 JSX 타입 검사 우회,
-//       외부에는 명시적 Props 타입으로 타입 안전하게 export
+// 해결: 실제 Recharts 컴포넌트를 FC 타입으로 캐스트해 재export.
+//   - JSX에서는 FC로 보여 TS2607 회피
+//   - 런타임에는 실제 Recharts 컴포넌트이므로 부모 recharts 컴포넌트가
+//     자식(Bar/XAxis 등)을 타입으로 인식 → 데이터 시리즈 정상 렌더링
+//   (이전 FC-중개 패턴은 자식 인식이 깨져 BarChart/ScatterChart가 빈 캔버스만 그렸음)
 // 참고: https://github.com/recharts/recharts/issues/3615
 
-import React from "react";
+import type { FC } from "react";
 import * as Recharts from "recharts";
-
-// recharts의 defaultProps 충돌을 우회하기 위해 any로 캐스팅 후 createElement 호출
-// 이 파일 내부에서만 any 사용 — 외부에는 완전한 타입 제공
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-// Props 타입 추출 유틸
 type AnyProps = Record<string, any>;
 
-export const AreaChart: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.AreaChart as any, props);
-
-export const Area: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.Area as any, props);
-
-export const BarChart: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.BarChart as any, props);
-
-export const Bar: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.Bar as any, props);
-
-export const XAxis: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.XAxis as any, props);
-
-export const YAxis: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.YAxis as any, props);
-
-export const Tooltip: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.Tooltip as any, props);
-
-export const ResponsiveContainer: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.ResponsiveContainer as any, props);
-
-export const Cell: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.Cell as any, props);
-
-export const ScatterChart: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.ScatterChart as any, props);
-
-export const Scatter: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.Scatter as any, props);
-
-export const CartesianGrid: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.CartesianGrid as any, props);
-
-export const Legend: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.Legend as any, props);
-
-export const ZAxis: React.FC<AnyProps> = (props) =>
-  React.createElement(Recharts.ZAxis as any, props);
+export const AreaChart = Recharts.AreaChart as unknown as FC<AnyProps>;
+export const Area = Recharts.Area as unknown as FC<AnyProps>;
+export const BarChart = Recharts.BarChart as unknown as FC<AnyProps>;
+export const Bar = Recharts.Bar as unknown as FC<AnyProps>;
+export const XAxis = Recharts.XAxis as unknown as FC<AnyProps>;
+export const YAxis = Recharts.YAxis as unknown as FC<AnyProps>;
+export const Tooltip = Recharts.Tooltip as unknown as FC<AnyProps>;
+export const ResponsiveContainer = Recharts.ResponsiveContainer as unknown as FC<AnyProps>;
+export const Cell = Recharts.Cell as unknown as FC<AnyProps>;
+export const ScatterChart = Recharts.ScatterChart as unknown as FC<AnyProps>;
+export const Scatter = Recharts.Scatter as unknown as FC<AnyProps>;
+export const CartesianGrid = Recharts.CartesianGrid as unknown as FC<AnyProps>;
+export const Legend = Recharts.Legend as unknown as FC<AnyProps>;
+export const ZAxis = Recharts.ZAxis as unknown as FC<AnyProps>;

@@ -3,6 +3,7 @@ import {
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer,
   BarChart, Bar, Cell,
   CartesianGrid,
+  ScatterChart, Scatter, ZAxis,
 } from "../../lib/safeRecharts";
 import {
   WEEKLY_RANKING, MONTHLY_RANKING, RANKING_TIMELINE, RANKING_SOURCE,
@@ -156,7 +157,7 @@ const COMPANY_COLORS: Record<string, string> = {
 
 type ScatterPoint = { name: string; company: string; score: number; price: number; license: 'open' | 'proprietary'; votes: number };
 
-function ValueTooltip({ active, payload }: { active?: boolean; payload?: ReadonlyArray<{ payload: ScatterPoint & { value: number } }> }) {
+function ValueTooltip({ active, payload }: { active?: boolean; payload?: ReadonlyArray<{ payload: ScatterPoint }> }) {
   if (!active || !payload || payload.length === 0) return null;
   const d = payload[0].payload;
   return (
@@ -202,6 +203,37 @@ function ArenaValueChart({ points }: { points: ScatterPoint[] }) {
       </div>
       <p className="text-center text-[10px] text-gray-400 mt-2">
         Arena 점수 ÷ 입력 가격($/1M) — 높을수록 가성비 우수 · Artificial Analysis 참고
+      </p>
+    </div>
+  );
+}
+// Arena 점수(지능) vs 가격 산점도 — Artificial Analysis 시그니처 시각화
+function ArenaScatterChart({ points }: { points: ScatterPoint[] }) {
+  if (points.length === 0) return null;
+  const prices = points.map(p => p.price);
+  const xMin = Math.min(...prices);
+  const xMax = Math.max(...prices);
+  const scores = points.map(p => p.score);
+  const yMin = Math.floor((Math.min(...scores) - 10) / 10) * 10;
+  const yMax = Math.ceil((Math.max(...scores) + 10) / 10) * 10;
+  const companies = [...new Set(points.map(p => p.company))];
+  const logTicks = [0.05, 0.1, 0.25, 0.5, 1, 2, 5, 10, 25, 50].filter(t => t >= xMin * 0.8 && t <= xMax * 1.25);
+  return (
+    <div className="mt-2 mb-4">
+      <ResponsiveContainer width="100%" height={340}>
+        <ScatterChart margin={{ top: 16, right: 24, left: 8, bottom: 24 }}>
+          <CartesianGrid strokeDasharray="3 3" className="stroke-gray-200 dark:stroke-gray-700" />
+          <XAxis type="number" dataKey="price" scale="log" domain={[xMin * 0.7, xMax * 1.5]} allowDataOverflow ticks={logTicks} tick={{ fontSize: 10, fill: '#9ca3af' }} tickFormatter={(v: number) => `$${v < 1 ? v.toFixed(2) : v.toFixed(0)}`} name="가격" label={{ value: '입력 가격 $/1M 토큰 (로그축)', position: 'insideBottom', offset: -12, fontSize: 11, fill: '#6b7280' }} />
+          <YAxis type="number" dataKey="score" domain={[yMin, yMax]} tick={{ fontSize: 10, fill: '#9ca3af' }} name="Arena 점수" label={{ value: 'Arena 점수 (지능)', angle: -90, position: 'insideLeft', fontSize: 11, fill: '#6b7280' }} />
+          <ZAxis type="number" dataKey="votes" range={[60, 240]} name="투표수" />
+          <Tooltip content={<ValueTooltip />} cursor={{ strokeDasharray: '3 3' }} />
+          {companies.map(c => (
+            <Scatter key={c} name={c} data={points.filter(p => p.company === c)} fill={COMPANY_COLORS[c] ?? '#8b5cf6'} fillOpacity={0.78} />
+          ))}
+        </ScatterChart>
+      </ResponsiveContainer>
+      <p className="text-center text-[10px] text-gray-400 mt-2">
+        좌상단(고점수 · 저가격)일수록 가성비 우수 · Artificial Analysis 시그니처 산점도
       </p>
     </div>
   );
@@ -525,6 +557,13 @@ export default function ExploreRanking() {
           {arenaLoading && ' · 불러오는 중...'}
           {arenaError && ' · 실시간 데이터 실패 (정적 데이터 표시중)'}
         </p>
+        {/* ── AA 시그니처 산점도: Arena 점수(지능) vs 가격 ── */}
+        {scatterPoints.length > 0 && (
+          <div className="rounded-xl bg-gray-50 dark:bg-gray-800/40 p-3 mb-4">
+            <h3 className="text-xs font-bold text-gray-700 dark:text-gray-200 mb-1">📊 성능 vs 가격 (지능 × 비용)</h3>
+            <ArenaScatterChart points={scatterPoints} />
+          </div>
+        )}
         {/* ── AA 스타일 가성비 순위: Arena 점수 ÷ 가격 ── */}
         {scatterPoints.length > 0 && (
           <div className="rounded-xl bg-gray-50 dark:bg-gray-800/40 p-3 mb-4">

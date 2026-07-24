@@ -66,7 +66,7 @@ function buildCompareItem(m: typeof models[0], liveInput?: number | null, liveOu
     output: liveOutput ?? m.outputPrice,
     context: m.contextWindow,
     isNew: m.isNew,
-    koreanBilling: ['Zhipu AI', 'Alibaba', 'MiniMax'].includes(m.company),
+    koreanBilling: m.koreanBilling === true,
     benchmarks: BENCH_DATA[m.name.toLowerCase()] ?? BENCH_DATA[m.id] ?? undefined,
   };
 }

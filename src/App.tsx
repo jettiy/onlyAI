@@ -18,6 +18,7 @@ const ExploreTokenizer = lazy(() => import("./pages/explore/ExploreTokenizer").t
 const ExplorePromptBench = lazy(() => import("./pages/explore/ExplorePromptBench").then(m => ({ default: m.default })));
 const ExploreSideBySide = lazy(() => import("./pages/explore/ExploreSideBySide").then(m => ({ default: m.default })));
 const ExploreCodingIndex = lazy(() => import("./pages/explore/ExploreCodingIndex").then(m => ({ default: m.default })));
+const KoreanAI = lazy(() => import("./pages/KoreanAI"));
 
 const LearnHub = lazy(() => import("./pages/learn/LearnHub").then(m => ({ default: m.default })));
 const LearnGlossary = lazy(() => import("./pages/learn/LearnGlossary").then(m => ({ default: m.default })));
@@ -68,6 +69,7 @@ export default function App() {
             <Route path="/explore/prompt-bench" element={<ExplorePromptBench />} />
             <Route path="/explore/side-by-side" element={<ExploreSideBySide />} />
             <Route path="/explore/coding-index" element={<ExploreCodingIndex />} />
+            <Route path="/korean-ai" element={<KoreanAI />} />
 
             <Route path="/video" element={<Navigate to="/video/compare" replace />} />
             <Route path="/video/timeline" element={<VideoTimeline />} />

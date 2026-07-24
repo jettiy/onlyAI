@@ -30,6 +30,7 @@ import {
   MessageSquare,
   Columns,
   Code2,
+  Globe,
 } from 'lucide-react';
 
 /* ──────────────────────────── Infinity Logo ──────────────────────────── */
@@ -101,6 +102,7 @@ const TOP_NAV: MegaItem[] = [
       { path: '/explore/prompt-bench', label: '프롬프트 벤치', icon: <MessageSquare size={18} /> },
       { path: '/explore/side-by-side', label: '나란히 비교', icon: <Columns size={18} /> },
       { path: '/explore/coding-index', label: '코딩 인덱스', icon: <Code2 size={18} /> },
+      { path: '/korean-ai', label: '국내 AI 서비스', icon: <Globe size={18} /> },
       { path: '/video/timeline', label: '비디오 AI', icon: <Video size={18} /> },
       { path: '/image', label: '이미지 AI', icon: <Image size={18} /> },
     ],
@@ -141,6 +143,7 @@ const MOBILE_DRAWER_SECTIONS: { title?: string; items: { path: string; label: st
       { path: '/explore/prompt-bench', label: '프롬프트 벤치', icon: <MessageSquare size={18} /> },
       { path: '/explore/side-by-side', label: '나란히 비교', icon: <Columns size={18} /> },
       { path: '/explore/coding-index', label: '코딩 인덱스', icon: <Code2 size={18} /> },
+      { path: '/korean-ai', label: '국내 AI 서비스', icon: <Globe size={18} /> },
       { path: '/video/timeline', label: '비디오 AI', icon: <Video size={18} /> },
       { path: '/image', label: '이미지 AI', icon: <Image size={18} /> },
     ],

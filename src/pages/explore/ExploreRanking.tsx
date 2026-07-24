@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import {
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer,
   BarChart, Bar, Cell,
+  CartesianGrid,
 } from "../../lib/safeRecharts";
 import {
   WEEKLY_RANKING, MONTHLY_RANKING, RANKING_TIMELINE, RANKING_SOURCE,
@@ -145,6 +146,66 @@ function ShareRing({ share, color }: { share: number; color: string }) {
   );
 }
 
+// 회사별 산점도 색상 (Artificial Analysis 스타일)
+const COMPANY_COLORS: Record<string, string> = {
+  OpenAI: '#10a37f', Anthropic: '#d97757', Google: '#4285f4', Meta: '#1877f2',
+  xAI: '#1d9bf0', DeepSeek: '#4d6bfe', Alibaba: '#615ced', Moonshot: '#111827',
+  'Zhipu AI': '#3b82f6', Mistral: '#fa520f', MiniMax: '#7c3aed', Xiaomi: '#ff6900',
+  NVIDIA: '#76b900', Microsoft: '#0078d4', Cohere: '#39d353', 'Arcee AI': '#06b6d4',
+};
+
+type ScatterPoint = { name: string; company: string; score: number; price: number; license: 'open' | 'proprietary'; votes: number };
+
+function ValueTooltip({ active, payload }: { active?: boolean; payload?: ReadonlyArray<{ payload: ScatterPoint & { value: number } }> }) {
+  if (!active || !payload || payload.length === 0) return null;
+  const d = payload[0].payload;
+  return (
+    <div className="bg-gray-800 dark:bg-gray-900 text-white rounded-lg px-3 py-2 text-xs shadow-xl border border-gray-600 dark:border-gray-700">
+      <p className="font-bold mb-0.5">{d.name}</p>
+      <p className="text-gray-300 text-[10px] mb-1">{d.company} · {d.license === 'open' ? '오픈웨이트' : '상용'}</p>
+      <p className="flex justify-between gap-6 font-mono"><span>Arena 점수</span><span>{d.score}</span></p>
+      <p className="flex justify-between gap-6 font-mono"><span>입력 가격</span><span>${d.price.toFixed(2)}/M</span></p>
+    </div>
+  );
+}
+
+// Arena 점수 ÷ 가격 = 가성비 순위 (Artificial Analysis cost-per-intelligence 참고)
+function ArenaValueChart({ points }: { points: ScatterPoint[] }) {
+  if (points.length === 0) return null;
+  const rows = points
+    .map(p => ({ ...p, value: p.price > 0 ? p.score / p.price : 0 }))
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 15);
+  const companies = [...new Set(rows.map(p => p.company))];
+  return (
+    <div className="mt-2 mb-4">
+      <ResponsiveContainer width="100%" height={Math.max(220, rows.length * 30)}>
+        <BarChart data={rows} layout="vertical" margin={{ top: 4, right: 36, left: 6, bottom: 4 }}>
+          <CartesianGrid strokeDasharray="3 3" className="stroke-gray-200 dark:stroke-gray-700" horizontal={false} />
+          <XAxis type="number" tick={{ fontSize: 10, fill: '#9ca3af' }} />
+          <YAxis type="category" dataKey="name" width={140} tick={{ fontSize: 10, fill: '#6b7280' }} interval={0} />
+          <Tooltip content={<ValueTooltip />} cursor={{ fill: 'rgba(139,92,246,0.08)' }} />
+          <Bar dataKey="value" radius={[0, 4, 4, 0]} maxBarSize={22} isAnimationActive={false}>
+            {rows.map((p, i) => (
+              <Cell key={i} fill={COMPANY_COLORS[p.company] ?? '#8b5cf6'} fillOpacity={0.85} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+      <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 justify-center">
+        {companies.map(c => (
+          <span key={c} className="inline-flex items-center gap-1 text-[10px] text-gray-500 dark:text-gray-400">
+            <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: COMPANY_COLORS[c] ?? '#8b5cf6' }} />
+            {c}
+          </span>
+        ))}
+      </div>
+      <p className="text-center text-[10px] text-gray-400 mt-2">
+        Arena 점수 ÷ 입력 가격($/1M) — 높을수록 가성비 우수 · Artificial Analysis 참고
+      </p>
+    </div>
+  );
+}
 /* ── Main Component ── */
 export default function ExploreRanking() {
   const [period, setPeriod] = useState<Period>("weekly");
@@ -184,6 +245,14 @@ export default function ExploreRanking() {
 
     return result;
   }, [arenaRanking, categoryFilter, quickFilter]);
+  // AA 스타일 산점도용 데이터: Arena 점수 × 카탈로그 입력 가격 매칭
+  const scatterPoints = useMemo(() => {
+    return filteredArena.map(e => {
+      const m = models.find(mm => mm.id === e.modelId) || models.find(mm => mm.name === e.name);
+      if (!m || m.inputPrice == null || m.inputPrice <= 0) return null;
+      return { name: e.name, company: e.company, score: e.score, price: m.inputPrice, license: e.license, votes: e.votes };
+    }).filter((p): p is ScatterPoint => p !== null);
+  }, [filteredArena]);
 
   const topModel = data[0];
   const maxTokens = data.length > 0 ? Math.max(...data.map((m) => m.tokensNum)) : 0;
@@ -456,6 +525,13 @@ export default function ExploreRanking() {
           {arenaLoading && ' · 불러오는 중...'}
           {arenaError && ' · 실시간 데이터 실패 (정적 데이터 표시중)'}
         </p>
+        {/* ── AA 스타일 가성비 순위: Arena 점수 ÷ 가격 ── */}
+        {scatterPoints.length > 0 && (
+          <div className="rounded-xl bg-gray-50 dark:bg-gray-800/40 p-3 mb-4">
+            <h3 className="text-xs font-bold text-gray-700 dark:text-gray-200 mb-1">💰 가성비 순위 (Arena 점수 ÷ 가격)</h3>
+            <ArenaValueChart points={scatterPoints} />
+          </div>
+        )}
 
         {/* ── Quick Filter Buttons ── */}
         <div className="flex flex-wrap gap-2 mb-4">

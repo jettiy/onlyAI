@@ -189,11 +189,19 @@ export default function ExploreCompare() {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialTab = searchParams.get('tab') === 'bench' ? 'bench' as const : searchParams.get('tab') === 'vs' ? 'vs' as const : 'price' as const;
   const [tab, setTab] = useState<'price' | 'bench' | 'vs'>(initialTab);
-  const [selectA, setSelectA] = useState('');
-  const [selectB, setSelectB] = useState('');
+  const [selectA, setSelectA] = useState(searchParams.get('a') ?? '');
+  const [selectB, setSelectB] = useState(searchParams.get('b') ?? '');
   const [useCaseFilter, setUseCaseFilter] = useState('all');
   const [sortBy, setSortBy] = useState<'price' | 'lang' | 'popular'>('price');
   const [showKoreanOnly, setShowKoreanOnly] = useState(false);
+  // A/B 선택 → URL 동기화 (공유 가능한 비교 링크)
+  useEffect(() => {
+    const next: Record<string, string> = {};
+    if (selectA) next.a = selectA;
+    if (selectB) next.b = selectB;
+    if (tab !== 'price') next.tab = tab;
+    setSearchParams(next, { replace: true });
+  }, [selectA, selectB, tab, setSearchParams]);
 
   // OpenRouter 실시간 가격
   const { getLivePrice } = useLivePrices();

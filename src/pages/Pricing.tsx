@@ -7,6 +7,7 @@ import { estimateMonthlyCost, formatMonthlyCost } from '../lib/estimatedMonthlyC
 import { useLivePrices } from '../hooks/useLivePrices';
 import { useCloudProviderStats } from '../hooks/useCloudProviderStats';
 import PriceHistoryChart from '../components/PriceHistoryChart';
+import PriceDropAlerts from '../components/PriceDropAlerts';
 
 interface PriceRow {
   model: string;
@@ -412,6 +413,7 @@ export default function Pricing() {
         {loading && <div className="mt-2 flex items-center gap-2"><div className="w-4 h-4 border-2 border-brand-500 border-t-transparent rounded-full animate-spin" /><span className="text-xs text-gray-400">가격 불러오는 중...</span></div>}
         {!loading && liveLoading && <div className="mt-2 flex items-center gap-2"><div className="w-4 h-4 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" /><span className="text-xs text-gray-400">실시간 가격 동기화 중...</span></div>}
       </div>
+      <PriceDropAlerts />
 
       {/* Tab switcher */}
       <div className="flex gap-2 overflow-x-auto pb-1">

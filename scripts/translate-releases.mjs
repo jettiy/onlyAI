@@ -26,8 +26,17 @@ for (let i = 0; i < rawReleases.length; i += batchSize) {
     }),
   });
   const glmData = await glmRes.json();
+  if (!glmRes.ok || !glmData.choices?.[0]) {
+    console.error(`API error (batch ${Math.floor(i / batchSize) + 1}):`, glmRes.status, JSON.stringify(glmData).slice(0, 300));
+    process.exit(1);
+  }
   const content = glmData.choices[0].message.content.replace(/```json?\s*/gi, '').replace(/```/g, '').trim();
-  allTranslated.push(...JSON.parse(content));
+  try {
+    allTranslated.push(...JSON.parse(content));
+  } catch (e) {
+    console.error(`JSON parse error (batch ${Math.floor(i / batchSize) + 1}):`, content.slice(0, 300));
+    process.exit(1);
+  }
 }
 
 const transMap = new Map(allTranslated.map(t => [t.tag, t]));

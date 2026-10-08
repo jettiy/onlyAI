@@ -316,6 +316,13 @@ function TopNavItem({
   return (
     <div ref={containerRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="relative">
       <button
+        onClick={(e) => {
+          // 터치·클릭으로도 열리게 (hover 전용은 모바일/재진입 시 무반응 버그)
+          e.preventDefault();
+          setOpen((v) => !v);
+        }}
+        aria-expanded={open}
+        aria-haspopup="true"
         className={`flex items-center gap-1 px-3 py-4 text-sm font-medium transition-colors whitespace-nowrap ${
           active
             ? 'text-[#5B5FEF] font-bold'

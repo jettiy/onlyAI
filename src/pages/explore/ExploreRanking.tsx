@@ -13,7 +13,7 @@ import {
 import { useArenaRanking } from "../../hooks/useArenaRanking";
 import { models } from "../../data/models";
 import { CompanyLogo } from "../../components/CompanyLogo";
-import { Rocket, HeartHandshake, BarChart3, TrendingUp, RefreshCw } from "lucide-react";
+import {Rocket, HeartHandshake, BarChart3, TrendingUp, RefreshCw, Coins, Trophy} from "lucide-react";
 
 type Period = "weekly" | "monthly";
 type View = "chart" | "list";
@@ -102,7 +102,7 @@ function getChangeBg(change: string) {
 function getCategoryLabel(cat: string) {
   switch (cat) {
     case "flagship": return <><Rocket size={14} className="inline mr-0.5" /> 플래그십</>;
-    case "value": return "💎 가성비";
+    case "value": return "가성비";
     case "free": return <><HeartHandshake size={14} className="inline mr-0.5" /> 무료</>;
     default: return cat;
   }
@@ -312,7 +312,7 @@ export default function ExploreRanking() {
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
           <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">
-            🏆 AI 모델 인기 랭킹
+            <Trophy className="inline-block shrink-0 align-text-bottom" size={16} />  AI 모델 인기 랭킹
           </h1>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             OpenRouter 토큰 사용량 기준 — 가장 많이 쓰이는 AI 모델 순위예요.
@@ -346,7 +346,7 @@ export default function ExploreRanking() {
               }`}
               title="리스트 뷰"
             >
-              ☰
+ 
             </button>
             <button
               onClick={() => setView("chart")}
@@ -397,7 +397,7 @@ export default function ExploreRanking() {
       {topModel && view === "list" && (
         <div className="grid grid-cols-3 gap-3">
           {[data[1], data[0], data[2]].filter(Boolean).map((m, idx) => {
-            const medals = ["🥈", "🥇", "🥉"];
+            const medals = ["", "", ""];
             const sizes = ["", "ring-2 ring-amber-400 scale-105", ""];
             return (
               <div
@@ -449,7 +449,7 @@ export default function ExploreRanking() {
                 {/* 순위 */}
                 <div className="w-6 text-center shrink-0">
                   {m.rank <= 3 ? (
-                    <span className="text-sm">{["🥇", "🥈", "🥉"][m.rank - 1]}</span>
+                    <span className="text-sm">{["", "", ""][m.rank - 1]}</span>
                   ) : (
                     <span className="text-xs font-bold text-gray-400">{m.rank}</span>
                   )}
@@ -550,24 +550,24 @@ export default function ExploreRanking() {
 
       {/* ═══ arena.ai Expert 랭킹 ═══ */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
-        <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-1">⚔️ arena.ai Expert 랭킹</h2>
+ <h2 className="text-sm font-bold text-gray-900 dark:text-white mb-1"> arena.ai Expert 랭킹</h2>
         <p className="text-xs text-gray-400 mb-3">
           전문가 블라인드 평가 · 295,028표 · 290개 모델
           {arenaIsLive && arenaUpdatedAt && ` · 실시간 업데이트 (${arenaUpdatedAt})`}
-          {arenaLoading && ' · 불러오는 중...'}
-          {arenaError && ' · 실시간 데이터 실패 (정적 데이터 표시중)'}
+          {arenaLoading && '· 불러오는 중...'}
+          {arenaError && '· 실시간 데이터 실패 (정적 데이터 표시중)'}
         </p>
         {/* ── AA 시그니처 산점도: Arena 점수(지능) vs 가격 ── */}
         {scatterPoints.length > 0 && (
           <div className="rounded-xl bg-gray-50 dark:bg-gray-800/40 p-3 mb-4">
-            <h3 className="text-xs font-bold text-gray-700 dark:text-gray-200 mb-1">📊 성능 vs 가격 (지능 × 비용)</h3>
+            <h3 className="text-xs font-bold text-gray-700 dark:text-gray-200 mb-1"><BarChart3 className="inline-block shrink-0 align-text-bottom" size={16} /> 성능 vs 가격 (지능 × 비용)</h3>
             <ArenaScatterChart points={scatterPoints} />
           </div>
         )}
         {/* ── AA 스타일 가성비 순위: Arena 점수 ÷ 가격 ── */}
         {scatterPoints.length > 0 && (
           <div className="rounded-xl bg-gray-50 dark:bg-gray-800/40 p-3 mb-4">
-            <h3 className="text-xs font-bold text-gray-700 dark:text-gray-200 mb-1">💰 가성비 순위 (Arena 점수 ÷ 가격)</h3>
+            <h3 className="text-xs font-bold text-gray-700 dark:text-gray-200 mb-1"><Coins className="inline-block shrink-0 align-text-bottom" size={16} /> 가성비 순위 (Arena 점수 ÷ 가격)</h3>
             <ArenaValueChart points={scatterPoints} />
           </div>
         )}
@@ -607,7 +607,7 @@ export default function ExploreRanking() {
                 <tr key={i} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                   <td className="py-2.5 px-2 font-bold">
                     <span className={e.rank <= 3 ? `inline-flex items-center justify-center w-6 h-6 rounded-full text-white text-[10px] ${e.rank === 1 ? 'bg-amber-400' : e.rank === 2 ? 'bg-gray-400' : 'bg-amber-600'}` : ''}>
-                      {e.rank <= 3 ? ['', '🥇', '🥈', '🥉'][e.rank] : e.rank}
+                      {e.rank <= 3 ? ['', '', '', ''][e.rank] : e.rank}
                     </span>
                   </td>
                   <td className="py-2.5 px-2 font-semibold text-gray-900 dark:text-white">{e.name}</td>
@@ -630,7 +630,7 @@ export default function ExploreRanking() {
 
       {/* ── 출처 ── */}
       <div className="bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900 rounded-xl px-4 py-3">
-        <p className="text-xs font-semibold text-brand-800 dark:text-brand-300 mb-1">ℹ️ 랭킹 출처</p>
+        <p className="text-xs font-semibold text-brand-800 dark:text-brand-300 mb-1">ℹ 랭킹 출처</p>
         <p className="text-xs text-brand-600 dark:text-brand-400 leading-relaxed">
           {RANKING_SOURCE}. OpenRouter 플랫폼에서 라우팅된 토큰 사용량을 기준으로 한 인기 랭킹입니다.
           실제 전체 사용량과는 차이가 있을 수 있습니다.

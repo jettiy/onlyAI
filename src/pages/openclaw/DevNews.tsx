@@ -1,3 +1,4 @@
+import { ClipboardList, Map, Wrench } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface Release {
@@ -51,7 +52,7 @@ export default function DevNews() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🛠️ 개발자 소식</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><Wrench className="inline-block shrink-0 align-text-bottom" size={16} /> 개발자 소식</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           OpenClaw GitHub Releases 자동 수집 · 한글 요약
           {updatedAt && <span className="ml-1 text-gray-400">({updatedAt} 업데이트)</span>}
@@ -97,7 +98,7 @@ export default function DevNews() {
       {/* 업데이트 목록 */}
       {!loading && (
         <div>
-          <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3">📋 최근 업데이트</h2>
+          <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3"><ClipboardList className="inline-block shrink-0 align-text-bottom" size={16} /> 최근 업데이트</h2>
           <div className="space-y-3">
             {(expandedTag ? releases.filter(r => r.tagLabel === expandedTag) : releases.slice(0, 10)).map((u) => (
               <a key={u.tag} href={u.htmlUrl} target="_blank" rel="noopener noreferrer"
@@ -135,7 +136,7 @@ export default function DevNews() {
 
       {/* 로드맵 */}
       <div>
-        <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3">🗺️ 로드맵</h2>
+        <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3"><Map className="inline-block shrink-0 align-text-bottom" size={16} /> 로드맵</h2>
         <div className="grid sm:grid-cols-2 gap-3">
           {ROADMAP.map(r => (
             <div key={r.title} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">

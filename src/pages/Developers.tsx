@@ -1,8 +1,9 @@
+import { Code2 } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const CARDS = [
   {
-    icon: '⚡',
+ icon: '',
     title: 'API 빠른 시작',
     desc: '처음 API를 쓰는 분들을 위한 기초 가이드. Python/JavaScript 코드 예시 포함.',
     to: '/developers/quickstart',
@@ -10,7 +11,7 @@ const CARDS = [
     textColor: 'text-yellow-700 dark:text-yellow-300',
   },
   {
-    icon: '💰',
+    icon: '',
     title: 'API 가격 비교',
     desc: '모델별 API 가격을 한눈에 비교. 월 예상 비용까지 계산해드려요.',
     to: '/developers/pricing',
@@ -18,7 +19,7 @@ const CARDS = [
     textColor: 'text-emerald-700 dark:text-emerald-300',
   },
   {
-    icon: '☁️',
+ icon: '',
     title: '클라우드 제공사',
     desc: 'OpenRouter, Groq, DeepSeek API 등 어디서 API를 쓸지 비교해보세요.',
     to: '/developers/providers',
@@ -31,7 +32,7 @@ export default function Developers() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">💻 개발자</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white"><Code2 className="inline-block shrink-0 align-text-bottom" size={16} /> 개발자</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">AI API를 활용해서 앱에 AI 기능을 추가해보세요</p>
       </div>
 

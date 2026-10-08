@@ -149,7 +149,7 @@ export default function ExploreKoreanBench() {
         {sorted.map((m, idx) => {
           const score = m.scores[activeBench] ?? 0;
           const pct = (score / maxScore) * 100;
-          const medal = idx === 0 ? "🥇" : idx === 1 ? "🥈" : idx === 2 ? "🥉" : null;
+          const medal = idx === 0 ? "" : idx === 1 ? "" : idx === 2 ? "" : null;
           return (
             <div key={m.name} className="flex items-center gap-3">
               <div className="w-5 text-xs text-center shrink-0 font-medium">
@@ -271,7 +271,7 @@ export default function ExploreKoreanBench() {
 
       {/* Note */}
       <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-100 dark:border-amber-900 rounded-xl px-4 py-3">
-        <p className="text-xs font-bold text-amber-700 dark:text-amber-400 mb-1">⚠️ 참고사항</p>
+ <p className="text-xs font-bold text-amber-700 dark:text-amber-400 mb-1"> 참고사항</p>
         <p className="text-xs text-amber-600 dark:text-amber-500 leading-relaxed">
           벤치마크 점수는 모델의 성능을 참고용으로만 확인하세요. 실제 사용에서는 프롬프트 작성 방법에 따라 결과가 크게 달라질 수 있습니다.
         </p>

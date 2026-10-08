@@ -1,24 +1,25 @@
+import { ClipboardList, Lightbulb } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const FEATURED_FRAMEWORKS = ['AIM', 'RISEN', 'CARE', 'COSTAR'];
 
 const ITEMS = [
   {
-    path: '/prompts/intro', icon: '💡', label: '프롬프트가 뭔가요?',
+    path: '/prompts/intro', icon: '', label: '프롬프트가 뭔가요?',
     desc: 'AI에게 말 거는 방식이 결과를 바꿔요. 개념부터 좋은 예시·나쁜 예시까지.',
     tag: '입문 필독',
     color: 'text-violet-600 dark:text-violet-400',
     border: 'border-violet-200 dark:border-violet-900',
   },
   {
-    path: '/prompts/how', icon: '✏️', label: '프롬프트 작성법',
+ path: '/prompts/how', icon: '', label: '프롬프트 작성법',
     desc: `AIM·RISEN·CARE 등 검증된 프레임워크로 원하는 답변을 이끌어내는 방법.`,
     tag: '핵심 스킬',
     color: 'text-brand-600 dark:text-brand-400',
     border: 'border-brand-200 dark:border-brand-900',
   },
   {
-    path: '/prompts/library', icon: '📚', label: '프롬프트 저장소',
+    path: '/prompts/library', icon: '', label: '프롬프트 저장소',
     desc: '코딩·글쓰기·마케팅·AI 활용 등 21개 실전 프롬프트. 복붙해서 바로 써요.',
     tag: '21개 수록',
     color: 'text-cyan-600 dark:text-cyan-400',
@@ -31,7 +32,7 @@ export default function PromptsHub() {
     <div className="space-y-8">
       {/* 헤더 */}
       <div className="border-b border-gray-200 dark:border-gray-800 pb-5">
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-2">📋 프롬프트 적용하기</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-2"><ClipboardList className="inline-block shrink-0 align-text-bottom" size={16} /> 프롬프트 적용하기</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 max-w-lg">
           AI를 제대로 활용하는 첫 번째 기술은 프롬프트예요.<br />
           개념을 이해하고, 작성법을 익히고, 저장소에서 바로 활용해보세요.
@@ -73,7 +74,7 @@ export default function PromptsHub() {
 
       {/* 팁 배너 */}
       <div className="flex items-start gap-3 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900 rounded-xl p-4">
-        <span className="text-xl shrink-0">💡</span>
+        <span className="text-xl shrink-0"><Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} /> </span>
         <div>
           <p className="text-sm font-bold text-amber-800 dark:text-amber-300 mb-0.5">프롬프트는 반복 수정이 핵심이에요</p>
           <p className="text-xs text-amber-700 dark:text-amber-400 leading-relaxed">

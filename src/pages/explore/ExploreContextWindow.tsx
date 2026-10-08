@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { logoIdToPath } from "../../lib/logoUtils";
-import { ClipboardList, Lightbulb } from "lucide-react";
+import { ClipboardList, Lightbulb, Ruler } from "lucide-react";
 
 interface ContextModel {
   name: string;
@@ -30,13 +30,13 @@ const MODELS: ContextModel[] = [
 ];
 
 const REAL_WORLD: { label: string; iconName?: string; tokens: number }[] = [
-  { label: "📱 카톡 메시지 1개", tokens: 50 },
-  { label: "📄 A4 페이지 1장", tokens: 2000 },
-  { label: "📰 뉴스 기사 1편", tokens: 5000 },
-  { label: "📖 소설 1장", tokens: 20000 },
-  { label: "📚 대학 전공책 1권", tokens: 100000 },
+  { label: "카톡 메시지 1개", tokens: 50 },
+  { label: "A4 페이지 1장", tokens: 2000 },
+  { label: "뉴스 기사 1편", tokens: 5000 },
+  { label: "소설 1장", tokens: 20000 },
+  { label: "대학 전공책 1권", tokens: 100000 },
   { label: "소설책 1권 (해리포터)", iconName: "clipboard", tokens: 270000 },
-  { label: "📚 소설 3권 세트", tokens: 800000 },
+  { label: "소설 3권 세트", tokens: 800000 },
 ];
 
 function formatTokens(n: number): string {
@@ -76,7 +76,7 @@ export default function ExploreContextWindow() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">📏 컨텍스트 윈도우 시각화</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><Ruler className="inline-block shrink-0 align-text-bottom" size={16} /> 컨텍스트 윈도우 시각화</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           컨텍스트 윈도우가 실제로 얼마나 많은 텍스트인지 직관적으로 확인해보세요.
         </p>

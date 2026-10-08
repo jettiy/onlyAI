@@ -1,3 +1,4 @@
+import { Target } from "lucide-react";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { type UseCase, type BudgetTier } from '../data/modelStrengths';
@@ -6,34 +7,34 @@ import { recommendAsync } from '../lib/recommendEngine';
 const STEPS = ['용도', '예산', '환경', '개인정보'] as const;
 
 const USE_CASES: { key: UseCase | 'all'; icon: string; label: string }[] = [
-  { key: 'writing', icon: '✍️', label: '글쓰기·번역' },
-  { key: 'coding', icon: '💻', label: '코딩·개발' },
-  { key: 'image', icon: '🖼️', label: '이미지 생성' },
-  { key: 'video', icon: '🎬', label: '비디오 생성' },
-  { key: 'summary', icon: '📊', label: '문서 요약·분석' },
-  { key: 'chat', icon: '💬', label: '대화·상담' },
-  { key: 'all', icon: '🎯', label: '전부 다' },
+ { key: 'writing', icon: '', label: '글쓰기·번역' },
+  { key: 'coding', icon: '', label: '코딩·개발' },
+  { key: 'image', icon: '', label: '이미지 생성' },
+  { key: 'video', icon: '', label: '비디오 생성' },
+  { key: 'summary', icon: '', label: '문서 요약·분석' },
+  { key: 'chat', icon: '', label: '대화·상담' },
+  { key: 'all', icon: '', label: '전부 다' },
 ];
 
 const BUDGETS: { key: BudgetTier; icon: string; label: string; desc: string }[] = [
   { key: 'free', icon: '🆓', label: '무료만', desc: '비용 없이 사용' },
-  { key: 'cheap', icon: '💰', label: '월 1만원 이하', desc: '가성비 우선' },
-  { key: 'mid', icon: '💳', label: '월 5만원 이하', desc: '품질까지 고려' },
-  { key: 'premium', icon: '💎', label: '상관없음', desc: '성능 최우선' },
+  { key: 'cheap', icon: '', label: '월 1만원 이하', desc: '가성비 우선' },
+  { key: 'mid', icon: '', label: '월 5만원 이하', desc: '품질까지 고려' },
+  { key: 'premium', icon: '', label: '상관없음', desc: '성능 최우선' },
 ];
 
 type Environment = 'cloud' | 'local' | 'both';
 
 const ENVIRONMENTS: { key: Environment; icon: string; label: string; desc: string }[] = [
-  { key: 'cloud', icon: '🌐', label: '웹 브라우저', desc: '클라우드 API 사용 (ChatGPT, Claude 등)' },
-  { key: 'local', icon: '🖥️', label: '내 컴퓨터', desc: '로컬에서 직접 실행 (Ollama 등)' },
-  { key: 'both', icon: '🔍', label: '둘 다 궁금해', desc: '비교해보고 싶어' },
+  { key: 'cloud', icon: '', label: '웹 브라우저', desc: '클라우드 API 사용 (ChatGPT, Claude 등)' },
+  { key: 'local', icon: '', label: '내 컴퓨터', desc: '로컬에서 직접 실행 (Ollama 등)' },
+  { key: 'both', icon: '', label: '둘 다 궁금해', desc: '비교해보고 싶어' },
 ];
 
 const PRIVACY_OPTIONS = [
-  { key: 'high', icon: '🔒', label: '매우 중요', desc: '데이터를 보내고 싶지 않아' },
-  { key: 'medium', icon: '📋', label: '보통', desc: '상용 서비스는 괜찮아' },
-  { key: 'low', icon: '🌐', label: '상관없음', desc: '최고 성능이 중요해' },
+  { key: 'high', icon: '', label: '매우 중요', desc: '데이터를 보내고 싶지 않아' },
+  { key: 'medium', icon: '', label: '보통', desc: '상용 서비스는 괜찮아' },
+  { key: 'low', icon: '', label: '상관없음', desc: '최고 성능이 중요해' },
 ];
 
 export default function RecommendQuiz() {
@@ -75,7 +76,7 @@ export default function RecommendQuiz() {
     return true;
   };
 
-  const stepIcons = ['🎯', '💰', '🖥️', '🔐'];
+  const stepIcons = ['', '', '', ''];
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -108,7 +109,7 @@ export default function RecommendQuiz() {
                   ? 'bg-brand-100 dark:bg-brand-900/50 text-brand-600 dark:text-brand-400 ring-2 ring-brand-500 scale-110'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-400'
             }`}>
-              {i < step ? '✓' : stepIcons[i]}
+ {i < step ? '' : stepIcons[i]}
             </div>
             <span className={`text-xs font-medium hidden sm:block transition-colors ${
               i === step ? 'text-brand-600 dark:text-brand-400' : i < step ? 'text-brand-500' : 'text-gray-400'
@@ -161,7 +162,7 @@ export default function RecommendQuiz() {
                   <p className="text-xs text-gray-500 dark:text-gray-400">{b.desc}</p>
                 </div>
                 {budget === b.key && (
-                  <span className="ml-auto text-brand-500 text-lg">✓</span>
+ <span className="ml-auto text-brand-500 text-lg"></span>
                 )}
               </button>
             ))}
@@ -189,7 +190,7 @@ export default function RecommendQuiz() {
                   <p className="text-xs text-gray-500 dark:text-gray-400">{opt.desc}</p>
                 </div>
                 {environment === opt.key && (
-                  <span className="ml-auto text-brand-500 text-lg">✓</span>
+ <span className="ml-auto text-brand-500 text-lg"></span>
                 )}
               </button>
             ))}
@@ -215,7 +216,7 @@ export default function RecommendQuiz() {
                   <p className="text-xs text-gray-500 dark:text-gray-400">{opt.desc}</p>
                 </div>
                 {privacy === opt.key && (
-                  <span className="ml-auto text-brand-500 text-lg">✓</span>
+ <span className="ml-auto text-brand-500 text-lg"></span>
                 )}
               </button>
             ))}
@@ -238,7 +239,7 @@ export default function RecommendQuiz() {
         ) : (
           <button onClick={handleSubmit}
             className="px-8 py-3 rounded-lg text-sm font-bold bg-brand-600 text-white hover:bg-brand-700 transition-colors shadow-md">
-            🎯 결과 보기
+            <Target className="inline-block shrink-0 align-text-bottom" size={16} />  결과 보기
           </button>
         )}
       </div>

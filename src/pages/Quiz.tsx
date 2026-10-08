@@ -1,3 +1,4 @@
+import {ClipboardList, HelpCircle, PartyPopper, Target, RefreshCw} from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { models, companies } from "../data/models";
@@ -12,44 +13,44 @@ const STEPS = [
   {
     id: "usecase",
     question: "주로 어떤 용도로 AI를 쓰실 건가요?",
-    emoji: "🎯",
+    emoji: "",
     options: [
-      { value: "coding", label: "코딩 / 개발", icon: "💻" },
-      { value: "writing", label: "글쓰기 / 번역", icon: "✍️" },
-      { value: "analysis", label: "분석 / 연구", icon: "🔬" },
-      { value: "chat", label: "대화 / 질문", icon: "💬" },
-      { value: "image", label: "이미지 / 멀티모달", icon: "🖼️" },
+      { value: "coding", label: "코딩 / 개발", icon: "" },
+ { value: "writing", label: "글쓰기 / 번역", icon: "" },
+      { value: "analysis", label: "분석 / 연구", icon: "" },
+      { value: "chat", label: "대화 / 질문", icon: "" },
+      { value: "image", label: "이미지 / 멀티모달", icon: "" },
     ],
   },
   {
     id: "korean",
     question: "한국어로 자주 사용하실 건가요?",
-    emoji: "🇰🇷",
+    emoji: "",
     options: [
-      { value: "always", label: "항상 한국어로 사용해요", icon: "🇰🇷" },
-      { value: "sometimes", label: "한국어·영어 반반", icon: "🌏" },
-      { value: "rarely", label: "주로 영어로 사용해요", icon: "🇺🇸" },
+      { value: "always", label: "항상 한국어로 사용해요", icon: "" },
+      { value: "sometimes", label: "한국어·영어 반반", icon: "" },
+      { value: "rarely", label: "주로 영어로 사용해요", icon: "" },
     ],
   },
   {
     id: "budget",
     question: "예산은 어느 정도인가요?",
-    emoji: "💰",
+    emoji: "",
     options: [
       { value: "free", label: "완전 무료로만 쓰고 싶어요", icon: "🆓" },
-      { value: "low", label: "월 1~2만원 정도는 괜찮아요", icon: "💵" },
-      { value: "medium", label: "월 5~10만원까지 투자할 수 있어요", icon: "💳" },
-      { value: "high", label: "성능이 좋으면 비용은 상관없어요", icon: "🚀" },
+      { value: "low", label: "월 1~2만원 정도는 괜찮아요", icon: "" },
+      { value: "medium", label: "월 5~10만원까지 투자할 수 있어요", icon: "" },
+      { value: "high", label: "성능이 좋으면 비용은 상관없어요", icon: "" },
     ],
   },
   {
     id: "skill",
     question: "AI 사용 경험이 어느 정도인가요?",
-    emoji: "📊",
+    emoji: "",
     options: [
-      { value: "beginner", label: "처음 써봐요", icon: "🌱" },
-      { value: "intermediate", label: "ChatGPT 등 써봤어요", icon: "⭐" },
-      { value: "advanced", label: "API나 코드로도 써봤어요", icon: "🔧" },
+      { value: "beginner", label: "처음 써봐요", icon: "" },
+ { value: "intermediate", label: "ChatGPT 등 써봤어요", icon: "" },
+      { value: "advanced", label: "API나 코드로도 써봤어요", icon: "" },
     ],
   },
 ];
@@ -198,7 +199,7 @@ export default function Quiz() {
     <div className="max-w-2xl mx-auto space-y-6">
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">🎯 나에게 맞는 AI 찾기</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2"><Target className="inline-block shrink-0 align-text-bottom" size={16} /> 나에게 맞는 AI 찾기</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           4가지 질문으로 최적의 AI 모델을 추천해드려요.
         </p>
@@ -235,17 +236,17 @@ export default function Quiz() {
                     key={opt.value}
                     onClick={() => handleSelect(opt.value)}
                     className={
-                      "w-full flex items-center gap-4 px-5 py-4 rounded-xl border-2 text-left transition-all hover:scale-[1.01] active:scale-[0.99] " +
+                      "w-full flex items-center gap-4 px-5 py-4 rounded-xl border-2 text-left transition-all hover:scale-[1.01] active:scale-[0.99]" +
                       (isSelected
                         ? "border-brand-500 bg-brand-50 dark:bg-brand-900/20"
                         : "border-gray-200 dark:border-gray-700 hover:border-brand-300 dark:hover:border-brand-600 bg-white dark:bg-gray-800")
                     }
                   >
                     <span className="text-2xl">{opt.icon}</span>
-                    <span className={"font-semibold text-sm " + (isSelected ? "text-brand-700 dark:text-brand-300" : "text-gray-700 dark:text-gray-300")}>
+                    <span className={"font-semibold text-sm" + (isSelected ? "text-brand-700 dark:text-brand-300" : "text-gray-700 dark:text-gray-300")}>
                       {opt.label}
                     </span>
-                    {isSelected && <span className="ml-auto text-brand-500 font-bold">✓</span>}
+ {isSelected && <span className="ml-auto text-brand-500 font-bold"></span>}
                   </button>
                 );
               })}
@@ -291,14 +292,14 @@ export default function Quiz() {
         /* Results */
         <div className="space-y-4">
           <div className="bg-gradient-to-r from-brand-50 to-brand-50 dark:from-brand-950/40 dark:to-brand-950/40 rounded-2xl border border-brand-100 dark:border-brand-900 p-5 text-center">
-            <div className="text-3xl mb-2">🎉</div>
+            <div className="text-3xl mb-2"><PartyPopper className="inline-block shrink-0 align-text-bottom" size={16} /> </div>
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">추천 결과</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">내 답변 기준으로 가장 잘 맞는 모델 TOP 5예요.</p>
           </div>
 
           {/* Answer summary */}
           <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 space-y-1">
-            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">📋 내 선택</p>
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2"><ClipboardList className="inline-block shrink-0 align-text-bottom" size={16} /> 내 선택</p>
             {answers.sort((a,b) => a.step - b.step).map((ans) => {
               const s = STEPS[ans.step];
               const opt = s.options.find((o) => o.value === ans.value);
@@ -314,7 +315,7 @@ export default function Quiz() {
           {/* Result cards */}
           {results.length === 0 ? (
             <div className="text-center py-12 text-gray-400">
-              <p className="text-4xl mb-3">🤔</p>
+              <p className="text-4xl mb-3"><HelpCircle className="inline-block shrink-0 align-text-bottom" size={16} /> </p>
               <p className="font-medium">조건에 맞는 모델을 찾기 어려워요.</p>
               <p className="text-sm mt-1">예산이나 조건을 조금 조정해보세요.</p>
             </div>
@@ -322,11 +323,11 @@ export default function Quiz() {
             <div className="space-y-3">
               {results.map(({ model: m, score }, idx) => {
                 const co = companies.find((c) => c.id === m.companyId);
-                const medal = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"][idx];
+                const medal = ["", "", "", "4⃣", "5⃣"][idx];
                 return (
                   <div
                     key={m.id}
-                    className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-all " + (
+                    className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-all" + (
                       idx === 0
                         ? "border-yellow-400 dark:border-yellow-600 shadow-md"
                         : "border-gray-200 dark:border-gray-800"
@@ -349,20 +350,20 @@ export default function Quiz() {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap mb-1">
                           <h3 className="font-bold text-gray-900 dark:text-white text-sm">{m.name}</h3>
-                          <span className={TIER_COLORS[m.tier] + " px-2 py-0.5 text-[10px] rounded-full font-medium"}>
+                          <span className={TIER_COLORS[m.tier] + "px-2 py-0.5 text-[10px] rounded-full font-medium"}>
                             {TIER_LABELS[m.tier]}
                           </span>
                           {m.isNew && <span className="px-2 py-0.5 text-[10px] rounded-full font-medium bg-red-50 dark:bg-red-900/30 text-red-500">NEW</span>}
                           {m.koreanSupport && (
                             <span className={
-                              "px-2 py-0.5 text-[10px] font-bold rounded-full border " +
+                              "px-2 py-0.5 text-[10px] font-bold rounded-full border" +
                               (m.koreanSupport === 'A'
                                 ? "bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 border-brand-200 dark:border-brand-800"
                                 : m.koreanSupport === 'B'
                                 ? "bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 border-yellow-200 dark:border-yellow-800"
                                 : "bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700")
                             }>
-                              🇰🇷 한국어 {m.koreanSupport}등급
+ 한국어 {m.koreanSupport}등급
                             </span>
                           )}
                         </div>
@@ -396,7 +397,7 @@ export default function Quiz() {
 
                       {/* Score badge */}
                       <div className="shrink-0 text-right">
-                        <div className={"text-lg font-black " + (idx === 0 ? "text-yellow-500" : "text-gray-400 dark:text-gray-500")}>
+                        <div className={"text-lg font-black" + (idx === 0 ? "text-yellow-500" : "text-gray-400 dark:text-gray-500")}>
                           {score}점
                         </div>
                         <div className="text-[10px] text-gray-400">적합도</div>
@@ -414,13 +415,13 @@ export default function Quiz() {
               onClick={reset}
               className="flex-1 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 font-semibold text-sm text-gray-700 dark:text-gray-300 hover:border-brand-400 hover:text-brand-600 transition-colors"
             >
-              🔄 다시 하기
+              <RefreshCw className="inline-block shrink-0 align-text-bottom" size={16} />  다시 하기
             </button>
             <Link
               to="/models"
               className="flex-1 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 font-semibold text-sm text-white text-center transition-colors"
             >
-              📋 전체 모델 보기
+              <ClipboardList className="inline-block shrink-0 align-text-bottom" size={16} />  전체 모델 보기
             </Link>
           </div>
 

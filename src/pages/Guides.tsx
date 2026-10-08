@@ -1,8 +1,9 @@
+import { BookOpen } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const GUIDES = [
   {
-    icon: '🚀',
+    icon: '',
     title: 'AI 처음이에요',
     desc: 'AI가 뭔지 모르겠다면 여기서 시작하세요. 한국어 AI 서비스도 소개해드려요.',
     to: '/guides/start',
@@ -10,7 +11,7 @@ const GUIDES = [
     textColor: 'text-blue-700 dark:text-blue-300',
   },
   {
-    icon: '✏️',
+ icon: '',
     title: '프롬프트 작성법',
     desc: 'AI에게 원하는 걸 정확히 전달하는 방법을 배워보세요.',
     to: '/guides/prompts',
@@ -18,7 +19,7 @@ const GUIDES = [
     textColor: 'text-emerald-700 dark:text-emerald-300',
   },
   {
-    icon: '📚',
+    icon: '',
     title: '프롬프트 저장소',
     desc: '바로 복사해서 쓸 수 있는 프롬프트 예시 모음.',
     to: '/guides/prompts/library',
@@ -26,7 +27,7 @@ const GUIDES = [
     textColor: 'text-violet-700 dark:text-violet-300',
   },
   {
-    icon: '📖',
+    icon: '',
     title: '용어사전',
     desc: 'LLM, 파인튜닝, RAG... 어려운 용어를 쉽게 설명해드려요.',
     to: '/guides/glossary',
@@ -39,7 +40,7 @@ export default function Guides() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">📖 AI 가이드</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white"><BookOpen className="inline-block shrink-0 align-text-bottom" size={16} /> AI 가이드</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">AI 입문부터 실전 활용까지, 단계별로 배워보세요</p>
       </div>
 

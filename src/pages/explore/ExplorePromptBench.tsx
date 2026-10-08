@@ -1,3 +1,4 @@
+import {Target, Check, X} from "lucide-react";
 import { useState } from "react";
 import { logoIdToPath } from "../../lib/logoUtils";
 
@@ -15,37 +16,37 @@ interface PromptResult {
 const PROMPTS = [
   {
     id: "summary",
-    label: "📋 긴 글 요약",
+    label: "긴 글 요약",
     category: "활용",
     prompt: "다음 기사를 3문장으로 요약해줘.\n\n[삼성전자가 HBM4E 개발 완료... 300자 기사]",
   },
   {
     id: "translate",
-    label: "🌐 영한 번역",
+    label: "영한 번역",
     category: "활용",
     prompt: "다음 영어 문장을 자연스러운 한국어로 번역해줘.\n\"The transformer architecture has fundamentally changed how we approach natural language processing.\"",
   },
   {
     id: "code",
-    label: "💻 코드 작성",
+    label: "코드 작성",
     category: "기술",
     prompt: "React로 TODO 앱을 만들어줘. localStorage에 데이터를 저장하고, 완료/삭제/추가 기능을 포함해줘.",
   },
   {
     id: "reasoning",
-    label: "🧩 논리 추론",
+    label: "논리 추론",
     category: "추론",
     prompt: "A, B, C 세 사람이 줄을 서 있다. A는 B보다 앞에 있고, C는 A보다 뒤에 있으며, B는 맨 앞이 아니다. 누가 맨 앞인가?",
   },
   {
     id: "creative",
-    label: "✍️ 창의적 글쓰기",
+ label: " 창의적 글쓰기",
     category: "창작",
     prompt: "2060년 서울의 하루를 묘사하는 SF 단편 소설을 500자로 써줘. AI와 인간이 공존하는 일상을 그려줘.",
   },
   {
     id: "korean",
-    label: "🇰🇷 한국어 뉘앙스",
+    label: "한국어 뉘앙스",
     category: "한국어",
     prompt: "\"그 사람 뭐래?\"라는 문장이 상황에 따라 어떤 뉘앙스를 가질 수 있는지 5가지 상황을 예시로 설명해줘.",
   },
@@ -113,7 +114,7 @@ export default function ExplorePromptBench() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🎯 프롬프트 벤치마크</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><Target className="inline-block shrink-0 align-text-bottom" size={16} /> 프롬프트 벤치마크</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           같은 프롬프트를 여러 모델에 입력한 결과를 직관적으로 비교해보세요.
         </p>
@@ -151,7 +152,7 @@ export default function ExplorePromptBench() {
       {/* Results */}
       <div className="space-y-3">
         {sorted.map((r, idx) => {
-          const medal = idx === 0 ? "🥇" : idx === 1 ? "🥈" : idx === 2 ? "🥉" : "";
+          const medal = idx === 0 ? "" : idx === 1 ? "" : idx === 2 ? "" : "";
           const barColor = r.score >= 90 ? "#22c55e" : r.score >= 80 ? "#3b82f6" : r.score >= 70 ? "#f59e0b" : "#ef4444";
           return (
             <div key={r.model} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5 hover:shadow-md transition-shadow">
@@ -187,12 +188,12 @@ export default function ExplorePromptBench() {
               <div className="flex flex-wrap gap-1">
                 {r.strengths.map(s => (
                   <span key={s} className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] rounded-full font-medium">
-                    ✓ {s}
+                    <Check className="inline-block shrink-0 align-text-bottom" size={16} /> {s}
                   </span>
                 ))}
                 {r.weaknesses.map(w => (
                   <span key={w} className="px-2 py-0.5 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] rounded-full font-medium">
-                    ✗ {w}
+                    <X className="inline-block shrink-0 align-text-bottom" size={16} /> {w}
                   </span>
                 ))}
               </div>
@@ -202,7 +203,7 @@ export default function ExplorePromptBench() {
       </div>
 
       <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-100 dark:border-amber-900 rounded-xl px-4 py-3">
-        <p className="text-xs font-bold text-amber-700 dark:text-amber-400 mb-1">⚠️ 주의사항</p>
+ <p className="text-xs font-bold text-amber-700 dark:text-amber-400 mb-1"> 주의사항</p>
         <p className="text-xs text-amber-600 dark:text-amber-500 leading-relaxed">
           결과는 2026년 4월 기준의 예시 응답이며, 모델 업데이트에 따라 실제 결과와 다를 수 있습니다.
           점수는 응답 품질·정확도·속도를 종합 평가한 것입니다.

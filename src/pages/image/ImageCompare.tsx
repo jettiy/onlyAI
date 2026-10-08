@@ -34,7 +34,7 @@ export default function ImageCompare() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🖼️ 이미지 AI 한눈에 비교</h1>
+ <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"> 이미지 AI 한눈에 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           주요 이미지 생성 AI의 성능, 가격, 특징을 한눈에 비교하세요.
         </p>
@@ -161,10 +161,10 @@ export default function ImageCompare() {
             </div>
             <div className="flex flex-wrap gap-1">
               {m.strengths.map(s => (
-                <span key={s} className="px-1.5 py-0.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-[9px] rounded">✓ {s}</span>
+ <span key={s} className="px-1.5 py-0.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-[9px] rounded"> {s}</span>
               ))}
               {m.weaknesses.map(w => (
-                <span key={w} className="px-1.5 py-0.5 bg-red-50 dark:bg-red-900/30 text-red-500 dark:text-red-400 text-[9px] rounded">✗ {w}</span>
+ <span key={w} className="px-1.5 py-0.5 bg-red-50 dark:bg-red-900/30 text-red-500 dark:text-red-400 text-[9px] rounded"> {w}</span>
               ))}
             </div>
           </div>

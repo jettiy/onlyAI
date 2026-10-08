@@ -1,3 +1,4 @@
+import { Coins } from "lucide-react";
 import { useState } from 'react';
 import { models, tierLabels, tierColors, companies } from '../data/models';
 
@@ -15,7 +16,7 @@ export default function DevPricing() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">💰 API 가격 비교</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white"><Coins className="inline-block shrink-0 align-text-bottom" size={16} /> API 가격 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">모델별 API 가격을 1M 토큰 기준으로 비교하세요</p>
       </div>
 
@@ -51,7 +52,7 @@ export default function DevPricing() {
               <th className="text-right py-3 px-2 text-xs font-bold text-gray-500 dark:text-gray-400">입력 ($/1M)</th>
               <th className="text-right py-3 px-2 text-xs font-bold text-gray-500 dark:text-gray-400">출력 ($/1M)</th>
               <th className="text-right py-3 px-2 text-xs font-bold text-gray-500 dark:text-gray-400">컨텍스트</th>
-              <th className="text-center py-3 px-2 text-xs font-bold text-gray-500 dark:text-gray-400">🇰🇷</th>
+              <th className="text-center py-3 px-2 text-xs font-bold text-gray-500 dark:text-gray-400">한국어</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100 dark:divide-gray-800">

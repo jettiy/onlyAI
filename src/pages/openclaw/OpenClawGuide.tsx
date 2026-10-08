@@ -1,3 +1,4 @@
+import { BarChart3, BookOpen, Rocket } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const CodeBlock = ({ id, code, label = '명령어' }: { id: string, code: string, label?: string }) => (
@@ -14,16 +15,16 @@ export default function OpenClawGuide() {
   return (
     <div className="max-w-3xl mx-auto space-y-10 pb-20">
       <header>
-        <h1 className="text-3xl font-black text-gray-900 dark:text-white mb-2">📖 OpenClaw 설치 상세 가이드</h1>
+        <h1 className="text-3xl font-black text-gray-900 dark:text-white mb-2"><BookOpen className="inline-block shrink-0 align-text-bottom" size={16} /> OpenClaw 설치 상세 가이드</h1>
         <p className="text-lg text-gray-500 dark:text-gray-400">초보자도 따라 할 수 있는 단계별 안내서입니다.</p>
       </header>
 
       <section className="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 rounded-2xl p-6">
-        <h2 className="text-sm font-bold text-emerald-800 dark:text-emerald-300 mb-4 uppercase tracking-wider">🚀 핵심 3단계</h2>
+        <h2 className="text-sm font-bold text-emerald-800 dark:text-emerald-300 mb-4 uppercase tracking-wider"><Rocket className="inline-block shrink-0 align-text-bottom" size={16} /> 핵심 3단계</h2>
         <div className="grid grid-cols-3 gap-2 text-center text-xs font-bold text-emerald-700 dark:text-emerald-400">
-          <div><p className="text-2xl mb-1">⚙️</p>온보딩</div>
-          <div><p className="text-2xl mb-1">🚀</p>게이트웨이</div>
-          <div><p className="text-2xl mb-1">📊</p>대시보드</div>
+ <div><p className="text-2xl mb-1"></p>온보딩</div>
+          <div><p className="text-2xl mb-1"><Rocket className="inline-block shrink-0 align-text-bottom" size={16} /> </p>게이트웨이</div>
+          <div><p className="text-2xl mb-1"><BarChart3 className="inline-block shrink-0 align-text-bottom" size={16} /> </p>대시보드</div>
         </div>
       </section>
 

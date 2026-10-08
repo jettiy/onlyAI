@@ -1,10 +1,11 @@
+import {Brain, Camera, ClipboardList, Folder, Gamepad2, Monitor, Target, Lightbulb, Lock, Rocket, Search, AlertTriangle, CheckCircle2} from "lucide-react";
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { findCompatibleModels, searchGpu, VRAM_TIERS, GPUs, type LocalModel } from '../data/gpuModels';
 
 function getModelTier(m: LocalModel, vram: number) {
-  if (vram >= m.recVram) return { label: '✅ 추천', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-900' };
-  if (vram >= m.minVram) return { label: '⚡ 가능', color: 'text-yellow-600 dark:text-yellow-400', bg: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-900' };
-  return { label: '❌ 부족', color: 'text-red-500', bg: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-900' };
+ if (vram >= m.recVram) return { label: ' 추천', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-900' };
+ if (vram >= m.minVram) return { label: ' 가능', color: 'text-yellow-600 dark:text-yellow-400', bg: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-900' };
+ return { label: ' 부족', color: 'text-red-500', bg: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-900' };
 }
 
 // WebGL로 GPU 이름 감지 (대부분 브라우저에서 작동)
@@ -28,7 +29,7 @@ function matchGpuFromWebGL(renderer: string): { name: string; vram: number } | n
   // NVIDIA 매칭
   const nvidiaMatch = r.match(/nvidia\s+(geforce\s+)?(rtx|gtx)\s+(\w+\s+\w+|\w+)/);
   if (nvidiaMatch) {
-    const fullName = `NVIDIA ${nvidiaMatch[2].toUpperCase()} ${nvidiaMatch[3]}`.replace(/\s+(Ti|Super|Ti\s+Super)$/, ' $1');
+    const fullName = `NVIDIA ${nvidiaMatch[2].toUpperCase()} ${nvidiaMatch[3]}`.replace(/\s+(Ti|Super|Ti\s+Super)$/, '$1');
     const found = GPUs.find(g => g.name.toLowerCase().includes(fullName.toLowerCase()));
     if (found) return { name: found.name, vram: found.vram };
     // VRAM이 안 맞아도 이름 반환
@@ -214,7 +215,7 @@ export default function PcCheck() {
     <div className="max-w-3xl mx-auto space-y-6">
       {/* 헤더 */}
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🖥️ 내 PC로 AI 돌려보기</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><Monitor className="inline-block shrink-0 align-text-bottom" size={16} /> 내 PC로 AI 돌려보기</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">GPU를 선택하면, 내 PC에서 구동 가능한 로컬 AI 모델을 추천해드립니다.</p>
       </div>
 
@@ -223,7 +224,7 @@ export default function PcCheck() {
         <div className="bg-gradient-to-r from-brand-50 to-brand-50 dark:from-brand-900/20 dark:to-brand-900/20 rounded-2xl border border-brand-200 dark:border-brand-900 p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <span className="text-2xl">⚡</span>
+ <span className="text-2xl"></span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">내 GPU 자동 감지됨</p>
                 <p className="text-xs text-gray-600 dark:text-gray-400">{detectedSpecs.gpu}{detectedSpecs.vram > 0 ? ` (${detectedSpecs.vram}GB)` : ''}</p>
@@ -233,7 +234,7 @@ export default function PcCheck() {
               </div>
             </div>
             <button onClick={applySpecs} className="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-bold transition-all whitespace-nowrap">
-              ✅ 이 GPU로 추천
+              <CheckCircle2 className="inline-block shrink-0 align-text-bottom" size={16} /> 이 GPU로 추천
             </button>
           </div>
         </div>
@@ -242,10 +243,10 @@ export default function PcCheck() {
       {/* 입력 방법 탭 */}
       <div className="flex gap-2 flex-wrap">
         {([
-          { id: 'auto' as const, label: '⚡ 자동 감지', desc: 'WebGL' },
-          { id: 'image' as const, label: '📸 스크린샷', desc: '이미지' },
-          { id: 'text' as const, label: '📋 텍스트', desc: '붙여넣기' },
-          { id: 'manual' as const, label: '✏️ 직접 입력', desc: '수동' },
+ { id: 'auto' as const, label: ' 자동 감지', desc: 'WebGL' },
+          { id: 'image' as const, label: '스크린샷', desc: '이미지' },
+          { id: 'text' as const, label: '텍스트', desc: '붙여넣기' },
+ { id: 'manual' as const, label: ' 직접 입력', desc: '수동' },
         ] as const).map(tab => (
           <button key={tab.id} onClick={() => setActiveTab(tab.id)}
             className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
@@ -261,7 +262,7 @@ export default function PcCheck() {
       {/* === 자동 감지 탭 === */}
       {activeTab === 'auto' && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 text-center space-y-4">
-          <div className="text-4xl">⚡</div>
+ <div className="text-4xl"></div>
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">브라우저에서 내 GPU 자동 감지</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             WebGL을 사용해 설치된 그래픽카드를 감지합니다.<br />
@@ -272,7 +273,7 @@ export default function PcCheck() {
           {detectedSpecs && detectedSpecs.source === 'auto' ? (
             <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-4 space-y-3">
               <div className="flex items-center gap-2 text-green-700 dark:text-green-400">
-                <span className="text-lg">✅</span>
+ <span className="text-lg"></span>
                 <span className="font-bold text-sm">감지 성공!</span>
               </div>
               <div className="text-left space-y-1">
@@ -291,13 +292,13 @@ export default function PcCheck() {
                 )}
               </div>
               <button onClick={applySpecs} className="w-full px-4 py-2.5 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-bold transition-all">
-                ✅ 이 스펙으로 모델 추천 받기
+                <CheckCircle2 className="inline-block shrink-0 align-text-bottom" size={16} /> 이 스펙으로 모델 추천 받기
               </button>
             </div>
           ) : (
             <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-xl p-4">
               <p className="text-sm text-yellow-700 dark:text-yellow-400">
-                ⚠️ GPU를 자동으로 감지하지 못했습니다.<br />
+                <AlertTriangle className="inline-block shrink-0 align-text-bottom" size={16} /> GPU를 자동으로 감지하지 못했습니다.<br />
                 아래 방법으로 스펙을 입력해주세요.
               </p>
             </div>
@@ -308,7 +309,7 @@ export default function PcCheck() {
       {/* === 이미지 업로드 탭 === */}
       {activeTab === 'image' && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 text-center space-y-4">
-          <div className="text-4xl">📸</div>
+          <div className="text-4xl"><Camera className="inline-block shrink-0 align-text-bottom" size={16} /> </div>
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">스크린샷으로 스펙 감지</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Windows: 설정 → 시스템 → 정보 &nbsp;|&nbsp; Mac: 이 Mac에 관하여
@@ -322,7 +323,7 @@ export default function PcCheck() {
               </div>
             ) : (
               <>
-                <div className="text-3xl mb-2">📁</div>
+                <div className="text-3xl mb-2"><Folder className="inline-block shrink-0 align-text-bottom" size={16} /> </div>
                 <p className="text-sm text-gray-500 dark:text-gray-400">클릭하여 이미지 업로드</p>
                 <p className="text-xs text-gray-400 mt-1">JPG, PNG 지원</p>
               </>
@@ -331,10 +332,10 @@ export default function PcCheck() {
           <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={handleImageUpload} />
           {detectedSpecs && detectedSpecs.source === 'ocr' && (
             <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-4 text-left space-y-2">
-              <h3 className="text-sm font-bold text-green-700 dark:text-green-400">✅ 인식 결과</h3>
+ <h3 className="text-sm font-bold text-green-700 dark:text-green-400"> 인식 결과</h3>
               {detectedSpecs.gpu && <p className="text-sm text-gray-700 dark:text-gray-300">GPU: <strong>{detectedSpecs.gpu}</strong></p>}
               {detectedSpecs.ram > 0 && <p className="text-sm text-gray-700 dark:text-gray-300">RAM: <strong>{detectedSpecs.ram}GB</strong></p>}
-              <button onClick={applySpecs} className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-xs font-bold transition-all">✅ 이 스펙으로 추천 받기</button>
+ <button onClick={applySpecs} className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-xs font-bold transition-all"> 이 스펙으로 추천 받기</button>
             </div>
           )}
         </div>
@@ -344,7 +345,7 @@ export default function PcCheck() {
       {activeTab === 'text' && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 space-y-4">
           <div className="text-center space-y-2">
-            <div className="text-4xl">📋</div>
+            <div className="text-4xl"><ClipboardList className="inline-block shrink-0 align-text-bottom" size={16} /> </div>
             <h2 className="text-lg font-bold text-gray-900 dark:text-white">텍스트로 스펙 입력</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">Windows 설정 → 정보 → 복사 버튼으로 복사한 텍스트를 붙여넣으세요</p>
           </div>
@@ -355,14 +356,14 @@ export default function PcCheck() {
           />
           <button onClick={handleTextParse} disabled={!pasteText.trim()}
             className="w-full px-4 py-3 bg-brand-500 hover:bg-brand-600 disabled:bg-gray-300 text-white rounded-xl font-bold text-sm transition-all">
-            🔍 스펙 파싱하기
+            <Search className="inline-block shrink-0 align-text-bottom" size={16} />  스펙 파싱하기
           </button>
           {detectedSpecs && detectedSpecs.source === 'text' && (
             <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-4 text-left space-y-2">
-              <h3 className="text-sm font-bold text-green-700 dark:text-green-400">✅ 파싱 결과</h3>
+ <h3 className="text-sm font-bold text-green-700 dark:text-green-400"> 파싱 결과</h3>
               {detectedSpecs.gpu && <p className="text-sm text-gray-700 dark:text-gray-300">GPU: <strong>{detectedSpecs.gpu}</strong></p>}
               {detectedSpecs.ram > 0 && <p className="text-sm text-gray-700 dark:text-gray-300">RAM: <strong>{detectedSpecs.ram}GB</strong></p>}
-              <button onClick={applySpecs} className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-xs font-bold transition-all">✅ 이 스펙으로 추천 받기</button>
+ <button onClick={applySpecs} className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-xs font-bold transition-all"> 이 스펙으로 추천 받기</button>
             </div>
           )}
         </div>
@@ -375,24 +376,24 @@ export default function PcCheck() {
           {detectedSpecs && (
             <div className="bg-brand-50 dark:bg-brand-900/20 rounded-xl px-4 py-3 flex items-center justify-between">
               <div className="flex gap-3 text-xs">
-                <span className="text-brand-700 dark:text-brand-400 font-medium">🎮 {detectedSpecs.gpu}</span>
-                {detectedSpecs.ram > 0 && <span className="text-brand-700 dark:text-brand-400 font-medium">🧠 {detectedSpecs.ram}GB</span>}
+                <span className="text-brand-700 dark:text-brand-400 font-medium"><Gamepad2 className="inline-block shrink-0 align-text-bottom" size={16} /> {detectedSpecs.gpu}</span>
+                {detectedSpecs.ram > 0 && <span className="text-brand-700 dark:text-brand-400 font-medium"><Brain className="inline-block shrink-0 align-text-bottom" size={16} /> {detectedSpecs.ram}GB</span>}
               </div>
               <span className="text-[10px] text-gray-400">
-                {detectedSpecs.source === 'auto' ? '⚡ 자동' : detectedSpecs.source === 'ocr' ? '📸 OCR' : '📋 텍스트'}
+ {detectedSpecs.source === 'auto' ? ' 자동' : detectedSpecs.source === 'ocr' ? 'OCR' : '텍스트'}
               </span>
             </div>
           )}
 
           {/* 빠른 GPU 선택 */}
           <div>
-            <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block">🎮 그래픽카드 (GPU)</label>
+            <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block"><Gamepad2 className="inline-block shrink-0 align-text-bottom" size={16} /> 그래픽카드 (GPU)</label>
             <div className="mb-3">
               <div className="flex flex-wrap gap-2">
                 {popularGpus.map(gpu => (
                   <button key={gpu} type="button" onClick={() => handleQuickGpu(gpu)}
                     className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
-                      gpuQuery.includes(gpu.split(' ')[0])
+                      gpuQuery.includes(gpu.split('')[0])
                         ? 'bg-brand-500 text-white'
                         : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                     }`}>
@@ -409,7 +410,7 @@ export default function PcCheck() {
             <datalist id="gpu-list">{GPUs.map(g => <option key={g.name} value={g.name} />)}</datalist>
             {detectedGpu && (
               <div className="mt-2 flex items-center gap-2 text-sm">
-                <span className="text-green-600 dark:text-green-400 font-bold">✅ 감지됨:</span>
+ <span className="text-green-600 dark:text-green-400 font-bold"> 감지됨:</span>
                 <span className="text-gray-700 dark:text-gray-300">{detectedGpu.name}</span>
                 <span className="text-gray-400">({detectedGpu.vram}GB VRAM)</span>
                 {detectedGpu.note && <span className="text-xs text-gray-400">· {detectedGpu.note}</span>}
@@ -428,7 +429,7 @@ export default function PcCheck() {
 
           {/* RAM */}
           <div>
-            <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block">🧠 시스템 RAM (GB)</label>
+            <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block"><Brain className="inline-block shrink-0 align-text-bottom" size={16} /> 시스템 RAM (GB)</label>
             <select value={ram} onChange={e => setRam(e.target.value)}
               className="w-full text-base rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500">
               <option value="8">8 GB</option>
@@ -441,7 +442,7 @@ export default function PcCheck() {
 
           {/* 용도 필터 */}
           <div>
-            <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block">🎯 원하는 용도 (선택)</label>
+            <label className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 block"><Target className="inline-block shrink-0 align-text-bottom" size={16} /> 원하는 용도 (선택)</label>
             <div className="flex flex-wrap gap-2">
               <button onClick={() => setUseTag('')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${!useTag ? 'bg-brand-500 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200'}`}>전체</button>
@@ -459,28 +460,28 @@ export default function PcCheck() {
         <>
           <div className={`rounded-2xl border p-5 ${tier?.color === 'text-red-500' ? 'bg-red-50 dark:bg-red-900/10 border-red-200 dark:border-red-900' : tier?.color === 'text-orange-500' ? 'bg-orange-50 dark:bg-orange-900/10 border-orange-200 dark:border-orange-900' : 'bg-brand-50 dark:bg-brand-900/10 border-brand-200 dark:border-brand-900'}`}>
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-3xl">{tier?.icon || '🔵'}</span>
+              <span className="text-3xl">{tier?.icon || ''}</span>
               <div>
                 <p className={`text-lg font-black ${tier?.color}`}>VRAM {vram}GB · RAM {ramGb}GB</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{tier?.desc}</p>
               </div>
             </div>
             <div className="flex gap-4 text-sm mt-3">
-              <span className="text-green-600 dark:text-green-400 font-bold">✅ 구동 가능: {canRun.length}개</span>
-              <span className="text-brand-600 dark:text-brand-400 font-bold">⭐ 추천: {recommended.length}개</span>
+ <span className="text-green-600 dark:text-green-400 font-bold"> 구동 가능: {canRun.length}개</span>
+ <span className="text-brand-600 dark:text-brand-400 font-bold"> 추천: {recommended.length}개</span>
             </div>
           </div>
 
           {tagFilter(recommended).length > 0 && (
             <div>
-              <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">⭐ 추천 모델 (권장 VRAM 충족)</h2>
+ <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3"> 추천 모델 (권장 VRAM 충족)</h2>
               <div className="space-y-3">{tagFilter(recommended).map(m => <ModelCard key={m.id} model={m} vram={vram} />)}</div>
             </div>
           )}
 
           {tagFilter(canRun).filter(m => !recommended.includes(m)).length > 0 && (
             <div>
-              <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">⚡ 구동 가능 (최소 VRAM)</h2>
+ <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3"> 구동 가능 (최소 VRAM)</h2>
               <div className="space-y-3">{tagFilter(canRun).filter(m => !recommended.includes(m)).map(m => <ModelCard key={m.id} model={m} vram={vram} />)}</div>
             </div>
           )}
@@ -488,7 +489,7 @@ export default function PcCheck() {
           {tagFilter(cannotRun).length > 0 && (
             <details className="group">
               <summary className="text-sm font-bold text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">
-                🔒 구동 불가 모델 ({tagFilter(cannotRun).length}개) — 클릭하여 펼치기
+                <Lock className="inline-block shrink-0 align-text-bottom" size={16} />  구동 불가 모델 ({tagFilter(cannotRun).length}개) — 클릭하여 펼치기
               </summary>
               <div className="mt-3 space-y-2 opacity-60">
                 {tagFilter(cannotRun).map(m => (
@@ -505,7 +506,7 @@ export default function PcCheck() {
 
       {vram === 0 && activeTab === 'manual' && (
         <div className="text-center py-12 text-gray-400">
-          <div className="text-4xl mb-3">🖥️</div>
+          <div className="text-4xl mb-3"><Monitor className="inline-block shrink-0 align-text-bottom" size={16} /> </div>
           <p className="text-sm">GPU를 입력하면 구동 가능한 모델을 보여드립니다</p>
         </div>
       )}
@@ -513,11 +514,11 @@ export default function PcCheck() {
       {/* 안내 */}
       <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-800 space-y-3">
         <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-          💡 <strong>로컬 AI란?</strong> 인터넷 없이 내 PC에서 직접 구동하는 AI 모델입니다. 데이터가 외부로 나가지 않아 보안이 좋고, API 비용이 들지 않습니다. 하지만 고성능 GPU가 필요합니다.
+          <Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} />  <strong>로컬 AI란?</strong> 인터넷 없이 내 PC에서 직접 구동하는 AI 모델입니다. 데이터가 외부로 나가지 않아 보안이 좋고, API 비용이 들지 않습니다. 하지만 고성능 GPU가 필요합니다.
         </p>
         <details className="group">
           <summary className="text-xs font-semibold text-brand-600 dark:text-brand-400 cursor-pointer select-none">
-            🚀 Ollama로 3분 만에 시작하기
+            <Rocket className="inline-block shrink-0 align-text-bottom" size={16} />  Ollama로 3분 만에 시작하기
           </summary>
           <ol className="mt-2 ml-4 list-decimal space-y-1.5 text-xs text-gray-500 dark:text-gray-400">
             <li><strong>Ollama 설치하기</strong> — <a href="https://ollama.com" target="_blank" rel="noopener noreferrer" className="text-brand-500 hover:underline">ollama.com</a>에서 다운로드하여 설치합니다.</li>

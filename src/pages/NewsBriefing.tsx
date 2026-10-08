@@ -1,20 +1,27 @@
+import { Newspaper } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useNewsRSS, categoryColor } from "../hooks/useNewsRSS";
 
 type ViewTab = 'briefing' | 'sources';
 
 const SOURCE_TABS = [
-  { key: 'all', label: '전체', icon: '📰' },
-  { key: 'AI타임스', label: 'AI타임스', icon: '🇰🇷' },
-  { key: '36氪', label: '36氪 (준비 중)', icon: '🇨🇳', disabled: true },
-  { key: 'Hugging Face', label: 'Hugging Face', icon: '🤗' },
-  { key: 'TechCrunch', label: 'TechCrunch', icon: '🇺🇸' },
-  { key: 'github', label: 'GitHub', icon: '🐙' },
+  { key: 'all', label: '전체', icon: '' },
+  { key: 'AI타임스', label: 'AI타임스', icon: '' },
+  { key: '36氪', label: '36氪 (준비 중)', icon: '', disabled: true },
+  { key: 'Hugging Face', label: 'Hugging Face', icon: '' },
+  { key: 'TechCrunch', label: 'TechCrunch', icon: '' },
+  { key: 'github', label: 'GitHub', icon: '' },
 ] as const;
 
-const SOURCE_ICONS: Record<string, string> = {
-  'AI타임스': '📰', 'Hugging Face': '🤗',
-  '36氪': '🇨🇳', 'TechCrunch': '🇺🇸', 'GitHub': '🐙',
+// 뉴스 출처 표시는 아이콘 대신 출처명 텍스트로 처리한다.
+// (RSS 생성기(build-news.mjs)가 채우는 sourceFlag에 국가 플래그 이모티콘이
+//  포함되므로, UI 이모티콘 제거 정책에 따라 사용하지 않는다.)
+const SOURCE_LABELS: Record<string, string> = {
+  'AI타임스': 'AI타임스',
+  'Hugging Face': 'HF',
+  '36氪': '36Kr',
+  'TechCrunch': 'TC',
+  'GitHub': 'GitHub',
 };
 
 export default function NewsBriefing() {
@@ -70,7 +77,7 @@ export default function NewsBriefing() {
     <div className="space-y-6">
       {/* Page header */}
       <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">📰 AI 뉴스 브리핑</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><Newspaper className="inline-block shrink-0 align-text-bottom" size={16} />  AI 뉴스 브리핑</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           AI타임스 · 36氪 · Hugging Face · TechCrunch에서 자동 수집
           {lastUpdated && (
@@ -220,7 +227,7 @@ export default function NewsBriefing() {
                       {repo.language || ''}
                     </span>
                     <div className="flex items-center gap-2 text-[10px] text-gray-400 shrink-0">
-                      {repo.stars !== undefined && <span>⭐ {repo.stars.toLocaleString()}</span>}
+ {repo.stars !== undefined && <span> {repo.stars.toLocaleString()}</span>}
                       {repo.starsGained !== undefined && repo.starsGained > 0 && (
                         <span className="text-emerald-500">+{repo.starsGained.toLocaleString()}</span>
                       )}
@@ -260,7 +267,7 @@ export default function NewsBriefing() {
                 className="group block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-sm hover:border-gray-300 dark:hover:border-gray-600 transition-all"
               >
                 <div className="flex items-center gap-1.5 mb-2">
-                  <span className="text-sm">{item.sourceFlag ?? SOURCE_ICONS[item.source] ?? '📰'}</span>
+                  <span className="text-sm">{SOURCE_LABELS[item.source] ?? item.source}</span>
                   <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${categoryColor[item.category] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-500'}`}>
                     {item.category}
                   </span>
@@ -290,7 +297,7 @@ export default function NewsBriefing() {
                   className="group block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-sm hover:border-gray-300 dark:hover:border-gray-600 transition-all"
                 >
                   <div className="flex items-center gap-1.5 mb-2">
-                    <span className="text-sm">{item.sourceFlag ?? SOURCE_ICONS[item.source] ?? '📰'}</span>
+                    <span className="text-sm">{SOURCE_LABELS[item.source] ?? item.source}</span>
                     <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${categoryColor[item.category] ?? 'bg-gray-100 dark:bg-gray-800 text-gray-500'}`}>
                       {item.category}
                     </span>
@@ -313,7 +320,7 @@ export default function NewsBriefing() {
               <button key={t} onClick={() => setTab(t)}
                 className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all ${tab === t
                   ? 'bg-brand-500 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200'}`}>
-                {t === 'briefing' ? '📰 뉴스' : '📊 소스 분석'}
+                {t === 'briefing' ? '뉴스' : '소스 분석'}
               </button>
             ))}
           </div>
@@ -323,7 +330,7 @@ export default function NewsBriefing() {
                 .sort(([, a], [, b]) => b - a)
                 .map(([source, count]) => (
                   <div key={source} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-3 flex items-center gap-3">
-                    <span className="text-lg">{SOURCE_ICONS[source] ?? '📰'}</span>
+                    <span className="text-lg font-bold text-gray-400">{SOURCE_LABELS[source] ?? source.slice(0, 2)}</span>
                     <div className="flex-1">
                       <p className="text-sm font-medium text-gray-900 dark:text-white">{source}</p>
                       <p className="text-xs text-gray-400">{count}건</p>

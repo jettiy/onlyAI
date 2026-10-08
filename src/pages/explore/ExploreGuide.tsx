@@ -2,12 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { models, companies } from "../../data/models";
 import type { LucideIcon } from "lucide-react";
-import {
-  Target, Languages, DollarSign, BarChart3,
+import { Target, Languages, DollarSign, BarChart3,
   Laptop, PenLine, Microscope, MessageSquare, Image,
   Globe, Flag, HeartHandshake, CreditCard, Rocket, Sprout, Star, Wrench,
-  RotateCcw, List, PartyPopper,
-} from "lucide-react";
+  RotateCcw, List, PartyPopper, HelpCircle } from "lucide-react";
 
 function IconFromName({ name, className }: { name: string; className?: string }) {
   const iconMap: Record<string, LucideIcon> = {
@@ -285,7 +283,7 @@ export default function ExploreGuide() {
                     key={opt.value}
                     onClick={() => handleSelect(opt.value)}
                     className={
-                      "w-full flex items-center gap-4 px-5 py-4 rounded-xl border-2 text-left transition-all hover:scale-[1.01] active:scale-[0.99] " +
+                      "w-full flex items-center gap-4 px-5 py-4 rounded-xl border-2 text-left transition-all hover:scale-[1.01] active:scale-[0.99]" +
                       (isSelected
                         ? "border-brand-500 bg-brand-50 dark:bg-brand-900/20"
                         : "border-gray-200 dark:border-gray-700 hover:border-brand-300 dark:hover:border-brand-600 bg-white dark:bg-gray-800")
@@ -294,10 +292,10 @@ export default function ExploreGuide() {
                     <span className="text-2xl">
                       <IconFromName name={opt.iconName} className="w-6 h-6 text-brand-600" />
                     </span>
-                    <span className={"font-semibold text-sm " + (isSelected ? "text-brand-700 dark:text-brand-300" : "text-gray-700 dark:text-gray-300")}>
+                    <span className={"font-semibold text-sm" + (isSelected ? "text-brand-700 dark:text-brand-300" : "text-gray-700 dark:text-gray-300")}>
                       {opt.label}
                     </span>
-                    {isSelected && <span className="ml-auto text-brand-500 font-bold">✓</span>}
+ {isSelected && <span className="ml-auto text-brand-500 font-bold"></span>}
                   </button>
                 );
               })}
@@ -378,7 +376,7 @@ export default function ExploreGuide() {
           {results.length === 0 ? (
             <div className="text-center py-12 text-gray-400">
               <div className="mb-3 flex justify-center">
-                <span className="text-4xl">🤔</span>
+                <span className="text-4xl"><HelpCircle className="inline-block shrink-0 align-text-bottom" size={16} /> </span>
               </div>
               <p className="font-medium">조건에 맞는 모델을 찾기 어려워요.</p>
               <p className="text-sm mt-1">예산이나 조건을 조금 조정해보세요.</p>
@@ -387,11 +385,11 @@ export default function ExploreGuide() {
             <div className="space-y-3">
               {results.map(({ model: m, score }, idx) => {
                 const co = companies.find((c) => c.id === m.companyId);
-                const medal = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"][idx];
+                const medal = ["", "", "", "4⃣", "5⃣"][idx];
                 return (
                   <div
                     key={m.id}
-                    className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-all " + (
+                    className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-all" + (
                       idx === 0
                         ? "border-yellow-400 dark:border-yellow-600 shadow-md"
                         : "border-gray-200 dark:border-gray-800"
@@ -414,13 +412,13 @@ export default function ExploreGuide() {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap mb-1">
                           <h3 className="font-bold text-gray-900 dark:text-white text-sm">{m.name}</h3>
-                          <span className={TIER_COLORS[m.tier] + " px-2 py-0.5 text-[10px] rounded-full font-medium"}>
+                          <span className={TIER_COLORS[m.tier] + "px-2 py-0.5 text-[10px] rounded-full font-medium"}>
                             {TIER_LABELS[m.tier]}
                           </span>
                           {m.isNew && <span className="px-2 py-0.5 text-[10px] rounded-full font-medium bg-red-50 dark:bg-red-900/30 text-red-500">NEW</span>}
                           {m.koreanSupport && (
                             <span className={
-                              "px-2 py-0.5 text-[10px] font-bold rounded-full border " +
+                              "px-2 py-0.5 text-[10px] font-bold rounded-full border" +
                               (m.koreanSupport === 'A'
                                 ? "bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 border-brand-200 dark:border-brand-800"
                                 : m.koreanSupport === 'B'
@@ -462,7 +460,7 @@ export default function ExploreGuide() {
 
                       {/* Score badge */}
                       <div className="shrink-0 text-right">
-                        <div className={"text-lg font-black " + (idx === 0 ? "text-yellow-500" : "text-gray-400 dark:text-gray-500")}>
+                        <div className={"text-lg font-black" + (idx === 0 ? "text-yellow-500" : "text-gray-400 dark:text-gray-500")}>
                           {score}점
                         </div>
                         <div className="text-[10px] text-gray-400">적합도</div>

@@ -1,3 +1,4 @@
+import { ClipboardList, MessageSquare, Search } from "lucide-react";
 import { useState, useMemo } from 'react';
 
 interface Prompt {
@@ -48,9 +49,9 @@ const PROMPTS: Prompt[] = [
 톤: [친근함 / 전문적 / 유머러스 중 선택]
 
 각각 작성해주세요:
-1. 📸 인스타그램 (150자 이내, 관련 해시태그 10개 포함, 이모지 2~3개)
-2. 💼 링크드인 (300자 이내, 전문적 통찰 포함, 행동 유도 문구 포함)
-3. 🐦 X(트위터) (120자 이내, 강렬한 훅 문장으로 시작)
+1. 인스타그램 (150자 이내, 관련 해시태그 10개 포함, 이모지 2~3개)
+2. 링크드인 (300자 이내, 전문적 통찰 포함, 행동 유도 문구 포함)
+3. X(트위터) (120자 이내, 강렬한 훅 문장으로 시작)
 
 각 캡션 하단에 A/B 테스트용 대안 버전 1개씩 추가해주세요.`,
   },
@@ -89,11 +90,11 @@ const PROMPTS: Prompt[] = [
 참고할 관점이나 논거: [선택사항]
 
 패키지 구성:
-📌 SEO 최적화 제목 3가지 (각각 다른 키워드 전략)
-📝 본문 (도입부 → 소제목 3~5개 → 실용적 결론)
-🔍 메타 설명 (160자)
-🏷️ 핵심 키워드 10개
-📊 독자가 공유하고 싶은 핵심 인사이트 1문장`,
+SEO 최적화 제목 3가지 (각각 다른 키워드 전략)
+본문 (도입부 → 소제목 3~5개 → 실용적 결론)
+메타 설명 (160자)
+핵심 키워드 10개
+독자가 공유하고 싶은 핵심 인사이트 1문장`,
   },
 
   // ── 코딩 ──
@@ -102,7 +103,7 @@ const PROMPTS: Prompt[] = [
     title: '코드 리뷰 전문가',
     desc: '코드를 붙여넣으면 버그·보안·성능·가독성 관점에서 시니어급 리뷰',
     tags: ['코드리뷰', '개발', '보안', '성능'], model: 'Claude Sonnet 4.6', likes: 723,
-    expectedOutput: '버그/잠재적 오류, 보안 취약점, 성능 병목, 가독성 문제를 각각 심각도(🔴/🟡/🟢)로 분류해서 알려줘요. 각 문제마다 수정된 코드 예시도 함께 제공됩니다.',
+    expectedOutput: '버그/잠재적 오류, 보안 취약점, 성능 병목, 가독성 문제를 각각 심각도(//)로 분류해서 알려줘요. 각 문제마다 수정된 코드 예시도 함께 제공됩니다.',
     prompt: `당신은 10년 경력의 시니어 개발자예요. 아래 코드를 꼼꼼히 리뷰해주세요.
 
 \`\`\`
@@ -111,12 +112,12 @@ const PROMPTS: Prompt[] = [
 
 언어/프레임워크: [예: Python 3.11, React 18]
 
-리뷰 항목 (각각 🔴위험/🟡주의/🟢권장으로 분류):
-1. 🐛 버그 및 잠재적 오류 (엣지 케이스 포함)
-2. 🔒 보안 취약점 (SQL 인젝션, XSS, 인증 이슈 등)
-3. ⚡ 성능 최적화 포인트 (시간복잡도, 메모리 등)
-4. 📖 가독성 및 유지보수성
-5. ✅ 더 나은 구현 대안 (코드 예시 포함)
+리뷰 항목 (각각 위험/주의/권장으로 분류):
+1. 버그 및 잠재적 오류 (엣지 케이스 포함)
+2. 보안 취약점 (SQL 인젝션, XSS, 인증 이슈 등)
+3. 성능 최적화 포인트 (시간복잡도, 메모리 등)
+4. 가독성 및 유지보수성
+5. 더 나은 구현 대안 (코드 예시 포함)
 
 마지막에 총평 한 줄과 우선순위 수정 순서를 알려주세요.`,
   },
@@ -144,10 +145,10 @@ const PROMPTS: Prompt[] = [
 - 패키지 버전: [선택사항]
 
 알려주세요:
-1. 🎯 에러 원인 (비전문가도 이해할 수 있게)
-2. 🔧 즉시 해결 방법 + 수정된 전체 코드
-3. 🛡️ 재발 방지 패턴 및 베스트 프랙티스
-4. 🔍 유사 에러 종류 및 예방 체크리스트`,
+1. 에러 원인 (비전문가도 이해할 수 있게)
+2. 즉시 해결 방법 + 수정된 전체 코드
+3. 재발 방지 패턴 및 베스트 프랙티스
+4. 유사 에러 종류 및 예방 체크리스트`,
   },
   {
     id: 'c3', category: '코딩', difficulty: '고급',
@@ -165,12 +166,12 @@ const PROMPTS: Prompt[] = [
 기술 제약사항: [있으면 입력]
 
 설계 결과물:
-1. 📐 시스템 아키텍처 개요 (컴포넌트 다이어그램)
-2. 🛠️ 기술 스택 추천 (이유 포함, 대안 비교)
-3. 📊 데이터베이스 설계 방향
-4. 🚀 배포 전략 (CI/CD, 클라우드 선택)
-5. ⚠️ 잠재적 병목 & 확장 전략
-6. 💰 예상 인프라 비용`,
+1. 시스템 아키텍처 개요 (컴포넌트 다이어그램)
+2. 기술 스택 추천 (이유 포함, 대안 비교)
+3. 데이터베이스 설계 방향
+4. 배포 전략 (CI/CD, 클라우드 선택)
+5. 잠재적 병목 & 확장 전략
+6. 예상 인프라 비용`,
   },
 
   // ── 마케팅 ──
@@ -189,11 +190,11 @@ const PROMPTS: Prompt[] = [
 예산: [마케팅 월 예산]
 
 분석 결과:
-1. 📊 경쟁사 비교표 (기능, 가격, 타겟, 강약점)
-2. 💎 나만의 차별화 포인트 (Blue Ocean 관점)
-3. 🎯 고객 세그먼트별 핵심 메시지
-4. 📢 마케팅 캠페인 아이디어 5가지 (채널별)
-5. 📈 90일 성장 로드맵`,
+1. 경쟁사 비교표 (기능, 가격, 타겟, 강약점)
+2. 나만의 차별화 포인트 (Blue Ocean 관점)
+3. 고객 세그먼트별 핵심 메시지
+4. 마케팅 캠페인 아이디어 5가지 (채널별)
+5. 90일 성장 로드맵`,
   },
   {
     id: 'm2', category: '마케팅', difficulty: '초급',
@@ -211,10 +212,10 @@ CTA 목표: [구매 / 클릭 / 등록 등]
 독자 특성: [설명]
 
 뉴스레터 구성:
-📧 제목 3가지 (A/B 테스트용, 각각 다른 심리 트리거)
-👋 도입부 (독자의 고통/욕망 건드리기, 2~3문장)
-📰 본문 (섹션 3개, 각 100자 이내)
-🎯 CTA 버튼 텍스트 3가지 대안
+제목 3가지 (A/B 테스트용, 각각 다른 심리 트리거)
+도입부 (독자의 고통/욕망 건드리기, 2~3문장)
+본문 (섹션 3개, 각 100자 이내)
+CTA 버튼 텍스트 3가지 대안
 PS: [독자에게 주는 작은 보너스나 긴박감]`,
   },
 
@@ -234,12 +235,12 @@ PS: [독자에게 주는 작은 보너스나 긴박감]`,
 참석자: [이름 목록]
 
 출력 형식:
-📋 회의 개요 (일시/참석자/주제)
-📝 논의 내용 요약 (안건별)
-✅ 액션아이템 표:
+회의 개요 (일시/참석자/주제)
+논의 내용 요약 (안건별)
+액션아이템 표:
 | 담당자 | 할 일 | 기한 | 우선순위 |
-🔁 다음 회의 예정 사항
-💡 오늘 회의의 핵심 결정사항 한 줄 요약`,
+다음 회의 예정 사항
+오늘 회의의 핵심 결정사항 한 줄 요약`,
   },
   {
     id: 'b2', category: '업무', difficulty: '중급',
@@ -252,12 +253,12 @@ PS: [독자에게 주는 작은 보너스나 긴박감]`,
 [문서 내용을 여기에 붙여넣으세요]
 
 브리핑 형식:
-🎯 핵심 한 줄 (30자 이내, 숫자 포함)
-🔑 5가지 핵심 포인트 (각 2문장 이내)
-📊 주요 데이터·수치 (표 형식)
-💡 시사점 및 권장 액션 (우선순위 순)
-❓ 추가 확인이 필요한 질문 3가지
-⏱️ 읽기 예상 시간: [X분]
+핵심 한 줄 (30자 이내, 숫자 포함)
+5가지 핵심 포인트 (각 2문장 이내)
+주요 데이터·수치 (표 형식)
+시사점 및 권장 액션 (우선순위 순)
+추가 확인이 필요한 질문 3가지
+⏱ 읽기 예상 시간: [X분]
 
 CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세요.`,
   },
@@ -277,10 +278,10 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 톤: [정중함/친근함/단호함 중 선택]
 
 출력:
-📩 제목 3가지 (각각 다른 오픈율 전략)
-🇰🇷 한국어 이메일 (인사→본론→요청→마무리)
-🇺🇸 영어 이메일 (같은 내용)
-🔁 3일 후 팔로업 이메일 초안`,
+제목 3가지 (각각 다른 오픈율 전략)
+한국어 이메일 (인사→본론→요청→마무리)
+영어 이메일 (같은 내용)
+3일 후 팔로업 이메일 초안`,
   },
 
   // ── 자기계발 ──
@@ -298,12 +299,12 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 주요 제약사항: [시간, 비용, 기술 등]
 
 90일 플랜:
-🎯 SMART 목표 재정의 (Specific/Measurable/Achievable/Relevant/Time-bound)
-📅 3단계 로드맵 (30일/60일/90일 마일스톤)
-📋 주차별 실행 체크리스트 (각 주 3~5개 행동)
-📊 성과 측정 KPI (숫자로 측정 가능한 지표)
-⚠️ 예상 장애물 3가지 + 극복 전략
-🔁 매주 리뷰할 질문 3가지`,
+SMART 목표 재정의 (Specific/Measurable/Achievable/Relevant/Time-bound)
+3단계 로드맵 (30일/60일/90일 마일스톤)
+주차별 실행 체크리스트 (각 주 3~5개 행동)
+성과 측정 KPI (숫자로 측정 가능한 지표)
+예상 장애물 3가지 + 극복 전략
+매주 리뷰할 질문 3가지`,
   },
   {
     id: 'd2', category: '자기계발', difficulty: '중급',
@@ -321,11 +322,11 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 경력 연차: [X년]
 
 최적화 결과:
-📋 ATS 키워드 분석 (업계 핵심 키워드 20개)
-✨ 경력 항목 STAR 방식 재작성 (상황→행동→결과)
-📊 정량적 성과 표현으로 업그레이드 (수치/% 포함)
-💼 링크드인 헤드라인 3가지 대안
-📝 링크드인 요약(About) 섹션 초안`,
+ATS 키워드 분석 (업계 핵심 키워드 20개)
+경력 항목 STAR 방식 재작성 (상황→행동→결과)
+정량적 성과 표현으로 업그레이드 (수치/% 포함)
+링크드인 헤드라인 3가지 대안
+링크드인 요약(About) 섹션 초안`,
   },
 
   // ── 여행 ──
@@ -345,12 +346,12 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 특별 요청: [예: 고령자 동행, 어린이 포함, 채식주의자 등]
 
 일정 형식:
-📅 [Day 1] 날짜 및 이동 방법
+[Day 1] 날짜 및 이동 방법
 - 09:00 [장소명] — 특징, 팁, 소요시간
 - 11:30 [식당] — 메뉴 추천, 예산
 ...
-📊 예상 비용 내역 (항목별)
-⚠️ 주의사항 및 현지 팁 5가지`,
+예상 비용 내역 (항목별)
+주의사항 및 현지 팁 5가지`,
   },
   {
     id: 't2', category: '여행', difficulty: '중급',
@@ -367,12 +368,12 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 이미 알고 있는 유명 관광지: [패스할 곳 목록]
 
 알려주세요:
-🍜 로컬 식당 5곳 (관광객 안 가는 곳, 가격대 표시)
-📸 인생샷 포인트 3곳 (최적 촬영 시간대 포함)
-🛍️ 현지인 시장/거리 (구체적 위치)
-🚶 추천 산책 코스 (소요 시간 포함)
-🗣️ 현지어 기본 회화 10문장 (발음 표기 포함)
-⚠️ 이것만은 피하세요 (관광지 함정 3가지)`,
+로컬 식당 5곳 (관광객 안 가는 곳, 가격대 표시)
+인생샷 포인트 3곳 (최적 촬영 시간대 포함)
+현지인 시장/거리 (구체적 위치)
+추천 산책 코스 (소요 시간 포함)
+현지어 기본 회화 10문장 (발음 표기 포함)
+이것만은 피하세요 (관광지 함정 3가지)`,
   },
 
   // ── 분석 ──
@@ -391,12 +392,12 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 비즈니스 컨텍스트: [회사/서비스에 대한 간단한 설명]
 
 분석 결과:
-🔍 데이터 품질 검토 (결측값, 이상값, 편향)
-📊 핵심 통계 요약 (평균, 중앙값, 표준편차 등)
-📈 주요 트렌드 및 패턴 (시각화 설명 포함)
-💡 비즈니스 인사이트 TOP 5
-🎯 즉시 실행 가능한 액션 아이템 3가지
-📉 리스크 요인 및 주의사항`,
+데이터 품질 검토 (결측값, 이상값, 편향)
+핵심 통계 요약 (평균, 중앙값, 표준편차 등)
+주요 트렌드 및 패턴 (시각화 설명 포함)
+비즈니스 인사이트 TOP 5
+즉시 실행 가능한 액션 아이템 3가지
+리스크 요인 및 주의사항`,
   },
   {
     id: 'a2', category: '분석', difficulty: '중급',
@@ -409,13 +410,13 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 [논문 또는 리포트 내용을 붙여넣으세요]
 
 분석 요청:
-1. 📋 연구 개요 (목적, 방법론, 샘플 크기)
-2. 💪 강점: 잘 된 부분과 이유
-3. ⚠️ 약점 & 한계: 방법론적 문제, 편향 가능성
-4. 🔍 주요 주장의 근거 타당성 평가
-5. 📊 통계 해석의 적절성
-6. 🌐 결론의 일반화 가능 범위
-7. 🔮 후속 연구 방향 제안`,
+1. 연구 개요 (목적, 방법론, 샘플 크기)
+2. 강점: 잘 된 부분과 이유
+3. 약점 & 한계: 방법론적 문제, 편향 가능성
+4. 주요 주장의 근거 타당성 평가
+5. 통계 해석의 적절성
+6. 결론의 일반화 가능 범위
+7. 후속 연구 방향 제안`,
   },
 
   // ── 교육 ──
@@ -432,15 +433,15 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 나의 배경 지식: [전혀 없음 / 기초 있음 / 어느 정도 앎]
 
 4단계 설명:
-🧒 레벨 1: 5살 아이에게 (비유와 그림 묘사로)
-📚 레벨 2: 중학생에게 (기본 개념과 예시)
-🎓 레벨 3: 대학생에게 (원리와 응용)
-💼 레벨 4: 전문가에게 (기술적 디테일)
+레벨 1: 5살 아이에게 (비유와 그림 묘사로)
+레벨 2: 중학생에게 (기본 개념과 예시)
+레벨 3: 대학생에게 (원리와 응용)
+레벨 4: 전문가에게 (기술적 디테일)
 
 마지막에:
-✅ 핵심 포인트 3가지 (한 줄씩)
-🌟 실생활에서 보이는 예시 3가지
-❓ 더 깊이 공부하려면 알아야 할 것`,
+핵심 포인트 3가지 (한 줄씩)
+실생활에서 보이는 예시 3가지
+더 깊이 공부하려면 알아야 할 것`,
   },
   {
     id: 'e2', category: '교육', difficulty: '중급',
@@ -458,11 +459,11 @@ CEO가 엘리베이터에서 30초 안에 이해할 수 있게 작성해주세�
 선호 학습 방식: [영상 / 책 / 실습 / 강의 중 선택]
 
 커리큘럼 (12주):
-📋 주차별 학습 목표와 내용
-📚 추천 리소스 (무료/유료 구분, 한국어/영어 구분)
-🎯 각 주차 완료 기준 (체크리스트)
-📊 전체 진도 체크 방법
-⚡ 학습 효율을 높이는 팁 5가지`,
+주차별 학습 목표와 내용
+추천 리소스 (무료/유료 구분, 한국어/영어 구분)
+각 주차 완료 기준 (체크리스트)
+전체 진도 체크 방법
+학습 효율을 높이는 팁 5가지`,
   },
   {
     id: 'e3', category: '교육', difficulty: '고급',
@@ -522,13 +523,13 @@ function PromptModal({ prompt, onClose }: { prompt: Prompt; onClose: () => void 
         <div className="overflow-y-auto flex-1 p-5 space-y-4">
           {/* Expected Output */}
           <div className="bg-brand-50 dark:bg-brand-950/30 rounded-xl p-4 border border-brand-100 dark:border-brand-900/50">
-            <p className="text-[10px] font-black uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-1.5">💬 AI가 이렇게 답해줘요</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-1.5"><MessageSquare className="inline-block shrink-0 align-text-bottom" size={16} /> AI가 이렇게 답해줘요</p>
             <p className="text-sm text-brand-800 dark:text-brand-200 leading-relaxed">{prompt.expectedOutput}</p>
           </div>
 
           {/* Prompt text */}
           <div>
-            <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2">📋 프롬프트 전문</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2"><ClipboardList className="inline-block shrink-0 align-text-bottom" size={16} /> 프롬프트 전문</p>
             <pre className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-xs text-gray-700 dark:text-gray-300 whitespace-pre-wrap font-mono leading-relaxed border border-gray-200 dark:border-gray-700 overflow-auto max-h-64">
               {prompt.prompt}
             </pre>
@@ -552,7 +553,7 @@ function PromptModal({ prompt, onClose }: { prompt: Prompt; onClose: () => void 
                 : 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-700 dark:hover:bg-gray-100'
             }`}
           >
-            {copied ? '✅ 복사 완료!' : '📋 프롬프트 복사'}
+            {copied ? ' 복사 완료!' : '프롬프트 복사'}
           </button>
         </div>
       </div>
@@ -596,7 +597,7 @@ export default function Prompts() {
 
       {/* Search */}
       <div className="relative">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"><Search className="inline-block shrink-0 align-text-bottom" size={16} /> </span>
         <input
           type="text"
           placeholder="프롬프트 검색..."
@@ -668,7 +669,7 @@ export default function Prompts() {
                 <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${CAT_COLORS[p.category] ?? ''}`}>{p.category}</span>
                 <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${DIFFICULTY_COLORS[p.difficulty]}`}>{p.difficulty}</span>
               </div>
-              <span className="text-[10px] text-gray-400 shrink-0">❤️ {p.likes.toLocaleString()}</span>
+              <span className="text-[10px] text-gray-400 shrink-0"> {p.likes.toLocaleString()}</span>
             </div>
 
             <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug mb-1 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
@@ -692,7 +693,7 @@ export default function Prompts() {
 
       {filtered.length === 0 && (
         <div className="text-center py-16 text-gray-400">
-          <p className="text-4xl mb-3">🔍</p>
+          <p className="text-4xl mb-3"><Search className="inline-block shrink-0 align-text-bottom" size={16} /> </p>
           <p className="font-semibold">검색 결과가 없어요</p>
           <p className="text-sm mt-1">다른 키워드로 검색해보세요</p>
         </div>

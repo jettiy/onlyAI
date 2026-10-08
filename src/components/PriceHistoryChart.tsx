@@ -1,6 +1,6 @@
 // ── 가격 변동 이력 차트 ─────────────────────────────────
 import { useMemo } from 'react';
-import { TrendingUp, TrendingDown, BarChart3 } from 'lucide-react';
+import {TrendingUp, TrendingDown, BarChart3, Lightbulb} from 'lucide-react';
 import {
   AreaChart,
   Area,
@@ -209,7 +209,7 @@ export default function PriceHistoryChart() {
 
       {/* 하단 안내 */}
       <div className="text-[10px] text-gray-400 dark:text-gray-500 border-t border-gray-100 dark:border-gray-800 pt-3">
-        💡 이 페이지를 매일 방문하면 localStorage에 가격이 누적됩니다. 데이터는 브라우저에만 저장됩니다.
+        <Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} />  이 페이지를 매일 방문하면 localStorage에 가격이 누적됩니다. 데이터는 브라우저에만 저장됩니다.
       </div>
     </div>
   );

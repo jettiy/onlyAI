@@ -70,7 +70,7 @@ export default function ExploreCodingIndex() {
             >
               <div className="w-7 text-center shrink-0">
                 {idx < 3 ? (
-                  <span className="text-sm">{["🥇", "🥈", "🥉"][idx]}</span>
+                  <span className="text-sm">{["", "", ""][idx]}</span>
                 ) : (
                   <span className="text-xs font-bold text-gray-400">{idx + 1}</span>
                 )}

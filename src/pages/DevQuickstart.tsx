@@ -1,14 +1,16 @@
+import { Lightbulb } from "lucide-react";
+
 export default function DevQuickstart() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">⚡ API 빠른 시작</h1>
+ <h1 className="text-2xl font-black text-gray-900 dark:text-white"> API 빠른 시작</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">5분 만에 AI API를 사용하는 방법</p>
       </div>
 
       {/* What is API */}
       <section className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">API가 뭔가요? 🔌</h2>
+ <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">API가 뭔가요? </h2>
         <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
           API는 <strong>Application Programming Interface</strong>의 약자로, 내 코드에서 AI 모델의 기능을 호출할 수 있는 창구예요.
           ChatGPT 웹에서 질문하는 대신, 코드로 자동화할 수 있어요.
@@ -51,7 +53,7 @@ export default function DevQuickstart() {
 
           {/* Python */}
           <div className="mb-4">
-            <p className="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2">🐍 Python</p>
+ <p className="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2"> Python</p>
             <pre className="text-xs bg-gray-50 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto text-gray-700 dark:text-gray-300 leading-relaxed">
 {`import openai
 
@@ -73,7 +75,7 @@ print(response.choices[0].message.content)`}
 
           {/* JavaScript */}
           <div>
-            <p className="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2">🟨 JavaScript / TypeScript</p>
+ <p className="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2"> JavaScript / TypeScript</p>
             <pre className="text-xs bg-gray-50 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto text-gray-700 dark:text-gray-300 leading-relaxed">
 {`const response = await fetch(
   "https://openrouter.ai/api/v1/chat/completions",
@@ -112,7 +114,7 @@ console.log(data.choices[0].message.content);`}
 
       {/* Tips */}
       <section className="bg-amber-50 dark:bg-amber-950/20 rounded-xl border border-amber-200 dark:border-amber-900 p-6">
-        <h2 className="text-lg font-bold text-amber-800 dark:text-amber-300 mb-3">💡 팁</h2>
+        <h2 className="text-lg font-bold text-amber-800 dark:text-amber-300 mb-3"><Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} /> 팁</h2>
         <ul className="space-y-2 text-xs text-amber-700 dark:text-amber-400 leading-relaxed">
           <li>• <strong>API 키는 절대 공개하지 마세요.</strong> GitHub에 올리면 누군가 내 계정으로 API를 호출할 수 있어요.</li>
           <li>• <strong>.env 파일에 저장</strong>하고 코드에서는 <code className="px-1 py-0.5 bg-amber-100 dark:bg-amber-900/40 rounded">process.env.API_KEY</code>로 불러오세요.</li>

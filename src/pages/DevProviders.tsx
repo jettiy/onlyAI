@@ -1,10 +1,11 @@
+import { Gift, Target } from "lucide-react";
 import { cloudProviders } from '../data/cloudProviders';
 
 export default function DevProviders() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">☁️ 클라우드 제공사</h1>
+ <h1 className="text-2xl font-black text-gray-900 dark:text-white"> 클라우드 제공사</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">AI API를 제공하는 클라우드 서비스 비교</p>
       </div>
 
@@ -35,7 +36,7 @@ export default function DevProviders() {
             {/* Free Tier */}
             <div className="bg-emerald-50 dark:bg-emerald-950/20 rounded-lg p-3 mb-3">
               <p className="text-xs text-emerald-700 dark:text-emerald-300">
-                <span className="font-bold">🎁 무료:</span> {p.freetier}
+                <span className="font-bold"><Gift className="inline-block shrink-0 align-text-bottom" size={16} /> 무료:</span> {p.freetier}
               </p>
             </div>
 
@@ -46,7 +47,7 @@ export default function DevProviders() {
                 <ul className="space-y-1">
                   {p.pros.map(pro => (
                     <li key={pro} className="text-[11px] text-gray-600 dark:text-gray-400 flex items-start gap-1">
-                      <span className="text-emerald-500 shrink-0">✓</span>{pro}
+ <span className="text-emerald-500 shrink-0"></span>{pro}
                     </li>
                   ))}
                 </ul>
@@ -56,7 +57,7 @@ export default function DevProviders() {
                 <ul className="space-y-1">
                   {p.cons.map(con => (
                     <li key={con} className="text-[11px] text-gray-600 dark:text-gray-400 flex items-start gap-1">
-                      <span className="text-red-500 shrink-0">✗</span>{con}
+ <span className="text-red-500 shrink-0"></span>{con}
                     </li>
                   ))}
                 </ul>
@@ -66,7 +67,7 @@ export default function DevProviders() {
             {/* Best For */}
             <div className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                <span className="font-bold">🎯 추천:</span> {p.bestFor}
+                <span className="font-bold"><Target className="inline-block shrink-0 align-text-bottom" size={16} /> 추천:</span> {p.bestFor}
               </p>
             </div>
           </div>

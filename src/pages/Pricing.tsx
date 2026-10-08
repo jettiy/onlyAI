@@ -659,8 +659,8 @@ export default function Pricing() {
                 <Gift className="w-3.5 h-3.5 inline-block mr-1 text-emerald-600 dark:text-emerald-300" /> {provider.freetier}
               </div>
               <div className="space-y-1.5">
-                {provider.pros.map((p) => <div key={p} className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300"><span className="text-emerald-500 mt-0.5 shrink-0">✓</span>{p}</div>)}
-                {provider.cons.map((c) => <div key={c} className="flex items-start gap-2 text-xs text-gray-400 dark:text-gray-500"><span className="text-red-400 mt-0.5 shrink-0">✗</span>{c}</div>)}
+ {provider.pros.map((p) => <div key={p} className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300"><span className="text-emerald-500 mt-0.5 shrink-0"></span>{p}</div>)}
+ {provider.cons.map((c) => <div key={c} className="flex items-start gap-2 text-xs text-gray-400 dark:text-gray-500"><span className="text-red-400 mt-0.5 shrink-0"></span>{c}</div>)}
               </div>
               <p className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-xs text-brand-600 dark:text-brand-400 font-medium">
                 추천 대상: {provider.bestFor}

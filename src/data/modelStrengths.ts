@@ -31,7 +31,168 @@ export interface ModelStrength {
 }
 
 export const strengths: ModelStrength[] = [
-  // ===== OpenAI =====
+  // ── 2026-08~10 신모델 (OpenRouter 2026-10-09 기준) ──
+  {
+    id: 'gpt-6-astra', name: 'GPT-6 Astra', companyId: 'openai',
+    scores: { writing: 10, coding: 10, image: 8, video: 7, summary: 10, chat: 9 },
+    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
+    tagline: 'GPT-6 플래그십. 심층 분석·딥 리서치용.',
+    logoId: 'openai',
+  },
+  {
+    id: 'gpt-6-1-sol', name: 'GPT-6.1 Sol', companyId: 'openai',
+    scores: { writing: 9, coding: 10, image: 8, video: 7, summary: 9, chat: 9 },
+    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$20~50',
+    tagline: '에이전틱 코딩·컴퓨터 사용 특화.',
+    logoId: 'openai',
+  },
+  {
+    id: 'gpt-6-sol', name: 'GPT-6 Sol', companyId: 'openai',
+    scores: { writing: 9, coding: 9, image: 8, video: 7, summary: 9, chat: 9 },
+    budget: 'mid', korean: 9, env: 'cloud', monthlyEst: '$15~40',
+    tagline: 'GPT-6 균형형. 1M 컨텍스트.',
+    logoId: 'openai',
+  },
+  {
+    id: 'gpt-6-luna', name: 'GPT-6 Luna', companyId: 'openai',
+    scores: { writing: 8, coding: 8, image: 7, video: 6, summary: 8, chat: 9 },
+    budget: 'cheap', korean: 9, env: 'cloud', monthlyEst: '$3~10',
+    tagline: 'GPT-6 최저가. 대량 처리용.',
+    logoId: 'openai',
+  },
+  {
+    id: 'claude-opus-5-5', name: 'Claude Opus 5.5', companyId: 'anthropic',
+    scores: { writing: 10, coding: 10, image: 8, video: 7, summary: 10, chat: 9 },
+    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$40+',
+    tagline: 'Claude 최신 플래그십. 대규모 코드베이스 작업.',
+    logoId: 'anthropic',
+  },
+  {
+    id: 'claude-sonnet-5-5', name: 'Claude Sonnet 5.5', companyId: 'anthropic',
+    scores: { writing: 9, coding: 9, image: 8, video: 7, summary: 9, chat: 9 },
+    budget: 'mid', korean: 9, env: 'cloud', monthlyEst: '$15~40',
+    tagline: '범위 명확한 실무 코딩 작업 최적.',
+    logoId: 'anthropic',
+  },
+  {
+    id: 'claude-haiku-5-5', name: 'Claude Haiku 5.5', companyId: 'anthropic',
+    scores: { writing: 8, coding: 8, image: 7, video: 6, summary: 8, chat: 9 },
+    budget: 'cheap', korean: 9, env: 'cloud', monthlyEst: '$3~10',
+    tagline: '소형·저비용. 서브에이전트·요약용.',
+    logoId: 'anthropic',
+  },
+  {
+    id: 'gemini-3-8-flash', name: 'Gemini 3.8 Flash', companyId: 'google',
+    scores: { writing: 8, coding: 9, image: 9, video: 8, summary: 9, chat: 8 },
+    budget: 'cheap', korean: 9, env: 'cloud', monthlyEst: '$3~10',
+    tagline: '풀 멀티모달 입력. 가성비 우수.',
+    logoId: 'google',
+  },
+  {
+    id: 'muse-spark-1-3', name: 'Muse Spark 1.3', companyId: 'meta',
+    scores: { writing: 9, coding: 9, image: 8, video: 7, summary: 9, chat: 8 },
+    budget: 'mid', korean: 7, env: 'cloud', monthlyEst: '$15~40',
+    tagline: '장시간 멀티에이전트 워크플로 특화.',
+    logoId: 'meta',
+  },
+  {
+    id: 'grok-4-7', name: 'Grok 4.7', companyId: 'xai',
+    scores: { writing: 9, coding: 10, image: 7, video: 6, summary: 9, chat: 8 },
+    budget: 'mid', korean: 7, env: 'cloud', monthlyEst: '$15~40',
+    tagline: '장시간 SW 엔지니어링 + 자기 검증.',
+    logoId: 'xai',
+  },
+  {
+    id: 'qwen-3-8-max-prime', name: 'Qwen 3.8 Max Prime', companyId: 'alibaba',
+    scores: { writing: 9, coding: 9, image: 9, video: 8, summary: 9, chat: 8 },
+    budget: 'premium', korean: 8, env: 'cloud', monthlyEst: '$40+',
+    tagline: 'Qwen3.8 Max 고처리량 변형. 1M 컨텍스트.',
+    logoId: 'alibaba',
+  },
+  {
+    id: 'qwen-3-8-flash', name: 'Qwen 3.8 Flash', companyId: 'alibaba',
+    scores: { writing: 8, coding: 8, image: 8, video: 7, summary: 8, chat: 8 },
+    budget: 'cheap', korean: 8, env: 'cloud', monthlyEst: '$3~10',
+    tagline: '저비용 멀티모달 에이전트.',
+    logoId: 'alibaba',
+  },
+  {
+    id: 'qwen-3-8-omni-flash', name: 'Qwen 3.8 Omni Flash', companyId: 'alibaba',
+    scores: { writing: 8, coding: 8, image: 9, video: 9, summary: 8, chat: 8 },
+    budget: 'cheap', korean: 8, env: 'cloud', monthlyEst: '$3~10',
+    tagline: '오디오·비디오 네이티브 이해. 에이전트 중심.',
+    logoId: 'alibaba',
+  },
+  {
+    id: 'glm-5-3', name: 'GLM-5.3', companyId: 'zhipu',
+    scores: { writing: 9, coding: 10, image: 7, video: 6, summary: 9, chat: 8 },
+    budget: 'cheap', korean: 7, env: 'cloud', monthlyEst: '$5~15',
+    tagline: '저입력가 고출력. 코딩·장시간 에이전트.',
+    logoId: 'zhipu',
+  },
+  {
+    id: 'glm-5-3-flash', name: 'GLM-5.3 Flash', companyId: 'zhipu',
+    scores: { writing: 8, coding: 8, image: 8, video: 7, summary: 8, chat: 8 },
+    budget: 'cheap', korean: 7, env: 'cloud', monthlyEst: '$2~8',
+    tagline: '초저가 멀티모달. 대량 처리용.',
+    logoId: 'zhipu',
+  },
+  {
+    id: 'deepseek-v4-1-flash', name: 'DeepSeek V4.1 Flash', companyId: 'deepseek',
+    scores: { writing: 8, coding: 8, image: 7, video: 6, summary: 8, chat: 8 },
+    budget: 'cheap', korean: 7, env: 'cloud', monthlyEst: '$3~10',
+    tagline: 'CED 아키텍처. 이미지 입력 지원.',
+    logoId: 'deepseek',
+  },
+  {
+    id: 'mimo-v2-6-pro', name: 'MiMo-V2.6-Pro', companyId: 'xiaomi',
+    scores: { writing: 9, coding: 9, image: 8, video: 8, summary: 9, chat: 8 },
+    budget: 'cheap', korean: 7, env: 'cloud', monthlyEst: '$5~15',
+    tagline: '1T+ 파라미터 풀 멀티모달.',
+    logoId: 'xiaomi',
+  },
+  {
+    id: 'mimo-v2-6-flash', name: 'MiMo-V2.6-Flash', companyId: 'xiaomi',
+    scores: { writing: 8, coding: 8, image: 8, video: 7, summary: 8, chat: 8 },
+    budget: 'cheap', korean: 7, env: 'cloud', monthlyEst: '$2~8',
+    tagline: '오픈소스 멀티모달. 초저가.',
+    logoId: 'xiaomi',
+  },
+  {
+    id: 'step-5-preview', name: 'Step 5 Preview', companyId: 'stepfun',
+    scores: { writing: 8, coding: 9, image: 8, video: 7, summary: 8, chat: 8 },
+    budget: 'mid', korean: 5, env: 'cloud', monthlyEst: '$10~25',
+    tagline: 'StepFun 플래그십 프리뷰. SW 엔지니어링 강점.',
+    logoId: 'stepfun',
+  },
+  {
+    id: 'nvidia-nemotron-3-5-lightning', name: 'NVIDIA Nemotron 3.5 Lightning', companyId: 'nvidia',
+    scores: { writing: 7, coding: 8, image: 6, video: 5, summary: 7, chat: 7 },
+    budget: 'cheap', korean: 5, env: 'cloud', monthlyEst: '$2~8',
+    tagline: '3B 활성 고처리량. 대량 에이전트 작업.',
+    logoId: 'nvidia',
+  },
+  {
+    id: 'solar-pro4', name: 'Solar Pro 4', companyId: 'upstage',
+    scores: { writing: 9, coding: 8, image: 6, video: 5, summary: 10, chat: 8 },
+    budget: 'cheap', korean: 10, env: 'cloud', monthlyEst: '$3~10',
+    tagline: '한국 서비스. 524K 컨텍스트, 문서 특화.',
+    logoId: 'upstage',
+  },
+  {
+    id: 'solar-mini4', name: 'Solar Mini 4', companyId: 'upstage',
+    scores: { writing: 8, coding: 8, image: 6, video: 5, summary: 9, chat: 8 },
+    budget: 'cheap', korean: 10, env: 'cloud', monthlyEst: '$2~8',
+    tagline: '한국 서비스. 고속 응답 에이전트.',
+    logoId: 'upstage',
+  },
+  {
+    id: 'mistral-large-4', name: 'Mistral Large 4', companyId: 'mistral',
+    scores: { writing: 9, coding: 9, image: 8, video: 6, summary: 9, chat: 8 },
+    budget: 'cheap', korean: 6, env: 'cloud', monthlyEst: '$5~15',
+    tagline: '유럽 GDPR. 멀티모달 플래그십.',
+    logoId: 'mistral',
+  },
   {
     id: 'gpt-5-5-instant', name: 'GPT-5.5 Instant', companyId: 'openai',
     scores: { writing: 8, coding: 8, image: 6, video: 6, summary: 8, chat: 9 },
@@ -88,8 +249,6 @@ export const strengths: ModelStrength[] = [
     tagline: '무료 초경량. 빠른 응답. 코딩·요약.',
     logoId: 'openai',
   },
-
-  // ===== Anthropic =====
   {
     id: 'claude-opus-4-8', name: 'Claude Opus 4.8', companyId: 'anthropic',
     scores: { writing: 10, coding: 9, image: 10, video: 9, summary: 9, chat: 9 },
@@ -126,17 +285,10 @@ export const strengths: ModelStrength[] = [
     logoId: 'anthropic',
   },
   {
-    id: 'claude-fable-5', name: 'Claude Fable 5', companyId: 'anthropic',
+    id: 'claude-fable-5-1', name: 'Claude Fable 5.1', companyId: 'anthropic',
     scores: { writing: 9, coding: 10, image: 9, video: 7, summary: 9, chat: 10 },
     budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
     tagline: '에이전트·코딩 극강 모델.',
-    logoId: 'anthropic',
-  },
-  {
-    id: 'claude-opus-4-8-fast', name: 'Claude Opus 4.8 (Fast)', companyId: 'anthropic',
-    scores: { writing: 9, coding: 9, image: 8, video: 7, summary: 9, chat: 9 },
-    budget: 'premium', korean: 9, env: 'cloud', monthlyEst: '$60+',
-    tagline: 'Opus 4.8 지능 + 낮은 지연. 실시간 코딩·에이전트.',
     logoId: 'anthropic',
   },
   {
@@ -160,8 +312,6 @@ export const strengths: ModelStrength[] = [
     tagline: '보안 특화. 안전한 에이전트 실행.',
     logoId: 'anthropic',
   },
-
-  // ===== Google =====
   {
     id: 'gemini-3-5-flash', name: 'Gemini 3.5 Flash', companyId: 'google',
     scores: { writing: 9, coding: 9, image: 9, video: 9, summary: 8, chat: 9 },
@@ -177,21 +327,12 @@ export const strengths: ModelStrength[] = [
     logoId: 'google',
   },
   {
-    id: 'gemini-3-1-pro', name: 'Gemini 3.1 Pro', companyId: 'google',
-    scores: { writing: 9, coding: 8, image: 9, video: 9, summary: 9, chat: 9 },
-    budget: 'cheap', korean: 8, env: 'cloud', monthlyEst: '$5~15',
-    tagline: '멀티모달 강자. 글+이미지+동영상.',
-    logoId: 'google',
-  },
-  {
     id: 'gemini-2-5-flash', name: 'Gemini 2.5 Flash', companyId: 'google',
     scores: { writing: 7, coding: 7, image: 8, video: 8, summary: 7, chat: 7 },
     budget: 'free', korean: 7, env: 'cloud', monthlyEst: '무료',
     tagline: '빠르고 무료인 구글의 선택.',
     logoId: 'google',
   },
-
-  // ===== Zhipu (GLM) =====
   {
     id: 'glm-5.2', name: 'GLM-5.2', companyId: 'zhipu',
     scores: { writing: 9, coding: 9, image: 1, video: 1, summary: 9, chat: 9 },
@@ -220,8 +361,6 @@ export const strengths: ModelStrength[] = [
     tagline: '가장 경제적인 선택. 빠른 응답.',
     logoId: 'zhipu',
   },
-
-  // ===== DeepSeek =====
   {
     id: 'deepseek-v4-pro', name: 'DeepSeek V4 Pro', companyId: 'deepseek',
     scores: { writing: 8, coding: 9, image: 1, video: 1, summary: 8, chat: 9 },
@@ -236,8 +375,6 @@ export const strengths: ModelStrength[] = [
     tagline: '가격 파괴형 범용 모델.',
     logoId: 'deepseek',
   },
-
-  // ===== MAI =====
   {
     id: 'mai-code-1-flash', name: 'MAI Code 1 Flash', companyId: 'mai',
     scores: { writing: 8, coding: 9, image: 7, video: 9, summary: 8, chat: 8 },
@@ -250,8 +387,6 @@ export const strengths: ModelStrength[] = [
     budget: 'mid', korean: 7, env: 'cloud', monthlyEst: '$10~30',
     tagline: '추론 최강. 깊은 사고·분석.',
   },
-
-  // ===== Meta =====
   {
     id: 'llama-4-maverick', name: 'Llama 4 Maverick', companyId: 'meta',
     scores: { writing: 7, coding: 7, image: 7, video: 7, summary: 7, chat: 7 },
@@ -265,15 +400,6 @@ export const strengths: ModelStrength[] = [
     budget: 'free', korean: 5, env: 'open', monthlyEst: '무료 (로컬)',
     tagline: '10M 컨텍스트. 초대규모 문서 분석.',
     logoId: 'meta',
-  },
-
-  // ===== xAI =====
-  {
-    id: 'grok-4-3', name: 'Grok 4.3', companyId: 'xai',
-    scores: { writing: 8, coding: 9, image: 8, video: 7, summary: 8, chat: 8 },
-    budget: 'mid', korean: 6, env: 'cloud', monthlyEst: '$5~20',
-    tagline: 'Top-15 가성비 최강. 실시간 X 검색.',
-    logoId: 'xai',
   },
   {
     id: 'grok-4-heavy', name: 'Grok 4 Heavy', companyId: 'xai',
@@ -296,8 +422,6 @@ export const strengths: ModelStrength[] = [
     tagline: '실시간 정보 + X 연동.',
     logoId: 'xai',
   },
-
-  // ===== MiniMax =====
   {
     id: 'minimax-m2-7', name: 'MiniMax M2.7', companyId: 'minimax',
     scores: { writing: 7, coding: 8, image: 1, video: 1, summary: 7, chat: 7 },
@@ -312,8 +436,6 @@ export const strengths: ModelStrength[] = [
     tagline: '에이전트·코딩 균형잡힌 플래그십.',
     logoId: 'minimax',
   },
-
-  // ===== StepFun =====
   {
     id: 'step-3-7-flash', name: 'Step 3.7 Flash', companyId: 'stepfun',
     scores: { writing: 6, coding: 7, image: 1, video: 1, summary: 7, chat: 7 },
@@ -321,8 +443,6 @@ export const strengths: ModelStrength[] = [
     tagline: '초저가 경량 모델. 대량 API 최적.',
     logoId: 'stepfun',
   },
-
-  // ===== Mistral =====
   {
     id: 'mistral-large-3', name: 'Mistral Large 3', companyId: 'mistral',
     scores: { writing: 8, coding: 7, image: 1, video: 1, summary: 8, chat: 8 },
@@ -344,8 +464,6 @@ export const strengths: ModelStrength[] = [
     tagline: '코딩 전용 123B. 에이전트 SE 특화. SWE-bench 강함.',
     logoId: 'mistral',
   },
-
-  // ===== Alibaba =====
   {
     id: 'qwen-3-7-max', name: 'Qwen 3.7 Max', companyId: 'alibaba',
     scores: { writing: 9, coding: 9, image: 7, video: 7, summary: 9, chat: 9 },
@@ -374,20 +492,11 @@ export const strengths: ModelStrength[] = [
     tagline: '차세대 무료 플래그십. 에이전트 강화.',
     logoId: 'alibaba',
   },
-
-  // ===== Moonshot =====
   {
     id: 'kimi-k2-6', name: 'Kimi K2.6', companyId: 'moonshot',
     scores: { writing: 9, coding: 9, image: 8, video: 8, summary: 9, chat: 8 },
     budget: 'mid', korean: 6, env: 'cloud', monthlyEst: '$10~30',
     tagline: '오픈웨이트 #1. 네이티브 멀티모달.',
-    logoId: 'moonshot',
-  },
-  {
-    id: 'kimi-k2-5', name: 'Kimi K2.5', companyId: 'moonshot',
-    scores: { writing: 8, coding: 9, image: 7, video: 7, summary: 8, chat: 8 },
-    budget: 'mid', korean: 5, env: 'cloud', monthlyEst: '$10~25',
-    tagline: '1조 파라미터 코딩 특화.',
     logoId: 'moonshot',
   },
   {
@@ -397,8 +506,6 @@ export const strengths: ModelStrength[] = [
     tagline: '코딩 특화 7B. 빠르고 정확한.',
     logoId: 'moonshot',
   },
-
-  // ===== Xiaomi =====
   {
     id: 'mimo-v2-5-pro', name: 'MiMo-V2.5-Pro', companyId: 'xiaomi',
     scores: { writing: 9, coding: 9, image: 6, video: 6, summary: 9, chat: 8 },
@@ -413,8 +520,6 @@ export const strengths: ModelStrength[] = [
     tagline: '1M 컨텍스트. 에이전트 최적.',
     logoId: 'xiaomi',
   },
-
-  // ===== NVIDIA =====
   {
     id: 'nvidia-nemotron-3-ultra', name: 'NVIDIA Nemotron 3 Ultra', companyId: 'nvidia',
     scores: { writing: 8, coding: 9, image: 7, video: 8, summary: 9, chat: 8 },
@@ -422,8 +527,6 @@ export const strengths: ModelStrength[] = [
     tagline: '엔터프라이즈 코딩·추론 최강.',
     logoId: 'nvidia',
   },
-
-  // ===== 로컬 모델 =====
   {
     id: 'qwen3.5-27b', name: 'Qwen 3.5 27B', companyId: 'alibaba',
     scores: { writing: 8, coding: 8, image: 1, video: 1, summary: 8, chat: 8 },
@@ -473,6 +576,7 @@ export const strengths: ModelStrength[] = [
     tagline: 'RTX 3090/4090 코딩 최강. 22GB VRAM.',
     logoId: 'deepseek', isLocal: true, recVram: 22,
   },
+
 ];
 
 // 용도별 한글 라벨
@@ -486,12 +590,12 @@ export const useCaseLabels: Record<UseCase, string> = {
 };
 
 export const useCaseIcons: Record<UseCase, string> = {
-  writing: '✍️',
-  coding: '💻',
-  image: '🖼️',
-  video: '🎬',
-  summary: '📊',
-  chat: '💬',
+  writing: 'text',
+  coding: 'code',
+  image: 'image',
+  video: 'video',
+  summary: 'table',
+  chat: 'message',
 };
 
 // 예산별 한글 라벨

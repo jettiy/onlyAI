@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { logoIdToPath } from "../../lib/logoUtils";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Type } from "lucide-react";
 
 // Approximate token counts per model family (characters per token ratio)
 const MODEL_TOKENIZERS = [
@@ -73,7 +73,7 @@ export default function ExploreTokenizer() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🔤 토큰화이저 체험기</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><Type className="inline-block shrink-0 align-text-bottom" size={16} /> 토큰화이저 체험기</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           같은 텍스트가 각 AI 모델에서 몇 토큰으로 처리되는지 비교해보세요. 미국·중국 최신 모델 위주.
         </p>

@@ -1,3 +1,4 @@
+import { BookOpen } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -25,10 +26,10 @@ type OptionCard = {
 };
 
 const OPTIONS: OptionCard[] = [
-  { id: 'windows', icon: '🪟', title: 'Windows (추천)', subtitle: 'PowerShell로 1분 설치' },
-  { id: 'mac', icon: '🍎', title: 'Mac / Linux', subtitle: '터미널로 간편 설치' },
-  { id: 'docker', icon: '🐳', title: 'Docker', subtitle: '컨테이너로 격리 실행' },
-  { id: 'cloud', icon: '☁️', title: '클라우드 (Managed)', subtitle: '가입만 하면 끝 — 설치 불필요' },
+  { id: 'windows', icon: '', title: 'Windows (추천)', subtitle: 'PowerShell로 1분 설치' },
+  { id: 'mac', icon: '', title: 'Mac / Linux', subtitle: '터미널로 간편 설치' },
+  { id: 'docker', icon: '', title: 'Docker', subtitle: '컨테이너로 격리 실행' },
+ { id: 'cloud', icon: '', title: '클라우드 (Managed)', subtitle: '가입만 하면 끝 — 설치 불필요' },
 ];
 
 const NODE_JS_STEP: StepBlock = {
@@ -46,7 +47,7 @@ const NODE_JS_STEP: StepBlock = {
     'Mac: Homebrew가 없다면 먼저 brew.sh에서 설치',
     'Linux: 위 curl 명령어로 Nodesource 저장소 추가 후 설치',
   ],
-  note: '⚠️ npm 권한 문제 시 (Windows): 관리자 PowerShell에서 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser 실행',
+ note: ' npm 권한 문제 시 (Windows): 관리자 PowerShell에서 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser 실행',
 };
 
 const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
@@ -120,7 +121,7 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
           'Linux: sudo apt install docker.io && sudo usermod -aG docker $USER',
           '최소 2GB RAM (빌드 시 OOM 방지)',
         ],
-        note: '⚠️ Docker는 선택 사항입니다. 자기 PC에서 가장 빠르게 쓰려면 일반 설치를 추천합니다.',
+ note: ' Docker는 선택 사항입니다. 자기 PC에서 가장 빠르게 쓰려면 일반 설치를 추천합니다.',
       },
       {
         title: '공식 이미지로 실행 (권장)',
@@ -170,10 +171,10 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
         title: 'Managed OpenClaw란?',
         desc: '각 AI 회사가 OpenClaw를 클라우드에서 호스팅해주는 서비스입니다. 직접 설치할 필요 없이 가입만 하면 즉시 사용 가능합니다.',
         bullets: [
-          '🚀 설치 없이 가입만으로 즉시 사용',
-          '💬 Telegram, WeChat 등 메신저 연동',
-          '🔑 API 키만 입력하면 끝',
-          '🔄 업데이트/유지보수 자동 처리',
+          '설치 없이 가입만으로 즉시 사용',
+          'Telegram, WeChat 등 메신저 연동',
+          'API 키만 입력하면 끝',
+          '업데이트/유지보수 자동 처리',
         ],
       },
       {
@@ -190,7 +191,7 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
         title: 'MAX Claw (미니맥스)',
         desc: '미니맥스(MiniMax)에서 제공하는 Managed OpenClaw입니다.',
         bullets: [
-          '💰 비용 발생 (유료)',
+          '비용 발생 (유료)',
           '미니맥스 M2.7 AI 모델 기반',
           '가입 후 API 키 입력 → 즉시 사용',
         ],
@@ -200,7 +201,7 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
         title: 'AutoClaw (즈푸/Zhipu)',
         desc: '즈푸(Zhipu AI / GLM)에서 제공하는 Managed OpenClaw입니다.',
         bullets: [
-          '🆓 제공되지만 ⚠️ 한국에서는 이용 불가',
+ '🆓 제공되지만 한국에서는 이용 불가',
           'GLM-5 AI 모델 기반',
           '중국 IP 또는 중국 계정 필요',
         ],
@@ -210,7 +211,7 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
         title: 'Kimi Claw (키미/Moonshot)',
         desc: 'Moonshot AI(키미)에서 제공하는 Managed OpenClaw입니다.',
         bullets: [
-          '💰 비용 발생 (유료)',
+          '비용 발생 (유료)',
           'Kimi AI 모델 기반',
           '긴 컨텍스트 창 특화',
           '가입 후 바로 대화 가능',
@@ -222,9 +223,9 @@ const GUIDES: Record<Exclude<InstallType, ''>, Guide> = {
         desc: '각 서비스를 한눈에 비교해보세요.',
         bullets: [
           '🆓 무료: MiMo Claw (1시간), AutoClaw (한국 불가)',
-          '💰 유료: MAX Claw, Kimi Claw',
-          '🇰🇷 한국 이용 가능: MiMo Claw, MAX Claw, Kimi Claw',
-          '🚫 한국 이용 불가: AutoClaw (즈푸)',
+          '유료: MAX Claw, Kimi Claw',
+          '한국 이용 가능: MiMo Claw, MAX Claw, Kimi Claw',
+          '한국 이용 불가: AutoClaw (즈푸)',
         ],
       },
     ],
@@ -382,7 +383,7 @@ export default function OpenClawInstall() {
                           : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300'
                       }`}
                     >
-                      {done ? '✓' : i + 1}
+ {done ? '' : i + 1}
                     </span>
                     <div className="min-w-0">
                       <p className={`text-sm font-semibold truncate ${cur ? 'text-gray-900 dark:text-white' : 'text-gray-700 dark:text-gray-300'}`}>
@@ -493,7 +494,7 @@ export default function OpenClawInstall() {
 
       <div className="pt-2">
         <Link to="/openclaw/guide" className="text-sm font-semibold text-emerald-600 hover:text-emerald-700 dark:text-emerald-300 dark:hover:text-emerald-200">
-          📖 설치가 처음이세요? 상세 가이드 보기 →
+          <BookOpen className="inline-block shrink-0 align-text-bottom" size={16} />  설치가 처음이세요? 상세 가이드 보기 →
         </Link>
       </div>
     </div>

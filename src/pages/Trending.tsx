@@ -80,7 +80,7 @@ export default function Trending() {
                   </div>
                 </div>
                 <div className="text-right shrink-0">
-                  <p className="text-base font-bold text-gray-900 dark:text-white">⭐ {repo.stars}</p>
+ <p className="text-base font-bold text-gray-900 dark:text-white"> {repo.stars}</p>
                   <p className="text-sm text-green-600 font-medium">{repo.weeklyStars} 이번 주</p>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function Trending() {
                   <span className="text-xs text-purple-400 group-hover:text-purple-600 opacity-0 group-hover:opacity-100 transition-opacity mt-1 inline-block">ClawHub에서 보기 ↗</span>
                 </div>
                 <div className="text-right shrink-0">
-                  <p className="text-base font-bold text-gray-900 dark:text-white">⭐ {skill.stars}</p>
+ <p className="text-base font-bold text-gray-900 dark:text-white"> {skill.stars}</p>
                   <p className="text-sm text-gray-400">{skill.installs} 설치</p>
                 </div>
               </div>

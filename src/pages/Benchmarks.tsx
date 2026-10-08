@@ -390,7 +390,7 @@ export default function Benchmarks() {
         <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><BarChart3 className="w-6 h-6 inline-block mr-2 text-blue-500" />벤치마크 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
                     주요 AI 모델의 공개 벤치마크 점수 비교. artificialanalysis.ai / 공식 기술 보고서 참고. 2026년 6월 기준.
-          <span className="text-[10px] text-brand-500 ml-1">⚡ Gemini 3.5 Flash: Frontier 4× 속도 | 🇨🇳 DeepSeek V4 Pro: BenchLM 중국 1위(87점)</span>
+ <span className="text-[10px] text-brand-500 ml-1"> Gemini 3.5 Flash: Frontier 4× 속도 | DeepSeek V4 Pro: BenchLM 중국 1위(87점)</span>
         </p>
       </div>
 

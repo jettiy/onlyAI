@@ -1,14 +1,16 @@
+import {Rocket, Target, TrendingUp} from "lucide-react";
+
 export default function GuidePrompts() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">✏️ 프롬프트 작성법</h1>
+ <h1 className="text-2xl font-black text-gray-900 dark:text-white"> 프롬프트 작성법</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">AI에게 원하는 결과를 정확하게 전달하는 방법</p>
       </div>
 
       {/* Basics */}
       <section className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">🎯 기초: 프롬프트란?</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4"><Target className="inline-block shrink-0 align-text-bottom" size={16} /> 기초: 프롬프트란?</h2>
         <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
           프롬프트는 AI에게 주는 <strong>지시사항</strong>이에요. 레스토랑에서 주문할 때 메뉴판만 보는 것보다
           "매콤한 걸로, 매운 정도 3단계, 곱빼기로 주세요"라고 구체적으로 말하면 원하는 걸 정확히 받듯이,
@@ -35,7 +37,7 @@ export default function GuidePrompts() {
 
       {/* Intermediate */}
       <section className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">📈 중급: 더 좋은 결과 얻기</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4"><TrendingUp className="inline-block shrink-0 align-text-bottom" size={16} />  중급: 더 좋은 결과 얻기</h2>
         <div className="space-y-4">
           <div>
             <h3 className="text-sm font-bold text-gray-800 dark:text-gray-200 mb-2">Few-shot 예시 주기</h3>
@@ -63,7 +65,7 @@ export default function GuidePrompts() {
 
       {/* Advanced */}
       <section className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">🚀 고급: 시스템 프롬프트 & 체인</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4"><Rocket className="inline-block shrink-0 align-text-bottom" size={16} /> 고급: 시스템 프롬프트 & 체인</h2>
         <div className="space-y-4">
           <div>
             <h3 className="text-sm font-bold text-gray-800 dark:text-gray-200 mb-2">시스템 프롬프트 활용</h3>
@@ -91,11 +93,11 @@ function TipBox({ title, bad, good }: { title: string; bad: string; good: string
       <p className="text-sm font-bold text-gray-900 dark:text-white mb-2">{title}</p>
       <div className="space-y-2">
         <div className="flex items-start gap-2">
-          <span className="text-red-500 shrink-0">❌</span>
+ <span className="text-red-500 shrink-0"></span>
           <p className="text-xs text-gray-500 dark:text-gray-400 line-through">{bad}</p>
         </div>
         <div className="flex items-start gap-2">
-          <span className="text-emerald-500 shrink-0">✅</span>
+ <span className="text-emerald-500 shrink-0"></span>
           <p className="text-xs text-gray-700 dark:text-gray-300">{good}</p>
         </div>
       </div>

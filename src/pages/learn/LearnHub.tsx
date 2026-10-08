@@ -39,21 +39,21 @@ const TOPICS = [
     link: '/explore/calculator',
   },
   {
-    icon: '📡', label: 'API로 AI 쓰는 법',
+    icon: '', label: 'API로 AI 쓰는 법',
     desc: 'OpenAI·Anthropic·Google·Zhipu API 키 발급부터 첫 요청까지. 코드 예시 포함',
     tags: ['개발자', 'API'],
     color: 'text-violet-600 dark:text-violet-400 border-violet-200 dark:border-violet-900',
     link: '/explore/side-by-side',
   },
   {
-    icon: '📰', label: 'AI 뉴스 채널 추천',
+    icon: '', label: 'AI 뉴스 채널 추천',
     desc: '한국어·영어로 AI 동향을 파악하는 데 도움이 되는 뉴스 소스·커뮤니티·뉴스레터 모음',
     tags: ['정보 수집', '추천'],
     color: 'text-amber-600 dark:text-amber-400 border-amber-200 dark:border-amber-900',
     link: '/news',
   },
   {
-    icon: '🧪', label: '벤치마크 읽는 법',
+    icon: '', label: '벤치마크 읽는 법',
     desc: 'MMLU·HumanEval·GPQA 등 벤치마크 점수의 의미와 한계. 점수만 보면 안 되는 이유',
     tags: ['평가 지표', '핵심'],
     color: 'text-rose-600 dark:text-rose-400 border-rose-200 dark:border-rose-900',
@@ -116,7 +116,7 @@ export default function LearnHub() {
                 ) : (
                   <t.icon size={20} className="text-gray-700 dark:text-gray-300" />
                 )}
-                <h2 className={`text-sm font-bold ${t.color.split(' ')[0]}`}>{t.label}</h2>
+                <h2 className={`text-sm font-bold ${t.color.split('')[0]}`}>{t.label}</h2>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-2">{t.desc}</p>
               <div className="flex flex-wrap gap-1">

@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
+import ChunkReloadGuard from "./components/ChunkReloadGuard";
 import { useSEO } from "./hooks/useSEO";
 
 // Lazy-loaded routes for code splitting
@@ -53,8 +54,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <SEOHandler />
-      <Layout>
-        <Suspense fallback={<PageLoader />}>
+      <ChunkReloadGuard>
+        <Layout>
+          <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/explore" element={<Navigate to="/explore/compare" replace />} />
@@ -86,8 +88,9 @@ export default function App() {
             <Route path="/changelog" element={<Changelog />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Suspense>
-      </Layout>
+          </Suspense>
+        </Layout>
+      </ChunkReloadGuard>
     </BrowserRouter>
   );
 }

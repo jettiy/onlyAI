@@ -11,7 +11,7 @@
 import type { FC } from "react";
 import * as Recharts from "recharts";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+ 
 
 type AnyProps = Record<string, any>;
 

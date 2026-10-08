@@ -76,7 +76,7 @@ export default function ExploreCalculator() {
       const blended = p.input * ratio.inputRatio + p.output * ratio.outputRatio;
       return { ...p, cost, tokens: totalTokens, blended };
     }).sort((a, b) => a.cost - b.cost);
-  }, [totalTokens, inputMode, ratio]);
+  }, [totalTokens, inputMode, ratio, inputValue]);
 
   return (
     <div className="space-y-6">

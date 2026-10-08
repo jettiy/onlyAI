@@ -1,36 +1,43 @@
-# ── 데이터 갱신 Workflow (수동 실행) ──────────────────────
-# Node.js로 OpenRouter 랭킹 + AI 뉴스 RSS를 수집하여
-# public/data 디렉토리에 JSON 파일로 저장하고 변경사항을 commit.
-#
-# 실행: 수동 (Actions 탭에서 workflow_dispatch 실행)
-# 자동 배포 비활성화 — Vercel 배포는 별도 수동 진행 (deploy.yml)
+# ── 데이터 갱신 Workflow (매일 자동 + 수동) ────────────────
+# OpenRouter 랭킹 + AI 뉴스 RSS 수집 → public/data 커밋 → Vercel 자동 배포.
+# 커밋 푸시 시 Vercel가 자동 배포하므로 별도 배포 스텝 불필요.
+# 성공/실패 텔레그램 알림 (scripts/notify.mjs).
 
 name: 데이터 갱신 (Data Refresh)
 
 on:
+  schedule:
+    - cron: '30 18 * * *'   # 매일 KST 03:30 — 새벽 갱신
+    - cron: '0 12 * * *'    # 매일 KST 21:00 — 저녁 갱신
   workflow_dispatch:
 
 env:
   NODE_VERSION: 20
 
+permissions:
+  contents: write
+
 jobs:
   fetch-and-update:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: 🛠 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-      
+
       - name: 📡 Fetch Data (Rankings + News)
         run: node scripts/fetch-data.mjs
-      
+
+      - name: 📰 Build News
+        run: node scripts/build-news.mjs
+
       - name: 🔍 Check for Changes
         id: check
         run: |
@@ -41,18 +48,17 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "변경사항 없음 — 스킵"
           fi
-      
-      - name: 📝 Commit & Push
+
+      - name: 💾 Commit & Push
         if: steps.check.outputs.changed == 'true'
         run: |
-          git config user.name "onlyAI Bot"
-          git config user.email "bot@onlyai.co.kr"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/data/
-          # meta.json에서 갱신시각 읽기
           UPDATED_AT=$(node -e "try{const m=require('./public/data/meta.json');console.log(m.updatedAtKST||'unknown')}catch(e){console.log('unknown')}" 2>/dev/null || date '+%Y-%m-%d %H:%M')
-          git commit -m "📊 데이터 갱신: ${UPDATED_AT} [skip ci]"
+          git commit -m "chore: 데이터 갱신 ${UPDATED_AT} [skip ci]"
           git push
-      
+
       - name: 📊 Summary
         run: |
           echo "## 수집 결과" >> "$GITHUB_STEP_SUMMARY"
@@ -61,5 +67,21 @@ jobs:
             const d='./public/data';
             const r=m=>{try{return JSON.parse(fs.readFileSync(d+'/'+m,'utf-8')).length}catch{return 0}};
             const m=JSON.parse(fs.readFileSync(d+'/meta.json','utf-8'));
-            console.log('- 모델 가격: %d개\\n- 랭킹: %d개\\n- 뉴스: %d개\\n- 갱신시각: %s',r('models-pricing.json'),r('rankings.json'),r('rss-merged.json'),m.updatedAtKST||'N/A');
+            console.log('- 모델 가격: %d개\n- 랭킹: %d개\n- 뉴스: %d개\n- 갱신시각: %s',r('models-pricing.json'),r('rankings.json'),r('rss-merged.json'),m.updatedAtKST||'N/A');
           " >> "$GITHUB_STEP_SUMMARY"
+
+      - name: ✅ 성공 알림 (변경 반영 시)
+        if: steps.check.outputs.changed == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          COUNT=$(node -e "const m=require('./public/data/meta.json'); console.log(m.modelCount + '개 모델 / ' + m.newsCount + '개 뉴스')")
+          node scripts/notify.mjs "AI이것만 데이터 갱신 완료" "${COUNT} 반영 · Vercel 자동 배포" SUCCESS
+
+      - name: 🚨 실패 알림
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/notify.mjs "AI이것만 데이터 갱신 실패" "워크플로우 로그 확인 필요" ERROR

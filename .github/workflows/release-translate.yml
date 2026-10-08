@@ -22,3 +22,10 @@ jobs:
           git add public/data/releases-ko.json
           git diff --cached --quiet || git commit -m "chore: update releases Korean translation [skip ci]"
           git push
+
+      - name: 🚨 실패 알림
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/notify.mjs "OpenClaw 번역 크론 실패" "ZAI 키 또는 API 상태 확인 필요" ERROR

@@ -236,7 +236,7 @@ export default function Pricing() {
   const { modelCounts } = useCloudProviderStats();
 
   const filteredPrices = useMemo(() => {
-    let base = prices;
+    const base = prices;
     if (!searchQuery.trim()) return base;
     const q = searchQuery.toLowerCase().trim();
     return base.filter(p =>

@@ -149,19 +149,19 @@ export function useSEO() {
     metaDesc.setAttribute('content', seo.description);
 
     // Update og:title
-    let ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', seo.title);
 
     // Update og:description
-    let ogDesc = document.querySelector('meta[property="og:description"]');
+    const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute('content', seo.description);
 
     // Update og:url
-    let ogUrl = document.querySelector('meta[property="og:url"]');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute('content', `https://onlyai.co.kr${path}`);
 
     // Update canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
+    const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.setAttribute('href', `https://onlyai.co.kr${path}`);
   }, [location]);
 }

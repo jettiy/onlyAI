@@ -9,3 +9,14 @@ Thumbs.db
 .vite-temp/
 .vercel
 pnpm-lock.yaml
+
+# ── 에이전트 임시 산출물 (AGENTS.md 규칙 3) ──
+_*.py
+_*.txt
+_*.log
+_tmp*
+debug*
+_scratch/
+.claude/
+.crusoe/
+.opencode/

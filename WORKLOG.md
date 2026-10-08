@@ -17,3 +17,11 @@
 - 알림: 텔레그램 / 주간 브리핑: 일요일 저녁
 - 배포: Vercel (onlyai-phi.vercel.app), 커밋 푸시 시 자동
 - 로컬 클론: `Desktop\Projects\onlyAI` / 원칙: 워커는 PR만, main 직접 커밋 금지
+
+### 모델 최신화 + 로고 매핑 + 이모티콘 제거 (2026-10-09, 브랜치 feat/model-refresh-2026-10)
+- 모델 카탈로그 62 → 78개. 2026-08~10 신모델 24개 추가 (GPT-6 계열 4, Claude 5.5/5.1 4종, Gemini 3.8 Flash, Qwen3.8 3종, GLM-5.3 2종, Muse Spark 1.3, DeepSeek V4.1 Flash, MiMo-V2.6 2종, Grok 4.7, Mistral Large 4, Step 5 Preview, Solar 2종, Nemotron 3.5 Lightning)
+- 가격·컨텍스트 OpenRouter(2026-10-09) 실측으로 전면 갱신. 제거 6종은 명백한 대체분만
+- 로고: aa_arcee.svg·aa_microsoft.svg 신규 추가(단색 라인아트). 미매핑 회사 0개
+- 이모티콘 1,062건(76파일) → 0건. lucide-react 아이콘 + iconRegistry로 전환
+- 검증: lint 0 / build 성공 / 5페이지 Playwright 통과 / 신규모델 24/24 렌더 / 로고 broken 0 / 이모티콘 0
+- 보고서: `_scratch/REPORT.md` (커밋 없음)

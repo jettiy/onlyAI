@@ -38,6 +38,21 @@ jobs:
       - name: 📰 Build News
         run: node scripts/build-news.mjs
 
+      - name: "🔗 Sync Unified Models (Tier1: OpenRouter + models.dev + LiteLLM)"
+        run: node scripts/sync-models.mjs
+
+      - name: "🧠 Tier Classify (Tier3: Jev 판정)"
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          node scripts/tier-classify.mjs || echo "tier-classify 실패 — 데이터 갱신은 계속"
+          if [ -f public/data/model-alerts.json ]; then
+            MAJORS=$(node -e "const a=require('./public/data/model-alerts.json').alerts.filter(x=>x.tier==='major'&&x.confidence>=0.45); console.log(a.map(x=>x.name+' ('+x.provider+')').join(', ')||'')")
+            if [ -n "$MAJORS" ]; then
+              node scripts/notify.mjs "신규 메이저 모델 감지" "$MAJORS — 카탈로그 추가 검토" SUCCESS || true
+            fi
+          fi
+
       - name: 🔍 Check for Changes
         id: check
         run: |

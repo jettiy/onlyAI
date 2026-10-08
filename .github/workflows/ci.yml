@@ -31,15 +31,17 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          PR_NUM: ${{ github.event.pull_request.number }}
-          PR_TITLE: ${{ github.event.pull_request.title }}
-        run: node scripts/notify.mjs "PR #$PR_NUM CI 통과" "$PR_TITLE" SUCCESS
+          NOTIFY_TITLE: PR #${{ github.event.pull_request.number }} CI 통과
+          NOTIFY_BODY: ${{ github.event.pull_request.title }}
+          NOTIFY_LEVEL: SUCCESS
+        run: node scripts/notify.mjs
 
       - name: 🚨 CI 실패 알림
         if: failure()
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          PR_NUM: ${{ github.event.pull_request.number }}
-          PR_TITLE: ${{ github.event.pull_request.title }}
-        run: node scripts/notify.mjs "CI 실패 (PR #$PR_NUM)" "$PR_TITLE" ERROR
+          NOTIFY_TITLE: CI 실패 (PR #${{ github.event.pull_request.number }})
+          NOTIFY_BODY: ${{ github.event.pull_request.title }}
+          NOTIFY_LEVEL: ERROR
+        run: node scripts/notify.mjs

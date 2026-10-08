@@ -1,9 +1,14 @@
 // scripts/notify.mjs — GitHub Actions 파이프라인 텔레그램 알림
-// 사용: node scripts/notify.mjs "<이모지+제목>" "<본문>" [ERROR]
+// 인터페이스: 전부 환경변수로 받는다 (셸 인용 문제 원천 차단).
+//   NOTIFY_TITLE  제목 (필수)
+//   NOTIFY_BODY   본문 (선택)
+//   NOTIFY_LEVEL  INFO | SUCCESS | ERROR (기본 INFO)
 // 시크릿: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 // 실패해도 워크플로우를 죽이지 않는다 (알림은 부가 기능).
 
-const [title, body = '', level = 'INFO'] = process.argv.slice(2);
+const title = process.env.NOTIFY_TITLE;
+const body = process.env.NOTIFY_BODY || '';
+const level = process.env.NOTIFY_LEVEL || 'INFO';
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const chatId = process.env.TELEGRAM_CHAT_ID;

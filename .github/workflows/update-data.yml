@@ -53,6 +53,16 @@ jobs:
             fi
           fi
 
+      - name: "🧹 Stale Filter (구세대 감지)"
+        run: |
+          node scripts/stale-filter.mjs || echo "stale-filter 실패 — 계속"
+          if [ -f public/data/stale-report.json ]; then
+            STALES=$(node -e "const r=require('./public/data/stale-report.json'); console.log(r.dropCandidates.map(x=>x.name).join(', ')||'')")
+            if [ -n "$STALES" ]; then
+              NOTIFY_TITLE="구세대 모델 제거 후보" NOTIFY_BODY="$STALES — 최신 세대군 정책 위반. 제거 검토 필요" NOTIFY_LEVEL=INFO node scripts/notify.mjs || true
+            fi
+          fi
+
       - name: 🔍 Check for Changes
         id: check
         run: |

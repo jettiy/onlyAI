@@ -54,7 +54,7 @@
     "input": 0.6799999999999999,
     "output": 2.09,
     "context": "1M",
-    "description": "Mistral Large 4 is a frontier multimodal (text and image input) model from Mistral AI built for reasoning, coding, and agentic workloads. It offers a 512K-token context window with up...",
+    "description": "Mistral Large 4 is a frontier multimodal (text and image input) model from Mistral AI built for reasoning, coding, and agentic workloads. It offers a 1M-token context window with up...",
     "createdAt": 1791294122,
     "modalities": "text+image->text",
     "maxTokens": 262144
@@ -84,11 +84,35 @@
     "maxTokens": 128000
   },
   {
+    "id": "openai/gpt-6.1-sol-pro:batch",
+    "name": "OpenAI: GPT-6.1 Sol Pro (batch)",
+    "provider": "OPENAI",
+    "input": 1,
+    "output": 5,
+    "context": "1M",
+    "description": "GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost",
+    "createdAt": 1790702886,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
     "id": "openai/gpt-6.1-sol",
     "name": "OpenAI: GPT-6.1 Sol",
     "provider": "OPENAI",
     "input": 2,
     "output": 10,
+    "context": "1M",
+    "description": "GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagship GPT-6 Astra in the GPT-6 series. It is suited for agentic coding, computer use, document-heavy professional...",
+    "createdAt": 1790702882,
+    "modalities": "text+image+file->text",
+    "maxTokens": 128000
+  },
+  {
+    "id": "openai/gpt-6.1-sol:batch",
+    "name": "OpenAI: GPT-6.1 Sol (batch)",
+    "provider": "OPENAI",
+    "input": 1,
+    "output": 5,
     "context": "1M",
     "description": "GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagship GPT-6 Astra in the GPT-6 series. It is suited for agentic coding, computer use, document-heavy professional...",
     "createdAt": 1790702882,
@@ -435,7 +459,7 @@
     "id": "~deepseek/deepseek-pro-latest",
     "name": "DeepSeek: DeepSeek Pro Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.1271,
+    "input": 0.1282,
     "output": 8,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
@@ -447,7 +471,7 @@
     "id": "~deepseek/deepseek-flash-latest",
     "name": "DeepSeek: DeepSeek Flash Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.0283,
+    "input": 0.016,
     "output": 1.2,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
@@ -808,7 +832,7 @@
     "name": "Z.ai: GLM Flash Latest",
     "provider": "~Z-AI",
     "input": 0.032,
-    "output": 3.172455,
+    "output": 0.173681,
     "context": "1M",
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "createdAt": 1787817633,
@@ -903,8 +927,8 @@
     "id": "~z-ai/glm-latest",
     "name": "Z.ai: GLM Latest",
     "provider": "~Z-AI",
-    "input": 0.06,
-    "output": 12,
+    "input": 0.031200000000000002,
+    "output": 4.4,
     "context": "1M",
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "createdAt": 1787151053,
@@ -927,8 +951,8 @@
     "id": "z-ai/glm-5.3",
     "name": "Z.ai: GLM 5.3",
     "provider": "Z-AI",
-    "input": 0.09999999999999999,
-    "output": 4.199999999999999,
+    "input": 0.04,
+    "output": 4.8,
     "context": "1M",
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves.",
     "createdAt": 1787086655,
@@ -1047,8 +1071,8 @@
     "id": "nvidia/nemotron-3.5-lightning",
     "name": "NVIDIA: Nemotron 3.5 Lightning",
     "provider": "NVIDIA",
-    "input": 0.049,
-    "output": 0.14,
+    "input": 0.046900000000000004,
+    "output": 0.134,
     "context": "262K",
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that",
     "createdAt": 1786452751,
@@ -1107,8 +1131,8 @@
     "id": "~deepseek/deepseek-v4-flash-latest",
     "name": "DeepSeek: DeepSeek V4 Flash Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.0144,
-    "output": 0.6040150000000001,
+    "input": 0.00416,
+    "output": 0.016300000000000002,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "createdAt": 1785606009,
@@ -1119,7 +1143,7 @@
     "id": "deepseek/deepseek-v4-flash-0731",
     "name": "DeepSeek: DeepSeek V4 Flash 0731",
     "provider": "DEEPSEEK",
-    "input": 0.018,
+    "input": 0.005200000000000001,
     "output": 1.28,
     "context": "1M",
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workfl",
@@ -1275,7 +1299,7 @@
     "id": "moonshotai/kimi-k3",
     "name": "MoonshotAI: Kimi K3",
     "provider": "MOONSHOTAI",
-    "input": 1.0899999999999999,
+    "input": 0.8999999999999999,
     "output": 14,
     "context": "1M",
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at.",
@@ -1599,13 +1623,13 @@
     "id": "z-ai/glm-5.2",
     "name": "Z.ai: GLM 5.2",
     "provider": "Z-AI",
-    "input": 0.07,
-    "output": 4.300000000000001,
+    "input": 0.06,
+    "output": 6,
     "context": "1M",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering",
     "createdAt": 1781631930,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": 943718
   },
   {
     "id": "moonshotai/kimi-k2.7-code",
@@ -1923,7 +1947,7 @@
     "id": "~moonshotai/kimi-latest",
     "name": "MoonshotAI: Kimi Latest",
     "provider": "~MOONSHOTAI",
-    "input": 0.83,
+    "input": 0.49,
     "output": 13,
     "context": "1M",
     "description": "This model always redirects to the latest model in the Kimi family.",
@@ -1992,28 +2016,16 @@
     "maxTokens": 235929
   },
   {
-    "id": "qwen/qwen3.6-max-preview",
-    "name": "Qwen: Qwen3.6 Max Preview",
-    "provider": "QWEN",
-    "input": 1.0270000000000001,
-    "output": 6.162,
-    "context": "262K",
-    "description": "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters. It is optimized for agentic cod",
-    "createdAt": 1777260242,
-    "modalities": "text->text",
-    "maxTokens": 65536
-  },
-  {
     "id": "qwen/qwen3.6-27b",
     "name": "Qwen: Qwen3.6 27B",
     "provider": "QWEN",
-    "input": 0.3,
-    "output": 2,
+    "input": 0.32,
+    "output": 3.1999999999999997,
     "context": "262K",
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs..",
     "createdAt": 1777255064,
     "modalities": "text+image+video->text",
-    "maxTokens": 65536
+    "maxTokens": 81920
   },
   {
     "id": "openai/gpt-5.5-pro",
@@ -2067,8 +2079,8 @@
     "id": "deepseek/deepseek-v4-pro",
     "name": "DeepSeek: DeepSeek V4 Pro 0423",
     "provider": "DEEPSEEK",
-    "input": 0.28727400000000003,
-    "output": 0.5745480000000001,
+    "input": 0.20879999999999999,
+    "output": 0.41759999999999997,
     "context": "1M",
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso",
     "createdAt": 1777000679,
@@ -2079,7 +2091,7 @@
     "id": "deepseek/deepseek-v4-flash",
     "name": "DeepSeek: DeepSeek V4 Flash 0423",
     "provider": "DEEPSEEK",
-    "input": 0.009899999999999999,
+    "input": 0.03,
     "output": 1.28,
     "context": "1M",
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa",
@@ -2151,7 +2163,7 @@
     "id": "moonshotai/kimi-k2.6",
     "name": "MoonshotAI: Kimi K2.6",
     "provider": "MOONSHOTAI",
-    "input": 0.4375,
+    "input": 0.4344,
     "output": 2.4499999999999997,
     "context": "262K",
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks",
@@ -2523,13 +2535,13 @@
     "id": "qwen/qwen3.5-35b-a3b",
     "name": "Qwen: Qwen3.5-35B-A3B",
     "provider": "QWEN",
-    "input": 0.15,
-    "output": 1,
+    "input": 0.08,
+    "output": 0.75,
     "context": "262K",
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inf",
     "createdAt": 1772053822,
     "modalities": "text+image+video->text",
-    "maxTokens": 235929
+    "maxTokens": 32768
   },
   {
     "id": "qwen/qwen3.5-27b",
@@ -2667,13 +2679,13 @@
     "id": "qwen/qwen3.5-397b-a17b",
     "name": "Qwen: Qwen3.5 397B A17B",
     "provider": "QWEN",
-    "input": 0.44999999999999996,
-    "output": 3,
+    "input": 0.55,
+    "output": 3.5,
     "context": "262K",
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher infere",
     "createdAt": 1771223018,
     "modalities": "text+image+video->text",
-    "maxTokens": 81920
+    "maxTokens": 235929
   },
   {
     "id": "minimax/minimax-m2.5",
@@ -2698,18 +2710,6 @@
     "createdAt": 1770829182,
     "modalities": "text->text",
     "maxTokens": 128000
-  },
-  {
-    "id": "qwen/qwen3-max-thinking",
-    "name": "Qwen: Qwen3 Max Thinking",
-    "provider": "QWEN",
-    "input": 0.78,
-    "output": 3.9,
-    "context": "262K",
-    "description": "Qwen3-Max-Thinking is the flagship reasoning model in the Qwen3 series, designed for high-stakes cognitive tasks that require deep, multi-step reasoning. By significantly scaling model capacity and re",
-    "createdAt": 1770671901,
-    "modalities": "text->text",
-    "maxTokens": 65536
   },
   {
     "id": "anthropic/claude-opus-4.6",
@@ -3300,18 +3300,6 @@
     "maxTokens": 176947
   },
   {
-    "id": "qwen/qwen3-vl-32b-instruct",
-    "name": "Qwen: Qwen3 VL 32B Instruct",
-    "provider": "QWEN",
-    "input": 0.10400000000000001,
-    "output": 0.41600000000000004,
-    "context": "131K",
-    "description": "Qwen3-VL-32B-Instruct is a large-scale multimodal vision-language model designed for high-precision understanding and reasoning across text, images, and video. With 32 billion parameters, it combines ",
-    "createdAt": 1761231332,
-    "modalities": "text+image->text",
-    "maxTokens": 32768
-  },
-  {
     "id": "ibm-granite/granite-4.0-h-micro",
     "name": "IBM: Granite 4.0 Micro",
     "provider": "IBM-GRANITE",
@@ -3360,28 +3348,16 @@
     "maxTokens": 64000
   },
   {
-    "id": "qwen/qwen3-vl-8b-thinking",
-    "name": "Qwen: Qwen3 VL 8B Thinking",
-    "provider": "QWEN",
-    "input": 0.18,
-    "output": 2.0999999999999996,
-    "context": "131K",
-    "description": "Qwen3-VL-8B-Thinking is the reasoning-optimized variant of the Qwen3-VL-8B multimodal model, designed for advanced visual and textual reasoning across complex scenes, documents, and temporal sequences",
-    "createdAt": 1760463746,
-    "modalities": "text+image->text",
-    "maxTokens": 32768
-  },
-  {
     "id": "qwen/qwen3-vl-8b-instruct",
     "name": "Qwen: Qwen3 VL 8B Instruct",
     "provider": "QWEN",
-    "input": 0.117,
-    "output": 0.45499999999999996,
+    "input": 0.25,
+    "output": 0.75,
     "context": "262K",
     "description": "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL series, built for high-fidelity understanding and reasoning across text, images, and video. It features improved multimodal",
     "createdAt": 1760463308,
     "modalities": "text+image->text",
-    "maxTokens": 32768
+    "maxTokens": 235929
   },
   {
     "id": "openai/gpt-5-image",
@@ -3411,13 +3387,13 @@
     "id": "qwen/qwen3-vl-30b-a3b-thinking",
     "name": "Qwen: Qwen3 VL 30B A3B Thinking",
     "provider": "QWEN",
-    "input": 0.19999999999999998,
-    "output": 2.4,
+    "input": 0.29,
+    "output": 1,
     "context": "262K",
     "description": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex ",
     "createdAt": 1759794479,
     "modalities": "text+image->text",
-    "maxTokens": 32768
+    "maxTokens": 235929
   },
   {
     "id": "qwen/qwen3-vl-30b-a3b-instruct",
@@ -3528,18 +3504,6 @@
     "maxTokens": 128000
   },
   {
-    "id": "qwen/qwen3-vl-235b-a22b-thinking",
-    "name": "Qwen: Qwen3 VL 235B A22B Thinking",
-    "provider": "QWEN",
-    "input": 0.39999999999999997,
-    "output": 4,
-    "context": "131K",
-    "description": "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text generation with visual understanding across images and video. The Thinking model is optimized for multimodal reasoning in STE",
-    "createdAt": 1758668690,
-    "modalities": "text+image->text",
-    "maxTokens": 32768
-  },
-  {
     "id": "qwen/qwen3-vl-235b-a22b-instruct",
     "name": "Qwen: Qwen3 VL 235B A22B Instruct",
     "provider": "QWEN",
@@ -3550,30 +3514,6 @@
     "createdAt": 1758668687,
     "modalities": "text+image->text",
     "maxTokens": 32768
-  },
-  {
-    "id": "qwen/qwen3-max",
-    "name": "Qwen: Qwen3 Max",
-    "provider": "QWEN",
-    "input": 0.78,
-    "output": 3.9,
-    "context": "262K",
-    "description": "Qwen3-Max is an updated release built on the Qwen3 series, offering major improvements in reasoning, instruction following, multilingual support, and long-tail knowledge coverage compared to the Janua",
-    "createdAt": 1758662808,
-    "modalities": "text->text",
-    "maxTokens": 65536
-  },
-  {
-    "id": "qwen/qwen3-coder-plus",
-    "name": "Qwen: Qwen3 Coder Plus",
-    "provider": "QWEN",
-    "input": 0.65,
-    "output": 3.25,
-    "context": "1M",
-    "description": "Qwen3 Coder Plus is Alibaba's proprietary version of the Open Source Qwen3 Coder 480B A35B. It is a powerful coding agent model specializing in autonomous programming via tool calling and...",
-    "createdAt": 1758662707,
-    "modalities": "text->text",
-    "maxTokens": 65536
   },
   {
     "id": "deepseek/deepseek-v3.1-terminus",
@@ -3609,31 +3549,19 @@
     "description": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured “thinking” traces by default. It’s designed for hard multi-step problems; math proofs, code s",
     "createdAt": 1757612284,
     "modalities": "text->text",
-    "maxTokens": 32768
+    "maxTokens": 235929
   },
   {
     "id": "qwen/qwen3-next-80b-a3b-instruct",
     "name": "Qwen: Qwen3 Next 80B A3B Instruct",
     "provider": "QWEN",
-    "input": 0.09,
+    "input": 0.09999999999999999,
     "output": 1.1,
     "context": "262K",
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code ",
     "createdAt": 1757612213,
     "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
-    "id": "qwen/qwen-plus-2025-07-28",
-    "name": "Qwen: Qwen Plus 0728",
-    "provider": "QWEN",
-    "input": 0.26,
-    "output": 0.78,
-    "context": "1M",
-    "description": "Qwen Plus 0728, based on the Qwen3 foundation model, is a 1 million context hybrid reasoning model with a balanced performance, speed, and cost combination.",
-    "createdAt": 1757347599,
-    "modalities": "text->text",
-    "maxTokens": 32768
+    "maxTokens": 235929
   },
   {
     "id": "moonshotai/kimi-k2-0905",
@@ -3646,18 +3574,6 @@
     "createdAt": 1757021147,
     "modalities": "text->text",
     "maxTokens": 98304
-  },
-  {
-    "id": "qwen/qwen3-30b-a3b-thinking-2507",
-    "name": "Qwen: Qwen3 30B A3B Thinking 2507",
-    "provider": "QWEN",
-    "input": 0.19999999999999998,
-    "output": 2.4,
-    "context": "82K",
-    "description": "Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning model optimized for complex tasks requiring extended multi-step thinking. The model is designed specifically for “thinking m",
-    "createdAt": 1756399192,
-    "modalities": "text->text",
-    "maxTokens": 32768
   },
   {
     "id": "nousresearch/hermes-4-405b",
@@ -3939,13 +3855,13 @@
     "id": "qwen/qwen3-235b-a22b-thinking-2507",
     "name": "Qwen: Qwen3 235B A22B Thinking 2507",
     "provider": "QWEN",
-    "input": 0.22999999999999998,
-    "output": 2.3,
-    "context": "131K",
+    "input": 0.44999999999999996,
+    "output": 3.5,
+    "context": "128K",
     "description": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass",
     "createdAt": 1753449557,
     "modalities": "text->text",
-    "maxTokens": 117964
+    "maxTokens": 16384
   },
   {
     "id": "qwen/qwen3-coder",
@@ -4217,23 +4133,11 @@
     "provider": "QWEN",
     "input": 0.12,
     "output": 0.5,
-    "context": "131K",
+    "context": "41K",
     "description": "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tas",
     "createdAt": 1745878604,
     "modalities": "text->text",
     "maxTokens": 16384
-  },
-  {
-    "id": "qwen/qwen3-8b",
-    "name": "Qwen: Qwen3 8B",
-    "provider": "QWEN",
-    "input": 0.117,
-    "output": 0.45499999999999996,
-    "context": "131K",
-    "description": "Qwen3-8B is a dense 8.2B parameter causal language model from the Qwen3 series, designed for both reasoning-heavy tasks and efficient dialogue. It supports seamless switching between \"thinking\" mode f",
-    "createdAt": 1745876632,
-    "modalities": "text->text",
-    "maxTokens": 8192
   },
   {
     "id": "qwen/qwen3-14b",
@@ -4241,7 +4145,7 @@
     "provider": "QWEN",
     "input": 0.12,
     "output": 0.24,
-    "context": "131K",
+    "context": "41K",
     "description": "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode f",
     "createdAt": 1745876478,
     "modalities": "text->text",
@@ -4258,18 +4162,6 @@
     "createdAt": 1745875945,
     "modalities": "text->text",
     "maxTokens": 16384
-  },
-  {
-    "id": "qwen/qwen3-235b-a22b",
-    "name": "Qwen: Qwen3 235B A22B",
-    "provider": "QWEN",
-    "input": 0.45499999999999996,
-    "output": 1.8199999999999998,
-    "context": "131K",
-    "description": "Qwen3-235B-A22B is a 235B parameter mixture-of-experts (MoE) model developed by Qwen, activating 22B parameters per forward pass. It supports seamless switching between a \"thinking\" mode for complex r",
-    "createdAt": 1745875757,
-    "modalities": "text->text",
-    "maxTokens": 8192
   },
   {
     "id": "openai/o4-mini-high",
@@ -4719,13 +4611,13 @@
     "id": "deepseek/deepseek-chat",
     "name": "DeepSeek: DeepSeek V3",
     "provider": "DEEPSEEK",
-    "input": 0.2574,
-    "output": 1.0287,
+    "input": 0.32,
+    "output": 0.8899999999999999,
     "context": "164K",
     "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported ev",
     "createdAt": 1735241320,
     "modalities": "text->text",
-    "maxTokens": 16000
+    "maxTokens": 16384
   },
   {
     "id": "sao10k/l3.3-euryale-70b",
@@ -4767,8 +4659,8 @@
     "id": "meta-llama/llama-3.3-70b-instruct",
     "name": "Meta: Llama 3.3 70B Instruct",
     "provider": "META-LLAMA",
-    "input": 0.09999999999999999,
-    "output": 0.32,
+    "input": 0.22,
+    "output": 0.5,
     "context": "131K",
     "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
     "createdAt": 1733506137,
@@ -5031,7 +4923,7 @@
     "id": "mistralai/mistral-nemo",
     "name": "Mistral: Mistral Nemo",
     "provider": "MISTRALAI",
-    "input": 0.019000000000000003,
+    "input": 0.029,
     "output": 0.03,
     "context": "131K",
     "description": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chine",

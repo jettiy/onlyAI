@@ -35,8 +35,8 @@ export function useLivePrices() {
 
   useEffect(() => {
     fetchPrices();
-    // 10분마다 갱신 (liveData.ts 캐시와 동일 주기)
-    timerRef.current = setInterval(fetchPrices, 10 * 60 * 1000);
+    // 데이터는 파이프라인이 하루 2회 갱신 — 장시간 체류 세션만 30분마다 재확인
+    timerRef.current = setInterval(fetchPrices, 30 * 60 * 1000);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };

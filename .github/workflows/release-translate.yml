@@ -4,6 +4,9 @@ on:
     - cron: '0 15 * * 0'  # 매주 일요일 자정 KST (15:00 UTC)
   workflow_dispatch:  # 수동 실행 가능
 
+permissions:
+  contents: write
+
 jobs:
   translate:
     runs-on: ubuntu-latest

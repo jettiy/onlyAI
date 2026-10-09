@@ -24,7 +24,12 @@ const runUrl = process.env.GITHUB_SERVER_URL
   ? `${process.env.GITHUB_SERVER_URL}/${repo}/actions/runs/${process.env.GITHUB_RUN_ID}`
   : '';
 
-const text = `${icon} *${title}*\n${body}${runUrl ? `\n[실행 로그](${runUrl})` : ''}`;
+// Markdown 파싱 실패 방지: 모델명 등 외부 문자열의 마크다운 특수문자 이스케이프
+function escMd(s) {
+  return String(s).replace(/([_*[\]()~`>#+\-=|{}.!\\])/g, '\\$1');
+}
+
+const text = `${icon} *${escMd(title)}*\n${escMd(body)}${runUrl ? `\n[실행 로그](${runUrl})` : ''}`;
 
 try {
   const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
@@ -33,13 +38,26 @@ try {
     body: JSON.stringify({
       chat_id: chatId,
       text,
-      parse_mode: 'Markdown',
+      parse_mode: 'MarkdownV2',
       disable_web_page_preview: true,
     }),
   });
   const data = await res.json();
   if (data.ok) console.log('notify: 전송 성공');
-  else console.log('notify: 전송 실패', JSON.stringify(data).slice(0, 200));
+  else {
+    console.log('notify: 전송 실패', JSON.stringify(data).slice(0, 200));
+    // MarkdownV2 실패 시 일반 텍스트로 재시도 (알림 증발 방지)
+    const plain = `${icon} ${title}\n${body}${runUrl ? `\n${runUrl}` : ''}`;
+    try {
+      const res2 = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, text: plain, disable_web_page_preview: true }),
+      });
+      const d2 = await res2.json();
+      console.log('notify: plain 폴백', d2.ok ? '성공' : '실패');
+    } catch { /* 무시 */ }
+  }
 } catch (e) {
   console.log('notify: 네트워크 오류', e.message);
 }

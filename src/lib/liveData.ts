@@ -26,32 +26,10 @@ export interface LiveModel {
 
 // ── 캐싱 ──
 const CACHE_KEY = 'onlyai_live_models_v2';
-const CACHE_DURATION = 10 * 60 * 1000; // 10분
 
 interface CacheEntry {
   timestamp: number;
   data: LiveModel[];
-}
-
-function getFromCache(): LiveModel[] | null {
-  try {
-    const raw = localStorage.getItem(CACHE_KEY);
-    if (!raw) return null;
-    const entry: CacheEntry = JSON.parse(raw);
-    if (Date.now() - entry.timestamp > CACHE_DURATION) return null;
-    return entry.data;
-  } catch {
-    return null;
-  }
-}
-
-function saveToCache(data: LiveModel[]) {
-  try {
-    const entry: CacheEntry = { timestamp: Date.now(), data };
-    localStorage.setItem(CACHE_KEY, JSON.stringify(entry));
-  } catch {
-    // 용량 초과 무시
-  }
 }
 
 // ── 메인 데이터 로드 ──

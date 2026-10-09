@@ -56,9 +56,9 @@ function pruneOldSnapshots(snapshots: PriceSnapshot[]): PriceSnapshot[] {
 
 // 인기 모델 10개 (openRouterSlug이 있는 것)
 export const POPULAR_MODEL_IDS = [
-  'gpt-5-5',
+  'gpt-6-astra',
   'gpt-5-4',
-  'claude-fable-5',
+  'claude-fable-5-1',
   'claude-opus-4-8',
   'claude-opus-4-7',
   'gemini-2-5-pro',

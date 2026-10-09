@@ -17,10 +17,10 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
-        name: "AICompass — AI 입문 가이드",
-        short_name: "AICompass",
-        description: "AI를 처음 시작하는 모든 분을 위한 실시간 가이드",
-        theme_color: "#2563eb",
+        name: "AI이것만 — AI 모델 비교·추천·가격·뉴스",
+        short_name: "AI이것만",
+        description: "국내 AI 서비스 최신 현황을 한눈에 — 모델 탐색·가격 비교·뉴스·프롬프트",
+        theme_color: "#5B5FEF",
         background_color: "#f9fafb",
         display: "standalone",
         orientation: "portrait",
@@ -35,9 +35,9 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/openrouter\.ai\/api\//i,
+            urlPattern: /\/data\/.*\.json$/i,
             handler: "NetworkFirst",
-            options: { cacheName: "openrouter-api", expiration: { maxAgeSeconds: 3600 } }
+            options: { cacheName: "onlyai-data", expiration: { maxAgeSeconds: 3600 } }
           },
           {
             urlPattern: /^https:\/\/github\.com\//i,

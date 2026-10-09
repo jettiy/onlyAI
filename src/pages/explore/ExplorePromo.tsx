@@ -1,3 +1,5 @@
+import { Gift, Pin } from "lucide-react";
+
 export default function ExplorePromo() {
   const services = [
     { name: '즈푸AI (Z.ai / GLM)', logo: '/logos/zhipu.png', status: 'active', benefit: 'GLM 코딩 플랜 특가 · 월 $10부터', url: 'https://z.ai/subscribe?ic=ODRIAQZZSF', code: 'ODRIAQZZSF' },
@@ -23,11 +25,11 @@ export default function ExplorePromo() {
     user: 'bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400',
     none: 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400',
   };
-  const statusLabels: Record<string, string> = { active: '✅ 바로 사용 가능', user: '🔗 계정에서 발급', none: '❌ 레퍼럴 없음' };
+ const statusLabels: Record<string, string> = { active: ' 바로 사용 가능', user: '계정에서 발급', none: ' 레퍼럴 없음' };
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🎁 프로모션 현황</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><Gift className="inline-block shrink-0 align-text-bottom" size={16} /> 프로모션 현황</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">주요 AI 서비스의 레퍼럴·초대 코드 현황을 정리했어요.</p>
       </div>
       <div className="space-y-3">
@@ -54,7 +56,7 @@ export default function ExplorePromo() {
         ))}
       </div>
       <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-100 dark:border-amber-900 rounded-xl p-4">
-        <p className="text-xs font-bold text-amber-700 dark:text-amber-400 mb-1">📌 안내</p>
+        <p className="text-xs font-bold text-amber-700 dark:text-amber-400 mb-1"><Pin className="inline-block shrink-0 align-text-bottom" size={16} /> 안내</p>
         <p className="text-xs text-amber-600 dark:text-amber-500 leading-relaxed">
           레퍼럴 혜택은 운영사 정책에 따라 변경될 수 있어요. 가입 전 해당 서비스의 공식 안내를 확인해주세요.
         </p>

@@ -1,3 +1,4 @@
+import { BarChart3, Lightbulb } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CompanyLogo } from "./CompanyLogo";
 import { tierColors, tierLabels, type AIModel } from "../data/models";
@@ -183,7 +184,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
               {/* 월 예상 비용 */}
               <div className={`mt-2 pt-2 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                 <div className="flex justify-between items-center">
-                  <span className={`text-[11px] font-medium ${isDark ? 'text-violet-400' : 'text-violet-600'}`}>💡 하루 30분 대화 기준 월 예상 비용</span>
+                  <span className={`text-[11px] font-medium ${isDark ? 'text-violet-400' : 'text-violet-600'}`}><Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} /> 하루 30분 대화 기준 월 예상 비용</span>
                   <span className={`text-sm font-bold ${isDark ? 'text-violet-300' : 'text-violet-700'}`}>{formatMonthlyCost(estimateMonthlyCost(inputPrice, outputPrice).total)}</span>
                 </div>
               </div>
@@ -269,7 +270,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
           {aaData && (aaData.intelligenceIndex || aaData.codingIndex || aaData.mmluPro) && (
             <div className={`rounded-xl border ${cardBorder} ${subtleBg} p-4 space-y-3`}>
               <div className="flex items-center justify-between">
-                <p className={`text-xs font-semibold ${mutedText}`}>📊 성능 분석</p>
+                <p className={`text-xs font-semibold ${mutedText}`}><BarChart3 className="inline-block shrink-0 align-text-bottom" size={16} /> 성능 분석</p>
                 <span className="text-[10px] opacity-50">Artificial Analysis</span>
               </div>
               <div className="grid grid-cols-2 gap-3 text-sm">
@@ -306,7 +307,7 @@ export default function ModelDetailModal({ model, onClose }: ModelDetailModalPro
 
           {/* 바로 써볼 질문 */}
           <div className="space-y-2">
-            <p className={`text-xs font-semibold ${mutedText}`}>💡 바로 써볼 질문</p>
+            <p className={`text-xs font-semibold ${mutedText}`}><Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} /> 바로 써볼 질문</p>
             <div className="space-y-1.5">
               {getTryQuestions(model).map((q, i) => (
                 <button

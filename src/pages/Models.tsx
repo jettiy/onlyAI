@@ -1,18 +1,20 @@
+import {Bot, ClipboardList, Lightbulb, Search, Zap} from "lucide-react";
 import { useState, useMemo } from "react";
 import {
   models, companies, tierLabels, tierColors, priceExamples,
   type Region, type ModelTier, type AIModel
 } from "../data/models";
 import { LOGO_ID_TO_PATH } from "../lib/logoUtils";
+import { CompanyLogo } from "../components/CompanyLogo";
 import { useLivePrices } from "../hooks/useLivePrices";
 
 
 type View = "featured" | "all" | string; // string = companyId
 
 const regionGroups: { region: Region; flag: string; label: string; subFlags?: string }[] = [
-  { region: "us",    flag: "🇺🇸", label: "미국" },
-  { region: "china", flag: "🇨🇳", label: "중국" },
-  { region: "other", flag: "🌏",  label: "기타 국가", subFlags: "🇫🇷🇨🇦" },
+  { region: "us",    flag: "", label: "미국" },
+  { region: "china", flag: "", label: "중국" },
+  { region: "other", flag: "",  label: "기타 국가", subFlags: "" },
 ];
 
 // ── 모델 비교 패널 ──────────────────────────────────────
@@ -40,8 +42,8 @@ function ComparePanel({ selectedIds, onClose, onRemove, getLivePrice }: {
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={onClose}>
       <div className="w-full max-w-3xl bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white">⚡ 모델 비교</h2>
-          <button onClick={onClose} className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">✕</button>
+ <h2 className="text-lg font-bold text-gray-900 dark:text-white"> 모델 비교</h2>
+ <button onClick={onClose} className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"></button>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -53,7 +55,7 @@ function ComparePanel({ selectedIds, onClose, onRemove, getLivePrice }: {
                     <div className="flex items-center gap-1">
                       <span className="text-base">{companies.find((c) => c.id === m.companyId)?.flag}</span>
                       <span className="font-bold text-gray-900 dark:text-white text-xs">{m.name}</span>
-                      <button onClick={() => onRemove(m.id)} className="ml-1 text-gray-400 hover:text-red-400 text-xs">✕</button>
+ <button onClick={() => onRemove(m.id)} className="ml-1 text-gray-400 hover:text-red-400 text-xs"></button>
                     </div>
                   </th>
                 ))}
@@ -63,14 +65,19 @@ function ComparePanel({ selectedIds, onClose, onRemove, getLivePrice }: {
               <tr>
                 <td className="px-4 py-3 text-xs text-gray-500 dark:text-gray-400 font-medium">회사</td>
                 {compareModels.map((m) => (
-                  <td key={m.id} className="px-4 py-3 text-xs text-gray-700 dark:text-gray-300">{m.company}</td>
+                  <td key={m.id} className="px-4 py-3 text-xs text-gray-700 dark:text-gray-300">
+                    <span className="inline-flex items-center gap-1.5">
+                      <CompanyLogo company={m.companyId} size={14} />
+                      {m.company}
+                    </span>
+                  </td>
                 ))}
               </tr>
               <tr className="bg-gray-50/50 dark:bg-gray-800/30">
                 <td className="px-4 py-3 text-xs text-gray-500 dark:text-gray-400 font-medium">등급</td>
                 {compareModels.map((m) => (
                   <td key={m.id} className="px-4 py-3">
-                    <span className={tierColors[m.tier] + " px-2 py-0.5 text-xs rounded-full font-medium"}>
+                    <span className={tierColors[m.tier] + "px-2 py-0.5 text-xs rounded-full font-medium"}>
                       {tierLabels[m.tier]}
                     </span>
                   </td>
@@ -81,7 +88,7 @@ function ComparePanel({ selectedIds, onClose, onRemove, getLivePrice }: {
                 {compareModels.map((m) => {
                   const ep = effectivePrice(m);
                   return (
-                  <td key={m.id} className={"px-4 py-3 text-xs font-bold " + (ep.input === minInput ? "text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-300")}>
+                  <td key={m.id} className={"px-4 py-3 text-xs font-bold" + (ep.input === minInput ? "text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-300")}>
                     {ep.input === 0 ? "🆓 무료" : ep.input !== null ? `$${ep.input}` : "미공개"}
                     {ep.input === minInput && ep.input !== null && (
                       <span className="ml-1 text-[10px] bg-green-100 dark:bg-green-900/30 text-green-600 px-1 rounded">최저</span>
@@ -104,7 +111,7 @@ function ComparePanel({ selectedIds, onClose, onRemove, getLivePrice }: {
               <tr>
                 <td className="px-4 py-3 text-xs text-gray-500 dark:text-gray-400 font-medium">컨텍스트</td>
                 {compareModels.map((m) => (
-                  <td key={m.id} className={"px-4 py-3 text-xs font-bold " + (parseInt(m.contextWindow) === maxCtx ? "text-brand-600 dark:text-brand-400" : "text-gray-700 dark:text-gray-300")}>
+                  <td key={m.id} className={"px-4 py-3 text-xs font-bold" + (parseInt(m.contextWindow) === maxCtx ? "text-brand-600 dark:text-brand-400" : "text-gray-700 dark:text-gray-300")}>
                     {m.contextWindow}
                     {parseInt(m.contextWindow) === maxCtx && (
                       <span className="ml-1 text-[10px] bg-brand-100 dark:bg-brand-900/30 text-brand-600 px-1 rounded">최대</span>
@@ -134,7 +141,7 @@ function ComparePanel({ selectedIds, onClose, onRemove, getLivePrice }: {
           </table>
         </div>
         <div className="p-4 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-          <p className="text-xs text-gray-400">💡 초록색 = 해당 항목 최적값 · 가격은 실시간 OpenRouter + 정적 fallback 데이터</p>
+          <p className="text-xs text-gray-400"><Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} /> 초록색 = 해당 항목 최적값 · 가격은 실시간 OpenRouter + 정적 fallback 데이터</p>
         </div>
       </div>
     </div>
@@ -211,7 +218,7 @@ export default function Models() {
       {/* 헤더 */}
       <div className="flex items-start justify-between gap-3 flex-wrap">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-1">🤖 AI 모델 가이드</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-1"><Bot className="inline-block shrink-0 align-text-bottom" size={16} /> AI 모델 가이드</h1>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             2026년 3월 기준 · 최신 모델 데이터 · 가격은 공식 API 페이지 기준이에요.
           </p>
@@ -219,16 +226,16 @@ export default function Models() {
         <button
           onClick={() => setShowCompare(true)}
           disabled={compareIds.length < 2}
-          className={"flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm border-2 transition-all " + (
+          className={"flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm border-2 transition-all" + (
             compareIds.length >= 2
               ? "bg-brand-600 text-white border-brand-600 hover:bg-brand-700"
               : "bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-600 border-gray-200 dark:border-gray-700 cursor-not-allowed"
           )}
         >
-          <span>⚡</span>
+ <span></span>
           모델 비교
           {compareIds.length > 0 && (
-            <span className={"text-xs font-bold px-1.5 py-0.5 rounded-full " + (compareIds.length >= 2 ? "bg-white/30 text-white" : "bg-gray-200 dark:bg-gray-700 text-gray-500")}>
+            <span className={"text-xs font-bold px-1.5 py-0.5 rounded-full" + (compareIds.length >= 2 ? "bg-white/30 text-white" : "bg-gray-200 dark:bg-gray-700 text-gray-500")}>
               {compareIds.length}/3
             </span>
           )}
@@ -237,7 +244,7 @@ export default function Models() {
 
       {compareIds.length > 0 && compareIds.length < 2 && (
         <div className="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-xl p-3 text-sm text-brand-700 dark:text-brand-300">
-          ⚡ 모델을 하나 더 선택하면 비교할 수 있어요. (최대 3개)
+          <Zap className="inline-block shrink-0 align-text-bottom" size={16} /> 모델을 하나 더 선택하면 비교할 수 있어요. (최대 3개)
         </div>
       )}
       {compareIds.length > 0 && (
@@ -248,7 +255,7 @@ export default function Models() {
             return m ? (
               <span key={id} className="flex items-center gap-1 px-2 py-1 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 rounded-full text-xs font-medium">
                 {m.name}
-                <button onClick={() => toggleCompare(id)} className="ml-0.5 text-brand-400 hover:text-brand-600">✕</button>
+ <button onClick={() => toggleCompare(id)} className="ml-0.5 text-brand-400 hover:text-brand-600"></button>
               </span>
             ) : null;
           })}
@@ -259,7 +266,7 @@ export default function Models() {
       <div className="bg-gradient-to-r from-brand-50 to-brand-50 dark:from-brand-950/40 dark:to-brand-950/40 rounded-2xl border border-brand-100 dark:border-brand-900 p-4">
         <div className="flex items-center justify-between gap-3 flex-wrap">
           <div>
-            <p className="font-semibold text-brand-800 dark:text-brand-300 text-sm">💡 1M 토큰이 뭔가요?</p>
+            <p className="font-semibold text-brand-800 dark:text-brand-300 text-sm"><Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} /> 1M 토큰이 뭔가요?</p>
             <p className="text-xs text-brand-600 dark:text-brand-400 mt-0.5">실제 사용 예시로 비용을 직접 계산해보세요.</p>
           </div>
           <button
@@ -279,7 +286,7 @@ export default function Models() {
                   <button
                     key={i}
                     onClick={() => setSelectedExample(i)}
-                    className={"px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border " + (
+                    className={"px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border" + (
                       selectedExample === i
                         ? "bg-brand-600 text-white border-brand-600"
                         : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700"
@@ -333,7 +340,7 @@ export default function Models() {
                           </span>
                           <span className="text-xs font-medium text-gray-700 dark:text-gray-300 truncate">{m.name}</span>
                         </div>
-                        <span className={"text-xs font-bold shrink-0 " + (monthlyCost < 1 ? "text-green-600" : monthlyCost < 5 ? "text-brand-600" : "text-gray-700 dark:text-gray-300")}>
+                        <span className={"text-xs font-bold shrink-0" + (monthlyCost < 1 ? "text-green-600" : monthlyCost < 5 ? "text-brand-600" : "text-gray-700 dark:text-gray-300")}>
                           {monthlyCost < 0.01 ? "< $0.01" : `$${monthlyCost.toFixed(2)}`}
                           <span className="text-gray-400 font-normal">/월</span>
                         </span>
@@ -355,26 +362,26 @@ export default function Models() {
           {/* 주요 모델 */}
           <button
             onClick={() => setView("featured")}
-            className={"w-full flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold border-2 transition-all " + (
+            className={"w-full flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold border-2 transition-all" + (
               view === "featured"
                 ? "bg-brand-600 text-white border-brand-600"
                 : "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-800 hover:border-brand-300"
             )}
           >
-            <span>⭐</span> 주요 모델 추천
+ <span></span> 주요 모델 추천
             <span className="ml-auto text-xs opacity-70">{models.filter((m) => m.isFeatured).length}개</span>
           </button>
 
           {/* 전체 모델 */}
           <button
             onClick={() => setView("all")}
-            className={"w-full flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold border-2 transition-all " + (
+            className={"w-full flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold border-2 transition-all" + (
               view === "all"
                 ? "bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900 border-gray-800 dark:border-gray-200"
                 : "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-800 hover:border-gray-400"
             )}
           >
-            <span>📋</span> 전체 모델 보기
+            <span><ClipboardList className="inline-block shrink-0 align-text-bottom" size={16} /> </span> 전체 모델 보기
             <span className="ml-auto text-xs opacity-70">{models.length}개</span>
           </button>
 
@@ -385,14 +392,14 @@ export default function Models() {
             const hasActiveCompany = regionCompanies.some((c) => c.id === view);
 
             return (
-              <div key={region} className={"rounded-xl border-2 overflow-hidden transition-all " + (
+              <div key={region} className={"rounded-xl border-2 overflow-hidden transition-all" + (
                 hasActiveCompany
                   ? "border-brand-300 dark:border-brand-700"
                   : "border-gray-200 dark:border-gray-800"
               )}>
                 <button
                   onClick={() => setOpenRegion(isOpen ? null : region)}
-                  className={"w-full flex items-center justify-between px-4 py-3 transition-colors " + (
+                  className={"w-full flex items-center justify-between px-4 py-3 transition-colors" + (
                     hasActiveCompany
                       ? "bg-brand-50 dark:bg-brand-900/20"
                       : "bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -406,7 +413,7 @@ export default function Models() {
                     )}
                     <span className="text-xs font-normal text-gray-400">({regionCompanies.length}개사)</span>
                   </span>
-                  <span className={"text-gray-400 text-xs transition-transform duration-200 " + (isOpen ? "rotate-180" : "")}>▼</span>
+                  <span className={"text-gray-400 text-xs transition-transform duration-200" + (isOpen ? "rotate-180" : "")}>▼</span>
                 </button>
 
                 {isOpen && (
@@ -418,7 +425,7 @@ export default function Models() {
                         <button
                           key={company.id}
                           onClick={() => setView(company.id)}
-                          className={"w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm transition-all " + (
+                          className={"w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm transition-all" + (
                             isActive
                               ? "bg-brand-600 text-white"
                               : "text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-800"
@@ -434,7 +441,7 @@ export default function Models() {
                             )}
                             {company.name}
                           </span>
-                          <span className={"text-xs px-1.5 py-0.5 rounded-full font-medium " + (
+                          <span className={"text-xs px-1.5 py-0.5 rounded-full font-medium" + (
                             isActive
                               ? "bg-brand-500 text-white"
                               : "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
@@ -467,11 +474,11 @@ export default function Models() {
             </div>
           ) : view === "featured" ? (
             <div className="bg-brand-50 dark:bg-brand-900/20 rounded-xl border border-brand-100 dark:border-brand-800 p-4">
-              <p className="text-sm font-medium text-brand-700 dark:text-brand-400">⭐ 각 국가 대표 추천 모델만 선별했어요. 좌측에서 회사·전체 보기를 선택하세요.</p>
+ <p className="text-sm font-medium text-brand-700 dark:text-brand-400"> 각 국가 대표 추천 모델만 선별했어요. 좌측에서 회사·전체 보기를 선택하세요.</p>
             </div>
           ) : (
             <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">📋 전체 모델 {models.length}개 · 모든 회사 포함</p>
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300"><ClipboardList className="inline-block shrink-0 align-text-bottom" size={16} /> 전체 모델 {models.length}개 · 모든 회사 포함</p>
             </div>
           )}
 
@@ -479,7 +486,7 @@ export default function Models() {
           <div className="flex flex-col gap-2">
             {/* Search */}
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">🔍</span>
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"><Search className="inline-block shrink-0 align-text-bottom" size={16} /> </span>
               <input
                 type="text"
                 placeholder="모델명, 회사, 용도로 검색..."
@@ -489,7 +496,7 @@ export default function Models() {
               />
               {searchQuery && (
                 <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-sm">
-                  ✕
+ 
                 </button>
               )}
             </div>
@@ -497,7 +504,7 @@ export default function Models() {
             <div className="flex gap-1.5 flex-wrap">
               {(["all", "flagship", "strong", "efficient"] as const).map((t) => (
                 <button key={t} onClick={() => setTierFilter(t)}
-                  className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors " + (
+                  className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors" + (
                     tierFilter === t
                       ? "bg-brand-600 text-white border-brand-600"
                       : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400"
@@ -509,7 +516,7 @@ export default function Models() {
             <div className="flex gap-1.5">
               {[{v:"tier",l:"등급순"},{v:"price",l:"가격순"}].map((s) => (
                 <button key={s.v} onClick={() => setSortBy(s.v as "tier"|"price")}
-                  className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors " + (
+                  className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors" + (
                     sortBy === s.v
                       ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
                       : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400"
@@ -525,7 +532,7 @@ export default function Models() {
           {/* 모델 카드 목록 */}
           {displayedModels.length === 0 && searchQuery ? (
             <div className="text-center py-16 text-gray-400 dark:text-gray-500">
-              <p className="text-4xl mb-3">🔍</p>
+              <p className="text-4xl mb-3"><Search className="inline-block shrink-0 align-text-bottom" size={16} /> </p>
               <p className="font-semibold text-gray-600 dark:text-gray-400">"{searchQuery}"에 해당하는 모델이 없어요</p>
               <button onClick={() => setSearchQuery("")} className="mt-3 text-sm text-brand-500 hover:underline">검색 초기화</button>
             </div>
@@ -579,7 +586,7 @@ export default function Models() {
               <button
                 onClick={() => { if (compareIds.length >= 2) setShowCompare(true); }}
                 disabled={compareIds.length < 2}
-                className={"px-4 py-2 rounded-xl font-bold text-sm transition-all whitespace-nowrap " + (
+                className={"px-4 py-2 rounded-xl font-bold text-sm transition-all whitespace-nowrap" + (
                   compareIds.length >= 2
                     ? "bg-brand-500 hover:bg-brand-400 text-white cursor-pointer"
                     : "bg-white/20 dark:bg-black/20 opacity-50 cursor-not-allowed"
@@ -606,7 +613,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare, getLive
   const effectiveInput = liveP?.input ?? model.inputPrice;
   const effectiveOutput = liveP?.output ?? model.outputPrice;
   return (
-    <div className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-colors " + (isSelected ? "border-brand-400 dark:border-brand-600" : "border-gray-200 dark:border-gray-800 hover:border-brand-200 dark:hover:border-brand-700")}>
+    <div className={"bg-white dark:bg-gray-900 rounded-xl border-2 p-4 transition-colors" + (isSelected ? "border-brand-400 dark:border-brand-600" : "border-gray-200 dark:border-gray-800 hover:border-brand-200 dark:hover:border-brand-700")}>
       <div className="flex items-start justify-between gap-3 flex-wrap">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap mb-1">
@@ -627,7 +634,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare, getLive
               {companyData?.name ?? model.company}
             </span>
             <h3 className="text-sm font-bold text-gray-900 dark:text-white">{model.name}</h3>
-            <span className={tierColors[model.tier] + " px-2 py-0.5 text-xs rounded-full font-medium"}>{tierLabels[model.tier]}</span>
+            <span className={tierColors[model.tier] + "px-2 py-0.5 text-xs rounded-full font-medium"}>{tierLabels[model.tier]}</span>
             {model.isNew && <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-red-50 dark:bg-red-900/30 text-red-500">NEW</span>}
             {model.isLocal && <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-orange-50 dark:bg-orange-900/30 text-orange-500">로컬 가능</span>}
             {effectiveInput === 0 && <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-green-50 dark:bg-green-900/30 text-green-600">무료</span>}
@@ -639,13 +646,13 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare, getLive
             {model.company} 전체 모델 →
           </button>
           <p className="text-xs text-gray-400 dark:text-gray-500 mb-1">
-            {model.releaseDate} 출시 · {model.contextWindow} 컨텍스트{model.params ? " · " + model.params : ""}
+            {model.releaseDate} 출시 · {model.contextWindow} 컨텍스트{model.params ? "·" + model.params : ""}
           </p>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">{model.description}</p>
           <div className="flex flex-wrap gap-1">
             {model.koreanSupport && (
               <span className={
-                "px-2 py-0.5 text-[10px] font-bold rounded-full border " +
+                "px-2 py-0.5 text-[10px] font-bold rounded-full border" +
                 (model.koreanSupport === 'A'
                   ? "bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 border-brand-200 dark:border-brand-800"
                   : model.koreanSupport === 'B'
@@ -653,7 +660,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare, getLive
                   : "bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700"
                 )
               }>
-                🇰🇷 한국어 {model.koreanSupport}등급
+                한국어 {model.koreanSupport}등급
               </span>
             )}
             {model.strengths.map((s) => (
@@ -693,7 +700,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare, getLive
         <button
           onClick={() => onToggleCompare(model.id)}
           disabled={!canAdd}
-          className={"ml-auto flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border transition-all " + (
+          className={"ml-auto flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border transition-all" + (
             isSelected
               ? "bg-brand-600 text-white border-brand-600"
               : canAdd
@@ -701,7 +708,7 @@ function ModelCard({ model, onCompanyClick, compareIds, onToggleCompare, getLive
                 : "opacity-30 cursor-not-allowed bg-white dark:bg-gray-800 text-gray-400 border-gray-200"
           )}
         >
-          {isSelected ? "✓ 비교 중" : "+ 비교"}
+ {isSelected ? " 비교 중" : "+ 비교"}
         </button>
       </div>
     </div>

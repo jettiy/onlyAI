@@ -1,3 +1,4 @@
+import {Calculator, BarChart3} from "lucide-react";
 import { useState, useMemo } from "react";
 
 interface ModelPrice {
@@ -81,7 +82,7 @@ export default function ExploreCalculator() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🧮 API 가격 계산기</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><Calculator className="inline-block shrink-0 align-text-bottom" size={16} /> API 가격 계산기</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           토큰 수 슬라이더로 조절하거나 예산을 입력하여 모델별 비용을 비교하세요.
         </p>
@@ -167,7 +168,7 @@ export default function ExploreCalculator() {
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
         <div className="px-5 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
           <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300">
-            📊 모델 비교 표
+            <BarChart3 className="inline-block shrink-0 align-text-bottom" size={16} />  모델 비교 표
           </h2>
         </div>
         <div className="overflow-x-auto">

@@ -1,3 +1,4 @@
+import {Search, Newspaper, Check} from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNewsRSS, categoryColor, type NewsItem, type NewsCategory } from "../hooks/useNewsRSS";
 
@@ -7,11 +8,11 @@ const ALL_CATEGORIES: (NewsCategory | "전체")[] = [
 ];
 
 const SOURCES = [
-  { id: "all",               label: "전체",     flag: "📰" },
-  { id: "Hugging Face Blog", label: "HF Blog",  flag: "🤗" },
-  { id: "AI타임스",          label: "AI타임스",  flag: "🇰🇷" },
-  { id: "GeekNews",          label: "GeekNews", flag: "🇰🇷" },
-  { id: "GitHub Trending",   label: "GitHub",   flag: "⭐" },
+  { id: "all",               label: "전체",     flag: "" },
+  { id: "Hugging Face Blog", label: "HF Blog",  flag: "" },
+  { id: "AI타임스",          label: "AI타임스",  flag: "" },
+  { id: "GeekNews",          label: "GeekNews", flag: "" },
+ { id: "GitHub Trending", label: "GitHub", flag: "" },
 ];
 
 const SOURCE_COLORS: Record<string, string> = {
@@ -51,7 +52,7 @@ function GithubCard({ item }: { item: NewsItem }) {
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1 flex-wrap">
-            <span className="text-lg">⭐</span>
+ <span className="text-lg"></span>
             <span className="font-mono text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded">
               {item.url.replace("https://github.com/", "")}
             </span>
@@ -69,7 +70,7 @@ function GithubCard({ item }: { item: NewsItem }) {
           </div>
         </div>
         <div className="shrink-0 text-right">
-          <div className="text-sm font-bold text-gray-900 dark:text-white">⭐ {formatStars(item.stars ?? 0)}</div>
+ <div className="text-sm font-bold text-gray-900 dark:text-white"> {formatStars(item.stars ?? 0)}</div>
           <div className="text-xs text-gray-400">{timeAgo(item.date)}</div>
         </div>
       </div>
@@ -202,7 +203,7 @@ export default function News() {
       <div className="flex items-start justify-between gap-3 flex-wrap">
         <div>
           <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-0.5 flex items-center gap-2">
-            📰 AI 뉴스룸
+            <Newspaper className="inline-block shrink-0 align-text-bottom" size={16} />  AI 뉴스룸
             {newCount > 0 && (
               <span className="text-xs font-bold bg-red-500 text-white px-2 py-0.5 rounded-full animate-pulse">
                 NEW {newCount}
@@ -214,20 +215,20 @@ export default function News() {
           </p>
           {!loading && (
             <p className="text-xs text-green-500 dark:text-green-400 mt-0.5">
-              ✓ 최종 업데이트 {minutesAgo === 0 ? "방금 전" : `${minutesAgo}분 전`}
+              <Check className="inline-block shrink-0 align-text-bottom" size={16} /> 최종 업데이트 {minutesAgo === 0 ? "방금 전" : `${minutesAgo}분 전`}
             </p>
           )}
         </div>
         <button
           onClick={handleRefresh}
           disabled={refreshing || loading}
-          className={"flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border transition-colors " + (
+          className={"flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border transition-colors" + (
             refreshing || loading
               ? "border-gray-200 dark:border-gray-700 text-gray-400"
               : "border-brand-200 dark:border-brand-800 text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/20"
           )}
         >
-          <svg className={"w-4 h-4 " + ((refreshing || loading) ? "animate-spin" : "")} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className={"w-4 h-4" + ((refreshing || loading) ? "animate-spin" : "")} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
           {(refreshing || loading) ? "업데이트 중..." : "새로 고침"}
@@ -240,7 +241,7 @@ export default function News() {
           <button
             key={s.id}
             onClick={() => { setSourceFilter(s.id); setCatFilter("전체"); }}
-            className={"flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium whitespace-nowrap border transition-colors " + (
+            className={"flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium whitespace-nowrap border transition-colors" + (
               sourceFilter === s.id
                 ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
                 : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400"
@@ -258,7 +259,7 @@ export default function News() {
             <button
               key={c}
               onClick={() => setCatFilter(c)}
-              className={"px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border transition-colors " + (
+              className={"px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border transition-colors" + (
                 catFilter === c
                   ? "bg-brand-600 text-white border-brand-600"
                   : "bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-brand-200"
@@ -300,7 +301,7 @@ export default function News() {
       {isGithubTab && (
         <div className="space-y-3">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-bold text-gray-900 dark:text-white">⭐ GitHub 인기 AI 레포지토리</span>
+ <span className="text-sm font-bold text-gray-900 dark:text-white"> GitHub 인기 AI 레포지토리</span>
             <span className="text-xs text-gray-400">이번 주 트렌딩 기준</span>
           </div>
           {filtered.length === 0 && (
@@ -321,7 +322,7 @@ export default function News() {
         <>
           {filtered.length === 0 && !loading && (
             <div className="text-center py-16 space-y-2">
-              <p className="text-3xl">🔍</p>
+              <p className="text-3xl"><Search className="inline-block shrink-0 align-text-bottom" size={16} /> </p>
               <p className="text-sm text-gray-400">조건에 맞는 뉴스가 없어요.</p>
             </div>
           )}

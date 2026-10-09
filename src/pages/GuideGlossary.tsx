@@ -1,3 +1,4 @@
+import { BookOpen, Lightbulb } from "lucide-react";
 import { useState } from 'react';
 
 interface GlossaryItem {
@@ -110,7 +111,7 @@ export default function GuideGlossary() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">📖 AI 용어사전</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white"><BookOpen className="inline-block shrink-0 align-text-bottom" size={16} /> AI 용어사전</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">AI 관련 용어를 쉽게 설명해드려요</p>
       </div>
 
@@ -126,7 +127,7 @@ export default function GuideGlossary() {
         {search && (
           <button onClick={() => setSearch('')}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
-            ✕
+ 
           </button>
         )}
       </div>
@@ -143,7 +144,7 @@ export default function GuideGlossary() {
             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-3">{g.definition}</p>
             <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-3">
               <p className="text-xs text-blue-700 dark:text-blue-300">
-                <span className="font-bold">💡 예시:</span> {g.example}
+                <span className="font-bold"><Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} /> 예시:</span> {g.example}
               </p>
             </div>
           </div>

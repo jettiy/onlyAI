@@ -26,82 +26,53 @@ export interface LiveModel {
 
 // ── 캐싱 ──
 const CACHE_KEY = 'onlyai_live_models_v2';
-const CACHE_DURATION = 10 * 60 * 1000; // 10분
 
 interface CacheEntry {
   timestamp: number;
   data: LiveModel[];
 }
 
-function getFromCache(): LiveModel[] | null {
-  try {
-    const raw = localStorage.getItem(CACHE_KEY);
-    if (!raw) return null;
-    const entry: CacheEntry = JSON.parse(raw);
-    if (Date.now() - entry.timestamp > CACHE_DURATION) return null;
-    return entry.data;
-  } catch {
-    return null;
-  }
-}
-
-function saveToCache(data: LiveModel[]) {
-  try {
-    const entry: CacheEntry = { timestamp: Date.now(), data };
-    localStorage.setItem(CACHE_KEY, JSON.stringify(entry));
-  } catch {
-    // 용량 초과 무시
-  }
-}
-
-// ── 메인 API 호출 ──
+// ── 메인 데이터 로드 ──
+// 2026-10 리팩터: 방문자 브라우저가 OpenRouter API를 직접 호출하던 구조에서
+// 파이프라인(scripts/sync-models.mjs)이 하루 2번 생성하는 정적
+// public/data/models-unified.json 을 로드하는 구조로 전환.
+// - 방문자마다 OpenRouter를 때리던 레이트리밋/프라이버시 문제 제거
+// - 데이터 빈도: "매 10분(거짓)" → "하루 2회(사실)" 로 정직해짐
+// - LiveModel 인터페이스는 그대로 → 소비처(useLivePrices 등) 무수정
 let lastFetchTime = 0;
 let lastFetchPromise: Promise<LiveModel[]> | null = null;
 
-// OpenRouter API 원시 응답 (가격은 문자열 per-token)
-interface OpenRouterPricing {
-  prompt?: string;
-  completion?: string;
-  input_cache_read?: string;
-  input_cache_write?: string;
-  web_search?: string;
-}
-interface OpenRouterModel {
+interface UnifiedModel {
   id: string;
   name: string;
-  context_length?: number;
-  pricing?: OpenRouterPricing;
-  architecture?: { modality?: string };
-  created?: number;
-  description?: string;
-  top_provider?: { max_completion_tokens?: number | null };
+  provider: string;
+  context: number | null;
+  created: number | null;
+  inputPrice: number | null;   // $/1M
+  outputPrice: number | null;  // $/1M
+  modalities: { input?: string[]; output?: string[] } | null;
+  desc: string | null;
 }
 
-// 원시 응답 → LiveModel 정규화. OpenRouter 가격은 문자열 per-token이므로
-// 숫자 $/1M 토큰으로 변환하지 않으면 .toFixed() 호출 시 크래시 + 단위 불일치.
-function normalizeModel(raw: OpenRouterModel): LiveModel {
-  const p = raw.pricing ?? {};
+function fromUnified(u: UnifiedModel): LiveModel {
+  const inMod = u.modalities?.input?.join('+') ?? 'TEXT';
+  const outMod = u.modalities?.output?.join('+') ?? 'TEXT';
   return {
-    id: raw.id,
-    name: raw.name,
-    contextLength: raw.context_length ?? 0,
+    id: u.id,
+    name: u.name,
+    contextLength: u.context ?? 0,
     pricing: {
-      prompt: priceToPerMillion(p.prompt ?? '0'),
-      completion: priceToPerMillion(p.completion ?? '0'),
-      inputCacheRead: p.input_cache_read != null ? priceToPerMillion(p.input_cache_read) : undefined,
-      inputCacheWrite: p.input_cache_write != null ? priceToPerMillion(p.input_cache_write) : undefined,
-      webSearch: p.web_search != null ? priceToPerMillion(p.web_search) : undefined,
+      prompt: u.inputPrice ?? 0,
+      completion: u.outputPrice ?? 0,
     },
-    modalities: raw.architecture?.modality ?? 'TEXT',
-    createdAt: raw.created ?? 0,
-    description: raw.description ?? '',
-    topProvider: { maxCompletionTokens: raw.top_provider?.max_completion_tokens ?? null },
+    modalities: `${inMod}→${outMod}`,
+    createdAt: u.created ?? 0,
+    description: u.desc ?? '',
+    topProvider: { maxCompletionTokens: null },
   };
 }
-export async function fetchLiveModels(): Promise<LiveModel[]> {
-  const cached = getFromCache();
-  if (cached) return cached;
 
+export async function fetchLiveModels(): Promise<LiveModel[]> {
   // 중복 호출 방지 (1초 이내)
   if (lastFetchPromise && Date.now() - lastFetchTime < 1000) {
     return lastFetchPromise;
@@ -110,25 +81,24 @@ export async function fetchLiveModels(): Promise<LiveModel[]> {
   lastFetchTime = Date.now();
   lastFetchPromise = (async () => {
     try {
-      const res = await fetch('https://openrouter.ai/api/v1/models', {
-        signal: AbortSignal.timeout(10000), // 10초 타임아웃
+      const res = await fetch('/data/models-unified.json', {
+        signal: AbortSignal.timeout(10000),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const json: { data: OpenRouterModel[] } = await res.json();
-      const normalized = json.data.map(normalizeModel);
-      saveToCache(normalized);
-      return normalized;
+      const json: { models: UnifiedModel[] } = await res.json();
+      if (!json.models?.length) throw new Error('empty unified data');
+      return json.models.map(fromUnified);
     } catch (err) {
-      console.warn('[liveData] OpenRouter API 실패, 캐시 사용:', err);
-      // 캐시가 만료됐어도 있으면 fallback으로 사용
-      const stale = localStorage.getItem(CACHE_KEY);
-      if (stale) {
-        try {
+      console.warn('[liveData] unified json 로드 실패:', err);
+      // localStorage 캐시 fallback (마지막 성공 데이터)
+      try {
+        const stale = localStorage.getItem(CACHE_KEY);
+        if (stale) {
           const entry: CacheEntry = JSON.parse(stale);
           if (entry.data.length > 0) return entry.data;
-        } catch { /* 무시 */ }
-      }
-      return []; // 빈 배열 → 호출자가 fallback 처리
+        }
+      } catch { /* 무시 */ }
+      return [];
     }
   })();
 

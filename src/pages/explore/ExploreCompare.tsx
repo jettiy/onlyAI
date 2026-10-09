@@ -247,7 +247,7 @@ export default function ExploreCompare() {
     <div className="space-y-5">
       {/* 헤더 */}
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">⚖️ 한눈에 비교</h1>
+ <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"> 한눈에 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">필터와 정렬을 사용하여 최적의 모델을 찾으세요.</p>
       </div>
 
@@ -582,7 +582,7 @@ export default function ExploreCompare() {
 
           {!itemA && !itemB && (
             <div className="text-center py-12">
-              <p className="text-4xl mb-3">⚔️</p>
+ <p className="text-4xl mb-3"></p>
               <p className="text-sm text-gray-400">위에서 모델 2개를 선택하면 비교 결과가 표시됩니다</p>
             </div>
           )}

@@ -1,9 +1,14 @@
 // scripts/notify.mjs — GitHub Actions 파이프라인 텔레그램 알림
-// 사용: node scripts/notify.mjs "<이모지+제목>" "<본문>" [ERROR]
+// 인터페이스: 전부 환경변수로 받는다 (셸 인용 문제 원천 차단).
+//   NOTIFY_TITLE  제목 (필수)
+//   NOTIFY_BODY   본문 (선택)
+//   NOTIFY_LEVEL  INFO | SUCCESS | ERROR (기본 INFO)
 // 시크릿: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 // 실패해도 워크플로우를 죽이지 않는다 (알림은 부가 기능).
 
-const [title, body = '', level = 'INFO'] = process.argv.slice(2);
+const title = process.env.NOTIFY_TITLE;
+const body = process.env.NOTIFY_BODY || '';
+const level = process.env.NOTIFY_LEVEL || 'INFO';
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -19,7 +24,12 @@ const runUrl = process.env.GITHUB_SERVER_URL
   ? `${process.env.GITHUB_SERVER_URL}/${repo}/actions/runs/${process.env.GITHUB_RUN_ID}`
   : '';
 
-const text = `${icon} *${title}*\n${body}${runUrl ? `\n[실행 로그](${runUrl})` : ''}`;
+// Markdown 파싱 실패 방지: 모델명 등 외부 문자열의 마크다운 특수문자 이스케이프
+function escMd(s) {
+  return String(s).replace(/([_*[\]()~`>#+\-=|{}.!\\])/g, '\\$1');
+}
+
+const text = `${icon} *${escMd(title)}*\n${escMd(body)}${runUrl ? `\n[실행 로그](${runUrl})` : ''}`;
 
 try {
   const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
@@ -28,13 +38,26 @@ try {
     body: JSON.stringify({
       chat_id: chatId,
       text,
-      parse_mode: 'Markdown',
+      parse_mode: 'MarkdownV2',
       disable_web_page_preview: true,
     }),
   });
   const data = await res.json();
   if (data.ok) console.log('notify: 전송 성공');
-  else console.log('notify: 전송 실패', JSON.stringify(data).slice(0, 200));
+  else {
+    console.log('notify: 전송 실패', JSON.stringify(data).slice(0, 200));
+    // MarkdownV2 실패 시 일반 텍스트로 재시도 (알림 증발 방지)
+    const plain = `${icon} ${title}\n${body}${runUrl ? `\n${runUrl}` : ''}`;
+    try {
+      const res2 = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, text: plain, disable_web_page_preview: true }),
+      });
+      const d2 = await res2.json();
+      console.log('notify: plain 폴백', d2.ok ? '성공' : '실패');
+    } catch { /* 무시 */ }
+  }
 } catch (e) {
   console.log('notify: 네트워크 오류', e.message);
 }

@@ -497,7 +497,7 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
               <span className="text-[10px] text-gray-400">{cat.label}</span>
               {event.isKoreanFriendly && (
                 <span className="text-[10px] font-semibold px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded">
-                  🇰🇷 한국어 우수
+                  한국어 우수
                 </span>
               )}
             </div>

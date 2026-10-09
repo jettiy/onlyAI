@@ -327,9 +327,9 @@ export function searchGpu(query: string): GpuSpec | null {
 }
 
 export const VRAM_TIERS = [
-  { max: 4, label: '4GB 미만', color: 'text-red-500', desc: '초소형 모델만 가능 (Gemma 3 4B)', icon: '🔴' },
-  { max: 8, label: '4~8GB', color: 'text-orange-500', desc: '소형~MoE 모델 가능 (Qwen 3 30B-A3B)', icon: '🟠' },
-  { max: 16, label: '8~16GB', color: 'text-yellow-500', desc: '중형 모델 가능 (Qwen 3 14B, Gemma 3 27B)', icon: '🟡' },
-  { max: 24, label: '16~24GB', color: 'text-green-500', desc: '대부분 모델 구동 가능 (Qwen 3 32B)', icon: '🟢' },
-  { max: Infinity, label: '24GB+', color: 'text-brand-500', desc: '최고 성능 모델 구동 가능 (70B+)', icon: '🔵' },
+  { max: 4, label: '4GB 미만', color: 'text-red-500', desc: '초소형 모델만 가능 (Gemma 3 4B)', icon: 'cpu' },
+  { max: 8, label: '4~8GB', color: 'text-orange-500', desc: '소형~MoE 모델 가능 (Qwen 3 30B-A3B)', icon: 'server' },
+  { max: 16, label: '8~16GB', color: 'text-yellow-500', desc: '중형 모델 가능 (Qwen 3 14B, Gemma 3 27B)', icon: 'layers' },
+  { max: 24, label: '16~24GB', color: 'text-green-500', desc: '대부분 모델 구동 가능 (Qwen 3 32B)', icon: 'gauge' },
+  { max: Infinity, label: '24GB+', color: 'text-brand-500', desc: '최고 성능 모델 구동 가능 (70B+)', icon: 'sparkles' },
 ];

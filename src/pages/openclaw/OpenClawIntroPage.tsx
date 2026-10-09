@@ -1,3 +1,4 @@
+import {BookOpen, Code2, Link2, MessageSquare, Shell, Wrench, Ticket} from "lucide-react";
 import { useState } from "react";
 
 // ─── 데이터 ──────────────────────────────────────────────────────────────────
@@ -46,7 +47,7 @@ const LOCAL_STEPS: InstallStep[] = [
     step: 1,
     title: "Node.js 설치 확인",
     desc: "OpenClaw는 Node.js 18 이상이 필요해요. 터미널에서 버전을 확인하세요.",
-    code: "node --version  # v18.0.0 이상이어야 해요",
+    code: "node --version # v18.0.0 이상이어야 해요",
     badge: "필수",
   },
   {
@@ -114,12 +115,12 @@ const CLOUD_STEPS: InstallStep[] = [
 
 const FEATURES = [
   {
-    icon: "🤖",
+    icon: "",
     title: "AI 에이전트",
     desc: "Claude·GPT·Gemini 등 모든 주요 AI를 하나의 인터페이스로 제어해요",
   },
   {
-    icon: "📱",
+    icon: "",
     title: "텔레그램 통합",
     desc: "텔레그램으로 AI에게 명령하고 보고서·알림을 받을 수 있어요",
   },
@@ -129,17 +130,17 @@ const FEATURES = [
     desc: "정해진 시간에 투자 리포트·뉴스 요약·날씨 알림 등을 자동 생성해요",
   },
   {
-    icon: "🔗",
+    icon: "",
     title: "멀티에이전트",
     desc: "여러 AI가 협력해 복잡한 작업을 자동으로 처리하는 파이프라인 구성 가능",
   },
   {
-    icon: "🛠️",
+    icon: "",
     title: "스킬 생태계",
     desc: "ClawHub에서 커뮤니티가 만든 스킬을 설치해 기능을 빠르게 확장해요",
   },
   {
-    icon: "🔒",
+    icon: "",
     title: "개인 데이터 보호",
     desc: "로컬 설치 시 모든 데이터가 내 기기에만 저장돼요. 클라우드도 암호화 저장",
   },
@@ -171,7 +172,7 @@ function InviteCard({ type }: { type: "zhipu" | "minimax" }) {
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap mb-0.5">
             <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full bg-white dark:bg-gray-900 border ${link.border} ${link.accent}`}>
-              🎟️ {link.badge}
+              <Ticket className="inline-block shrink-0 align-text-bottom" size={16} />  {link.badge}
             </span>
           </div>
           <h3 className="text-sm font-black text-gray-900 dark:text-white">{link.name}</h3>
@@ -181,7 +182,7 @@ function InviteCard({ type }: { type: "zhipu" | "minimax" }) {
       <p className="text-xs text-gray-600 dark:text-gray-400 mb-2 leading-relaxed">{link.desc}</p>
 
       <div className={`text-[11px] font-semibold ${link.accent} mb-4 flex items-start gap-1.5`}>
-        <span>✨</span>
+ <span></span>
         <span>{link.benefit}</span>
       </div>
 
@@ -202,7 +203,7 @@ function InviteCard({ type }: { type: "zhipu" | "minimax" }) {
               : `border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-400`
           }`}
         >
-          {copied ? "✓" : "🔗"}
+ {copied ? "" : ""}
         </button>
       </div>
     </div>
@@ -264,7 +265,7 @@ export default function OpenClawIntroPage() {
           style={{ backgroundImage: "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
         <div className="relative">
           <div className="flex items-center gap-3 mb-3">
-            <span className="text-4xl">🦞</span>
+            <span className="text-4xl"><Shell className="inline-block shrink-0 align-text-bottom" size={16} /> </span>
             <div>
               <h1 className="text-2xl font-black tracking-tight">OpenClaw</h1>
               <p className="text-violet-200 text-sm">나만의 AI 에이전트 플랫폼</p>
@@ -306,14 +307,14 @@ export default function OpenClawIntroPage() {
         </p>
 
         {/* 활성 초대 링크 (준석님 보유) */}
-        <h3 className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-3">✅ 활성 초대 링크 (바로 사용 가능)</h3>
+ <h3 className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-3"> 활성 초대 링크 (바로 사용 가능)</h3>
         <div className="grid sm:grid-cols-2 gap-4 mb-6">
           <InviteCard type="zhipu" />
           <InviteCard type="minimax" />
         </div>
 
         {/* 다른 서비스 레퍼럴 정보 */}
-        <h3 className="text-[11px] font-bold text-brand-600 dark:text-brand-400 uppercase tracking-widest mb-3">🔗 기타 AI 서비스 레퍼럴 현황</h3>
+        <h3 className="text-[11px] font-bold text-brand-600 dark:text-brand-400 uppercase tracking-widest mb-3"><Link2 className="inline-block shrink-0 align-text-bottom" size={16} /> 기타 AI 서비스 레퍼럴 현황</h3>
         <div className="space-y-2">
           {[
             {
@@ -400,8 +401,8 @@ export default function OpenClawIntroPage() {
         {/* 탭 */}
         <div className="flex gap-2 mb-6 p-1 bg-gray-100 dark:bg-gray-800 rounded-xl w-fit">
           {[
-            { key: "cloud" as const, label: "☁️ 클라우드 (추천)", desc: "설치 없이 바로" },
-            { key: "local" as const, label: "💻 로컬 설치", desc: "내 서버에 직접" },
+ { key: "cloud" as const, label: " 클라우드 (추천)", desc: "설치 없이 바로" },
+            { key: "local" as const, label: "로컬 설치", desc: "내 서버에 직접" },
           ].map((t) => (
             <button
               key={t.key}
@@ -422,35 +423,35 @@ export default function OpenClawIntroPage() {
         <div className="grid sm:grid-cols-2 gap-3 mb-6">
           <div className={`rounded-xl p-4 border transition-all ${tab === "cloud" ? "border-violet-400 dark:border-violet-600 bg-violet-50 dark:bg-violet-950/30" : "border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"}`}>
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-lg">☁️</span>
+ <span className="text-lg"></span>
               <span className="text-sm font-bold text-gray-900 dark:text-white">클라우드</span>
               {tab === "cloud" && <span className="text-[10px] px-1.5 py-0.5 bg-violet-500 text-white rounded font-bold ml-auto">현재 선택</span>}
             </div>
             <ul className="space-y-1">
               {["설치 불필요, 즉시 시작", "서버 관리·업데이트 자동", "어디서나 접근 가능", "비용: MiniMax 구독 포함"].map((t) => (
                 <li key={t} className="text-[11px] text-gray-600 dark:text-gray-400 flex items-center gap-1.5">
-                  <span className="text-emerald-500">✓</span> {t}
+ <span className="text-emerald-500"></span> {t}
                 </li>
               ))}
               <li className="text-[11px] text-amber-600 dark:text-amber-400 flex items-center gap-1.5 mt-1">
-                <span>⚠</span> 데이터 클라우드 보관
+ <span></span> 데이터 클라우드 보관
               </li>
             </ul>
           </div>
           <div className={`rounded-xl p-4 border transition-all ${tab === "local" ? "border-brand-400 dark:border-brand-600 bg-brand-50 dark:bg-brand-950/30" : "border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"}`}>
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-lg">💻</span>
+              <span className="text-lg"><Code2 className="inline-block shrink-0 align-text-bottom" size={16} /> </span>
               <span className="text-sm font-bold text-gray-900 dark:text-white">로컬 설치</span>
               {tab === "local" && <span className="text-[10px] px-1.5 py-0.5 bg-brand-500 text-white rounded font-bold ml-auto">현재 선택</span>}
             </div>
             <ul className="space-y-1">
               {["완전한 데이터 프라이버시", "인터넷 없이도 작동", "커스터마이징 무제한", "비용: API 사용료만"].map((t) => (
                 <li key={t} className="text-[11px] text-gray-600 dark:text-gray-400 flex items-center gap-1.5">
-                  <span className="text-emerald-500">✓</span> {t}
+ <span className="text-emerald-500"></span> {t}
                 </li>
               ))}
               <li className="text-[11px] text-amber-600 dark:text-amber-400 flex items-center gap-1.5 mt-1">
-                <span>⚠</span> Node.js 설치 및 터미널 사용 필요
+ <span></span> Node.js 설치 및 터미널 사용 필요
               </li>
             </ul>
           </div>
@@ -459,7 +460,7 @@ export default function OpenClawIntroPage() {
         {/* 스텝 */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
           <h3 className="text-xs font-black text-gray-900 dark:text-white mb-5 flex items-center gap-2">
-            {tab === "cloud" ? "☁️ 클라우드로 시작하기" : "💻 로컬에 설치하기"}
+ {tab === "cloud" ? " 클라우드로 시작하기" : "로컬에 설치하기"}
             <span className="text-[10px] text-gray-400 font-normal">— 5단계</span>
           </h3>
           {(tab === "cloud" ? CLOUD_STEPS : LOCAL_STEPS).map((step, i, arr) => (
@@ -489,16 +490,16 @@ export default function OpenClawIntroPage() {
       {/* 링크 */}
       <div className="flex gap-3 flex-wrap text-xs">
         <a href="https://docs.openclaw.ai" target="_blank" rel="noopener noreferrer"
-          className="text-brand-600 dark:text-brand-400 hover:underline">📖 공식 문서</a>
+          className="text-brand-600 dark:text-brand-400 hover:underline"><BookOpen className="inline-block shrink-0 align-text-bottom" size={16} /> 공식 문서</a>
         <span className="text-gray-300 dark:text-gray-700">|</span>
         <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer"
-          className="text-brand-600 dark:text-brand-400 hover:underline">🔗 GitHub</a>
+          className="text-brand-600 dark:text-brand-400 hover:underline"><Link2 className="inline-block shrink-0 align-text-bottom" size={16} /> GitHub</a>
         <span className="text-gray-300 dark:text-gray-700">|</span>
         <a href="https://discord.com/invite/clawd" target="_blank" rel="noopener noreferrer"
-          className="text-brand-600 dark:text-brand-400 hover:underline">💬 Discord 커뮤니티</a>
+          className="text-brand-600 dark:text-brand-400 hover:underline"><MessageSquare className="inline-block shrink-0 align-text-bottom" size={16} /> Discord 커뮤니티</a>
         <span className="text-gray-300 dark:text-gray-700">|</span>
         <a href="https://clawhub.com" target="_blank" rel="noopener noreferrer"
-          className="text-brand-600 dark:text-brand-400 hover:underline">🛠️ ClawHub 스킬</a>
+          className="text-brand-600 dark:text-brand-400 hover:underline"><Wrench className="inline-block shrink-0 align-text-bottom" size={16} /> ClawHub 스킬</a>
       </div>
     </div>
   );

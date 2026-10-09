@@ -561,7 +561,10 @@ export default function Home() {
                       <span className="font-bold text-[#8B8FFF]">{m.arenaScore}</span>
                       {m.arenaCI && <span className="ml-0.5">{m.arenaCI}</span>}
                     </p>
-                    <p className="text-[10px] text-gray-500 truncate">{m.company}</p>
+                    <p className="text-[10px] text-gray-500 truncate flex items-center gap-1">
+                      <CompanyLogo company={m.company} size={11} />
+                      <span className="truncate">{m.company}</span>
+                    </p>
                   </div>
                 </div>
               );
@@ -587,7 +590,10 @@ export default function Home() {
                     <p className="text-[11px] text-gray-500 dark:text-gray-400">
                       <span className="font-bold text-[#8B8FFF]">{item.displayTokens}</span> 주간
                     </p>
-                    <p className="text-[10px] text-gray-500 truncate">{item.company}</p>
+                    <p className="text-[10px] text-gray-500 truncate flex items-center gap-1">
+                      <CompanyLogo company={item.company} size={11} />
+                      <span className="truncate">{item.company}</span>
+                    </p>
                   </div>
                 </div>
               );

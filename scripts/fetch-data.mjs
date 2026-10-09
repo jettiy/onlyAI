@@ -123,134 +123,20 @@ async function main() {
   
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   
-  // ── 1. OpenRouter Models ──
-  console.log('  1) OpenRouter 모델 목록 수집 중...');
+  // ── 1. OpenRouter 랭킹 (모델 가격/체인지로그는 sync-models.mjs 담당으로 이관) ──
+  console.log('  1) OpenRouter 신규 모델 랭킹 수집 중...');
   let models = [];
   let rankings = [];
-  
+
   try {
     const raw = await fetchWithTimeout('https://openrouter.ai/api/v1/models');
     const json = JSON.parse(raw);
-    
-    // Raw 저장
-    fs.writeFileSync(path.join(DATA_DIR, 'openrouter-models-raw.json'), raw, 'utf-8');
-    
-    // ── 체인지로그: 기존 데이터 백업 ──
-    const oldPricingPath = path.join(DATA_DIR, 'models-pricing.json');
-    let oldModels = [];
-    if (fs.existsSync(oldPricingPath)) {
-      try { oldModels = JSON.parse(fs.readFileSync(oldPricingPath, 'utf-8')); } catch {}
-    }
 
-    // 가격 테이블
-    models = (json.data || []).filter(m => {
-      const prompt = parseFloat(m.pricing?.prompt);
-      const completion = parseFloat(m.pricing?.completion);
-      return prompt > 0 || completion > 0;
-    }).map(m => ({
-      id: m.id,
-      name: m.name,
-      provider: (m.id?.split('/')[0] || 'UNKNOWN').toUpperCase(),
-      input: parseFloat(m.pricing?.prompt || '0') * 1000000,
-      output: parseFloat(m.pricing?.completion || '0') * 1000000,
-      context: m.context_length > 0
-        ? (m.context_length >= 1000000 ? `${(m.context_length / 1000000).toFixed(0)}M` : `${Math.round(m.context_length / 1000)}K`)
-        : '—',
-      description: (m.description || '').slice(0, 200),
-      createdAt: m.created || 0,
-      modalities: (m.architecture?.modality || 'TEXT'),
-      maxTokens: m.top_provider?.max_completion_tokens || null,
-    }));
-    
-    saveJSON('models-pricing.json', models);
-
-    // ── 체인지로그 감지 ──
-    if (oldModels.length > 0) {
-      const oldMap = new Map(oldModels.map(m => [m.id, m]));
-      const newMap = new Map(models.map(m => [m.id, m]));
-      const changeItems = [];
-
-      // 새 모델 감지
-      for (const m of models) {
-        if (!oldMap.has(m.id)) {
-          changeItems.push({
-            type: 'new_model',
-            modelId: m.id,
-            modelName: m.name,
-            provider: m.provider,
-            description: '새 모델 추가',
-            input: m.input,
-            output: m.output,
-            context: m.context,
-          });
-        }
-      }
-
-      // 가격 변동 감지
-      for (const m of models) {
-        const old = oldMap.get(m.id);
-        if (!old) continue;
-        const inputChanged = Math.abs(m.input - old.input) > 0.001;
-        const outputChanged = Math.abs(m.output - old.output) > 0.001;
-        if (inputChanged || outputChanged) {
-          changeItems.push({
-            type: 'price_change',
-            modelId: m.id,
-            modelName: m.name,
-            provider: m.provider,
-            description: '가격 변동',
-            oldInput: old.input,
-            newInput: m.input,
-            oldOutput: old.output,
-            newOutput: m.output,
-          });
-        }
-      }
-
-      // 제거된 모델 감지
-      for (const m of oldModels) {
-        if (!newMap.has(m.id)) {
-          changeItems.push({
-            type: 'model_removed',
-            modelId: m.id,
-            modelName: m.name,
-            provider: m.provider,
-            description: '모델 제거',
-          });
-        }
-      }
-
-      // changelog.json 누적 저장
-      if (changeItems.length > 0) {
-        const today = new Date().toISOString().slice(0, 10);
-        const changelogPath = path.join(DATA_DIR, 'changelog.json');
-        let changelog = [];
-        if (fs.existsSync(changelogPath)) {
-          try { changelog = JSON.parse(fs.readFileSync(changelogPath, 'utf-8')); } catch {}
-        }
-
-        // 같은 날짜 엔트리 찾기
-        const todayEntry = changelog.find(e => e.date === today);
-        if (todayEntry) {
-          todayEntry.items.push(...changeItems);
-        } else {
-          changelog.unshift({ date: today, items: changeItems });
-        }
-
-        // 최대 90일치 유지
-        changelog = changelog.slice(0, 90);
-        saveJSON('changelog.json', changelog);
-        console.log(`    ✓ 체인지로그: ${changeItems.length}개 변경사항 감지`);
-      } else {
-        console.log('    ✓ 체인지로그: 변경사항 없음');
-      }
-    }
-    
     // 랭킹 (최신순 정렬)
     const sorted = [...(json.data || [])]
       .sort((a, b) => (b.created || 0) - (a.created || 0))
       .slice(0, 20);
-    
+
     rankings = sorted.map((m, i) => ({
       rank: i + 1,
       model: m.name || m.id,
@@ -262,9 +148,10 @@ async function main() {
       category: i < 5 ? 'flagship' : i < 12 ? 'value' : 'free',
       color: 'from-brand-400 to-violet-500',
     }));
-    
+
+    models = json.data || [];
     saveJSON('rankings.json', rankings);
-    console.log(`    ✓ 모델 ${models.length}개, 랭킹 ${rankings.length}개 수집`);
+    console.log(`    ✓ 랭킹 ${rankings.length}개 수집`);
   } catch (err) {
     console.log(`    ⚠ OpenRouter API 실패: ${err.message}`);
   }
@@ -338,7 +225,6 @@ async function main() {
   // Summary
   console.log('');
   console.log(`✅ 데이터 수집 완료: ${now}`);
-  console.log(`   - models-pricing.json: ${models.length}개 가격`);
   console.log(`   - rankings.json: ${rankings.length}개 랭킹`);
   console.log(`   - rss-merged.json: ${Math.min(merged.length, 50)}개 뉴스`);
   console.log(`   - meta.json: 수집 시각 기록됨`);

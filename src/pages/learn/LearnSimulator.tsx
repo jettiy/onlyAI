@@ -1,12 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import {
-  User, Brain, Search, BarChart3, PenLine, CheckCircle2,
+import { User, Brain, Search, BarChart3, PenLine, CheckCircle2,
   Building2, Laptop, FlaskConical, Rocket, TrendingUp,
   Newspaper, Wallet, AlertTriangle, ClipboardList,
   Smartphone, Zap, AlarmClock, Bell, Wrench,
   Handshake, RefreshCw, Play, Hourglass,
-  FlaskRound, Telescope, GitFork,
-} from "lucide-react";
+  FlaskRound, Telescope, GitFork, Turtle } from "lucide-react";
 
 // ─── 타입 ───────────────────────────────────────────────────────────────────
 interface AgentNode {
@@ -69,7 +67,7 @@ const SCENARIOS: Scenario[] = [
       { delay: 1400, from: "analyst",  to: "writer",   text: "분석 완료: 엔비디아 72% 점유, YoY +34%", type: "result" },
       { delay: 1200, from: "writer",   to: "reviewer", text: "초안 완성 (2,400자) — 검증 요청", type: "result" },
       { delay: 1500, from: "reviewer", to: "manager",  text: "사실 확인 완료, 수치 2건 보정 후 승인", type: "review" },
-      { delay: 700,  from: "manager",  to: "user",     text: "✅ 리서치 완료: AI 반도체 2026 시장 분석 보고서", type: "result" },
+ { delay: 700, from: "manager", to: "user", text: " 리서치 완료: AI 반도체 2026 시장 분석 보고서", type: "result" },
     ],
   },
   {
@@ -93,7 +91,7 @@ const SCENARIOS: Scenario[] = [
       { delay: 1200, from: "tester",    to: "coder",     text: "테스트 23/25 통과, 2건 버그 리포트", type: "tool" },
       { delay: 900,  from: "coder",     to: "reviewer",  text: "버그 수정 완료, 리뷰 요청", type: "result" },
       { delay: 1400, from: "reviewer",  to: "deployer",  text: "리뷰 통과 (보안 취약점 없음)", type: "review" },
-      { delay: 1000, from: "deployer",  to: "user",      text: "🚀 배포 완료: api.example.com/v1/notifications", type: "result" },
+      { delay: 1000, from: "deployer",  to: "user",      text: "배포 완료: api.example.com/v1/notifications", type: "result" },
     ],
   },
   {
@@ -119,7 +117,7 @@ const SCENARIOS: Scenario[] = [
       { delay: 1200, from: "news",      to: "risk",      text: "규제 우려 3건, 게임 라이선스 2건 승인", type: "result" },
       { delay: 1600, from: "financial", to: "risk",      text: "EPS $7.2 어닝 비트, PER 16x (업종 평균 하회)", type: "result" },
       { delay: 1300, from: "risk",      to: "writer",    text: "리스크 점수 6.2/10 (중간), 밸류 매력 있음", type: "review" },
-      { delay: 1100, from: "writer",    to: "user",      text: "📋 투자의견: 매수 (목표가 HK$580), 리스크 중간", type: "result" },
+      { delay: 1100, from: "writer",    to: "user",      text: "투자의견: 매수 (목표가 HK$580), 리스크 중간", type: "result" },
     ],
   },
   {
@@ -144,7 +142,7 @@ const SCENARIOS: Scenario[] = [
       { delay: 1200, from: "skill",    to: "subagent", text: "EastMoney API 주가 데이터 취득", type: "tool" },
       { delay: 1500, from: "subagent", to: "main",     text: "HSI -1.2% · 관심종목 표 완성", type: "result" },
       { delay: 800,  from: "main",     to: "notify",   text: "마감 보고서 생성 완료 — 전송 준비", type: "result" },
-      { delay: 700,  from: "notify",   to: "user",     text: "📊 [마감 보고서] HSI 25,502 (-1.2%)...", type: "result" },
+      { delay: 700,  from: "notify",   to: "user",     text: "[마감 보고서] HSI 25,502 (-1.2%)...", type: "result" },
       { delay: 1200, from: "cron",     to: "gateway",  text: "⏰ 크론 트리거: 내일 오전 9시 장전 보고서 예약", type: "tool" },
       { delay: 700,  from: "gateway",  to: "main",     text: "크론 작업 등록 완료", type: "review" },
     ],
@@ -277,7 +275,7 @@ export default function LearnSimulator() {
           const ScenarioIcon = icons[s.iconName];
           return (
           <button key={s.id} onClick={() => setScenarioId(s.id)}
-            className={"flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold border transition-all " + (
+            className={"flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold border transition-all" + (
               scenarioId === s.id
                 ? "bg-violet-600 text-white border-violet-600 shadow-lg shadow-violet-200 dark:shadow-violet-900/30"
                 : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-violet-300"
@@ -295,16 +293,16 @@ export default function LearnSimulator() {
           {/* 속도 */}
           <select value={speed} onChange={(e) => setSpeed(Number(e.target.value))}
             className="text-xs px-2 py-1.5 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-lg text-gray-600 dark:text-gray-400">
-            <option value={0.5}>🐢 느리게</option>
-            <option value={1}>▶️ 보통</option>
-            <option value={2}>⚡ 빠르게</option>
+            <option value={0.5}><Turtle className="inline-block shrink-0 align-text-bottom" size={16} /> 느리게</option>
+            <option value={1}>▶ 보통</option>
+ <option value={2}> 빠르게</option>
           </select>
           <button onClick={clearAll} disabled={!running && messages.length === 0}
             className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-400 disabled:opacity-40 transition-all">
             초기화
           </button>
           <button onClick={runSimulation} disabled={running}
-            className={"px-4 py-1.5 text-xs font-bold rounded-lg transition-all " + (
+            className={"px-4 py-1.5 text-xs font-bold rounded-lg transition-all" + (
               running
                 ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed"
                 : "bg-violet-600 hover:bg-violet-700 text-white shadow-md shadow-violet-200 dark:shadow-violet-900/30"

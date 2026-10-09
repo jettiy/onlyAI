@@ -1,0 +1,141 @@
+{
+ "updatedAt": "2026-10-09T12:34:14.646+09:00",
+ "policy": "family-latest-major (예: glm 최신 5.3 → 5.x만 유지, 4.x 이하 제거 후보)",
+ "summary": {
+  "total": 60,
+  "current": 49,
+  "stale": 5,
+  "discontinued": 0,
+  "unknown": 6
+ },
+ "dropCandidates": [
+  {
+   "id": "claude-opus-4-8",
+   "name": "Claude Opus 4.8",
+   "slug": "anthropic/claude-opus-4.8",
+   "family": "claude-opus",
+   "version": 4.8,
+   "familyLatest": 5.5,
+   "orAlive": true,
+   "releaseDate": "2026-05",
+   "verdict": "stale",
+   "genGap": 1
+  },
+  {
+   "id": "mai-code-1-flash",
+   "name": "MAI-Code-1-Flash",
+   "slug": null,
+   "family": "mai-flash",
+   "version": 1,
+   "familyLatest": 4,
+   "orAlive": null,
+   "releaseDate": "2026-06",
+   "verdict": "stale",
+   "genGap": 3
+  },
+  {
+   "id": "mai-thinking-1",
+   "name": "MAI-Thinking-1",
+   "slug": null,
+   "family": "mai-thinking",
+   "version": 1,
+   "familyLatest": 4,
+   "orAlive": null,
+   "releaseDate": "2026-06",
+   "verdict": "stale",
+   "genGap": 3
+  },
+  {
+   "id": "minimax-m2-7",
+   "name": "MiniMax M2.7",
+   "slug": "minimax/minimax-m2.7",
+   "family": "minimax",
+   "version": 2.7,
+   "familyLatest": 3,
+   "orAlive": true,
+   "releaseDate": "2026-03",
+   "verdict": "stale",
+   "genGap": 1
+  },
+  {
+   "id": "mistral-large-3",
+   "name": "Mistral Large 3",
+   "slug": "mistralai/mistral-large-2512",
+   "family": "mistral",
+   "version": 3,
+   "familyLatest": 4,
+   "orAlive": true,
+   "releaseDate": "2026-01",
+   "verdict": "stale",
+   "genGap": 1
+  }
+ ],
+ "watch": [
+  {
+   "id": "claude-sonnet-5",
+   "name": "Claude Sonnet 5",
+   "slug": "anthropic/claude-sonnet-5",
+   "family": "claude-sonnet",
+   "version": 5,
+   "familyLatest": 5.5,
+   "orAlive": true,
+   "releaseDate": "2026-06",
+   "verdict": "minor-behind"
+  },
+  {
+   "id": "claude-mythos-5",
+   "name": "Claude Mythos 5",
+   "slug": null,
+   "family": "claude-mythos",
+   "version": 5,
+   "familyLatest": null,
+   "orAlive": null,
+   "releaseDate": "2026-06",
+   "verdict": "unknown"
+  },
+  {
+   "id": "grok-build",
+   "name": "Grok Build 0.1",
+   "slug": "x-ai/grok-build-0.1",
+   "family": "grok-build",
+   "version": null,
+   "familyLatest": 4.7,
+   "orAlive": true,
+   "releaseDate": "2026-05",
+   "verdict": "unknown"
+  },
+  {
+   "id": "nvidia-nemotron-3-ultra",
+   "name": "NVIDIA Nemotron 3 Ultra",
+   "slug": "nvidia/nemotron-3-ultra-550b-a55b",
+   "family": "nemotron",
+   "version": 3,
+   "familyLatest": 3.5,
+   "orAlive": true,
+   "releaseDate": "2026-06",
+   "verdict": "minor-behind"
+  },
+  {
+   "id": "command-a-plus",
+   "name": "Command A+",
+   "slug": "cohere/command-a-plus",
+   "family": "command-plus",
+   "version": null,
+   "familyLatest": null,
+   "orAlive": true,
+   "releaseDate": "2026-05",
+   "verdict": "unknown"
+  },
+  {
+   "id": "arcee-trinity",
+   "name": "Arcee Trinity",
+   "slug": "arcee-ai/trinity-large-thinking",
+   "family": "arcee-ai-thinking",
+   "version": null,
+   "familyLatest": null,
+   "orAlive": true,
+   "releaseDate": "2026-04",
+   "verdict": "unknown"
+  }
+ ]
+}

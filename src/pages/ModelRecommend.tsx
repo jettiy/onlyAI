@@ -1,13 +1,14 @@
+import {Target, Award, Medal} from "lucide-react";
 import { useState } from 'react';
 import { models } from '../data/models';
 
 const CATEGORIES = [
-  { id: 'coding', label: '코딩', icon: '💻', matchFn: (m: typeof models[0]) => m.useCases.some(u => u.includes('코딩') || u.includes('코드') || u.includes('개발')) },
-  { id: 'writing', label: '글쓰기', icon: '✍️', matchFn: (m: typeof models[0]) => m.useCases.some(u => u.includes('글쓰기') || u.includes('문서') || u.includes('작성')) },
-  { id: 'analysis', label: '분석·연구', icon: '📊', matchFn: (m: typeof models[0]) => m.useCases.some(u => u.includes('분석') || u.includes('연구') || u.includes('추론')) },
-  { id: 'chatbot', label: '챗봇', icon: '💬', matchFn: (m: typeof models[0]) => m.useCases.some(u => u.includes('챗봇') || u.includes('응답')) },
-  { id: 'cheap', label: '저렴한', icon: '💰', matchFn: (m: typeof models[0]) => (m.inputPrice ?? 0) > 0 && (m.inputPrice ?? 999) <= 0.5 },
-  { id: 'korean', label: '한국어 최고', icon: '🇰🇷', matchFn: (m: typeof models[0]) => m.koreanSupport === 'A' },
+  { id: 'coding', label: '코딩', icon: '', matchFn: (m: typeof models[0]) => m.useCases.some(u => u.includes('코딩') || u.includes('코드') || u.includes('개발')) },
+ { id: 'writing', label: '글쓰기', icon: '', matchFn: (m: typeof models[0]) => m.useCases.some(u => u.includes('글쓰기') || u.includes('문서') || u.includes('작성')) },
+  { id: 'analysis', label: '분석·연구', icon: '', matchFn: (m: typeof models[0]) => m.useCases.some(u => u.includes('분석') || u.includes('연구') || u.includes('추론')) },
+  { id: 'chatbot', label: '챗봇', icon: '', matchFn: (m: typeof models[0]) => m.useCases.some(u => u.includes('챗봇') || u.includes('응답')) },
+  { id: 'cheap', label: '저렴한', icon: '', matchFn: (m: typeof models[0]) => (m.inputPrice ?? 0) > 0 && (m.inputPrice ?? 999) <= 0.5 },
+  { id: 'korean', label: '한국어 최고', icon: '', matchFn: (m: typeof models[0]) => m.koreanSupport === 'A' },
 ];
 
 export default function ModelRecommend() {
@@ -21,7 +22,7 @@ export default function ModelRecommend() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">🎯 용도별 AI 모델 추천</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white"><Target className="inline-block shrink-0 align-text-bottom" size={16} /> 용도별 AI 모델 추천</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">용도에 맞는 최적의 AI 모델을 추천해드려요</p>
       </div>
 
@@ -49,17 +50,17 @@ export default function ModelRecommend() {
             className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-5 hover:shadow-lg transition-all relative overflow-hidden">
             {idx === 0 && (
               <div className="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-[10px] font-black px-3 py-1 rounded-bl-xl">
-                🥇 추천 1위
+                <Medal className="inline-block shrink-0 align-text-bottom" size={16} />  추천 1위
               </div>
             )}
             {idx === 1 && (
               <div className="absolute top-0 right-0 bg-gray-300 text-gray-700 text-[10px] font-black px-3 py-1 rounded-bl-xl">
-                🥈 2위
+                <Award className="inline-block shrink-0 align-text-bottom" size={16} />  2위
               </div>
             )}
             {idx === 2 && (
               <div className="absolute top-0 right-0 bg-amber-200 text-amber-800 text-[10px] font-black px-3 py-1 rounded-bl-xl">
-                🥉 3위
+                <Award className="inline-block shrink-0 align-text-bottom" size={16} />  3위
               </div>
             )}
             <div className="flex items-start justify-between gap-3">

@@ -146,9 +146,9 @@ export const videoModels: VideoModel[] = [
     releaseDate: "2026-02", tier: "consumer",
     maxResolution: "1080p", maxDuration: "20s", maxFps: "30fps",
     price: "$20~$200/월 구독",
-    description: "🚨 웹/App 2026년 4월 26일 종료. API 9월 24일 종료 예정. 더 이상 사용 권장하지 않음.",
+    description: "웹/App 2026년 4월 26일 종료. API 9월 24일 종료 예정. 더 이상 사용 권장하지 않음.",
     strengths: ["20초 긴 영상", "오디오 생성"],
-    weaknesses: ["🚨 단종 예정", "가격 매우 높음", "생성 시간 김"],
+    weaknesses: ["단종 예정", "가격 매우 높음", "생성 시간 김"],
     deprecated: true,
   },
 
@@ -201,7 +201,7 @@ export const TIMELINE_EVENTS = [
   { date: "2026-02", title: "Kling 3.0", company: "快手", flag: "", desc: "네이티브 4K. AI 디렉터 모드." },
   { date: "2026-03", title: "PixVerse V5.6 / SkyReels V4", company: "PixVerse / Skywork", flag: "", desc: "중국 상위권 비디오 AI 신모델." },
   { date: "2026-04", title: "HappyHorse 1.0", company: "Alibaba", flag: "", logoId: "alibaba", desc: "Arena ELO #1. 오픈소스 예정.", isNew: true },
-  { date: "2026-04", title: "Sora 웹 종료", company: "OpenAI", flag: "", logoId: "openai", desc: "🚨 웹/App 4/26 종료. API 9/24 종료 예정." },
+  { date: "2026-04", title: "Sora 웹 종료", company: "OpenAI", flag: "", logoId: "openai", desc: "웹/App 4/26 종료. API 9/24 종료 예정." },
   { date: "2026-04", title: "Pika 2.2", company: "Pika Labs", flag: "", desc: "1080p, Pikaframes 키프레임 제어." },
   { date: "2026-04", title: "LTX Video 2.3", company: "LTX", flag: "", desc: "30초 영상, 4K 지원 오픈소스." },
 ];

@@ -15,8 +15,9 @@ const LOGO_MAP: Record<string, string> = {
   xiaomi: "aa_xiaomi.svg",
   mistral: "aa_mistral.svg",
   cohere: "aa_cohere.svg",
-  // arcee: 로고 파일 미확보 — 추후 aa_arcee.svg 추가 시 활성화
-  // arcee: "aa_arcee.svg",
+  arcee: "aa_arcee.svg",
+  microsoft: "aa_microsoft.svg",
+  // zhipu/zai: zhipu는 aa_zhipu.svg 사용 (Z.ai 리브랜딩 대응)
   // Video/Image providers
   klingai: "aa_klingai.svg",
   bytedance: "aa_bytedance.svg",
@@ -81,8 +82,10 @@ const NAME_TO_LOGO: Record<string, string> = {
   "fal": "fal",
   "StepFun": "stepfun",
   "NVIDIA": "nvidia",
+  "Microsoft": "microsoft",
   "Amazon": "amazon",
   "Upstage": "upstage",
+  "Solar": "upstage",
 };
 
 export const COMPANY_LOGO: Record<string, string> = { ...LOGO_MAP };

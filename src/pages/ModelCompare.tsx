@@ -17,7 +17,7 @@ export default function ModelCompare() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">⚖️ 모델 비교</h1>
+ <h1 className="text-2xl font-black text-gray-900 dark:text-white"> 모델 비교</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">최대 3개 모델을 선택해서 나란히 비교하세요</p>
       </div>
 
@@ -77,7 +77,7 @@ export default function ModelCompare() {
 
       {selectedModels.length === 0 && (
         <div className="text-center py-12">
-          <div className="text-3xl mb-2">⚖️</div>
+ <div className="text-3xl mb-2"></div>
           <p className="text-sm text-gray-400">비교할 모델을 선택해주세요</p>
         </div>
       )}

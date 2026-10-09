@@ -1,3 +1,4 @@
+import { Library } from "lucide-react";
 import { useState } from 'react';
 
 interface Prompt {
@@ -17,7 +18,7 @@ const CATEGORIES: PromptCategory[] = [
   {
     id: 'coding',
     label: '코딩',
-    icon: '💻',
+    icon: '',
     prompts: [
       {
         title: '코드 리뷰',
@@ -39,7 +40,7 @@ const CATEGORIES: PromptCategory[] = [
   {
     id: 'writing',
     label: '글쓰기',
-    icon: '✍️',
+ icon: '',
     prompts: [
       {
         title: '블로그 포스팅',
@@ -61,7 +62,7 @@ const CATEGORIES: PromptCategory[] = [
   {
     id: 'translate',
     label: '번역',
-    icon: '🌐',
+    icon: '',
     prompts: [
       {
         title: '자연스러운 번역',
@@ -78,7 +79,7 @@ const CATEGORIES: PromptCategory[] = [
   {
     id: 'analysis',
     label: '분석·요약',
-    icon: '📊',
+    icon: '',
     prompts: [
       {
         title: '문서 요약',
@@ -92,7 +93,7 @@ const CATEGORIES: PromptCategory[] = [
       },
       {
         title: '회의록 정리',
-        prompt: '다음 회의 내용을 정리해줘.\n\n형식:\n📋 회의 주제: \n📅 날짜: \n👥 참석자: \n📝 주요 논의사항 (3~5개):\n✅ 액션 아이템 (담당자 + 기한):\n📌 다음 회의 일정:\n\n[회의 내용]',
+ prompt: '다음 회의 내용을 정리해줘.\n\n형식:\n 회의 주제: \n 날짜: \n 참석자: \n 주요 논의사항 (3~5개):\n 액션 아이템 (담당자 + 기한):\n 다음 회의 일정:\n\n[회의 내용]',
         tags: ['회의록', '정리'],
       },
     ],
@@ -114,7 +115,7 @@ export default function PromptLibrary() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">📚 프롬프트 저장소</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white"><Library className="inline-block shrink-0 align-text-bottom" size={16} /> 프롬프트 저장소</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">바로 복사해서 쓸 수 있는 프롬프트 예시 모음</p>
       </div>
 
@@ -146,7 +147,7 @@ export default function PromptLibrary() {
                 onClick={() => copyPrompt(p.prompt, idx)}
                 className="text-xs px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg font-semibold hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
               >
-                {copiedIdx === idx ? '✅ 복사됨' : '📋 복사'}
+ {copiedIdx === idx ? ' 복사됨' : '복사'}
               </button>
             </div>
             <pre className="text-xs text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 rounded-lg p-4 whitespace-pre-wrap leading-relaxed font-sans">

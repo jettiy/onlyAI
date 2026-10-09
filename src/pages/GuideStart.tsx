@@ -1,3 +1,4 @@
+import { Rocket } from "lucide-react";
 import { koreanServices, CATEGORY_COLORS } from '../data/koreanServices';
 
 export default function GuideStart() {
@@ -6,13 +7,13 @@ export default function GuideStart() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white">🚀 AI 처음이에요</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white"><Rocket className="inline-block shrink-0 align-text-bottom" size={16} /> AI 처음이에요</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">AI가 처음이신 분들을 위한 친절한 안내서</p>
       </div>
 
       {/* What is AI */}
       <section className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">AI가 뭔가요? 🤔</h2>
+ <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">AI가 뭔가요? </h2>
         <div className="space-y-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
           <p>
             <strong>AI (인공지능)</strong>은 컴퓨터가 사람처럼 생각하고 학습하는 기술이에요.
@@ -30,7 +31,7 @@ export default function GuideStart() {
 
       {/* How to start */}
       <section className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">어떻게 시작하나요? 🏁</h2>
+ <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">어떻게 시작하나요? </h2>
         <div className="space-y-4">
           {[
             { step: 1, title: 'AI 채팅 서비스를 사용해보세요', desc: '뤼튼, AskUp 같은 한국어 서비스로 가볍게 시작할 수 있어요.' },
@@ -52,7 +53,7 @@ export default function GuideStart() {
 
       {/* Korean AI Services */}
       <section>
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">🇰🇷 한국에서 바로 쓸 수 있는 AI 서비스</h2>
+ <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4"> 한국에서 바로 쓸 수 있는 AI 서비스</h2>
         {categories.map(cat => {
           const catInfo = CATEGORY_COLORS[cat];
           const services = koreanServices.filter(s => s.category === cat);

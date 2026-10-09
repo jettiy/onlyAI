@@ -36,7 +36,7 @@ function saveArenaCache(data: ArenaExpertEntry[], updatedAt: string) {
 
 // ── 모델명 → 회사/라이선스 매핑 ──
 const MODEL_META: Record<string, { company: string; license: 'proprietary' | 'open'; onlyaiName?: string }> = {
-  'claude-fable-5': { company: 'Anthropic', license: 'proprietary', onlyaiName: 'Claude Fable 5' },
+  'claude-fable-5-1': { company: 'Anthropic', license: 'proprietary', onlyaiName: 'Claude Fable 5.1' },
   'claude-opus-4-8': { company: 'Anthropic', license: 'proprietary', onlyaiName: 'Claude Opus 4.8' },
   'claude-opus-4-7': { company: 'Anthropic', license: 'proprietary', onlyaiName: 'Claude Opus 4.7' },
   'claude-opus-4-6': { company: 'Anthropic', license: 'proprietary', onlyaiName: 'Claude Opus 4.6' },
@@ -64,7 +64,7 @@ const MODEL_META: Record<string, { company: string; license: 'proprietary' | 'op
   'glm-5.1': { company: 'Zhipu AI', license: 'proprietary', onlyaiName: 'GLM-5.1' },
   'glm-5': { company: 'Zhipu AI', license: 'proprietary' },
   'nvidia-nemotron-3-ultra': { company: 'NVIDIA', license: 'proprietary', onlyaiName: 'NVIDIA Nemotron 3 Ultra' },
-  'grok-4-3': { company: 'xAI', license: 'proprietary', onlyaiName: 'Grok 4.3' },
+  'grok-4-7': { company: 'xAI', license: 'proprietary', onlyaiName: 'Grok 4.7' },
   'grok-4-20': { company: 'xAI', license: 'proprietary' },
   'grok-4-heavy': { company: 'xAI', license: 'proprietary' },
   'grok-3': { company: 'xAI', license: 'proprietary' },

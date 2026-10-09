@@ -17,7 +17,7 @@ export default function VideoTimeline() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🎥 비디오 AI 타임라인</h1>
+ <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"> 비디오 AI 타임라인</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           비디오 생성 AI의 발전 역사와 최신 모델 현황.
         </p>

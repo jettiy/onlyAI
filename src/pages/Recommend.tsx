@@ -1,3 +1,4 @@
+import {Lightbulb, Monitor, Target, Coins} from "lucide-react";
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { recommend, recommendAsync, type RecommendResult } from '../lib/recommendEngine';
@@ -5,7 +6,7 @@ import { useCaseLabels, useCaseIcons, budgetLabels, envLabels, type UseCase, typ
 import { CompanyLogo } from '../components/CompanyLogo';
 import { models, companies, DATA_UPDATED_AT } from '../data/models';
 
-const MEDALS = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣'];
+const MEDALS = ['', '', '', '4⃣', '5⃣'];
 
 // companyId → playground URL 맵
 const companyPlaygroundMap = new Map<string, string>();
@@ -37,7 +38,7 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
             </span>
             {result.isLocal && (
               <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 font-medium">
-                🖥️ 로컬
+                <Monitor className="inline-block shrink-0 align-text-bottom" size={16} />  로컬
               </span>
             )}
           </div>
@@ -75,8 +76,8 @@ function ResultCard({ result, rank }: { result: RecommendResult; rank: number })
           )}
 
           <div className="flex items-center gap-3 mt-2 text-xs text-gray-500 dark:text-gray-400">
-            <span>🇰🇷 한국어 {result.korean}/10</span>
-            <span>🖥️ {result.envLabel}</span>
+ <span> 한국어 {result.korean}/10</span>
+            <span><Monitor className="inline-block shrink-0 align-text-bottom" size={16} /> {result.envLabel}</span>
             {officialUrl && (
               <a
                 href={officialUrl}
@@ -136,7 +137,7 @@ export default function RecommendPage() {
     <div className="max-w-3xl mx-auto space-y-8">
       <div className="bg-brand-50 dark:bg-brand-900/20 rounded-2xl p-5 border border-brand-200 dark:border-brand-900">
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-lg">🎯</span>
+          <span className="text-lg"><Target className="inline-block shrink-0 align-text-bottom" size={16} /> </span>
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">AI 추천 결과</h1>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -146,14 +147,14 @@ export default function RecommendPage() {
             </span>
           )) : (
             <span className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-brand-700 dark:text-brand-400 rounded-lg font-medium shadow-sm">
-              🎯 전체
+              <Target className="inline-block shrink-0 align-text-bottom" size={16} />  전체
             </span>
           )}
           <span className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-emerald-700 dark:text-emerald-400 rounded-lg font-medium shadow-sm">
-            💰 {budgetLabels[budget as BudgetTier] ?? budget}
+            <Coins className="inline-block shrink-0 align-text-bottom" size={16} />  {budgetLabels[budget as BudgetTier] ?? budget}
           </span>
           <span className="text-xs px-2.5 py-1 bg-white dark:bg-gray-800 text-indigo-700 dark:text-indigo-400 rounded-lg font-medium shadow-sm">
-            🖥️ {privacyLabel[env] ?? env}
+            <Monitor className="inline-block shrink-0 align-text-bottom" size={16} />  {privacyLabel[env] ?? env}
           </span>
         </div>
       </div>
@@ -166,7 +167,7 @@ export default function RecommendPage() {
 
       {/* 다른 모델 제안 */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">💡 다른 모델도 봐야 해요</h3>
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4"><Lightbulb className="inline-block shrink-0 align-text-bottom" size={16} /> 다른 모델도 봐야 해요</h3>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
           선택하신 조건 외에도 다양한 특징을 가진 모델들이 있습니다. 전체 모델 비교 페이지에서 더 많은 모델을 확인해보세요.
         </p>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { models, type AIModel } from "../../data/models";
-import { Search, Brain, Circle, Rabbit } from "lucide-react";
+import {Search, Brain, Circle, Rabbit, MousePointerClick} from "lucide-react";
 
 interface SelectedModel extends AIModel {
   benchScores?: {
@@ -38,9 +38,9 @@ const TIERS: Record<string, { label: string; color: string }> = {
 };
 
 const KOREAN_LABELS: Record<string, string> = {
-  A: "🇰🇷 매우 우수",
-  B: "🇰🇷 우수",
-  C: "🇰🇷 보통",
+  A: "매우 우수",
+  B: "우수",
+  C: "보통",
 };
 
 function ScoreBar({ label, scores }: { label: string; scores: Record<string, number> }) {
@@ -79,7 +79,7 @@ function ModelCard({ model, rank }: { model: SelectedModel; rank: number }) {
             <h3 className="text-base font-black text-gray-900 dark:text-white">{model.name}</h3>
             {model.isNew && <span className="text-[9px] font-bold text-red-500">NEW</span>}
           </div>
-          <p className="text-xs text-gray-400 mt-0.5">{model.company} · {model.region === 'us' ? '🇺🇸' : model.region === 'china' ? '🇨🇳' : '🌍'}</p>
+          <p className="text-xs text-gray-400 mt-0.5">{model.company} · {model.region === 'us' ? '' : model.region === 'china' ? '' : ''}</p>
         </div>
         <span className={`px-2 py-0.5 text-[10px] rounded-full font-semibold ${tier.color}`}>{tier.label}</span>
       </div>
@@ -89,7 +89,7 @@ function ModelCard({ model, rank }: { model: SelectedModel; rank: number }) {
       {/* Korean support */}
       {model.koreanSupport && (
         <div className="mb-3 px-3 py-2 bg-brand-50 dark:bg-brand-950/30 rounded-xl">
-          <span className="text-xs font-semibold">{KOREAN_LABELS[model.koreanSupport] || `🇰🇷 ${model.koreanSupport}`}</span>
+ <span className="text-xs font-semibold">{KOREAN_LABELS[model.koreanSupport] || ` ${model.koreanSupport}`}</span>
         </div>
       )}
 
@@ -192,7 +192,7 @@ export default function ExploreSideBySide() {
         </div>
         {selected.length > 0 && (
           <button onClick={() => setSelected([])} className="mt-2 text-xs text-red-500 hover:text-red-600">
-            선택 초기화 ✕
+ 선택 초기화 
           </button>
         )}
       </div>
@@ -210,7 +210,7 @@ export default function ExploreSideBySide() {
         </div>
       ) : (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 text-center">
-          <p className="text-3xl mb-3">👆</p>
+          <p className="text-3xl mb-3"><MousePointerClick className="inline-block shrink-0 align-text-bottom" size={16} /> </p>
           <p className="text-sm text-gray-400">위에서 비교할 모델을 2~3개 선택하세요</p>
         </div>
       )}

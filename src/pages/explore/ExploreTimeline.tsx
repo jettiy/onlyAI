@@ -1,3 +1,4 @@
+import { CalendarClock } from "lucide-react";
 import { useState } from "react";
 
 type TimelineStatus = "released" | "expected" | "rumored";
@@ -233,7 +234,7 @@ export default function ExploreTimeline() {
   return (
     <div className="space-y-6">
       <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
-        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1">🗓️ AI 모델 출시 타임라인</h1>
+        <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-1"><CalendarClock className="inline-block shrink-0 align-text-bottom" size={16} />  AI 모델 출시 타임라인</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           최신 출시 모델 · 예정 모델 · 루머까지 한눈에 정리했어요
         </p>
@@ -242,7 +243,7 @@ export default function ExploreTimeline() {
       <div className="flex gap-2 flex-wrap">
         {FILTER_OPTIONS.map((f) => (
           <button key={f.value} onClick={() => setFilter(f.value as typeof filter)}
-            className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors " + (
+            className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors" + (
               filter === f.value
                 ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
                 : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400"
@@ -253,7 +254,7 @@ export default function ExploreTimeline() {
         <div className="w-px bg-gray-200 dark:bg-gray-700 mx-1" />
         {(["all", "flagship", "efficient", "open", "multimodal"] as const).map((c) => (
           <button key={c} onClick={() => setCatFilter(c)}
-            className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors " + (
+            className={"px-3 py-1.5 rounded-full text-xs font-medium border transition-colors" + (
               catFilter === c
                 ? "bg-violet-600 text-white border-violet-600"
                 : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-violet-200"
@@ -330,13 +331,13 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
             <div className="flex items-center gap-2 flex-wrap mb-1.5">
               <span className="text-[10px] font-mono text-gray-400">{event.displayDate}</span>
               <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${status.bg} ${status.text}`}>
-                {event.status === "expected" ? "🔜 " : event.status === "rumored" ? "💬 " : "✅ "}
+ {event.status === "expected" ? "" : event.status === "rumored" ? "" : ""}
                 {status.label}
               </span>
               <span className="text-[10px] text-gray-400">{cat.label}</span>
               {event.isKoreanFriendly && (
                 <span className="text-[10px] font-semibold px-1.5 py-0.5 bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded">
-                  🇰🇷 한국어 우수
+ 한국어 우수
                 </span>
               )}
             </div>

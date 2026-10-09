@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Search, Lightbulb } from "lucide-react";
+import {Search, Lightbulb, Library} from "lucide-react";
 
 type GlossaryCategory = '기초개념' | '학습기법' | '아키텍처' | '실사용' | '성능지표';
 
@@ -31,49 +31,49 @@ const glossaryData: GlossaryTerm[] = [
     korean: 'API',
     english: 'Application Programming Interface',
     category: '기초개념',
-    description: '🔗 앱끼리 연결하는 통로예요. AI API 키가 있으면 자기 프로그램에서 AI 기능을 사용할 수 있습니다. 코드를 모르면 OpenRouter 같은 서비스로 간단히 연결할 수도 있어요.',
+    description: '앱끼리 연결하는 통로예요. AI API 키가 있으면 자기 프로그램에서 AI 기능을 사용할 수 있습니다. 코드를 모르면 OpenRouter 같은 서비스로 간단히 연결할 수도 있어요.',
     example: 'OpenRouter 하나의 API 키로 GPT, Claude, Gemini 전부 사용 가능해요.',
   },
   {
     korean: '멀티모달',
     english: 'Multimodal',
     category: '기초개념',
-    description: 'AI가 글뿐 아니라 🖼️ 사진, 🎤 음성, 📄 문서도 이해하는 능력이에요. 예전 AI는 텍스트만 가능했지만, 최신 AI는 사진을 보고 설명하거나 음성을 듣고 대답할 수 있어요.',
+    description: 'AI가 글뿐 아니라 사진, 음성, 문서도 이해하는 능력이에요. 예전 AI는 텍스트만 가능했지만, 최신 AI는 사진을 보고 설명하거나 음성을 듣고 대답할 수 있어요.',
     example: 'GPT-4o에 사진을 올리면 "이 사진에 뭐가 있어?"라고 물어볼 수 있어요.',
   },
   {
     korean: '추론 모델',
     english: 'Reasoning Model',
     category: '기초개념',
-    description: '🧠 생각 시간을 가진 AI예요. 복잡한 문제를 만나면 사람처럼 "잠깐만요..." 하고 단계별로 생각한 뒤 답변합니다. 수학, 코딩, 논리 문제에 특히 강하지만 답변이 느린 편이에요.',
+    description: '생각 시간을 가진 AI예요. 복잡한 문제를 만나면 사람처럼 "잠깐만요..." 하고 단계별로 생각한 뒤 답변합니다. 수학, 코딩, 논리 문제에 특히 강하지만 답변이 느린 편이에요.',
     example: 'o3, DeepSeek R1 같은 모델이 추론 모델이에요.',
   },
   {
     korean: '벤치마크',
     english: 'Benchmark',
     category: '성능지표',
-    description: '📝 AI 성능을 측정하는 시험이에요. 수학, 코딩, 언어 이해 등 다양한 분야에서 점수를 매겨서 모델 간 성능을 비교할 수 있습니다. 점수가 높을수록 해당 분야에 강한 모델이에요.',
+    description: 'AI 성능을 측정하는 시험이에요. 수학, 코딩, 언어 이해 등 다양한 분야에서 점수를 매겨서 모델 간 성능을 비교할 수 있습니다. 점수가 높을수록 해당 분야에 강한 모델이에요.',
     example: 'MMLU-Pro는 언어 이해력을, HumanEval은 코딩 능력을 측정하는 벤치마크예요.',
   },
   {
     korean: '프롬프트',
     english: 'Prompt',
     category: '실사용',
-    description: '💬 AI에게 주는 질문이나 지시예요. 프롬프트를 어떻게 쓰느냐에 따라 AI의 답변 품질이 크게 달라집니다. 역할을 부여하거나 예시를 주면 훨씬 좋은 결과를 얻을 수 있어요.',
+    description: 'AI에게 주는 질문이나 지시예요. 프롬프트를 어떻게 쓰느냐에 따라 AI의 답변 품질이 크게 달라집니다. 역할을 부여하거나 예시를 주면 훨씬 좋은 결과를 얻을 수 있어요.',
     example: '"번역해줘"보다 "10년 경력의 전문 번역가처럼 자연스러운 한국어로 번역해줘"가 더 좋아요.',
   },
   {
     korean: '토큰',
     english: 'Token',
     category: '기초개념',
-    description: 'AI가 텍스트를 처리하는 단위예요. 📱 데이터 사용량 같은 개념으로 생각하시면 됩니다. 영어는 단어 약 4글자, 한국어는 약 2~3글자가 1토큰이에요. API 비용은 토큰 수로 계산해요.',
+    description: 'AI가 텍스트를 처리하는 단위예요. 데이터 사용량 같은 개념으로 생각하시면 됩니다. 영어는 단어 약 4글자, 한국어는 약 2~3글자가 1토큰이에요. API 비용은 토큰 수로 계산해요.',
     example: '"Hello World"는 약 2토큰, "안녕하세요"는 약 3~4토큰이에요.',
   },
   {
     korean: '컨텍스트 윈도우',
     english: 'Context Window',
     category: '기초개념',
-    description: 'AI가 한 번에 읽고 기억할 수 있는 최대 텍스트 길이예요. 📋 AI가 한 번에 들고 있는 작업 메모장 크기라고 생각하시면 됩니다. 128K면 약 10만 단어(A4 용지 300페이지 분량)를 한꺼번에 처리할 수 있어요.',
+    description: 'AI가 한 번에 읽고 기억할 수 있는 최대 텍스트 길이예요. AI가 한 번에 들고 있는 작업 메모장 크기라고 생각하시면 됩니다. 128K면 약 10만 단어(A4 용지 300페이지 분량)를 한꺼번에 처리할 수 있어요.',
     example: 'GPT-4.1은 1M 토큰 컨텍스트로 소설책 여러 권을 한 번에 처리해요.',
   },
   {
@@ -309,7 +309,7 @@ export default function LearnGlossary() {
     <div className="space-y-6">
       {/* 헤더 */}
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-1">📚 AI 용어 백과사전</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-1"><Library className="inline-block shrink-0 align-text-bottom" size={16} /> AI 용어 백과사전</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           AI를 처음 접한 분도 쉽게 이해할 수 있도록 정리했어요. {glossaryData.length}개 용어 수록.
         </p>
@@ -330,7 +330,7 @@ export default function LearnGlossary() {
             onClick={() => setSearch('')}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-sm"
           >
-            ✕
+ 
           </button>
         )}
       </div>
@@ -339,7 +339,7 @@ export default function LearnGlossary() {
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => setActiveCategory('all')}
-          className={"px-4 py-2 rounded-full text-xs font-semibold border-2 transition-all " + (
+          className={"px-4 py-2 rounded-full text-xs font-semibold border-2 transition-all" + (
             activeCategory === 'all'
               ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100'
               : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'
@@ -354,9 +354,9 @@ export default function LearnGlossary() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={"px-4 py-2 rounded-full text-xs font-semibold border-2 transition-all " + (
+              className={"px-4 py-2 rounded-full text-xs font-semibold border-2 transition-all" + (
                 isActive
-                  ? categoryColors[cat] + ' border-transparent'
+                  ? categoryColors[cat] + 'border-transparent'
                   : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'
               )}
             >
@@ -370,7 +370,7 @@ export default function LearnGlossary() {
       {(search || activeCategory !== 'all') && (
         <p className="text-sm text-gray-500 dark:text-gray-400">
           {filtered.length}개 용어가 검색됐어요.
-          {filtered.length === 0 && ' 다른 검색어를 시도해보세요.'}
+          {filtered.length === 0 && '다른 검색어를 시도해보세요.'}
         </p>
       )}
 
@@ -389,7 +389,7 @@ export default function LearnGlossary() {
             >
               {/* 카테고리 배지 */}
               <div className="flex items-center gap-2 flex-wrap">
-                <span className={"px-2.5 py-1 rounded-full text-[11px] font-bold " + categoryColors[term.category]}>
+                <span className={"px-2.5 py-1 rounded-full text-[11px] font-bold" + categoryColors[term.category]}>
                   {term.category}
                 </span>
               </div>
@@ -416,7 +416,7 @@ export default function LearnGlossary() {
       )}
 
       <p className="text-xs text-gray-400 dark:text-gray-600 text-center pt-4">
-        📚 AI 이것만 용어사전 · 계속 업데이트 중이에요!
+        <Library className="inline-block shrink-0 align-text-bottom" size={16} />  AI 이것만 용어사전 · 계속 업데이트 중이에요!
       </p>
     </div>
   );

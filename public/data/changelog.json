@@ -1,5 +1,142 @@
 [
   {
+    "date": "2026-10-10",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-pro-latest",
+        "modelName": "DeepSeek: DeepSeek Pro Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.14256,
+        "newInput": 0.21911999999999998,
+        "oldOutput": 0.42767999999999995,
+        "newOutput": 0.65736
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.016,
+        "newInput": 0.0001,
+        "oldOutput": 0.6,
+        "newOutput": 0.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.032,
+        "newInput": 0.04,
+        "oldOutput": 0.083071,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-latest",
+        "modelName": "Z.ai: GLM Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.039,
+        "newInput": 0.039,
+        "oldOutput": 6,
+        "newOutput": 4.8
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.039,
+        "newInput": 0.039,
+        "oldOutput": 6,
+        "newOutput": 4.8
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0044800000000000005,
+        "newInput": 0.018,
+        "oldOutput": 0.009528,
+        "newOutput": 1.28
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.7999999999999999,
+        "newInput": 0.5,
+        "oldOutput": 13.5,
+        "newOutput": 13.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.7999999999999999,
+        "newInput": 0.31,
+        "oldOutput": 13.5,
+        "newOutput": 14.89
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0131,
+        "newInput": 0.03,
+        "oldOutput": 1.28,
+        "newOutput": 1.28
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.6",
+        "modelName": "MoonshotAI: Kimi K2.6",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.4344,
+        "newInput": 0.43570000000000003,
+        "oldOutput": 2.4499999999999997,
+        "newOutput": 2.4499999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.5",
+        "modelName": "MoonshotAI: Kimi K2.5",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.44999999999999996,
+        "newInput": 0.5,
+        "oldOutput": 2.25,
+        "newOutput": 2.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v3.2",
+        "modelName": "DeepSeek: DeepSeek V3.2",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.25899999999999995,
+        "newInput": 0.25899999999999995,
+        "oldOutput": 0.42,
+        "newOutput": 0.7999999999999999
+      }
+    ]
+  },
+  {
     "date": "2026-10-09",
     "items": [
       {

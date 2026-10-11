@@ -122,6 +122,83 @@
         "newInput": 0.65,
         "oldOutput": 2.4499999999999997,
         "newOutput": 3.41
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-pro-latest",
+        "modelName": "DeepSeek: DeepSeek Pro Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.21911999999999998,
+        "newInput": 0.20988,
+        "oldOutput": 0.65736,
+        "newOutput": 0.62964
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-latest",
+        "modelName": "Z.ai: GLM Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.07,
+        "newInput": 0.079,
+        "oldOutput": 4.8,
+        "newOutput": 4.8
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.07,
+        "newInput": 0.079,
+        "oldOutput": 4.8,
+        "newOutput": 4.8
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.018,
+        "newInput": 0.0161,
+        "oldOutput": 0.64,
+        "newOutput": 0.64
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.018,
+        "newInput": 0.0161,
+        "oldOutput": 0.64,
+        "newOutput": 0.64
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.7999999999999999,
+        "newInput": 0.73,
+        "oldOutput": 10,
+        "newOutput": 13.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.75,
+        "newInput": 0.62,
+        "oldOutput": 14.9,
+        "newOutput": 16.5
       }
     ]
   },

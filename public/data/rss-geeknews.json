@@ -1,5 +1,187 @@
 [
   {
+    "title": "gopls의 대화형 리팩터링",
+    "url": "https://news.hada.io/topic?id=35577",
+    "date": "2026-10-19T00:02:15+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "회의론자의 Kubernetes 첫 탐색 (2024)",
+    "url": "https://news.hada.io/topic?id=35576",
+    "date": "2026-10-18T23:33:28+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Show GN: AIPath - 생성형 AI 지식을 직무별 시험과 해설로 점검하는 서비스",
+    "url": "https://news.hada.io/topic?id=35575",
+    "date": "2026-10-18T22:09:18+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Show GN: 시그렌즈(SIGLENS): 코드로 계산한 시장 데이터를 근거로 LLM이 해석하는 분석 서비스",
+    "url": "https://news.hada.io/topic?id=35574",
+    "date": "2026-10-18T21:17:15+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Show HN: Sphinx - AI가 작성한 코드를 배포하기 전에 이해도를 묻는 훅",
+    "url": "https://news.hada.io/topic?id=35573",
+    "date": "2026-10-18T19:31:25+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Elizabeth Holmes 다큐멘터리 ‘You Can See Everything’은 어떻게 관객을 속이는가",
+    "url": "https://news.hada.io/topic?id=35572",
+    "date": "2026-10-18T18:37:27+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "DeepSeek 검색 및 페이지 가져오기 API, 성공 요청 1,000건당 0.75달러",
+    "url": "https://news.hada.io/topic?id=35571",
+    "date": "2026-10-18T18:34:27+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Ask GN: AI 에이전트의 메모리는 어떻게 구현하고 있나요?",
+    "url": "https://news.hada.io/topic?id=35569",
+    "date": "2026-10-18T18:27:54+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "CVE-2026-99999(PwnEscape) — Linux 커널 취약점으로 VM 탈출 가능, VPS 사업자 긴급 대응",
+    "url": "https://news.hada.io/topic?id=35568",
+    "date": "2026-10-18T17:34:56+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Show HN: 고품질 오리 소리 합성기",
+    "url": "https://news.hada.io/topic?id=35567",
+    "date": "2026-10-18T17:30:57+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Codex Desktop이 Crashpad 대기 덤프를 계속 생성하는 문제",
+    "url": "https://news.hada.io/topic?id=35565",
+    "date": "2026-10-18T15:33:12+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "우리는 소프트웨어 엔지니어다 - AI 고민도 결국 우리가 늘 하던 일",
+    "url": "https://news.hada.io/topic?id=35564",
+    "date": "2026-10-18T14:10:38+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Show GN: 개당 - 오픈마켓 단위가격 비교",
+    "url": "https://news.hada.io/topic?id=35563",
+    "date": "2026-10-18T13:36:59+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "뉴욕 의원, 라이선스 대신 소유권을 보장하는 게임 소유권 법안 발표",
+    "url": "https://news.hada.io/topic?id=35562",
+    "date": "2026-10-18T13:31:32+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "저커버그의 Meta, 시위 당일 No Kings Instagram 계정 차단",
+    "url": "https://news.hada.io/topic?id=35561",
+    "date": "2026-10-18T11:32:13+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "이스라엘 정착민들, 서안지구에서 유럽 외교 차량 공격하고 프랑스 시장 폭행",
+    "url": "https://news.hada.io/topic?id=35559",
+    "date": "2026-10-18T10:36:53+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Show HN: Esp32sim - 브라우저에서 ESP32 펌웨어 실행하기",
+    "url": "https://news.hada.io/topic?id=35558",
+    "date": "2026-10-18T10:33:53+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Agent Substrate - AI 에이전트를 격리하고 대기 자원을 줄이는 Kubernetes 실행 환경",
+    "url": "https://news.hada.io/topic?id=35557",
+    "date": "2026-10-18T09:30:03+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "나는 일본 시민이 되었다",
+    "url": "https://news.hada.io/topic?id=35555",
+    "date": "2026-10-18T08:32:57+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Around The World 게임에서 아름다운 하늘 렌더링하기",
+    "url": "https://news.hada.io/topic?id=35554",
+    "date": "2026-10-18T07:43:24+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "댐 철거로 미국 북동부 전역에 물고기가 돌아오고 있음",
+    "url": "https://news.hada.io/topic?id=35553",
+    "date": "2026-10-18T07:40:24+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "에스토니아 온라인 투표 시스템 IVXV의 소스 코드와 작동 방식",
+    "url": "https://news.hada.io/topic?id=35552",
+    "date": "2026-10-18T07:37:24+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Linux 7.2 개발 통계 - 기여자 2,652명으로 역대 최다, LLM 지원 패치도 증가",
+    "url": "https://news.hada.io/topic?id=35551",
+    "date": "2026-10-18T06:47:04+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "9인치 달팽이",
+    "url": "https://news.hada.io/topic?id=35550",
+    "date": "2026-10-18T06:44:04+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "Pele - Mermaid 다이어그램을 테마 적용 가능한 SVG로 렌더링하는 라이브러리",
+    "url": "https://news.hada.io/topic?id=35549",
+    "date": "2026-10-18T06:41:04+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
+    "title": "금, 이제 미국 최대 수출 품목이 되다",
+    "url": "https://news.hada.io/topic?id=35548",
+    "date": "2026-10-18T06:38:04+09:00",
+    "summary": "",
+    "source": "GeekNews"
+  },
+  {
     "title": "OpenAI, AI 에이전트의 일탈 사례 4건 추가 공개",
     "url": "https://news.hada.io/topic?id=35547",
     "date": "2026-10-18T05:42:30+09:00",
@@ -42,7 +224,7 @@
     "source": "GeekNews"
   },
   {
-    "title": "예전의 내 일은 이제 멀게 느껴진다",
+    "title": "예전의 내 일은 이제 멀게 느껴진다 - AI 에이전트와 달라진 개발 업무",
     "url": "https://news.hada.io/topic?id=35541",
     "date": "2026-10-18T03:45:23+09:00",
     "summary": "",
@@ -91,7 +273,7 @@
     "source": "GeekNews"
   },
   {
-    "title": "고마워요, Deno",
+    "title": "고마워요, Deno - 경쟁이 바꾼 JavaScript 생태계",
     "url": "https://news.hada.io/topic?id=35533",
     "date": "2026-10-18T01:43:03+09:00",
     "summary": "",
@@ -112,7 +294,7 @@
     "source": "GeekNews"
   },
   {
-    "title": "Claude로 더 효율적인 양자 회로 설계하기",
+    "title": "Claude, 양자 회로 설계 개선으로 타원곡선 연산 게이트 수 17분의 1로",
     "url": "https://news.hada.io/topic?id=35530",
     "date": "2026-10-17T23:38:47+09:00",
     "summary": "",
@@ -164,188 +346,6 @@
     "title": "ImageMagick으로 88x31 버튼에 책 담기",
     "url": "https://news.hada.io/topic?id=35520",
     "date": "2026-10-17T16:01:32+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Ultramarine 1 Flash - 금융, 법률, 컨설팅, 운영 실무용 오픈 모델",
-    "url": "https://news.hada.io/topic?id=35519",
-    "date": "2026-10-17T15:31:35+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "버틀레리안 지하드",
-    "url": "https://news.hada.io/topic?id=35518",
-    "date": "2026-10-17T14:36:57+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "FLUX 3 Image Klein - 56억 파라미터의 오픈 웨이트 이미지 생성/편집 모델",
-    "url": "https://news.hada.io/topic?id=35517",
-    "date": "2026-10-17T14:33:57+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "메모리 벤치마크 점수 믿어도 되나",
-    "url": "https://news.hada.io/topic?id=35516",
-    "date": "2026-10-17T14:15:58+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Dekton은 도대체 무엇인가?",
-    "url": "https://news.hada.io/topic?id=35514",
-    "date": "2026-10-17T12:33:27+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "/dev/null: 개발자를 위한 소셜 네트워크",
-    "url": "https://news.hada.io/topic?id=35513",
-    "date": "2026-10-17T11:31:22+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "쓰라린 교훈 (2019)",
-    "url": "https://news.hada.io/topic?id=35512",
-    "date": "2026-10-17T11:26:46+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "NIST 타원곡선 시드 생성의 수수께끼가 풀려 현상금 지급",
-    "url": "https://news.hada.io/topic?id=35509",
-    "date": "2026-10-17T11:02:06+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "메모리에서 출발해 트랜스포머를 발명할 수도 있었다",
-    "url": "https://news.hada.io/topic?id=35508",
-    "date": "2026-10-17T10:33:28+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "NVIDIA Run:ai - 여러 팀이 GPU를 나눠 쓰도록 관리하는 Kubernetes 기반 플랫폼",
-    "url": "https://news.hada.io/topic?id=35507",
-    "date": "2026-10-17T09:30:02+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "iroh 1.0까지의 여정 - IPFS 구현에서 공개 키 기반 연결 라이브러리로",
-    "url": "https://news.hada.io/topic?id=35506",
-    "date": "2026-10-17T09:08:43+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Show GN: 테슬라 로드스터 시뮬레이터, 킥플립 시뮬레이터",
-    "url": "https://news.hada.io/topic?id=35505",
-    "date": "2026-10-17T09:08:22+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Linus Torvalds “AI 사용을 금지하지 않겠다. 자신이 하는 일을 이해해야 한다”",
-    "url": "https://news.hada.io/topic?id=35504",
-    "date": "2026-10-17T09:05:43+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "B2B에서 YouTube로 잠재 고객을 확보하는 방법",
-    "url": "https://news.hada.io/topic?id=35503",
-    "date": "2026-10-17T08:41:42+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Apache Spark 리소스 최적화: 하루 800만 건의 작업 실행에서 얻은 교훈",
-    "url": "https://news.hada.io/topic?id=35502",
-    "date": "2026-10-17T08:40:20+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "PostgreSQL 무중단 스키마 변경을 위한 실무 가이드",
-    "url": "https://news.hada.io/topic?id=35501",
-    "date": "2026-10-17T08:38:43+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "eBay, 무선 장비 판매 등록 제한하되 아마추어 무선 대역 전용 장비는 예외",
-    "url": "https://news.hada.io/topic?id=35500",
-    "date": "2026-10-17T08:36:41+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "내 비밀정보를 스캔하는 통합 기능을 허용한 적이 없다",
-    "url": "https://news.hada.io/topic?id=35499",
-    "date": "2026-10-17T08:33:41+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "모든 면에서 형편없는 Siri",
-    "url": "https://news.hada.io/topic?id=35497",
-    "date": "2026-10-17T07:42:23+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "PS5LM - 탈옥한 PS5에서 llama.cpp로 모든 GGUF 모델을 콘솔에서 네이티브 실행",
-    "url": "https://news.hada.io/topic?id=35496",
-    "date": "2026-10-17T07:39:23+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Claude Code 팀의 코드 리뷰 방식",
-    "url": "https://news.hada.io/topic?id=35495",
-    "date": "2026-10-17T07:36:23+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "사과문: Elevation Lab, AirTag 무음화 도구 판매 중단",
-    "url": "https://news.hada.io/topic?id=35494",
-    "date": "2026-10-17T06:40:14+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Show HN: Flipflop - Iroh 기반 파일 공유용 지속형 터널",
-    "url": "https://news.hada.io/topic?id=35493",
-    "date": "2026-10-17T06:37:14+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Anthropic, 6월에 투기등급 중 가장 높은 신용등급 받아",
-    "url": "https://news.hada.io/topic?id=35492",
-    "date": "2026-10-17T06:34:14+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Big Fish: OpenBSD의 37년 된 커널 버그 악용하기",
-    "url": "https://news.hada.io/topic?id=35491",
-    "date": "2026-10-17T05:45:12+09:00",
-    "summary": "",
-    "source": "GeekNews"
-  },
-  {
-    "title": "Waymo, 토론토에 자율주행 차량 호출 서비스 진출 준비",
-    "url": "https://news.hada.io/topic?id=35490",
-    "date": "2026-10-17T05:42:12+09:00",
     "summary": "",
     "source": "GeekNews"
   }

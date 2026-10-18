@@ -1,5 +1,185 @@
 [
   {
+    "date": "2026-10-18",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "unbiased/pareto-26.10",
+        "modelName": "Pareto 26.10",
+        "provider": "UNBIASED",
+        "description": "새 모델 추가",
+        "input": 0.7999999999999999,
+        "output": 3.1999999999999997,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3.5-super-vl",
+        "modelName": "NVIDIA: Nemotron 3.5 Super VL",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.5,
+        "newOutput": 0.39999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "~unbiased/pareto-latest",
+        "modelName": "Pareto Latest",
+        "provider": "~UNBIASED",
+        "description": "가격 변동",
+        "oldInput": 2.5,
+        "newInput": 0.7999999999999999,
+        "oldOutput": 7.5,
+        "newOutput": 3.1999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.5,
+        "newOutput": 0.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.04,
+        "oldOutput": 0.6,
+        "newOutput": 0.144
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.7505999999999999,
+        "newInput": 0.834,
+        "oldOutput": 2.2509,
+        "newOutput": 2.501
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.048,
+        "oldOutput": 1.5999999999999999,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.048,
+        "oldOutput": 0.5,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-latest",
+        "modelName": "Z.ai: GLM Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.06319999999999999,
+        "newInput": 0.075,
+        "oldOutput": 4.4,
+        "newOutput": 2.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.079,
+        "newInput": 0.079,
+        "oldOutput": 4.8,
+        "newOutput": 1.7999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0189,
+        "newInput": 0.01592,
+        "oldOutput": 1.28,
+        "newOutput": 0.143616
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0189,
+        "newInput": 0.0199,
+        "oldOutput": 1.28,
+        "newOutput": 0.44999999999999996
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.0825,
+        "newInput": 0.13199999999999998,
+        "oldOutput": 0.33,
+        "newOutput": 0.5279999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.27,
+        "newInput": 0.25,
+        "oldOutput": 14,
+        "newOutput": 8
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-30b-a3b-instruct-2507",
+        "modelName": "Qwen: Qwen3 30B A3B Instruct 2507",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.09999999999999999,
+        "newInput": 0.09,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-3-27b-it",
+        "modelName": "Google: Gemma 3 27B",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.08,
+        "oldOutput": 0.44999999999999996,
+        "newOutput": 0.35
+      }
+    ]
+  },
+  {
     "date": "2026-10-17",
     "items": [
       {

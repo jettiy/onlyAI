@@ -208,6 +208,94 @@
         "modelName": "WizardLM-2 8x22B",
         "provider": "MICROSOFT",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "reflection/beam-1.0-501b-a23b",
+        "modelName": "Reflection: Beam 1.0 501B A23B",
+        "provider": "REFLECTION",
+        "description": "가격 변동",
+        "oldInput": 1,
+        "newInput": 0.3,
+        "oldOutput": 3,
+        "newOutput": 1
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.04,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.6,
+        "newOutput": 0.024
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.032,
+        "newInput": 0.035199999999999995,
+        "oldOutput": 0.08,
+        "newOutput": 0.0112
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-latest",
+        "modelName": "Z.ai: GLM Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.059,
+        "newInput": 0.051,
+        "oldOutput": 6,
+        "newOutput": 6
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.00688,
+        "newInput": 0.01208,
+        "oldOutput": 0.12,
+        "newOutput": 0.12
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.1298,
+        "oldOutput": 0.15,
+        "newOutput": 0.38939999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.40716,
+        "newInput": 0.368358,
+        "oldOutput": 0.81432,
+        "newOutput": 0.736716
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.0765,
+        "oldOutput": 0.3,
+        "newOutput": 0.255
       }
     ]
   },

@@ -155,6 +155,94 @@
         "newInput": 0.09,
         "oldOutput": 1.1,
         "newOutput": 1.1
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.049,
+        "newInput": 0.049,
+        "oldOutput": 0.375,
+        "newOutput": 0.105
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.023940000000000003,
+        "newInput": 0.023940000000000003,
+        "oldOutput": 0.375,
+        "newOutput": 0.09576000000000001
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.041191,
+        "newInput": 0.00441,
+        "oldOutput": 0.12,
+        "newOutput": 0.1015
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.041191,
+        "newInput": 0.00441,
+        "oldOutput": 0.12,
+        "newOutput": 0.1015
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.238,
+        "newInput": 0.238,
+        "oldOutput": 24,
+        "newOutput": 16
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.427518,
+        "newInput": 0.39532799999999996,
+        "oldOutput": 0.855036,
+        "newOutput": 0.7906559999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.0765,
+        "oldOutput": 0.3,
+        "newOutput": 0.255
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3-super-120b-a12b",
+        "modelName": "NVIDIA: Nemotron 3 Super",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.3,
+        "oldOutput": 0.44999999999999996,
+        "newOutput": 2.4
       }
     ]
   },

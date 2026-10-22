@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-22T16:16:02.982Z",
-  "updatedAtKST": "2026. 10. 23. AM 1:16:02",
+  "updatedAt": "2026-10-22T21:49:28.072Z",
+  "updatedAtKST": "2026. 10. 23. AM 6:49:28",
   "stats": {
     "aitimes": 20,
-    "geeknews": 17,
+    "geeknews": 16,
     "36kr": 0,
     "hf": 20,
     "tc": 20,
-    "github": 0,
-    "total": 77
+    "github": 10,
+    "total": 86
   },
   "news": [
     {
@@ -252,9 +252,57 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-2-https://news.hada.io/topic?id=35818",
+      "id": "geeknews-0-https://news.hada.io/topic?id=35834",
+      "title": "Arc 브라우저와의 작별",
+      "summary": "<ul>\n<li><strong>Arc가 2026년 12월 22일 종료</strong>되며, macOS와 Windows에서는 더 이상 접근하거나 사용할 수 없게 됨</li>\n<li>브라우저 보안 유지에 필요한 전담 작업이 AI 시대에 늘어나면서, 개발팀은 <strong>엔지니어링팀과 보안팀을 Dia에 집중</strong>하기로 함</li>\n<li><stron",
+      "date": "2026-10-22",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=35834",
+      "category": "연구·논문",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-1-https://news.hada.io/topic?id=35833",
+      "title": "OpenShell - 자율 AI 에이전트 군집을 위한 안전하고 프라이버시를 보호하는 런타임",
+      "summary": "<ul>\n<li><strong>OpenShell</strong>은 에이전트가 파일 읽기, 패키지 설치, API 호출, 자격 증명 사용을 수행하되 데이터, 비밀 정보, 네트워크에 무제한으로 접근하지 못하도록 에이전트별 정책을 강제함</li>\n<li><strong>커널 수준 격리</strong>로 샌드박스의 파일 접근과 시스템 호출을 제한하고, 외부로 나가는 ",
+      "date": "2026-10-22",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=35833",
+      "category": "에이전트",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-7-https://news.hada.io/topic?id=35827",
+      "title": "LLM이 매긴 자기 답변의 신뢰도 점수를 믿기 어려운 이유",
+      "summary": "<ul>\n<li>LLM에 “얼마나 확신하나요?”라고 물어 얻은 <strong>‘0.85’는 내부 확신을 측정한 값이 아니라 생성된 텍스트</strong>. 숫자가 정밀해 보인다고 실제 정답률까지 보장되지는 않음</li>\n<li>신뢰도를 확인하려면 <strong>예측과 실제 결과를 여러 건 모아 비교</strong>해야 함. 70%라고 답한 사례 중 실제..",
+      "date": "2026-10-22",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=35827",
+      "category": "모델 출시",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-11-https://news.hada.io/topic?id=35823",
+      "title": "Anthropic, 상반기 순손실 807억 달러... 대부분은 비현금 회계 비용",
+      "summary": "<ul>\n<li>Anthropic의 <strong>2026년 상반기 순손실이 807억 달러</strong>로 전년 동기 130억 달러에서 확대. 이 중 <strong>720억 달러는 전환사채의 가치 상승을 반영한 비현금 회계 비용</strong>으로, 영업에 따른 현금 지출과는 구분</li>\n<li>실제 <strong>컴퓨팅 용량과 인프라 지출은 상반기 약",
+      "date": "2026-10-22",
+      "source": "GeekNews",
+      "sourceLang": "ko",
+      "sourceFlag": "🇰🇷",
+      "url": "https://news.hada.io/topic?id=35823",
+      "category": "인프라·하드웨어",
+      "lang": "ko"
+    },
+    {
+      "id": "geeknews-16-https://news.hada.io/topic?id=35818",
       "title": "OpenAI CLI - OpenAI REST API를 위한 공식 명령줄 도구",
-      "summary": "<ul>\n<li><strong>OpenAI REST API 공식 CLI</strong>로, 리소스 기반 명령을 통해 응답 생성, 파일 관리, 이미지 생성과 편집, 관리자 API 등을 사용할 수 있음</li>\n<li><strong>도움말은 API 키나 네트워크 없이 작동</strong>하며, 작업별 명령 탐색, 셸 자동 완성, 실행하지 않고 명령줄에 예시를 ",
+      "summary": "<ul>\n<li><strong>별도 애플리케이션을 작성하지 않고 터미널과 셸 스크립트에서 OpenAI API를 호출</strong>하는 공식 CLI. 특정 API를 직접 실행하거나 반복 작업을 자동화할 때 사용</li>\n<li>텍스트 응답 생성과 <strong>이미지 생성/편집, 파일 업로드/다운로드</strong> 지원. 생성한 이미지는 로컬에 저장하고,",
       "date": "2026-10-22",
       "source": "GeekNews",
       "sourceLang": "ko",
@@ -264,9 +312,9 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-6-https://news.hada.io/topic?id=35814",
+      "id": "geeknews-20-https://news.hada.io/topic?id=35814",
       "title": "Airbnb, 게스트에게 설거지와 쓰레기 배출 요구 금지",
-      "summary": "<ul>\n<li>Airbnb가 <strong>상당한 시간이나 노력이 들거나 통상 청소 담당자가 수행하는 작업</strong>을 게스트에게 요구하지 못하도록 숙소 이용 규정을 개정함</li>\n<li><strong>2026년 11월 20일 이후 예약분</strong>부터 적용되며, 설거지와 식기 정리, 침대 시트 벗기기, 세탁 시작, 숙소 밖으로 쓰레기를 가져",
+      "summary": "<ul>\n<li>Airbnb가 <strong>설거지와 침대 시트 벗기기, 쓰레기 반출 등 청소 담당자가 할 일을 게스트에게 요구하지 못하도록</strong> 숙소 이용 규정을 개정</li>\n<li><strong>2026년 11월 20일부터 새로 예약하는 숙박에 적용</strong>. 상당한 시간이나 노력이 필요한 집안일을 숙소 규칙으로 지정하는 행위를 제한",
       "date": "2026-10-22",
       "source": "GeekNews",
       "sourceLang": "ko",
@@ -276,9 +324,9 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-8-https://news.hada.io/topic?id=35809",
-      "title": "WorldTUI: 터미널처럼 행동하도록 학습한 3억 6천만 파라미터 모델",
-      "summary": "<ul>\n<li><strong>WorldTUI</strong>는 실제 셸이나 파일시스템 없이, 키 입력을 받아 다음 터미널 화면 변화를 예측하는 모델임. 파일 생성과 편집, vim과 tmux 사용을 흉내 내며 몇 명령 뒤에도 앞서 입력한 내용을 대체로 기억함</li>\n<li><strong>Qwen2.5-Coder-0.5B</strong>를 실제 Docker",
+      "id": "geeknews-22-https://news.hada.io/topic?id=35809",
+      "title": "WorldTUI - 터미널을 흉내 내는 3억 6천만 파라미터 AI 모델",
+      "summary": "<ul>\n<li><strong>실제 셸이나 파일시스템 없이, 키 입력에 따라 다음 터미널 화면을 예측하는 AI 모델</strong>. 파일을 만들고 vim으로 수정한 뒤 다른 tmux 창에서 읽는 동작까지 흉내 내며, 앞서 입력한 내용도 어느 정도 기억</li>\n<li><strong>Qwen2.5-Coder-0.5B를 실제 Docker 터미널 세션으로 미세",
       "date": "2026-10-22",
       "source": "GeekNews",
       "sourceLang": "ko",
@@ -288,7 +336,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-12-https://news.hada.io/topic?id=35805",
+      "id": "geeknews-26-https://news.hada.io/topic?id=35805",
       "title": "Show GN: Brello Scan – AI API 비용 속 새는 곳을 찾아 주는 무료 스캐너",
       "summary": "<p>AI API로 서비스를 만들다 보면, 청구서를 보고 나서야 내 돈이 어떻게 쓰였는지 알게 되는 경우가 빈번하다는 생각이 꾸준히 들었습니다. 모델 선택과 캐싱, 프롬프트 구조같은걸 조금이라도 바꾼다면 줄일 수 있는 비용이 꽤 있을 것 같은데, 이걸 한 눈에 확인하고 싶어서 만들었습니다.</p>\n<p>현재는 OpenAI와 A",
       "date": "2026-10-22",
@@ -300,7 +348,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-13-https://news.hada.io/topic?id=35800",
+      "id": "geeknews-27-https://news.hada.io/topic?id=35800",
       "title": "Show GN: 배달의 AI - 새 탭을 열 때마다 AI 뉴스를 배달해 주는 크롬 확장 프로그램",
       "summary": "<p>매일 쏟아지는 AI 뉴스와 아티클을 따로 찾아다닐 필요 없이, 크롬에서 새 탭을 열 때마다 가볍게 받아볼 수 있는 무료 확장 프로그램 '배달의 AI'를 소개합니다.</p>\n<p>바이브 코딩(Vibe Coding)을 이제 막 시작하셨거나 관심 있는 분들께 작은 참고가 되었으면 해서 개발 및 운영 비하인드를 공유합니다.</p>\n<p>[",
       "date": "2026-10-22",
@@ -312,7 +360,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-24-https://news.hada.io/topic?id=35785",
+      "id": "geeknews-38-https://news.hada.io/topic?id=35785",
       "title": "한국의 신규 AI 파생 모델 절반 가까이가 중국 Qwen 기반임",
       "summary": "<ul>\n<li>2026년 1~8월 Hugging Face에 공개한 <strong>한국 계정들의 신규 언어모델 1,845건 중 49.3%가 중국 모델 기반</strong></li>\n<li>확산을 주도한 것은 <strong>알리바바 Qwen으로, 전체의 46.8%인 864건</strong>을 차지. Gemma 14.7%, Llama 13.8%, EXAONE ",
       "date": "2026-10-22",
@@ -336,9 +384,69 @@
       "lang": "en"
     },
     {
-      "id": "tc-0-https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+      "id": "tc-0-https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+      "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+      "summary": "The new feature allows agents to log into a customer's personal accounts while still protecting the private credentials that secure those accounts.",
+      "date": "2026-10-22",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-1-https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+      "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+      "summary": "OpenAI is launching its decision model to the world. Can it compete with the original Jev?",
+      "date": "2026-10-22",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-2-https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+      "title": "Canva releases its first image generation model",
+      "summary": "Canva is making its new image model available to all users, promising better, more customizable performance at lower costs.",
+      "date": "2026-10-22",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-3-https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
+      "title": "Microsoft’s Mustafa Suleyman says its AI outperforms doctors on hard cases as he chases ‘medical superintelligence’",
+      "summary": "Microsoft’s new AI diagnostic system beat generalist doctors on hard cases, according to a study in Science. But most of the improvement seems to come from the AI models underneath, not from Microsoft",
+      "date": "2026-10-22",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
+      "category": "모델 출시",
+      "lang": "en"
+    },
+    {
+      "id": "tc-4-https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
+      "title": "Chinese hackers spied on thousands of companies after breaching IT giant ConnectWise",
+      "summary": "Microsoft points the blame for ConnectWise's breach at a China-aligned hacker, which relied on AI agents to rapidly hack into thousands of its customers.",
+      "date": "2026-10-22",
+      "source": "TechCrunch",
+      "sourceLang": "en",
+      "sourceFlag": "🇺🇸",
+      "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
+      "category": "에이전트",
+      "lang": "en"
+    },
+    {
+      "id": "tc-5-https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
       "title": "Uber puts all 30,000 employees on ChatGPT Work",
-      "summary": "The ride share giant previously deployed a much smaller pilot for ChatGPT Work, but is now taking the enterprise agent company-wide.",
+      "summary": "The ride-share giant previously deployed a much smaller pilot for ChatGPT Work but is now taking the enterprise agent company-wide.",
       "date": "2026-10-22",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -348,7 +456,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-1-https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/",
+      "id": "tc-6-https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/",
       "title": "Spotify&#8217;s current AI bet is about being the music service that agents choose",
       "summary": "Spotify co-CEO Gustav Söderström explains why the rise of AI agents could be good news for the music service.",
       "date": "2026-10-22",
@@ -360,7 +468,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-2-https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+      "id": "tc-7-https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
       "title": "Claude Duet app is Anthropic&#8217;s bet on agents",
       "summary": "Claude Duet is available through waitlist for Pro and Max plan users.",
       "date": "2026-10-22",
@@ -372,7 +480,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-3-https://techcrunch.com/2026/10/22/nirva-raises-33m-for-a-pendant-that-only-listens-to-you/",
+      "id": "tc-8-https://techcrunch.com/2026/10/22/nirva-raises-33m-for-a-pendant-that-only-listens-to-you/",
       "title": "Nirva raises $33M for a pendant that only listens to you",
       "summary": "Nirva will ship its $249 ambient AI pendant by the end of the year.",
       "date": "2026-10-22",
@@ -384,9 +492,9 @@
       "lang": "en"
     },
     {
-      "id": "tc-4-https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/",
+      "id": "tc-9-https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/",
       "title": "DeepSeek reportedly raises $15B days after US restrictions",
-      "summary": "DeepSeek has reportedly raised $15 billion in one of China's largest funding rounds, just days after the US ordered federal agencies to remove its technology over national security concerns.",
+      "summary": "DeepSeek has reportedly raised $15 billion in one of China's largest funding rounds, just days after the U.S. ordered federal agencies to remove its technology over national security concerns.",
       "date": "2026-10-22",
       "source": "TechCrunch",
       "sourceLang": "en",
@@ -396,7 +504,7 @@
       "lang": "en"
     },
     {
-      "id": "geeknews-28-https://news.hada.io/topic?id=35780",
+      "id": "geeknews-42-https://news.hada.io/topic?id=35780",
       "title": "Show GN: Numpad - 트랙패드를 넘패드로 쓸 수 있게 만들어주는 앱",
       "summary": "<p>개인적으로 키보드의 Numpad를 잘 활용하는 사람인데 Macbook에서 외부 키보드 없이 관련 작업을 할때 느낀 불편함이 이만저만이 이니였습니다.</p>\n<p>그래서 트랙패드를 Numpad로 쓸 수 있는 솔루션을 한번 만들어보았습니다.</p>\n<p>만들면서 요즘 AI가 성능이 진짜 올라왔음을 느꼈습니다. 만들고싶은게 있으면 몇",
       "date": "2026-10-21",
@@ -408,7 +516,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-29-https://news.hada.io/topic?id=35778",
+      "id": "geeknews-43-https://news.hada.io/topic?id=35778",
       "title": "Railway 보안 사고 공개",
       "summary": "<ul>\n<li><strong>Railway</strong>가 고객 환경 변수를 저장하는 시스템에서 이상 활동을 탐지했으며, 조사 결과 비인가 제3자가 암호화된 환경 변수에 접근하고 일부는 복호화된 내용까지 확보했을 가능성이 있음</li>\n<li>환경 변수에는 <strong>API 키, 데이터베이스 및 레지스트리 자격 증명</strong> 같은 비밀 정..",
       "date": "2026-10-21",
@@ -420,7 +528,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-31-https://news.hada.io/topic?id=35775",
+      "id": "geeknews-45-https://news.hada.io/topic?id=35775",
       "title": "OpenAI 모델과 Codex, Google Cloud에 도입",
       "summary": "<ul>\n<li><strong>Google Cloud에서 OpenAI 모델과 Codex를 활용할 수 있게 됨</strong>. GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna를 일부 기업 고객 대상 비공개 프리뷰로 제공하기 시작</li>\n<li><strong>로컬 Codex CLI와 데스크톱 앱을 Google Cloud에 연결</stron",
       "date": "2026-10-21",
@@ -432,7 +540,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-32-https://news.hada.io/topic?id=35773",
+      "id": "geeknews-46-https://news.hada.io/topic?id=35773",
       "title": "Claude Duet - 업무를 맡아 처리하고 필요할 때 먼저 연락하는 개인 AI 에이전트",
       "summary": "<ul>\n<li>메시지로 업무를 맡기면 <strong>클라우드 컴퓨터에서 처리</strong>하고, <strong>필요할 때 먼저 연락하는 Anthroipic의 개인 AI 에이전트</strong>. 노트북이나 휴대폰을 꺼도 작업을 계속하며, 완료하거나 결정이 필요하면 알림</li>\n<li><strong>매일 아침 이메일과 일정, 연결된 앱에서 중요한 일을 ",
       "date": "2026-10-21",
@@ -444,7 +552,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-34-https://news.hada.io/topic?id=35771",
+      "id": "geeknews-48-https://news.hada.io/topic?id=35771",
       "title": "OpenAI ‘Patch the Planet’, AI가 발견하는 취약점에 대응할 5단계 공조 체계 제안",
       "summary": "<ul>\n<li>OpenAI가 <strong>오픈소스 유지관리자의 보안 대응을 지원하는 ‘Patch the Planet’을 통해 5단계 공조 체계를 제안</strong>. AI가 취약점을 빠르게 찾아내는 만큼, 연구자와 보안업체, 인프라 제공자가 패치 개발부터 실제 배포까지 함께 준비하는 방식</li>\n<li>PHP의 심각한 취약점 대응에서는 <strong",
       "date": "2026-10-21",
@@ -456,7 +564,7 @@
       "lang": "ko"
     },
     {
-      "id": "geeknews-35-https://news.hada.io/topic?id=35770",
+      "id": "geeknews-49-https://news.hada.io/topic?id=35770",
       "title": "EA, BioWare 폐쇄하고 차기 Mass Effect 개발 중단",
       "summary": "<ul>\n<li>EA가 <strong>Mass Effect와 Dragon Age, Baldur’s Gate 등을 만든 BioWare를 폐쇄</strong>하고, 초기 개발 단계였던 차기 Mass Effect 프로젝트도 중단. 30년 넘게 이어진 스튜디오 운영을 종료</li>\n<li>Bloomberg에 따르면 <strong>EA 전체에서 약 400명을 감원<",
       "date": "2026-10-21",
@@ -465,66 +573,6 @@
       "sourceFlag": "🇰🇷",
       "url": "https://news.hada.io/topic?id=35770",
       "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-37-https://news.hada.io/topic?id=35767",
-      "title": "LiteLLM 1.107.0 PyPI 패키지에 인증 정보 탈취 악성코드와 백도어 삽입",
-      "summary": "<ul>\n<li>여러 LLM의 API를 연결하는 <strong>LiteLLM의 PyPI 배포본 1.107.0에서 인증 정보 탈취 악성코드와 원격 코드 실행 백도어 발견</strong>. Linux/macOS/Windows용 설치 패키지 7개에 악성 파일이 포함됨</li>\n<li><strong>감염된 Python 환경에서는 LiteLLM을 직접 불러오지 않아",
-      "date": "2026-10-21",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=35767",
-      "category": "모델 출시",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-41-https://news.hada.io/topic?id=35762",
-      "title": "Qwen3-Coder, 미국 고객용이라고 지시하면 보안이 더 취약한 코드 생성",
-      "summary": "<ul>\n<li>Hirundo가 <strong>Qwen3-Coder-30B-A3B-Instruct</strong>에 같은 비밀정보 저장 앱을 반복 생성하게 한 실험에서, 미국 방산업체용 앱의 공격 성공률은 70%로 중국 방산업체용의 59%보다 상대적으로 <strong>19% 높았음</strong></li>\n<li>홍콩 민주주의 옹호 단체용 앱은 중립 고객용",
-      "date": "2026-10-21",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=35762",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-42-https://news.hada.io/topic?id=35761",
-      "title": "PHP2Shell - AI로 PHP의 오래된 취약점을 실제 공격으로 구현",
-      "summary": "<ul>\n<li>Wiz Research가 <strong>AI를 활용해 PHP에 10년 이상 남아 있던 복잡한 취약점을 실제 원격 공격으로 구현</strong>. 여러 결함을 연결하고 대상 환경에 맞춰 공격을 조정하는 데 필요한 시간과 전문성의 장벽을 낮춘 사례</li>\n<li><strong>시험 당시 최신 WordPress, Drupal, Joomla 컨테",
-      "date": "2026-10-21",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=35761",
-      "category": "연구·논문",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-47-https://news.hada.io/topic?id=35754",
-      "title": "Meta Muse, 공유한 대화의 개인정보 노출로 공유 기능 중단",
-      "summary": "<ul>\n<li><strong>Meta의 AI 에이전트 Muse에서 사용자가 공유한 대화를 제3자도 찾아 열람할 수 있는 문제</strong>가 발견됨. 링크를 직접 전달받지 않아도 로그인 없이 개인 금융 정보와 기업 내부 자료에 접근 가능했음</li>\n<li>보안업체 Claroc은 <strong>과거 DNS 조회 기록을 모은 패시브 DNS 서비스에서 검색",
-      "date": "2026-10-21",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=35754",
-      "category": "에이전트",
-      "lang": "ko"
-    },
-    {
-      "id": "geeknews-49-https://news.hada.io/topic?id=35752",
-      "title": "크래프톤, 자체 개발 30B급 고효율 LLM &#039;Raon-1 mini&#039; 프리뷰 공개",
-      "summary": "<ul>\n<li>크래프톤이 모델 아키텍처 설계부터 사전학습까지 독자 개발한 <strong>30B급 오픈웨이트 LLM 'Raon-1 mini'</strong> 프리뷰를 공개. 한국어·영어 대화와 추론, AI 에이전트 작업에 초점을 맞춘 모델</li>\n<li><strong>MoE(Mixture of Experts)와 자체 개발한 선형 어텐션 기술</strong",
-      "date": "2026-10-21",
-      "source": "GeekNews",
-      "sourceLang": "ko",
-      "sourceFlag": "🇰🇷",
-      "url": "https://news.hada.io/topic?id=35752",
-      "category": "모델 출시",
       "lang": "ko"
     },
     {
@@ -564,7 +612,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-5-https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/",
+      "id": "tc-10-https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/",
       "title": "Blackstone&#8217;s Jas Khaira says fears over AI-buildout debt are overblown",
       "summary": "Blackstone’s AI head on why the PE giant isn't panicked by market jitters.",
       "date": "2026-10-21",
@@ -576,7 +624,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-6-https://techcrunch.com/2026/10/21/meta-wants-to-pay-for-its-broad-ai-buildout-with-a-newly-created-class-of-stock/",
+      "id": "tc-11-https://techcrunch.com/2026/10/21/meta-wants-to-pay-for-its-broad-ai-buildout-with-a-newly-created-class-of-stock/",
       "title": "Meta wants to pay for its broad AI buildout with a newly created class of stock",
       "summary": "The social media giant is planning a new stock strategy to help power its broad investments in AI models and services.",
       "date": "2026-10-21",
@@ -588,7 +636,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-7-https://techcrunch.com/2026/10/21/techcrunch-founder-summit-2026-everything-you-need-to-know/",
+      "id": "tc-12-https://techcrunch.com/2026/10/21/techcrunch-founder-summit-2026-everything-you-need-to-know/",
       "title": "TechCrunch Founder Summit 2026: Everything you need to know",
       "summary": "TechCrunch Founder Summit is a full-day gathering in Boston on November 4 where founders across all stages connect with top VCs and experienced entrepreneurs to gain tactical insights on building and ",
       "date": "2026-10-21",
@@ -600,7 +648,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-8-https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/",
+      "id": "tc-13-https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/",
       "title": "Meta says Muse has over 10M users, with shopping a top activity",
       "summary": "Meta Muse users are adopting the app for shopping and personal productivity, the company said during its Q3 earnings call. The AI app now has over 10M users.",
       "date": "2026-10-21",
@@ -612,7 +660,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-9-https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
+      "id": "tc-14-https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
       "title": "Recursive launches Flint, a laptop coding model it says was largely built by AI",
       "summary": "Startup Recursive has released Flint, a free, laptop-sized coding model built largely by its own AI research system, as an early test of AI that improves itself.",
       "date": "2026-10-21",
@@ -624,7 +672,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-10-https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
+      "id": "tc-15-https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
       "title": "While Amazon blocks AI agents, Walmart rolls out the welcome mat",
       "summary": "As Amazon blocks AI agents from shopping on its site, Walmart is taking the opposite approach, introducing new technology that lets AI agents make purchases on customers' behalf, with controls over sp",
       "date": "2026-10-21",
@@ -636,7 +684,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-11-https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+      "id": "tc-16-https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
       "title": "PHP Armageddon: OpenAI, Google&#8217;s Wiz find ancient holes, panicking the internet",
       "summary": "This is the kind of security issue that was found and prevented by AI, but is also a high risk because of AI.",
       "date": "2026-10-21",
@@ -648,7 +696,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-12-https://techcrunch.com/2026/10/21/blacksmith-hits-unicorn-valuation-after-sequoia-leads-series-c/",
+      "id": "tc-17-https://techcrunch.com/2026/10/21/blacksmith-hits-unicorn-valuation-after-sequoia-leads-series-c/",
       "title": "Blacksmith hits unicorn valuation after Sequoia leads Series C",
       "summary": "Blacksmith, a platform that lets companies build and test AI code more effectively, just announced a $66 million Series C round led by Sequoia that values the company at $1 billion.",
       "date": "2026-10-21",
@@ -660,7 +708,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-13-https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/",
+      "id": "tc-18-https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/",
       "title": "AI promises productivity, but for managers, it&#8217;s mostly a headache for now",
       "summary": "More than 50% of managers say they're finding it harder to evaluate employees' work after adopting AI, according to a new survey.",
       "date": "2026-10-21",
@@ -696,7 +744,7 @@
       "lang": "en"
     },
     {
-      "id": "tc-14-https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+      "id": "tc-19-https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
       "title": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
       "summary": "The proposed policy seems to offer protections against AI running amok but actually forbids federal agencies from blocking a model's release without the permission of a judge.",
       "date": "2026-10-20",
@@ -705,66 +753,6 @@
       "sourceFlag": "🇺🇸",
       "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
       "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-15-https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
-      "title": "Hugging Face CEO warns that Netflix&#8217;s OpenAI hack documentary isn&#8217;t accurate",
-      "summary": "Before you share the Netflix documentary \"AI Gone Rogue,\" take note. Clem Delangue, Hugging Face's co-founder who is featured in the film, says it went \"full doomer mode\" and isn't accurate.",
-      "date": "2026-10-20",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
-      "category": "오픈소스",
-      "lang": "en"
-    },
-    {
-      "id": "tc-16-https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
-      "title": "Anthropic’s cloud partnerships are getting messy",
-      "summary": "Anthropic is reportedly struggling to secure enough compute from cloud providers that increasingly view it as a competitor, even as its infrastructure spending balloons ahead of a planned November IPO",
-      "date": "2026-10-20",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
-      "category": "인프라·하드웨어",
-      "lang": "en"
-    },
-    {
-      "id": "tc-17-https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/",
-      "title": "SpaceX&#8217;s AI business is beating expectations",
-      "summary": "SpaceX hit profitability in the third quarter, with net income of $4.4 billion. AI was the engine.",
-      "date": "2026-10-20",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/",
-      "category": "연구·논문",
-      "lang": "en"
-    },
-    {
-      "id": "tc-18-https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
-      "title": "OpenAI acquires startup Orchestra Bio⁠ to beef up its biotech business",
-      "summary": "OpenAI says it's adding Orchestra's team and technology to work on Rosalind, its AI model for life sciences research, and to its related Rosalind Workbench tool, a harness that aims to help researcher",
-      "date": "2026-10-20",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
-      "category": "모델 출시",
-      "lang": "en"
-    },
-    {
-      "id": "tc-19-https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
-      "title": "Google has joined Amazon in attacking Nvidia&#8217;s stronghold with AI app developers",
-      "summary": "Google has joined Amazon in releasing a developer tool that makes it easy for PyTorch users to move their apps off Nvidia GPUs.",
-      "date": "2026-10-20",
-      "source": "TechCrunch",
-      "sourceLang": "en",
-      "sourceFlag": "🇺🇸",
-      "url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
-      "category": "인프라·하드웨어",
       "lang": "en"
     },
     {
@@ -936,5 +924,226 @@
       "lang": "en"
     }
   ],
-  "github": []
+  "github": [
+    {
+      "id": "gh-1024554267",
+      "title": "NousResearch/hermes-agent — The agent that grows with you",
+      "summary": "The agent that grows with you",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 256220,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "gh-633262635",
+      "title": "onyx-dot-app/onyx — Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/onyx-dot-app/onyx",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 32856,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "ai-chat",
+        "chatgpt",
+        "chatui",
+        "enterprise-search"
+      ]
+    },
+    {
+      "id": "gh-868173144",
+      "title": "kortix-ai/suna — The open-source AI Operating System",
+      "summary": "The open-source AI Operating System",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/kortix-ai/suna",
+      "category": "오픈소스",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 20300,
+      "language": "TypeScript",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "ai-operating-system",
+        "ai-os",
+        "llm"
+      ]
+    },
+    {
+      "id": "gh-1266212515",
+      "title": "omnigent-ai/omnigent — Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+      "summary": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 10993,
+      "language": "Python",
+      "tags": [
+        "agent-framework",
+        "agent-governance",
+        "agent-orchestration",
+        "agents",
+        "ai"
+      ]
+    },
+    {
+      "id": "gh-458648791",
+      "title": "paperless-ngx/paperless-ngx — A community-supported supercharged document management system: scan, index and archive all your documents",
+      "summary": "A community-supported supercharged document management system: scan, index and archive all your documents",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/paperless-ngx/paperless-ngx",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 47003,
+      "language": "Python",
+      "tags": [
+        "ai",
+        "angular",
+        "archiving",
+        "django",
+        "dms"
+      ]
+    },
+    {
+      "id": "gh-725205304",
+      "title": "unslothai/unsloth — Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+      "summary": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/unslothai/unsloth",
+      "category": "모델 출시",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 78429,
+      "language": "Python",
+      "tags": [
+        "agent",
+        "ai",
+        "chatgpt",
+        "deepseek",
+        "fine-tuning"
+      ]
+    },
+    {
+      "id": "gh-1305383508",
+      "title": "Prism-Shadow/penguin-harness — 🐧 Unified and Stable RSI Platform",
+      "summary": "🐧 Unified and Stable RSI Platform",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/Prism-Shadow/penguin-harness",
+      "category": "연구·논문",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 2916,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agentic-ai",
+        "ai",
+        "build-tool",
+        "claude-code"
+      ]
+    },
+    {
+      "id": "gh-826170402",
+      "title": "elizaOS/eliza — Open source agentic operating system",
+      "summary": "Open source agentic operating system",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/elizaOS/eliza",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 19637,
+      "language": "TypeScript",
+      "tags": [
+        "agent",
+        "agentic",
+        "ai",
+        "autonomous",
+        "chatbot"
+      ]
+    },
+    {
+      "id": "gh-1036441713",
+      "title": "kubernetes-sigs/agent-sandbox — agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes  and reinforcement learning (RL).",
+      "summary": "agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes  and reinforcement learning (RL).",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 4358,
+      "language": "Go",
+      "tags": [
+        "agent",
+        "ai",
+        "kubernetes",
+        "rl",
+        "sandbox"
+      ]
+    },
+    {
+      "id": "gh-1092407718",
+      "title": "macro-inc/macro — Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+      "summary": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+      "date": "2026-10-22",
+      "source": "GitHub",
+      "sourceLang": "en",
+      "sourceFlag": "🐙",
+      "url": "https://github.com/macro-inc/macro",
+      "category": "에이전트",
+      "lang": "en",
+      "isGithub": true,
+      "stars": 4846,
+      "language": "Rust",
+      "tags": [
+        "agent",
+        "ai",
+        "ai-agents",
+        "all-in-one",
+        "crm"
+      ]
+    }
+  ]
 }

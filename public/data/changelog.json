@@ -117,6 +117,28 @@
         "modelName": "Google: Gemini 2.5 Flash Lite (batch)",
         "provider": "GOOGLE",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.238,
+        "newInput": 0.238,
+        "oldOutput": 16,
+        "newOutput": 24
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.0765,
+        "oldOutput": 0.3,
+        "newOutput": 0.255
       }
     ]
   },

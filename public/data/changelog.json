@@ -144,6 +144,104 @@
         "newInput": 0.075,
         "oldOutput": 0.25,
         "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "new_model",
+        "modelId": "moonshotai/kimi-k3.1-pro",
+        "modelName": "MoonshotAI: Kimi K3.1 Pro",
+        "provider": "MOONSHOTAI",
+        "description": "새 모델 추가",
+        "input": 2,
+        "output": 10,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.019000000000000003,
+        "newInput": 0.07,
+        "oldOutput": 0.6,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.834,
+        "newInput": 0.7505999999999999,
+        "oldOutput": 2.501,
+        "newOutput": 2.2509
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.005200000000000001,
+        "newInput": 0.0285,
+        "oldOutput": 0.1985,
+        "newOutput": 0.0923
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.23900000000000002,
+        "newInput": 0.23900000000000002,
+        "oldOutput": 11.936,
+        "newOutput": 10.8
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.13199999999999998,
+        "newInput": 0.0825,
+        "oldOutput": 0.5279999999999999,
+        "newOutput": 0.33
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.238,
+        "newInput": 0.238,
+        "oldOutput": 16,
+        "newOutput": 24
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.885312,
+        "newInput": 0.733236,
+        "oldOutput": 1.770624,
+        "newOutput": 1.466472
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.0675,
+        "oldOutput": 0.3,
+        "newOutput": 0.22499999999999998
       }
     ]
   },

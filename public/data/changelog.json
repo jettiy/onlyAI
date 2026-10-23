@@ -1,5 +1,153 @@
 [
   {
+    "date": "2026-10-23",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-pro-latest",
+        "modelName": "DeepSeek: DeepSeek Pro Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.1307,
+        "newInput": 0.1188,
+        "oldOutput": 8,
+        "newOutput": 8
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.07,
+        "newInput": 0.019000000000000003,
+        "oldOutput": 0.5,
+        "newOutput": 0.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.7505999999999999,
+        "newInput": 0.834,
+        "oldOutput": 2.2509,
+        "newOutput": 2.501
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.005200000000000001,
+        "newInput": 0.15,
+        "oldOutput": 0.1985,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.7,
+        "newInput": 0.079,
+        "oldOutput": 2.2,
+        "newOutput": 1.4
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.8-27b",
+        "modelName": "Qwen: Qwen3.8 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.04,
+        "newInput": 0.19999999999999998,
+        "oldOutput": 1.35,
+        "newOutput": 2.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.0825,
+        "newInput": 0.13199999999999998,
+        "oldOutput": 0.33,
+        "newOutput": 0.5279999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.238,
+        "newInput": 0.238,
+        "oldOutput": 24,
+        "newOutput": 16
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.442656,
+        "newInput": 0.885312,
+        "oldOutput": 0.885312,
+        "newOutput": 1.770624
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.0765,
+        "newInput": 0.09,
+        "oldOutput": 0.255,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-9b",
+        "modelName": "Qwen: Qwen3.5-9B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.16999999999999998,
+        "oldOutput": 0.13,
+        "newOutput": 0.25
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-122b-a10b",
+        "modelName": "Qwen: Qwen3.5-122B-A10B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.26,
+        "newInput": 0.39999999999999997,
+        "oldOutput": 2.08,
+        "newOutput": 3.1999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "mistralai/mistral-small-3.2-24b-instruct",
+        "modelName": "Mistral: Mistral Small 3.2 24B",
+        "provider": "MISTRALAI",
+        "description": "가격 변동",
+        "oldInput": 0.09375,
+        "newInput": 0.075,
+        "oldOutput": 0.25,
+        "newOutput": 0.19999999999999998
+      }
+    ]
+  },
+  {
     "date": "2026-10-22",
     "items": [
       {

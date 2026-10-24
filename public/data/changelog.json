@@ -111,6 +111,71 @@
         "newInput": 0.3,
         "oldOutput": 0.95,
         "newOutput": 1.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.834,
+        "newInput": 0.7505999999999999,
+        "oldOutput": 2.501,
+        "newOutput": 2.2509
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.079,
+        "newInput": 0.0908,
+        "oldOutput": 1.4,
+        "newOutput": 1.61
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.13199999999999998,
+        "newInput": 0.0825,
+        "oldOutput": 0.5279999999999999,
+        "newOutput": 0.33
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.216108,
+        "newInput": 0.20879999999999999,
+        "oldOutput": 0.432216,
+        "newOutput": 0.41759999999999997
+      },
+      {
+        "type": "model_removed",
+        "modelId": "openai/gpt-3.5-turbo-instruct",
+        "modelName": "OpenAI: GPT-3.5 Turbo Instruct",
+        "provider": "OPENAI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "openai/gpt-3.5-turbo",
+        "modelName": "OpenAI: GPT-3.5 Turbo",
+        "provider": "OPENAI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "openai/gpt-3.5-turbo:batch",
+        "modelName": "OpenAI: GPT-3.5 Turbo (batch)",
+        "provider": "OPENAI",
+        "description": "모델 제거"
       }
     ]
   },

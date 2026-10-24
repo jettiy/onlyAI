@@ -1,5 +1,120 @@
 [
   {
+    "date": "2026-10-24",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.07,
+        "newInput": 0.02,
+        "oldOutput": 0.5,
+        "newOutput": 1
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.02,
+        "oldOutput": 1.2,
+        "newOutput": 1
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.7505999999999999,
+        "newInput": 0.834,
+        "oldOutput": 2.2509,
+        "newOutput": 2.501
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0285,
+        "newInput": 0.0511,
+        "oldOutput": 0.0923,
+        "newOutput": 0.07020000000000001
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-latest",
+        "modelName": "Z.ai: GLM Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.079,
+        "newInput": 0.075,
+        "oldOutput": 1.4,
+        "newOutput": 4.295000000000001
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0422,
+        "newInput": 0.0422,
+        "oldOutput": 0.1729,
+        "newOutput": 0.1763
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.0825,
+        "newInput": 0.13199999999999998,
+        "oldOutput": 0.33,
+        "newOutput": 0.5279999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.238,
+        "newInput": 0.19,
+        "oldOutput": 24,
+        "newOutput": 8.940000000000001
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.733236,
+        "newInput": 0.216108,
+        "oldOutput": 1.466472,
+        "newOutput": 0.432216
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.27,
+        "newInput": 0.3,
+        "oldOutput": 0.95,
+        "newOutput": 1.2
+      }
+    ]
+  },
+  {
     "date": "2026-10-23",
     "items": [
       {

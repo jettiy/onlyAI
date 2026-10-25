@@ -1,5 +1,86 @@
 [
   {
+    "date": "2026-10-25",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "liquid/lfm-2.5-2.6b",
+        "modelName": "LiquidAI: LFM2.5-2.6B",
+        "provider": "LIQUID",
+        "description": "새 모델 추가",
+        "input": 0.35,
+        "output": 0.5,
+        "context": "128K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.7505999999999999,
+        "newInput": 0.834,
+        "oldOutput": 2.2509,
+        "newOutput": 2.501
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-latest",
+        "modelName": "Z.ai: GLM Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.075,
+        "newInput": 0.0703,
+        "oldOutput": 4.295000000000001,
+        "newOutput": 4.3843
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0908,
+        "newInput": 0.079,
+        "oldOutput": 1.61,
+        "newOutput": 1.4
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.0825,
+        "newInput": 0.13199999999999998,
+        "oldOutput": 0.33,
+        "newOutput": 0.5279999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.19,
+        "newInput": 0.2147,
+        "oldOutput": 8.940000000000001,
+        "newOutput": 8.1113
+      },
+      {
+        "type": "price_change",
+        "modelId": "meta-llama/llama-3.2-3b-instruct",
+        "modelName": "Meta: Llama 3.2 3B Instruct",
+        "provider": "META-LLAMA",
+        "description": "가격 변동",
+        "oldInput": 0.0509,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.335,
+        "newOutput": 0.33
+      }
+    ]
+  },
+  {
     "date": "2026-10-24",
     "items": [
       {

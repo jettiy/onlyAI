@@ -1,5 +1,127 @@
 [
   {
+    "date": "2026-10-26",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.051300000000000005,
+        "newInput": 0.041299999999999996,
+        "oldOutput": 0.0701,
+        "newOutput": 0.0758
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-latest",
+        "modelName": "Z.ai: GLM Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0703,
+        "newInput": 0.0699,
+        "oldOutput": 4.3843,
+        "newOutput": 1.4
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.079,
+        "newInput": 0.0699,
+        "oldOutput": 1.4,
+        "newOutput": 1.4
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0422,
+        "newInput": 0.0422,
+        "oldOutput": 0.1763,
+        "newOutput": 0.1694
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.23900000000000002,
+        "newInput": 0.189,
+        "oldOutput": 10.8,
+        "newOutput": 20
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.1814,
+        "newInput": 0.17950000000000002,
+        "oldOutput": 8.5226,
+        "newOutput": 7.6972
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.20879999999999999,
+        "newInput": 0.753768,
+        "oldOutput": 0.41759999999999997,
+        "newOutput": 1.507536
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.0675,
+        "newInput": 0.09,
+        "oldOutput": 0.22499999999999998,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-122b-a10b",
+        "modelName": "Qwen: Qwen3.5-122B-A10B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.39999999999999997,
+        "newInput": 0.26,
+        "oldOutput": 3.1999999999999997,
+        "newOutput": 2.08
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-30b-a3b-instruct-2507",
+        "modelName": "Qwen: Qwen3 30B A3B Instruct 2507",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "model_removed",
+        "modelId": "arcee-ai/trinity-large-thinking",
+        "modelName": "Arcee AI: Trinity Large Thinking",
+        "provider": "ARCEE-AI",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-10-25",
     "items": [
       {

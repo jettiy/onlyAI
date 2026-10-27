@@ -133,6 +133,17 @@
   },
   {
     "rank": 13,
+    "model": "PrismML: Ternary Bonsai 2 9B",
+    "provider": "PRISM-ML",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 14,
     "model": "Moondream: Moondream 3 Preview",
     "provider": "MOONDREAM",
     "tokens": "LIVE",
@@ -143,7 +154,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 14,
+    "rank": 15,
     "model": "Moondream: Moondream 3.1",
     "provider": "MOONDREAM",
     "tokens": "LIVE",
@@ -154,7 +165,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 15,
+    "rank": 16,
     "model": "Meta: Muse Spark Open",
     "provider": "META",
     "tokens": "LIVE",
@@ -165,7 +176,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 16,
+    "rank": 17,
     "model": "NVIDIA: Nemotron 3.5 Super VL",
     "provider": "NVIDIA",
     "tokens": "LIVE",
@@ -176,7 +187,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 17,
+    "rank": 18,
     "model": "NVIDIA: Nemotron 3.5 Super VL (free)",
     "provider": "NVIDIA",
     "tokens": "LIVE",
@@ -187,7 +198,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 18,
+    "rank": 19,
     "model": "Pareto 26.10",
     "provider": "UNBIASED",
     "tokens": "LIVE",
@@ -198,20 +209,9 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 19,
+    "rank": 20,
     "model": "Pareto Latest",
     "provider": "~UNBIASED",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 20,
-    "model": "Pareto 26.9",
-    "provider": "UNBIASED",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,

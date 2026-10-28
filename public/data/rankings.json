@@ -1,6 +1,17 @@
 [
   {
     "rank": 1,
+    "model": "Particle AI: Particle-1",
+    "provider": "PARTICLE-AI",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "NEW",
+    "category": "flagship",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 2,
     "model": "OpenAI: GPT-6.1 Terra Pro",
     "provider": "OPENAI",
     "tokens": "LIVE",
@@ -11,7 +22,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 2,
+    "rank": 3,
     "model": "OpenAI: GPT-6.1 Terra Pro (batch)",
     "provider": "OPENAI",
     "tokens": "LIVE",
@@ -22,7 +33,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 3,
+    "rank": 4,
     "model": "OpenAI: GPT-6.1 Terra",
     "provider": "OPENAI",
     "tokens": "LIVE",
@@ -33,7 +44,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 4,
+    "rank": 5,
     "model": "OpenAI: GPT-6.1 Terra (batch)",
     "provider": "OPENAI",
     "tokens": "LIVE",
@@ -44,18 +55,18 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 5,
+    "rank": 6,
     "model": "MoonshotAI: Kimi K3.1 Pro",
     "provider": "MOONSHOTAI",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,
-    "change": "NEW",
-    "category": "flagship",
+    "change": "",
+    "category": "value",
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 6,
+    "rank": 7,
     "model": "Recursive: Flint (free)",
     "provider": "RECURSIVE",
     "tokens": "LIVE",
@@ -66,7 +77,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 7,
+    "rank": 8,
     "model": "MiniMax: MiniMax M3.1 Flash",
     "provider": "MINIMAX",
     "tokens": "LIVE",
@@ -77,7 +88,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 8,
+    "rank": 9,
     "model": "DeepSeek: DeepSeek V4.1 Flash 1017",
     "provider": "DEEPSEEK",
     "tokens": "LIVE",
@@ -88,7 +99,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 9,
+    "rank": 10,
     "model": "Elorian: Glimpse",
     "provider": "ELORIAN",
     "tokens": "LIVE",
@@ -99,7 +110,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 10,
+    "rank": 11,
     "model": "XingChen: Xing4.0 29B A4B (free)",
     "provider": "XINGCHEN-AGI",
     "tokens": "LIVE",
@@ -110,7 +121,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 11,
+    "rank": 12,
     "model": "Reflection: Beam 1.0 501B A23B",
     "provider": "REFLECTION",
     "tokens": "LIVE",
@@ -121,18 +132,18 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 12,
+    "rank": 13,
     "model": "Inception: Mercury 3",
     "provider": "INCEPTION",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,
     "change": "",
-    "category": "value",
+    "category": "free",
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 13,
+    "rank": 14,
     "model": "PrismML: Ternary Bonsai 2 9B",
     "provider": "PRISM-ML",
     "tokens": "LIVE",
@@ -143,7 +154,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 14,
+    "rank": 15,
     "model": "Moondream: Moondream 3 Preview",
     "provider": "MOONDREAM",
     "tokens": "LIVE",
@@ -154,7 +165,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 15,
+    "rank": 16,
     "model": "Moondream: Moondream 3.1",
     "provider": "MOONDREAM",
     "tokens": "LIVE",
@@ -165,7 +176,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 16,
+    "rank": 17,
     "model": "Meta: Muse Spark Open",
     "provider": "META",
     "tokens": "LIVE",
@@ -176,7 +187,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 17,
+    "rank": 18,
     "model": "NVIDIA: Nemotron 3.5 Super VL",
     "provider": "NVIDIA",
     "tokens": "LIVE",
@@ -187,7 +198,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 18,
+    "rank": 19,
     "model": "NVIDIA: Nemotron 3.5 Super VL (free)",
     "provider": "NVIDIA",
     "tokens": "LIVE",
@@ -198,20 +209,9 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 19,
+    "rank": 20,
     "model": "Pareto 26.10",
     "provider": "UNBIASED",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 20,
-    "model": "Pareto Latest",
-    "provider": "~UNBIASED",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,

@@ -200,6 +200,137 @@
         "modelName": "OpenAI: GPT-4 Turbo",
         "provider": "OPENAI",
         "description": "모델 제거"
+      },
+      {
+        "type": "new_model",
+        "modelId": "particle-ai/particle-1",
+        "modelName": "Particle AI: Particle-1",
+        "provider": "PARTICLE-AI",
+        "description": "새 모델 추가",
+        "input": 0.25,
+        "output": 1,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-pro-latest",
+        "modelName": "DeepSeek: DeepSeek Pro Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.16390000000000002,
+        "newInput": 0.1035,
+        "oldOutput": 8,
+        "newOutput": 8
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0115,
+        "newInput": 0.0138,
+        "oldOutput": 1.7999999999999998,
+        "newOutput": 1.7999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.14,
+        "newInput": 0.045,
+        "oldOutput": 0.42,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "ibm-granite/granite-4.2-8b",
+        "modelName": "IBM: Granite 4.2 8B",
+        "provider": "IBM-GRANITE",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.06,
+        "oldOutput": 0.25,
+        "newOutput": 0.15
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0259,
+        "newInput": 0.0313,
+        "oldOutput": 0.1042,
+        "newOutput": 0.0923
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.0313,
+        "oldOutput": 0.5,
+        "newOutput": 0.0923
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.8-27b",
+        "modelName": "Qwen: Qwen3.8 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.039,
+        "newInput": 0.19999999999999998,
+        "oldOutput": 1.25,
+        "newOutput": 2.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.22,
+        "newInput": 0.192,
+        "oldOutput": 20,
+        "newOutput": 20
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.014,
+        "newInput": 0.006,
+        "oldOutput": 7,
+        "newOutput": 5.4
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.2185,
+        "newInput": 0.18239999999999998,
+        "oldOutput": 8.099,
+        "newOutput": 9.338799999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.0765,
+        "oldOutput": 0.3,
+        "newOutput": 0.255
       }
     ]
   },

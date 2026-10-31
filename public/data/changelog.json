@@ -136,6 +136,72 @@
         "modelName": "Poolside: Laguna XS 2.1",
         "provider": "POOLSIDE",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0141,
+        "newInput": 0.0141,
+        "oldOutput": 0.144,
+        "newOutput": 0.11
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.016300000000000002,
+        "newInput": 0.0149,
+        "oldOutput": 0.1479,
+        "newOutput": 0.1543
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.016300000000000002,
+        "newInput": 0.0149,
+        "oldOutput": 0.1479,
+        "newOutput": 0.1543
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro-0813",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0813",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.66,
+        "newInput": 0.11499999999999999,
+        "oldOutput": 1.9800000000000002,
+        "newOutput": 4
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.05764,
+        "newInput": 0.0474,
+        "oldOutput": 0.17292,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-4.7",
+        "modelName": "Z.ai: GLM 4.7",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.54,
+        "newInput": 0.6,
+        "oldOutput": 1.9800000000000002,
+        "newOutput": 2.2
       }
     ]
   },

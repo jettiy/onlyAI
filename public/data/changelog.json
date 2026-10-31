@@ -1,5 +1,145 @@
 [
   {
+    "date": "2026-10-31",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-pro-latest",
+        "modelName": "DeepSeek: DeepSeek Pro Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.1035,
+        "newInput": 0.1035,
+        "oldOutput": 4,
+        "newOutput": 8
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.022,
+        "newInput": 0.0141,
+        "oldOutput": 0.192,
+        "newOutput": 0.144
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.019700000000000002,
+        "newInput": 0.016300000000000002,
+        "oldOutput": 0.1324,
+        "newOutput": 0.1479
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.019700000000000002,
+        "newInput": 0.016300000000000002,
+        "oldOutput": 0.1324,
+        "newOutput": 0.1479
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.10400000000000001,
+        "newInput": 0.0699,
+        "oldOutput": 2.769,
+        "newOutput": 1.4
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.8-27b",
+        "modelName": "Qwen: Qwen3.8 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.04,
+        "oldOutput": 1.875,
+        "newOutput": 2.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.045200000000000004,
+        "newInput": 0.05764,
+        "oldOutput": 0.3,
+        "newOutput": 0.17292
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.006,
+        "newInput": 0.006,
+        "oldOutput": 7,
+        "newOutput": 6.8
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.15389999999999998,
+        "newInput": 0.14950000000000002,
+        "oldOutput": 10.148900000000001,
+        "newOutput": 7.15
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.6-27b",
+        "modelName": "Qwen: Qwen3.6 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.32,
+        "newInput": 0.44999999999999996,
+        "oldOutput": 3.1999999999999997,
+        "newOutput": 2.7
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.27,
+        "oldOutput": 1.2,
+        "newOutput": 0.95
+      },
+      {
+        "type": "model_removed",
+        "modelId": "poolside/laguna-s-2.1",
+        "modelName": "Poolside: Laguna S 2.1",
+        "provider": "POOLSIDE",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "poolside/laguna-xs-2.1",
+        "modelName": "Poolside: Laguna XS 2.1",
+        "provider": "POOLSIDE",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-10-30",
     "items": [
       {

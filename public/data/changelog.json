@@ -1,5 +1,98 @@
 [
   {
+    "date": "2026-11-01",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0141,
+        "newInput": 0.035,
+        "oldOutput": 0.11,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0149,
+        "newInput": 0.0285,
+        "oldOutput": 0.1543,
+        "newOutput": 0.0923
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0149,
+        "newInput": 0.0285,
+        "oldOutput": 0.1543,
+        "newOutput": 0.0923
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0699,
+        "newInput": 0.08,
+        "oldOutput": 1.4,
+        "newOutput": 3.5999999999999996
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.8-27b",
+        "modelName": "Qwen: Qwen3.8 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.04,
+        "newInput": 0.15,
+        "oldOutput": 2.3,
+        "newOutput": 1.875
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0474,
+        "newInput": 0.059,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.014,
+        "oldOutput": 0.6,
+        "newOutput": 0.052000000000000005
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-20b",
+        "modelName": "OpenAI: gpt-oss-20b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.018,
+        "newInput": 0.03,
+        "oldOutput": 0.09,
+        "newOutput": 0.13
+      }
+    ]
+  },
+  {
     "date": "2026-10-31",
     "items": [
       {

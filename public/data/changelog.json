@@ -1,5 +1,67 @@
 [
   {
+    "date": "2026-11-02",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "z-ai/glm-5.3-flashx-legal",
+        "modelName": "Z.ai: GLM 5.3 FlashX Legal",
+        "provider": "Z-AI",
+        "description": "새 모델 추가",
+        "input": 0.37,
+        "output": 1.25,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.059,
+        "newInput": 0.048400000000000006,
+        "oldOutput": 0.3,
+        "newOutput": 0.1452
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.0675,
+        "newInput": 0.0765,
+        "oldOutput": 0.22499999999999998,
+        "newOutput": 0.255
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.019000000000000003,
+        "newInput": 0.027,
+        "oldOutput": 0.06899999999999999,
+        "newOutput": 0.09999999999999999
+      },
+      {
+        "type": "model_removed",
+        "modelId": "nousresearch/hermes-3-llama-3.1-70b",
+        "modelName": "Nous: Hermes 3 70B Instruct",
+        "provider": "NOUSRESEARCH",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "nousresearch/hermes-3-llama-3.1-405b",
+        "modelName": "Nous: Hermes 3 405B Instruct",
+        "provider": "NOUSRESEARCH",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-11-01",
     "items": [
       {

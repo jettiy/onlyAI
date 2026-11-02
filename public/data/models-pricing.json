@@ -1,5 +1,17 @@
 [
   {
+    "id": "z-ai/glm-5.3-flashx-legal",
+    "name": "Z.ai: GLM 5.3 FlashX Legal",
+    "provider": "Z-AI",
+    "input": 0.37,
+    "output": 1.25,
+    "context": "1M",
+    "description": "GLM-5.3-FlashX-Legal (GLM-Legal) is Z.ai's legal-domain variant of GLM-5.3-FlashX, a native multimodal model that accepts text, image, and video input and produces text. It adds legal-domain mid-train",
+    "createdAt": 1793626154,
+    "modalities": "text+image+video->text",
+    "maxTokens": 131072
+  },
+  {
     "id": "particle-ai/particle-1",
     "name": "Particle AI: Particle-1",
     "provider": "PARTICLE-AI",
@@ -177,7 +189,7 @@
     "description": "Muse Spark Open is a coding-optimized open-weight model. Trained specifically for agentic coding workflows, it delivers higher first-attempt accuracy, reliable tool calling, and deep codebase understa",
     "createdAt": 1792087069,
     "modalities": "text+image+file+audio+video->text",
-    "maxTokens": 131072
+    "maxTokens": 943718
   },
   {
     "id": "nvidia/nemotron-3.5-super-vl",
@@ -1407,13 +1419,13 @@
     "id": "~deepseek/deepseek-v4-flash-latest",
     "name": "DeepSeek: DeepSeek V4 Flash Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.059,
-    "output": 0.3,
+    "input": 0.048400000000000006,
+    "output": 0.1452,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "createdAt": 1785606009,
     "modalities": "text->text",
-    "maxTokens": 943718
+    "maxTokens": 131072
   },
   {
     "id": "deepseek/deepseek-v4-flash-0731",
@@ -2475,8 +2487,8 @@
     "id": "google/gemma-4-26b-a4b-it",
     "name": "Google: Gemma 4 26B A4B ",
     "provider": "GOOGLE",
-    "input": 0.0675,
-    "output": 0.22499999999999998,
+    "input": 0.0765,
+    "output": 0.255,
     "context": "262K",
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual",
     "createdAt": 1775227989,
@@ -3879,8 +3891,8 @@
     "id": "openai/gpt-oss-120b",
     "name": "OpenAI: gpt-oss-120b",
     "provider": "OPENAI",
-    "input": 0.019000000000000003,
-    "output": 0.06899999999999999,
+    "input": 0.027,
+    "output": 0.09999999999999999,
     "context": "131K",
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B par",
     "createdAt": 1754414231,
@@ -4856,30 +4868,6 @@
     "context": "131K",
     "description": "Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.1](/models/sao10k/l3-euryale-70b).",
     "createdAt": 1724803200,
-    "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
-    "id": "nousresearch/hermes-3-llama-3.1-70b",
-    "name": "Nous: Hermes 3 70B Instruct",
-    "provider": "NOUSRESEARCH",
-    "input": 0.7,
-    "output": 0.7,
-    "context": "131K",
-    "description": "Hermes 3 is a generalist language model with many improvements over [Hermes 2](/models/nousresearch/nous-hermes-2-mistral-7b-dpo), including advanced agentic capabilities, much better roleplaying, rea",
-    "createdAt": 1723939200,
-    "modalities": "text->text",
-    "maxTokens": 16384
-  },
-  {
-    "id": "nousresearch/hermes-3-llama-3.1-405b",
-    "name": "Nous: Hermes 3 405B Instruct",
-    "provider": "NOUSRESEARCH",
-    "input": 1,
-    "output": 1,
-    "context": "131K",
-    "description": "Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coheren",
-    "createdAt": 1723766400,
     "modalities": "text->text",
     "maxTokens": 16384
   },

@@ -296,6 +296,61 @@
         "newInput": 0.72,
         "oldOutput": 0.39999999999999997,
         "newOutput": 0.72
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.035,
+        "newInput": 0.0333,
+        "oldOutput": 0.315,
+        "newOutput": 0.475
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.192,
+        "newInput": 0.27599999999999997,
+        "oldOutput": 15,
+        "newOutput": 9.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.1786,
+        "newInput": 0.1529,
+        "oldOutput": 8.532,
+        "newOutput": 10.155100000000001
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.06899999999999999,
+        "newInput": 0.07600000000000001,
+        "oldOutput": 0.20800000000000002,
+        "newOutput": 0.228
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.028,
+        "newInput": 0.017,
+        "oldOutput": 0.105,
+        "newOutput": 0.063
       }
     ]
   },

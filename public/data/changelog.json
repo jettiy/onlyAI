@@ -202,6 +202,50 @@
         "modelName": "MiniMax: MiniMax-01",
         "provider": "MINIMAX",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "reflection/beam-1.0-501b-a23b",
+        "modelName": "Reflection: Beam 1.0 501B A23B",
+        "provider": "REFLECTION",
+        "description": "가격 변동",
+        "oldInput": 0.25,
+        "newInput": 0.3,
+        "oldOutput": 1,
+        "newOutput": 1
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0434,
+        "newInput": 0.059,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0434,
+        "newInput": 0.059,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.18239999999999998,
+        "newInput": 0.1529,
+        "oldOutput": 10.1583,
+        "newOutput": 9.338799999999999
       }
     ]
   },

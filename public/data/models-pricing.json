@@ -1,15 +1,39 @@
 [
   {
+    "id": "google/gemini-omni-1.2-flash",
+    "name": "Google: Gemini Omni 1.2 Flash",
+    "provider": "GOOGLE",
+    "input": 1.5,
+    "output": 9,
+    "context": "131K",
+    "description": "Gemini Omni 1.2 Flash is Google's native multimodal video generation and editing model, the successor to Gemini Omni 1.1 Flash. It generates clips up to 15 seconds long with native...",
+    "createdAt": 1793898961,
+    "modalities": "text+image+video->text+video",
+    "maxTokens": 65536
+  },
+  {
+    "id": "google/gemini-omni-1.1-flash",
+    "name": "Google: Gemini Omni 1.1 Flash",
+    "provider": "GOOGLE",
+    "input": 1.5,
+    "output": 9,
+    "context": "131K",
+    "description": "Gemini Omni 1.1 Flash is Google's native multimodal video generation and editing model, the generally available successor to Gemini Omni Flash Preview. It is suited for text-to-video, image-to-video, ",
+    "createdAt": 1793825668,
+    "modalities": "text+image+video->text+video",
+    "maxTokens": 65536
+  },
+  {
     "id": "ricursiveai/ripple-65b-preview",
     "name": "ricursiveAI/Ripple-65B-Preview",
     "provider": "RICURSIVEAI",
     "input": 0.19999999999999998,
     "output": 0.6,
-    "context": "16K",
+    "context": "1M",
     "description": "Ripple-65B-Preview by ricursiveAI, a 65B model with native tool calling, served in BF16.",
     "createdAt": 1793818990,
     "modalities": "text->text",
-    "maxTokens": 14745
+    "maxTokens": 131072
   },
   {
     "id": "tencent/hy4",
@@ -795,7 +819,7 @@
     "id": "~deepseek/deepseek-pro-latest",
     "name": "DeepSeek: DeepSeek Pro Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.1035,
+    "input": 0.0927,
     "output": 8,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
@@ -837,7 +861,7 @@
     "description": "Schematron V2 Small is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes extraction quality for complex schemas and long pages. Extraction instructions must be supplied t",
     "createdAt": 1789176933,
     "modalities": "text->text",
-    "maxTokens": 4096
+    "maxTokens": 8192
   },
   {
     "id": "~openai/gpt-astra-latest",
@@ -939,13 +963,13 @@
     "id": "deepseek/deepseek-v4.1-flash:batch",
     "name": "DeepSeek: DeepSeek V4.1 Flash (batch)",
     "provider": "DEEPSEEK",
-    "input": 0.049999999999999996,
-    "output": 0.15,
+    "input": 0.112,
+    "output": 0.33599999999999997,
     "context": "1M",
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on..",
     "createdAt": 1789021285,
     "modalities": "text+image->text",
-    "maxTokens": 384000
+    "maxTokens": 131072
   },
   {
     "id": "inception/mercury-2.5",
@@ -1359,8 +1383,8 @@
     "id": "deepseek/deepseek-v4-pro-0813",
     "name": "DeepSeek: DeepSeek V4 Pro 0813",
     "provider": "DEEPSEEK",
-    "input": 0.11499999999999999,
-    "output": 4.6,
+    "input": 0.103,
+    "output": 4.109999999999999,
     "context": "1M",
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "createdAt": 1786549364,
@@ -1452,6 +1476,18 @@
     "maxTokens": 16384
   },
   {
+    "id": "inclusionai/ling-3.0-tiny",
+    "name": "inclusionAI: Ling 3.0 Tiny",
+    "provider": "INCLUSIONAI",
+    "input": 0.015,
+    "output": 0.045,
+    "context": "262K",
+    "description": "Ling 3.0 Tiny is a mixture-of-experts model from InclusionAI, with 1.3B active parameters out of 7.9B total. It is designed for responsive agents, instruction following, and multi-turn conversations, ",
+    "createdAt": 1786034890,
+    "modalities": "text->text",
+    "maxTokens": 250000
+  },
+  {
     "id": "meta/muse-spark-1.2",
     "name": "Meta: Muse Spark 1.2",
     "provider": "META",
@@ -1467,7 +1503,7 @@
     "id": "~deepseek/deepseek-v4-flash-latest",
     "name": "DeepSeek: DeepSeek V4 Flash Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.059,
+    "input": 0.0434,
     "output": 0.3,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
@@ -1479,7 +1515,7 @@
     "id": "deepseek/deepseek-v4-flash-0731",
     "name": "DeepSeek: DeepSeek V4 Flash 0731",
     "provider": "DEEPSEEK",
-    "input": 0.059,
+    "input": 0.0434,
     "output": 0.3,
     "context": "1M",
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workfl",
@@ -2271,8 +2307,8 @@
     "id": "~moonshotai/kimi-latest",
     "name": "MoonshotAI: Kimi Latest",
     "provider": "~MOONSHOTAI",
-    "input": 0.1719,
-    "output": 9.338799999999999,
+    "input": 0.18239999999999998,
+    "output": 10.1583,
     "context": "1M",
     "description": "This model always redirects to the latest model in the Kimi family.",
     "createdAt": 1777318428,
@@ -2535,13 +2571,13 @@
     "id": "google/gemma-4-26b-a4b-it",
     "name": "Google: Gemma 4 26B A4B ",
     "provider": "GOOGLE",
-    "input": 0.04,
-    "output": 0.12100000000000001,
+    "input": 0.0765,
+    "output": 0.255,
     "context": "262K",
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual",
     "createdAt": 1775227989,
     "modalities": "text+image+video->text",
-    "maxTokens": 32768
+    "maxTokens": 235929
   },
   {
     "id": "google/gemma-4-31b-it",
@@ -2619,13 +2655,13 @@
     "id": "minimax/minimax-m2.7",
     "name": "MiniMax: MiniMax M2.7",
     "provider": "MINIMAX",
-    "input": 0.3,
-    "output": 1.2,
+    "input": 0.21,
+    "output": 0.84,
     "context": "205K",
     "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates ",
     "createdAt": 1773836697,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": 176947
   },
   {
     "id": "openai/gpt-5.4-nano",
@@ -3072,18 +3108,6 @@
     "maxTokens": 235929
   },
   {
-    "id": "minimax/minimax-m2-her",
-    "name": "MiniMax: MiniMax M2-her",
-    "provider": "MINIMAX",
-    "input": 0.3,
-    "output": 1.2,
-    "context": "66K",
-    "description": "MiniMax M2-her is a dialogue-first large language model built for immersive roleplay, character-driven chat, and expressive multi-turn conversations. Designed to stay consistent in tone and personalit",
-    "createdAt": 1769177239,
-    "modalities": "text->text",
-    "maxTokens": 2048
-  },
-  {
     "id": "writer/palmyra-x5",
     "name": "Writer: Palmyra X5",
     "provider": "WRITER",
@@ -3166,18 +3190,6 @@
     "createdAt": 1766504997,
     "modalities": "text+image+video->text",
     "maxTokens": 32768
-  },
-  {
-    "id": "minimax/minimax-m2.1",
-    "name": "MiniMax: MiniMax M2.1",
-    "provider": "MINIMAX",
-    "input": 0.3,
-    "output": 1.2,
-    "context": "205K",
-    "description": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers",
-    "createdAt": 1766454997,
-    "modalities": "text->text",
-    "maxTokens": 131072
   },
   {
     "id": "z-ai/glm-4.7",
@@ -3552,18 +3564,6 @@
     "maxTokens": 65536
   },
   {
-    "id": "minimax/minimax-m2",
-    "name": "MiniMax: MiniMax M2",
-    "provider": "MINIMAX",
-    "input": 0.255,
-    "output": 1.02,
-    "context": "205K",
-    "description": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows. With 10 billion activated parameters (230 billion total), it delivers near-frontier",
-    "createdAt": 1761252093,
-    "modalities": "text->text",
-    "maxTokens": 131072
-  },
-  {
     "id": "openai/gpt-5-image-mini",
     "name": "OpenAI: GPT-5 Image Mini",
     "provider": "OPENAI",
@@ -3795,13 +3795,13 @@
     "id": "qwen/qwen3-next-80b-a3b-instruct",
     "name": "Qwen: Qwen3 Next 80B A3B Instruct",
     "provider": "QWEN",
-    "input": 0.09999999999999999,
+    "input": 0.09,
     "output": 1.1,
     "context": "262K",
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code ",
     "createdAt": 1757612213,
     "modalities": "text->text",
-    "maxTokens": 235929
+    "maxTokens": 16384
   },
   {
     "id": "moonshotai/kimi-k2-0905",
@@ -3939,8 +3939,8 @@
     "id": "openai/gpt-oss-120b",
     "name": "OpenAI: gpt-oss-120b",
     "provider": "OPENAI",
-    "input": 0.019000000000000003,
-    "output": 0.071,
+    "input": 0.15,
+    "output": 0.6,
     "context": "131K",
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B par",
     "createdAt": 1754414231,
@@ -3963,13 +3963,13 @@
     "id": "openai/gpt-oss-20b",
     "name": "OpenAI: gpt-oss-20b",
     "provider": "OPENAI",
-    "input": 0.018,
-    "output": 0.09,
+    "input": 0.03,
+    "output": 0.13,
     "context": "131K",
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimiz",
     "createdAt": 1754414229,
     "modalities": "text->text",
-    "maxTokens": 32768
+    "maxTokens": 117964
   },
   {
     "id": "openai/gpt-oss-20b:batch",
@@ -4443,13 +4443,13 @@
     "id": "meta-llama/llama-4-maverick",
     "name": "Meta: Llama 4 Maverick",
     "provider": "META-LLAMA",
-    "input": 0.1875,
-    "output": 0.6525,
+    "input": 0.35,
+    "output": 1,
     "context": "524K",
     "description": "Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forw",
     "createdAt": 1743881822,
     "modalities": "text+image->text",
-    "maxTokens": 16384
+    "maxTokens": 32768
   },
   {
     "id": "meta-llama/llama-4-scout",
@@ -4680,18 +4680,6 @@
     "maxTokens": 114364
   },
   {
-    "id": "minimax/minimax-01",
-    "name": "MiniMax: MiniMax-01",
-    "provider": "MINIMAX",
-    "input": 0.19999999999999998,
-    "output": 1.1,
-    "context": "1M",
-    "description": "MiniMax-01 is a combines MiniMax-Text-01 for text generation and MiniMax-VL-01 for image understanding. It has 456 billion parameters, with 45.9 billion parameters activated per inference, and can han",
-    "createdAt": 1736915462,
-    "modalities": "text+image->text",
-    "maxTokens": 900172
-  },
-  {
     "id": "microsoft/phi-4",
     "name": "Microsoft: Phi 4",
     "provider": "MICROSOFT",
@@ -4731,13 +4719,13 @@
     "id": "meta-llama/llama-3.3-70b-instruct",
     "name": "Meta: Llama 3.3 70B Instruct",
     "provider": "META-LLAMA",
-    "input": 0.09999999999999999,
-    "output": 0.32,
+    "input": 0.59,
+    "output": 0.7899999999999999,
     "context": "131K",
     "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
     "createdAt": 1733506137,
     "modalities": "text->text",
-    "maxTokens": 16384
+    "maxTokens": 32768
   },
   {
     "id": "amazon/nova-lite-v1",

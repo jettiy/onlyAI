@@ -1,5 +1,142 @@
 [
   {
+    "date": "2026-11-06",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-pro-latest",
+        "modelName": "DeepSeek: DeepSeek Pro Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0927,
+        "newInput": 0.0999,
+        "oldOutput": 8,
+        "newOutput": 8
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.045,
+        "newInput": 0.051,
+        "oldOutput": 0.5,
+        "newOutput": 0.5670000000000001
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-vision-exp",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.21559999999999999,
+        "newInput": 0.44,
+        "oldOutput": 0.6468,
+        "newOutput": 1.32
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro-0813",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0813",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.103,
+        "newInput": 0.1165,
+        "oldOutput": 4.109999999999999,
+        "newOutput": 4.66
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.059,
+        "newInput": 0.0448,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.059,
+        "newInput": 0.0448,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.1529,
+        "newInput": 0.1529,
+        "oldOutput": 9.338799999999999,
+        "newOutput": 10.5572
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 1.5999999999999999,
+        "newInput": 0.800748,
+        "oldOutput": 3.1999999999999997,
+        "newOutput": 1.601496
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.0765,
+        "newInput": 0.09,
+        "oldOutput": 0.255,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3-super-120b-a12b",
+        "modelName": "NVIDIA: Nemotron 3 Super",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.075,
+        "oldOutput": 2.4,
+        "newOutput": 0.39999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.020999999999999998,
+        "oldOutput": 0.6,
+        "newOutput": 0.078
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-chat",
+        "modelName": "DeepSeek: DeepSeek V3",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.2574,
+        "newInput": 0.32,
+        "oldOutput": 1.0287,
+        "newOutput": 0.8899999999999999
+      }
+    ]
+  },
+  {
     "date": "2026-11-05",
     "items": [
       {

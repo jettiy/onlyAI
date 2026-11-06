@@ -133,6 +133,122 @@
         "newInput": 0.32,
         "oldOutput": 1.0287,
         "newOutput": 0.8899999999999999
+      },
+      {
+        "type": "new_model",
+        "modelId": "qwen/qwen3.8-27b:batch",
+        "modelName": "Qwen: Qwen3.8 27B (batch)",
+        "provider": "QWEN",
+        "description": "새 모델 추가",
+        "input": 0.16,
+        "output": 2,
+        "context": "262K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "meta/muse-glimmer-30b:batch",
+        "modelName": "Meta: Muse Glimmer 30B (batch)",
+        "provider": "META",
+        "description": "새 모델 추가",
+        "input": 0.24,
+        "output": 0.96,
+        "context": "131K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "deepseek/deepseek-v4-flash-0731:batch",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731 (batch)",
+        "provider": "DEEPSEEK",
+        "description": "새 모델 추가",
+        "input": 0.048,
+        "output": 0.144,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "thinkingmachines/inkling-small:batch",
+        "modelName": "Thinking Machines: Inkling Small (batch)",
+        "provider": "THINKINGMACHINES",
+        "description": "새 모델 추가",
+        "input": 0.36,
+        "output": 0.96,
+        "context": "524K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "minimax/minimax-m3:batch",
+        "modelName": "MiniMax: MiniMax M3 (batch)",
+        "provider": "MINIMAX",
+        "description": "새 모델 추가",
+        "input": 0.224,
+        "output": 0.88,
+        "context": "524K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0448,
+        "newInput": 0.0434,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0448,
+        "newInput": 0.0434,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.1529,
+        "newInput": 0.18239999999999998,
+        "oldOutput": 10.5572,
+        "newOutput": 10.5539
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.800748,
+        "newInput": 0.709572,
+        "oldOutput": 1.601496,
+        "newOutput": 1.419144
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.0675,
+        "oldOutput": 0.3,
+        "newOutput": 0.22499999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.020999999999999998,
+        "newInput": 0.013000000000000001,
+        "oldOutput": 0.078,
+        "newOutput": 0.049
       }
     ]
   },

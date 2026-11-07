@@ -1,5 +1,86 @@
 [
   {
+    "date": "2026-11-07",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "liquid/lfm-3-1.7b",
+        "modelName": "LiquidAI: LFM3-1.7B",
+        "provider": "LIQUID",
+        "description": "새 모델 추가",
+        "input": 0.08,
+        "output": 0.19999999999999998,
+        "context": "262K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "inclusionai/ling-3.1-flash",
+        "modelName": "inclusionAI: Ling 3.1 Flash",
+        "provider": "INCLUSIONAI",
+        "description": "가격 변동",
+        "oldInput": 0.075,
+        "newInput": 0.045,
+        "oldOutput": 0.22499999999999998,
+        "newOutput": 0.135
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro-0813",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0813",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.1165,
+        "newInput": 0.111,
+        "oldOutput": 4.66,
+        "newOutput": 4.4399999999999995
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.18239999999999998,
+        "newInput": 0.1558,
+        "oldOutput": 10.5539,
+        "newOutput": 10.1427
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.709572,
+        "newInput": 0.626748,
+        "oldOutput": 1.419144,
+        "newOutput": 1.253496
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.27,
+        "newInput": 0.3,
+        "oldOutput": 0.95,
+        "newOutput": 1.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.013000000000000001,
+        "newInput": 0.019000000000000003,
+        "oldOutput": 0.049,
+        "newOutput": 0.07
+      }
+    ]
+  },
+  {
     "date": "2026-11-06",
     "items": [
       {

@@ -77,6 +77,50 @@
         "newInput": 0.019000000000000003,
         "oldOutput": 0.049,
         "newOutput": 0.07
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0285,
+        "newInput": 0.0335,
+        "oldOutput": 0.0923,
+        "newOutput": 0.083
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.1558,
+        "newInput": 0.18239999999999998,
+        "oldOutput": 10.1427,
+        "newOutput": 9.338799999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.626748,
+        "newInput": 0.525306,
+        "oldOutput": 1.253496,
+        "newOutput": 1.050612
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.5",
+        "modelName": "MoonshotAI: Kimi K2.5",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.5,
+        "newInput": 0.532,
+        "oldOutput": 2.5,
+        "newOutput": 3.3249999999999997
       }
     ]
   },

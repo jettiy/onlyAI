@@ -205,6 +205,72 @@
         "modelName": "Inception: Mercury 2",
         "provider": "INCEPTION",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3:batch",
+        "modelName": "Z.ai: GLM 5.3 (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.314,
+        "newInput": 0.34900000000000003,
+        "oldOutput": 1.271,
+        "newOutput": 1.271
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0434,
+        "newInput": 0.0434,
+        "oldOutput": 0.28,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0434,
+        "newInput": 0.0434,
+        "oldOutput": 0.28,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2:batch",
+        "modelName": "Z.ai: GLM 5.2 (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.314,
+        "newInput": 0.34900000000000003,
+        "oldOutput": 1.271,
+        "newOutput": 1.271
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.16049999999999998,
+        "newInput": 0.1624,
+        "oldOutput": 9.338799999999999,
+        "newOutput": 9.7471
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.020999999999999998,
+        "newInput": 0.018,
+        "oldOutput": 0.078,
+        "newOutput": 0.065
       }
     ]
   },

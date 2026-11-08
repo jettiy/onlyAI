@@ -1,5 +1,214 @@
 [
   {
+    "date": "2026-11-08",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017:batch",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
+        "provider": "DEEPSEEK",
+        "description": "새 모델 추가",
+        "input": 0.011,
+        "output": 0.19999999999999998,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "z-ai/glm-5.2:batch",
+        "modelName": "Z.ai: GLM 5.2 (batch)",
+        "provider": "Z-AI",
+        "description": "새 모델 추가",
+        "input": 0.314,
+        "output": 1.271,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "morph/morph-v3-large:batch",
+        "modelName": "Morph: Morph V3 Large (batch)",
+        "provider": "MORPH",
+        "description": "새 모델 추가",
+        "input": 0.44999999999999996,
+        "output": 0.95,
+        "context": "262K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "morph/morph-v3-fast:batch",
+        "modelName": "Morph: Morph V3 Fast (batch)",
+        "provider": "MORPH",
+        "description": "새 모델 추가",
+        "input": 0.39999999999999997,
+        "output": 0.6,
+        "context": "82K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.006,
+        "oldOutput": 0.6,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash:batch",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash (batch)",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.112,
+        "newInput": 0.011,
+        "oldOutput": 0.33599999999999997,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.0335,
+        "oldOutput": 0.5,
+        "newOutput": 0.083
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3:batch",
+        "modelName": "Z.ai: GLM 5.3 (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.44999999999999996,
+        "newInput": 0.314,
+        "oldOutput": 2,
+        "newOutput": 1.271
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0434,
+        "newInput": 0.0434,
+        "oldOutput": 0.3,
+        "newOutput": 0.28
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0434,
+        "newInput": 0.0434,
+        "oldOutput": 0.3,
+        "newOutput": 0.28
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3:batch",
+        "modelName": "MoonshotAI: Kimi K3 (batch)",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 2.2800000000000002,
+        "newInput": 0.9169999999999999,
+        "oldOutput": 11.399999999999999,
+        "newOutput": 6
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.18239999999999998,
+        "newInput": 0.16049999999999998,
+        "oldOutput": 9.338799999999999,
+        "newOutput": 9.338799999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.6-27b",
+        "modelName": "Qwen: Qwen3.6 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.44999999999999996,
+        "newInput": 0.32,
+        "oldOutput": 2.7,
+        "newOutput": 3.1999999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.525306,
+        "newInput": 0.20879999999999999,
+        "oldOutput": 1.050612,
+        "newOutput": 0.41759999999999997
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.019000000000000003,
+        "newInput": 0.020999999999999998,
+        "oldOutput": 0.071,
+        "newOutput": 0.078
+      },
+      {
+        "type": "price_change",
+        "modelId": "meta-llama/llama-3.2-3b-instruct",
+        "modelName": "Meta: Llama 3.2 3B Instruct",
+        "provider": "META-LLAMA",
+        "description": "가격 변동",
+        "oldInput": 0.0509,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.335,
+        "newOutput": 0.33
+      },
+      {
+        "type": "price_change",
+        "modelId": "meta-llama/llama-3.1-8b-instruct",
+        "modelName": "Meta: Llama 3.1 8B Instruct",
+        "provider": "META-LLAMA",
+        "description": "가격 변동",
+        "oldInput": 0.049999999999999996,
+        "newInput": 0.02,
+        "oldOutput": 0.08,
+        "newOutput": 0.04
+      },
+      {
+        "type": "model_removed",
+        "modelId": "inception/mercury-3",
+        "modelName": "Inception: Mercury 3",
+        "provider": "INCEPTION",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "inception/mercury-2.5",
+        "modelName": "Inception: Mercury 2.5",
+        "provider": "INCEPTION",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "inception/mercury-2",
+        "modelName": "Inception: Mercury 2",
+        "provider": "INCEPTION",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-11-07",
     "items": [
       {

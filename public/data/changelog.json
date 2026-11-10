@@ -100,6 +100,135 @@
         "newInput": 0.71,
         "oldOutput": 0.7899999999999999,
         "newOutput": 0.71
+      },
+      {
+        "type": "new_model",
+        "modelId": "google/gemini-4-carbon",
+        "modelName": "Google: Gemini 4 Carbon",
+        "provider": "GOOGLE",
+        "description": "새 모델 추가",
+        "input": 2,
+        "output": 10,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "google/gemini-4-carbon:batch",
+        "modelName": "Google: Gemini 4 Carbon (batch)",
+        "provider": "GOOGLE",
+        "description": "새 모델 추가",
+        "input": 1,
+        "output": 5,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "nex-agi/nex-n2.6",
+        "modelName": "Nex AGI: Nex-N2.6",
+        "provider": "NEX-AGI",
+        "description": "새 모델 추가",
+        "input": 0.12,
+        "output": 0.39999999999999997,
+        "context": "262K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m3.1-flash",
+        "modelName": "MiniMax: MiniMax M3.1 Flash",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.075,
+        "oldOutput": 0.6,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.051,
+        "newInput": 0.3,
+        "oldOutput": 0.5670000000000001,
+        "newOutput": 1.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.834,
+        "newInput": 0.7505999999999999,
+        "oldOutput": 2.501,
+        "newOutput": 2.2509
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0335,
+        "newInput": 0.0399,
+        "oldOutput": 0.083,
+        "newOutput": 0.0784
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.0399,
+        "oldOutput": 0.5,
+        "newOutput": 0.0784
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash:batch",
+        "modelName": "Z.ai: GLM 5.3 Flash (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.03,
+        "newInput": 0.037,
+        "oldOutput": 0.061000000000000006,
+        "newOutput": 0.061000000000000006
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.13199999999999998,
+        "newInput": 0.0825,
+        "oldOutput": 0.5279999999999999,
+        "newOutput": 0.33
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2:batch",
+        "modelName": "Z.ai: GLM 5.2 (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.623,
+        "newInput": 0.527,
+        "oldOutput": 1.271,
+        "newOutput": 1.0750000000000002
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.1624,
+        "newInput": 0.18239999999999998,
+        "oldOutput": 9.338799999999999,
+        "newOutput": 9.338799999999999
       }
     ]
   },

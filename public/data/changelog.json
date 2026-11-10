@@ -229,6 +229,81 @@
         "newInput": 0.18239999999999998,
         "oldOutput": 9.338799999999999,
         "newOutput": 9.338799999999999
+      },
+      {
+        "type": "new_model",
+        "modelId": "baidu/ernie-5.5-flash-preview",
+        "modelName": "Baidu: ERNIE-5.5-Flash-Preview",
+        "provider": "BAIDU",
+        "description": "새 모델 추가",
+        "input": 0.28,
+        "output": 1.13,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "baidu/ernie-light-dt-1.0-intl",
+        "modelName": "Baidu: ERNIE-Light-DT-1.0",
+        "provider": "BAIDU",
+        "description": "새 모델 추가",
+        "input": 1.13,
+        "output": 3.9400000000000004,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash:batch",
+        "modelName": "Z.ai: GLM 5.3 Flash (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.037,
+        "newInput": 0.041999999999999996,
+        "oldOutput": 0.061000000000000006,
+        "newOutput": 0.061000000000000006
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.9552599999999999,
+        "newInput": 0.88044,
+        "oldOutput": 1.9105199999999998,
+        "newOutput": 1.76088
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.27,
+        "oldOutput": 1.2,
+        "newOutput": 1.08
+      },
+      {
+        "type": "price_change",
+        "modelId": "mancer/weaver",
+        "modelName": "Mancer: Weaver (alpha)",
+        "provider": "MANCER",
+        "description": "가격 변동",
+        "oldInput": 0.39999999999999997,
+        "newInput": 0.3,
+        "oldOutput": 0.75,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "undi95/remm-slerp-l2-13b",
+        "modelName": "ReMM SLERP 13B",
+        "provider": "UNDI95",
+        "description": "가격 변동",
+        "oldInput": 0.35,
+        "newInput": 0.3,
+        "oldOutput": 0.65,
+        "newOutput": 0.5
       }
     ]
   },

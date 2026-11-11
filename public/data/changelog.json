@@ -1,5 +1,131 @@
 [
   {
+    "date": "2026-11-11",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "kt/midm-k-3.0-pro",
+        "modelName": "KT: Mi:dm K 3.0 Pro",
+        "provider": "KT",
+        "description": "새 모델 추가",
+        "input": 0.19999999999999998,
+        "output": 0.7999999999999999,
+        "context": "262K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "motif-technologies/motif-3",
+        "modelName": "Motif Technologies: Motif 3",
+        "provider": "MOTIF-TECHNOLOGIES",
+        "description": "새 모델 추가",
+        "input": 0.3,
+        "output": 1.2,
+        "context": "262K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.051,
+        "oldOutput": 1.2,
+        "newOutput": 0.5670000000000001
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash:batch",
+        "modelName": "Z.ai: GLM 5.3 Flash (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.041999999999999996,
+        "newInput": 0.047,
+        "oldOutput": 0.061000000000000006,
+        "newOutput": 0.061000000000000006
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.18239999999999998,
+        "newInput": 0.18239999999999998,
+        "oldOutput": 9.338799999999999,
+        "newOutput": 11.0055
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.091,
+        "newInput": 0.09,
+        "oldOutput": 0.182,
+        "newOutput": 0.18
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.1",
+        "modelName": "Z.ai: GLM 5.1",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 1.4,
+        "newInput": 1.33,
+        "oldOutput": 4.4,
+        "newOutput": 4.18
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-3-27b-it",
+        "modelName": "Google: Gemma 3 27B",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.08,
+        "oldOutput": 0.44999999999999996,
+        "newOutput": 0.35
+      },
+      {
+        "type": "model_removed",
+        "modelId": "baidu/ernie-5.5-flash-preview",
+        "modelName": "Baidu: ERNIE-5.5-Flash-Preview",
+        "provider": "BAIDU",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "bytedance-seed/seed-2.0-code",
+        "modelName": "ByteDance Seed: Seed-2.0-Code",
+        "provider": "BYTEDANCE-SEED",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "bytedance-seed/seed-1.6-flash",
+        "modelName": "ByteDance Seed: Seed 1.6 Flash",
+        "provider": "BYTEDANCE-SEED",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "bytedance-seed/seed-1.6",
+        "modelName": "ByteDance Seed: Seed 1.6",
+        "provider": "BYTEDANCE-SEED",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "qwen/qwen-2.5-7b-instruct",
+        "modelName": "Qwen: Qwen2.5 7B Instruct",
+        "provider": "QWEN",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-11-10",
     "items": [
       {

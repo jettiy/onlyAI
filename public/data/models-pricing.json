@@ -1,17 +1,5 @@
 [
   {
-    "id": "baidu/ernie-5.5-flash-preview",
-    "name": "Baidu: ERNIE-5.5-Flash-Preview",
-    "provider": "BAIDU",
-    "input": 0.28,
-    "output": 1.13,
-    "context": "1M",
-    "description": "ERNIE 5.5 Flash Preview is the latest foundation model in the ERNIE family, with comprehensive improvements in coding, agentic capabilities, knowledge work, and deep research. It has 280 billion total",
-    "createdAt": 1794333533,
-    "modalities": "text->text",
-    "maxTokens": 921600
-  },
-  {
     "id": "baidu/ernie-light-dt-1.0-intl",
     "name": "Baidu: ERNIE-Light-DT-1.0",
     "provider": "BAIDU",
@@ -120,6 +108,18 @@
     "maxTokens": 65536
   },
   {
+    "id": "kt/midm-k-3.0-pro",
+    "name": "KT: Mi:dm K 3.0 Pro",
+    "provider": "KT",
+    "input": 0.19999999999999998,
+    "output": 0.7999999999999999,
+    "context": "262K",
+    "description": "Mi:dm K 3.0 Pro is a Mixture-of-Experts reasoning model from KT, with 120B total and 12B active parameters. It uses a hybrid architecture that mixes Mamba, MoE and attention layers.",
+    "createdAt": 1793897701,
+    "modalities": "text->text",
+    "maxTokens": 235615
+  },
+  {
     "id": "google/gemini-omni-1.1-flash",
     "name": "Google: Gemini Omni 1.1 Flash",
     "provider": "GOOGLE",
@@ -154,6 +154,18 @@
     "createdAt": 1793766031,
     "modalities": "text+image->text",
     "maxTokens": 65536
+  },
+  {
+    "id": "motif-technologies/motif-3",
+    "name": "Motif Technologies: Motif 3",
+    "provider": "MOTIF-TECHNOLOGIES",
+    "input": 0.3,
+    "output": 1.2,
+    "context": "262K",
+    "description": "Motif 3 is a Mixture-of-Experts language model from Motif Technologies, with 314B total and 13.2B active parameters. It is a general-purpose multilingual model for English and Korean, particularly str",
+    "createdAt": 1793655334,
+    "modalities": "text->text",
+    "maxTokens": 235929
   },
   {
     "id": "z-ai/glm-5.3-flashx-legal",
@@ -1059,8 +1071,8 @@
     "id": "deepseek/deepseek-v4.1-flash",
     "name": "DeepSeek: DeepSeek V4.1 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.3,
-    "output": 1.2,
+    "input": 0.051,
+    "output": 0.5670000000000001,
     "context": "1M",
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on..",
     "createdAt": 1789021285,
@@ -1311,7 +1323,7 @@
     "id": "z-ai/glm-5.3-flash:batch",
     "name": "Z.ai: GLM 5.3 Flash (batch)",
     "provider": "Z-AI",
-    "input": 0.041999999999999996,
+    "input": 0.047,
     "output": 0.061000000000000006,
     "context": "1M",
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-contex",
@@ -1485,18 +1497,6 @@
     "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion tot",
     "createdAt": 1786551702,
     "modalities": "text->text",
-    "maxTokens": 131072
-  },
-  {
-    "id": "bytedance-seed/seed-2.0-code",
-    "name": "ByteDance Seed: Seed-2.0-Code",
-    "provider": "BYTEDANCE-SEED",
-    "input": 0.5,
-    "output": 3,
-    "context": "262K",
-    "description": "Seed 2.0 Code is a model from ByteDance Seed optimized for agentic coding. It is suited for frontend development, multilingual programming tasks, and coding-agent workflows in tools such as Claude...",
-    "createdAt": 1786550701,
-    "modalities": "text+image+video->text",
     "maxTokens": 131072
   },
   {
@@ -2488,7 +2488,7 @@
     "name": "MoonshotAI: Kimi Latest",
     "provider": "~MOONSHOTAI",
     "input": 0.18239999999999998,
-    "output": 9.338799999999999,
+    "output": 11.0055,
     "context": "1M",
     "description": "This model always redirects to the latest model in the Kimi family.",
     "createdAt": 1777318428,
@@ -2631,13 +2631,13 @@
     "id": "deepseek/deepseek-v4-flash",
     "name": "DeepSeek: DeepSeek V4 Flash 0423",
     "provider": "DEEPSEEK",
-    "input": 0.091,
-    "output": 0.182,
+    "input": 0.09,
+    "output": 0.18,
     "context": "1M",
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa",
     "createdAt": 1777000666,
     "modalities": "text->text",
-    "maxTokens": 943717
+    "maxTokens": 393216
   },
   {
     "id": "tencent/hy3-preview",
@@ -2739,8 +2739,8 @@
     "id": "z-ai/glm-5.1",
     "name": "Z.ai: GLM 5.1",
     "provider": "Z-AI",
-    "input": 1.4,
-    "output": 4.4,
+    "input": 1.33,
+    "output": 4.18,
     "context": "205K",
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work ",
     "createdAt": 1775578025,
@@ -2921,7 +2921,7 @@
     "provider": "NVIDIA",
     "input": 0.075,
     "output": 0.39999999999999997,
-    "context": "1M",
+    "context": "262K",
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mam",
     "createdAt": 1773245239,
     "modalities": "text->text",
@@ -3334,30 +3334,6 @@
     "createdAt": 1768409315,
     "modalities": "text+image->text",
     "maxTokens": 128000
-  },
-  {
-    "id": "bytedance-seed/seed-1.6-flash",
-    "name": "ByteDance Seed: Seed 1.6 Flash",
-    "provider": "BYTEDANCE-SEED",
-    "input": 0.075,
-    "output": 0.3,
-    "context": "262K",
-    "description": "Seed 1.6 Flash is an ultra-fast multimodal deep thinking model by ByteDance Seed, supporting both text and visual understanding. It features a 256k context window and can generate outputs of...",
-    "createdAt": 1766505011,
-    "modalities": "text+image+video->text",
-    "maxTokens": 32768
-  },
-  {
-    "id": "bytedance-seed/seed-1.6",
-    "name": "ByteDance Seed: Seed 1.6",
-    "provider": "BYTEDANCE-SEED",
-    "input": 0.25,
-    "output": 2,
-    "context": "262K",
-    "description": "Seed 1.6 is a general-purpose model released by the ByteDance Seed team. It incorporates multimodal capabilities and adaptive deep thinking with a 256K context window.",
-    "createdAt": 1766504997,
-    "modalities": "text+image+video->text",
-    "maxTokens": 32768
   },
   {
     "id": "z-ai/glm-4.7",
@@ -4720,7 +4696,7 @@
     "name": "Google: Gemma 3 27B",
     "provider": "GOOGLE",
     "input": 0.08,
-    "output": 0.44999999999999996,
+    "output": 0.35,
     "context": "131K",
     "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, ",
     "createdAt": 1741756359,
@@ -5002,18 +4978,6 @@
     "createdAt": 1729555200,
     "modalities": "text->text",
     "maxTokens": 4096
-  },
-  {
-    "id": "qwen/qwen-2.5-7b-instruct",
-    "name": "Qwen: Qwen2.5 7B Instruct",
-    "provider": "QWEN",
-    "input": 0.09999999999999999,
-    "output": 0.19999999999999998,
-    "context": "33K",
-    "description": "Qwen2.5 7B is the latest series of Qwen large language models. Qwen2.5 brings the following improvements upon Qwen2: - Significantly more knowledge and has greatly improved capabilities in coding and.",
-    "createdAt": 1729036800,
-    "modalities": "text->text",
-    "maxTokens": 29491
   },
   {
     "id": "meta-llama/llama-3.2-1b-instruct",

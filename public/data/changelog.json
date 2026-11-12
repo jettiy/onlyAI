@@ -347,6 +347,49 @@
         "newInput": 0.12,
         "oldOutput": 0.22,
         "newOutput": 0.24
+      },
+      {
+        "type": "new_model",
+        "modelId": "thinkingmachines/inkling-2-small",
+        "modelName": "Thinking Machines: Inkling 2 Small",
+        "provider": "THINKINGMACHINES",
+        "description": "새 모델 추가",
+        "input": 0.3,
+        "output": 1,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3.1-pro",
+        "modelName": "MoonshotAI: Kimi K3.1 Pro",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.2375,
+        "newInput": 0.2375,
+        "oldOutput": 8.785599999999999,
+        "newOutput": 8.4114
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.0765,
+        "oldOutput": 0.28,
+        "newOutput": 0.255
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-9b",
+        "modelName": "Qwen: Qwen3.5-9B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.078,
+        "newInput": 0.102,
+        "oldOutput": 0.114,
+        "newOutput": 0.15
       }
     ]
   },

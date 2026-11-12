@@ -72,6 +72,18 @@
     "maxTokens": 235929
   },
   {
+    "id": "thinkingmachines/inkling-2-small",
+    "name": "Thinking Machines: Inkling 2 Small",
+    "provider": "THINKINGMACHINES",
+    "input": 0.3,
+    "output": 1,
+    "context": "1M",
+    "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second...",
+    "createdAt": 1794261847,
+    "modalities": "text+image->text",
+    "maxTokens": 943718
+  },
+  {
     "id": "anthropic/claude-fable-5.2",
     "name": "Anthropic: Claude Fable 5.2",
     "provider": "ANTHROPIC",
@@ -268,7 +280,7 @@
     "name": "MoonshotAI: Kimi K3.1 Pro",
     "provider": "MOONSHOTAI",
     "input": 0.2375,
-    "output": 8.785599999999999,
+    "output": 8.4114,
     "context": "1M",
     "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
     "createdAt": 1792778188,
@@ -2823,13 +2835,13 @@
     "id": "google/gemma-4-26b-a4b-it",
     "name": "Google: Gemma 4 26B A4B ",
     "provider": "GOOGLE",
-    "input": 0.09,
-    "output": 0.28,
+    "input": 0.0765,
+    "output": 0.255,
     "context": "262K",
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual",
     "createdAt": 1775227989,
     "modalities": "text+image+video->text",
-    "maxTokens": 128000
+    "maxTokens": 235929
   },
   {
     "id": "google/gemma-4-31b-it",
@@ -3015,8 +3027,8 @@
     "id": "qwen/qwen3.5-9b",
     "name": "Qwen: Qwen3.5-9B",
     "provider": "QWEN",
-    "input": 0.078,
-    "output": 0.114,
+    "input": 0.102,
+    "output": 0.15,
     "context": "262K",
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified",
     "createdAt": 1773152396,

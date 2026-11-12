@@ -78,7 +78,7 @@
   },
   {
     "rank": 8,
-    "model": "Thinking Machines: Inkling 2 Small (free)",
+    "model": "Thinking Machines: Inkling 2 Small",
     "provider": "THINKINGMACHINES",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -89,6 +89,17 @@
   },
   {
     "rank": 9,
+    "model": "Thinking Machines: Inkling 2 Small (free)",
+    "provider": "THINKINGMACHINES",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "value",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 10,
     "model": "Anthropic: Claude Fable 5.2",
     "provider": "ANTHROPIC",
     "tokens": "LIVE",
@@ -99,7 +110,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 10,
+    "rank": 11,
     "model": "Anthropic: Claude Fable 5.2 (batch)",
     "provider": "ANTHROPIC",
     "tokens": "LIVE",
@@ -110,7 +121,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 11,
+    "rank": 12,
     "model": "Meta: Muse Ember",
     "provider": "META",
     "tokens": "LIVE",
@@ -121,19 +132,8 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 12,
-    "model": "LiquidAI: LFM3-1.7B",
-    "provider": "LIQUID",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
     "rank": 13,
-    "model": "LiquidAI: LFM3-1.7B (free)",
+    "model": "LiquidAI: LFM3-1.7B",
     "provider": "LIQUID",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -144,6 +144,17 @@
   },
   {
     "rank": 14,
+    "model": "LiquidAI: LFM3-1.7B (free)",
+    "provider": "LIQUID",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 15,
     "model": "Google: Gemini Omni 1.2 Flash",
     "provider": "GOOGLE",
     "tokens": "LIVE",
@@ -154,7 +165,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 15,
+    "rank": 16,
     "model": "KT: Mi:dm K 3.0 Pro",
     "provider": "KT",
     "tokens": "LIVE",
@@ -165,7 +176,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 16,
+    "rank": 17,
     "model": "Auto Router",
     "provider": "OPENROUTER",
     "tokens": "LIVE",
@@ -176,7 +187,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 17,
+    "rank": 18,
     "model": "Auto Code",
     "provider": "OPENROUTER",
     "tokens": "LIVE",
@@ -187,7 +198,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 18,
+    "rank": 19,
     "model": "Google: Gemini Omni 1.1 Flash",
     "provider": "GOOGLE",
     "tokens": "LIVE",
@@ -198,20 +209,9 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 19,
+    "rank": 20,
     "model": "Ricursive: Ripple 65B Preview",
     "provider": "RICURSIVEAI",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 20,
-    "model": "Tencent: Hy4",
-    "provider": "TENCENT",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,

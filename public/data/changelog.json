@@ -1,5 +1,130 @@
 [
   {
+    "date": "2026-11-12",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "unbiased/pareto-26.10-preview",
+        "modelName": "Pareto 26.10 Preview",
+        "provider": "UNBIASED",
+        "description": "새 모델 추가",
+        "input": 0.7999999999999999,
+        "output": 3.1999999999999997,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.051,
+        "newInput": 0.006,
+        "oldOutput": 0.5670000000000001,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "ibm-granite/granite-4.2-8b",
+        "modelName": "IBM: Granite 4.2 8B",
+        "provider": "IBM-GRANITE",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.06,
+        "oldOutput": 0.25,
+        "newOutput": 0.15
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.7505999999999999,
+        "newInput": 0.834,
+        "oldOutput": 2.2509,
+        "newOutput": 2.501
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3:batch",
+        "modelName": "Z.ai: GLM 5.3 (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.44999999999999996,
+        "newInput": 0.35,
+        "oldOutput": 2,
+        "newOutput": 1.0750000000000002
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-5.6-sol",
+        "modelName": "OpenAI: GPT-5.6 Sol",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 4,
+        "newInput": 4.4,
+        "oldOutput": 20,
+        "newOutput": 22
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.0825,
+        "newInput": 0.13199999999999998,
+        "oldOutput": 0.33,
+        "newOutput": 0.5279999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2:batch",
+        "modelName": "Z.ai: GLM 5.2 (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.527,
+        "newInput": 0.35,
+        "oldOutput": 1.0750000000000002,
+        "newOutput": 1.0750000000000002
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.88044,
+        "newInput": 0.9552599999999999,
+        "oldOutput": 1.76088,
+        "newOutput": 1.9105199999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.1",
+        "modelName": "Z.ai: GLM 5.1",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 1.33,
+        "newInput": 1.4,
+        "oldOutput": 4.18,
+        "newOutput": 4.4
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-9b",
+        "modelName": "Qwen: Qwen3.5-9B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.16999999999999998,
+        "newInput": 0.161,
+        "oldOutput": 0.25,
+        "newOutput": 0.237
+      }
+    ]
+  },
+  {
     "date": "2026-11-11",
     "items": [
       {

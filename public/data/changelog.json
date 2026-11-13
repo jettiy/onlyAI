@@ -143,6 +143,61 @@
         "modelName": "LiquidAI: LFM2.5-2.6B",
         "provider": "LIQUID",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2:batch",
+        "modelName": "Z.ai: GLM 5.2 (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.322,
+        "newInput": 0.34700000000000003,
+        "oldOutput": 0.989,
+        "newOutput": 1.068
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.0675,
+        "oldOutput": 0.3,
+        "newOutput": 0.22499999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-9b",
+        "modelName": "Qwen: Qwen3.5-9B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.16899999999999998,
+        "newInput": 0.136,
+        "oldOutput": 0.248,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-chat",
+        "modelName": "DeepSeek: DeepSeek V3",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.32,
+        "newInput": 0.2574,
+        "oldOutput": 0.8899999999999999,
+        "newOutput": 1.0287
+      },
+      {
+        "type": "price_change",
+        "modelId": "meta-llama/llama-3.2-3b-instruct",
+        "modelName": "Meta: Llama 3.2 3B Instruct",
+        "provider": "META-LLAMA",
+        "description": "가격 변동",
+        "oldInput": 0.049999999999999996,
+        "newInput": 0.0509,
+        "oldOutput": 0.33,
+        "newOutput": 0.335
       }
     ]
   },

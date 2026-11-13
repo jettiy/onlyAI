@@ -1,5 +1,152 @@
 [
   {
+    "date": "2026-11-13",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "ricursiveai/ripple-65b-preview",
+        "modelName": "Ricursive: Ripple 65B Preview",
+        "provider": "RICURSIVEAI",
+        "description": "가격 변동",
+        "oldInput": 0.19999999999999998,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.6,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3.1-pro",
+        "modelName": "MoonshotAI: Kimi K3.1 Pro",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.2375,
+        "newInput": 2,
+        "oldOutput": 8.4114,
+        "newOutput": 10
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.038000000000000006,
+        "oldOutput": 0.6,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.022,
+        "newInput": 0.038000000000000006,
+        "oldOutput": 0.39999999999999997,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "ibm-granite/granite-4.2-8b",
+        "modelName": "IBM: Granite 4.2 8B",
+        "provider": "IBM-GRANITE",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.06,
+        "oldOutput": 0.15,
+        "newOutput": 0.25
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3",
+        "modelName": "Z.ai: GLM 5.3",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0699,
+        "newInput": 0.08399999999999999,
+        "oldOutput": 1.4,
+        "newOutput": 3.5999999999999996
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.888966,
+        "newInput": 0.8999999999999999,
+        "oldOutput": 1.777932,
+        "newOutput": 1.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "xiaomi/mimo-v2.5-pro",
+        "modelName": "Xiaomi: MiMo-V2.5-Pro",
+        "provider": "XIAOMI",
+        "description": "가격 변동",
+        "oldInput": 0.48,
+        "newInput": 0.435,
+        "oldOutput": 1.7999999999999998,
+        "newOutput": 0.87
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.0765,
+        "newInput": 0.09,
+        "oldOutput": 0.255,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-9b",
+        "modelName": "Qwen: Qwen3.5-9B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.102,
+        "newInput": 0.16899999999999998,
+        "oldOutput": 0.15,
+        "newOutput": 0.248
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.27,
+        "newInput": 0.27,
+        "oldOutput": 1.08,
+        "newOutput": 0.95
+      },
+      {
+        "type": "model_removed",
+        "modelId": "inclusionai/ling-3.0-flash-sante",
+        "modelName": "inclusionAI: Ling 3.0 Flash Sante",
+        "provider": "INCLUSIONAI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "inclusionai/ling-3.0-flash-fin",
+        "modelName": "inclusionAI: Ling 3.0 Flash Fin",
+        "provider": "INCLUSIONAI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "liquid/lfm-2.5-2.6b",
+        "modelName": "LiquidAI: LFM2.5-2.6B",
+        "provider": "LIQUID",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-11-12",
     "items": [
       {

@@ -171,8 +171,8 @@
     "id": "ricursiveai/ripple-65b-preview",
     "name": "Ricursive: Ripple 65B Preview",
     "provider": "RICURSIVEAI",
-    "input": 0.19999999999999998,
-    "output": 0.6,
+    "input": 0.09999999999999999,
+    "output": 0.3,
     "context": "1M",
     "description": "Ripple-65B-Preview by ricursiveAI, a 65B model with native tool calling, served in BF16.",
     "createdAt": 1793818990,
@@ -279,8 +279,8 @@
     "id": "moonshotai/kimi-k3.1-pro",
     "name": "MoonshotAI: Kimi K3.1 Pro",
     "provider": "MOONSHOTAI",
-    "input": 0.2375,
-    "output": 8.4114,
+    "input": 2,
+    "output": 10,
     "context": "1M",
     "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
     "createdAt": 1792778188,
@@ -315,13 +315,13 @@
     "id": "deepseek/deepseek-v4.1-flash-1017",
     "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
     "provider": "DEEPSEEK",
-    "input": 0.15,
-    "output": 0.6,
+    "input": 0.038000000000000006,
+    "output": 0.5,
     "context": "1M",
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "createdAt": 1792225624,
     "modalities": "text+image->text",
-    "maxTokens": 393216
+    "maxTokens": 943718
   },
   {
     "id": "deepseek/deepseek-v4.1-flash-1017:batch",
@@ -405,7 +405,7 @@
     "description": "Muse Spark Open is a coding-optimized open-weight model. Trained specifically for agentic coding workflows, it delivers higher first-attempt accuracy, reliable tool calling, and deep codebase understa",
     "createdAt": 1792087069,
     "modalities": "text+image+file+audio+video->text",
-    "maxTokens": 262144
+    "maxTokens": 943718
   },
   {
     "id": "nvidia/nemotron-3.5-super-vl",
@@ -1011,8 +1011,8 @@
     "id": "~deepseek/deepseek-flash-latest",
     "name": "DeepSeek: DeepSeek Flash Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.022,
-    "output": 0.39999999999999997,
+    "input": 0.038000000000000006,
+    "output": 0.5,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "createdAt": 1789399150,
@@ -1224,18 +1224,6 @@
     "maxTokens": 128000
   },
   {
-    "id": "inclusionai/ling-3.0-flash-sante",
-    "name": "inclusionAI: Ling 3.0 Flash Sante",
-    "provider": "INCLUSIONAI",
-    "input": 0.041999999999999996,
-    "output": 0.12319999999999999,
-    "context": "262K",
-    "description": "Ling 3.0 Flash Sante is a health and medicine-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for...",
-    "createdAt": 1788545946,
-    "modalities": "text->text",
-    "maxTokens": 32768
-  },
-  {
     "id": "qwen/qwen3.8-max-0902",
     "name": "Qwen: Qwen3.8 Max (0902)",
     "provider": "QWEN",
@@ -1336,7 +1324,7 @@
     "name": "IBM: Granite 4.2 8B",
     "provider": "IBM-GRANITE",
     "input": 0.06,
-    "output": 0.15,
+    "output": 0.25,
     "context": "131K",
     "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-ef",
     "createdAt": 1788206780,
@@ -1354,18 +1342,6 @@
     "createdAt": 1787897375,
     "modalities": "text->text",
     "maxTokens": 64000
-  },
-  {
-    "id": "inclusionai/ling-3.0-flash-fin",
-    "name": "inclusionAI: Ling 3.0 Flash Fin",
-    "provider": "INCLUSIONAI",
-    "input": 0.041999999999999996,
-    "output": 0.12319999999999999,
-    "context": "262K",
-    "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
-    "createdAt": 1787846290,
-    "modalities": "text->text",
-    "maxTokens": 32768
   },
   {
     "id": "~z-ai/glm-flash-latest",
@@ -1491,8 +1467,8 @@
     "id": "z-ai/glm-5.3",
     "name": "Z.ai: GLM 5.3",
     "provider": "Z-AI",
-    "input": 0.0699,
-    "output": 1.4,
+    "input": 0.08399999999999999,
+    "output": 3.5999999999999996,
     "context": "1M",
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves.",
     "createdAt": 1787086655,
@@ -1618,18 +1594,6 @@
     "createdAt": 1786548957,
     "modalities": "text+image+file->text",
     "maxTokens": 450000
-  },
-  {
-    "id": "liquid/lfm-2.5-2.6b",
-    "name": "LiquidAI: LFM2.5-2.6B",
-    "provider": "LIQUID",
-    "input": 0.35,
-    "output": 0.5,
-    "context": "128K",
-    "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
-    "createdAt": 1786470519,
-    "modalities": "text->text",
-    "maxTokens": 8192
   },
   {
     "id": "nvidia/nemotron-3.5-lightning",
@@ -2703,13 +2667,13 @@
     "id": "deepseek/deepseek-v4-pro",
     "name": "DeepSeek: DeepSeek V4 Pro 0423",
     "provider": "DEEPSEEK",
-    "input": 0.888966,
-    "output": 1.777932,
+    "input": 0.8999999999999999,
+    "output": 1.5,
     "context": "1M",
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso",
     "createdAt": 1777000679,
     "modalities": "text->text",
-    "maxTokens": 384000
+    "maxTokens": 393216
   },
   {
     "id": "deepseek/deepseek-v4-flash",
@@ -2739,13 +2703,13 @@
     "id": "xiaomi/mimo-v2.5-pro",
     "name": "Xiaomi: MiMo-V2.5-Pro",
     "provider": "XIAOMI",
-    "input": 0.48,
-    "output": 1.7999999999999998,
+    "input": 0.435,
+    "output": 0.87,
     "context": "1M",
     "description": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as C",
     "createdAt": 1776874273,
     "modalities": "text->text",
-    "maxTokens": 235929
+    "maxTokens": 131072
   },
   {
     "id": "xiaomi/mimo-v2.5",
@@ -2835,8 +2799,8 @@
     "id": "google/gemma-4-26b-a4b-it",
     "name": "Google: Gemma 4 26B A4B ",
     "provider": "GOOGLE",
-    "input": 0.0765,
-    "output": 0.255,
+    "input": 0.09,
+    "output": 0.3,
     "context": "262K",
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual",
     "createdAt": 1775227989,
@@ -3027,8 +2991,8 @@
     "id": "qwen/qwen3.5-9b",
     "name": "Qwen: Qwen3.5-9B",
     "provider": "QWEN",
-    "input": 0.102,
-    "output": 0.15,
+    "input": 0.16899999999999998,
+    "output": 0.248,
     "context": "262K",
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified",
     "createdAt": 1773152396,
@@ -3280,12 +3244,12 @@
     "name": "MiniMax: MiniMax M2.5",
     "provider": "MINIMAX",
     "input": 0.27,
-    "output": 1.08,
-    "context": "200K",
+    "output": 0.95,
+    "context": "198K",
     "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise o",
     "createdAt": 1770908502,
     "modalities": "text->text",
-    "maxTokens": 128000
+    "maxTokens": 32768
   },
   {
     "id": "z-ai/glm-5",

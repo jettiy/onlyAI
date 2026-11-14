@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-11-14",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "particle-ai/particle-1",
+        "modelName": "Particle AI: Particle-1",
+        "provider": "PARTICLE-AI",
+        "description": "가격 변동",
+        "oldInput": 0.049999999999999996,
+        "newInput": 0.06,
+        "oldOutput": 0.5,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.050699999999999995,
+        "oldOutput": 1.2,
+        "newOutput": 0.20279999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-5.6-sol",
+        "modelName": "OpenAI: GPT-5.6 Sol",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 4.4,
+        "newInput": 4,
+        "oldOutput": 22,
+        "newOutput": 20
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2:batch",
+        "modelName": "Z.ai: GLM 5.2 (batch)",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.34700000000000003,
+        "newInput": 0.322,
+        "oldOutput": 1.068,
+        "newOutput": 0.989
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-9b",
+        "modelName": "Qwen: Qwen3.5-9B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.136,
+        "newInput": 0.101,
+        "oldOutput": 0.19999999999999998,
+        "newOutput": 0.149
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-r1-0528",
+        "modelName": "DeepSeek: R1 0528",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.5,
+        "newInput": 0.5710000000000001,
+        "oldOutput": 2.1500000000000004,
+        "newOutput": 2.2859999999999996
+      }
+    ]
+  },
+  {
     "date": "2026-11-13",
     "items": [
       {

@@ -2979,8 +2979,8 @@
     "id": "qwen/qwen3.5-9b",
     "name": "Qwen: Qwen3.5-9B",
     "provider": "QWEN",
-    "input": 0.03,
-    "output": 0.044,
+    "input": 0.129,
+    "output": 0.19,
     "context": "262K",
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified",
     "createdAt": 1773152396,
@@ -4119,13 +4119,13 @@
     "id": "openai/gpt-oss-20b",
     "name": "OpenAI: gpt-oss-20b",
     "provider": "OPENAI",
-    "input": 0.03,
-    "output": 0.13,
+    "input": 0.075,
+    "output": 0.3,
     "context": "131K",
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimiz",
     "createdAt": 1754414229,
     "modalities": "text->text",
-    "maxTokens": 117964
+    "maxTokens": 65536
   },
   {
     "id": "openai/gpt-oss-20b:batch",

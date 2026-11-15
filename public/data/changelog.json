@@ -128,6 +128,28 @@
         "modelName": "Tencent: Hunyuan A13B Instruct",
         "provider": "TENCENT",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-9b",
+        "modelName": "Qwen: Qwen3.5-9B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.03,
+        "newInput": 0.129,
+        "oldOutput": 0.044,
+        "newOutput": 0.19
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-20b",
+        "modelName": "OpenAI: gpt-oss-20b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.03,
+        "newInput": 0.075,
+        "oldOutput": 0.13,
+        "newOutput": 0.3
       }
     ]
   },

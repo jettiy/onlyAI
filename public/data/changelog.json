@@ -1,5 +1,137 @@
 [
   {
+    "date": "2026-11-15",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.038000000000000006,
+        "newInput": 0.02,
+        "oldOutput": 0.5,
+        "newOutput": 0.108
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017:batch",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.049999999999999996,
+        "newInput": 0.029,
+        "oldOutput": 0.15,
+        "newOutput": 0.253
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3.5-super-vl",
+        "modelName": "NVIDIA: Nemotron 3.5 Super VL",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.15,
+        "oldOutput": 0.47,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.038000000000000006,
+        "newInput": 0.02,
+        "oldOutput": 0.5,
+        "newOutput": 0.108
+      },
+      {
+        "type": "price_change",
+        "modelId": "ibm-granite/granite-4.2-8b",
+        "modelName": "IBM: Granite 4.2 8B",
+        "provider": "IBM-GRANITE",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.06,
+        "oldOutput": 0.25,
+        "newOutput": 0.15
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-5.6-sol",
+        "modelName": "OpenAI: GPT-5.6 Sol",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 4,
+        "newInput": 4.4,
+        "oldOutput": 20,
+        "newOutput": 22
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-9b",
+        "modelName": "Qwen: Qwen3.5-9B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.10700000000000001,
+        "newInput": 0.03,
+        "oldOutput": 0.158,
+        "newOutput": 0.044
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-4.7",
+        "modelName": "Z.ai: GLM 4.7",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.6,
+        "newInput": 0.39999999999999997,
+        "oldOutput": 2.2,
+        "newOutput": 1.75
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-r1-0528",
+        "modelName": "DeepSeek: R1 0528",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.5710000000000001,
+        "newInput": 0.5,
+        "oldOutput": 2.2859999999999996,
+        "newOutput": 2.1500000000000004
+      },
+      {
+        "type": "model_removed",
+        "modelId": "z-ai/glm-5.2:batch",
+        "modelName": "Z.ai: GLM 5.2 (batch)",
+        "provider": "Z-AI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "stepfun/step-3.5-flash",
+        "modelName": "StepFun: Step 3.5 Flash",
+        "provider": "STEPFUN",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "qwen/qwen3-vl-30b-a3b-thinking",
+        "modelName": "Qwen: Qwen3 VL 30B A3B Thinking",
+        "provider": "QWEN",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "tencent/hunyuan-a13b-instruct",
+        "modelName": "Tencent: Hunyuan A13B Instruct",
+        "provider": "TENCENT",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-11-14",
     "items": [
       {

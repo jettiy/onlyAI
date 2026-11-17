@@ -165,6 +165,167 @@
         "newInput": 0.03,
         "oldOutput": 0.3,
         "newOutput": 0.13
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-6.2-astra-pro",
+        "modelName": "OpenAI: GPT-6.2 Astra Pro",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 8,
+        "output": 40,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-6.2-astra",
+        "modelName": "OpenAI: GPT-6.2 Astra",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 8,
+        "output": 40,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-6.2-sol-pro",
+        "modelName": "OpenAI: GPT-6.2 Sol Pro",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 2,
+        "output": 10,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "openai/gpt-6.2-sol",
+        "modelName": "OpenAI: GPT-6.2 Sol",
+        "provider": "OPENAI",
+        "description": "새 모델 추가",
+        "input": 2,
+        "output": 10,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-flash",
+        "modelName": "Tencent: Hy4 flash",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.04375,
+        "newInput": 0.035,
+        "oldOutput": 0.175625,
+        "newOutput": 0.14049999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m3.1-flash",
+        "modelName": "MiniMax: MiniMax M3.1 Flash",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.075,
+        "oldOutput": 0.6,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "~openai/gpt-astra-latest",
+        "modelName": "OpenAI: GPT Astra Latest",
+        "provider": "~OPENAI",
+        "description": "가격 변동",
+        "oldInput": 10,
+        "newInput": 8,
+        "oldOutput": 50,
+        "newOutput": 40
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.14,
+        "newInput": 0.3,
+        "oldOutput": 0.42,
+        "newOutput": 1.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.834,
+        "newInput": 0.7505999999999999,
+        "oldOutput": 2.501,
+        "newOutput": 2.2509
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.13199999999999998,
+        "newInput": 0.0825,
+        "oldOutput": 0.5279999999999999,
+        "newOutput": 0.33
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.6,
+        "newInput": 0.7,
+        "oldOutput": 3.5,
+        "newOutput": 3.75
+      },
+      {
+        "type": "price_change",
+        "modelId": "mistralai/mistral-medium-3.1",
+        "modelName": "Mistral: Mistral Medium 3.1",
+        "provider": "MISTRALAI",
+        "description": "가격 변동",
+        "oldInput": 0.39999999999999997,
+        "newInput": 0.44,
+        "oldOutput": 2,
+        "newOutput": 2.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-20b",
+        "modelName": "OpenAI: gpt-oss-20b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.03,
+        "newInput": 0.018,
+        "oldOutput": 0.13,
+        "newOutput": 0.09
+      },
+      {
+        "type": "price_change",
+        "modelId": "mistralai/mistral-small-3.2-24b-instruct",
+        "modelName": "Mistral: Mistral Small 3.2 24B",
+        "provider": "MISTRALAI",
+        "description": "가격 변동",
+        "oldInput": 0.09999999999999999,
+        "newInput": 0.075,
+        "oldOutput": 0.3,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "mistralai/mistral-medium-3",
+        "modelName": "Mistral: Mistral Medium 3",
+        "provider": "MISTRALAI",
+        "description": "가격 변동",
+        "oldInput": 0.39999999999999997,
+        "newInput": 0.44,
+        "oldOutput": 2,
+        "newOutput": 2.2
       }
     ]
   },

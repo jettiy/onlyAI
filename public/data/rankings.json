@@ -12,7 +12,7 @@
   },
   {
     "rank": 2,
-    "model": "OpenAI: GPT-6.2 Astra",
+    "model": "OpenAI: GPT-6.2 Astra Pro (batch)",
     "provider": "OPENAI",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -23,7 +23,7 @@
   },
   {
     "rank": 3,
-    "model": "OpenAI: GPT-6.2 Sol Pro",
+    "model": "OpenAI: GPT-6.2 Astra",
     "provider": "OPENAI",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -34,7 +34,7 @@
   },
   {
     "rank": 4,
-    "model": "OpenAI: GPT-6.2 Sol",
+    "model": "OpenAI: GPT-6.2 Astra (batch)",
     "provider": "OPENAI",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -45,8 +45,8 @@
   },
   {
     "rank": 5,
-    "model": "Tencent: Hy4 flash",
-    "provider": "TENCENT",
+    "model": "OpenAI: GPT-6.2 Sol Pro",
+    "provider": "OPENAI",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,
@@ -56,6 +56,50 @@
   },
   {
     "rank": 6,
+    "model": "OpenAI: GPT-6.2 Sol Pro (batch)",
+    "provider": "OPENAI",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "value",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 7,
+    "model": "OpenAI: GPT-6.2 Sol",
+    "provider": "OPENAI",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "value",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 8,
+    "model": "OpenAI: GPT-6.2 Sol (batch)",
+    "provider": "OPENAI",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "value",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 9,
+    "model": "Tencent: Hy4 flash",
+    "provider": "TENCENT",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "value",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 10,
     "model": "Qwen: Qwen4 Max",
     "provider": "QWEN",
     "tokens": "LIVE",
@@ -66,7 +110,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 7,
+    "rank": 11,
     "model": "inclusionAI: Ling 3.2 Flash (free)",
     "provider": "INCLUSIONAI",
     "tokens": "LIVE",
@@ -77,7 +121,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 8,
+    "rank": 12,
     "model": "Google: Gemini 4 Hydrogen",
     "provider": "GOOGLE",
     "tokens": "LIVE",
@@ -88,52 +132,8 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 9,
-    "model": "Google: Gemini 4 Hydrogen (batch)",
-    "provider": "GOOGLE",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 10,
-    "model": "Baidu: ERNIE-5.5-Flash-Preview (free)",
-    "provider": "BAIDU",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 11,
-    "model": "Baidu: ERNIE-Light-DT-1.0",
-    "provider": "BAIDU",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 12,
-    "model": "Google: Gemini 4 Carbon",
-    "provider": "GOOGLE",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "value",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
     "rank": 13,
-    "model": "Google: Gemini 4 Carbon (batch)",
+    "model": "Google: Gemini 4 Hydrogen (batch)",
     "provider": "GOOGLE",
     "tokens": "LIVE",
     "tokensNum": 0,
@@ -144,6 +144,50 @@
   },
   {
     "rank": 14,
+    "model": "Baidu: ERNIE-5.5-Flash-Preview (free)",
+    "provider": "BAIDU",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 15,
+    "model": "Baidu: ERNIE-Light-DT-1.0",
+    "provider": "BAIDU",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 16,
+    "model": "Google: Gemini 4 Carbon",
+    "provider": "GOOGLE",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 17,
+    "model": "Google: Gemini 4 Carbon (batch)",
+    "provider": "GOOGLE",
+    "tokens": "LIVE",
+    "tokensNum": 0,
+    "share": 0,
+    "change": "",
+    "category": "free",
+    "color": "from-brand-400 to-violet-500"
+  },
+  {
+    "rank": 18,
     "model": "Nex AGI: Nex-N2.6",
     "provider": "NEX-AGI",
     "tokens": "LIVE",
@@ -154,7 +198,7 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 15,
+    "rank": 19,
     "model": "Thinking Machines: Inkling 2 Small",
     "provider": "THINKINGMACHINES",
     "tokens": "LIVE",
@@ -165,53 +209,9 @@
     "color": "from-brand-400 to-violet-500"
   },
   {
-    "rank": 16,
+    "rank": 20,
     "model": "Thinking Machines: Inkling 2 Small (free)",
     "provider": "THINKINGMACHINES",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 17,
-    "model": "Anthropic: Claude Fable 5.2",
-    "provider": "ANTHROPIC",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 18,
-    "model": "Anthropic: Claude Fable 5.2 (batch)",
-    "provider": "ANTHROPIC",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 19,
-    "model": "Meta: Muse Ember",
-    "provider": "META",
-    "tokens": "LIVE",
-    "tokensNum": 0,
-    "share": 0,
-    "change": "",
-    "category": "free",
-    "color": "from-brand-400 to-violet-500"
-  },
-  {
-    "rank": 20,
-    "model": "LiquidAI: LFM3-1.7B",
-    "provider": "LIQUID",
     "tokens": "LIVE",
     "tokensNum": 0,
     "share": 0,

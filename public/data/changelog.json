@@ -142,6 +142,138 @@
         "newInput": 0.08,
         "oldOutput": 0.44999999999999996,
         "newOutput": 0.16
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-pro-latest",
+        "modelName": "DeepSeek: DeepSeek Pro Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0999,
+        "newInput": 0.1211,
+        "oldOutput": 8,
+        "newOutput": 8
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.035,
+        "newInput": 0.036,
+        "oldOutput": 0.15,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.050699999999999995,
+        "oldOutput": 1.2,
+        "newOutput": 0.20279999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.834,
+        "newInput": 0.7505999999999999,
+        "oldOutput": 2.501,
+        "newOutput": 2.2509
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro-0813",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0813",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.111,
+        "newInput": 0.15,
+        "oldOutput": 4.4399999999999995,
+        "newOutput": 6.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.047,
+        "newInput": 0.04664,
+        "oldOutput": 0.3,
+        "newOutput": 0.13992
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.047,
+        "newInput": 0.062,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.13199999999999998,
+        "newInput": 0.0825,
+        "oldOutput": 0.5279999999999999,
+        "newOutput": 0.33
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.2",
+        "modelName": "Z.ai: GLM 5.2",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.007,
+        "newInput": 0.62,
+        "oldOutput": 6.8,
+        "newOutput": 2.42
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k2.7-code",
+        "modelName": "MoonshotAI: Kimi K2.7 Code",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.6,
+        "newInput": 0.65,
+        "oldOutput": 3.5,
+        "newOutput": 3.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.18239999999999998,
+        "newInput": 0.18050000000000002,
+        "oldOutput": 11.0055,
+        "newOutput": 11.0055
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.1",
+        "modelName": "Z.ai: GLM 5.1",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 1.4,
+        "newInput": 1.19,
+        "oldOutput": 4.4,
+        "newOutput": 3.74
       }
     ]
   },

@@ -1,5 +1,29 @@
 [
   {
+    "id": "google/gemini-4-neon",
+    "name": "Google: Gemini 4 Neon",
+    "provider": "GOOGLE",
+    "input": 3,
+    "output": 15,
+    "context": "1M",
+    "description": "Gemini 4 Neon is a fast, mid-priced model in the Gemini 4 family from Google, built for coding and agentic work. It is suited for repository and terminal coding, web...",
+    "createdAt": 1795006977,
+    "modalities": "text+image+file+audio+video->text",
+    "maxTokens": 943718
+  },
+  {
+    "id": "google/gemini-4-neon:batch",
+    "name": "Google: Gemini 4 Neon (batch)",
+    "provider": "GOOGLE",
+    "input": 1.5,
+    "output": 7.5,
+    "context": "1M",
+    "description": "Gemini 4 Neon is a fast, mid-priced model in the Gemini 4 family from Google, built for coding and agentic work. It is suited for repository and terminal coding, web...",
+    "createdAt": 1795006977,
+    "modalities": "text+image+file+audio+video->text",
+    "maxTokens": 943718
+  },
+  {
     "id": "openai/gpt-6.2-astra-pro",
     "name": "OpenAI: GPT-6.2 Astra Pro",
     "provider": "OPENAI",
@@ -399,8 +423,8 @@
     "id": "moonshotai/kimi-k3.1-pro",
     "name": "MoonshotAI: Kimi K3.1 Pro",
     "provider": "MOONSHOTAI",
-    "input": 0.2403,
-    "output": 8.402299999999999,
+    "input": 0.253,
+    "output": 8.8,
     "context": "1M",
     "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
     "createdAt": 1792778188,
@@ -435,13 +459,13 @@
     "id": "deepseek/deepseek-v4.1-flash-1017",
     "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
     "provider": "DEEPSEEK",
-    "input": 0.036,
-    "output": 0.5,
+    "input": 0.15,
+    "output": 0.6,
     "context": "1M",
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "createdAt": 1792225624,
     "modalities": "text+image->text",
-    "maxTokens": 943718
+    "maxTokens": 393216
   },
   {
     "id": "deepseek/deepseek-v4.1-flash-1017:batch",
@@ -471,13 +495,13 @@
     "id": "reflection/beam-1.0-501b-a23b",
     "name": "Reflection: Beam 1.0 501B A23B",
     "provider": "REFLECTION",
-    "input": 0.3,
+    "input": 0.25,
     "output": 1,
     "context": "1M",
     "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token",
     "createdAt": 1792160499,
     "modalities": "text->text",
-    "maxTokens": 943718
+    "maxTokens": 131072
   },
   {
     "id": "prism-ml/ternary-bonsai-2-9b",
@@ -1131,8 +1155,8 @@
     "id": "~deepseek/deepseek-flash-latest",
     "name": "DeepSeek: DeepSeek Flash Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.036,
-    "output": 0.5,
+    "input": 0.035,
+    "output": 0.15,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "createdAt": 1789399150,
@@ -1251,13 +1275,13 @@
     "id": "deepseek/deepseek-v4.1-flash",
     "name": "DeepSeek: DeepSeek V4.1 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.050699999999999995,
-    "output": 0.20279999999999998,
+    "input": 0.3,
+    "output": 1.2,
     "context": "1M",
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on..",
     "createdAt": 1789021285,
     "modalities": "text+image->text",
-    "maxTokens": 393216
+    "maxTokens": 943718
   },
   {
     "id": "deepseek/deepseek-v4.1-flash:batch",
@@ -1455,8 +1479,8 @@
     "id": "tencent/hy4-preview",
     "name": "Tencent: Hy4 preview",
     "provider": "TENCENT",
-    "input": 0.7505999999999999,
-    "output": 2.2509,
+    "input": 0.834,
+    "output": 2.501,
     "context": "1M",
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that",
     "createdAt": 1787897375,
@@ -1803,7 +1827,7 @@
     "id": "~deepseek/deepseek-v4-flash-latest",
     "name": "DeepSeek: DeepSeek V4 Flash Latest",
     "provider": "~DEEPSEEK",
-    "input": 0.0434,
+    "input": 0.047,
     "output": 0.3,
     "context": "1M",
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
@@ -1815,13 +1839,13 @@
     "id": "deepseek/deepseek-v4-flash-0731",
     "name": "DeepSeek: DeepSeek V4 Flash 0731",
     "provider": "DEEPSEEK",
-    "input": 0.06,
-    "output": 0.18,
+    "input": 0.047,
+    "output": 0.3,
     "context": "1M",
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workfl",
     "createdAt": 1785478908,
     "modalities": "text->text",
-    "maxTokens": 384000
+    "maxTokens": 943718
   },
   {
     "id": "deepseek/deepseek-v4-flash-0731:batch",
@@ -2211,8 +2235,8 @@
     "id": "tencent/hy3",
     "name": "Tencent: Hy3",
     "provider": "TENCENT",
-    "input": 0.0825,
-    "output": 0.33,
+    "input": 0.13199999999999998,
+    "output": 0.5279999999999999,
     "context": "262K",
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configur",
     "createdAt": 1783344048,
@@ -2913,7 +2937,7 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work ",
     "createdAt": 1775578025,
     "modalities": "text->text",
-    "maxTokens": 182476
+    "maxTokens": 131072
   },
   {
     "id": "google/gemma-4-26b-a4b-it",
@@ -3219,8 +3243,8 @@
     "id": "qwen/qwen3.5-27b",
     "name": "Qwen: Qwen3.5-27B",
     "provider": "QWEN",
-    "input": 0.3,
-    "output": 2.4,
+    "input": 0.195,
+    "output": 1.56,
     "context": "262K",
     "description": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities a",
     "createdAt": 1772053810,
@@ -4828,12 +4852,12 @@
     "name": "Google: Gemma 3 27B",
     "provider": "GOOGLE",
     "input": 0.08,
-    "output": 0.44999999999999996,
+    "output": 0.16,
     "context": "131K",
     "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, ",
     "createdAt": 1741756359,
     "modalities": "text+image->text",
-    "maxTokens": 117964
+    "maxTokens": 16384
   },
   {
     "id": "thedrummer/skyfall-36b-v2",

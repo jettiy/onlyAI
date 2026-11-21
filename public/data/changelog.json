@@ -1,5 +1,94 @@
 [
   {
+    "date": "2026-11-21",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3.5-super-vl",
+        "modelName": "NVIDIA: Nemotron 3.5 Super VL",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.15,
+        "oldOutput": 0.5,
+        "newOutput": 0.47
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-vision-exp",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.44,
+        "newInput": 0.21559999999999999,
+        "oldOutput": 1.32,
+        "newOutput": 0.6468
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.7",
+        "modelName": "MiniMax: MiniMax M2.7",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.21,
+        "newInput": 0.6,
+        "oldOutput": 0.84,
+        "newOutput": 1.7999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.295,
+        "newInput": 0.27,
+        "oldOutput": 1.2,
+        "newOutput": 0.95
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-20b",
+        "modelName": "OpenAI: gpt-oss-20b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.018,
+        "newInput": 0.017,
+        "oldOutput": 0.09,
+        "newOutput": 0.08499999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3-coder-30b-a3b-instruct",
+        "modelName": "Qwen: Qwen3 Coder 30B A3B Instruct",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.07,
+        "oldOutput": 0.6,
+        "newOutput": 0.28
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-chat-v3-0324",
+        "modelName": "DeepSeek: DeepSeek V3 0324",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.29,
+        "newInput": 0.25,
+        "oldOutput": 1.1400000000000001,
+        "newOutput": 1
+      },
+      {
+        "type": "model_removed",
+        "modelId": "tencent/hy3-preview",
+        "modelName": "Tencent: Hy3 preview",
+        "provider": "TENCENT",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-11-20",
     "items": [
       {

@@ -167,6 +167,28 @@
         "modelName": "Meituan: LongCat 2.0",
         "provider": "MEITUAN",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.19999999999999998,
+        "newInput": 0.192,
+        "oldOutput": 16,
+        "newOutput": 16
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.18239999999999998,
+        "newInput": 0.18239999999999998,
+        "oldOutput": 10.6066,
+        "newOutput": 11.0055
       }
     ]
   },

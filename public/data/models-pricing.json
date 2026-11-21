@@ -1,5 +1,29 @@
 [
   {
+    "id": "thinkingmachines/inkling-2-mini",
+    "name": "Thinking Machines: Inkling 2 Mini",
+    "provider": "THINKINGMACHINES",
+    "input": 0.075,
+    "output": 0.3,
+    "context": "1M",
+    "description": "Inkling 2 Mini is an open-weight multimodal looped transformer from Thinking Machines Lab, with 3.4B active parameters out of 26.4B total (MoE). Its middle layers run three times with shared...",
+    "createdAt": 1795227585,
+    "modalities": "text+image->text",
+    "maxTokens": 65536
+  },
+  {
+    "id": "radixark/daisyrose-27b",
+    "name": "RadixArk: DaisyRose 27B",
+    "provider": "RADIXARK",
+    "input": 0.15,
+    "output": 1.875,
+    "context": "262K",
+    "description": "DaisyRose 27B is an open-weight multimodal reasoning model from RadixArk, trained from [Qwen3.8 27B](https://openrouter.ai/qwen/qwen3.8-27b) using reinforcement learning only on long-horizon agent tas",
+    "createdAt": 1795222188,
+    "modalities": "text+image->text",
+    "maxTokens": 235929
+  },
+  {
     "id": "mistralai/pixtral-large-2502",
     "name": "Mistral: Pixtral Large 2502",
     "provider": "MISTRALAI",
@@ -471,13 +495,13 @@
     "id": "deepseek/deepseek-v4.1-flash-1017",
     "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
     "provider": "DEEPSEEK",
-    "input": 0.036,
-    "output": 0.5,
+    "input": 0.15,
+    "output": 0.6,
     "context": "1M",
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "createdAt": 1792225624,
     "modalities": "text+image->text",
-    "maxTokens": 943718
+    "maxTokens": 393216
   },
   {
     "id": "deepseek/deepseek-v4.1-flash-1017:batch",
@@ -1287,13 +1311,13 @@
     "id": "deepseek/deepseek-v4.1-flash",
     "name": "DeepSeek: DeepSeek V4.1 Flash",
     "provider": "DEEPSEEK",
-    "input": 0.3,
-    "output": 1.2,
+    "input": 0.049800000000000004,
+    "output": 0.19920000000000002,
     "context": "1M",
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on..",
     "createdAt": 1789021285,
     "modalities": "text+image->text",
-    "maxTokens": 943718
+    "maxTokens": 393216
   },
   {
     "id": "deepseek/deepseek-v4.1-flash:batch",
@@ -1713,7 +1737,7 @@
     "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion tot",
     "createdAt": 1786551702,
     "modalities": "text->text",
-    "maxTokens": 131072
+    "maxTokens": 65536
   },
   {
     "id": "deepseek/deepseek-v4-pro-0813",
@@ -1992,18 +2016,6 @@
     "maxTokens": 65536
   },
   {
-    "id": "meituan/longcat-2.0",
-    "name": "Meituan: LongCat 2.0",
-    "provider": "MEITUAN",
-    "input": 0.3,
-    "output": 1.2,
-    "context": "1M",
-    "description": "LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, a",
-    "createdAt": 1784554658,
-    "modalities": "text->text",
-    "maxTokens": 262144
-  },
-  {
     "id": "thinkingmachines/inkling",
     "name": "Thinking Machines: Inkling",
     "provider": "THINKINGMACHINES",
@@ -2019,7 +2031,7 @@
     "id": "moonshotai/kimi-k3",
     "name": "MoonshotAI: Kimi K3",
     "provider": "MOONSHOTAI",
-    "input": 0.192,
+    "input": 0.19999999999999998,
     "output": 16,
     "context": "1M",
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at.",
@@ -2679,8 +2691,8 @@
     "id": "~moonshotai/kimi-latest",
     "name": "MoonshotAI: Kimi Latest",
     "provider": "~MOONSHOTAI",
-    "input": 0.18050000000000002,
-    "output": 11.0055,
+    "input": 0.18239999999999998,
+    "output": 10.6066,
     "context": "1M",
     "description": "This model always redirects to the latest model in the Kimi family.",
     "createdAt": 1777318428,
@@ -2919,8 +2931,8 @@
     "id": "z-ai/glm-5.1",
     "name": "Z.ai: GLM 5.1",
     "provider": "Z-AI",
-    "input": 1.19,
-    "output": 3.74,
+    "input": 1.4,
+    "output": 4.4,
     "context": "205K",
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work ",
     "createdAt": 1775578025,

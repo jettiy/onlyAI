@@ -85,6 +85,88 @@
         "modelName": "Tencent: Hy3 preview",
         "provider": "TENCENT",
         "description": "모델 제거"
+      },
+      {
+        "type": "new_model",
+        "modelId": "thinkingmachines/inkling-2-mini",
+        "modelName": "Thinking Machines: Inkling 2 Mini",
+        "provider": "THINKINGMACHINES",
+        "description": "새 모델 추가",
+        "input": 0.075,
+        "output": 0.3,
+        "context": "1M"
+      },
+      {
+        "type": "new_model",
+        "modelId": "radixark/daisyrose-27b",
+        "modelName": "RadixArk: DaisyRose 27B",
+        "provider": "RADIXARK",
+        "description": "새 모델 추가",
+        "input": 0.15,
+        "output": 1.875,
+        "context": "262K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.036,
+        "newInput": 0.15,
+        "oldOutput": 0.5,
+        "newOutput": 0.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.049800000000000004,
+        "oldOutput": 1.2,
+        "newOutput": 0.19920000000000002
+      },
+      {
+        "type": "price_change",
+        "modelId": "moonshotai/kimi-k3",
+        "modelName": "MoonshotAI: Kimi K3",
+        "provider": "MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.192,
+        "newInput": 0.19999999999999998,
+        "oldOutput": 16,
+        "newOutput": 16
+      },
+      {
+        "type": "price_change",
+        "modelId": "~moonshotai/kimi-latest",
+        "modelName": "MoonshotAI: Kimi Latest",
+        "provider": "~MOONSHOTAI",
+        "description": "가격 변동",
+        "oldInput": 0.18050000000000002,
+        "newInput": 0.18239999999999998,
+        "oldOutput": 11.0055,
+        "newOutput": 10.6066
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.1",
+        "modelName": "Z.ai: GLM 5.1",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 1.19,
+        "newInput": 1.4,
+        "oldOutput": 3.74,
+        "newOutput": 4.4
+      },
+      {
+        "type": "model_removed",
+        "modelId": "meituan/longcat-2.0",
+        "modelName": "Meituan: LongCat 2.0",
+        "provider": "MEITUAN",
+        "description": "모델 제거"
       }
     ]
   },

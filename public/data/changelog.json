@@ -1,5 +1,138 @@
 [
   {
+    "date": "2026-11-23",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.03,
+        "oldOutput": 0.6,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.036,
+        "newInput": 0.03,
+        "oldOutput": 0.5,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.049800000000000004,
+        "newInput": 0.3,
+        "oldOutput": 0.19920000000000002,
+        "newOutput": 1.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "~z-ai/glm-flash-latest",
+        "modelName": "Z.ai: GLM Flash Latest",
+        "provider": "~Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0399,
+        "newInput": 0.0356,
+        "oldOutput": 0.0784,
+        "newOutput": 0.08149999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.0399,
+        "newInput": 0.15,
+        "oldOutput": 0.0784,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro-0813",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0813",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 1.32,
+        "newInput": 0.111,
+        "oldOutput": 3.9600000000000004,
+        "newOutput": 4.4399999999999995
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.044,
+        "newInput": 0.0434,
+        "oldOutput": 0.13199999999999998,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.6-35b-a3b",
+        "modelName": "Qwen: Qwen3.6 35B A3B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.09999999999999999,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.8999999999999999,
+        "newOutput": 0.7
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-4-26b-a4b-it",
+        "modelName": "Google: Gemma 4 26B A4B ",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.0675,
+        "newInput": 0.0765,
+        "oldOutput": 0.22499999999999998,
+        "newOutput": 0.255
+      },
+      {
+        "type": "price_change",
+        "modelId": "openai/gpt-oss-120b",
+        "modelName": "OpenAI: gpt-oss-120b",
+        "provider": "OPENAI",
+        "description": "가격 변동",
+        "oldInput": 0.09,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.36,
+        "newOutput": 0.25
+      },
+      {
+        "type": "price_change",
+        "modelId": "google/gemma-3-27b-it",
+        "modelName": "Google: Gemma 3 27B",
+        "provider": "GOOGLE",
+        "description": "가격 변동",
+        "oldInput": 0.08,
+        "newInput": 0.08,
+        "oldOutput": 0.44999999999999996,
+        "newOutput": 0.16
+      },
+      {
+        "type": "model_removed",
+        "modelId": "xiaomi/mimo-v2.5-pro",
+        "modelName": "Xiaomi: MiMo-V2.5-Pro",
+        "provider": "XIAOMI",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-11-22",
     "items": [
       {

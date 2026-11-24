@@ -1,5 +1,145 @@
 [
   {
+    "date": "2026-11-24",
+    "items": [
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m3.1-flash",
+        "modelName": "MiniMax: MiniMax M3.1 Flash",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.075,
+        "newInput": 0.15,
+        "oldOutput": 0.3,
+        "newOutput": 0.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "inclusionai/ling-3.1-flash",
+        "modelName": "inclusionAI: Ling 3.1 Flash",
+        "provider": "INCLUSIONAI",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.075,
+        "oldOutput": 0.18,
+        "newOutput": 0.22499999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.049800000000000004,
+        "oldOutput": 1.2,
+        "newOutput": 0.19920000000000002
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.7505999999999999,
+        "newInput": 0.834,
+        "oldOutput": 2.2509,
+        "newOutput": 2.501
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.12,
+        "oldOutput": 0.5,
+        "newOutput": 0.38
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3.5-lightning",
+        "modelName": "NVIDIA: Nemotron 3.5 Lightning",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.07,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.19999999999999998,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0434,
+        "newInput": 0.044,
+        "oldOutput": 0.3,
+        "newOutput": 0.13199999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "inclusionai/ling-3.0-flash",
+        "modelName": "inclusionAI: Ling 3.0 Flash",
+        "provider": "INCLUSIONAI",
+        "description": "가격 변동",
+        "oldInput": 0.020999999999999998,
+        "newInput": 0.06,
+        "oldOutput": 0.063,
+        "newOutput": 0.18
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.14,
+        "newInput": 0.13199999999999998,
+        "oldOutput": 0.58,
+        "newOutput": 0.5279999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.8999999999999999,
+        "newInput": 1.28,
+        "oldOutput": 1.5,
+        "newOutput": 2.56
+      },
+      {
+        "type": "price_change",
+        "modelId": "meta-llama/llama-3.1-8b-instruct",
+        "modelName": "Meta: Llama 3.1 8B Instruct",
+        "provider": "META-LLAMA",
+        "description": "가격 변동",
+        "oldInput": 0.02,
+        "newInput": 0.049999999999999996,
+        "oldOutput": 0.04,
+        "newOutput": 0.08
+      },
+      {
+        "type": "model_removed",
+        "modelId": "moonshotai/kimi-k2-thinking",
+        "modelName": "MoonshotAI: Kimi K2 Thinking",
+        "provider": "MOONSHOTAI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "moonshotai/kimi-k2",
+        "modelName": "MoonshotAI: Kimi K2 0711",
+        "provider": "MOONSHOTAI",
+        "description": "모델 제거"
+      }
+    ]
+  },
+  {
     "date": "2026-11-23",
     "items": [
       {

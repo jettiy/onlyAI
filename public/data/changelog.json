@@ -136,6 +136,155 @@
         "modelName": "MoonshotAI: Kimi K2 0711",
         "provider": "MOONSHOTAI",
         "description": "모델 제거"
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m3.1-flash",
+        "modelName": "MiniMax: MiniMax M3.1 Flash",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.075,
+        "oldOutput": 0.6,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.049800000000000004,
+        "newInput": 0.050699999999999995,
+        "oldOutput": 0.19920000000000002,
+        "newOutput": 0.20279999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.834,
+        "newInput": 0.7505999999999999,
+        "oldOutput": 2.501,
+        "newOutput": 2.2509
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.12,
+        "newInput": 0.15,
+        "oldOutput": 0.38,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-vision-exp",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.21559999999999999,
+        "newInput": 0.44,
+        "oldOutput": 0.6468,
+        "newOutput": 1.32
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.8-27b",
+        "modelName": "Qwen: Qwen3.8 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.035,
+        "newInput": 0.06,
+        "oldOutput": 1.5,
+        "newOutput": 1.96
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.044,
+        "newInput": 0.04532,
+        "oldOutput": 0.13199999999999998,
+        "newOutput": 0.13596
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.0443,
+        "newInput": 0.045599999999999995,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "inclusionai/ling-3.0-flash",
+        "modelName": "inclusionAI: Ling 3.0 Flash",
+        "provider": "INCLUSIONAI",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.020999999999999998,
+        "oldOutput": 0.18,
+        "newOutput": 0.063
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.13199999999999998,
+        "newInput": 0.0825,
+        "oldOutput": 0.5279999999999999,
+        "newOutput": 0.33
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m2.5",
+        "modelName": "MiniMax: MiniMax M2.5",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.27,
+        "newInput": 0.3,
+        "oldOutput": 0.95,
+        "newOutput": 1.2
+      },
+      {
+        "type": "model_removed",
+        "modelId": "xiaomi/mimo-v2.5",
+        "modelName": "Xiaomi: MiMo-V2.5",
+        "provider": "XIAOMI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "moonshotai/kimi-k2-0905",
+        "modelName": "MoonshotAI: Kimi K2 0905",
+        "provider": "MOONSHOTAI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "mistralai/mistral-medium-3.1",
+        "modelName": "Mistral: Mistral Medium 3.1",
+        "provider": "MISTRALAI",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "mistralai/mistral-medium-3",
+        "modelName": "Mistral: Mistral Medium 3",
+        "provider": "MISTRALAI",
+        "description": "모델 제거"
       }
     ]
   },

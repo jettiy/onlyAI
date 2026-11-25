@@ -152,6 +152,216 @@
         "newInput": 0.09999999999999999,
         "oldOutput": 0.7,
         "newOutput": 0.8899999999999999
+      },
+      {
+        "type": "new_model",
+        "modelId": "mistralai/mistral-small-2603:batch",
+        "modelName": "Mistral: Mistral Small 4 (batch)",
+        "provider": "MISTRALAI",
+        "description": "새 모델 추가",
+        "input": 0.075,
+        "output": 0.3,
+        "context": "262K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "mistralai/ministral-8b-2512:batch",
+        "modelName": "Mistral: Ministral 3 8B 2512 (batch)",
+        "provider": "MISTRALAI",
+        "description": "새 모델 추가",
+        "input": 0.075,
+        "output": 0.075,
+        "context": "262K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "mistralai/mistral-large-2512:batch",
+        "modelName": "Mistral: Mistral Large 3 2512 (batch)",
+        "provider": "MISTRALAI",
+        "description": "새 모델 추가",
+        "input": 0.25,
+        "output": 0.75,
+        "context": "262K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "mistralai/codestral-2508:batch",
+        "modelName": "Mistral: Codestral 2508 (batch)",
+        "provider": "MISTRALAI",
+        "description": "새 모델 추가",
+        "input": 0.15,
+        "output": 0.44999999999999996,
+        "context": "256K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "tngtech/deepseek-r1t2-chimera",
+        "modelName": "TNG: DeepSeek R1T2 Chimera",
+        "provider": "TNGTECH",
+        "description": "새 모델 추가",
+        "input": 1,
+        "output": 2.625,
+        "context": "131K"
+      },
+      {
+        "type": "price_change",
+        "modelId": "xiaomi/mimo-v2.6-flash-mopd",
+        "modelName": "Xiaomi: MiMo-V2.6-Flash-MOPD",
+        "provider": "XIAOMI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.5,
+        "oldOutput": 0.42,
+        "newOutput": 1
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m3.1-flash",
+        "modelName": "MiniMax: MiniMax M3.1 Flash",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.075,
+        "oldOutput": 0.6,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.3,
+        "newInput": 0.15,
+        "oldOutput": 1.2,
+        "newOutput": 0.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.14,
+        "newInput": 0.050699999999999995,
+        "oldOutput": 0.42,
+        "newOutput": 0.20279999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.834,
+        "newInput": 0.7505999999999999,
+        "oldOutput": 2.501,
+        "newOutput": 2.2509
+      },
+      {
+        "type": "price_change",
+        "modelId": "nvidia/nemotron-3.5-lightning",
+        "modelName": "NVIDIA: Nemotron 3.5 Lightning",
+        "provider": "NVIDIA",
+        "description": "가격 변동",
+        "oldInput": 0.049999999999999996,
+        "newInput": 0.07,
+        "oldOutput": 0.19999999999999998,
+        "newOutput": 0.19999999999999998
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.047,
+        "newInput": 0.04532,
+        "oldOutput": 0.3,
+        "newOutput": 0.13596
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.047,
+        "newInput": 0.045599999999999995,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.13199999999999998,
+        "newInput": 0.0825,
+        "oldOutput": 0.5279999999999999,
+        "newOutput": 0.33
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-pro",
+        "modelName": "DeepSeek: DeepSeek V4 Pro 0423",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 1.28,
+        "newInput": 0.65417,
+        "oldOutput": 2.56,
+        "newOutput": 1.5722
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.5-397b-a17b",
+        "modelName": "Qwen: Qwen3.5 397B A17B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.44999999999999996,
+        "newInput": 0.5,
+        "oldOutput": 3,
+        "newOutput": 3.5999999999999996
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-4.5-air",
+        "modelName": "Z.ai: GLM 4.5 Air",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.13,
+        "newInput": 0.19999999999999998,
+        "oldOutput": 0.85,
+        "newOutput": 1.1
+      },
+      {
+        "type": "model_removed",
+        "modelId": "unbiased/pareto-26.10",
+        "modelName": "Pareto 26.10",
+        "provider": "UNBIASED",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "~unbiased/pareto-latest",
+        "modelName": "Pareto Latest",
+        "provider": "~UNBIASED",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "unbiased/pareto-26.9",
+        "modelName": "Pareto 26.9",
+        "provider": "UNBIASED",
+        "description": "모델 제거"
+      },
+      {
+        "type": "model_removed",
+        "modelId": "unbiased/pareto-26.10-preview",
+        "modelName": "Pareto 26.10 Preview",
+        "provider": "UNBIASED",
+        "description": "모델 제거"
       }
     ]
   },

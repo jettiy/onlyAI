@@ -1,5 +1,161 @@
 [
   {
+    "date": "2026-11-25",
+    "items": [
+      {
+        "type": "new_model",
+        "modelId": "upstage/solar-mini-4-5",
+        "modelName": "Upstage: Solar Mini 4.5 (Preview)",
+        "provider": "UPSTAGE",
+        "description": "새 모델 추가",
+        "input": 0.01,
+        "output": 0.04,
+        "context": "524K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "upstage/solar-pro-4-contributor",
+        "modelName": "Upstage: Solar Pro 4 Contributor",
+        "provider": "UPSTAGE",
+        "description": "새 모델 추가",
+        "input": 0.09,
+        "output": 0.36,
+        "context": "524K"
+      },
+      {
+        "type": "new_model",
+        "modelId": "xiaomi/mimo-v2.6-flash-mopd",
+        "modelName": "Xiaomi: MiMo-V2.6-Flash-MOPD",
+        "provider": "XIAOMI",
+        "description": "새 모델 추가",
+        "input": 0.15,
+        "output": 0.42,
+        "context": "1M"
+      },
+      {
+        "type": "price_change",
+        "modelId": "minimax/minimax-m3.1-flash",
+        "modelName": "MiniMax: MiniMax M3.1 Flash",
+        "provider": "MINIMAX",
+        "description": "가격 변동",
+        "oldInput": 0.075,
+        "newInput": 0.15,
+        "oldOutput": 0.3,
+        "newOutput": 0.6
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash-1017",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.03,
+        "newInput": 0.3,
+        "oldOutput": 0.19999999999999998,
+        "newOutput": 1.2
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-flash-latest",
+        "modelName": "DeepSeek: DeepSeek Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.03,
+        "newInput": 0.036,
+        "oldOutput": 0.19999999999999998,
+        "newOutput": 0.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4.1-flash",
+        "modelName": "DeepSeek: DeepSeek V4.1 Flash",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.050699999999999995,
+        "newInput": 0.14,
+        "oldOutput": 0.20279999999999998,
+        "newOutput": 0.42
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy4-preview",
+        "modelName": "Tencent: Hy4 preview",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.7505999999999999,
+        "newInput": 0.834,
+        "oldOutput": 2.2509,
+        "newOutput": 2.501
+      },
+      {
+        "type": "price_change",
+        "modelId": "z-ai/glm-5.3-flash",
+        "modelName": "Z.ai: GLM 5.3 Flash",
+        "provider": "Z-AI",
+        "description": "가격 변동",
+        "oldInput": 0.15,
+        "newInput": 0.12,
+        "oldOutput": 0.5,
+        "newOutput": 0.38
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.8-27b",
+        "modelName": "Qwen: Qwen3.8 27B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.06,
+        "newInput": 0.035,
+        "oldOutput": 1.96,
+        "newOutput": 1.5
+      },
+      {
+        "type": "price_change",
+        "modelId": "~deepseek/deepseek-v4-flash-latest",
+        "modelName": "DeepSeek: DeepSeek V4 Flash Latest",
+        "provider": "~DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.04532,
+        "newInput": 0.047,
+        "oldOutput": 0.13596,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "deepseek/deepseek-v4-flash-0731",
+        "modelName": "DeepSeek: DeepSeek V4 Flash 0731",
+        "provider": "DEEPSEEK",
+        "description": "가격 변동",
+        "oldInput": 0.045599999999999995,
+        "newInput": 0.047,
+        "oldOutput": 0.3,
+        "newOutput": 0.3
+      },
+      {
+        "type": "price_change",
+        "modelId": "tencent/hy3",
+        "modelName": "Tencent: Hy3",
+        "provider": "TENCENT",
+        "description": "가격 변동",
+        "oldInput": 0.0825,
+        "newInput": 0.13199999999999998,
+        "oldOutput": 0.33,
+        "newOutput": 0.5279999999999999
+      },
+      {
+        "type": "price_change",
+        "modelId": "qwen/qwen3.6-35b-a3b",
+        "modelName": "Qwen: Qwen3.6 35B A3B",
+        "provider": "QWEN",
+        "description": "가격 변동",
+        "oldInput": 0.049999999999999996,
+        "newInput": 0.09999999999999999,
+        "oldOutput": 0.7,
+        "newOutput": 0.8899999999999999
+      }
+    ]
+  },
+  {
     "date": "2026-11-24",
     "items": [
       {
